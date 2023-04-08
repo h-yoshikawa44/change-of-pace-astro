@@ -1,0 +1,30 @@
+#!/bin/sh
+
+# sed コマンドが GNU か BSD か確認
+GNU_SED=true
+sed --version 1>/dev/null 2>/dev/null || GNU_SED=false
+
+# コミットメッセージ入力前に、ブランチ名から Issue 番号を抽出して置換する
+COMMIT_MSG_FILE=$1
+MESSAGE=$(cat "$COMMIT_MSG_FILE")
+
+ISSUE_NUMBER=$(git rev-parse --abbrev-ref HEAD | grep -Eo "^(feature|bugfix|release)/[0-9]+" | grep -Eo "[0-9]+")
+if [ -n "$ISSUE_NUMBER" ]; then
+  if [ "$GNU_SED" == "true" ]; then
+    sed -i "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
+  else
+    sed -i "" "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
+  fi
+  exit 0
+fi
+
+read -p "Issue 番号がブランチ名にないので置換できませんが、続行しますか？ (y/N): " YM < /dev/tty
+case "$YM" in
+  [yY]*)
+    if [ "$GNU_SED" == "true" ]; then
+      sed -i "s/(#Issue)//" $COMMIT_MSG_FILE
+    else
+      sed -i "" "s/(#Issue)//" $COMMIT_MSG_FILE
+    fi;;
+  *) echo "abort." ; exit 1 ;;
+esac

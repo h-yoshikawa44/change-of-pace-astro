@@ -1,0 +1,57 @@
+{
+  "name": "change-of-pace",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "lint-check": "npm run lint:eslint && npm run check:prettier",
+    "lint:eslint": "eslint \"./src/**/*.{js,jsx,ts,tsx,astro}\"",
+    "check:prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,html,json,astro}\"",
+    "fix": "npm run fix:eslint && npm run fix:prettier",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run check:prettier -- --write",
+    "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^0.18.3",
+    "@astrojs/rss": "^2.3.2",
+    "@astrojs/sitemap": "^1.2.2",
+    "astro": "^2.2.1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "@unocss/astro": "^0.50.8",
+    "@unocss/autocomplete": "^0.50.8",
+    "@unocss/eslint-config": "^0.50.8",
+    "eslint": "^8.38.0",
+    "eslint-plugin-astro": "^0.26.1",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "lint-staged": "^13.2.1",
+    "prettier": "^2.8.7",
+    "prettier-plugin-astro": "^0.8.0",
+    "simple-git-hooks": "^2.8.1",
+    "unocss": "^0.50.8"
+  },
+  "volta": {
+    "node": "18.15.0",
+    "npm": "8.6.0"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged",
+    "prepare-commit-msg": "./git-hook/prepare-commit-msg \"$@\""
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,astro}": [
+      "prettier --write --loglevel=error",
+      "eslint --fix --quiet"
+    ],
+    "./**/*.{html,json}": [
+      "prettier --write --loglevel=error"
+    ]
+  }
+}
