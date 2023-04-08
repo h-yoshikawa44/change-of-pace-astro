@@ -10,13 +10,18 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^2.2.1",
     "@astrojs/mdx": "^0.18.3",
     "@astrojs/rss": "^2.3.2",
-    "@astrojs/sitemap": "^1.2.2"
+    "@astrojs/sitemap": "^1.2.2",
+    "astro": "^2.2.1"
   },
   "volta": {
     "node": "18.15.0",
     "npm": "8.6.0"
+  },
+  "devDependencies": {
+    "@unocss/astro": "^0.50.8",
+    "@unocss/autocomplete": "^0.50.8",
+    "unocss": "^0.50.8"
   }
 }
