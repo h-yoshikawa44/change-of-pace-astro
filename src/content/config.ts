@@ -1,10 +1,12 @@
 import { defineCollection, z } from "astro:content";
+import { CATEGORY_LIST } from "@/consts";
 
 const blog = defineCollection({
   // Type-check frontmatter using a schema
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    category: z.enum(CATEGORY_LIST),
     // Transform string to Date object
     pubDate: z
       .string()

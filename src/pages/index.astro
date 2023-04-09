@@ -43,6 +43,7 @@ const posts = (await getCollection("blog")).sort(
               <li>
                 <FormattedDate date={post.data.pubDate} />
                 <a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+                <span>{post.data.category}</span>
               </li>
             ))
           }
