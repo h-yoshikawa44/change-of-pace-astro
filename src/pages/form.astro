@@ -1,0 +1,18 @@
+---
+import BaseHead from "@/components/BaseHead.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <BaseHead
+      title={`お問い合わせ | ${SITE_TITLE}`}
+      description={SITE_DESCRIPTION}
+    />
+  </head><iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSelbLcrB0oWhQyA5om5hQqyfG1128J-bDaqV_d6nf6m3kYDNQ/viewform?embedded=true"
+    width="640"
+    height="967">読み込んでいます…</iframe
+  >
+</html>

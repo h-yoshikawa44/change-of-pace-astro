@@ -4,7 +4,8 @@
     "naumovs.color-highlight",
     "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "antfu.unocss"
   ],
   "unwantedRecommendations": []
 }

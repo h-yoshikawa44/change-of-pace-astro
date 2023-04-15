@@ -1,0 +1,76 @@
+---
+import { getCollection } from "astro:content";
+import type { GetStaticPathsOptions, Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import BaseHead from "@/components/BaseHead.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import FormattedDate from "@/components/FormattedDate.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
+import { extractPostSlug } from "@/utils/extractPostSlug";
+
+type Props = {
+  page: Page<CollectionEntry<"posts">>;
+};
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const allPosts = (await getCollection("posts"))
+    .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+    .map((post) => {
+      return { ...post, slug: extractPostSlug(post.slug) };
+    });
+
+  return paginate(allPosts, {
+    // TODO: 後で変える
+    pageSize: 4,
+  });
+}
+
+const { page } = Astro.props;
+---
+
+<html lang="ja">
+  <head>
+    <BaseHead title={` | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+    <style>
+      ul {
+        list-style-type: none;
+        padding: unset;
+      }
+      ul li {
+        display: flex;
+      }
+      ul li :global(time) {
+        flex: 0 0 130px;
+        font-style: italic;
+        color: #595959;
+      }
+      ul li a:visited {
+        color: #8e32dc;
+      }
+    </style>
+  </head>
+  <body>
+    <Header />
+    <main>
+      <section>
+        <ul>
+          {
+            page.data.map(({ data, slug }) => (
+              <li>
+                <FormattedDate date={data.pubDate} />
+                <a href={`/posts/${slug}`}>{data.title}</a>
+                <span>{data.category}</span>
+              </li>
+            ))
+          }
+        </ul>
+        <div>
+          {page.url.prev && <a href={page.url.prev}>前ページに戻る</a>}
+          {page.url.next && <a href={page.url.next}>次ページに進む</a>}
+        </div>
+      </section>
+    </main>
+    <Footer />
+  </body>
+</html>

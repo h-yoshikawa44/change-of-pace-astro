@@ -4,14 +4,19 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 import { getCollection } from "astro:content";
-import FormattedDate from "@/components/FormattedDate.astro";
-import { extractPostSlug } from "@/utils/extractPostSlug";
 
-const posts = (await getCollection("posts"))
-  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
-  .map((post) => {
-    return { ...post, slug: extractPostSlug(post.slug) };
-  });
+const allTags = (await getCollection("posts"))
+  .map((post) => post.data.tags)
+  .flat();
+
+const tagsInfo = allTags.reduce((prev, current) => {
+  prev[current] = (prev[current] || 0) + 1;
+  return prev;
+}, {});
+const tagInfoList = Object.entries(tagsInfo).map(([key, value]) => ({
+  tagName: key,
+  count: value,
+}));
 ---
 
 <!DOCTYPE html>
@@ -43,12 +48,11 @@ const posts = (await getCollection("posts"))
       <section>
         <ul>
           {
-            posts.map((post) => (
+            tagInfoList.map((tagInfo) => (
               <li>
-                <FormattedDate date={post.data.pubDate} />
-                <a href={`/posts/${post.slug}`}>{post.data.title}</a>
-                <span>{post.data.category}</span>
-                <span>{post.data.tags.join(", ")}</span>
+                <a
+                  href={`/tags/${tagInfo.tagName}/1`}
+                >{`${tagInfo.tagName}(${tagInfo.count})`}</a>
               </li>
             ))
           }

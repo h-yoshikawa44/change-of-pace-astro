@@ -1,7 +1,9 @@
 ---
-title: "First post"
+title: "Third post"
 description: "Lorem ipsum dolor sit amet"
-pubDate: "Jul 08 2022"
+pubDate: "Jul 15 2022"
+category: "free"
+tags: ["post"]
 heroImage: "/placeholder-hero.jpg"
 ---
 
