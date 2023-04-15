@@ -1,17 +1,22 @@
 ---
-// Import the global.css file here so that it is included on
-// all pages through the use of the <BaseHead /> component.
-import "@/styles/global.css";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 
 export interface Props {
-  title: string;
-  description: string;
+  title?: string;
+  description?: string;
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+const canonicalURL =
+  Astro.url.pathname === "/"
+    ? Astro.site?.origin
+    : new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
+const {
+  title = SITE_TITLE,
+  description = SITE_DESCRIPTION,
+  image = "/placeholder-social.jpg",
+} = Astro.props;
 ---
 
 <!-- Global Metadata -->
@@ -27,6 +32,7 @@ const { title, description, image = "/placeholder-social.jpg" } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<link rel="sitemap" href="/sitemap-index.xml" />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
