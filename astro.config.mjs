@@ -8,4 +8,7 @@ import UnoCSS from "unocss/astro";
 export default defineConfig({
   site: "https://changeofpace.site",
   integrations: [mdx(), sitemap(), UnoCSS()],
+  build: {
+    format: "file",
+  },
 });

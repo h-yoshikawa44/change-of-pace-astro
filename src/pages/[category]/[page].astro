@@ -71,7 +71,7 @@ const { category } = Astro.params as Params;
             page.data.map(({ data, slug }) => (
               <li>
                 <FormattedDate date={data.pubDate} />
-                <a href={`/posts/${slug}/`}>{data.title}</a>
+                <a href={`/posts/${slug}`}>{data.title}</a>
                 <span>{data.category}</span>
               </li>
             ))

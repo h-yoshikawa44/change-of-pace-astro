@@ -17,6 +17,7 @@ const posts = (await getCollection("posts"))
 <!DOCTYPE html>
 <html lang="ja">
   <head>
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
       ul {
@@ -45,7 +46,7 @@ const posts = (await getCollection("posts"))
             posts.map((post) => (
               <li>
                 <FormattedDate date={post.data.pubDate} />
-                <a href={`/posts/${post.slug}/`}>{post.data.title}</a>
+                <a href={`/posts/${post.slug}`}>{post.data.title}</a>
                 <span>{post.data.category}</span>
               </li>
             ))
