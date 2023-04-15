@@ -1,0 +1,22 @@
+---
+import { getEntryBySlug } from "astro:content";
+import BaseHead from "@/components/BaseHead.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+
+const page = await getEntryBySlug("pages", "policy");
+const { Content } = await page.render();
+---
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <BaseHead
+      title={`プライバシーポリシー | ${SITE_TITLE}`}
+      description={SITE_DESCRIPTION}
+    />
+  </head>
+  <body>
+    <h1>{page.data.title}</h1>
+    <Content />
+  </body>
+</html>
