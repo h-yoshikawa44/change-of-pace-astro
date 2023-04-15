@@ -1,5 +1,12 @@
-import { defineConfig } from 'unocss'
+import { defineConfig, presetUno, presetWebFonts } from "unocss";
 
 export default defineConfig({
-  // ...UnoCSS options
-})
+  presets: [
+    presetUno(),
+    presetWebFonts({
+      fonts: {
+        name: "Sawarabi Mincho",
+      },
+    }),
+  ],
+});
