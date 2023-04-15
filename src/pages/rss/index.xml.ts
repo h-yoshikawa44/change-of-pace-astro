@@ -20,9 +20,10 @@ export async function get(context) {
     site: context.site,
     items: posts.map((post) => ({
       ...post.data,
-      link: `/posts/${post.slug}/`,
+      link: `/posts/${post.slug}`,
       content: sanitizeHtml(parser.render(post.body)),
     })),
     stylesheet: "/pretty-feed-v3.xsl",
+    trailingSlash: false,
   });
 }
