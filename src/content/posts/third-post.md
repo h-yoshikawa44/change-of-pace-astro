@@ -1,8 +1,9 @@
 ---
 title: "Third post"
 description: "Lorem ipsum dolor sit amet"
-category: "free"
 pubDate: "Jul 15 2022"
+category: "free"
+tags: ["post"]
 heroImage: "/placeholder-hero.jpg"
 ---
 

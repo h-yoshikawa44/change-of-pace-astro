@@ -1,8 +1,9 @@
 ---
 title: "Second post"
 description: "Lorem ipsum dolor sit amet"
-category: "event"
 pubDate: "Jul 22 2022"
+category: "event"
+tags: ["post"]
 heroImage: "/placeholder-hero.jpg"
 ---
 

@@ -1,8 +1,9 @@
 ---
 title: "First post test"
 description: "Lorem ipsum dolor sit amet"
-category: "free"
 pubDate: "Jul 08 2022"
+category: "free"
+tags: ["test"]
 heroImage: "/placeholder-hero.jpg"
 ---
 

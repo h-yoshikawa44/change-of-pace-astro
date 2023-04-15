@@ -6,7 +6,6 @@ const posts = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    category: z.enum(CATEGORY_LIST),
     // Transform string to Date object
     pubDate: z
       .string()
@@ -16,6 +15,8 @@ const posts = defineCollection({
       .string()
       .optional()
       .transform((str) => (str ? new Date(str) : undefined)),
+    category: z.enum(CATEGORY_LIST),
+    tags: z.array(z.string()),
     heroImage: z.string().optional(),
   }),
 });

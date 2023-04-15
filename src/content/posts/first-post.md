@@ -1,8 +1,9 @@
 ---
 title: "First post"
 description: "Lorem ipsum dolor sit amet"
-category: "qualification"
 pubDate: "Jul 08 2022"
+category: "qualification"
+tags: ["post"]
 heroImage: "/placeholder-hero.jpg"
 ---
 
