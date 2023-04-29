@@ -11,3 +11,11 @@ export const CATEGORY_LIST = [
   "event",
   "free",
 ] as const;
+
+export const CATEGORY_MAP = {
+  [CATEGORY_LIST[0]]: "開発関連技術",
+  [CATEGORY_LIST[1]]: "ツール・サービス",
+  [CATEGORY_LIST[2]]: "資格勉強",
+  [CATEGORY_LIST[3]]: "イベント",
+  [CATEGORY_LIST[4]]: "雑談",
+} as const;
