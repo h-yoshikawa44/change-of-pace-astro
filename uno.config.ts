@@ -5,8 +5,12 @@ export default defineConfig({
     presetUno(),
     presetWebFonts({
       fonts: {
-        mincho: { name: "Sawarabi Mincho" },
-        fatface: { name: "Abril Fatface" },
+        sawarabi: [
+          "Sawarabi Mincho",
+          "Verdana",
+          { name: "sans-serif", provider: "none" },
+        ],
+        fatface: ["Abril Fatface", { name: "sans-serif", provider: "none" }],
       },
     }),
   ],
