@@ -1,0 +1,16 @@
+---
+type Props = {
+  href: string;
+};
+
+const { href } = Astro.props;
+---
+
+<li>
+  <a
+    href={href}
+    class="block w-full px-4 py-1 focus:bg-slate-2 hover:bg-slate-2 focus:[&:not(focus-visible)]:outline-transparent"
+  >
+    <slot />
+  </a>
+</li>

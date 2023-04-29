@@ -8,7 +8,7 @@ body {
   min-height: 100%;
 	font-family: Sawarabi Mincho, Verdana, sans-serif;
 	text-align: left;
-	background-color: #fff;
+	background-color: rgb(241 245 249);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	line-height: 1.5;
@@ -23,9 +23,6 @@ h1 {
   font-family: Abril Fatface, sans-serif;
 }
 
-a {
-	color: #3273dc;
-}
 nav a {
 	margin-right: 10px;
 }
