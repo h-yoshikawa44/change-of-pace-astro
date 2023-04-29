@@ -5,8 +5,18 @@ export default defineConfig({
     presetUno(),
     presetWebFonts({
       fonts: {
-        name: "Sawarabi Mincho",
+        mincho: { name: "Sawarabi Mincho" },
+        fatface: { name: "Abril Fatface" },
       },
     }),
   ],
+  theme: {
+    colors: {
+      brand: {
+        primary: "#202020",
+        start: "#323232",
+        end: "#0e0e0e",
+      },
+    },
+  },
 });
