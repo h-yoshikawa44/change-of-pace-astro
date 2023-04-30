@@ -3,4 +3,4 @@
  * @param slug
  * @returns 抽出した slug
  */
-export const extractPostSlug = (slug: string) => slug.replace(/^\d{4}\//, "");
+export const extractPostSlug = (slug: string) => slug.replace(/^\d{4}\//, '');

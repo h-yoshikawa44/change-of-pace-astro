@@ -1,9 +1,9 @@
 ---
-import { getEntryBySlug } from "astro:content";
-import BaseHead from "@/components/BaseHead.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "@/consts";
+import { getEntryBySlug } from 'astro:content';
+import BaseHead from '@/components/BaseHead.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
 
-const page = await getEntryBySlug("pages", "policy");
+const page = await getEntryBySlug('pages', 'policy');
 const { Content } = await page.render();
 ---
 

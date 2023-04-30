@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import { getCollection } from "astro:content";
-import FormattedDate from "@/components/FormattedDate.astro";
-import { extractPostSlug } from "@/utils/extractPostSlug";
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import FormattedDate from '@/components/FormattedDate.astro';
+import { extractPostSlug } from '@/utils/extractPostSlug';
 
-const posts = (await getCollection("posts"))
+const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .map((post) => {
     return { ...post, slug: extractPostSlug(post.slug) };
@@ -20,7 +20,7 @@ const posts = (await getCollection("posts"))
             <FormattedDate date={post.data.pubDate} />
             <a href={`/posts/${post.slug}`}>{post.data.title}</a>
             <span>{post.data.category}</span>
-            <span>{post.data.tags.join(", ")}</span>
+            <span>{post.data.tags.join(', ')}</span>
           </li>
         ))
       }

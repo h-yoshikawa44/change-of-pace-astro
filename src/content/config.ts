@@ -1,5 +1,5 @@
-import { defineCollection, z } from "astro:content";
-import { CATEGORY_LIST } from "@/consts";
+import { defineCollection, z } from 'astro:content';
+import { CATEGORY_LIST } from '@/consts';
 
 const posts = defineCollection({
   // Type-check frontmatter using a schema
