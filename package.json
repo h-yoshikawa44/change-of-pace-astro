@@ -23,7 +23,8 @@
     "@unocss/reset": "^0.51.4",
     "astro": "^2.2.1",
     "markdown-it": "^13.0.1",
-    "sanitize-html": "^2.10.0"
+    "sanitize-html": "^2.10.0",
+    "wicg-inert": "^3.1.2"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

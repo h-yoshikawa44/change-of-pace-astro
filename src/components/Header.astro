@@ -1,5 +1,4 @@
 ---
-import HeaderLink from "@/components/HeaderLink.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 ---
 
@@ -10,17 +9,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
         <a href="/">{SITE_TITLE}</a>
       </h1>
       <p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
+      <button id="open-menu-button" class="ml-auto block lg:hidden">test</button
+      >
     </div>
-    <nav>
-      <HeaderLink href="/">Home</HeaderLink>
-      <HeaderLink href="/posts">Posts</HeaderLink>
-      <HeaderLink href="/about">About</HeaderLink>
-      <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">
-        Twitter
-      </HeaderLink>
-      <HeaderLink href="https://github.com/withastro/astro" target="_blank">
-        GitHub
-      </HeaderLink>
-    </nav>
   </div>
 </header>
