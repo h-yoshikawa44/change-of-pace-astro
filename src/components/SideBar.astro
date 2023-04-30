@@ -1,29 +1,27 @@
 ---
-import SideBarLink from "@/components/SideBarLink.astro";
+import NavLink from "@/components/NavLink.astro";
 import { CATEGORY_LIST, CATEGORY_MAP } from "@/consts";
 ---
 
 <aside class="rounded-2 bg-white py-4 md:w-52">
   <nav class="grid gap-y-4">
     <ul>
-      <SideBarLink href="/">Home</SideBarLink>
-      <SideBarLink href="/about">About</SideBarLink>
+      <NavLink href="/">Home</NavLink>
+      <NavLink href="/about">About</NavLink>
     </ul>
     <div>
       <p class="px-4 font-600">Blog Category List</p>
       <ul>
         {
           CATEGORY_LIST.map((category) => (
-            <SideBarLink href={`/${category}/1`}>
-              {CATEGORY_MAP[category]}
-            </SideBarLink>
+            <NavLink href={`/${category}/1`}>{CATEGORY_MAP[category]}</NavLink>
           ))
         }
       </ul>
     </div>
     <ul>
-      <SideBarLink href="/form">お問い合わせ</SideBarLink>
-      <SideBarLink href="/policy">プライバシーポリシー</SideBarLink>
+      <NavLink href="/form">お問い合わせ</NavLink>
+      <NavLink href="/policy">プライバシーポリシー</NavLink>
     </ul>
   </nav>
 </aside>
