@@ -19,3 +19,9 @@ export const CATEGORY_MAP = {
   [CATEGORY_LIST[3]]: 'イベント',
   [CATEGORY_LIST[4]]: '雑談',
 } as const;
+
+export const ACCOUNT_LINKS = {
+  portfolio: 'https://h-yoshikawa44.com',
+  github: 'https://github.com/h-yoshikawa44',
+  twitter: 'https://twitter.com/yoshi44_lion',
+};
