@@ -1,12 +1,12 @@
 ---
-import "@unocss/reset/tailwind.css";
-import "wicg-inert";
-import "@/styles/global.css";
-import BaseHead from "@/components/BaseHead.astro";
-import Header from "@/components/Header.astro";
-import SideBar from "@/components/SideBar.astro";
-import Footer from "@/components/Footer.astro";
-import Menu from "@/components/Menu.astro";
+import '@unocss/reset/tailwind.css';
+import 'wicg-inert';
+import '@/styles/global.css';
+import BaseHead from '@/components/BaseHead.astro';
+import Header from '@/components/Header.astro';
+import SideBar from '@/components/SideBar.astro';
+import Footer from '@/components/Footer.astro';
+import Menu from '@/components/Menu.astro';
 
 type Props = {
   title?: string;
@@ -41,7 +41,7 @@ const { title, description } = Astro.props;
     </div>
     <Menu />
     <script>
-      import "@/scripts/menu";
+      import '@/scripts/menu';
     </script>
   </body>
 </html>
