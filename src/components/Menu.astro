@@ -1,0 +1,33 @@
+---
+import NavLink from "@/components/NavLink.astro";
+import { CATEGORY_LIST, CATEGORY_MAP } from "@/consts";
+---
+
+<div
+  id="menu"
+  class="fixed right-4 top-4 z-1200 hidden max-w-xs w-full rounded-2 bg-white py-4 text-slate-800 shadow-md"
+>
+  <button id="close-menu-button" class="ml-auto block px4"
+    ><span class="i-system-uicons:cross text-base">閉じる</span></button
+  >
+  <nav class="grid gap-y-4">
+    <ul>
+      <NavLink href="/">Home</NavLink>
+      <NavLink href="/about">About</NavLink>
+    </ul>
+    <div>
+      <p class="px-4 font-600">Blog Category List</p>
+      <ul>
+        {
+          CATEGORY_LIST.map((category) => (
+            <NavLink href={`/${category}/1`}>{CATEGORY_MAP[category]}</NavLink>
+          ))
+        }
+      </ul>
+    </div>
+    <ul>
+      <NavLink href="/form">お問い合わせ</NavLink>
+      <NavLink href="/policy">プライバシーポリシー</NavLink>
+    </ul>
+  </nav>
+</div>

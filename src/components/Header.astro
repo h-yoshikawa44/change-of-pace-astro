@@ -1,29 +1,18 @@
 ---
-import HeaderLink from "@/components/HeaderLink.astro";
-import { SITE_TITLE } from "@/consts";
+import { SITE_TITLE, SITE_DESCRIPTION } from "@/consts";
 ---
 
-<header>
-  <h2>
-    {SITE_TITLE}
-  </h2>
-  <nav>
-    <HeaderLink href="/">Home</HeaderLink>
-    <HeaderLink href="/posts">Posts</HeaderLink>
-    <HeaderLink href="/about">About</HeaderLink>
-    <HeaderLink href="https://twitter.com/astrodotbuild" target="_blank">
-      Twitter
-    </HeaderLink>
-    <HeaderLink href="https://github.com/withastro/astro" target="_blank">
-      GitHub
-    </HeaderLink>
-  </nav>
+<header class="from-brand-start to-brand-end bg-gradient-to-b py-3">
+  <div class="mx-auto px-2 color-white container sm:px-4">
+    <div class="flex items-baseline">
+      <h1 class="font-fatface text-2xl">
+        <a href="/">{SITE_TITLE}</a>
+      </h1>
+      <p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
+      <button id="open-menu-button" class="ml-auto lg:hidden"
+        ><span class="i-system-uicons:menu-vertical text-base">menu</span
+        ></button
+      >
+    </div>
+  </div>
 </header>
-<style>
-  header {
-    margin: 0em 0 2em;
-  }
-  h2 {
-    margin: 0.5em 0;
-  }
-</style>
