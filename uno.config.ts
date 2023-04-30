@@ -1,4 +1,4 @@
-import { defineConfig, presetUno, presetWebFonts } from "unocss";
+import { defineConfig, presetUno, presetWebFonts, presetIcons } from "unocss";
 
 export default defineConfig({
   presets: [
@@ -13,6 +13,7 @@ export default defineConfig({
         fatface: ["Abril Fatface", { name: "sans-serif", provider: "none" }],
       },
     }),
+    presetIcons(),
   ],
   theme: {
     colors: {
