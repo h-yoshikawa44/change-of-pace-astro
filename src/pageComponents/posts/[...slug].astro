@@ -10,7 +10,7 @@ const { title, description, pubDate, updatedDate, heroImage } = post.data;
 const { Content } = await post.render();
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout title={title} description={description} noTopHeading={true}>
   <style>
     .title {
       font-size: 2em;
