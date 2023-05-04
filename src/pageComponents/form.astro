@@ -1,0 +1,15 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts';
+---
+
+<BaseLayout
+  title={`お問い合わせ | ${SITE_TITLE}`}
+  description={SITE_DESCRIPTION}
+>
+  <iframe
+    src="https://docs.google.com/forms/d/e/1FAIpQLSelbLcrB0oWhQyA5om5hQqyfG1128J-bDaqV_d6nf6m3kYDNQ/viewform?embedded=true"
+    width="640"
+    height="967">読み込んでいます…</iframe
+  >
+</BaseLayout>
