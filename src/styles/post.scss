@@ -62,4 +62,22 @@
   img {
     @apply max-w-full h-auto my-4;
   }
+
+  table {
+    @apply my-4 border border-slate-300 w-full text-sm border-collapse leading-normal overflow-auto;
+  }
+
+  th,
+  td {
+    @apply border border-slate-300 px-2 py-1;
+  }
+
+  th {
+    @apply bg-slate-200 font-700;
+  }
+
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    @apply bg-slate-50;
+  }
 }
