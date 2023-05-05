@@ -92,4 +92,8 @@
   pre > code {
     @apply bg-transparent text-inherit;
   }
+
+  blockquote {
+    @apply font-italic text-slate-500 border-l-3 border-slate-400 pl-4 my-4;
+  }
 }
