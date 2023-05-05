@@ -24,4 +24,8 @@
   h6 {
     @apply text-base mt-6 mb-1;
   }
+
+  p + p {
+    @apply mt-4;
+  }
 }
