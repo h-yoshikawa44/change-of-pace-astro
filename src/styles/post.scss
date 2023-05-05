@@ -1,0 +1,27 @@
+.post-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-700;
+  }
+
+  h2 {
+    @apply border-b border-gray-3 leading-normal text-2xl mt-10 mb-2;
+  }
+
+  h3 {
+    @apply text-xl mt-8 mb-2;
+  }
+
+  h4 {
+    @apply text-lg mt-8 mb-1;
+  }
+
+  h5,
+  h6 {
+    @apply text-base mt-6 mb-1;
+  }
+}
