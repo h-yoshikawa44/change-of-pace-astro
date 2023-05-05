@@ -58,4 +58,8 @@
   a:hover {
     @apply underline underline-blue-500 decoration-solid underline-offset-2;
   }
+
+  img {
+    @apply max-w-full h-auto my-4;
+  }
 }
