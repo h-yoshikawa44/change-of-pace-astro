@@ -1,3 +1,7 @@
+a:focus:not(:focus-visible) {
+  @apply outline-transparent;
+}
+
 nav a {
 	margin-right: 10px;
 }
