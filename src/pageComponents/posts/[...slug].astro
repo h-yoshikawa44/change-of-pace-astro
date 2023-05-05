@@ -2,40 +2,43 @@
 import { CollectionEntry } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
+import '@/styles/post.css';
+import { CATEGORY_MAP } from '@/consts';
 
 type Props = CollectionEntry<'posts'>;
 
 const post = Astro.props;
-const { title, description, pubDate, updatedDate, heroImage } = post.data;
+const { title, description, pubDate, updatedDate, category, tags } = post.data;
 const { Content } = await post.render();
 ---
 
 <BaseLayout title={title} description={description} noTopHeading={true}>
-  <style>
-    .title {
-      font-size: 2em;
-      margin: 0.25em 0 0;
-    }
-    hr {
-      border-top: 1px solid #ddd;
-      margin: 1rem 0;
-    }
-    .last-updated-on {
-      font-style: italic;
-    }
-  </style>
-  <article>
-    {heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-    <h1 class="title">{title}</h1>
-    <FormattedDate date={pubDate} />
-    {
-      updatedDate && (
-        <div class="last-updated-on">
-          Last updated on <FormattedDate date={updatedDate} />
-        </div>
-      )
-    }
-    <hr />
-    <Content />
+  <article class="post">
+    <header>
+      <p>
+        <FormattedDate date={pubDate} />
+        {
+          updatedDate && (
+            <span class="inline-flex items-center">
+              (<span class="i-system-uicons:refresh mr-1">更新日</span>
+              <FormattedDate date={updatedDate} />)
+            </span>
+          )
+        }
+      </p>
+      <h1 class="text-4xl">{title}</h1>
+      <p class="mt-4 flex items-center">
+        <span class="i-system-uicons:document mr-0.5 text-lg">カテゴリー</span>
+        {`${CATEGORY_MAP[category]}`}
+      </p>
+      <p class="flex items-center">
+        <span class="i-system-uicons:tag mr-0.5 text-lg">タグ一覧</span>
+        {tags.join(', ')}
+      </p>
+    </header>
+    <hr class="my-4 border-gray" />
+    <div class="post-content">
+      <Content />
+    </div>
   </article>
 </BaseLayout>

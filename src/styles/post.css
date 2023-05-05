@@ -1,0 +1,3 @@
+.post hr {
+  @apply: border-gray my-4
+}
