@@ -85,6 +85,11 @@
     @apply p-4;
   }
 
+  pre,
+  code {
+    @apply font-hackGen;
+  }
+
   :not(pre) > code {
     @apply px-1 py-0.5 text-red-700 text-sm rounded bg-stone-100;
   }

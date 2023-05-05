@@ -23,6 +23,19 @@ export default defineConfig({
   ],
   transformers: [transformerDirectives()],
   theme: {
+    fontFamily: {
+      hackGen: [
+        'HackGen',
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        'Liberation Mono',
+        'Courier New',
+        'monospace',
+      ],
+    },
     colors: {
       brand: {
         primary: '#202020',
