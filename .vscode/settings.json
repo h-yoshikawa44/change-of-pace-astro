@@ -4,10 +4,10 @@
     "javascriptreact",
     "typescript",
     "typescriptreact",
-    "astro",
+    "astro"
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
+    "source.fixAll.eslint": true
   },
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -29,5 +29,8 @@
   "[astro]": {
     "editor.formatOnSave": true
   },
-  "eslint.packageManager": "npm",
+  "[scss]": {
+    "editor.formatOnSave": true
+  },
+  "eslint.packageManager": "npm"
 }
