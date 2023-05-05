@@ -50,4 +50,12 @@
   li > ol {
     @apply my-0;
   }
+
+  a {
+    @apply text-blue-500;
+  }
+
+  a:hover {
+    @apply underline underline-blue-500 decoration-solid underline-offset-2;
+  }
 }
