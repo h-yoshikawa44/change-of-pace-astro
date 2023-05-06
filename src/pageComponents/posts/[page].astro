@@ -1,0 +1,33 @@
+---
+import type { Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/features/post/PostCard.astro';
+import Paging from '@/components/Paging.astro';
+import { SITE_TITLE } from '@/consts';
+
+type Props = {
+  page: Page<CollectionEntry<'posts'>>;
+};
+
+const { page } = Astro.props;
+
+const prev = page.currentPage === 2 ? '/' : page.url.prev;
+---
+
+<BaseLayout title={`記事一覧 - ${page.currentPage} | ${SITE_TITLE}`}>
+  <p class="mb-4 text-xl font-600">{`記事一覧 - ${page.currentPage}`}</p>
+  {
+    page.data.map((post) => (
+      <PostCard
+        pubDate={post.data.pubDate}
+        updatedDate={post.data.updatedDate}
+        slug={post.slug}
+        title={post.data.title}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))
+  }
+  <Paging previousUrl={prev} nextUrl={page.url.next} />
+</BaseLayout>

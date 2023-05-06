@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/features/post/PostCard.astro';
+import Paging from '@/components/Paging.astro';
+import { extractPostSlug } from '@/utils/extractPostSlug';
+import { PAGE_SIZE } from '@/consts';
+
+const posts = (await getCollection('posts'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, PAGE_SIZE)
+  .map((post) => {
+    return { ...post, slug: extractPostSlug(post.slug) };
+  });
+---
+
+<BaseLayout>
+  <p class="mb-4 text-xl font-600">最新の記事</p>
+  {
+    posts.map((post) => (
+      <PostCard
+        pubDate={post.data.pubDate}
+        updatedDate={post.data.updatedDate}
+        slug={post.slug}
+        title={post.data.title}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))
+  }
+  <Paging nextUrl="/posts/2" />
+</BaseLayout>

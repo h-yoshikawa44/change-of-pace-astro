@@ -1,0 +1,31 @@
+---
+type Props = {
+  previousUrl?: string;
+  nextUrl?: string;
+};
+
+const { previousUrl, nextUrl } = Astro.props;
+---
+
+<div class="mt-4 flex justify-between">
+  {
+    previousUrl ? (
+      <a href={previousUrl} class="inline-flex items-center px-2 py-1">
+        <span class="i-system-uicons:arrow-left-circle mr-0.5" />
+        前ページへ
+      </a>
+    ) : (
+      <div />
+    )
+  }
+  {
+    nextUrl ? (
+      <a href={nextUrl} class="inline-flex items-center px-2 py-1">
+        次ページへ
+        <span class="i-system-uicons:arrow-right-circle ml-0.5" />
+      </a>
+    ) : (
+      <div />
+    )
+  }
+</div>
