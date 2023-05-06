@@ -1,8 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import PostCard from '@/features/post/PostCard.astro';
-import Paging from '@/components/Paging.astro';
+import PostPagingList from '@/features/post/PostPagingList.astro';
 import { extractPostSlug } from '@/utils/extractPostSlug';
 import { PAGE_SIZE } from '@/consts';
 
@@ -14,19 +12,4 @@ const posts = (await getCollection('posts'))
   });
 ---
 
-<BaseLayout>
-  <p class="mb-4 text-xl font-600">最新の記事</p>
-  {
-    posts.map((post) => (
-      <PostCard
-        pubDate={post.data.pubDate}
-        updatedDate={post.data.updatedDate}
-        slug={post.slug}
-        title={post.data.title}
-        category={post.data.category}
-        tags={post.data.tags}
-      />
-    ))
-  }
-  <Paging nextUrl="/posts/2" />
-</BaseLayout>
+<PostPagingList pageTitle="最新の記事" postList={posts} nextUrl="/posts/2" />

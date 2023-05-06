@@ -1,0 +1,43 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/features/post/PostCard.astro';
+import Paging from '@/components/Paging.astro';
+
+type Props = {
+  headTitle?: string;
+  headDescription?: string;
+  pageTitle: string;
+  postList: CollectionEntry<'posts'>[];
+  previousUrl?: string;
+  nextUrl?: string;
+};
+
+const {
+  headTitle,
+  headDescription,
+  pageTitle,
+  postList,
+  previousUrl,
+  nextUrl,
+} = Astro.props;
+---
+
+<BaseLayout title={headTitle} description={headDescription}>
+  <p class="mb-4 text-xl font-600">
+    {pageTitle}
+  </p>
+  {
+    postList.map((post) => (
+      <PostCard
+        pubDate={post.data.pubDate}
+        updatedDate={post.data.updatedDate}
+        slug={post.slug}
+        title={post.data.title}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))
+  }
+  <Paging previousUrl={previousUrl} nextUrl={nextUrl} />
+</BaseLayout>
