@@ -1,0 +1,47 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import FormattedDate from '@/components/FormattedDate.astro';
+import { extractPostSlug } from '@/utils/extractPostSlug';
+
+const posts = (await getCollection('posts'))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .map((post) => {
+    return { ...post, slug: extractPostSlug(post.slug) };
+  });
+---
+
+<BaseLayout>
+  <section>
+    <ul>
+      {
+        posts.map((post) => (
+          <li>
+            <FormattedDate date={post.data.pubDate} />
+            <a href={`/posts/${post.slug}`}>{post.data.title}</a>
+            <span>{post.data.category}</span>
+            <span>{post.data.tags.join(', ')}</span>
+          </li>
+        ))
+      }
+    </ul>
+    <h2>tet</h2>
+  </section>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: unset;
+    }
+    ul li {
+      display: flex;
+    }
+    ul li :global(time) {
+      flex: 0 0 130px;
+      font-style: italic;
+      color: #595959;
+    }
+    ul li a:visited {
+      color: #8e32dc;
+    }
+  </style>
+</BaseLayout>
