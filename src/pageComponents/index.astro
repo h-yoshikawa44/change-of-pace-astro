@@ -3,10 +3,11 @@ import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
 import { extractPostSlug } from '@/utils/extractPostSlug';
-import { CATEGORY_MAP } from '@/consts';
+import { CATEGORY_MAP, PAGE_SIZE } from '@/consts';
 
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, PAGE_SIZE)
   .map((post) => {
     return { ...post, slug: extractPostSlug(post.slug) };
   });
