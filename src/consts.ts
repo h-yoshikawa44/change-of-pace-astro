@@ -22,8 +22,17 @@ export const CATEGORY_MAP = {
 
 export const PAGE_SIZE = 10;
 
+export const RSS_LINKS = {
+  all: '/rss.xml',
+  [CATEGORY_LIST[0]]: `/rss/${CATEGORY_LIST[0]}.xml`,
+  [CATEGORY_LIST[1]]: `/rss/${CATEGORY_LIST[1]}.xml`,
+  [CATEGORY_LIST[2]]: `/rss/${CATEGORY_LIST[2]}.xml`,
+  [CATEGORY_LIST[3]]: `/rss/${CATEGORY_LIST[3]}.xml`,
+  [CATEGORY_LIST[4]]: `/rss/${CATEGORY_LIST[4]}.xml`,
+} as const;
+
 export const ACCOUNT_LINKS = {
   portfolio: 'https://h-yoshikawa44.com',
   github: 'https://github.com/h-yoshikawa44',
   twitter: 'https://twitter.com/yoshi44_lion',
-};
+} as const;
