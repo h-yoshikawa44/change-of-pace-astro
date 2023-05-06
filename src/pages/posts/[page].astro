@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import type { GetStaticPathsOptions, Page } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import PostPage from '@/pageComponents/posts/[page].astro';
+import { PAGE_SIZE } from '@/consts';
 import { extractPostSlug } from '@/utils/extractPostSlug';
 
 type Props = {
@@ -17,8 +18,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
     });
 
   return paginate(allPosts, {
-    // TODO: 後で変える
-    pageSize: 4,
+    pageSize: PAGE_SIZE,
   });
 }
 
