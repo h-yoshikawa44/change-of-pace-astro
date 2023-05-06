@@ -15,19 +15,18 @@ const posts = (await getCollection('posts'))
 ---
 
 <BaseLayout>
-  <div>
-    {
-      posts.map((post) => (
-        <PostCard
-          pubDate={post.data.pubDate}
-          updatedDate={post.data.updatedDate}
-          slug={post.slug}
-          title={post.data.title}
-          category={post.data.category}
-          tags={post.data.tags}
-        />
-      ))
-    }
-    <Paging nextUrl="/posts/2" />
-  </div>
+  <p class="mb-4 text-xl font-600">最新の記事</p>
+  {
+    posts.map((post) => (
+      <PostCard
+        pubDate={post.data.pubDate}
+        updatedDate={post.data.updatedDate}
+        slug={post.slug}
+        title={post.data.title}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))
+  }
+  <Paging nextUrl="/posts/2" />
 </BaseLayout>
