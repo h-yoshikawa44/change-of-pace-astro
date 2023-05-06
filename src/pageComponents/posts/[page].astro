@@ -1,61 +1,33 @@
 ---
 import type { Page } from 'astro';
 import type { CollectionEntry } from 'astro:content';
-import BaseHead from '@/components/BaseHead.astro';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
-import FormattedDate from '@/components/FormattedDate.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PostCard from '@/features/post/PostCard.astro';
+import Paging from '@/components/Paging.astro';
+import { SITE_TITLE } from '@/consts';
 
 type Props = {
   page: Page<CollectionEntry<'posts'>>;
 };
 
 const { page } = Astro.props;
+
+const prev = page.currentPage === 2 ? '/' : page.url.prev;
 ---
 
-<html lang="ja">
-  <head>
-    <BaseHead title={` | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
-    <style>
-      ul {
-        list-style-type: none;
-        padding: unset;
-      }
-      ul li {
-        display: flex;
-      }
-      ul li :global(time) {
-        flex: 0 0 130px;
-        font-style: italic;
-        color: #595959;
-      }
-      ul li a:visited {
-        color: #8e32dc;
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section>
-        <ul>
-          {
-            page.data.map(({ data, slug }) => (
-              <li>
-                <FormattedDate date={data.pubDate} />
-                <a href={`/posts/${slug}`}>{data.title}</a>
-                <span>{data.category}</span>
-              </li>
-            ))
-          }
-        </ul>
-        <div>
-          {page.url.prev && <a href={page.url.prev}>前ページに戻る</a>}
-          {page.url.next && <a href={page.url.next}>次ページに進む</a>}
-        </div>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout title={`記事一覧 - ${page.currentPage} | ${SITE_TITLE}`}>
+  <p class="mb-4 text-xl font-600">{`記事一覧 - ${page.currentPage}`}</p>
+  {
+    page.data.map((post) => (
+      <PostCard
+        pubDate={post.data.pubDate}
+        updatedDate={post.data.updatedDate}
+        slug={post.slug}
+        title={post.data.title}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))
+  }
+  <Paging previousUrl={prev} nextUrl={page.url.next} />
+</BaseLayout>
