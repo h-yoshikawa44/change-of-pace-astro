@@ -8,6 +8,7 @@ type Props = {
   headTitle?: string;
   headDescription?: string;
   pageTitle: string;
+  rss?: string;
   postList: CollectionEntry<'posts'>[];
   previousUrl?: string;
   nextUrl?: string;
@@ -17,6 +18,7 @@ const {
   headTitle,
   headDescription,
   pageTitle,
+  rss,
   postList,
   previousUrl,
   nextUrl,
@@ -24,20 +26,31 @@ const {
 ---
 
 <BaseLayout title={headTitle} description={headDescription}>
-  <p class="mb-4 text-xl font-600">
+  <p class="text-xl font-600">
     {pageTitle}
   </p>
   {
-    postList.map((post) => (
-      <PostCard
-        pubDate={post.data.pubDate}
-        updatedDate={post.data.updatedDate}
-        slug={post.slug}
-        title={post.data.title}
-        category={post.data.category}
-        tags={post.data.tags}
-      />
-    ))
+    rss && (
+      <div class="mt-1">
+        <a href={rss}>
+          <span class="i-teenyicons:rss-solid text-xs">RSS</span>
+        </a>
+      </div>
+    )
   }
+  <div class="mt-4">
+    {
+      postList.map((post) => (
+        <PostCard
+          pubDate={post.data.pubDate}
+          updatedDate={post.data.updatedDate}
+          slug={post.slug}
+          title={post.data.title}
+          category={post.data.category}
+          tags={post.data.tags}
+        />
+      ))
+    }
+  </div>
   <Paging previousUrl={previousUrl} nextUrl={nextUrl} />
 </BaseLayout>

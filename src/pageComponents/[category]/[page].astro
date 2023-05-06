@@ -2,7 +2,7 @@
 import type { Page } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import PostPagingList from '@/features/post/PostPagingList.astro';
-import { SITE_TITLE, CATEGORY_MAP } from '@/consts';
+import { SITE_TITLE, CATEGORY_MAP, RSS_LINKS } from '@/consts';
 
 type Props = {
   category: keyof typeof CATEGORY_MAP;
@@ -15,6 +15,7 @@ const { category, page } = Astro.props;
 <PostPagingList
   headTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${page.currentPage} | ${SITE_TITLE}`}
   pageTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${page.currentPage}`}
+  rss={RSS_LINKS[category]}
   postList={page.data}
   previousUrl={page.url.prev}
   nextUrl={page.url.next}
