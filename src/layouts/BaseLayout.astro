@@ -1,7 +1,7 @@
 ---
 import '@unocss/reset/tailwind.css';
 import 'wicg-inert';
-import '@/styles/global.css';
+import '@/styles/global.scss';
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import SideBar from '@/components/SideBar.astro';
@@ -11,9 +11,10 @@ import Menu from '@/components/Menu.astro';
 type Props = {
   title?: string;
   description?: string;
+  noTopHeading?: boolean;
 };
 
-const { title, description } = Astro.props;
+const { title, description, noTopHeading } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -26,7 +27,7 @@ const { title, description } = Astro.props;
     class="h-full flex flex-col break-words bg-slate-100 text-left font-sawarabi leading-6 text-slate-800"
   >
     <div id="base-contents" class="min-h-full flex flex-col">
-      <Header />
+      <Header noTopHeading={noTopHeading} />
       <main class="flex-shrink-0 flex-grow-1 flex-basis-auto">
         <div class="my-8">
           <div class="mx-auto flex px-2 container sm:px-4">

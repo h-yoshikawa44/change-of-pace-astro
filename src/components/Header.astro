@@ -1,14 +1,30 @@
 ---
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+
+type Props = {
+  noTopHeading?: boolean;
+};
+
+const { noTopHeading = false } = Astro.props;
 ---
 
 <header class="from-brand-start to-brand-end bg-gradient-to-b py-3">
   <div class="mx-auto px-2 color-white container sm:px-4">
     <div class="flex items-baseline">
-      <h1 class="font-fatface text-2xl">
-        <a href="/">{SITE_TITLE}</a>
-      </h1>
-      <p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
+      {
+        noTopHeading ? (
+          <div>
+            <a href="/" class="font-fatface text-2xl">
+              {SITE_TITLE}
+            </a>
+          </div>
+        ) : (
+          // 記事ページはこちら
+          <h1 class="font-fatface text-2xl">
+            <a href="/">{SITE_TITLE}</a>
+          </h1>
+        )
+      }<p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
       <button id="open-menu-button" class="ml-auto lg:hidden"
         ><span class="i-system-uicons:menu-vertical text-base">menu</span
         ></button

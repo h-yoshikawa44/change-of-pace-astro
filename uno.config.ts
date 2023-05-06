@@ -1,4 +1,10 @@
-import { defineConfig, presetUno, presetWebFonts, presetIcons } from "unocss";
+import {
+  defineConfig,
+  presetUno,
+  presetWebFonts,
+  presetIcons,
+  transformerDirectives,
+} from 'unocss';
 
 export default defineConfig({
   presets: [
@@ -6,21 +12,35 @@ export default defineConfig({
     presetWebFonts({
       fonts: {
         sawarabi: [
-          "Sawarabi Mincho",
-          "Verdana",
-          { name: "sans-serif", provider: "none" },
+          'Sawarabi Mincho',
+          'Verdana',
+          { name: 'sans-serif', provider: 'none' },
         ],
-        fatface: ["Abril Fatface", { name: "sans-serif", provider: "none" }],
+        fatface: ['Abril Fatface', { name: 'sans-serif', provider: 'none' }],
       },
     }),
     presetIcons(),
   ],
+  transformers: [transformerDirectives()],
   theme: {
+    fontFamily: {
+      hackGen: [
+        'HackGen',
+        'ui-monospace',
+        'SFMono-Regular',
+        'Menlo',
+        'Monaco',
+        'Consolas',
+        'Liberation Mono',
+        'Courier New',
+        'monospace',
+      ],
+    },
     colors: {
       brand: {
-        primary: "#202020",
-        start: "#323232",
-        end: "#0e0e0e",
+        primary: '#202020',
+        start: '#323232',
+        end: '#0e0e0e',
       },
     },
   },

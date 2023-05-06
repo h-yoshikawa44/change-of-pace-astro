@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'HackGen';
+  src: url('/fonts/HackGen-Regular-2.8.0.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+a:focus:not(:focus-visible) {
+  @apply outline-transparent;
+}
+

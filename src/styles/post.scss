@@ -1,0 +1,104 @@
+.post-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-700;
+  }
+
+  h2 {
+    @apply border-b border-gray-3 leading-normal text-2xl mt-10 mb-2;
+  }
+
+  h3 {
+    @apply text-xl mt-8 mb-2;
+  }
+
+  h4 {
+    @apply text-lg mt-8 mb-1;
+  }
+
+  h5,
+  h6 {
+    @apply text-base mt-6 mb-1;
+  }
+
+  p + p {
+    @apply mt-4;
+  }
+
+  ul,
+  ol {
+    @apply my-4 pl-8;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ol {
+    @apply list-decimal;
+  }
+
+  li {
+    @apply my-1;
+  }
+
+  li > ul,
+  li > ol {
+    @apply my-0;
+  }
+
+  a {
+    @apply text-blue-500;
+  }
+
+  a:hover {
+    @apply underline underline-blue-500 decoration-solid underline-offset-2;
+  }
+
+  img {
+    @apply max-w-full h-auto my-4;
+  }
+
+  table {
+    @apply my-4 border border-slate-300 w-full text-sm border-collapse leading-normal overflow-auto;
+  }
+
+  th,
+  td {
+    @apply border border-slate-300 px-2 py-1;
+  }
+
+  th {
+    @apply bg-slate-200 font-700;
+  }
+
+  tbody tr:nth-child(odd) td,
+  tbody tr:nth-child(odd) th {
+    @apply bg-slate-50;
+  }
+
+  pre {
+    @apply p-4;
+  }
+
+  pre,
+  code {
+    @apply font-hackGen;
+  }
+
+  :not(pre) > code {
+    @apply px-1 py-0.5 text-red-700 text-sm rounded bg-stone-100;
+  }
+
+  pre > code {
+    @apply bg-transparent text-inherit;
+  }
+
+  blockquote {
+    @apply font-italic text-slate-500 border-l-3 border-slate-400 pl-4 my-4;
+  }
+}
