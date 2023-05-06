@@ -1,9 +1,9 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import FormattedDate from '@/components/FormattedDate.astro';
 import { extractPostSlug } from '@/utils/extractPostSlug';
-import { CATEGORY_MAP, PAGE_SIZE } from '@/consts';
+import { PAGE_SIZE } from '@/consts';
+import PostCard from '@/features/post/PostCard.astro';
 
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
@@ -17,35 +17,14 @@ const posts = (await getCollection('posts'))
   <div>
     {
       posts.map((post) => (
-        <article class="border-b py-4 last:border-none">
-          <p class="text-sm">
-            <FormattedDate date={post.data.pubDate} />
-            {post.data.updatedDate && (
-              <span class="inline-flex items-center">
-                (<span class="i-system-uicons:refresh mr-1">更新日</span>
-                <FormattedDate date={post.data.updatedDate} />)
-              </span>
-            )}
-          </p>
-          <h2 class="text-2xl font-600">
-            <a
-              href={`/posts/${post.slug}`}
-              class="block underline-offset-2 decoration-solid hover:underline"
-            >
-              {post.data.title}
-            </a>
-          </h2>
-          <p class="mt-2 flex items-center">
-            <span class="i-system-uicons:document mr-0.5 text-lg">
-              カテゴリー
-            </span>
-            {`${CATEGORY_MAP[post.data.category]}`}
-          </p>
-          <p class="flex items-center">
-            <span class="i-system-uicons:tag mr-0.5 text-lg">タグ一覧</span>
-            {post.data.tags.join(', ')}
-          </p>
-        </article>
+        <PostCard
+          pubDate={post.data.pubDate}
+          updatedDate={post.data.updatedDate}
+          slug={post.slug}
+          title={post.data.title}
+          category={post.data.category}
+          tags={post.data.tags}
+        />
       ))
     }
     <div class="mt-4 text-right">
