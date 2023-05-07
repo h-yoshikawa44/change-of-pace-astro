@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import { ACCOUNT_LINKS } from '@/consts';
+import '@/styles/markdown.scss';
 ---
 
 <BaseLayout title="About" description="h-yoshikawa44の簡易的なプロフィール">
@@ -28,10 +29,11 @@ import { ACCOUNT_LINKS } from '@/consts';
     </div>
   </div>
   <hr class="my-8" />
-  <div>
+  <!-- ここから下はマークダウンと同じスタイルを使う -->
+  <div class="markdown-content">
     <div>
-      <h3 class="mb-2 text-xl font-600">略歴</h3>
-      <div class="flex flex-col space-y-4">
+      <h3>略歴</h3>
+      <div>
         <p>2017/10からエンジニアをやっています。</p>
         <p>
           元々はバックエンド寄りの技術スタックでしたが、React の宣言的 UI
@@ -42,8 +44,8 @@ import { ACCOUNT_LINKS } from '@/consts';
       </div>
     </div>
     <div>
-      <h3 class="mb-2 mt-6 text-xl font-600">当ブログで書いていること</h3>
-      <div class="flex flex-col space-y-4">
+      <h3>当ブログで書いていること</h3>
+      <div>
         <p>
           主に自分の関心があることについて、自分の頭の情報整理も兼ねて記事を書いています。<br
           />
