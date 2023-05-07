@@ -2,7 +2,6 @@
 import type { Page } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import PostPagingList from '@/features/post/PostPagingList.astro';
-import { SITE_TITLE } from '@/consts';
 
 type Props = {
   tag: string;
@@ -13,7 +12,7 @@ const { tag, page } = Astro.props;
 ---
 
 <PostPagingList
-  headTitle={`${tag} 記事一覧 - ${page.currentPage} | ${SITE_TITLE}`}
+  headTitle={`${tag} 記事一覧 - ${page.currentPage}`}
   pageTitle={`${tag} 記事一覧 - ${page.currentPage}`}
   postList={page.data}
   previousUrl={page.url.prev}
