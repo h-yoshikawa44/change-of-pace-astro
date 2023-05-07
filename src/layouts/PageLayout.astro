@@ -1,0 +1,16 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import '@/styles/markdown.scss';
+
+type Props = CollectionEntry<'pages'>['data'];
+
+const { title, description } = Astro.props;
+---
+
+<BaseLayout title={title} description={description}>
+  <h2 class="mb-8 text-2xl font-600">{title}</h2>
+  <div class="markdown-content">
+    <slot />
+  </div>
+</BaseLayout>

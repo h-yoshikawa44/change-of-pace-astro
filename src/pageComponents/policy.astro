@@ -1,0 +1,11 @@
+---
+import { getEntryBySlug } from 'astro:content';
+import PageLayout from '@/layouts/PageLayout.astro';
+
+const page = await getEntryBySlug('pages', 'policy');
+const { Content } = await page.render();
+---
+
+<PageLayout title="プライバシーポリシー">
+  <Content />
+</PageLayout>

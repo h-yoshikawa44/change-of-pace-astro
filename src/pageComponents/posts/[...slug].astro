@@ -2,7 +2,7 @@
 import { CollectionEntry } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
-import '@/styles/post.scss';
+import '@/styles/markdown.scss';
 import { CATEGORY_MAP } from '@/consts';
 
 type Props = CollectionEntry<'posts'>;
@@ -39,7 +39,7 @@ const { Content } = await post.render();
     <hr
       class="my-4 h-[2px] border-none from-transparent via-gray-500 bg-gradient-to-r"
     />
-    <div class="post-content">
+    <div class="markdown-content">
       <Content />
     </div>
   </article>

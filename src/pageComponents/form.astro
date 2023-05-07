@@ -1,12 +1,11 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-import { SITE_DESCRIPTION } from '@/consts';
+import PageLayout from '@/layouts/PageLayout.astro';
 ---
 
-<BaseLayout title={`お問い合わせ`} description={SITE_DESCRIPTION}>
+<PageLayout title="お問い合わせ">
   <iframe
     src="https://docs.google.com/forms/d/e/1FAIpQLSelbLcrB0oWhQyA5om5hQqyfG1128J-bDaqV_d6nf6m3kYDNQ/viewform?embedded=true"
-    width="640"
-    height="967">読み込んでいます…</iframe
+    width="100%"
+    height="1200">読み込んでいます…</iframe
   >
-</BaseLayout>
+</PageLayout>
