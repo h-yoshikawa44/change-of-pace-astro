@@ -1,4 +1,6 @@
 {
+  "css.validate": false,
+  "scss.validate": false,
   "eslint.validate": [
     "javascript",
     "javascriptreact",
@@ -7,7 +9,8 @@
     "astro"
   ],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
@@ -32,5 +35,6 @@
   "[scss]": {
     "editor.formatOnSave": true
   },
-  "eslint.packageManager": "npm"
+  "eslint.packageManager": "npm",
+  "stylelint.validate": ["css", "scss"]
 }
