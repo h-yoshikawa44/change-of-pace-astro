@@ -5,6 +5,7 @@ import {
   presetIcons,
   transformerDirectives,
 } from 'unocss';
+import { TAG_ICON_CLASS_LIST } from './src/consts';
 
 export default defineConfig({
   presets: [
@@ -44,4 +45,7 @@ export default defineConfig({
       },
     },
   },
+  // アイコンクラスの動的指定のために、あらかじめアイコンクラスのスタイルを生成しておく
+  // ref: https://unocss.dev/guide/extracting#safelist
+  safelist: TAG_ICON_CLASS_LIST,
 });

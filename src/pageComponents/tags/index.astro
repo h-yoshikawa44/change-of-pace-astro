@@ -1,0 +1,36 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import { getLogoIconClass } from '@/utils/getLogoIconClass';
+
+const allTags = (await getCollection('posts'))
+  .map((post) => post.data.tags)
+  .flat();
+
+const tagsInfo = allTags.reduce((prev, current) => {
+  prev[current] = (prev[current] || 0) + 1;
+  return prev;
+}, {});
+const tagInfoList = Object.entries(tagsInfo).map(([key, value]) => ({
+  tagName: key,
+  iconClass: getLogoIconClass(key),
+  count: value,
+}));
+---
+
+<BaseLayout title="タグ一覧">
+  <h2 class="mb-8 text-2xl font-600">タグ一覧</h2>
+  <div>
+    {
+      tagInfoList.map((tagInfo) => (
+        <a
+          href={`/tags/${tagInfo.tagName}/1`}
+          class="m-0.5 inline-flex items-center border rounded-4 px-2 py-1 hover:bg-slate-100"
+        >
+          <span class={`${tagInfo.iconClass} text-xl mr-1`} />
+          {`${tagInfo.tagName}(${tagInfo.count})`}
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>
