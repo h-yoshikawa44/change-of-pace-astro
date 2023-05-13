@@ -8,12 +8,14 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint-check": "npm run lint:eslint && npm run check:prettier",
+    "lint-check": "npm run lint:eslint && npm run lint:stylelint && npm run check:prettier",
     "lint:eslint": "eslint \"./src/**/*.{js,jsx,ts,tsx,astro}\"",
+    "lint:stylelint": "stylelint \"./src/**/*.scss\"",
     "check:prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,html,json,astro}\"",
-    "fix": "npm run fix:eslint && npm run fix:prettier",
+    "fix": "npm run fix:eslint && npm run fix:stylelint && npm run fix:prettier",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:prettier": "npm run check:prettier -- --write",
+    "fix:stylelint": "npm run lint:stylelint --fix",
     "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
   },
   "dependencies": {
@@ -45,6 +47,9 @@
     "prettier": "^2.8.7",
     "prettier-plugin-astro": "^0.8.0",
     "simple-git-hooks": "^2.8.1",
+    "stylelint": "^15.6.1",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^9.0.0",
     "unocss": "^0.50.8"
   },
   "volta": {
@@ -59,6 +64,10 @@
     "src/**/*.{js,jsx,ts,tsx,astro}": [
       "prettier --write --loglevel=error",
       "eslint --fix --quiet"
+    ],
+    "src/**/*.scss": [
+      "prettier --write --loglevel=error",
+      "stylelint --fix --quiet"
     ],
     "./**/*.{html,json}": [
       "prettier --write --loglevel=error"
