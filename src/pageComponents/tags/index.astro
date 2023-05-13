@@ -1,9 +1,7 @@
 ---
-import BaseHead from '@/components/BaseHead.astro';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
+import { getLogoIconClass } from '@/utils/getLogoIconClass';
 
 const allTags = (await getCollection('posts'))
   .map((post) => post.data.tags)
@@ -15,50 +13,24 @@ const tagsInfo = allTags.reduce((prev, current) => {
 }, {});
 const tagInfoList = Object.entries(tagsInfo).map(([key, value]) => ({
   tagName: key,
+  iconClass: getLogoIconClass(key),
   count: value,
 }));
 ---
 
-<!DOCTYPE html>
-<html lang="ja">
-  <head>
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style>
-      ul {
-        list-style-type: none;
-        padding: unset;
-      }
-      ul li {
-        display: flex;
-      }
-      ul li :global(time) {
-        flex: 0 0 130px;
-        font-style: italic;
-        color: #595959;
-      }
-      ul li a:visited {
-        color: #8e32dc;
-      }
-    </style>
-  </head>
-  <body>
-    <Header />
-    <main>
-      <section>
-        <ul>
-          {
-            tagInfoList.map((tagInfo) => (
-              <li>
-                <a
-                  href={`/tags/${tagInfo.tagName}/1`}
-                >{`${tagInfo.tagName}(${tagInfo.count})`}</a>
-              </li>
-            ))
-          }
-        </ul>
-      </section>
-    </main>
-    <Footer />
-  </body>
-</html>
+<BaseLayout title="タグ一覧">
+  <h2 class="mb-8 text-2xl font-600">タグ一覧</h2>
+  <div>
+    {
+      tagInfoList.map((tagInfo) => (
+        <a
+          href={`/tags/${tagInfo.tagName}/1`}
+          class="m-0.5 inline-flex items-center border rounded-4 px-2 py-1 hover:bg-slate-100"
+        >
+          <span class={`${tagInfo.iconClass} text-xl mr-1`} />
+          {`${tagInfo.tagName}(${tagInfo.count})`}
+        </a>
+      ))
+    }
+  </div>
+</BaseLayout>
