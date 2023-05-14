@@ -25,9 +25,12 @@ const { noTopHeading = false } = Astro.props;
           </h1>
         )
       }<p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
-      <button id="open-menu-button" class="ml-auto lg:hidden"
-        ><span class="i-system-uicons:menu-vertical text-base">menu</span
-        ></button
+      <button
+        id="open-menu-button"
+        title="メニューを開く"
+        class="ml-auto mt-auto lg:hidden"
+        ><span class="i-system-uicons:menu-vertical block text-2xl"
+        ></span></button
       >
     </div>
   </div>
