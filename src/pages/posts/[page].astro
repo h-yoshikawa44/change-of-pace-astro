@@ -22,7 +22,8 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   });
 }
 
-const { page } = Astro.props;
+// コンポーネントの page と衝突するのか ts エラーが出てしまうのでリネームして回避
+const { page: pageProps } = Astro.props;
 ---
 
-<PostPage page={page} />
+<PostPage page={pageProps} />

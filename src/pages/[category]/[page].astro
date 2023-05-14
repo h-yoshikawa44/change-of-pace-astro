@@ -31,8 +31,9 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   });
 }
 
-const { page } = Astro.props;
+// コンポーネントの page と衝突するのか ts エラーが出てしまうのでリネームして回避
+const { page: pageProps } = Astro.props;
 const { category } = Astro.params as Params;
 ---
 
-<CategoryPage category={category} page={page} />
+<CategoryPage category={category} page={pageProps} />

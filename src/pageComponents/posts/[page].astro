@@ -8,16 +8,17 @@ type Props = {
   page: Page<CollectionEntry<'posts'>>;
 };
 
-const { page } = Astro.props;
+// コンポーネントの page と衝突するのか ts エラーが出てしまうのでリネームして回避
+const { page: pageProps } = Astro.props;
 
-const prev = page.currentPage === 2 ? '/' : page.url.prev;
+const prev = pageProps.currentPage === 2 ? '/' : pageProps.url.prev;
 ---
 
 <PostPagingList
-  headTitle={`記事一覧 - ${page.currentPage}`}
-  pageTitle={`記事一覧 - ${page.currentPage}`}
+  headTitle={`記事一覧 - ${pageProps.currentPage}`}
+  pageTitle={`記事一覧 - ${pageProps.currentPage}`}
   rss={RSS_LINKS.all}
-  postList={page.data}
+  postList={pageProps.data}
   previousUrl={prev}
-  nextUrl={page.url.next}
+  nextUrl={pageProps.url.next}
 />

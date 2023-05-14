@@ -9,14 +9,15 @@ type Props = {
   page: Page<CollectionEntry<'posts'>>;
 };
 
-const { category, page } = Astro.props;
+// コンポーネントの page と衝突するのか ts エラーが出てしまうのでリネームして回避
+const { category, page: pageProps } = Astro.props;
 ---
 
 <PostPagingList
-  headTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${page.currentPage}`}
-  pageTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${page.currentPage}`}
+  headTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${pageProps.currentPage}`}
+  pageTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${pageProps.currentPage}`}
   rss={RSS_LINKS[category]}
-  postList={page.data}
-  previousUrl={page.url.prev}
-  nextUrl={page.url.next}
+  postList={pageProps.data}
+  previousUrl={pageProps.url.prev}
+  nextUrl={pageProps.url.next}
 />
