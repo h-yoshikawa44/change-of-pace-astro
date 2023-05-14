@@ -42,7 +42,7 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Blockquote without attribution
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.  
+> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 
 #### Blockquote with attribution
