@@ -1,6 +1,6 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import Post from '@/pageComponents/posts/[...slug].astro';
+import PostSlugPage from '@/pageComponents/posts/[...slug].astro';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
@@ -14,4 +14,4 @@ type Props = CollectionEntry<'posts'>;
 const post = Astro.props;
 ---
 
-<Post {...post} />
+<PostSlugPage {...post} />

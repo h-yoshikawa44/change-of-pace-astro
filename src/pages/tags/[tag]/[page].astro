@@ -34,8 +34,9 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   });
 }
 
-const { page } = Astro.props;
+// コンポーネントの page と衝突するのか ts エラーが出てしまうのでリネームして回避
+const { page: pageProps } = Astro.props;
 const { tag } = Astro.params as Params;
 ---
 
-<TagPage tag={tag} page={page} />
+<TagPage tag={tag} page={pageProps} />
