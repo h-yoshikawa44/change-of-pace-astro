@@ -8,6 +8,10 @@
     @apply font-600;
   }
 
+  h1 {
+    @apply border-b border-gray-3 leading-normal text-3xl mt-10 mb-2;
+  }
+
   h2 {
     @apply border-b border-gray-3 leading-normal text-2xl mt-10 mb-2;
   }
@@ -57,6 +61,14 @@
 
   a:hover {
     @apply underline underline-blue-500 decoration-solid underline-offset-2;
+  }
+
+  a.heading-link {
+    @apply text-slate-500;
+  }
+
+  a.heading-link:hover {
+    @apply underline-slate-500;
   }
 
   img {
