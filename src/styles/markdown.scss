@@ -93,6 +93,10 @@
     @apply bg-slate-50;
   }
 
+  .remark-code-title {
+    @apply font-hackGen text-xs px-2.5 py-0.5 bg-slate-600 inline-block text-white leading-5 rounded-t-1;
+  }
+
   pre {
     @apply p-4;
   }
