@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",
+    "@types/mdast": "^3.0.11",
     "@types/sanitize-html": "^2.9.0",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
@@ -54,6 +55,8 @@
     "stylelint-config-recess-order": "^4.0.0",
     "stylelint-config-standard-scss": "^9.0.0",
     "stylelint-order": "^6.0.3",
+    "unified": "^10.1.2",
+    "unist-util-visit": "^4.1.2",
     "unocss": "^0.50.8"
   },
   "volta": {
