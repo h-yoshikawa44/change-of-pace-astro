@@ -1,0 +1,106 @@
+---
+// 出典：https://github.com/hiroppy/site/blob/main/src/components/OG.astro
+// がベース
+import { load } from 'cheerio';
+import { writeFileSync, readFileSync } from 'node:fs';
+
+type Props = {
+  url: string;
+};
+
+type OGPJson = Record<
+  string,
+  {
+    title: string;
+    description: string;
+    image: string;
+    favicon: string;
+  }
+>;
+
+const { url } = Astro.props;
+const generatedFilePath = new URL(
+  '../../generated/ogp.json',
+  // astro は build 時に自身ではなく dist/entry.mjs に向けてしまいエラーになるので指定する
+  import.meta.url
+);
+
+const ogp: OGPJson = JSON.parse(readFileSync(generatedFilePath, 'utf8'));
+let title: string = '';
+let description: string = '';
+let image: string = '';
+let favicon: string = '';
+const origin = new URL(url).origin;
+
+if (ogp[url]) {
+  title = ogp[url].title;
+  description = ogp[url].description;
+  image = ogp[url].image;
+  favicon = ogp[url].favicon;
+} else {
+  const html = await fetch(url).then((res) => res.text());
+  const $ = load(html);
+
+  title = $("meta[property='og:title']").attr('content') ?? $('title').text();
+  description =
+    $("meta[property='og:description']").attr('content') ??
+    $("meta[name='description']").attr('content') ??
+    '';
+  image = $("meta[property='og:image']").attr('content') ?? '';
+  favicon =
+    $("link[rel='icon']").attr('href') ??
+    $("link[rel='apple-touch-icon']").attr('href') ??
+    $("link[rel='apple-touch-icon-precomposed']").attr('href') ??
+    $("link[rel='shortcut icon']").attr('href') ??
+    '';
+
+  if (image && !image.startsWith('http')) {
+    image = `${origin}/${image}`;
+  }
+
+  if (import.meta.env.PROD) {
+    const ogp = JSON.parse(readFileSync(generatedFilePath, 'utf8'));
+
+    writeFileSync(
+      generatedFilePath,
+      JSON.stringify(
+        {
+          ...ogp,
+          [url]: {
+            title,
+            description,
+            image,
+            favicon,
+          },
+        },
+        null,
+        2
+      )
+    );
+  }
+}
+---
+
+<div class="link-card my-2 border rounded-4 p-4 hover:bg-slate-100">
+  <a href={url} target="_blank" class="text-initial">
+    <div class="flex items-center justify-between gap-4">
+      <div class="flex flex-1 flex-col gap-1">
+        <h2 class="line-clamp-2 overflow-hidden text-sm">
+          {title}
+        </h2>
+        {description && <p class="line-clamp-2 text-xs">{description}</p>}
+        <div class="flex items-center">
+          <img src={favicon} alt={`${origin} favicon`} width={16} height={16} />
+          <small class="ml-1 whitespace-nowrap">{origin}</small>
+        </div>
+      </div>
+      {
+        image && (
+          <div class="max-w-[240px] w-[120px] sm:w-inherit">
+            <img src={image} class="object-contain" />
+          </div>
+        )
+      }
+    </div>
+  </a>
+</div>
