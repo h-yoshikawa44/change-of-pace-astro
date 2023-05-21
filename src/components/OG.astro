@@ -50,6 +50,7 @@ if (ogp[url]) {
   favicon =
     $("link[rel='icon']").attr('href') ??
     $("link[rel='apple-touch-icon']").attr('href') ??
+    $("link[rel='apple-touch-icon-precomposed']").attr('href') ??
     $("link[rel='shortcut icon']").attr('href') ??
     '';
 
@@ -89,8 +90,8 @@ if (ogp[url]) {
         </h2>
         {description && <p class="line-clamp-2 text-xs">{description}</p>}
         <div class="flex items-center">
-          <img src={favicon} alt={`${origin} favicon`} width={14} height={14} />
-          <small class="ml-2 whitespace-nowrap">{origin}</small>
+          <img src={favicon} alt={`${origin} favicon`} width={16} height={16} />
+          <small class="ml-1 whitespace-nowrap">{origin}</small>
         </div>
       </div>
       {
