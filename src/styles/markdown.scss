@@ -12,7 +12,7 @@
     @apply border-b border-gray-3 leading-normal text-3xl mt-10 mb-2;
   }
 
-  h2 {
+  h2:not(.link-card h2) {
     @apply border-b border-gray-3 leading-normal text-2xl mt-10 mb-2;
   }
 
@@ -55,23 +55,23 @@
     @apply my-0;
   }
 
-  a {
+  a:not(.link-card a) {
     @apply text-blue-500;
   }
 
-  a:hover {
+  a:hover:not(.link-card a) {
     @apply underline underline-blue-500 decoration-solid underline-offset-2;
   }
 
-  a.heading-link {
+  a.heading-link:not(.link-card a) {
     @apply text-slate-500;
   }
 
-  a.heading-link:hover {
+  a.heading-link:hover:not(.link-card a) {
     @apply underline-slate-500;
   }
 
-  img {
+  img:not(.link-card img) {
     @apply max-w-full h-auto my-4;
   }
 
