@@ -1,4 +1,5 @@
-/* global document */
+/* eslint-env browser */
+
 const openMenuButton = document.getElementById('open-menu-button');
 const menu = document.getElementById('menu');
 const baseContents = document.getElementById('base-contents');

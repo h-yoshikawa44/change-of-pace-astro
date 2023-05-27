@@ -6,6 +6,11 @@
   font-display: swap;
 }
 
-a:focus:not(:focus-visible) {
+button {
+  @apply cursor-pointer;
+}
+
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
   @apply outline-transparent;
 }
