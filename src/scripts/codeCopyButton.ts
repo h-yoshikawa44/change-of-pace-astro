@@ -1,7 +1,5 @@
 /* eslint-env browser */
 
-const codeTextList = document.querySelectorAll('pre.astro-code');
-
 // navigator.clipboard が使えない環境向け
 const selectElement = (element: HTMLElement) => {
   const selection = document.getSelection();
@@ -11,8 +9,8 @@ const selectElement = (element: HTMLElement) => {
   selection?.addRange(range);
 };
 
-const copyCode = (): void => {
-  const code = codeTextList[0].querySelector('code');
+const copyCode = (codePre: HTMLPreElement): void => {
+  const code = codePre.querySelector('code');
   const codeText = code?.innerText;
   if (!codeText) return;
 
@@ -21,32 +19,31 @@ const copyCode = (): void => {
   });
 };
 
-const ResetCopyButtonText = (ele: HTMLButtonElement) => {
+const resetCopyButtonText = (ele: HTMLButtonElement) => {
   setTimeout(() => {
     ele.innerText = 'Copy';
   }, 3000);
 };
 
-const onCopy = (ev: MouseEvent) => {
+const onCopy = (ev: MouseEvent, codePre: HTMLPreElement) => {
   if (!(ev.target instanceof HTMLButtonElement)) return;
 
-  copyCode();
+  copyCode(codePre);
   ev.target.innerText = 'Copied!';
-  ResetCopyButtonText(ev.target);
+  resetCopyButtonText(ev.target);
 };
 
-const createCopyButton = (): HTMLButtonElement => {
+const createCopyButton = (code: HTMLPreElement): HTMLButtonElement => {
   const button = document.createElement('button');
   button.className = 'copy-code-button';
   button.type = 'button';
   button.innerText = 'Copy';
-  button.addEventListener('click', onCopy);
+  button.addEventListener('click', (ev) => onCopy(ev, code));
 
   return button;
 };
 
-const codeCollection = document.getElementsByClassName('astro-code');
-const codeList = Array.from(codeCollection);
-codeList.forEach((code) => {
-  code.appendChild(createCopyButton());
+const codePreCollection = document.querySelectorAll('pre.astro-code');
+codePreCollection.forEach((codePre: HTMLPreElement) => {
+  codePre.appendChild(createCopyButton(codePre));
 });
