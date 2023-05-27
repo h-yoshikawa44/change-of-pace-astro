@@ -1,22 +1,11 @@
 /* eslint-env browser */
 
-// navigator.clipboard が使えない環境向け
-const selectElement = (element: HTMLElement) => {
-  const selection = document.getSelection();
-  selection?.removeAllRanges();
-  const range = document.createRange();
-  range.selectNode(element);
-  selection?.addRange(range);
-};
-
-const copyCode = (codePre: HTMLPreElement): void => {
+const copyCode = async (codePre: HTMLPreElement): Promise<void> => {
   const code = codePre.querySelector('code');
   const codeText = code?.innerText;
   if (!codeText) return;
 
-  navigator.clipboard.writeText(codeText).catch(() => {
-    selectElement(code);
-  });
+  await navigator.clipboard.writeText(codeText);
 };
 
 const resetCopyButtonText = (ele: HTMLButtonElement) => {
@@ -25,11 +14,15 @@ const resetCopyButtonText = (ele: HTMLButtonElement) => {
   }, 3000);
 };
 
-const onCopy = (ev: MouseEvent, codePre: HTMLPreElement) => {
+const onCopy = async (ev: MouseEvent, codePre: HTMLPreElement) => {
   if (!(ev.target instanceof HTMLButtonElement)) return;
 
-  copyCode(codePre);
-  ev.target.innerText = 'Copied!';
+  try {
+    await copyCode(codePre);
+    ev.target.innerText = 'Copied!';
+  } catch (err) {
+    ev.target.innerText = 'Failed...';
+  }
   resetCopyButtonText(ev.target);
 };
 
