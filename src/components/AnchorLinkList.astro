@@ -1,0 +1,20 @@
+---
+import { MarkdownHeading } from 'astro';
+import AnchorLinkListItem from '@/components/AnchorLinkListItem.astro';
+
+type Props = {
+  markdownHeadings?: MarkdownHeading[];
+};
+
+const { markdownHeadings = [] } = Astro.props;
+---
+
+<ul>
+  {
+    markdownHeadings.map((heading) => (
+      <AnchorLinkListItem href={`#${heading.slug}`}>{`${'#'.repeat(
+        heading.depth
+      )} ${heading.text}`}</AnchorLinkListItem>
+    ))
+  }
+</ul>
