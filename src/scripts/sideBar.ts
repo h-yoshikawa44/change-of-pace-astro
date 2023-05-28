@@ -1,13 +1,13 @@
 /* eslint-env browser */
 
-const selectMenuButton = document.getElementById('select-menu-button');
+const selectNavButton = document.getElementById('select-nav-button');
 const selectAnchorButton = document.getElementById('select-anchor-button');
-const sideBarMenu = document.getElementById('sidebar-menu');
+const sideBarNav = document.getElementById('sidebar-nav');
 const sideBarAnchorList = document.getElementById('sidebar-anchor-list');
 
-selectMenuButton?.addEventListener('click', () => {
-  sideBarMenu?.classList.remove('hidden');
-  selectMenuButton?.classList.add('custom-after-border-b');
+selectNavButton?.addEventListener('click', () => {
+  sideBarNav?.classList.remove('hidden');
+  selectNavButton?.classList.add('custom-after-border-b');
   sideBarAnchorList?.classList.add('hidden');
   selectAnchorButton?.classList.remove('custom-after-border-b');
 });
@@ -15,6 +15,6 @@ selectMenuButton?.addEventListener('click', () => {
 selectAnchorButton?.addEventListener('click', () => {
   sideBarAnchorList?.classList.remove('hidden');
   selectAnchorButton?.classList.add('custom-after-border-b');
-  sideBarMenu?.classList.add('hidden');
-  selectMenuButton?.classList.remove('custom-after-border-b');
+  sideBarNav?.classList.add('hidden');
+  selectNavButton?.classList.remove('custom-after-border-b');
 });
