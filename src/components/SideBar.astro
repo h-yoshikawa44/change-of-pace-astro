@@ -1,7 +1,31 @@
 ---
+import { MarkdownHeading } from 'astro';
 import NavLinkList from '@/components/NavLinkList.astro';
+import AnchorLinkList from '@/components/AnchorLinkList.astro';
+
+type Props = {
+  markdownHeadings?: MarkdownHeading[];
+};
+
+const { markdownHeadings = [] } = Astro.props;
 ---
 
 <aside class="rounded-2 bg-white py-4 md:min-w-52">
-  <NavLinkList />
+  <div class="mb-2 flex justify-around">
+    <button id="select-menu-button" title="ナビゲーションメニュー"
+      ><span class="i-teenyicons:pin-outline block text-xl"></span></button
+    >
+    <button id="select-anchor-button" title="アンカーリンク一覧"
+      ><span class="i-teenyicons:anchor-solid block text-xl"></span></button
+    >
+  </div>
+  <div id="sidebar-menu">
+    <NavLinkList />
+  </div>
+  <div id="sidebar-anchor-list" class="hidden">
+    <AnchorLinkList markdownHeadings={markdownHeadings} />
+  </div>
 </aside>
+<script>
+  import '@/scripts/sideBar';
+</script>

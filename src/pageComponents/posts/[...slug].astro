@@ -9,10 +9,15 @@ type Props = CollectionEntry<'posts'>;
 
 const post = Astro.props;
 const { title, description, pubDate, updatedDate, category, tags } = post.data;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
 ---
 
-<BaseLayout title={title} description={description} noTopHeading={true}>
+<BaseLayout
+  title={title}
+  description={description}
+  noTopHeading={true}
+  markdownHeadings={headings}
+>
   <article class="post">
     <header>
       <p>

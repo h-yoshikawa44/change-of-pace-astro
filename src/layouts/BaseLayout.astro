@@ -1,20 +1,22 @@
 ---
+import { MarkdownHeading } from 'astro';
 import '@unocss/reset/tailwind.css';
 import 'wicg-inert';
-import '@/styles/global.scss';
 import BaseHead from '@/components/BaseHead.astro';
 import Header from '@/components/Header.astro';
 import SideBar from '@/components/SideBar.astro';
 import Footer from '@/components/Footer.astro';
 import Menu from '@/components/Menu.astro';
+import '@/styles/global.scss';
 
 type Props = {
   title?: string;
   description?: string;
   noTopHeading?: boolean;
+  markdownHeadings?: MarkdownHeading[];
 };
 
-const { title, description, noTopHeading } = Astro.props;
+const { title, description, noTopHeading, markdownHeadings } = Astro.props;
 ---
 
 <!DOCTYPE html>
@@ -32,7 +34,7 @@ const { title, description, noTopHeading } = Astro.props;
         <div class="my-8">
           <div class="mx-auto flex px-2 container sm:px-4">
             <div class="hidden place-self-start lg:block">
-              <SideBar />
+              <SideBar markdownHeadings={markdownHeadings} />
             </div>
             <div class="flex-grow-1 rounded-2 bg-white p-4 lg:ml-6">
               <slot />
