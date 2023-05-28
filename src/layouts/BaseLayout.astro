@@ -7,6 +7,8 @@ import Header from '@/components/Header.astro';
 import SideBar from '@/components/SideBar.astro';
 import Footer from '@/components/Footer.astro';
 import Menu from '@/components/Menu.astro';
+import NavLinkList from '@/components/NavLinkList.astro';
+import AnchorLinkList from '@/components/AnchorLinkList.astro';
 import '@/styles/global.scss';
 
 type Props = {
@@ -16,7 +18,8 @@ type Props = {
   markdownHeadings?: MarkdownHeading[];
 };
 
-const { title, description, noTopHeading, markdownHeadings } = Astro.props;
+const { title, description, noTopHeading, markdownHeadings = [] } = Astro.props;
+const isMarkdownPage = markdownHeadings?.length !== 0;
 ---
 
 <!DOCTYPE html>
@@ -29,7 +32,7 @@ const { title, description, noTopHeading, markdownHeadings } = Astro.props;
     class="h-full flex flex-col break-words bg-slate-100 text-left font-sawarabi leading-6 text-slate-800"
   >
     <div id="base-contents" class="min-h-full flex flex-col">
-      <Header noTopHeading={noTopHeading} />
+      <Header noTopHeading={noTopHeading} isMarkdownPage={isMarkdownPage} />
       <main class="flex-shrink-0 flex-grow-1 flex-basis-auto">
         <div class="my-8">
           <div class="mx-auto flex px-2 container sm:px-4">
@@ -44,7 +47,12 @@ const { title, description, noTopHeading, markdownHeadings } = Astro.props;
       </main>
       <Footer />
     </div>
-    <Menu />
+    <Menu type="nav">
+      <NavLinkList />
+    </Menu>
+    <Menu type="anchor">
+      <AnchorLinkList markdownHeadings={markdownHeadings} />
+    </Menu>
     <script>
       import '@/scripts/menu';
     </script>

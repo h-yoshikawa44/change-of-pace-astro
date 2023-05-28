@@ -3,10 +3,10 @@ import { MarkdownHeading } from 'astro';
 import AnchorLinkListItem from '@/components/AnchorLinkListItem.astro';
 
 type Props = {
-  markdownHeadings?: MarkdownHeading[];
+  markdownHeadings: MarkdownHeading[];
 };
 
-const { markdownHeadings = [] } = Astro.props;
+const { markdownHeadings } = Astro.props;
 ---
 
 <ul>

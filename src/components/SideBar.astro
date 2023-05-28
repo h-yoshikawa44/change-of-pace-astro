@@ -4,10 +4,10 @@ import NavLinkList from '@/components/NavLinkList.astro';
 import AnchorLinkList from '@/components/AnchorLinkList.astro';
 
 type Props = {
-  markdownHeadings?: MarkdownHeading[];
+  markdownHeadings: MarkdownHeading[];
 };
 
-const { markdownHeadings = [] } = Astro.props;
+const { markdownHeadings } = Astro.props;
 const isMarkdownPage = markdownHeadings.length !== 0;
 const selectAnchorButtonTitle = isMarkdownPage
   ? 'アンカーリンク一覧を表示'

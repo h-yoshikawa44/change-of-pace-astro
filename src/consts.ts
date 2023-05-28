@@ -4,6 +4,8 @@
 export const SITE_TITLE = 'Change Of Pace';
 export const SITE_DESCRIPTION = '気分転換の遊び場';
 
+export const MENU_TYPE_LIST = ['nav', 'anchor'] as const;
+
 export const CATEGORY_LIST = [
   'develop',
   'tool-and-service',

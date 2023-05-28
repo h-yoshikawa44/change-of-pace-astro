@@ -1,22 +1,26 @@
 /* eslint-env browser */
+import { MENU_TYPE_LIST } from '@/consts';
 
-const openMenuButton = document.getElementById('open-menu-button');
-const menu = document.getElementById('menu');
 const baseContents = document.getElementById('base-contents');
-const menuBackDrop = document.getElementById('menu-backdrop');
-const closeMenuButton = document.getElementById('close-menu-button');
 
-openMenuButton?.addEventListener('click', () => {
-  menu?.classList.remove('hidden');
-  baseContents?.setAttribute('inert', '');
-});
+MENU_TYPE_LIST.forEach((type) => {
+  const openMenuButton = document.getElementById(`open-${type}-menu-button`);
+  const menu = document.getElementById(`${type}-menu`);
+  const menuBackDrop = document.getElementById(`${type}-menu-backdrop`);
+  const closeMenuButton = document.getElementById(`close-${type}-menu-button`);
 
-menuBackDrop?.addEventListener('click', () => {
-  menu?.classList.add('hidden');
-  baseContents?.removeAttribute('inert');
-});
+  openMenuButton?.addEventListener('click', () => {
+    menu?.classList.remove('hidden');
+    baseContents?.setAttribute('inert', '');
+  });
 
-closeMenuButton?.addEventListener('click', () => {
-  menu?.classList.add('hidden');
-  baseContents?.removeAttribute('inert');
+  menuBackDrop?.addEventListener('click', () => {
+    menu?.classList.add('hidden');
+    baseContents?.removeAttribute('inert');
+  });
+
+  closeMenuButton?.addEventListener('click', () => {
+    menu?.classList.add('hidden');
+    baseContents?.removeAttribute('inert');
+  });
 });
