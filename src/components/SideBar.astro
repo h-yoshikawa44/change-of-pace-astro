@@ -8,6 +8,10 @@ type Props = {
 };
 
 const { markdownHeadings = [] } = Astro.props;
+const isMarkdownPage = markdownHeadings.length !== 0;
+const selectAnchorButtonTitle = isMarkdownPage
+  ? 'アンカーリンク一覧を表示'
+  : 'アンカーリンク一覧を表示（このページでは利用不可）';
 ---
 
 <aside
@@ -22,8 +26,9 @@ const { markdownHeadings = [] } = Astro.props;
     >
     <button
       id="select-anchor-button"
-      title="アンカーリンク一覧を表示"
-      class="rounded-6 p-2 focus:bg-slate-2/50 hover:bg-slate-2/70"
+      title={selectAnchorButtonTitle}
+      disabled={!isMarkdownPage}
+      class="rounded-6 p-2 disabled:color-slate-4/50 enabled:focus:bg-slate-2/50 enabled:hover:bg-slate-2/50"
       ><span class="i-teenyicons:anchor-solid block text-xl"></span></button
     >
   </div>
