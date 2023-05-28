@@ -3,9 +3,10 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 
 type Props = {
   noTopHeading?: boolean;
+  isMarkdownPage?: boolean;
 };
 
-const { noTopHeading = false } = Astro.props;
+const { noTopHeading = false, isMarkdownPage = false } = Astro.props;
 ---
 
 <header class="from-brand-start to-brand-end bg-gradient-to-b py-3">
@@ -25,13 +26,23 @@ const { noTopHeading = false } = Astro.props;
           </h1>
         )
       }<p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
-      <button
-        id="open-menu-button"
-        title="メニューを開く"
-        class="ml-auto mt-auto lg:hidden"
-        ><span class="i-system-uicons:menu-vertical block text-2xl"
-        ></span></button
-      >
+      <div class="ml-auto mt-auto flex lg:hidden space-x-1">
+        {
+          isMarkdownPage && (
+            <button
+              id="open-anchor-menu-button"
+              title="アンカーリンク一覧のメニューを開く"
+              class="px-2"
+            >
+              <span class="i-teenyicons:anchor-solid block text-xl" />
+            </button>
+          )
+        }
+        <button id="open-nav-menu-button" title="メニューを開く" class="px-2"
+          ><span class="i-system-uicons:menu-vertical block text-2xl"
+          ></span></button
+        >
+      </div>
     </div>
   </div>
 </header>
