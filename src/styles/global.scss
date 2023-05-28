@@ -6,6 +6,11 @@
   font-display: swap;
 }
 
+button,
+a {
+  @apply transition;
+}
+
 button {
   @apply cursor-pointer;
 }
