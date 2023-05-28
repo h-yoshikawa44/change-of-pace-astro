@@ -1,26 +1,28 @@
 ---
-import NavLink from '@/components/NavLink.astro';
+import NavLinkListItem from '@/components/NavLinkListItem.astro';
 import { CATEGORY_LIST, CATEGORY_MAP } from '@/consts';
 ---
 
 <nav class="grid gap-y-4">
   <ul>
-    <NavLink href="/">Home</NavLink>
-    <NavLink href="/about">About</NavLink>
+    <NavLinkListItem href="/">Home</NavLinkListItem>
+    <NavLinkListItem href="/about">About</NavLinkListItem>
   </ul>
   <div>
     <p class="px-4 font-600">Blog Category List</p>
     <ul>
       {
         CATEGORY_LIST.map((category) => (
-          <NavLink href={`/${category}/1`}>{CATEGORY_MAP[category]}</NavLink>
+          <NavLinkListItem href={`/${category}/1`}>
+            {CATEGORY_MAP[category]}
+          </NavLinkListItem>
         ))
       }
     </ul>
   </div>
   <ul>
-    <NavLink href="/tags">タグ一覧</NavLink>
-    <NavLink href="/form">お問い合わせ</NavLink>
-    <NavLink href="/policy">プライバシーポリシー</NavLink>
+    <NavLinkListItem href="/tags">タグ一覧</NavLinkListItem>
+    <NavLinkListItem href="/form">お問い合わせ</NavLinkListItem>
+    <NavLinkListItem href="/policy">プライバシーポリシー</NavLinkListItem>
   </ul>
 </nav>
