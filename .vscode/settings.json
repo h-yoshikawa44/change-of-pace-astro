@@ -36,5 +36,6 @@
     "editor.formatOnSave": true
   },
   "eslint.packageManager": "npm",
-  "stylelint.validate": ["css", "scss"]
+  "stylelint.validate": ["css", "scss"],
+  "textlint.languages": ["markdown", "mdx"]
 }

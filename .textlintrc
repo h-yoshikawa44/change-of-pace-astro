@@ -1,0 +1,22 @@
+{
+  "plugins": {
+    "@textlint/markdown": {
+      "extensions": [
+        ".mdx"
+      ]
+    }
+  },
+  "filters": {
+    "comments": true
+  },
+  "rules": {
+    "preset-ja-technical-writing": {
+      "no-exclamation-question-mark": false,
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [
+          "\n- "
+        ]
+      }
+    }
+  }
+}
