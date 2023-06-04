@@ -5,7 +5,6 @@ import { extractPostSlug } from '@/utils/extractPostSlug';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
-  console.log(posts);
   return posts.map((post) => ({
     params: { slug: extractPostSlug(post.slug) },
     props: post,
