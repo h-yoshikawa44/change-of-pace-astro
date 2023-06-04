@@ -5,6 +5,7 @@
     "astro-build.astro-vscode",
     "dbaeumer.vscode-eslint",
     "stylelint.vscode-stylelint",
+    "taichi.vscode-textlint",
     "esbenp.prettier-vscode",
     "antfu.unocss"
   ],
