@@ -23,34 +23,32 @@ brewを使用して導入するやり方もあり、以下の記事ではLinuxbr
 ## anyenv
 ※env 系の管理を brew から`anyenv`に移行する場合は、事前に brew で入れた分をアンインストール＋パスの削除をするか、参考記事のとおり、リンクを張る方法があります。
 
-{/* <!-- textlint-disable --> */}
-
 ### 導入
 
-1.インストール
+1. インストール
 ```bash
 git clone https://github.com/riywo/anyenv ~/.anyenv
 ```
 
-2.パスの設定
+2. パスの設定
 （ここでは`.bash_profile`に記述していますが、使用している各種`profile`のいずれかで問題ありません）
 ```bash
 echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
 ```
 
 
-3.bash 起動時に自動で init するよう設定
+3. bash 起動時に自動で init するよう設定
 ```bash
 echo 'eval "$(anyenv init -l)"' >> ~/.bash_profile
 ```
 ※これで bash 起動時に`anyenv`からインストールした各種 env を init してくれるようになるため、すぐ各種コマンドが使えるようになります。
 
-4.ログインシェルで各種`profile`再読み込み
+4. ログインシェルで各種`profile`再読み込み
 ```bash
 exec $SHELL -l
 ```
 
-5.anyenv コマンド確認
+5. anyenv コマンド確認
 ```bash
 anyenv
 ```
@@ -77,19 +75,19 @@ For full documentation, see: https://github.com/riywo/anyenv#readme
 各種 env とそのプラグインを一括でまとめて更新してくれるものだそうです。
 それぞれ1つずつ更新するのは、確かに手間ですよね...。
 
-1.格納するディレクトリの作成
+1. 格納するディレクトリの作成
 ```bash
 mkdir -p $(anyenv root)/plugins
 ```
 
-2.インストール
+2. インストール
 ```bash
 git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
 ```
 これで`$ anyenv update`コマンドが使えるようになります。
 
 ### 各種 env のインストール
-1.インストールできる env の確認
+1. インストールできる env の確認
 ```bash
 anyenv install -l
 ```
@@ -117,7 +115,7 @@ Available **envs:
   swiftenv
 ```
 
-2.インストール
+2. インストール
 ```bash
 anyenv install (各種env)
 
@@ -127,7 +125,7 @@ anyenv install rbenv
 
 このコマンド1つで、ビルドに必要な各種`env-build`(rbenvなら`ruby-build`)も一緒にインストールしてくれます。
 
-3.ログインシェルで`.bash_profile`再読み込み
+3. ログインシェルで`.bash_profile`再読み込み
 ```bash
 exec $SHELL -l
 ```
