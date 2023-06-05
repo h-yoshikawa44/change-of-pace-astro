@@ -52,7 +52,7 @@ if (ogp[url]) {
     $("link[rel='apple-touch-icon']").attr('href') ??
     $("link[rel='apple-touch-icon-precomposed']").attr('href') ??
     $("link[rel='shortcut icon']").attr('href') ??
-    '';
+    `http://www.google.com/s2/favicons?domain=${origin}`;
 
   if (image && !image.startsWith('http')) {
     image = `${origin}/${image}`;
