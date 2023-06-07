@@ -1,0 +1,187 @@
+---
+title: "GASで掃除当番Botを作ってみる ③ランダムで掃除当番決め（複数グループ）"
+description: "グループごとに掃除当番を決めるBot作成チャレンジ"
+pubDate: "2018-09-09 14:00:00"
+updatedDate: "2020-02-16"
+category: "develop"
+tags: ["サーバレス", "Slack", "Google App Script"]
+---
+
+前回までで、1つのグループ内でランダムに当番決め + 通知 ができました。
+今回は、これを複数グループ対応にしていきます。
+
+## 事前準備
+### スプレッドシート側
+こんな感じで5グループにしてみました。
+人数も増やしています。
+<img src="/screenshots/2018/cleaning-duty/five-group-list.png" width="100%" alt="グループ表" />
+
+## 実装
+※2019/12/29 再代入しない変数の宣言を const に修正しました。
+※2020/2/16
+v8 ランタイムに対応したため、let やアロー関数などが新たに使用できるようになりました。
+これに伴いリファクタリングを行っています。
+
+{/* <!-- textlint-disable --> */}
+
+ランタイムの変更は、GASエディタを開いたときに表示される案内（`Enable new Apps Script runtime powered by Chrome V8 for this project.`）から変更。
+もしくは、実行 → Chrome V8 を搭載した新しい Apps Script ランタイムを有効にする からできます。
+
+{/* <!-- textlint-enable --> */}
+
+```javascript
+// 掃除当番をランダムで決めて通知
+function noticeCleaningDuty() {
+  let msg;
+  try { // ⑤
+    // 連携するスプレッドシートのうち、グループ表のシート情報を取得
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('グループ表'); //①
+    // 指定シートの全ての値を取得（二次元配列）
+    const data = sheet.getDataRange().getValues();
+    // 掃除当番のグループ
+    const groupNames = ['A', 'B', 'C', 'D', 'E']; //②
+    // 掃除当番を決定し、通知メッセージを生成
+    msg = decideCleaningDuty(data, groupNames); //③
+  } catch (e) {
+    msg = 'エラーが発生しました：' + '\nstack：\n' + e.stack;
+  }
+
+  try { // ⑤
+    // Slack 側 Incoming WebHook の URL
+    const WEBHOOK_URL = PropertiesService.getScriptProperties().getProperty('WEBHOOK_URL');
+
+    // Incoming WebHook に渡すパラメータ
+    const jsonData =
+        {
+          'text': msg
+        };
+
+    // パラメータを JSON に変換
+    const payload = JSON.stringify(jsonData);
+
+    // 送信オプション
+    const options =
+        {
+          'method': 'post',
+          'contentType': 'application/json',
+          'payload': payload
+        };
+    // 指定 URL、オプションでリクエスト
+    UrlFetchApp.fetch(WEBHOOK_URL, options);
+  } catch (e) {
+    Logger.log('送信エラー：' + '\nstack：\n' + e.stack);
+  }
+}
+
+// 掃除当番を決定し、通知メッセージを作成して返す ③
+function decideCleaningDuty(data, groupNames) {
+  let noticeMsg = '今週の掃除当番のお知らせ\n\n';
+  for (let i = 0; i < groupNames.length; i++) {
+    const groupNameRow = searchGroupNameRow(data, groupNames[i]);
+    const lastColumn = getLastColumn(data, groupNameRow);
+    const menbers = data[groupNameRow - 1].slice(2, lastColumn);
+    const numbers = toDraw(menbers.length);
+    noticeMsg += groupNames[i] + '：' + menbers[numbers[0]] + '・' + menbers[numbers[1]] + '\n';
+  }
+  noticeMsg+= '\nよろしくお願いします。'
+  return noticeMsg;
+}
+
+// 指定グループ名がある行番号を返す ④
+function searchGroupNameRow(data, groupName) {
+  for (let i = 0; i < data.length; i++) {
+    if (data[i][0] === groupName) {
+      return i + 1;
+    }
+  }
+  throw new Error(groupName + 'グループのデータが見つかりませんでした。');
+}
+
+// 指定した行の最終使用列番号を返す
+function getLastColumn(data, row) {
+  for (let i = 2; i <= data[row-1].length; i++) {
+    if (data[row-1][i] === undefined || data[row-1][i] === '') {
+      return i;
+    }
+  }
+}
+
+// 掃除当番の抽選結果を返す
+function toDraw(length) {
+  let numbers = [];
+  numbers[0] = random(length);
+  do {
+    numbers[1] = random(length);
+  } while(numbers[0] === numbers[1]);
+  return numbers;
+}
+
+// 0～(length-1)の乱数を返す
+function random(length) {
+  //例 5人の場合 0~0.9999… * 5 の小数点切り捨てで、0~4になる
+  return Math.floor(Math.random() * length);
+}
+```
+
+### 大まかな変更箇所
+#### ① データを取得したいシートの指定でシート名で指定するように変更
+```javascript
+// before
+const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+
+// after
+const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('グループ表');
+```
+に変更し、取得したいシートの名称を指定するように変更。
+
+#### ② グループ名称の配列の用意を追加
+今回は複数グループ対応にするため、グループ名称の配列を用意。
+
+#### ③ 通知メッセージの作成部分をメソッドに変更
+掃除当番を決定し、通知メッセージを作成する処理をメソッド化。
+
+#### ④ 指定した名称に応じた行番号を取得するメソッドを追加
+グループ名に応じた行の番号を取得するメソッドを追加。
+
+上記の変更箇所はありますが、基本的には、前回まで書いていた処理を複数グループ分、for で回しているというだけです。
+
+#### ⑤ try〜catch ブロックを追加（2019/12/29追記）
+コードやスプレッドシートのデータがおかしいなどして、エラーになった場合、エラーメッセージを Slack に投稿してくれるよう追記しました。
+エラーメッセージがあることで、修正もしやすいです。
+
+### 実行結果
+<img src="/screenshots/2018/cleaning-duty/notification-2.png" width="70%" alt="Slack投稿結果" />
+
+こんな感じになりましたー。
+複数グループでの当番決めも、なんとかできました。
+（前回と違い、メンバー名のところが敬称略形式になっていますが、そこは突っ込まないでください...）
+
+ちなみに bot の名称とアイコンが変わっていますが、これは`Incoming Webhook`の設定から変更可能です。
+<img src="/screenshots/2018/cleaning-duty/icon-name-setting.png" width="80%" alt="webhook設定画面" />
+
+
+※ちなみに JSON ペイロードに渡すパラメータとして、以下のように指定して、設定を上書きもできるそうです。
+```javascript
+var jsonData =
+  {
+    'text': msg,
+    'username': 'new-bot-name',
+    'icon_url': 'https://slack.com/img/icons/app-57.png'
+    //もしくは 'icon_emoji': ':ghost:'
+  };
+```
+こちらは今回試してはいないのですが、容易に変更できるのを考えると、こちらで設定する方がいいかも...？（人によっての好みでしょうか...）
+
+---
+
+あとやれたらいいかなと思った機能として、以下のようなものでしょうか。
+- 前回当番になった人を除外するようにする
+- これまで当番になった回数の少ない人が優先的に選ばれるようにする
+- 当番を決めた後、それをスプレッドシートに書き込んで履歴にする
+- 設定した時間で通知するようにする（これはトリガー設定だけなので恐らく簡単かなと）
+
+GAS の勉強として続きをやるのもいいのですが、ちょっと他の勉強もしたいので、一旦ここまでにしておきます。
+勉強したいとか、ちょっとやってみたいとか、これも知っておいた方がいいだろうなとか、そういったことが山積みでとても追いつかないですが（涙）
+
+あまりきれいなコードではありませんが、
+もし「GAS で bot 作るー」という方がいたとして、少しでも何かの参考にでもなれば幸いです。
