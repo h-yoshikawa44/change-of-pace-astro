@@ -1,0 +1,116 @@
+---
+title: "GASで掃除当番Botを作ってみる ①テスト投稿"
+description: "初めてのGASでBot作成チャレンジ"
+pubDate: "2018-09-09"
+updatedDate: "2020-02-16"
+category: "develop"
+tags: ["サーバレス", "Slack", "Google App Script"]
+---
+
+職場で掃除当番の話が出ていたので、自動で掃除当番を決めて通知してくれる bot がいたらいいのかなぁと思い、ちょっと bot 作成に挑戦してみました。
+
+## 事前準備
+まずは構成を構築していきます。
+（以下、`Google Apps Script`を`GAS`と記述しています）
+
+### 構成図
+大まかな流れはこんな感じ。
+（相変わらずスプレッドシートで図形描画はしづらいですねぇ...）
+<img src="/screenshots/2018/cleaning-duty/architecture.png" width="100%" alt="構成図" />
+
+### Slack 側
+GAS から Slack に投稿するにあたって、
+`Slack API` or `Incoming-webhook` が必要になりますが、今回は後者の方を使用しています。
+
+#### ワークスペースとチャンネルを用意
+Slack 側で bot の投稿をしたいワークスペースとチャンネルを事前に用意しておきます。
+
+#### ワークスペースに Incoming-webhook を設定する
+1. ワークスペースメニュー → その他管理項目 → App管理へ
+ （あとからキャプチャを撮ったので、キャプチャ上で投稿されている内容については後から出てきます...）
+<img src="/screenshots/2018/cleaning-duty/incoming-webhook-setting.png" width="60%" alt="Slackの設定からApp管理へ行くまで" />
+
+2. (右上の Menu → )検索へ
+
+3. Incoming webhook で検索し、Incoming webhook を選択し、設定画面へ
+<img src="/screenshots/2018/cleaning-duty/incoming-webhook-search.png" width="60%" alt="アプリ検索画面" />
+
+---
+**※すでに Incoming webhook を追加済みの場合**
+
+ワークスペースメニュー
+→ その他管理項目
+→ App管理
+→ (セクションを変更する)
+→ カスタムインテグレーション
+→ Incoming webhook
+を選択でも、同様の画面に行けます。
+
+---
+
+4. 設定を追加 を選択
+
+5. チャンネルへの投稿 で投稿したいチャンネルを選択 → 着信 Web フックインテグレーションの追加 を選択 で設定詳細画面へ
+
+6. 任意で設定を変更して、設定を保存する を選択
+なお、この画面にある`Webhook URL`は**GAS 側で使用する**ので控えておいてください。
+また、`セットアップの手順`、`メッセージ添付ファイル`の項目で、この webhook の使い方が書いてあるので、読んでおくといいですよー。
+
+### Google Drive 側
+#### スプレッドシート
+1. スプレッドシートを作成（この段階では何も記述しなくて OK）
+
+2. スプレッドシートのメニュー → ツール → スクリプトエディタ を選択
+
+## Slack に投稿する
+### GAS に投稿内容を記述
+ここから実際に Slack へ投稿する内容を記述していきます。
+GAS では、JavaScript で記述していきます。
+
+Webhook URL にデータを送信するには、以下の2つの方法があるようです。
+（今回は前者のやり方になります）
+- POST リクエストで`payload`パラメータとして JSON を送信する
+- POST リクエストの本体として、JSON を送信する
+
+ここでは一旦、ちゃんと投稿ができるか確認するためにテスト投稿を行います。
+
+※2019/12/29 変数宣言の var を const に修正しました。
+※2020/02/16 細かな修正。
+
+```javascript
+function myFunction() {
+  const WEBHOOK_URL = // 先ほど控えた WebhookURL を指定
+
+  // Incoming WebHook に渡すパラメータ
+  const jsonData =
+      {
+        'text': 'test'
+      };
+
+  // パラメータを JSON に変換
+  const payload = JSON.stringify(jsonData);
+
+  // 送信オプション
+  const options =
+      {
+        'method': 'post',
+        'contentType': 'application/json',
+        'payload': payload
+      };
+
+  // 指定 URL、オプションでリクエスト
+  UrlFetchApp.fetch(WEBHOOK_URL, options);
+}
+```
+GAS メニューから関数を選択し実行ボタンを押すことで、選択した関数を実行できます。
+（※初回実行時には、実行の許可が求められるので許可してください）
+
+### 実行結果
+実行すると指定した Slack のチャンネルに以下のように投稿されます。
+<img src="/screenshots/2018/cleaning-duty/incoming-webHook-test.png" width="80%" alt="Slack投稿結果" />
+
+これで投稿ができるようになりました。
+今度は、投稿内容を変えていきましょうー。
+
+## リンクまとめ
+- [【初心者向け】GASを使ってSlackへ自動通知](https://qiita.com/chihiro/items/c7b11abc78f5d806c3a8)
