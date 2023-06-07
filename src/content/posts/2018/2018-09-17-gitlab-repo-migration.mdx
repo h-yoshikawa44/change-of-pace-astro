@@ -1,0 +1,62 @@
+---
+title: "GitLabでリポジトリ（ソースコード）を別アカウントのリポジトリに移行する"
+description: "GitLab内でリポジトリのソースコードを別アカウントのリポジトリに移行する手順"
+pubDate: "2018-09-17"
+updatedDate: "2020-05-06"
+category: "develop"
+tags: ["GitLab"]
+---
+
+仕事用アカウントで個人的に作っていたプロジェクトを、個人用アカウントの方に移行したので、念のための備忘録。
+（こんなの誰でもわかるやろって言われそうですが...）
+
+※2020/05/06追記
+この記事での移行は、あくまで**コード部分のみの移行**であることに注意です。
+
+## 移行先リポジトリ
+### 作成
+1. GitLab のメニューから`Projects`→`Your Projects`でプロジェクト一覧へ
+2. `New Project`から新規プロジェクト作成
+3. 任意の名前、任意の設定で`Create Project`を選択
+
+## 移行元リポジトリ
+### ローカルのプロジェクトの設定変更
+1. push 先の変更
+`vi .git/config`などで、リポジトリの URL を移行先リポジトリの URL に変更する。
+
+```bash
+# 例
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+[remote "origin"]
+        url = git@gitlab.com:XXXX/〇〇〇〇 ←このURLを変更
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+[branch "develop"]
+        remote = origin
+        merge = refs/heads/develop
+```
+
+2. 移行先リポジトリに push する
+`git push origin (ブランチ名)`で push して、移行先リポジトリに反映させる。
+
+### リポジトリの削除
+無事に push が成功し、移行先リポジトリに反映されたら、不要になった移行元のリポジトリを削除する。
+
+1. 移行元リポジトリのトップ画面のサイドメニューから`Setting`→`General`を選択
+
+2. 一番下の`Advanced`のなかの、`Remove project`を選択
+
+3. 表示される警告モーダルのなかで、そのプロジェクト名を入力し`confirm`を選択
+
+---
+
+自分がこの移行をした際は、使用する GitLab のアカウントも変えたり SSH キーを設定したりもしたので、もう少し手順が増えましたが慣れてしまえばそう難しくはなかったです。
+（はじめてやった時は時間かかってしまってましたが...苦笑）
+
+しょっちゅう、こういった移行をすることはないですが一応覚えておきたいものです。
