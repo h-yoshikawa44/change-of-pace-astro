@@ -1,0 +1,236 @@
+---
+title: "GASで掃除当番Botを作ってみる ②ランダムで掃除当番決め"
+description: "ランダムで掃除当番決めするBot作成チャレンジ"
+pubDate: "2018-09-09 12:00:00"
+updatedDate: "2020-02-16"
+category: "develop"
+tags: ["サーバレス", "Slack", "Google App Script"]
+---
+
+前回、テスト投稿ができました。
+次はスプレッドシートからメンバー情報を読み取り、そのメンバーの中からランダムで掃除当番を決めて通知するようにしていきますー。
+
+## 事前準備
+### スプレッドシート側
+こんな感じで簡易的にメンバー表を作成してみました。
+今後、複数グループで当番決めをしたいので、一旦 A グループとしています。
+<img src="/screenshots/2018/cleaning-duty/group-list.png" width="100%" alt="グループ表" />
+
+## 実装
+### GAS 側
+一旦、こんな感じで実装。
+それにしても、スプレッドシートの行や列番号は1から始まるのに対して、配列の添え字は0から始まるのでややこしいですねぇ(遠い目)
+実装する上で、この点に関して少し混乱してしまいました。
+
+※2019/12/29 再代入しない変数の宣言を const に修正しました。
+※2020/02/16
+v8 ランタイムに対応したため、let やアロー関数などが新たに使用できるようになりました。
+これに伴いリファクタリングを行っています。
+
+{/* <!-- textlint-disable --> */}
+
+ランタイムの変更は、GAS エディタを開いたときに表示される案内（`Enable new Apps Script runtime powered by Chrome V8 for this project.`）から変更。
+もしくは実行→ Chrome V8 を搭載した新しい Apps Script ランタイムを有効にする からできます。
+
+{/* <!-- textlint-enable --> */}
+
+```javascript
+function noticeCleaningDuty() {
+  // 連携するスプレッドシートの最初のシートを取得
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  // 指定シート、行の最終使用列番号を取得
+  const lastColumn = getLastColumn(sheet, 4);
+  // メンバー名称の取得（戻り値は二次元配列）
+  const menbers = sheet.getSheetValues(4, 3, 1, lastColumn - 2);
+  // 掃除当番抽選結果を取得
+  const numbers = toDraw(menbers[0].length);
+
+  const WEBHOOK_URL = // Webhook URL を記述
+
+  // Incoming WebHook に渡すパラメータ
+  const jsonData =
+      {
+        'text': '本日の掃除当番は ' + menbers[0][numbers[0]] + 'さん と ' + menbers[0][numbers[1]] + 'さん です'
+      };
+
+  // パラメータを JSON に変換
+  const payload = JSON.stringify(jsonData);
+
+  // 送信オプション
+  const options =
+      {
+        'method': 'post',
+        'contentType': 'application/json',
+        'payload': payload
+      };
+
+  // 指定 URL、オプションでリクエスト
+  UrlFetchApp.fetch(WEBHOOK_URL, options);
+}
+
+// 指定したシート・行の最終使用列を返す
+function getLastColumn(sheet, row) {
+  let lastColumn = 0;
+  for (let i = sheet.getLastColumn(); i > 0; i--) {
+    if(sheet.getRange(row, i).getValue() != '') {
+      break;
+    }
+  }
+  lastColumn = i;
+  return lastColumn;
+}
+
+// 掃除当番の抽選結果を返す
+function toDraw(length) {
+  let numbers = [];
+  numbers[0] = random(length);
+  do {
+    numbers[1] = random(length);
+  } while(numbers[0] === numbers[1]);
+  return numbers;
+}
+
+// 0～(length-1)の乱数を返す
+function random(length) {
+  // 例 5人の場合 0~0.9999… * 5 の小数点切り捨てで、0~4になる
+  return Math.floor(Math.random() * length);
+}
+```
+
+### 実行結果
+5回実行してみました。
+現時点では単純にランダム選定なので、連続して同じ人になっているところもあります。
+
+さすがに3回連続はキレられますね(笑)
+
+<img src="/screenshots/2018/cleaning-duty/notification-1.png" width="70%" alt="Slack投稿結果" />
+
+
+## リファクタ
+上記のコードでも一応動作はするのですが、なんか微妙...。
+
+また、調べながらやっていた中で見つけた記事に「API の呼び出し回数が多いと動作が遅くなる」という文言がありました。
+今回の場合でいうと、スプレッドシートにアクセスして値を取得したり、値をセットしているときになります。この処理を for 文で回していたりすると、重たくなる原因だそうで。
+
+`getLastColumn(sheet, row)`の if 文のところでやってる`sheet.getRange(row, i).getValue()`なんかは、まさしく該当しそうです...。
+
+ということでリファクタをすることに。
+
+※2019/12/29 再代入しない変数の宣言を const に修正しました。
+※2020/02/16
+v8 ランタイムに対応したため、let やアロー関数などが新たに使用できるようになりました。
+これに伴いリファクタリングを行っています。
+
+```javascript
+function noticeCleaningDuty() {
+  // 連携するスプレッドシートの最初のシートを取得
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  // 指定シートのすべての値を取得（戻り値は二次元配列）
+  const data = sheet.getDataRange().getValues();  //①
+  // 指定シート、行の最終使用列番号を取得
+  const lastColumn = getLastColumn(data, 4);
+  // メンバー名称の取得
+  const menbers = data[4-1].slice(2, lastColumn);  //②
+  // 掃除当番抽選結果を取得
+  const numbers = toDraw(menbers.length);
+
+  // Webhook URL を記述
+  const WEBHOOK_URL = PropertiesService.getScriptProperties().getProperty('WEBHOOK_URL');  //④
+
+  // Incoming WebHook に渡すパラメータ
+  const jsonData =
+      {
+        'text': '本日の掃除当番は ' + menbers[numbers[0]] + 'さん と ' + menbers[numbers[1]] + 'さん です'
+      };
+  const payload = JSON.stringify(jsonData);
+
+  // 送信オプション
+  const options =
+      {
+        'method': 'post',
+        'contentType': 'application/json',
+        'payload': payload
+      };
+  // 指定 URL、オプションでリクエスト
+  UrlFetchApp.fetch(WEBHOOK_URL, options);
+}
+
+// 指定した行の最終使用列番号を返す
+function getLastColumn(data, row) {  //③
+  for (let i = 2; i <= data[row-1].length; i++) {
+    if(data[row-1][i] === undefined || data[row-1][i] === '') {
+      return i;
+    }
+  }
+}
+
+// 掃除当番の抽選結果を返す
+function toDraw(length) {
+  let numbers = [];
+  numbers[0] = random(length);
+  do {
+    numbers[1] = random(length);
+  } while(numbers[0] === numbers[1]);
+  return numbers;
+}
+
+// 0～(length-1)の乱数を返す
+function random(length) {
+  //例 0~0.9999… * 5 の小数点切り捨てで、0~4になる
+  return Math.floor(Math.random() * length);
+}
+```
+
+### 大まかな変更箇所
+#### ① 最初に行う、シートのデータ取得を全部まとめて取得に変更
+シートのデータをその都度取りに行っていたところを、
+最初にシートのデータをまとめて2次元配列で取得して、それをもとに処理をしていくようにしました。
+
+```javascript
+const data = sheet.getDataRange().getValues();
+```
+がその処理です。
+
+#### ② ①の変更に伴い、取得したシート全体のデータから必要箇所を抽出するように変更
+```javascript
+// before
+const menbers = sheet.getSheetValues(4, 3, 1, lastColumn - 2);
+
+// after
+const menbers = data[4-1].slice(2, lastColumn);
+```
+
+元々、`sheet.getSheetValues(行番号, 列番号, 行数, 列数)`でシートから該当箇所のデータを取得していました。
+そこを、①で最初にデータをまとめて取得しているため、それを使うようにしています。
+`slice`を使っているのは、メンバーの名前の部分のみ取得したいからです。
+
+#### ③ 最終列の判定方法を変更
+元々、`sheet.getLastColumn()`でシート全体での最終列を取得し、1列ずつ内側を参照し（シートにデータを取りに行き）、値がセットされていたら最終使用列とみなしていました。
+それを逆に、（最初にまとめて取得したデータで）内側から1列ずつ外側を参照し、値がセットされていない、もしくは`undefined`になったらそこを最終使用列とみなすとしました。
+
+#### ④ WebHookURL をスクリプトプロパティから取得するように変更（※2019/12/21追記）
+WebHookURL をそのまま書いていましたが、こういったものはコードへべた書きせずに`プロパティストア`で管理するとよいです。
+GAS プロジェクトに紐づいてデータを持っておける領域で、プロパティ（キー）：値 の形式で環境変数のように扱うことができます。
+
+`プロパティストア`は複数の種類がありますが、今回は`スクリプトプロパティ`を使用しています。
+
+- 登録、編集
+GAS エディタの ファイル→プロジェクトのプロパティ→スクリプトのプロパティ から
+**※注意...そのGASプロジェクトのオーナー権限のアカウントである必要があります。**
+
+- 使用
+```javascript
+PropertiesService.getScriptProperties().getProperty('プロパティ名');
+```
+
+---
+
+あとは細かなところを修正しました。
+
+とりあえず、1グループでランダム当番決め + 通知はできました。
+次は、これを複数グループ対応にしていきます。
+
+## 参考リンクまとめ
+- [Google Apps Scriptでスプレッドシート内を検索して行番号を返す関数（高速版）](https://tonari-it.com/gas-spreadsheet-find/)
+- [GASでSpreadsheetを操作する自分的ベストプラクティス](https://qiita.com/ryan5500/items/e72eb205fbe006c2eb6f)
+- [【初心者向けGAS】プロパティストアの概要とスクリプトプロパティの編集方法](https://tonari-it.com/gas-property-store/)
