@@ -52,7 +52,7 @@ if (ogp[url]) {
     $("link[rel='apple-touch-icon']").attr('href') ??
     $("link[rel='apple-touch-icon-precomposed']").attr('href') ??
     $("link[rel='shortcut icon']").attr('href') ??
-    '';
+    `http://www.google.com/s2/favicons?domain=${origin}`;
 
   if (image && !image.startsWith('http')) {
     image = `${origin}/${image}`;
@@ -81,7 +81,7 @@ if (ogp[url]) {
 }
 ---
 
-<div class="link-card my-2 border rounded-4 p-4 hover:bg-slate-100">
+<div class="link-card my-5 border rounded-4 p-4 hover:bg-slate-100">
   <a href={url} target="_blank" class="text-initial">
     <div class="flex items-center justify-between gap-4">
       <div class="flex flex-1 flex-col gap-1">

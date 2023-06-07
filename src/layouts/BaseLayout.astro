@@ -39,7 +39,9 @@ const isMarkdownPage = markdownHeadings?.length !== 0;
             <div class="hidden place-self-auto lg:block">
               <SideBar markdownHeadings={markdownHeadings} />
             </div>
-            <div class="flex-grow-1 rounded-2 bg-white p-4 lg:ml-6">
+            <div
+              class="max-w-full flex-grow-1 overflow-x-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6"
+            >
               <slot />
             </div>
           </div>

@@ -23,7 +23,7 @@ const { Content, headings } = await post.render();
       <p>
         <FormattedDate date={pubDate} />
         {
-          updatedDate && (
+          updatedDate && pubDate.toString() !== updatedDate.toString() && (
             <span class="inline-flex items-center">
               (<span class="i-system-uicons:refresh mr-1">更新日</span>
               <FormattedDate date={updatedDate} />)
@@ -31,7 +31,7 @@ const { Content, headings } = await post.render();
           )
         }
       </p>
-      <h1 class="text-4xl font-600">{title}</h1>
+      <h1 class="text-4xl font-600 leading-12">{title}</h1>
       <p class="mt-4 flex items-center">
         <span class="i-system-uicons:document mr-0.5 text-lg">カテゴリー</span>
         {`${CATEGORY_MAP[category]}`}

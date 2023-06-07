@@ -1,0 +1,140 @@
+---
+title: "anyenvでバージョン管理"
+description: "anyenvのインストール手順と使用方法"
+pubDate: "2018-06-02"
+updatedDate: "2019-11-06"
+category: "develop"
+tags: ["開発環境", "anyenv"]
+---
+
+個人でコード書いていくうえで、そんなに必要ないかも...?と思いつつも、一応、言語をバージョン管理できるようにしておこうと思いまして。
+
+当ブログは Jekyll という静的サイトジェネレータを使用して作成しています。
+この Jekyll を使う上で Ruby が必要になるので、元々 Linuxbrew で rbenv を入れていました。
+ふとしたきっかけで、rbenv をはじめとした env 系を一括管理できる`anyenv`の存在を知りまして。せっかくなので`anyenv`を使ってみることにしました。
+
+---
+
+**※2019/11/06追記**
+この記事では`anyenv`を`$ git clone`で導入しています。
+brewを使用して導入するやり方もあり、以下の記事ではLinuxbrewで導入しています。
+[WSLでWindowsの中にLinuxの開発環境を作ろう](/posts/2019-09-26-wsl-develop)
+
+## anyenv
+※env 系の管理を brew から`anyenv`に移行する場合は、事前に brew で入れた分をアンインストール＋パスの削除をするか、参考記事のとおり、リンクを張る方法があります。
+
+### 導入
+
+1. インストール
+```bash
+git clone https://github.com/riywo/anyenv ~/.anyenv
+```
+
+2. パスの設定
+（ここでは`.bash_profile`に記述していますが、使用している各種`profile`のいずれかで問題ありません）
+```bash
+echo 'export PATH="$HOME/.anyenv/bin:$PATH"' >> ~/.bash_profile
+```
+
+
+3. bash 起動時に自動で init するよう設定
+```bash
+echo 'eval "$(anyenv init -l)"' >> ~/.bash_profile
+```
+※これで bash 起動時に`anyenv`からインストールした各種 env を init してくれるようになるため、すぐ各種コマンドが使えるようになります。
+
+4. ログインシェルで各種`profile`再読み込み
+```bash
+exec $SHELL -l
+```
+
+5. anyenv コマンド確認
+```bash
+anyenv
+```
+以下のように表示されればOK。
+
+```bash
+anyenv
+Usage: anyenv <command> [<args>]
+
+Some useful anyenv commands are:
+   commands            List all available anyenv commands
+   local               Show the local application-specific Any version
+   global              Show the global Any version
+   install             Install a **env
+   uninstall           Uninstall a specific **anv
+   version             Show the current Any version and its origin
+   versions            List all Any versions available to **env
+
+See 'anyenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/riywo/anyenv#readme
+```
+
+### anyenv-update インストール
+各種 env とそのプラグインを一括でまとめて更新してくれるものだそうです。
+それぞれ1つずつ更新するのは、確かに手間ですよね...。
+
+1. 格納するディレクトリの作成
+```bash
+mkdir -p $(anyenv root)/plugins
+```
+
+2. インストール
+```bash
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+```
+これで`$ anyenv update`コマンドが使えるようになります。
+
+### 各種 env のインストール
+1. インストールできる env の確認
+```bash
+anyenv install -l
+```
+
+```bash:インストールできる一覧
+Available **envs:
+  crenv
+  denv
+  erlenv
+  exenv
+  goenv
+  hsenv
+  jenv
+  luaenv
+  ndenv
+  nenv
+  nodenv
+  phpenv
+  plenv
+  pyenv
+  rbenv
+  Renv
+  sbtenv
+  scalaenv
+  swiftenv
+```
+
+2. インストール
+```bash
+anyenv install (各種env)
+
+# 例
+anyenv install rbenv
+```
+
+このコマンド1つで、ビルドに必要な各種`env-build`(rbenvなら`ruby-build`)も一緒にインストールしてくれます。
+
+3. ログインシェルで`.bash_profile`再読み込み
+```bash
+exec $SHELL -l
+```
+{/* <!-- textlint-enable --> */}
+
+---
+自分はまず`anyenv`で`rbenv`をインストールしなおしたのですが、特別つまずくこともなくスムーズでした。
+パスを汚さなくていいですし、楽でいいですねー。
+
+## 参考リンクまとめ
+- [anyenvをインストール＆Homebrewでインストール済のrbenvと互換を取る](http://d.hatena.ne.jp/riocampos+tech/20141019/install_anyenv)
+- [anyenvを使う](https://qiita.com/zaburo/items/8ac16133c3823c6e6ad6)

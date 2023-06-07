@@ -1,0 +1,242 @@
+---
+title: "UbuntuにPHPインストールで格闘した話"
+description: "UbuntuにPHPをいれるにあたって、phpenv、brew、phpbrewと挑戦してエラーと格闘した記録"
+pubDate: "2018-06-05"
+updatedDate: "2018-06-05"
+category: "develop"
+tags: ["開発環境", "PHP"]
+---
+
+先日の anyenv 導入後、PHP をいれたかったので`phpenv`も入れることにしたのですが...
+なかなか長い戦いになりました(遠い目)
+
+import OG from "@/components/OG.astro"
+
+**※注意点**
+結論を先に言いますと、PHP のインストール自体はできたのですが、Ubuntu の apt コマンド使いました...。
+なので、ここから先は`phpenv`での導入の参考にはなりませんし、非常に長くなったのであしからず。
+
+自分が PHP をインストールするまでの戦いの履歴が以下のとおりです。
+
+## PHP をインストールする
+### anyenv → phpenv でインストール
+1. phpenv インストール
+```bash
+anyenv install phpenv
+```
+
+2. ログインシェルで各種 profile 再読み込み
+```bash
+exec $SHELL -l
+```
+
+3. インストールできる PHP のバージョンの確認
+```bash
+phpenv install -l
+```
+
+4. 指定したバージョンの PHP をインストール
+```bash
+phpenv install (バージョン)
+```
+
+この時、依存ライブラリも一緒にビルドをしてくれるのですが...以下のようなエラーが。
+
+```bash
+configure: WARNING: unrecognized options: --with-mcrypt
+configure: WARNING: This bison version is not supported for regeneration of the Zend/PHP parsers (found: none, min: 204, excluded: ).
+configure: WARNING: You will need re2c 0.13.4 or later if you want to regenerate PHP parsers.
+configure: error: libxml2 not found. Please check your libxml2 installation.
+```
+調べていくと...。
+ビルドに必要な拡張ライブラリを入れておき、ビルドの際にそれらを使ってくれるようパスを指定したりしていけば、おおよそ解決する模様。
+しかし、表示されたエラーに沿って対応していっても、なかなかビルドが通ってくれず。
+`configure`オプションでビルドの設定ができるのはわかったんですが、具体的なことはイマイチわからずで次の方法へ。
+
+phpenv をいれるところまではスムーズだったんですけどねー。
+
+※ちなみにビルドに成功した場合は、以下のコマンドでバージョンを選択できるようです。
+
+5. バージョン切り替え
+- システム全体で適用
+```bash
+phpenv global (バージョン)
+```
+- 一部プロジェクトで適用
+```bash
+phpenv local (バージョン)
+```
+
+6. インストールされているバージョン確認(選択されているバージョンに`*`がついている)
+```bash
+phpenv versions
+```
+
+### brew でインストール
+brew で各バージョンをインストールし、phpenv とリンクさせて繋ぐことで管理できないかなと考えてみました。
+
+1. インストールできるバージョンの確認
+```bash
+brew search php@
+```
+
+表示される`php@5.6` `php7.0` `php@7.1` `php@7.2`が対応バージョンです。
+
+※2018/03/31まではPHPのフォーミュラとして`homebrew/php`があり。
+`php56`と`php56-*`(バージョンに応じた拡張) のような形式だったのですが、`homebrew/core`に統合された関係で上記のような形式になった模様。(拡張は組み込み式に変更)
+
+<OG url="https://php-tips.com/2018/04/13/homebrew-php-is-dead/"/>
+
+2. 指定したバージョンのPHPをインストール
+```bash
+brew install php@(バージョン)
+```
+
+依存パッケージも一緒にインストールしてくれますが...。
+```bash
+ncurses, util-linux, apr, libbsd, expat, apr-util, brotli, gdbm, readline, sqlite, bzip2, python@2, libxml2, c-ares, libev, libevent, jansson, boost, jemalloc, nghttp2, pcre, httpd, aspell, curl, freetds, libpng, freetype, gettext, libffi, glib, icu4c, jpeg, libpq, libtool, libzip, mhash, mcrypt, unixodbc, libtiff, webp
+```
+こんな感じでたくさん入ります。
+こんなにあるんや...とか、なんか`python`まで入ってるんやけどとか思いつつ。
+順調にインストールが進んでいたのでいけるかと思いきや、最後の PHP のビルドでまたもやエラーに。
+こんなにたくさん依存パッケージインストールしといて最後にコケるんかーい。
+
+```bash
+configure: error: Cannot find sys/sdt.h which is required for DTrace support
+```
+エラーメッセージを頼りに調べていくと、どうやら`openssl`に関するエラーの模様。
+
+```bash
+Please do not report this issue to Homebrew/brew or Homebrew/core. which support macOS only.
+```
+ちなみにエラーメッセージのあとにはこんなメッセージが。
+「macOS しかサポートしてないから、不具合等の報告は送らないで」ということでしょうか。
+
+ダメもとで`openssl`の新しいバージョンのものを入れてみたり、パスを確認してみたりするも、うまくいかず...。
+
+この時点で結構な時間を使っていたので、「PHP のビルドがうまくいかなくてキレそう」とつぶやいたところ、先輩から助け舟が。しかし、残念ながらそれもむなしい結果になってしまいました...。
+
+### phpbrew でインストール
+今度は、以前業務で使ったことがある`phpbrew`で挑戦してみることにしました。
+`phpbrew`は`phpenv`と`php-build`を1つにしたようなもので、こちらでもバージョン管理ができます。
+業務で使っていたときはbrewでインストールしていましたが、前述のとおり`homebrew/php`が使えなくなったため、curl コマンドでインストールすることに。
+
+<OG url="https://github.com/phpbrew/phpbrew/blob/master/README.ja.md" />
+※環境に応じた事前に必要なものが記載されているので、先に入れておくといいかも
+
+基本的に公式の案内に沿って進めました。
+
+1. インストール
+```bash
+curl -L -O https://github.com/phpbrew/phpbrew/raw/master/phpbrew
+```
+
+2. 権限変更
+```bash
+chmod +x phpbrew
+```
+
+3. 格納場所を変更
+```bash
+sudo mv phpbrew /usr/local/bin/phpbrew
+```
+
+4. bash script を初期化
+```bash
+phpbrew init
+```
+
+ここでまたもや問題が。
+bash script を初期化しようとしたところ、`phpbrew`コマンドが使えない状態でした。
+
+`php-cli`をいれれば良いとのことで、brew でインストールしたところ`phpbrew`コマンドが使えるようになりました。
+
+以下続きます。
+
+5. 以下を .bashrc に追記
+```bash:.bashrc
+source ~/.phpbrew/bashrc
+```
+
+6. インストールできるバージョン確認
+```bash
+phpbrew known
+```
+
+7. 指定したバージョンの PHP をインストール
+```bash
+phpbrew install (バージョン) (バリアントオプション)
+```
+※phpbrew では`バリアント`という概念があります。
+拡張ライブラリをより扱いやすくしたものといった感じでしょうか。
+<OG url="https://github.com/phpbrew/phpbrew/blob/master/README.ja.md" />
+
+はい、やってきましたビルドの時間。
+いいかげんビルド成功してほしいという願いもむなしく...やっぱりコケました。
+う～ん、PHP に嫌われてるのかなぁと思ってみたり。
+
+※ビルド成功時には以下のコマンドでバージョン選択できます。
+
+8. バージョン切り替え
+- システム全体で適用
+```bash
+phpbrew switch php-(バージョン)
+```
+- 一部プロジェクトで適用
+```bash
+phpbrew use php-(バージョン)
+```
+
+9. インストールされているバージョン確認(選択されているバージョンに`*`がついている)
+```bash
+phpbrew list
+```
+
+### apt でインストール
+これまでの戦いでヘロヘロになっていた自分は、バージョン管理をあきらめて`apt`コマンドでインストールすることにしました...。
+
+<OG url="https://qiita.com/yamatmoo/items/b9e8035c55032de88084" />
+ほぼこちらの方の記事のとおりに進めました。
+
+1. リポジトリ追加
+```bash
+sudo add-apt-repository ppa:ondrej/php
+```
+
+2. apt のアップデート
+```bash
+sudo apt update
+```
+
+3. インストール
+```bash
+sudo spt install php(バージョン) (拡張ライブラリ)
+
+# 例（必要に応じてライブラリ追加）
+sudo apt install php7.2 php7.2-common php7.2-cli php7.2-fpm　php7.2-mysql php7.2-dev php7.2-mbstring php7.2-zip
+```
+
+4. バージョン確認
+```bash
+php -v
+```
+
+```bash
+PHP 7.2.5-1+ubuntu16.04.1+deb.sury.org+1 (cli) (built: May  5 2018 04:59:13) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+ with Zend OPcache v7.2.5-1+ubuntu16.04.1+deb.sury.org+1, Copyright (c) 1999-2018, by Zend Technologies
+```
+こんな感じで表示されたら OK です。やっと PHP 使えるようになりました...。
+それも apt だと拍子抜けするくらいあっさり終わって、いままで使った時間なんやったんや...。
+
+バージョン情報を見てみると、もしや Ubuntu 用の PHP だったりするんでしょうか。
+
+---
+いやはや、とても長い道のりでした（苦笑）
+Ubuntu に慣れている方だったらこんなことしないんだろうなぁと思いつつ、まぁ無事に PHP 使えるようになって良かったです。
+
+## 参考リンクまとめ
+- [homebrew/php が死んでた](https://php-tips.com/2018/04/13/homebrew-php-is-dead/)
+- [phpbrew - GitHub](https://github.com/phpbrew/phpbrew/blob/master/README.ja.md)
+- [UbuntuにPHP7の環境をつくる](https://qiita.com/yamatmoo/items/b9e8035c55032de88084)
