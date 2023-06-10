@@ -1,0 +1,146 @@
+---
+title: "QiitaいいねランキングをSlackに投稿"
+description: "GASを使ってAPIでデータを取得し、Slackに投稿するまでの手順"
+pubDate: "2019-06-23"
+updatedDate: "2023/06/10"
+category: "develop"
+tags: ["サーバレス", "Slack", "Google App Script"]
+---
+
+Qiitaのアカウントがあると、定期的にいいねランキングがメールで来ますよね。
+あれをSlackに投稿出来たらいいなと思って、チャレンジしてみました。
+
+**※追記 現在、当記事で使用していた API は使用できなくなったため、当記事のやり方はできなくなりました。**
+
+import OG from '@/components/OG.astro'
+
+## どうやって投稿する？
+最初にいいねランキングを取得するところですが、Qiita の API を使えばできるのかなと思い見てみたところ、単純に Qiita の API だけでは難しそうでした。
+いろいろ工夫すればできるのかなとか考えていたなか、自作で API を作られている方の記事を見つけました。
+
+<OG url="https://qiita.com/zonbitamago/items/1027b532b174e5ee04b3" />
+
+Qiita API をスクレイピングしてランキングデータを構築しているそうです。
+仕組みに関しても記事に記述がありますが、今の自分にはちょっと難しく感じました...。すごい。
+
+こちらの方の API を利用させていただくとして、投稿までの手順は以下の流れにしました。
+1. API で Qiita いいねランキングデータを取得する
+2. 取得したデータを使って、Slack に投稿する文言を組み立てる
+3. Webhookを利用して、Slackに投稿する
+
+なお、今回は GAS を使用します。
+
+## 準備
+### Webhook
+まずは、Slack に投稿するための Webhook の設定をしていきます。
+下記の`App管理`から設定画面へ。
+<img src="/screenshots/2019/qiita-ranking/slack.png" width="100%" alt="SlackでApp管理に行くまで" />
+
+**Webhookが追加されていない場合**
+ヘッダの`検索`から`webhook`で検索して、`Incoming Webhook`を選択。
+
+**すでにWebhookが追加されている場合**
+ヘッダの`管理`から`カスタムインテグレーション`を選択して、`Incoming Webhook`を選択。
+
+`設定の追加`を選択して、投稿するチャンネルを決めて、`Incoming Webhookインテグレーションの追加`を選択。
+ここでは、投稿時のアイコンや名称などが設定できます。WebhookURL は GAS 側で使用するので控えておきましょう。
+
+### GAS
+Google ドライブ上でGASプロジェクトを作成して、手順通りにスクリプトを書いていきます。
+
+※2020/2/16 追記
+v8 ランタイムが使えるようになったので、それに伴いリファクタリングを行いました。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length, ja-technical-writing/ja-no-mixed-period --> */}
+
+ランタイム変更は、GAS エディタを開いて表示される案内（`Enable new Apps Script runtime powered by Chrome V8 for this project.`）から変更する。
+もしくは、実行 → Chrome V8 を搭載した新しい Apps Script ランタイムを有効にする からできます。
+
+主な変更点
+- var で定義していた変数を、その後値を変更するかどうかで let か const に変更
+- ログの出力方法の変更（stack にファイル名や行数などが含まれるので、stack のみにしました）
+- HTTP リクエスト時に使用するリクエスト URL は、スクリプトプロパティで設定して使用するよう変更
+  -  （ファイル→プロジェクトのプロパティ→スクリプトのプロパティ から設定できますが、オーナー権限のアカウントでないと編集できません）
+- ダブルクォートをシングルクォートに変更
+- getYear() は非推奨のため、getFullYear() に変更
+
+{/* <!-- textlint-enable --> */}
+
+```js
+function noticeQiitaRanking() {
+  let msg;
+  try {
+    let response = getQiitaRanking();
+    if (response == '') {
+      msg = '※最新のQiitaいいねランキングが登録されていません。\n違う取得日を指定してください。';
+    } else {
+      // Slack 投稿内容の組み立て
+      msg = '*■週間いいねランキング■* \n\n';
+      // JSON をオブジェクトに変換
+      response = JSON.parse(response);
+      const dataList = response['data'];
+      let count = 1;
+      dataList.forEach(data => {
+        // <url|文字列> の形式で文字列でのリンクを作成
+        msg += count + '位：<' + data['url'] + '|' + data['title'] + '> \n';
+        count++;
+      })
+    }
+  } catch (e) {
+    Logger.log('Qiitaいいねランキング取得エラー：' + '\nstack：\n' + e.stack);
+  }
+
+  try {
+    // Slack 側 Incoming WebHook のURL
+    const WEBHOOK_URL = PropertiesService.getScriptProperties().getProperty('WEBHOOK_URL');
+    // Incoming WebHook に渡すパラメータ
+    const jsonData =
+        {
+          'text': msg
+        };
+    //パラメータを JSON に変換
+    const payload = JSON.stringify(jsonData);
+    // 送信オプション
+    const options =
+        {
+          'method': 'post',
+          'contentType': 'application/json',
+          'payload': payload
+        };
+    //指定 URL、オプションでリクエスト
+    UrlFetchApp.fetch(WEBHOOK_URL, options);
+  } catch (e) {
+    Logger.log('Slack送信エラー：' + e.message + '\nstack：\n' + e.stack);
+  }
+}
+
+function getQiitaRanking() {
+  const type = 'weekly';
+  const date = new Date();
+  // リクエスト時に今日を指定するとなぜかデータが取得できないので、前日を指定する
+  const yesterday = new Date(date.getFullYear(), date.getMonth(), date.getDate() - 1);
+  const formatYesterday = Utilities.formatDate(yesterday, 'JST', 'yyyy-MM-dd');
+  const QIITA_SCRAIPING_URL = PropertiesService.getScriptProperties().getProperty('QIITA_SCRAIPING_URL') + type + '/' + formatYesterday;
+  return UrlFetchApp.fetch(QIITA_SCRAIPING_URL);
+}
+
+```
+
+Qiita いいねランキングAPIを使用する際に、実行日当日の日付を指定すると、なぜかデータが取得できませんでした。
+そのため、前日を指定するようにしています。
+
+## 投稿
+上記 GAS スクリプトを実行することで、以下のような投稿になります。
+ちゃんと、タイトルが記事リンクとして作成されています。
+<img src="/screenshots/2019/qiita-ranking/ranking.png" width="100%" alt="Slackにランキング投稿結果" />
+
+GAS は定期実行するようにトリガーの設定ができるので、週に1回投稿するなどもできますよー。
+
+---
+実は最初は GAS ではなく、Serverless Framework + Python + Lambda で作成しました。
+(Docker で実行環境も作りました)
+ただ、こちらの場合、事前に準備が多いので GAS の方が手軽に作成できていいですね。
+需要があれば、会社でも使ってもらおうかと構想中ですー。
+
+## 参考リンクまとめ
+- [Qiitaいいね数ランキングAPIの作成](https://qiita.com/zonbitamago/items/1027b532b174e5ee04b3)
