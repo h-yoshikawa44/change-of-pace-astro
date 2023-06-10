@@ -9,7 +9,9 @@ type Props = {
 const { noTopHeading = false, isMarkdownPage = false } = Astro.props;
 ---
 
-<header class="from-brand-start to-brand-end bg-gradient-to-b py-3">
+<header
+  class="sticky top-0 z-10 from-brand-start to-brand-end bg-gradient-to-b py-3 lg:static"
+>
   <div class="mx-auto px-2 color-white container sm:px-4">
     <div class="flex items-baseline">
       {
