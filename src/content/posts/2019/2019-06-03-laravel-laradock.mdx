@@ -1,0 +1,250 @@
+---
+title: "LaradockでLaravel環境構築"
+description: "Laradockを使ってLaravel環境を作る手順"
+pubDate: "2019-06-03"
+updatedDate: "2021/02/24"
+category: "develop"
+tags: ["開発環境", "Docker", "PHP", "Laravel"]
+---
+
+Laravel を勉強するために Laradock を使用してみました。
+いろんなサービスの Dockerfile が用意されていますが、まずは最低限の構成でチャレンジ。
+Laradock 便利ー。
+
+import OG from '@/components/OG.astro'
+
+## 注意書き（※2021/02/24 追記）
+Laravel の Docker 環境を作成するにあたって、
+現在の自分のスタンスとしては、Laradock よりもこちらの環境を使用するのをお勧めしています。
+Laradock と比べて圧倒的に早く構築できます。
+<OG url="https://github.com/ucan-lab/docker-laravel" />
+
+また、ご本人による解説記事もあり、非常に勉強になります。
+特に Docker の知識に自信がない方はぜひ読んでみてください。
+<OG url="https://qiita.com/ucan-lab/items/5fc1281cd8076c8ac9f4" />
+
+このスタンスのため、この記事は今後**更新停止**します。
+ご了承ください。
+
+## 前提
+- Docker 導入済み
+- docker-compose コマンドが使用できる
+
+<OG url="https://liginc.co.jp/364089" />
+こちらの記事をベースに進めました。
+
+## Laradock
+### 導入
+1. 任意のプロジェクトフォルダを作成（ここが git の管理対象になるイメージ）
+
+2. プロジェクトフォルダに移動して、Git の設定
+```bash
+git init
+```
+
+3. プロジェクトフォルダの中に Laravel プロジェクト用のフォルダを作成
+
+4. プロジェクトフォルダの中で Laradock をサブモジュールとして登録
+```bash
+git submodule add https://github.com/Laradock/laradock.git (※Laradock 用のフォルダ名)
+```
+
+この時点のフォルダ構成はこちら。
+```
+(git プロジェクトフォルダ)
+├ (Laravel プロジェクトフォルダ)
+└ (Laradock フォルダ)
+```
+
+#### env ファイル準備
+チームメンバーと環境変数の共有のしやすさとして、シェルを作成します。
+(※2019/8/14追記 環境変数ファイルを Git にあげることでもあるので、パブリックリポジトリではやらないほうがよさそうです)
+
+シェル作成のあたりは、以下の記事を参考にしました。
+<OG url="https://qiita.com/dev_satsuki/items/e2769925da33bfa77df5" />
+
+1. シェル用のフォルダとファイルを作成（以下の`.sh/`）
+```
+(git プロジェクトフォルダ)
+├ (Laravel プロジェクトフォルダ)
+├ (Laradock フォルダ)
+└ .sh/
+   ├ conf/
+   └ setup.sh
+```
+
+2. `conf/`のなかに`.laradock-env`を作成（laradock の中の`env-example`をコピー）
+(以降、Laradock を更新した際は`env-example`の内容が更新されている場合があるので、その際は再度合わせるようにしましょう)
+
+3. `.laradock-env`を編集
+- `APP_CODE_PATH_HOST`...Laradock の web サーバー上で同期するディレクトリパス
+- `DATA_PATH_HOST`...docker のストレージなどを保存するローカルのディレクトリパス
+- `COMPOSE_PROJECT_NAME`...コンテナの接頭辞（デフォルトの laradock だと、名前被りで上書きしやすいのでプロジェクトごとの命名に変更しておく）
+
+```:.laradock-env
+# 例
+APP_CODE_PATH_HOST=../(Laravel プロジェクトフォルダ)/
+DATA_PATH_HOST=../.(Laradock フォルダ)/data
+
+COMPOSE_PROJECT_NAME=laraveltutorial
+```
+
+4. setup.sh を編集
+```sh:setup.sh
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+
+cd $SCRIPT_DIR
+
+cp -f conf/.laradock-env ../(Laradockフォルダ)/.env
+```
+
+#### MySQL 8 対応
+1. `.sh/conf`以下に mysql.cnf を作成（Laradock の mysql/my.cnf をコピー）
+
+2. `.sh/conf/mysql.cnf`にmysql 8 の対応として以下を追記する
+```:.sh/conf/mysql.cnf
+innodb_use_native_aio=0
+default_authentication_plugin=mysql_native_password
+```
+[DockerでPHP環境作成（+ MySQL + PHPMyAdmin）](/posts/2019-05-15-docker-php)でも書いたとおり、MySQL は8から認証方式が変更になっているため、それを従来の認証方式に設定しなおすものです。
+※追記 innodb_use_native_aio=0 については、他のバージョンでも必要の可能性あり。
+
+3. `.sh/setup.sh`に以下を追加
+```sh:.sh/setup.sh
+cp -f conf/mysql.cnf ../ (Laradockフォルダ)/mysql/my.cnf
+```
+
+4. setup.sh を実行して .env を作成 + mysql/my.cnf の更新
+```bash
+sh .sh/setup.sh
+```
+
+### docker の起動
+1. イメージの作成と起動( laradock フォルダに移動して)
+```bash
+docker-compose up --build -d nginx mysql
+```
+※起動するコンテナは使用したいものに応じて変化。
+**初回は作成に少し時間がかかるので気長に待ちましょう。**
+
+2. 起動イメージの確認
+```bash
+docker-compose ps
+```
+State がすべて Up になっていればOK。
+（workspace と php-fpm も一緒に起動しているはず）
+
+3. 動作確認
+[http://localhost](http://localhost/)にアクセス。
+この段階では、nginx の404画面になればOK。
+
+## Laravel プロジェクト
+### 作成
+1. workspace コンテナに入る
+```bash
+docker-compose exec workspace bash
+```
+
+2. Laravel のインストール
+```bash
+composer create-project --prefer-dist laravel/laravel ./
+```
+
+3. 動作確認
+[http://localhost](http://localhost/)にアクセス
+以下の Laravel のトップページが表示されれば OK
+<img src="/screenshots/2019/laravel-laradock/laravel.png" width="50%" alt="Laravelトップ画面" />
+
+### MySQL の接続設定
+1. Laravel プロジェクトの`.env`を修正
+接頭辞が `DB_` の部分を編集し、laradock フォルダ/.env に記述されている値と合わせる形になります。
+```:.env
+# 例
+DB_CONNECTION=mysql
+DB_HOST=mysql
+DB_PORT=3306
+DB_DATABASE=default
+DB_USERNAME=default
+DB_PASSWORD=secret
+```
+
+2. マイグレーションを実行して接続テスト
+workspace コンテナの中で以下コマンドを実行。
+```bash
+php artisan migrate
+```
+デフォルトで存在するマイグレーションファイルが実行されます。ちゃんとテーブルが作成されていればOK。
+
+### Laravel の env ファイル準備
+こちらもシェルで env ファイルの内容を共有できるようにしておきます。
+
+1. `.sh/conf`に`.laravel-env`を作成
+  (Laravel プロジェクトの`.env`をコピー)
+
+2. setup.sh に以下を追記する
+```sh:setup.sh
+cp -f conf/.**laravel**-env ../(Laravel プロジェクトフォルダ)/.env
+```
+
+## 他のメンバーが環境を作るときは
+1. プロジェクトをクローン
+```bash
+git clone (プロジェクトパス)
+```
+
+2. サブモジュールの内容をクローン
+```bash
+git submodule update -i
+```
+※Laradock のディレクトリに移動し、`$ git submodule`で状態が確認できる
+  `-c7289f7db3b96be585a879ceaf0f208102f8233f ./` のように頭に`-`がついている場合は、まだ中身を持ってこれてない状態。
+
+3. シェル実行で env ファイル作成 + mysql 設定ファイルコピー
+```bash
+sh .sh/setup.sh
+```
+
+4. docker のイメージ作成と起動
+```bash
+docker-compose up --build -d nginx mysql
+```
+※作成するコンテナは必要に応じて。
+
+5. 起動イメージの確認
+```bash
+docker-compose ps
+```
+State がすべて Up になっていれば OK。
+
+6. workspace コンテナに入る(2019/12/7追記)
+```bash
+docker-compose exec workspace bash
+```
+
+7. パッケージのインストール(2019/12/7追記)
+```bash
+composer install
+```
+
+8. テーブルの作成(2019/12/7追記)
+```bash
+php artisan migrate
+```
+
+9. 動作確認
+[http://localhost](http://localhost/)にアクセス。
+ちゃんとコードに応じた画面が表示されれば OK。
+
+---
+
+最初は MySQL 8対応で少し手間取りましたが、比較的楽に環境を作ることができました。
+Laradock には豊富に Dockerfile が用意されているので、必要に応じてコンテナがすぐ作成できるのはいいですね。
+機会があれば他のコンテナも試してみます。
+
+## 参考リンクまとめ
+- [PHPフレームワーク「Laradock」で、手軽にLaravel+Dockerな開発環境を構築する](https://liginc.co.jp/364089)
+- [LaravelとLaradockを使ったチームでの開発環境を用意する vol.1 Laradock設定編](https://qiita.com/dev_satsuki/items/e2769925da33bfa77df5)
+- [LaravelとLaradockを使ったチームでの開発環境を用意する vol.2 Laravelインストール編](https://qiita.com/dev_satsuki/items/5ce8b98100997f230775)
+- [DockerとLaradockでPHPフレームワークとCMSの開発環境を構築する](https://ninolog.com/docker-build-php-from-laradock/)
+- [MySQL のログに CA 関連と NO_ZERO_DATE 関連の Warning が出ていたので対応した](https://mgng.mugbum.info/1344)
+
