@@ -1,0 +1,283 @@
+---
+title: "DockerでPHP環境作成（+ MySQL + PHPMyAdmin）"
+description: "DockerでPHP(フレームワーク無し)の環境を作る手順"
+pubDate: "2019-05-15"
+updatedDate: "2019-05-15"
+category: "develop"
+tags: ["開発環境", "Docker", "PHP"]
+---
+
+今更ながら、Docker の勉強もしています。
+というか、勉強しないといいかげんヤバい...。
+先日、少々詰まりながらも、なんとか PHP の環境を作ってみました。
+
+import OG from '@/components/OG.astro'
+
+## 自分の Docker 経験
+Docker の知識があるのは当たり前くらいのご時世のなか、まだまだ勉強途中です。
+
+<OG url="https://www.udemy.com/course/docker-k" />
+
+先日、こちらの講座を受講して大まかな仕組みやコマンドは学びましたが、まだ自分で進んで環境作れるような状態ではありません。
+参考書も買って勉強した方がいいのかな...。
+
+とはいえ、勉強もかねて今回環境を作ってみました。
+
+余談ですが、先日から WSL の Ubuntu の調子が悪く、Gitが使えない状態になってしまっています...。
+調べながらもエラーが解消しなかったため、もう Docker で環境作ろ...となったのでした。
+
+## 前提
+- Docker 導入済み
+- docker-compose コマンドが使用できる
+
+## PHP の Docker 環境
+<OG url="https://qiita.com/sitmk/items/f911be7ffa4f29293fd5" />
+今回は、こちらの方の記事をベースに進めました。
+
+作成後のフォルダ構成は以下のようになります。
+```
+(root)
+├ mysql
+│  ├ mysql_conf
+│  │  └ custom.conf
+│  ├ mysql_init
+│  │  └ init.sql
+│  └ Dockerfile
+├ nginx
+│  └ nginx.conf
+├ php
+│  ├ Dockerfile
+│  └ php.ini
+├ www
+│  └ html
+│      └ index.php
+└ docker-compose.yml
+```
+
+以下、ファイルの簡単な解説です。
+### custom.conf
+```:mysql/mysql_conf/custom.conf
+[mysqld]
+default_authentication_plugin=mysql_native_password
+character-set-server=utf8mb4
+
+[client]
+default-character-set=utf8mb4
+```
+MySQL の設定ファイルです。
+デフォルトの認証方式と文字コードの設定を定義しています。
+
+認証方式については、MySQL 8.0.4以降から`caching_sha2_password`がデフォルトとして変更になっています。
+そのため、従来の方式ではアクセスできなくなってしまう（PHP の MySQL 接続ライブラリが対応していない模様）ので、従来の認証方式である`mysql_native_password`に変更します。
+
+文字コードは文字化け対策です。
+
+### init.sql
+```sql:mysql/mysql_init/init.sql
+CREATE DATABASE test;
+
+USE test;
+
+CREATE TABLE user (
+    id int AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255),
+    email VARCHAR(255)
+);
+
+INSERT INTO user (name, email) VALUES
+    ('taro', 'taro@example.com'),
+    ('jiro', 'jiro@example.com');
+```
+データベースの初期化の SQL です。
+あとで、PDO の接続テストもしたかったので、簡単な SQL を書いています。
+
+### Dockerfile(MySQL)
+```docker:mysql/Dockerfile
+FROM mysql:8.0
+
+ADD ./mysql_conf/custom.cnf /etc/mysql/conf.d/.
+
+CMD ["mysqld"]
+
+CMD ["client"]
+```
+明示的に MySQL の設定ファイルを、Docker 環境内に ADD しています。
+
+こちらについては、ボリュームマウントでも対応可能らしいのですが...。
+自分の場合ボリュームマウントするよりも先（認証方式を修正するより前）に MySQL の初期ユーザが作られてしまいました。
+それによりアクセスできなくなる状態になってしまったので、ADD するようにしました。
+
+### nginx.conf
+```:nginx/nginx.conf
+server {
+    listen 80;
+    server_name _;
+
+    root  /var/www/html;
+    index index.php index.html;
+
+    access_log /var/log/nginx/access.log;
+    error_log  /var/log/nginx/error.log;
+
+    location / {
+        try_files $uri $uri/ /index.php$is_args$args;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass php:9000;
+        fastcgi_index index.php;
+        fastcgi_param SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+        include       fastcgi_params;
+    }
+}
+```
+Nginx の設定ファイルです。
+
+### Dockerfile(PHP)
+```docker:php/Dockerfile
+FROM php:7.2-fpm
+
+COPY php.ini /usr/local/etc/php/
+
+RUN apt-get update && \
+  # PHPのExtensionをインストール
+  docker-php-ext-install pdo_mysql mysqli
+```
+PDO の接続テストをしたかったので、追加でインストールしています。
+
+### php.ini
+```ini:php/php.ini
+date.timezone = "Asia/Tokyo"
+```
+PHP の設定ファイルです。
+
+### index.php
+```php:www/html/inex.php
+<?php
+phpinfo();
+```
+最初の動作確認で、PHP のインフォメーションを表示するようにしておきます。
+
+### docker-compose.yml
+```yaml:docker-compose.yml
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 8080:80
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./www/html:/var/www/html
+    depends_on:
+      - php
+
+  php:
+    build: ./php
+    volumes:
+      - ./www/html:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    build: ./mysql
+    ports:
+      - 13306:3306
+    volumes:
+      # DB data persistence
+      - ./mysql/data:/var/lib/mysql
+      # DB initialize data
+      - ./mysql/mysql_init:/docker-entrypoint-initdb.d
+    environment:
+      MYSQL_ROOT_PASSWORD: secret
+    command: --innodb-use-native-aio=0
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8888:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=db
+      - PMA_USER=root
+      - PMA_PASSWORD=secret
+    depends_on:
+      - db
+```
+
+```yaml
+# DB data persistence
+- ./mysql/data:/var/lib/mysql
+```
+ここでデータの永続化。
+
+```yaml
+# DB initialize data
+- ./mysql/mysql_init:/docker-entrypoint-initdb.d
+```
+初期化 SQL のマウントです。
+データベースの初期化時、`/docker-entrypoint-initdb.d`以下にある SQL を実行してくれるようになっているそうです。
+
+```yaml
+command: --innodb-use-native-aio=0
+```
+エラー対応でいれてます。
+
+```yaml
+environment:
+  - PMA_ARBITRARY=1
+  - PMA_HOST=db
+  - PMA_USER=root
+  - PMA_PASSWORD=secret
+```
+phpmyadmin のこちらは、環境変数で MySQL へのアクセス情報を記載しています。
+
+ちなみに yml 内のコメントが英語なのは、日本語で書くとなぜかエラーになってしまったからです（なんでや...）
+
+## 動作確認
+`docker-compose up -d`でコンテナを立ち上げます。
+
+### PHP + Nginx
+`localhost:8080`で PHP のインフォメーション画面が表示されればOKです。
+<img src="/screenshots/2019/docker-php/php-info.png" width="100%" alt="PHPインフォメーション画面" />
+
+### PHPMyAdmin
+`localhost:8888`で次のような画面が表示されればOKです。
+docker-compose.yml で記載した環境変数が正しければ、ログインしている状態になるはず。
+<img src="/screenshots/2019/docker-php/php-my-admin.png" width="100%" alt="PHPMyAdmin画面" />
+
+### PDO
+PDO を使用して、データベースにアクセスできるかも確認していきます。
+
+index.php を修正します。
+```php:www/html/index.php
+<?php
+try {
+    $dsn = "mysql:host=db;dbname=test;";
+    $db = new PDO($dsn, 'root', 'secret');
+    $sql = "SELECT * FROM user";
+    $stmt = $db->prepare($sql);
+    $stmt->execute();
+    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    var_dump($result);
+} catch (PDOException $e) {
+    echo $e->getMessage();
+    exit;
+}
+```
+
+`localhost:8080`にアクセスして、以下のようにデータベースから情報が取得できていればOKです。無事 DB にアクセスできています。
+<img src="/screenshots/2019/docker-php/pdo-test.png" width="100%" alt="DBからのデータ表示画面" />
+
+---
+たくさんの記事を参考にさせていただきましたが、なんとか PHP 環境を作ることができました。
+実は Laradock を使って、Laravel 環境を作ったりもしているのですが、それはまた別の記事で書く予定ですー。
+
+## 参考リンクまとめ
+- [DockerによるPHP開発環境構築（PHP + MySQL + Nginx）](https://qiita.com/sitmk/items/f911be7ffa4f29293fd5)
+- [docker-composeでPHPとMySQLを連携させてみる](https://qiita.com/fujitak/items/b56122e2ecd94022a7b6)
+- [docker-compose＋MySQL5.7(8.0も)+初期化+永続化](https://qiita.com/juhn/items/274e44ee80354a39d872)
+- [Docker 18.03でMySQL5.7コンテナ起動時に File ./ib_logfile101: 'aio write' returned OS error 122. メッセージが表示されたときの対処法](https://blog.tes.co.jp/entry/2018/07/09/100555)
+- [DockerのMySQLコンテナに外部からアクセスする方法まとめ改](https://qiita.com/saken649/items/00e752d89f2a6c5a82f6)
+- [DockerでLAMP環境を作るときにハマったこと](https://qiita.com/uutarou10/items/94913e6e7536b713a574)
+- [phpMyAdmin on docker が便利すぎる](https://qiita.com/furu8ma/items/50718efebee20fd24517)
