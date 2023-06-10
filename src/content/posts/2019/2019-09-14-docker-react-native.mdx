@@ -1,0 +1,228 @@
+---
+title: "DockerでReact Native環境作成から、Expo Clientで実機確認するまで"
+description: "DockerとExpoを使って、React Nativeプロジェクトのひな型を作り、実機確認するまでの手順"
+pubDate: "2019-09-14"
+updatedDate: "2019/09/28"
+category: "develop"
+tags: ["開発環境", "Docker", "JavaScript", "React Native", "Expo"]
+---
+
+iOS、Android 両方に対応するアプリを作成できる React Native。
+最近、個人的に興味がわいたので、Docker環境作成にチャレンジしてみたのですが、あまり記事を見かけなかったので構築手順を書いておきます。
+
+※この記事は[Qiita](https://qiita.com/h-yoshikawa44/items/51b631ec0a6beabdce2d)からの転載です。
+
+{/* <!-- textlint-disable --> */}
+
+**※2019/9/21追記**
+**後述しますが、自分がやった時にホットリロードが効かなかったり、エミュレータ環境との連動がうまくできなかったりしてます...。**
+**自分のやり方が悪いだけかもしれませんが、あまり Docker で構築するメリットがないかもしれません。**
+
+{/* <!-- textlint-enable --> */}
+
+**※2019/9/28追記**
+WSL で環境作り直しました。
+→ [WSLでReact Native + Expo環境を作ろう](/posts/2019-09-28-wsl-react-native)
+
+import OG from '@/components/OG.astro'
+
+## 前提
+- docker 導入済み
+- docker-compose 導入済み
+
+## 環境構築手順
+### 事前準備
+React Native で開発をしていく上で Expo を使うと便利です。
+環境構築も比較的楽に行え、アプリの内容を QR コードで発行して簡単に実機確認ができます。
+
+<OG url="https://expo.io" />
+<img src="/screenshots/2019/docker-react-native/expo.png" width="80%" alt="Expoの公式サイト" />
+
+#### Expo アカウントを作成
+1. [expo.io](https://expo.io/)にいき、「Create an account」を選択
+2. e-mail、ユーザ名、パスワードを入力して「Create your account」を選択
+
+#### Expo Client をインストール
+<img src="/screenshots/2019/docker-react-native/expo-client.png" width="40%" alt="Expo ClientのApp Store画面" />
+
+1. 使用する iOS/Android 端末に App Store / Google Play からインストール
+<OG url="https://apps.apple.com/jp/app/expo-client/id982107779" />
+<OG url="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja" />
+2. 作成した Expo アカウントでログインしておく
+
+### Docker環境作成
+自分の場合は以下のディレクトリ構成で行っています。
+
+```
+React Native(プロジェクトフォルダ)
+├ docker
+│ ├ node
+│ └ Dockerfile
+├ .env
+└ docker-compose.yml
+```
+
+#### Dockerfile
+```docker:docker/Dockerfile
+FROM "node:10-alpine"
+
+WORKDIR /usr/src/app/
+
+RUN apk update && apk add bash
+
+RUN yarn global add expo-cli
+```
+後ほど`expo start`する際に`bash`が必要になりますが、使用しているイメージの alpine linuxには`bash`が入っていないため、インストールしています。
+はじめから`bash`が入っているイメージを使用するのもありです。
+
+React Native のプロジェクトを作成する CLI ツールとして、以前は`create-react-native-app`があったそうです。
+現在は`expo-cli`に統合されたそうなのでこちらをインストール。
+
+#### .env
+```:.env
+REACT_NATIVE_PACKAGER_HOSTNAME=(自分のローカルPCのIPアドレス)
+```
+コンテナに渡す環境変数を定義します。
+
+`REACT_NATIVE_PACKAGER_HOSTNAME`は、後ほど`expo start`で Expo アプリをホスティングする際のIPになります。
+デフォルトではコンテナの IP を使用してしまうために、Expo Client から接続ができません。
+そのためローカル PC 自体の IP を指定しておきます。
+```bash
+# Windows
+ipconfig
+
+# Mac
+ifconfig
+```
+
+#### docker-compose.yml
+```yaml:docker-compose.yml
+version: "3"
+services:
+  node:
+    build: ./docker/node
+    volumes:
+      - ./app/:/usr/src/app
+    tty: true
+    stdin_open: true
+    environment:
+      - REACT_NATIVE_PACKAGER_HOSTNAME=${REACT_NATIVE_PACKAGER_HOSTNAME}
+    ports:
+      - "19000:19000"
+      - "19001:19001"
+      - "19002:19002"
+```
+- tty、stdin_open：`docker-compose up`したコンテナを起動させたままにするため設定
+- environment：.envファイルで定義した環境変数を設定
+- port：Expo で使用する3つのポートを設定
+
+#### 起動
+バックグラウンドで起動。
+```bash
+docker-compose up -d
+```
+`RUN yarn global add expo-cli`の個所で WARN がたくさん出ますが、ERROR がなければ動いてくれると思われます。
+（すみません、WARNの内容まではちゃんと見られていません）
+
+## Expo プロジェクト
+### 作成
+```bash
+# コンテナの中に入る
+docker-compose exec node bash
+
+# expo プロジェクト作成
+expo init .
+```
+
+テンプレートが選択できます。
+とりあえずは blank を選択して Enter。
+
+```bash
+bash-4.4# expo init .
+? Choose a template: (Use arrow keys)
+  ----- Managed workflow -----
+❯ blank                 a minimal app as clean as an empty canvas
+  blank (TypeScript)    same as blank but with TypeScript configuration
+  tabs                  several example screens and tabs using react-navigation
+  ----- Bare workflow -----
+  minimal               bare and minimal, just the essentials to get you started
+  minimal (TypeScript)  same as minimal but with TypeScript configuration
+```
+
+Expo プロジェクトの表示名を聞かれます。
+入力して Enter。
+
+```bash
+? Choose a template: expo-template-blank
+? Please enter a few initial configuration values.
+  Read more: https://docs.expo.io/versions/latest/workflow/configuration/ ‣ 0% completed
+ {
+   "expo": {
+     "name": "<The name of your app visible on the home screen>",
+     "slug": "app"
+   }
+ }
+```
+
+yarn を使ってパッケージをインストールするか聞かれます。Y でインストール実行。
+
+```bash
+? Yarn v1.17.3 found. Use Yarn to install dependencies? (Y/n)
+```
+
+これで Expo プロジェクトのひな型が作成されました。
+
+### 起動
+`expo start`もしくは`yarn start`で Expo サーバとして起動。
+しばらくするとQRコードが表示されます。
+<img src="/screenshots/2019/docker-react-native/expo-start.png" width="80%" alt="expo startの画面" />
+
+### Expo Client で実機確認
+表示された QR コードを iOS/Android 端末から読み込むと、Expo Client 起動。ビルド開始。
+なお、注意点として、Expo サーバになる PC と iOS/Android 端末は同じネットワークにつないでいる必要があります。
+しばらくしてビルドが終わると初期ガイドが表示されます。
+<img src="/screenshots/2019/docker-react-native/app-guide.png" width="40%" alt="Expoアプリのガイド" />
+
+ガイドを消すと、Expo アプリの画面が表示されます。これが実行結果です。
+blank テンプレートを選択したのでシンプルな画面ですね。
+一連の手順で比較的楽に実機確認できました。
+**ただ、ホットリロードがうまく動作していないのか、コードの変更が即座に反映されませんでした。なぜ...。**
+<img src="/screenshots/2019/docker-react-native/app-preview.png" width="40%" alt="Expoアプリの実行画面" />
+
+## 補足
+### http://localhost:19002
+アクセスすると、Expo DevTool が使用できます。
+ここからシミュレータを起動したりできるみたいです。
+（X Code、Android Studio のインストールや設定が別途必要になるようです）
+末尾にも書いていますが、自分はうまくいきませんでした...。
+<img src="/screenshots/2019/docker-react-native/expo-devtool.png" width="100%" alt="Expo DevTool画面" />
+
+### http://localhost:19001
+HTML が表示されます。
+`expo start`時の表示で Metro Bundler だと書いてありましたが、なんなのかはよくわかってません。
+<img src="/screenshots/2019/docker-react-native/metro-bundler.png" width="100%" alt="metro bundler画面" />
+
+### http://localhost:19000
+Expo プロジェクトの情報？が表示されます。
+<img src="/screenshots/2019/docker-react-native/expo-server.png" width="100%" alt="Expoサーバの情報" />
+
+### エミュレータについて(2019/9/18追記)
+自分の環境は Windows なので、Docker 環境の中に Android のエミュレータ環境を作ろうとしましたがうまくいきませんでした...。
+
+一応やってみたこととしてはこんな感じ。
+1. openjdk をインストール
+2. Android 公式からコマンドラインの zip ファイルをダウンロード
+3. Andoid SDK を格納するディレクトリを作成し、zip ファイルを解凍して配置
+4. Android SDK に関するパスを設定
+5. sdkmanager、avdmanager コマンドが実行できることを確認
+6. sdkmanager コマンドで必要な SDK をインストール
+
+ここでエミュレータをインストールしたのですが、なぜか emulator コマンドが実行できませんでした。
+パスはちゃんと通しているはずなのに、ひたすら`No such file or directory`が出てしまい...。一体なんなのか。
+
+WSL で環境構築した方が、早そうです。
+だから Docker で構築している記事がほとんどなかったんでしょうか...。
+
+## 参考リンクまとめ
+- [Running Expo/React Native in Docker](https://medium.com/@hmajid2301/running-expo-react-native-in-docker-ff9c4f2a4388)
+- [Expoのアカウントを作ってReact Nativeの開発環境を整える](https://qiita.com/hitotch/items/ea4de1ed408a9ca14fce#expo%E3%83%97%E3%83%AD%E3%82%B8%E3%82%A7%E3%82%AF%E3%83%88%E3%82%92%E4%BD%9C%E6%88%90%E3%81%99%E3%82%8B)
