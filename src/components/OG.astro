@@ -110,7 +110,11 @@ if (ogp[url]) {
       {
         image && (
           <div class="h-full max-w-[220px] w-[120px] sm:w-inherit">
-            <img src={image} class="ml-auto mr-auto h-full object-contain" />
+            <img
+              src={image}
+              alt={`${origin} OGP image`}
+              class="ml-auto mr-auto h-full object-contain"
+            />
           </div>
         )
       }
