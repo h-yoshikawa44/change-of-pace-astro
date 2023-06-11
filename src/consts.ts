@@ -93,7 +93,7 @@ export const TAG_ICON_CLASS_MAP = {
   // シェル: '',
   テクニカルライティング: 'i-system-uicons:write',
   // ブログ: '',
-  リンクまとめ: 'i-teenyicons:link-outline',
+  リンク集: 'i-teenyicons:link-outline',
   // ローコード: '',
   振り返り: 'i-teenyicons:attachment-outline',
   // 脱出ゲーム: '',
