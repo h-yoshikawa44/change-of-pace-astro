@@ -52,13 +52,18 @@ if (ogp[url]) {
     $("link[rel='apple-touch-icon']").attr('href') ??
     $("link[rel='apple-touch-icon-precomposed']").attr('href') ??
     $("link[rel='shortcut icon']").attr('href') ??
-    `http://www.google.com/s2/favicons?domain=${origin}`;
+    `https://www.google.com/s2/favicons?domain=${origin}`;
 
   if (image && !image.startsWith('http')) {
     image = `${origin}${image}`;
   }
-  if (favicon && !favicon.startsWith('http')) {
-    favicon = `${origin}${favicon}`;
+
+  if (favicon && favicon.startsWith('//')) {
+    favicon = `https://www.google.com/s2/favicons?domain=${origin}`;
+  } else if (favicon && !favicon.startsWith('http')) {
+    favicon = favicon.startsWith('/')
+      ? `${origin}${favicon}`
+      : `${origin}/${favicon}`;
   }
 
   if (import.meta.env.PROD) {
