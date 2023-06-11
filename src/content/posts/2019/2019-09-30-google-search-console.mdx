@@ -1,0 +1,85 @@
+---
+title: "ブログでGoogle Search Consoleを導入する"
+description: "Google  Search Consoleを利用して、ブログの検索パフォーマンスを見られるようにする手順"
+pubDate: "2019-09-30"
+updatedDate: "2019-09-30"
+category: "tool-and-service"
+tags: ["ブログ", "Jekyll"]
+---
+
+先日、Google Analytics に続いて、もう1つの解析ツールである、Google Search Console を導入してみました。
+少し記憶が曖昧なのですが、手順をメモしておきます。
+
+import OG from '@/components/OG.astro'
+
+## Google Search Console とは？
+<OG url="https://search.google.com/search-console/about?hl=ja" />
+
+Google 検索での掲載順位を見たり、どんなクエリでユーザがサイトにアクセスしているかなどを確認できる解析ツールです。
+また、サイトマップを認識させることで Google のインデックスに登録し、サイト内のクローラー巡回を促進させるなど、SEO 対策を効率よく進めることができます。
+
+## 導入手順
+1. Google Search Console にアクセスして、「今すぐ開始」を選択
+
+<img src="/screenshots/2019/google-search-console/search-console-top.png" width="80%" alt="Google Search Console トップ画面" />
+
+2. Google アカウントにログイン
+
+3. プロパティタイプの選択（今回は「URL プレフィックス」を選択して、サイト URL を入力して進めます）
+<img src="/screenshots/2019/google-search-console/select-type.png" width="80%" alt="プロパティタイプの選択画面" />
+
+ちなみにドメインを選択した場合は、「www」のありなしや「http://」「https://」の違いに関わらず、一括での登録・集計が可能となります。
+複数の URL でそれぞれ集計したい時はこちらがいいようです。
+
+4. 所有権の確認
+   もしログインした Google アカウントで Google Analytics を導入していると、そのアカウントから所有権を確認してくれます。
+<img src="/screenshots/2019/google-search-console/check-domain.png" width="80%" alt="所有権をGoogle Analyticsから確認した画面" />
+
+導入していなかった場合は、既定の HTML ファイルをアップロードする、HTML の meta タグをサイトに追加するなど、他の確認方法が選択できます。
+
+5. 所有権の確認方法の追加
+ここまでで Google Search Console が使用できるようになりますが、所有権の確認方法は複数あった方がいいようなので、追加します。
+
+メニューの「設定」へ行き、「所有権の確認」を選択。
+その他の確認方法の中から、いずれかを選択して表示される手順を行えば追加できます。
+
+### サイトマップの読み込み
+サイトマップを登録して Google にサイトを認識させることで、検索結果に表示させやすくできます。
+
+<img src="/screenshots/2019/google-search-console/search-console-sitemap.png" width="80%" alt="Google Search Consoleにサイトマップを登録" />
+
+Jekyll の場合は、`jekyll-sitemap`というプラグインを導入することで、自動で`sitemap.xml`を作成してくれます。
+<OG url="https://github.com/jekyll/jekyll-sitemap" />
+
+サイトだと sitemap xml generator というのが有名みたいです。
+<OG url="https://www.xml-sitemaps.com" />
+
+### Google Analytics との連携
+Google Analytics と連携することで、Google Analytics 側から Google Search Console の機能を使用できます。
+
+所有権の確認の際に、Google Analytics と連携してくれましたが、機能を連携させるところは手動で設定する必要があるようです。
+
+1. Google Analytics 側で「管理」へ
+2. プロパティの中の「プロパティ設定」を選択
+3. 「Search Console を調整」を選択してビューにサイトの URL を登録する
+
+登録後にプロパティの中のサービス間のリンク設定の中の「すべての商品」を選択して、リンク済みのサービスの中に Search Console があればOK。
+<img src="/screenshots/2019/google-search-console/analytics-link.png" width="80%" alt="Google Analyticsと他サービスとのリンク状況" />
+
+これで Google Analytics 側から、Google Search Console の機能が使えるようになりました。
+<img src="/screenshots/2019/google-search-console/analytics-search-console.png" width="80%" alt="Google Analytics側からGoogle Search Consoleの機能を使用" />
+
+### プライバシーポリシー
+Google Analytics と同様に、情報を収集する解析ツールであるため、プライバシーポリシーの記述が必要になります。
+自分の場合は Google Analytics 導入の際に記述した箇所にて付け加える形で書きました。
+
+---
+SEO に関してはまだまだ素人です。
+なので機能が全然使いこなせてませんが、Search Console の検索クエリとか見ると、こんな感じで検索されてるんだなーってちょっと楽しいですね。
+地道にこつこつ記事を書いてアクセス数を伸ばしていけたらいいなー。
+
+## 参考リンクまとめ
+- [Google Search Console](https://search.google.com/search-console/about?hl=ja)
+- [GitHub - jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+- [sitemap xml generator](https://www.xml-sitemaps.com/)
+- [サーチコンソールの登録方法と初心者でも分かる使い方【2019年版】](https://liskul.com/search-console-2-13563)
