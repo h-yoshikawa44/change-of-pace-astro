@@ -1,0 +1,81 @@
+---
+title: "WSLでexpo startして20～30分後にネットワーク不具合が起こる現象について調べたこと"
+description: "WSLでexpo startした際にネットワークが繋がらなくなる現象について、対応策などを調査したことまとめ"
+pubDate: "2019-10-09"
+updatedDate: "2019-10-09"
+category: "develop"
+tags: ["開発環境", "WSL", "JavaScript", "React Native", "Expo"]
+---
+
+前回、[WSLでReact Native + Expo環境を作ろう](/posts/2019-09-28-wsl-react-native)という記事を書き、その末尾にも書いていた件。
+`expo start`したときに起こる謎のネットワーク不具合について調べたこと、わかったことを書いておきます。
+
+※この記事は [Qiita](https://qiita.com/h-yoshikawa44/items/518e8f6e0b700b65b0fa) からの転載です。
+
+import OG from '@/components/OG.astro'
+
+## ネットワーク不具合
+### 起こる問題
+WSL で`expo start`した後、20～30分後くらいにネットワークが繋がらなくなってしまう。
+
+どこのページにアクセスしようとしても以下のようにエラーが表示され、アクセスできません。
+ここに表示されている Windows ネットワーク診断ツールを実行してみても、異常がないといわれます。
+<img src="/screenshots/2019/wsl-expo-network/network-error.png" width="80%" alt="ネット上のページにアクセスできないエラー画面" />
+
+
+CONNECTION を Tunnel にした時も、`expo start --offline`とオプションをつけた時も、同様の現象が起きます。
+
+一応、Windows 自体を再起動すれば、また繋がるようにはなるのですが...。
+短時間の間に何度も再起動するのはかなり手間ですし、ストレスにもなります。
+
+### 対応策
+この現象について調べていても、なかなか情報が見つけられませんでしたが、GitHub にほぼ同じ現象が報告されていた Issue を見つけました。
+
+<OG url="https://github.com/expo/expo-cli/issues/99" />
+
+ここで緩和策として、以下の手順を踏めばいいとありました。
+> I found a palliative solution not to restart the machine:
+>  1 - WIN+R -> services.msc
+>  2 - Find LxssManager
+>  3 - Right-click -> Restart
+> This should restart the WSL service, normalizing the network.
+
+1. Windows + R でファイル名を指定して実行の画面を出し、`services.msc`と入力してOK
+<img src="/screenshots/2019/wsl-expo-network/file-run.png" width="80%" alt="ファイル名を指定して実行画面" />
+
+2. 一覧から LxssManager を見つける
+<img src="/screenshots/2019/wsl-expo-network/lxss-manager.png" width="80%" alt="サービスの一覧画面" />
+
+3. 右クリックを押し、再起動
+
+> LxssManager is the service that manages the layer that communicates between Windows and Linux. Restarting it is basically equivalent to restarting Windows regarding everything that happens in WSL.
+
+LxssManager は、Windows と Linux の間で通信するレイヤーを管理するサービスらしく。
+これを再起動することで、Windows を再起動したときと同じことが WSL 上で起こるそうです。
+
+この手順を踏めば即座に WSL が再起動され、ネットワークが繋がるようになります。
+
+### 課題
+上記の手順でネットワークが復旧する...のですが、そこからまた`expo start`してしばらくすると、またネットワークが繋がらなくなります...。
+
+> This is likely an issue with WSL. There is an issue for this at [microsoft/WSL#2913](https://github.com/microsoft/WSL/issues/2913).
+
+どうもこの現象は Expo CLI というより、WSL の問題らしく、Issue が上がっているそうです。
+
+<OG url="https://github.com/microsoft/WSL/issues/2913" />
+
+> Can confirm that Windows Insider Build 18890 fixes this issue.
+
+Windows 10 Insider Build 18890では、この問題が修正されたとのこと。
+調べてみると、このバージョンは2020年前半にリリース予定の大型アップデート「20H1」のプレビュービルドとなるそうです。
+もう少しの間我慢になりますが、正式にリリースがくれば解決できそうですね（Windows Insider Programに参加する度胸はありません...）
+
+> Obs: When I run the expo-cli start in CMD and then run on WSL, a network does not fail anymore....
+
+ちなみにこんなことも書いてありましたが、CMD ってことは Windows 側に Expo を入れるってことなのかな？と思い、あまり入れたくないので試していません。
+直接 Windows に Expo（及びNode.js）を入れてもいいという方は、そうするのも1つの手ですね。
+
+## 参考リンクまとめ
+- [expo-cli/issues - Host remains without network after a while](https://github.com/expo/expo-cli/issues/99)
+- [Windows 10 Insider Preview Build 18890がリリース - Fastリング向けFriendly Dates終了](https://www.softantenna.com/wp/windows/windows-10-insider-preview-build-18890/)
+- [Microsoft、｢Windows 10 Insider Preview build 18890 (20H1)｣をFastリング向けにリリース](https://taisy0.com/2019/05/02/109885.html)
