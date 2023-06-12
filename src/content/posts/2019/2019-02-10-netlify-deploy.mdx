@@ -1,0 +1,103 @@
+---
+title: "Netlifyでブログをデプロイ"
+description: "Netlifyでブログをホスティングするまでの手順記録"
+pubDate: "2019-02-10"
+updatedDate: "2019-02-10"
+category: "develop"
+tags: ["ブログ", "Netlify", "Jekyll"]
+---
+
+
+静的サイトを運用するにあたって「Netlify でデプロイすると楽よー」と教えてもらい、
+細々と書いていた当ブログを、Netlify を使用して思い切って公開してみました。
+
+import OG from "@/components/OG.astro"
+
+## Netlify とは？
+<img src="/screenshots/2019/netlify-deploy/netlify.png" width="100%" alt="Netlify公式ページ" />
+
+静的サイトのホスティングサービスです。
+GitHub、GitLab、Bitbucket のリポジトリと連携させて、自動的にデプロイが行えるようになっています。
+
+<OG url="https://www.netlify.com/" />
+
+静的サイトジェネレータやフロントエンド構築ツールとも相性がいいそうで。
+当ブログは`Jekyll`で作成しているため、まさに相性がよさそうですね。
+
+ともあれ「どれくらい楽なのよ」ということで、リポジトリを連携させてデプロイするまでの流れを書いていきますー。
+
+## 初回デプロイするまで
+（※すでにアカウントがある場合、1、2はスキップ）
+1. 公式サイトにアクセスして`Get started for free`を選択
+
+2. Netlify アカウントの作成
+  各種 Git のアカウントでも作成できます。
+<img src="/screenshots/2019/netlify-deploy/netlify-signup.png" width="100%" alt="Netlifyアカウント作成画面" />
+
+3. Netlify の自分のアカウントトップ画面から`New site from Git`を選択
+
+4. 以下のどの Git サービスと連携させるか選択
+  - GitHub
+  - GitLab
+  - Bitbucket
+
+5. `Authorize Netlify`で連携を承認（初回のみ）
+
+6. 一覧から連携させるリポジトリを選択
+
+7. デプロイの設定
+<img src="/screenshots/2019/netlify-deploy/deploy-setting.png" width="70%" alt="Netlidyデプロイ設定画面" />
+※↑ Jekyll で作成されたサイトの場合
+- Branch to deploy
+  どのブランチをデプロイ対象とするかを指定。
+- Build command
+  ビルドを実行するコマンド。仕様ツールに応じたコマンドを指定。
+- Publish directory
+  公開対象となるディレクトリを指定。
+  （例として Jekyll の場合は、`jekyll build`でビルドして生成されたファイルは`_site`配下に展開されるようになっています）
+
+8.`Deploy site`を選択
+  ビルドおよび初回デプロイが実行されます。
+  なお、初回は依存関係をインストールするため少し時間がかかりますが、それ以降はキャッシュを用いるため、はやく終わるようになります。
+
+これが初回デプロイまでの手順になります。
+はやいです。
+自分がはじめてやってみた時は、5分もかからず、思わず「はやー」と言っていました(笑)。
+
+ビルド + 初回デプロイが終わると、自動的にドメインが割り当てられて公開されます。
+（プロジェクトの Overview で公開サイト URL のリンクがあるので、そこからもいけます）
+
+独自ドメインへの変更も比較的簡単に行えます。もちろんカスタムドメインに変更も可能です。
+
+初回デプロイ以降は、デプロイ対象のブランチへ push するたびに、自動的にビルド+デプロイが実行されるようになります。楽ちんです。
+
+## その他の特徴
+- プルリク（マジリク）検知
+  デプロイ対象のブランチに対してリクエストを出すと、検知して自動的にプレビューが作成され、マージされた後の状態を事前に確認できます。
+  （※プレビューも公開 URL になるため、商用で使用する際は別途セキュリティを考慮する必要があることに注意）
+- ロールバック
+  公開するサイトの状態を簡単に過去のデプロイの状態に戻すことができます。
+  （デプロイ一覧から任意のものを選択して、`Publish deploy`を選択するだけ）
+- Slack 連携
+  デプロイ成功時など、Slack に通知を送ることができます。
+
+この他にも機能はあるのですが、とても書ききれないのでこの辺で。
+
+Netlify は無料プランでも便利な機能が多く使用できるようです。
+
+---
+
+今回はじめて Netlify を使用したのですが、比較的扱いやすい印象です。
+他の紹介記事でも書かれていたのですが、なにより UI が優れているので英語でもわかりやすいですー。わかりやすいの大事。
+
+<OG url="https://docs.netlify.com" />
+Netlify docs を見れば、おおよそどんな機能があるかもわかります。
+まだ、半分しか読めてないので読まねば...
+
+Netlify の機能を用いて、少しずつ当ブログを改修していきますー。
+
+## 参考リンクまとめ
+- [Netlify](https://www.netlify.com/)
+- [Netlify docs](https://docs.netlify.com)
+- [NetlifyはGitHubなどからデプロイできる静的Webホスティングサービス](https://tech.qookie.jp/posts/info-netlify-static-web-deploy/)
+- [Netlify移行記：GitHub Pagesから独自ドメイン＋Netlifyの引っ越しでやったこと](https://photo-tea.com/p/17/netlify-github-pages-hexo/)

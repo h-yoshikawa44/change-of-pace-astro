@@ -1,0 +1,64 @@
+---
+title: "GitLab CI でのみエラーになる問題"
+description: "GitLab CI で Invalid US-ASCII character \"\\xEF\" が出たときの対処方法"
+pubDate: "2019-05-05"
+updatedDate: "2019-05-05"
+category: "develop"
+tags: ["GitLab CI"]
+---
+
+当ブログは Netlify で配信していますが、GitLab CI も一応設定してあります。
+Netlify の CI では問題ないのに、GitLab の CI でのみエラーになることがあったので、その対応を載せておきます。
+
+## エラー内容
+push 時やマジリクの時に動く GitLab の CI の時のみ、なぜかエラーになる。
+
+```yaml:.gitlab-ci.yaml
+image: ruby:2.3.6
+
+cache:
+  paths:
+  - vendor/
+
+before_script:
+  - bundle install --path vendor/bundle
+
+test:
+  stage: test
+  script:
+    - bundle exec jekyll build -d test
+  artifacts:
+    paths:
+    - test
+  except:
+    - master
+```
+
+CI のエラー箇所抜粋。
+```bash
+bundle exec jekyll build -d test
+
+Configuration file: /builds/{GitLabユーザID}/{リポジトリ名}/_config.yml
+            Source: ./docs
+       Destination: test
+ Incremental build: disabled. Enable with --incremental
+      Generating...
+  Conversion error: Jekyll::Converters::Scss encountered an error while converting 'assets/css/main.scss':
+                    Invalid US-ASCII character "\xEF" on line 1
+jekyll 3.8.1 | Error:  Invalid US-ASCII character "\xEF" on line 1
+ERROR: Job failed: exit code 1
+```
+
+最初の頃は問題なかったのに、途中から上記のようなエラーがしばらく出続けていて、なんだろうなと思いつつ、ブログ記事作成に大きな影響はなかったので後回しにしていました。
+
+## 解決策
+先輩が見てくださいまして、無事エラーが解消されました。どうもロケールの問題だったようです。
+
+.gitlab-ci.yml に以下を追加します。
+```yaml:.gitlab-ci.yml
+variables:
+  LC_ALL: C.UTF-8
+```
+
+---
+CIに関して、まだ知識が疎いので日々勉強ですね...。

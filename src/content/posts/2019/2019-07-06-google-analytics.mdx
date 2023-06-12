@@ -1,0 +1,90 @@
+---
+title: "Jekyll製ブログにGoogle Analytics導入"
+description: "Google Analyticsを導入する際の手順"
+pubDate: "2019-07-06"
+updatedDate: "2020-05-03"
+category: "tool-and-service"
+tags: ["ブログ", "Jekyll"]
+---
+
+先日、当ブログに Google Analytics を導入したので、その流れをメモしておきます。
+
+import OG from '@/components/OG.astro'
+
+## Google Analytics とは
+Google が提供するアクセス解析ツール。
+有料版もありますが、無料版でも多くのデータが得られます。
+- サイトへのアクセス数
+- サイトページごとの閲覧数
+- アクセスしたデバイスの種類
+- どこの国からアクセスがあったか
+
+などなど。
+
+## 導入
+### Google Analytics 側
+まずは Google Analytics のページから登録します。すでに Google アカウントがあれば、そのアカウントで利用可能です。
+どのサイトで利用するか等、入力していきます。
+
+登録すると、すべてのウェブサイトのデータの画面になります。
+
+管理 → トラッキング情報 → トラッキングコードに移動すると、Google Analytics を利用するために必要なトラッキングコードが確認できます。
+ブログ側で埋め込みに使用するのでコピーしておきます。
+<img src="/screenshots/2019/google-analytics/analytics.png" width="100%" alt="トラッキングコード表示画面" />
+※黒で塗りつぶしている箇所は、トラッキング ID が記載してあります。
+
+### ブログ側
+#### トラッキングコード埋め込み
+先ほどのトラッキングコードを、全てのウェブページの`<head>`タグに埋め込む必要があります。
+
+使用しているテーマによっても異なると思われますが、自分が使用している jekyll-theme-hydeout では、元々このためのファイルが存在していました。
+ただ、Google Analytics で確認したトラッキングコードと異なっていた（古くなっていた？）ため、新しく同名のファイルを作成して上書き。
+
+また、トラッキング ID の箇所は、`config.yml`に切り出したかったので以下のように変数にしました。
+
+```html
+{% if jekyll.environment == 'production' and site.google_analytics %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', '{{ site.google_analytics }}');
+  </script>
+{% endif %}
+```
+
+ここで、`if jekyll.environment == 'production'`としているのは、本番環境のみ、Google Analyticsを動作させるようにしたいからです。
+開発環境では`jekyll.environment`の値は`development`になっています。
+
+そして、本番環境では値が`production`になるように環境変数を設定しておく必要があります。
+
+自分の場合、ホスティングには Netlify を使用しているため、こちらで設定しました。
+`netlify.toml`というファイルを使用しても設定できるそうなのですが、今回は手動で設定。
+Setting → Build&Deploy → Environment から設定画面に行けます。
+<img src="/screenshots/2019/google-analytics/netlify-environment.png" width="70%" alt="Netlify環境変数設定画面" />
+
+#### プライバシーポリシー
+Google Analytics を利用する際は、プライバシーポリシーを記載したページの用意が必要になります。
+
+ここでは、個人情報の保護や取り扱いについての方針を示す必要があり。
+- Cookie を使用していること
+- 設定で Cookie は無効にできること
+- 個人を特定する情報は収集しないこと
+- Google Analytics の利用規約
+
+などの記述が必要になります。
+
+いろんな方が書式を公開されているので、それを参考にして書いてみるといいでしょう。
+自分もいろんな方の書式を参考にさせていただきました。多分、大丈夫...のはず。
+
+### 自分自身からのアクセスを除外(2020/05/03追記)
+自分自身からのアクセスを除外した場合は Google アナリティクス オプトアウト アドオンを導入するとよいです。
+<OG url="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja" />
+
+---
+
+Google Analytics の使い方はまだよくわかってないのですが、ブログへのアクセスが少ない段階でも入れておいた方がいいとか見かけたので、今回導入してみました。
+まずはのんびりアクセス数を見ておくのに使ってみますー。

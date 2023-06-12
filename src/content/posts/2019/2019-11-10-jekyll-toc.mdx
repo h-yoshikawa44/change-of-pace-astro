@@ -1,0 +1,147 @@
+---
+title: "Jekyll製ブログの記事に目次を追加する"
+description: "Jekyllのマークダウン、kramdownのAutomatic “Table of Contents” Generation機能を使って目次を追加する方法"
+pubDate: "2019-11-10"
+updatedDate: "2020-01-03"
+category: "develop"
+tags: ["ブログ", "Ruby", "Jekyll"]
+---
+
+より良いブログ記事を書くために...と解説されている記事などを見ていて、そういえば自分の記事には目次がなかったなと気づきました。
+記事が長くなってくると目次ありの方が見やすいですよね。
+Jekyll の記事に目次を追加する方法を調べて、導入してみました。
+
+import OG from '@/components/OG.astro'
+
+## 目次をどうやって導入する？
+まずはどうすれば追加できるのか、楽に追加できるプラグインなどはあるのかと調べました。
+
+### プラグイン
+プラグインは主に以下の2つがあるようでした。
+<OG url="https://github.com/dafi/jekyll-toc-generator" />
+<OG url="https://github.com/toshimaru/jekyll-toc" />
+
+記事で使用するレイアウトファイルに記述しておけば、すべての記事に適用される点は便利そうだなと思いました。
+1つのファイルに記述しておけばいいだけなので、各記事のマークダウンファイルに記述を追加する必要がありません。
+
+ただ、自分が目次を入れたい場所は記事の中（contentの中）の**導入文の後**でした。
+プラグインを使用すると、これは実現できそうになさそうでした。
+
+### kramdown の機能
+Jekyll のマークダウンには`kramdown`が使用されています。
+
+この`kramdown`には目次を追加する機能、`Automatic "Table of Contents: Generation`が元々搭載されており。
+各記事にコードを記述する必要がありますが、自由に表示場所を指定できるということで今回はこちらを使用することにしました。
+
+## 目次の追加
+### 直接マークダウンファイルに追記
+使用するには、各記事のマークダウンファイルで目次を挿入したい箇所に以下のコード追加するだけです。
+なお、`*`以降の文言はなんでもOK。
+```md
+* A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
+{:toc}
+```
+
+これだけで、記事内の見出しタグを検知して自動で目次を作成してくれます。
+コードとしては以下のようになります。（前回の記事の例）
+各要素に id が設定されるので、見た目のカスタマイズも自由に行えます。
+```html
+<ul id="markdown-toc">
+  <li>
+    <a href="#eslint" id="markdown-toc-eslint">ESLint</a>
+    <ul>
+      <li>
+        <a href="#導入" id="markdown-toc-導入">導入</a>
+        <ul>
+          <li><a href="#手順" id="markdown-toc-手順">手順</a></li>
+          <li><a href="#error対応" id="markdown-toc-error対応">Error対応</a></li>
+          <li><a href="#warning対応" id="markdown-toc-warning対応">Warning対応</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#設定のカスタマイズ" id="markdown-toc-設定のカスタマイズ">設定のカスタマイズ</a>
+        <ul>
+          <li><a href="#設定ファイルについて" id="markdown-toc-設定ファイルについて">設定ファイルについて</a></li>
+          <li><a href="#ウィザードで設定ファイルを作成して使用" id="markdown-toc-ウィザードで設定ファイルを作成して使用">ウィザードで設定ファイルを作成して使用</a></li>
+          <li><a href="#既存の設定ファイルを使用" id="markdown-toc-既存の設定ファイルを使用">既存の設定ファイルを使用</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="#prettier" id="markdown-toc-prettier">Prettier</a>
+    <ul>
+      <li><a href="#コマンドラインとしてeslint連携" id="markdown-toc-コマンドラインとしてeslint連携">コマンドラインとしてESLint連携</a></li>
+      <li><a href="#vscode上でeslint連携" id="markdown-toc-vscode上でeslint連携">VSCode上でESLint連携</a></li>
+      <li>
+        <a href="#設定のカスタマイズ-1" id="markdown-toc-設定のカスタマイズ-1">設定のカスタマイズ</a>
+        <ul>
+          <li><a href="#設定ファイル" id="markdown-toc-設定ファイル">設定ファイル</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#ファイル保存時に自動整形" id="markdown-toc-ファイル保存時に自動整形">ファイル保存時に自動整形</a></li>
+  <li><a href="#参考" id="markdown-toc-参考">参考</a></li>
+</ul>
+```
+
+### HTML ファイルに分離して追記
+目次生成のコードを直接マークダウンファイルに記述してもいいのですが、より柔軟にカスタマイズできるよう HTML ファイルに分離して、それを読み込むようにもできます。
+
+こちらの方がよりスマートな感じに思ったので、自分はこちらの方法にしました。
+
+1. `_includes`配下にファイルを作成して、目次生成コードを記述
+自分は`toc.html`というファイルを作成しました。
+```html
+<nav class="post-nav-links">
+  <h4>目次</h4>
+  * table
+  {:toc}
+</nav>
+```
+
+2. sassファイルを用意して、目次のレイアウトを整える
+この辺はお好みで。
+※補足：以下で使用している`$gray-1`、`$gray-6`については使用テーマで定義されている色を指定しています。
+```scss
+// 例
+.post-nav-links {
+  border: 1px solid $gray-6;
+  background-color: $gray-1;
+  margin-top: 2rem;
+}
+
+.post-nav-links h4 {
+  font-weight: bold;
+  text-align: center;
+}
+```
+
+3. 各記事のマークダウンファイルにて、1で作成したファイルを読み込む
+`include`を使用して読み込みます。
+
+4. `_config.yml`に設定を追記
+```yaml:_config.yml
+kramdown:
+  parse_block_html: true
+```
+
+1で記述した目次生成コードについては、あくまで kramdown の機能であるため、通常はマークダウンファイル内でしか使用できません。
+上記設定を追記することで、ブロックレベルの要素を含むテキストとしてブロック HTML タグのコンテンツのマークダウン構文を処理できるようになり、目次が生成できるようになります。
+(2020/1/3 一部説明を修正)
+
+これらで生成された目次が以下のようになります（前回の記事の例）
+↓
+<img src="/screenshots/2019/jekyll-toc/toc.png" width="80%" alt="kramdownの機能で生成した目次の例" />
+
+これでいくらか記事が見やすくなりましたね。
+これからもこういったブログ改善をやっていきますー。
+
+## 参考リンクまとめ
+- [GitHub - jekyll-toc-generator](https://github.com/dafi/jekyll-toc-generator)
+- [GitHub - jekyll-toc](https://github.com/toshimaru/jekyll-toc)
+- [#jekyll GitHub Pagesでも目次(ToC)は作れる](https://blog.kotet.jp/2018/04/toc-on-github-pages/)
+- [jekyllで目次を設定する (jekyll-toc-generator)](https://blog.tamesuu.com/2018/09/23/75/)
+- [kramdown - HTML Converter](https://kramdown.gettalong.org/converter/html.html)
+- [Table of contents using Jekyll and Kramdown](https://stackoverflow.com/questions/38417624/table-of-contents-using-jekyll-and-kramdown)

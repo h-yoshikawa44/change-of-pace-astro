@@ -1,0 +1,385 @@
+---
+title: "WSLでWindowsの中にLinuxの開発環境を作ろう"
+description: "WSLでUbuntuを導入し、Linuxbrew、anyenvで開発環境を作成する手順"
+pubDate: "2019-09-26"
+updatedDate: "2021-04-22"
+category: "develop"
+tags: ["開発環境", "WSL", "HomeBrew", "anyenv"]
+---
+
+個人 PC を新しくしてから、WSL（Windows Subsystem for Linux）をいれてなかったので改めていれてみました。
+基本的には参考記事通りに進めましたが、追加でインストールするものも含めて備忘録として手順を書いておきます。
+
+※この記事は [Qiita](https://qiita.com/h-yoshikawa44/items/15653d08f917ad6e39f8) からの転載です。
+※2021/04/22追記 またセットアップする機会があったので全体的に少し内容を更新しました。
+
+import OG from '@/components/OG.astro'
+
+## WSL
+### WSLとは？
+<OG url="https://ja.wikipedia.org/wiki/Windows_Subsystem_for_Linux" />
+> Windows Subsystem for Linux (WSL) とは、Linux の（ELF フォーマット形式の）バイナリ実行ファイルを Windows 10 および Windows Server 上でネイティブ実行するための互換レイヤーである。
+
+ざっくりいえば、その名の通り、Windows のサブシステムとして Linux を動かす仕組みという解釈でいいかなと思っています。
+WSL では完全な Linux を動かすことはできませんが、5月に発表された強化版の WSL2 では100%互換が実現されてるみたいですね。
+まだこちらはベータ版のみの提供のようなので、今回は素直に WSL を使うことにしました。
+
+自分はなるべく Windows に直接言語をいれたりしたくない派なので、Docker 環境を作ったり、WSL 側に言語をいれたりしてます。
+
+※2021/04/22追記
+ちなみに WSL2 が正式にリリースされてからも、自分は WSL を使っています。
+WSL2 の良さはあるでしょうが、どうも WSL2 → Windows のファイルアクセスが遅いとのことだったので、このままでいいかとそのままにしています。
+
+### 有効化
+1. 左下の Windows ボタンを右クリックし、「アプリと機能」を選択
+2. 下部の方にある関連設定の「プログラムと機能」を選択
+3. 左メニューの「Windows の機能の有効化または無効化」を選択
+4. 機能一覧の中から「Linux 用 Windows サブシステム」にチェックをつけて「OK」
+<img src="/screenshots/2019/wsl-develop/enable-wsl.png" width="60%" alt="Windowsの機能一覧" />
+
+5. 設定の変更が行われた後、Windows を再起動するよう促されるので、再起動する
+
+### Ubuntu のインストール
+1. Microsoft Store を開く
+2. 「Ubuntu」で検索する
+3つの種類（Ubuntu、Ubuntu 20.04 LTS、Ubuntu 18.04 LTS）がありますがお好みで。
+1. Ubuntu をインストール
+2. Ubuntu を起動して、初回起動時の設定として username と password を設定する
+（ここで決めたパスワードが sudo コマンド使用時に必要となります）
+
+これで WSL が利用できるようになりました。
+ちなみにバージョンは`cat /etc/os-release`で確認できます。
+
+```bash
+cat /etc/os-release
+
+NAME="Ubuntu"
+VERSION="20.04.2 LTS (Focal Fossa)"
+ID=ubuntu
+ID_LIKE=debian
+PRETTY_NAME="Ubuntu 20.04.2 LTS"
+VERSION_ID="20.04"
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+VERSION_CODENAME=focal
+UBUNTU_CODENAME=focal
+```
+
+### 初期設定
+#### パッケージリストの更新
+```bash
+sudo apt update
+```
+
+#### 日本語化対応とタイムゾーン
+※2021/04/22追記 この辺はお好みで。英語のままで問題ない方はスキップ。
+
+1. 日本語言語パックのインストールとロケールの設定
+
+```bash
+sudo apt install -y language-pack-ja
+sudo update-locale LANG=ja_JP.UTF-8
+```
+これで locale が変更されます。
+
+```bash
+locale
+
+LANG=ja_JP.UTF-8
+LANGUAGE=
+LC_CTYPE="ja_JP.UTF-8"
+LC_NUMERIC="ja_JP.UTF-8"
+LC_TIME="ja_JP.UTF-8"
+LC_COLLATE="ja_JP.UTF-8"
+LC_MONETARY="ja_JP.UTF-8"
+LC_MESSAGES="ja_JP.UTF-8"
+LC_PAPER="ja_JP.UTF-8"
+LC_NAME="ja_JP.UTF-8"
+LC_ADDRESS="ja_JP.UTF-8"
+LC_TELEPHONE="ja_JP.UTF-8"
+LC_MEASUREMENT="ja_JP.UTF-8"
+LC_IDENTIFICATION="ja_JP.UTF-8"
+LC_ALL=
+```
+2. タイムゾーンの設定、日本語の manpage をインストール
+タイムゾーンに関してはアジア → 東京を選択してください。
+
+```bash
+sudo dpkg-reconfigure tzdata
+sudo apt install -y manpages-ja manpages-ja-dev
+```
+これでタイムゾーンが JST になります。
+
+```bash
+date
+
+2019年 9月 22日 日曜日 12:13:56 JST
+```
+
+※2021/04/22追記
+この設定をしなくても一応 JST になっていました。
+```bash
+date
+
+Wed Apr 21 16:44:54 JST 2021
+```
+
+---
+**※ここ以降で載せている各種パスの`{USER}`部分は、人それぞれのユーザ名になりますのでご注意ください。**
+
+---
+
+### Windows・WSL それぞれから見た互いのパス
+#### Windows から見た WSL
+
+```
+C:\Users\{USER}\AppData\Local\Packages\CanonicalGroupLimited.{ディストリビューション固有の文字列}
+```
+このパスからさらに`\LocalState\rootfs`で`bin`、`dev`、`etc`、`mnt`、`opt`などがあります。
+
+以前は Windows 側から WSL 側のファイルを触るとファイル破損の可能性があったため推奨されていなかったようですが、現在は大丈夫になったみたいです。
+<OG url="https://forest.watch.impress.co.jp/docs/news/1170221.html" />
+
+#### WSL から見た Windows
+```
+/mnt/c
+```
+`/mnt`から C ドライブが参照できます。
+
+## 追加でインストールするもの
+### Linuxbrew
+<OG url="https://brew.sh/index_ja" />
+
+Mac ではおなじみのパッケージ管理ツールである Homebrew の Linux 版です。
+Homebrew 2.0.0 からは Homebrew に統合され、正式に Linux をサポートするようになったそうです。
+
+1. 事前に必要なもののインストール
+中にはすでに入っているものもあるかと思われます。
+
+```bash
+sudo apt install build-essential procps curl file git
+```
+
+2. Linuxbrew のインストール
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+インストールが終わると次のステップに関する記述が表示されますので、その通りに進めていきます。
+build-essential のインストールは先に済ませているのでスキップ。
+
+```bash
+==> Next steps:
+- Add Homebrew to your PATH in /home/{USER}/.profile:
+    echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/{USER}/.profile
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+- Run `brew help` to get started
+- Further documentation:
+    https://docs.brew.sh
+- Install the Homebrew dependencies if you have sudo access:
+    sudo apt-get install build-essential
+    See https://docs.brew.sh/linux for more information
+- We recommend that you install GCC:
+    brew install gcc
+```
+3. パスを通す
+
+```bash
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> /home/{USER}/.profile
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+4. gcc のインストール
+
+```bash
+brew install gcc
+```
+{/* <!-- textlint-disable ja-technical-writing/max-comma --> */}
+
+依存関係のあるものも一緒にインストールされます。（`gmp`, `isl`, `mpfr`, `libmpc`, `zlib`, `binutils`）
+
+{/* <!-- textlint-enable --> */}
+
+5. brew が正常に動作するか確認
+
+```bash
+brew doctor
+```
+以下のような表示が出れば OK です。
+
+```bash
+Your system is ready to brew.
+```
+
+### anyenv
+<OG url="https://github.com/anyenv/anyenv" />
+
+言語を複数バージョンで管理できる、〇〇env を一元管理できるものです。
+今回は Linuxbrew を使用してインストールしていきます。
+
+#### 本体のインストール
+1. インストール
+
+```bash
+brew install anyenv
+```
+
+2. anyenv のセットアップ
+
+```bash
+anyenv init
+```
+こちらを実行すると以下のように、`~/.bash_profile`に追記するように表示が出ます。
+
+```bash
+# Load anyenv automatically by adding
+# the following to ~/.bash_profile:
+
+eval "$(anyenv init -)"
+```
+
+3. 各種 profile のいずれかに追記
+（自分は`~/.profile`に追記しました）
+
+```bash
+echo -e 'eval "$(anyenv init -)"' >> ~/.profile
+```
+ちなみにこの段階で Ubuntu を再起動すると以下のような警告が出ますが、次の手順で解消できます。
+
+```bash
+ANYENV_DEFINITION_ROOT(/home/{USER}/.config/anyenv/anyenv-install) doesn\'t exist. You can initialize it by:
+> anyenv install --init
+```
+
+4. マニフェストディレクトリの用意
+チェックアウトしますか？と聞かれるので、y で進みます。
+
+```bash
+anyenv install --init
+```
+これで anyenv で各種 env がインストールできるようになりました。
+なお、インストールできる各種 env は以下のコマンドで確認できます。
+
+```bash
+anyenv install -l
+
+Renv
+crenv
+denv
+erlenv
+exenv
+goenv
+hsenv
+jenv
+jlenv
+luaenv
+nodenv
+phpenv
+plenv
+pyenv
+rbenv
+sbtenv
+scalaenv
+swiftenv
+tfenv
+```
+
+#### anyenv-update のインストール
+<OG url="https://github.com/znz/anyenv-update" />
+
+anyenv で管理している各種 env とそれらのプラグインのアップデートをまとめて行えるものです。
+あわせて入れておきます。
+
+```bash
+mkdir -p $(anyenv root)/plugins
+git clone https://github.com/znz/anyenv-update.git $(anyenv root)/plugins/anyenv-update
+```
+
+これで以下のコマンドでアップデートを実行できます。
+```bash
+anyenv update
+```
+
+#### nodenv のインストール
+<OG url="https://github.com/nodenv/nodenv" />
+
+ここでは試しに anyenv を使って nodenv をインストールしてみます。
+
+1. インストール
+
+```bash
+anyenv install nodenv
+```
+インストールが終わると各種 profile をリロードするか、Ubuntu を再起動するように言われます。
+
+```bash
+Install nodenv succeeded!
+Please reload your profile (exec $SHELL -l) or open a new session.
+```
+2. 各種 profile をリロード
+
+```bash
+exec $SHELL -l
+```
+これで nodenv が使えるようになりました。
+
+```bash
+nodenv
+
+nodenv 1.4.0+3.631d0b6
+Usage: nodenv <command> [<args>]
+
+Some useful nodenv commands are:
+   commands    List all available nodenv commands
+   local       Set or show the local application-specific Node version
+   global      Set or show the global Node version
+   shell       Set or show the shell-specific Node version
+   install     Install a Node version using node-build
+   uninstall   Uninstall a specific Node version
+   rehash      Rehash nodenv shims (run this after installing executables)
+   version     Show the current Node version and its origin
+   versions    List installed Node versions
+   which       Display the full path to an executable
+   whence      List all Node versions that contain the given executable
+
+See `nodenv help <command>` for information on a specific command.
+For full documentation, see: https://github.com/nodenv/nodenv#readme
+```
+インストールできる Node.js のバージョン一覧は以下で確認できます。
+
+```bash
+nodenv install --list
+```
+
+3. Node.js をインストール
+
+```bash
+nodenv install (バージョン)
+```
+
+4. 使用する Node.js のバージョンを指定
+
+```bash
+# グローバルの場合
+nodenv global (バージョン)
+
+# ローカルの場合
+nodenv local (バージョン)
+```
+インストールしているバージョンの一覧は以下で確認できます。
+なお、ここで*がついているのが使用しているバージョンです。
+
+```bash
+nodenv versions
+* 14.2.0 (set by /home/{USER}/.anyenv/envs/nodenv/version)
+```
+
+## 参考リンクまとめ
+- [Homebrew](https://brew.sh/index_ja)
+- [GitHub - anyenv](https://github.com/anyenv/anyenv)
+- [GitHub - anyenv-update](https://github.com/znz/anyenv-update)
+- [Windows Subsystem for Linux - wikipedia](https://ja.wikipedia.org/wiki/Windows_Subsystem_for_Linux)
+- [WSLの有効化](http://www.aise.ics.saitama-u.ac.jp/~gotoh/HowToEnableWSL.html)
+- [WSL (Windows Subsystem for Linux)の基本メモ](https://qiita.com/rubytomato@github/items/fdfc0a76)
+- [WindowsからLinuxファイルへのアクセスが可能に ～「Windows 10 19H1」におけるWSLの改善](https://forest.watch.impress.co.jp/docs/news/1170221.html)

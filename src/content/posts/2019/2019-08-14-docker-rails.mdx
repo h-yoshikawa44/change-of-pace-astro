@@ -1,0 +1,271 @@
+---
+title: "RailsのDocker環境作成"
+description: "Docker公式手順で構築するなかで遭遇したエラーと対処法の記録"
+pubDate: "2019-08-14"
+updatedDate: "2021-02-07"
+category: "develop"
+tags: ["開発環境", "Docker", "Ruby", "Rails"]
+---
+
+Rails チュートリアルを勉強したかったので、Docker 公式を参考に Docker 環境を作成しました。
+その際に少しやり方を変えたのと、いくつかエラーに遭遇したので、そのメモを書いておきます。
+
+import OG from '@/components/OG.astro'
+
+## 前提
+- Docker 導入済み
+- docker-compose コマンドが使用できる
+
+**なお、この記事の手順では Rails 5系の環境となる点に注意です。**
+
+## Docker 環境
+### 作成手順
+<OG url="https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/" />
+
+※2021/02/07追記 少し公式の手順が変わっていたので見直しを行いました。
+
+公式では、すべてのファイルをルートに置いていますが、自分は以下のようなディレクトリ構造にしたかったので変えました。
+
+自分の場合のディレクトリ構造はこちら。
+```
+(root)
+├ docker
+│ └ ruby
+│     └ Dockerfile
+├ ※Railsのソース
+├ docker-compose.yml
+├ entrypoint.sh
+├ Gemfile
+├ Gemfile.lock
+└ README.md
+```
+
+1. Dockerfile を作成
+```docker:docker/ruby/Dockerfile
+FROM ruby:2.5
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client
+RUN mkdir /src
+WORKDIR /src
+COPY Gemfile /src/Gemfile
+COPY Gemfile.lock /src/Gemfile.lock
+RUN bundle install
+COPY . /src
+
+# Add a script to be executed every time the container starts.
+COPY entrypoint.sh /usr/bin/
+RUN chmod +x /usr/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+EXPOSE 3000
+
+# Start the main process.
+CMD ["rails", "server", "-b", "0.0.0.0"]
+```
+
+2. Gemfile を作成
+```:src/Gemfile
+source 'https://rubygems.org'
+gem 'rails', '~>5'
+```
+
+3. Gemfile.lock を作成(中身は空で OK)
+
+4. entrypoint.sh を作成
+```sh:entrypoint.sh
+#!/bin/bash
+set -e
+
+# Remove a potentially pre-existing server.pid for Rails.
+rm -f /src/tmp/pids/server.pid
+
+# Then exec the container's main process (what's set as CMD in the Dockerfile).
+exec "$@"
+```
+
+5. docker-compose.yml を作成
+```yaml:docker-compose.yml
+version: '3.9'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+  web:
+    build:
+      context: ./
+      dockerfile: ./docker/ruby/Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    volumes:
+      - .:/src
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+```
+※Windows の場合は、[下記の注意点](#windows-のみで発生するエラー)も参照。
+
+6. ビルドして、Rails プロジェクトを作成
+```bash
+docker-compose run --no-deps web rails new . --force --database=postgresql
+```
+
+7. もう一度、コンテナをビルド(rails new で Gemfile の内容が変わったため)
+```bash
+docker-compose build
+```
+
+8. データベースの接続設定を記述(src/config/database.yml)
+データベース名は任意の名前で OK。
+```yaml:src/config/database.yml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password: password
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: myapp_development
+
+
+test:
+  <<: *default
+  database: myapp_test
+```
+
+### Docker の起動
+1. コンテナの起動
+```bash
+docker-compose up -d
+```
+
+2. 初期 DB の作成
+```bash
+docker-compose exec web rails db:create
+```
+
+以下のように表示されれば無事データベースが作成されています。
+```bash
+Created database 'myapp_develop'
+Created database 'myapp_test'
+```
+
+3. ブラウザでアクセス
+```
+localhost:3000
+```
+以下のような画面が表示されればOKです。
+<img src="/screenshots/2019/docker-rails/rails.png" width="70%" alt="Railsトップ画面" />
+
+## 遭遇したエラー
+### ビルドコンテキスト外のファイルを COPY しようとしてエラー
+<OG url="https://qiita.com/mk-tool/items/1c7e4929055bb3b7aeda" />
+
+docker-compose.yml の以下の部分。
+```yaml
+web:
+  build:
+    context: ./
+    dockerfile: ./docker/ruby/Dockerfile
+```
+最初はこうしていました。
+```yaml
+web:
+  build: ./docker/ruby
+```
+
+すると、Dockerfile の中で、Gemfile を COPY するところでエラーになりました。
+
+原因としては、ビルドコンテキスト外のファイルで COPY や ADD ができないとのことでした。
+つまりビルドコンテキストに`./docker/ruby`を指定しているので、この配下にあるファイルしか指定できないようです。
+なので、`build`の個所を`context`と`dockerfile`にわけて記述することで対応しました。
+
+なお、補足として、Dockerfile の COPY などで指定するホスト側のパスは、ビルドコンテキストを基準としたパスになります。
+```docker
+COPY Gemfile /src/Gemfile ← ビルドコンテキスト（./）からのパス
+```
+
+### コンテナ起動時に exited with code 1 になる
+<OG url="https://qiita.com/nrk_baby/items/d872e8f051a96a313601" />
+
+docker-compose up で起動するとコンテナがうまく起動しませんでした。
+原因としては、コンテナ起動時に実行している`entrypoint.sh`の改行コードが`CRLF（Windows標準）`になっていたことでした。
+ここは改行コードを`LF（Linux標準）`に変更して対応しました。
+
+### Windows のみで発生するエラー
+#### postgres コンテナの起動に失敗する
+コンテナ起動に失敗し、ログを見ると`FATAL: data directory "/var/lib/postgresql/data" has wrong ownership`と表示されて
+いました。
+どうも volume マウントに失敗していたようです。
+
+docker-compose.yml でマウントのパスを`/var/lib/postgresql/data`から`/var/lib/postgresql/`に修正すると、なぜか起動するようになりました。
+```yaml:docker-compose.yml
+db:
+  image: postgres
+  volumes:
+    - ./tmp/db:/var/lib/postgresql/ ← パス末尾の data をなくす
+```
+
+#### Rails アプリが File exists @ dir_s_mkdir - /src/tmp/cache/assets/sprockets/v3.0/2D でエラー落ちする
+<OG url="https://crieit.net/posts/Windows-Docker-Rails-sprockets" />
+
+一度はちゃんと動作していた Rails アプリがこのエラーになり、動作しなくなったことがありました。
+どうも Windows の場合は、ファイルの大文字小文字を区別しないことにより、ファイル名称がバッティングしてしまい起こるそうです。
+
+参考記事の通りに対応することで解決しました。
+
+src/config/initializers/assets.rb に以下を追加。
+```ruby:src/config/initializers/assets.rb
+Rails.application.config.assets.configure do |env|
+  env.cache = Sprockets::Cache::FileStore.new(
+    ENV.fetch("SPROCKETS_CACHE", "#{env.root}/tmp/cache/assets"),
+    Rails.application.config.assets.cache_limit,
+    env.logger
+  )
+end
+```
+
+docker-compose.yml を以下のように修正。
+```yaml:docker-compose.yml
+version: '3.9'
+services:
+  db:
+    image: postgres
+    volumes:
+      - ./tmp/db:/var/lib/postgresql
+    environment:
+      POSTGRES_PASSWORD: password
+  web:
+    build:
+      context: ./
+      dockerfile: ./docker/ruby/Dockerfile
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    environment:
+      - SPROCKETS_CACHE=/cach
+    volumes:
+      - .:/src
+      - cache:/cache
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+
+volumes:
+  cache:
+```
+
+---
+Docker 公式で案内があったのはありがたかったのですが、ディレクトリ構造を変更したこともあり、いくつかエラーに遭遇しました。
+とりあえず無事起動できてよかったです。
+
+Rails チュートリアルは一応一通り終わったので、一旦 AWS の勉強に戻ります。
+資格取らねば...。
+
+## 参考リンクまとめ
+- [Docker 公式](https://docs.docker.com/compose/rails/)
+- [docker-composeでADDやCOPYをする際に注意すること](https://qiita.com/mk-tool/items/1c7e4929055bb3b7aeda)
+- [docker-compose upするとコンテナが一瞬でexited with code 1する話](https://qiita.com/nrk_baby/items/d872e8f051a96a313601)
+- [Windows+Docker+Railsでsprocketsのエラーが出る時](https://crieit.net/posts/Windows-Docker-Rails-sprockets)

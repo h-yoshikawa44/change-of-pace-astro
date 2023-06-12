@@ -1,0 +1,1070 @@
+---
+title: "React入門 ～基礎編～"
+description: "React入門記事。Reactについてコンポーネントやpropやstateなど、公式チュートリアルで触れる部分を中心とした基礎的な概念や書き方のまとめ"
+pubDate: "2019-12-18"
+updatedDate: "2021-09-13"
+category: "develop"
+tags: ["JavaScript", "TypeScript", "React"]
+---
+
+現在業務で使用している React について、より理解を深めていくために勉強したことを記事として書くことにしました。
+ということで、まずは基礎編です。
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/4cde7fd891783c396a32) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-09-21-react-basics) の方で更新しています。
+
+※2021/09/13追記  全体的に内容を見直しました。
+
+import OG from '@/components/OG.astro'
+
+## 記事を書くにあたって
+2019年秋頃から Qiita の記事を書いてきましたが、環境構築系ばかりで、いまだ技術の中身についての記事を書いたことがなかったので、そろそろ書いてみたいなーと思っていました。（ブログで多少技術記事は書いていました）
+
+技術記事となると、すでに同じテーマで記事を書かれている方がいてクオリティも高くてと、自分なんかが書いてもなと尻込みをしていたのですが、**自分の理解を深める**という目的で思い切って書くことにしました。
+記事を書く上で自然とまとめるようになるので、頭の中が整理できるので。
+
+もし自分がその技術から離れてしまって、また戻ってきたときに記事を見返して助けになればとも。
+まだまだ勉強中の身であるため内容に間違い等ありましたら、コメントいただけると幸いです。
+
+## React とは
+<OG url="https://ja.reactjs.org" />
+
+Facebook およびコミュニティによって開発されている、ユーザインターフェース構築のための JavaScript ライブラリです。
+
+これだけ聞いてもなんのこっちゃとなりそうなので、公式ドキュメントにある特徴を引用してみます。
+
+### 宣言的な View
+> React は、インタラクティブなユーザインターフェイスの作成にともなう苦痛を取り除きます。アプリケーションの各状態に対応するシンプルな View を設計するだけで、React はデータの変更を検知し、関連するコンポーネントだけを効率的に更新、描画します。
+>
+> 宣言的な View を用いてアプリケーションを構築することで、コードはより見通しが立ちやすく、デバッグのしやすいものになります。
+
+通常の JavaScript のみであったり jQuery を使っての「命令型」の UI 構築となると、操作したい DOM 要素を取得して、その要素を操作していく形になるでしょう。
+もちろんこれでも UI 構築は出来るわけですし、そう複雑なものでなければ問題はないこともあります。
+ただ、より複雑なことをしようとすると、ロジックの複雑さは当然増してきます。
+保守性が落ちて、バグが発生しやすくなったり。最終的にどんな UI になるのかイメージしにくくなったり。
+
+React では主に JSX という JavaScript の拡張構文を使って UI を記述していきます。
+こちらは「宣言型」で UI を記述するため、基本的には最終的な UI の状態を記述（宣言）すればいいだけです。
+その UI にするための DOM 操作は React の方でやってくれます。
+
+また、React における DOM 構築に関して、`仮想DOM`というものがあります。
+React は DOM 操作時に、すぐにブラウザ上の DOM に反映させるのではなく、まずはメモリ上に仮想 DOM として構築し記録。
+そして、前回の記録されている仮想 DOM と比較して差分を特定し、その**差分のみ**をブラウザ上の DOM に同期させる。という仕組みになっています。
+従来の JavScript、jQuery による DOM 操作では、DOM 全体が再構築されていたため、それに比べると高速で動作するようになっているわけです。
+
+### コンポーネントベース
+> 自分自身の状態を管理するカプセル化されたコンポーネントをまず作成し、これらを組み合わせることで複雑なユーザインターフェイスを構築します。
+>
+> コンポーネントのロジックは、Template ではなく JavaScript そのもので書くことができるので、様々なデータをアプリケーション内で簡単に取り回すことができ、かつ DOM に状態を持たせないようにすることができます。
+
+React ではコンポーネントベースの設計思想が取り入れられています。
+インタフェースさえ分かっていれば内部の実装を知らなくても使える、独立したコンポーネントを組み合わせて、UI を構築していく形です。
+あるコンポーネントを呼び出して使うほか、複数のコンポーネントを組み合わせて新たなコンポーネントを作るということもできます。
+
+前項でも書いた通り、React では JSX という JavaScript の拡張構文を使って UI を記述していくわけですが、JSX の中で JavaScript の処理を書くということも可能です。
+コンポーネント自体が持つロジックも JavaScript で書けるため、UI 部分とロジック部分とでデータのやり取りも楽にできたりします。
+
+### 一度学習すれば、どこでも使える
+> React と組み合わせて使用する技術に制限はありません。React を使って新しい機能を追加する際に、既存のソースコードを書き換える必要はありません。
+>
+> React は Node を使ったサーバ上でもレンダーできますし、React Native を使うことでモバイルアプリケーションの中でも動きます。
+
+React は、本体と、仮想 DOM の内容を実際に UI へ反映させるレンダラー（react-dom など）とが分かれています。
+このレンダラーの部分は、様々なプラットフォームのものが提供されているため、いろんなものが作れるよーという話です。
+react-dom 以外の代表的なものとして、クロスプラットフォームのモバイルアプリ向けである React Native があります。
+
+## 環境構築
+環境構築のやり方は色々あるのですが、パパっと作りたい場合は、Facebook 製の Create React App を使うと楽です。
+
+<OG url="https://create-react-app.dev" />
+
+初期セットアップが済んだ React プロジェクトを作成してくれます。
+
+```bash
+npx create-react-app ※アプリ名
+# or
+yarn create react-app ※アプリ名
+```
+任意ではありますが、オプションで`--template`を指定することで、テンプレートを利用出来たりもします。
+
+```bash
+# TypeScript テンプレートによるセットアップ例
+npx create-react-app ※アプリ名 --template typescript
+# or
+yarn create react-app ※アプリ名 --template typescript
+```
+
+セットアップ後、ローカルサーバを立ち上げて開発をしていく形です。
+なお、webpack-dev-server によりホットリロードが自動で動作します。
+```bash
+npm start
+# or
+yarn start
+```
+
+### react-scripts
+Create React App によるセットアップで作成された React アプリは、以下のライブラリが導入されています。
+
+- react：React 本体
+- react-dom：DOM を抽象化して React から操作できるようにするレンダラー
+- react-scripts：React アプリ開発に必要な様々なライブラリを管理するもの
+
+手動で React 環境を作ろうとすると、自分でいろんな設定をしなくてはならなくなるため、なかなか大変なのですが...。
+それを react-scripts がまとめて管理してくれているのです。
+lock ファイルで react-scripts の依存関係を見てもらうとわかりますが、実にたくさんのライブラリが依存関係となっています。
+
+代表的な例。
+- Babel：新仕様の JavaScript や JSX、TypeScript のコードを、古いブラウザでも実行できるように、旧式の JavaScript コードに変換するトランスコンパイラ
+- Webpack：コンパイラと連携しながら、依存関係を解決し、ソースコードファイルをまとめて最適化を行うモジュールバンドラー
+- webpack-dev-server：ファイル変更を検知して再ビルドとリロードを行う、開発用の webpack サーバ
+- dotenv：環境ごとに異なる環境変数を管理
+- ESLint：JavaScript および TypeScript 向け静的解析
+
+Babel や Webpack の設定は react-scripts によって隠蔽されており、これにより設定を意識することなく、React アプリ開発が可能になっているわけです。
+とはいえ、内部で何が動いているかは一応意識しておいた方がいいかと思われます。
+
+ただ、場合によっては、自分で設定をカスタマイズしたいということもあるでしょう。
+そんな時は eject することで、react-scripts の依存関係を解除し、隠蔽されていた設定を直接カスタマイズできます。
+```bash
+npm eject
+# or
+yarn eject
+```
+この eject は一度やってしまうと元に戻せないため、取り扱いには十分注意しましょう。
+
+部分的なカスタマイズであれば、こちらを使うのもありです。
+<OG url="https://github.com/gsoft-inc/craco" />
+
+---
+なお、ローカルに環境作るのすらめんどくさい場合は、オンラインエディタを使う手もあります。
+自分もパパっと検証をしたい時などに、CodeSandbox をよく活用しています。
+
+<OG url="https://codesandbox.io" />
+<OG url="https://stackblitz.com" />
+
+## React の基本
+以下、記述しているコードは以下を引用、もしくはベースにしています。
+- Create React App で生成されたもの
+- React 公式ドキュメント
+- React 公式チュートリアル
+
+今回の使用バージョンは以下のとおりです。
+- React：17.0.2
+- react-scripts：4.0.3
+
+### 起点
+#### index.html
+まずはおなじみの起点となる index.html。
+この例において、body タグの中身としては、root という id を持つ div 要素だけです。
+
+```html:public/index.html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>
+```
+
+#### index.js
+React アプリ側の起点となる部分。
+
+レンダラーである`ReactDOM`の`render`関数で以下を指定。
+
+- 第1引数：レンダリングするコンポーネント
+- 第2引数：どの DOM 要素にレンダリンクするか
+
+この例では、App というコンポーネントに定義された React 要素を、（index.html の）id が root の要素にレンダリングするよう定義しています。
+ここで HTML の DOM 要素との関連付けが行われているわけです。
+この関連付けされた React 要素全てが React DOM によって管理されることになるため、この関連付けされた DOM 要素を`ルート DOM ノード`と呼んだりもします。
+
+```jsx:src/index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+
+ReactDOM.render(
+  <App />,
+  document.getElementById("root")
+);
+```
+
+紐づけだけをパパっと試したいのであれば、第1引数に直接 React 要素を書いて試すことも出来ます。
+
+```jsx
+ReactDOM.render(
+  <h1>Hello, world!</h1>,
+  document.getElementById('root')
+);
+```
+
+プロバイダーコンポーネントという、子孫コンポーネントに特定の値や機能を提供するコンポーネントでアプリ全体を囲うというときに触ることはありますが、基本的にはあまり触ることのないファイルです。
+
+#### App.js
+今回の例において、index.js から呼ばれているコンポーネント。
+
+コンポーネントが return で返している React 要素が、そのコンポーネントのレンダリングする内容になります。
+（※関数コンポーネントのため省略されていますが、正確には`render`メソッドが返す React 要素のこと）
+エクスポートすると、他ファイルからこのコンポーネントを呼び出すことができるようになります。
+
+```jsx:src/App.js
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
+}
+
+export default App; // コンポーネントをエクスポート
+```
+
+あとは、この App コンポーネントをカスタマイズしていき React アプリ開発を進めていくイメージです。
+このコンポーネントにルーティングを定義したり。他のコンポーネントを呼び出したり。
+（React 本体自体はルーティング機能を持っていないため、別途ルーティングライブラリが必要になります）
+
+#### ビルド
+ソースコードをビルドすると、React 部分のコードは Babel でトランスコンパイルされ、Webpack で依存関係を解決したのちにファイルをまとめられることになります。
+そのビルド結果のファイルを、HTML から読み込んで使用している。といった形です。
+
+試しにローカルサーバを立ち上げて、ブラウザから DevTools で Elements を確認すると、ビルド成果物を読み込む script タグが追加されているはずです。
+
+なお、ローカルサーバ起動時は、webpack-dev-server がファイル変更を検知して自動で再ビルド実行（開発モード）
+デプロイ時など本番モードでビルドしたい時は、ビルドコマンドを実行します。
+
+```bash
+npm build
+# or
+yarn build
+```
+実行結果のビルド生成物は`/build`配下へ作成されるようになっています。
+
+#### React.StrictMode
+<OG url="https://ja.reactjs.org/docs/strict-mode.html" />
+
+Create React App で作成した React アプリの場合、index.js が以下のようになっているでしょう。
+
+```jsx
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
+```
+
+strict モードというのは、アプリケーションの潜在的な問題点を洗い出すためのツールです。
+この React.StrictMode 自体は特に何も UI を提供しませんが、子孫要素において不可的な問題を検知した時に、コンソールに警告を出してくれるようになります。
+コード品質の向上に役立ってくれるでしょう。
+
+検知する例（それぞれの詳細は公式ドキュメントを参照）
+
+- 安全でないライフサイクルの特定
+- レガシーな文字列 ref API の使用に対する警告
+- 非推奨な findDOMNode の使用に対する警告
+- 意図しない副作用の検出
+- レガシーなコンテクスト API の検出
+
+なお、この strict モードは、開発モードでのみ動作するようになっています。
+本番ビルドには影響がありません。
+
+### コンポーネント
+冒頭にも書いた通り、React ではコンポーネントベースの設計思想が取り入れられています。
+
+#### クラスコンポーネント
+`React.Component`を継承したクラスで定義されたコンポーネント。
+後述する状態（state）やライフサイクルを元から持つことができます。
+
+```jsx
+import React from 'react';
+
+class App extends React.Component {  // React.component を継承するクラスの定義
+  render() {  // React 要素 を返り値とする render メソッドを定義
+    return (
+      <h1>Hello World</h1>
+    );
+  }
+}
+
+export default App;
+```
+
+React Hooks の登場により、クラスコンポーネント特有機能の大部分が関数コンポーネントでも使用できるようになったため、ほとんど使わなくなってきています。
+
+#### 関数コンポーネント
+クラスコンポーネントと違い、状態（state）やライフサイクルを持たないコンポーネントをよりシンプルに記述したもの。
+const で変数定義などはできますが、基本的に`render`メソッドのみであるため、`render()`の記述が省略できます。
+
+元々、状態（state）やライフサイクルを持つことができませんでしたが、関数コンポーネントでもそれらが使えるようにと様々な試みが行われていました。
+その後、React 公式から React Hooks という機能が提供され、現在では React Hooks と関数コンポーネントの組み合わせが主流となっています。
+
+```jsx
+// 関数宣言方式
+function App() {
+  return (
+    <h1>Hello World</h1>
+  );
+}
+
+export default App;
+```
+
+関数式 + アロー関数方式で以下のようにも書くことができます。
+個人的にはこちらが好みです（これ以降のコードはこちらの方式で書いています）
+
+```jsx
+// 関数式 + アロー関数方式
+const App = () => {
+  return (
+    <h1>Hello World</h1>
+  );
+}
+
+export default App;
+```
+
+また変数定義などがなく、純粋に`render`メソッドのみの場合は、さらに`return`も省略できます。
+
+```jsx
+const App = () => (
+ <h1>Hello World</h1>
+)
+
+export default App;
+```
+
+### JSX
+コンポーネントの`render`メソッド内に記述する JavaScript の拡張構文。
+XML っぽく記述ができるような作りになっています。
+テンプレート言語に似ていますが、完全に JavaScript だけで動作するものです。
+
+Babel でのトランスコンパイル時に`React.createElement`形式へ変換されます。
+そのため、以下のコードは等価のものになります。
+
+```jsx
+const element = (
+  <h1 className="title">
+    Hello, world!
+  </h1>
+);
+```
+
+```jsx
+const element = React.createElement(
+  'h1',
+  {className: 'title'},
+  'Hello, world!'
+);
+```
+
+このことから、React において JSX を使うことは必須でありません。
+また、JSX は React 特有のものでもありません。
+ただ、どちらが扱いやすいかといえば、多くの方が JSX の方になるのではないでしょうか。
+
+この JSX は、必ず**1つのReact要素**を返す必要があります。
+複数の要素から構成される場合は、div で囲うなどして、1つの React 要素を返すようにしましょう。
+（※div などでは支障が出る場合は、[React.Fragment](#reactfragment) の欄を参照）
+
+```jsx
+// NG な例
+render() {
+  return (
+    <h1>h1です</h1>
+    <h2>h2です</h2>
+    <p>pです</p>
+  )
+}
+```
+
+```jsx
+// OK な例
+render() {
+  return (
+    <div>
+      <h1>h1です</h1>
+      <h2>h2です</h2>
+      <p>pです</p>
+    </div>
+  );
+}
+```
+
+JSX は一見 HTML とも似ていますが、閉じタグに関しては注意が必要です。
+img タグのように HTML では閉じタグが必要なかったものについては、末尾に`/`とつけて閉じる必要があります。
+
+```jsx
+<img src='画像URL' />
+```
+
+#### React.Fragment
+<OG url="https://ja.reactjs.org/docs/fragments.html" />
+
+React 要素をまとめたい時、場合によっては div などを使いたくないこともあるでしょう。
+そういったときは`React.Fragment`というものを使うことができ、DOM に余分なノードを追加することなく子要素をまとめられます。
+
+```jsx
+render() {
+  return (
+    <React.Fragment>
+      <h1>h1です</h1>
+      <h2>h2です</h2>
+      <p>pです</p>
+    </React.Fragment>
+  );
+}
+```
+短縮記法で以下のようにも書くことができますが、こちらでは後述する key や props を持つことができないので注意が必要です。
+
+```jsx
+render() {
+  return (
+    <>
+      <h1>h1です</h1>
+      <h2>h2です</h2>
+      <p>pです</p>
+    </>
+  );
+}
+```
+
+#### 変数や関数の埋め込み
+JSX 内に変数を埋め込む際は`{}`で囲って記述します。
+
+```jsx
+const name = 'Yamada Taro';
+const element = <h1>Hello, {name}</h1>;
+```
+
+なお、デフォルトでは、React DOM は JSX に埋め込まれた値をレンダリングされる前にエスケープします。
+そのため、以下のようにユーザーの入力を受け付ける場合でも、XSS などインジェクション攻撃を防ぐことができます。
+
+```jsx
+const title = response.potentiallyMaliciousInput;
+const element = <h1>{title}</h1>;
+```
+
+関数の場合はこんな感じ。
+
+```jsx
+const formatName = (user) => {
+  return user.firstName + ' ' + user.lastName;
+}
+
+const user = {
+  firstName: 'Taro',
+  lastName: 'Yamada'
+};
+
+const element = (
+  <h1>
+    Hello, {formatName(user)}!
+  </h1>
+);
+
+```
+
+#### 式としての JSX
+前述したとおり、JSX はトランスコンパイルされると`React.createElement()`形式に変換されます。
+つまり、通常の JavaScript 関数呼び出しと同じようになるわけです。
+
+このことから、JSX を if 分や for ループの中で使うことも可能です。
+変数に代入したり、引数として受け取ったり、関数から返すということもできます。
+
+```jsx
+const getGreeting = (user) => {
+  if (user) {
+    return <h1>Hello, {formatName(user)}!</h1>;
+  }
+  return <h1>Hello, Stranger.</h1>;
+}
+```
+
+#### 条件付きレンダー
+論理値 or 論理式と && の組み合わせで、条件によってレンダリングする内容の切り替えができます。
+
+```jsx
+render() {
+  const flg = true;
+  return (
+    <div>
+      {/* flg変数がtrueの時のみレンダリング */}
+      {flg && <p>フラグ：true</p>}
+      {/* flg変数がfalseの時のみレンダリング */}
+      {!flg && <p>フラグ：false</p>}
+    </div>
+  )
+}
+```
+```jsx
+// 三項演算子を使用した例
+render() {
+  const flg = true;
+  return (
+    <div>
+      {flg ? <p>フラグ：true</p> : <p>フラグ：false</p>}
+    </div>
+  )
+}
+```
+
+### props
+React のコンポーネントには、props という任意の値を渡すことができるようになっています。
+親コンポーネントから子コンポーネントにデータを渡すイメージ。
+これにより、同じコンポーネントでも、渡された props によって UI やロジックに変化をつけることができます。
+
+```jsx
+// コンポーネント呼び出し側
+<Message name="Taro" />
+```
+
+```jsx
+// コンポーネント側（関数コンポーネントの例）
+const Message = (props) => {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+
+```jsx
+// コンポーネント側（クラスコンポーネントの例）
+class Message extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+
+#### children
+子要素を意味する props。
+要素やコンポーネントの中身を children で指定する書き方もできます。
+そのため、以下のコードは等価になります。
+
+```jsx
+<h1>test</h1>
+
+<Message>test</Message>
+```
+
+```jsx
+<h1 children="test" />
+
+<Message children="test" />
+```
+
+props として渡されるので、コンポーネント側で使用できます。
+```jsx
+const Message = (props) => {
+  return <h1>{props.children}</h1>
+}
+```
+
+#### HTML の属性名
+React DOM においても、HTML の属性を使うことができますが、キャメルケースの命名規則を使用します。
+例として、tabindex は`tabIndex`など。
+変わった例として、class は`className`となりますが、これは class が JavaScript において予約語であるためです。
+
+また、style でインラインスタイルを指定する時は、文字列形式でなくオブジェクト形式で渡します。
+（疑似要素やメディアクエリは指定できません）
+
+```jsx
+<h1 style={{ color: 'red' }}>test title</h1>
+```
+
+#### 読み取り専用
+> 全ての React コンポーネントは、自己の props に対して純関数のように振る舞わねばなりません。
+
+React にはこのようなルールがあります。
+
+つまり、受け取った props を変更するようなことはしてはいけません。
+同じ入力に対し同じ結果を返す「純関数」のような振る舞いをする必要があります。
+
+```jsx
+// 純関数でない例
+const withdraw = (account, amount) => {
+  account.total -= amount;
+}
+```
+
+```jsx
+// 純関数の例
+const sum = (a, b) => {
+  return a + b;
+}
+```
+
+#### props の型定義
+一見、便利な props ではありますが、デフォルトではどんな値も受け取れてしまうという特徴があります。
+そのため、ぱっと見どんな値を渡せばいいかわからなかったり。
+誤って予期しない値を渡してエラーとなり、アプリをクラッシュさせてしまったり。
+
+もし TypeScript を使用しているのであれば、そのまま型定義が可能です。
+しかし、JavaScript だとそうはいかないので、別途`PropTypes`というライブラリを導入する必要があります。
+
+<OG url="https://ja.reactjs.org/docs/typechecking-with-proptypes.html" />
+<OG url="https://github.com/facebook/prop-types" />
+
+自記事もありますので、よかったらこちらも参照ください。
+- [JS×Reactにおけるpropsの型定義を担うPropTypes入門](https://changeofpace.site/develop/2020/04/04/react-proptypes)
+
+### state
+コンポーネントに持たせられる「状態」のことを指します。
+
+デフォルトでは、クラスコンポーネントのみ state を持つことができます。
+設定するには、まずクラスコンポーネントにコンストラクタを追加して state を初期化。
+(クラスコンポーネントのコンストラクタは、常に props を引数として、親クラスのコンストラクタを呼び出す必要があります)
+
+```jsx
+class Square extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: 'no set',
+    };
+  }
+
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>state：{this.state.value}.</h2>
+      </div>
+    );
+  }
+}
+```
+
+#### state の更新
+読み取り専用の props と違い、state は値の更新が可能です。
+
+更新するには、直接 state に再代入するのでなく、`this.setState`を使用して更新するようにします。
+なお、一度の`setState`で複数の state の値更新も可能です。
+
+state が更新されると、そのコンポーネントは再度レンダリングされます。
+（`setState`を使用せずに state を直接変更した場合は再レンダリングされないのでやらないこと）
+
+```jsx
+class Square extends React.Component {
+  ※一部省略
+
+  render() {
+    return (
+      // ボタンクリックで state に値をセットする
+      <button className="square" onClick={() => this.setState({value: 'X'})}>
+        {this.state.value}
+      </button>
+    );
+  }
+}
+```
+
+`setState`を使った更新では、引数のオブジェクトを現在の state にマージするというやり方で更新されます。
+例えば、複数の state を持っていた場合。
+
+```jsx
+constructor(props) {
+  super(props);
+  this.state = {
+    posts: null,
+    comments: null
+  };
+}
+```
+
+`this.setState({ posts: 'posts value'})`のように posts だけの更新をしても、comments の現在の値には影響しません。
+逆もまた然りです。
+マージ時における比較の仕方としては shallow （浅く）で行われます。
+
+#### state の更新タイミング
+this.props と this.state は非同期に更新されるため、`setState`時にそれらの値に依存してはいけません。
+予期しない動作を引き起こす可能性があります。
+
+```jsx
+// NG な例
+this.setState({
+  counter: this.state.counter + this.props.increment,
+});
+```
+
+#### 子コンポーネント側から親コンポーネントが持つ state を更新
+子コンポーネントから親コンポーネントが持つ state を変更したいという時、`this.state`はその親コンポーネント内でのプライベートになるため、子コンポーネントから直接呼び出しはできません。
+この場合は、親コンポーネントから子コンポーネントに state を更新する関数を渡すようにして、その関数を子コンポーネントから呼び出すことで対処できます。
+
+```jsx
+// 子コンポーネント側
+class Square extends React.Component {
+  ※一部省略
+
+  render() {
+    return (
+      <button className="square" onClick={() => this.props.onClick()}>
+        {this.props.value}
+      </button>
+    );
+  }
+}
+```
+
+```jsx
+// 親コンポーネント側
+class Board extends React.Component {
+  ※一部省略
+
+  handleClick(i) {
+      // 配列のコピーを作成
+      const squares = this.state.squares.slice();
+      squares[i] = 'X';
+      this.setState({squares: squares});
+  }
+
+  renderSquare(i) {
+    return <Square value={this.state.squares[i]} onClick={() => this.handleClick(i)}/>;
+  }
+}
+```
+
+### イベント
+通常の DOM 要素でのイベント処理とほとんど同じですが、主な違いとしては、以下の2つです。
+
+- React のイベントは小文字でなく、キャメルケース（onclick → onClick）
+- JSX ではイベントハンドラとして、文字列でなく関数を渡す
+
+```jsx
+<button onClick={() => {console.log('Hello World')}}>こんにちは</button>
+```
+
+イベントの例。
+- onClick：クリックされた時、button タグなど
+- onSubmit：送信された時、form タグなど
+- onChange：入力や削除が行われた時、input タグなど
+- onMouseOver：マウスカーソルが上に置かれた時
+- onMouseOut：マウスカーソルが外れた時
+
+onChange の例
+`event`は合成 (synthetic) イベントです。`event.target.value`で入力された値を取得できます。
+
+```jsx
+<input onChange={(event) => {console.log(event.target.value)}} />
+```
+
+#### preventDefault
+a タグのリンクや form の送信など、その要素が持つデフォルトのイベントをキャンセルしたい時。
+HTML では false を返すようにすることで、デフォルトのイベントを抑制できましたが、React では`preventDefault`を使う必要があります。
+
+```jsx
+const ActionLink = () => {
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log('The link was clicked.');
+  }
+
+  return (
+    <a href="#" onClick={handleClick}>
+      Click me
+    </a>
+  );
+}
+```
+
+### リストと key
+要素のリストをレンダリングする際、リストの項目それぞれについて、React は情報を保持します。
+リストに変更、追加、削除などがあった時に、どのアイテムが変更になったのかを React へ伝えるために key を与えるようにしましょう。
+
+リストが再レンダリングされる際、React はそれぞれのリスト項目の key について、前回のリスト項目内に同じ key を持つものがないか探します。
+その結果によってリスト項目を追加したり、削除したりするわけです。
+もし key が設定されていないリスト項目を変更した場合、React は正しく再レンダリングできなくなります。
+
+ちなみに key の値は兄弟要素の中で一意であれば問題ないようです。
+
+なお、リスト項目に key プロパティを設定していないと、コンソールで警告が表示されます。
+また、key プロパティは props の一部のようにも見えますが、`this.props.key`で参照はできません。
+
+```jsx
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((number) =>
+  <li key={number.toString()}>
+    {number}
+  </li>
+);
+```
+
+リスト項目をコンポーネント化した際は、呼び出し時に key を設定するようにしましょう。
+
+```jsx
+const ListItem = (props) => {
+  // ここでは key を指定しない
+  return <li>{props.value}</li>;
+}
+
+const NumberList = (props) => {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    // ここで key を指定
+    <ListItem
+      key={number.toString()}
+      value={number}
+    />
+  );
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+}
+```
+
+### ライフサイクル
+React において、以下のようなライフサイクルがあります。
+これらは、デフォルトではクラスコンポーネントのみ使用できるようになっています。
+
+ライフサイクルの流れ図
+<img src="/screenshots/2019/react-basics/react-lifecycle.png" width="80%" alt="Reactコンポーネントのライフサイクル図" />
+
+<OG url="http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram" />
+<OG url="https://github.com/wojtekmaj/react-lifecycle-methods-diagram" />
+
+#### マウント
+コンポーネントのインスタンスが作成されて DOM に挿入される時、以下のメソッドが次の順序で呼び出されます。
+
+- constructor()
+- static getDerivedStateFromProps()
+- render()
+- componentDidMount()
+
+#### 更新
+props や state の変更によって発生します。
+コンポーネントが再レンダリングされるときに、以下のメソッドが次の順序で呼び出されます。
+
+- static getDerivedStateFromProps()
+- shouldComponentUpdate()
+- render()
+- getSnapshotBeforeUpdate()
+- componentDidUpdate()
+
+#### アンマウント
+コンポーネントが DOM から削除されるときに呼び出されます。
+
+- componentWillUnmount()
+
+#### エラーハンドリング
+任意の子コンポーネントのレンダリング中、ライフサイクルメソッド内、またはコンストラクタ内でエラーが発生したときに呼び出されます。
+
+- static getDerivedStateFromError()
+- componentDidCatch()
+
+#### それぞれのメソッドの解説
+長くなりそうなので省略します。
+
+こちらで詳しく解説されていますのでご参照ください。
+<OG url="https://ja.reactjs.org/docs/react-component.html" />
+<OG url="https://qiita.com/Julia0709/items/3c3fc8d29fd2e56ed7a9" />
+
+### React Hooks
+<OG url="https://ja.reactjs.org/docs/hooks-intro.html" />
+
+React 16.8 より React Hooks という機能が導入されました。
+これにより、今までクラスコンポーネントでしか使うことのできなかった state や ライフサイクルなどの機能を、関数コンポーネントへ付与できるようになりました。
+`use〇〇`という名称が特徴です。
+
+#### フックのルール
+フックのルールとしては、以下の2つがあります。
+- フックは関数の**トップレベル**のみで呼び出すこと（ループや条件分岐、ネストした関数の中では呼び出さない）
+- フックは React の**関数コンポーネントの内部**もしくは**カスタムフック**の内部でのみ呼び出すこと
+
+これらのルールを強制するための ESLint ルールがあるため、それを利用すると変な使い方をせずにすみます。
+（Create React App で作った環境の場合は、react-scripts の依存関係として導入されています）
+<OG url="https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/README.md" />
+
+#### フックの種類
+<OG url="https://ja.reactjs.org/docs/hooks-reference.html" />
+
+フックだけでも記事を書けるくらいのボリュームなので、ここでは簡単な紹介のみ記載します。
+基本的には、最後の3つはあまり使いません。
+
+- useState：state 機能を提供するフック（現在の state の値と、state を更新するための関数を返す）
+- useEffect：副作用のためのフック（マウント時・アンマウント時の処理、依存配列にある特定の値変更を検知して特定の処理実行など）
+- useContext：コンテクスト（props を使わず、コンポーネント間でデータを共有できるもの）オブジェクトを受け取り、そのコンテクストの現在値を返すフック
+- useReducer：useState の代替となるフック（より複雑な state ロジックがある場合などに有効）
+- useCallback：メモ化されたコールバックを返すフック（依存配列にある値が変化した時のみ再生成するようにするため、パフォーマンス最適化に活用）
+- useMemo：メモ化された値を返すフック（計算結果などをメモ化。依存配列にある値が変化した時のみ再計算するようにするため、パフォーマンス最適化に活用）
+- useRef：ミュータブルな ref オブジェクトを返すフック（特定の DOM 要素へのアクセスや、置き換え可能な値を保持に使える）
+- useImperativeHandle：親コンポーネントから渡された ref をカスタマイズするフック（ref を通して、子コンポーネントで定義した関数を親コンポーネントから呼び出すのに使える）
+- useLayoutEffect：useEffect と類似しているが、呼び出されるタイミングが微妙に異なるフック（基本的には useEffect を使うのを推奨している）
+- useDebugValue：React DevTools でカスタムフックのラベル表示ができるフック
+
+項の初めに以下のように書きました。
+> 今までクラスコンポーネントでしか使うことのできなかった state や ライフサイクルなどの機能を、関数コンポーネントに付与できるようになりました。
+
+クラスコンポーネントで使える機能が関数コンポーネントでも使えるというのは、おおよそ間違ってはいないのですが、厳密には微妙に仕様が異なる部分もあることに注意です。
+詳細は公式ドキュメントを読んでみてください。
+
+#### カスタムフック
+<OG url="https://ja.reactjs.org/docs/hooks-custom.html" />
+
+フックは、自分で独自のものを作ることも出来ます。
+
+- `use〇〇`の命名規則
+- カスタムフックのトップレベルで他のフックを呼び出せる
+
+これ以外は、通常の関数と同じです。
+
+コンポーネントファイルにロジックを書くとごちゃごちゃしがちなので、カスタムフックに処理を切り出して、そのロジックを使いたいコンポーネントで適宜呼び出すという使い方をします。
+
+### TypeScript での React
+現在、新たに React アプリを作成するとすれば、TypeScript を使うのがデファクトになっているような印象を受けます。
+自分も、この記事を最初に投稿した頃は JavaScript を使用していましたが、現在は TypeScript をすっかり使うようになりました。
+
+各種型定義が必要になるので、慣れないうちは面倒に感じることもあるでしょう。
+しかし、型定義がある分、強力な入力補完や型補完が効くようになります。
+とても心強いものになってくれることでしょう。
+
+TypeScript での React について、ここでは少しだけ紹介します。
+
+#### 関数コンポーネントの型定義
+`FC`もしくは`VFC`を使います。
+`FC`は、関数コンポーネントの型インタフェース`FunctionComponent`のエイリアス。
+`VFC`も同様に、関数コンポーネントの型インタフェースである`VoidFunctionComponent`のエイリアス。
+
+その違いをざっくりいうと、暗黙的に children props を許容しているかです。
+
+```tsx
+const MyButton: FC = ({ children }) => {
+  return (
+    <button>{children}</button>
+  )
+}
+```
+
+```tsx
+const MyButton: VFC = () => {
+  return (
+    <button>VFC Button</button>
+  )
+}
+```
+
+独自 props の型定義をするとなると以下のような感じになるのですが...。
+`FC`の場合、デフォルトで children props の定義が含まれているので、独自で children props の型定義を追加しなくても受け取って使えます。
+
+```tsx
+type Props = {
+  title: string;
+}
+
+const TextBlock: FC<Props> = ({ title, children }) => {
+  return (
+    <div>
+      <h2>{title}</h2>
+      <p>{children}</p>
+    </div>
+  )
+}
+```
+
+もし children を使用しない場合でも children を許容する形となるため、それってどうなの？
+という議論がありまして。
+元々、`FC`から children を外す動きがあったようで、将来的になくす予定のようです。
+ただ、破壊的な変更となってしまうため、移行措置として children を含まない`VFC`が導入されたとのこと。
+
+現状では`VFC`を使用して、children を使いたい時は明示的に型定義を追加。
+`FC`から children がなくなったのちに、`VFC`だったものを`FC`に置換する。という流れがよさそうです。
+
+<OG url="https://qiita.com/tttocklll/items/c78aa33856ded870e843" />
+<OG url="https://ikesyo.hatenablog.com/entry/2020/12/18/141737" />
+
+ちなみにかつては`SFC`（Stateless Functional Component）というものが使われていましたが、現在は非推奨となっています。
+
+#### 既定の型を使った型定義
+props の型定義をするにあたって、既存要素の型定義や、既存コンポーネントの型定義を使いたい時があります。
+そんな時は`ComponentPropsWithRef`か`ComponentPropsWithoutRef`で取得できます。
+両者の違いがよくわかってなかったのですが、どうも ref を含むかどうかの違いのようです（前者が ref を含む）
+
+```tsx
+import { VFC, ComponentPropsWithRef } from 'react';
+
+// button 要素が持つ props を取得
+type Props = ComponentPropsWithRef<'button'>;
+
+const MyButton: VFC<Props> = ({ children, ...props }) => {
+  return (
+    <button {...props}>{children}</button>
+  )
+}
+```
+
+```tsx
+// コンポーネントの props 型定義取得
+type TestButtonProps = ComponentPropsWithRef<typeof MyButton>;
+```
+
+特定のプロパティを除外する`Omit`や、特定のプロパティを抽出する`Pick`などと組み合わせると、より柔軟な型定義ができます。
+`&`で独自のプロパティを追加して拡張したり。
+
+その他、style 属性の型定義について触れてみます。
+style 属性の型定義としては`CSSProperties`となっているので、個別の CSS プロパティの型定義を使う際は、そのプロパティにアクセスすれば OK です。
+
+```tsx
+import { CSSProperties } from 'react';
+
+type Props = {
+  width: CSSProperties['width'];
+  textAlign: CSSProperties['textAlign'];
+}
+```
+
+---
+
+React の基礎としてどこまで書くか迷いましたが、公式チュートリアルで扱われたものを中心に今回書きました。
+続編として、フォームや Router、Recompose や Redux、React Hooks などについて書いていけたらと。
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --> */}
+
+※2021/09/13 追記
+この記事は、自分が React 記事を書くようになったきっかけの記事なので、少々思い入れがありまして。
+当時の React 歴としては、3か月程度。
+今の自分として読み返すと、色々説明不足なところあるなぁとか思いながら、今回記事内容を見直してみました。
+それだけ、当時と比べて成長できているということかもしれませんね。
+
+{/* <!-- textlint-enable --> */}
+
+引き続き、React 周辺の知識を深めていきますー。
+
+## 参考リンクまとめ
+- [React - Doc](https://ja.reactjs.org/docs/getting-started.html)
+- [React - Tutorial](https://ja.reactjs.org/tutorial/tutorial.html)
+- [GitHub - oukayuka/Riakuto-StartingReact-ja3.1 ※書籍](https://github.com/oukayuka/Riakuto-StartingReact-ja3.1)
+- [GitHub - react-lifecycle-methods-diagram](https://github.com/wojtekmaj/react-lifecycle-methods-diagram)
+- [Stateless な React Component の記法をまとめてみた](https://qiita.com/kotaroito/items/e36ebac185b6b1d8538d)
+- [React(v16.4) コンポーネントライフサイクルメソッドまとめ](https://qiita.com/Julia0709/items/3c3fc8d29fd2e56ed7a9)
+- [【React+TypeScript】React Hooks useImperativeHandleのサンプル](https://qiita.com/otanu/items/994fdf9d8fb7327d41d5)
+- [【TypeScript】React.VFCとは何ぞや](https://qiita.com/tttocklll/items/c78aa33856ded870e843)
+- [Reactコンポーネントの定義にFCではなくVFCを使う](https://ikesyo.hatenablog.com/entry/2020/12/18/141737)

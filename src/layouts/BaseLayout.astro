@@ -23,24 +23,24 @@ const isMarkdownPage = markdownHeadings?.length !== 0;
 ---
 
 <!DOCTYPE html>
-<html lang="ja" class="h-full">
+<html lang="ja">
   <head>
     <BaseHead title={title} description={description} />
   </head>
 
   <body
-    class="h-full flex flex-col break-words bg-slate-100 text-left font-sawarabi leading-6 text-slate-800"
+    class="break-words bg-slate-100 text-left font-sawarabi leading-6 text-slate-800"
   >
-    <div id="base-contents" class="min-h-full flex flex-col">
+    <div id="base-contents">
       <Header noTopHeading={noTopHeading} isMarkdownPage={isMarkdownPage} />
-      <main class="flex-shrink-0 flex-grow-1 flex-basis-auto">
+      <main class="min-h-[93.5vh]">
         <div class="my-8">
           <div class="mx-auto flex px-2 container sm:px-4">
             <div class="hidden place-self-auto lg:block">
               <SideBar markdownHeadings={markdownHeadings} />
             </div>
             <div
-              class="max-w-full flex-grow-1 overflow-x-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6"
+              class="max-w-full flex-grow-1 overflow-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6"
             >
               <slot />
             </div>

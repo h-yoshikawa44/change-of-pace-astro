@@ -1,0 +1,117 @@
+---
+title: "Netlifyでホスティングしているサイトに独自ドメインを設定する"
+description: "ドメイン取得後、Netlifyでホスティングしているサイトに独自ドメインを設定する手順"
+pubDate: "2019-07-09"
+updatedDate: "2020-04-14"
+category: "tool-and-service"
+tags: ["ブログ", "Netlify"]
+---
+
+当ブログも独自ドメインを設定しましたー。
+設定方法をメモしておきます。
+
+※2020/4/11 Google Domains のパターンも追記しました。
+
+
+## 前提
+- すでにドメインを取得済み（今回はお名前.com or Google Domains）
+- Netlify でホスティング
+
+## 設定
+### Netlify 側
+1. Overview 画面で Domain Settings を選択
+2. Domain Management → Domains → Custom Domains へ
+3. Add domain alias を選択して、取得したドメインを設定
+
+すると、ドメイン一覧で設定したドメインが灰色で表示されます。
+（サブドメイン無しのドメインを指定した場合は、サブドメインに www が指定されたドメインも自動的に追加されるそうです）
+
+一緒に表示されている`Check DNS Configration`を選択すると、DNS レコードの設定の仕方が確認できます。
+
+こんな感じ。
+```
+changeofpace.site ALIAS changeofpace.netlify.com.
+
+changeofpace.site A 104.198.14.52
+```
+上記2つの設定方法があるので、このどちらかを設定すれば OK です。
+あとで DNS 設定をする際に使用します。
+
+**※2020/4/11追記**
+2020/4/14より、**Netlifyドメインが`〇〇.netlify.com`から`〇〇.netlify.app`に移行**されます。
+そのため、これ以降の場合は確認できる情報も`.app`の方になっているかと思われますので、適宜置き換えてください。
+（`.com`の方にアクセスした場合でも、`.app`の方にリダイレクトするようなので使えなくなるというわけではないようです）
+
+また、サブドメインに関しても同様に確認可能です。
+こちらも後で一緒に設定します。
+
+一例。
+```
+www CNAME changeofpace.netlify.com.
+```
+
+### DNS 側
+#### お名前.com の場合
+1. ログインして、トップ画面から DNS タブへ
+
+2. ドメインの DNS 関連機能設定を選択して次へ
+
+3. ドメイン一覧から、設定するドメインを選択して次へ
+<img src="/screenshots/2019/custom-domain/domain-list.png" width="80%" alt="お名前.comでのドメイン一覧" />
+
+4. DNS レコード設定を利用するの設定するを選択
+<img src="/screenshots/2019/custom-domain/domain-setting.png" width="80%" alt="お名前.comのドメイン設定画面" />
+
+DNS レコードを設定できる画面になります。
+ここで先ほど Netlify 側で確認したレコードを追加していきます。
+
+自分の場合、A レコードと CNAME レコードを追加しました。
+<img src="/screenshots/2019/custom-domain/setting-domain-list.png" width="80%" alt="お名前.comで設定したレコード一覧" />
+
+**※2020/4/11追記**
+2020/4/14以降に設定する場合は、必要に応じて`.app`の Netlify ドメインの方に置き換えて設定してください。
+
+#### Google Domains の場合
+1. ログインして、サイドバーのマイドメインへ
+2. ドメイン一覧から、設定するドメインを選択
+3. サイトバーの DNS を選択
+4. 一番下のカスタム リソース レコードへ
+
+ここで DNS レコードを設定できます。
+画像は以下の内容で A レコードと CNAME レコードを追加した例です。
+
+```
+changeofpace.site A 3600 104.198.14.52
+
+www.changeofpace.site CNAME 3600 changeofpace.netlify.com
+```
+
+<img src="/screenshots/2019/custom-domain/custom-resource.png" width="80%" alt="Google Domainsで設定したレコード一覧" />
+
+※2020/4/14以降に設定する場合は、必要に応じて`.app`の Netlify ドメインの方に置き換えて設定してください。
+
+## 設定後
+設定した DNS 設定が反映されるまで少し時間がかかります。
+反映されると Netlify 側で灰色表示だったドメインが、青緑色になって`Check DNS Configration`表示が消えます。
+<img src="/screenshots/2019/custom-domain/netlify-setting-domain.png" width="80%" alt="Netlifyで設定したドメイン" />
+
+DNS 設定が反映されると HTTPS 対応も自動で行ってくれます。
+こちらもしばらく時間がかかりますが、設定が終わると以下のような画面になります。
+(Domain Management → Domains → HTTPS)
+<img src="/screenshots/2019/custom-domain/netlify-https.png" width="80%" alt="NetlifyのHTTPS対応画面" />
+
+これで設定は終了です。
+ブラウザで設定したドメインにてちゃんとページが表示されるか確認してみましょう。
+
+---
+
+元々、独自ドメイン設定は後回しにしようかなと思っていたのですが、思い付きで設定してしまいました。
+そんなに難しいこともなく、Netlify 側で案内が表示されるのは親切ですね。
+HTTPS 対応も自動で行ってくれて楽ちんでした。
+
+独自ドメイン設定したら検索にも引っかかるようになるのかな...？
+SEO に関しては全然よくわからないので、これから勉強です。
+
+## 参考リンクまとめ
+- [Netlifyにお名前.comで取得した独自ドメインを設定する](https://qiita.com/don-bu-rakko/items/8eb30c7e9a3f9531ba16)
+- [Netlify カスタムドメインを設定する](https://qiita.com/NaokiIshimura/items/64e060ccc244e38d0c15)

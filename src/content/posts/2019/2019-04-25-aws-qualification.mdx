@@ -1,0 +1,173 @@
+---
+title: "今年の目標 AWS資格取得"
+description: "AWS資格を取得するためにやっている勉強方法などを展開"
+pubDate: "2019-04-25"
+updatedDate: "2019-04-25"
+category: "qualification"
+tags: ["AWS"]
+---
+
+こんにちは、現在も体調不調が続いているよしです。
+なかなか勉強が捗ってないですが、今年の目標としてAWSの資格の勉強中。
+まずは3つの資格に挑戦する予定です。
+
+import OG from '@/components/OG.astro'
+
+## AWSの資格
+<OG url="https://aws.amazon.com/jp/certification" />
+
+### 種類
+次のとおり、AWS の資格は全部で11あります。
+
+<img src="/screenshots/2019/aws-qualification/aws-qualification-list.png" width="100%" alt="AWS資格の種類" />
+
+この中で、一番易しいものとして「クラウドプラクティショナー」という資格があるのですが、それには挑戦せず、その上のアソシエイトレベルの資格に挑戦したいと思っています。
+
+- ソリューションアーキテクト
+- ディベロッパー
+- SysOps アドミニストレータ
+
+の3つです。
+
+この中だと、ソリューションアーキテクトを最初に取るのがいいらしいと聞いて、ここから挑戦することに。
+
+### 勉強する前の自分の知識
+案件で Lambda や EC2 などの一部サービスを使用した経験があった程度。
+一から AWS でインフラ構築とかの経験はありませんでした。
+
+## 対策勉強
+
+自分が今のところ行った勉強としては、主に以下の３つです。
+
+### Udemy - 手を動かしながら2週間で学ぶ AWS基本から応用まで
+**※2019/04/30で新規購入停止になりました**
+
+AWS の初学者向けの講座で、特別資格に対しての講座ではありませんでしたが、よく使われるサービスを学ぶことができました。
+AWS に少し触れた経験がある程度で、勉強するにしてもどこから？という状態だったので、受講してよかったです。
+勉強はじめの頃って、知らない用語やサービス名が頻出して混乱しがち...。講座に沿って進めれば混乱も少ないので助かりました。
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-mixed-period --> */}
+
+この講座で解説している主なサービス
+- VPC
+- Auto Scaling
+- EC2
+- RDS
+- ELB（Elastic Load Balancing）
+- S3
+- Route 53
+- IAM
+- CloudWatch
+- CloudFront
+- ElastiCache
+- SES（Simple Email Service）
+- SQS（Simple Queue Service）
+- CodeCommit
+- CodeBuild
+- CodeDeploy
+- CodePipeline
+- CloudFormation
+
+{/* <!-- textlint-enable --> */}
+
+### Amazon Web Services 完全ソリューションガイド
+<OG url="https://bookplus.nikkei.com/atcl/catalog/16/258900/" />
+
+「いまの時代、AWS でどのようにシステムを構築するか」をテーマにまとめられた本です。
+インフラ、サーバ構築、システム管理などが解説されています。
+少し情報が古くなっているところもありましたが、実際の AWS コンソール画面の写真や、図も多く。
+こういう事例ではこういった対応ができるといった形式で解説されていて、わかりやすかったです。
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-mixed-period --> */}
+
+解説している主なサービス
+- API Gateway
+- Auto Scaling
+- CloudFormation
+- CloudTrail
+- CloudWatch
+- Config
+- DynamoDB
+- EBS（Elastic Block Store）
+- EC2
+- ELB（Elastic Load Balancing）
+- Gracier
+- IAM
+- KMS（Key Management Service）
+- RDS
+- Route 53
+- Lambda
+- S3
+- VPC
+
+{/* <!-- textlint-enable --> */}
+
+### 徹底攻略 AWS ソリューションアーキテクト - アソシエイト教科書
+<OG url="https://book.impress.co.jp/books/1118101069" />
+
+通称、黒本と呼ばれるシリーズの本です。
+以前、Java の資格勉強をしていたときも、このシリーズの問題集にとても助けられていました。
+なので、出版されると知って即購入することを決めました（笑）
+また、AWS の資格はこれまで対策本がほとんど出版されておらず、出版されているものも少し情報が古くなってきていることも購入の理由でした。
+
+取り扱っているサービスも多く、サービスの概要から、高可用アーキテクチャ、パフォーマンス、セキュリティ設計、コスト最適化などが解説されています。
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-mixed-period --> */}
+
+解説している主なサービス
+- API Gateway
+- Auto Scaling
+- CloudFront
+- CloudTrail
+- CliudWatch
+- Data Pipeline
+- Direct Connect
+- DynamoDB
+- EBS（Elastic Block Store）
+- EC2
+- ElastiCache
+- ELB（Elastic Load Balancing）
+- EMR
+- Glacier
+- IAM
+- Kinesis
+- Kinesis Data Firehose
+- Kinesis Data Streams
+- Lambda
+- RDS
+- Redshift
+- Route 53
+- S3
+- SNS（Simple Notification Service）
+- SQS（Simple Queue Service）
+- VPC
+
+{/* <!-- textlint-enable --> */}
+
+### これからどうするか
+AWSの資格を調べていると、合格した方の記事とかよく見かけるんですよね。短期間で合格した方もおられてすごいなぁと思いながら、勉強方法を参考にさせていただいてます。
+
+<OG url="https://datumstudio.jp/blog/aws%E8%AA%8D%E5%AE%9A%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%88%E3%82%A2%E3%82%BD%E3%82%B7%E3%82%A8%E3%82%A4%E3%83%88" />
+
+などなど。
+
+<OG url="https://aws.amazon.com/jp/whitepapers" />
+<OG url="https://aws.amazon.com/jp/aws-jp-introduction" />
+AWS ホワイトペーパーとか、AWS 活用資料集も参考になるのですが、量が多くてあまり見れてません...。
+が、少しずつ見ていこうかなと。
+
+黒本についてきた模試では半分くらいしか正答できてなかったので、あともう少しでしょうか。
+どうも合格ラインが公開されていないらしいのですが、他の資格のことを考えると7割ほどは正答できないとダメな気がしています。
+黒本復習とか地道に頑張っていきます。
+
+---
+
+体調がなかなか安定しないため、いまいち受験の踏ん切りがつきませんが、まぁいずれ安定してくれると信じて。
+無事合格したら、また記事書こうかな。
+
+## 参考リンクまとめ
+- [AWS 認定資格](https://aws.amazon.com/jp/certification/)
+- [AWS ホワイトペーパー](https://aws.amazon.com/jp/whitepapers/)
+- [AWS 活用資料集](https://aws.amazon.com/jp/aws-jp-introduction/)
+- [業務経験ゼロから2週間でAWS認定ソリューションアーキテクトアソシエイトを取得した方法](https://datumstudio.jp/blog/aws%E8%AA%8D%E5%AE%9A%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%88%E3%82%A2%E3%82%BD%E3%82%B7%E3%82%A8%E3%82%A4%E3%83%88)
+- [AWS認定ソリューションアーキテクト・アソシエイトを1週間で合格できた対策（必勝法）](https://takulog.info/how-to-get-aws-solution-architect-associate/)

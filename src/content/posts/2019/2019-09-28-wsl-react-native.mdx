@@ -1,0 +1,230 @@
+---
+title: "WSLでReact Native + Expo環境を作ろう"
+description: "WSLでExpoを使用して、React Native環境及びエミュレータ環境を作成する手順"
+pubDate: "2019-09-28"
+updatedDate: "2019-10-09"
+category: "develop"
+tags: ["開発環境", "WSL", "Android Studio", "JavaScript", "React Native", "Expo"]
+---
+
+前回、Docker で React Native 環境を作成した記事 を Qiita で書いて多くの方に見ていただけたようでした。
+ただ、結局ホットリロードがうまく働かない、エミュレータ環境との連携がうまくいかない。等、使い勝手がイマイチだったので WSL で環境を作り直しました。
+
+※この記事は [Qiita](https://qiita.com/h-yoshikawa44/items/610ffea888f13275cde8) からの転載です。
+前回の記事：[DockerでReact Native環境作成から、Expo Clientで実機確認するまで](/posts/2019-09-14-docker-react-native)
+
+基本的な作成手順は一緒なので内容が重複するところもありますが、エミュレータに関する記述も少しあわせて書いておきます。
+
+import OG from '@/components/OG.astro'
+
+## 前提
+- Node.js をインストール済み（自分は anyenv + nodenv でいれてます）
+- npm or yarn コマンドが実行できる
+
+## 事前準備
+React Native の開発支援サービスである Expo を使用します。
+Expo に関する説明は前回も書いたので省略します。
+
+### Expo アカウントを作成
+<OG url="https://expo.io" />
+<img src="/screenshots/2019/wsl-react-native/expo.png" width="80%" alt="Expoの公式サイト トップ画面" />
+
+1. [expo.io](https://expo.io/)にいき、「Create an account」を選択。
+2. e-mail、ユーザ名、パスワードを入力して「Create your account」を選択。
+
+### Expo Client をインストール
+<img src="/screenshots/2019/wsl-react-native/expo-client.png" width="40%" alt="Expo ClientのApp Store画面" />
+
+1. 使用する iOS/Android 端末に App Store / Google Play からインストール
+<OG url="https://apps.apple.com/jp/app/expo-client/id982107779" />
+<OG url="https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja" />
+2. 作成した Expo アカウントでログインしておく。
+
+### Expo CLI のインストール
+npm もしくは yarn でインストールします。
+
+```bash
+# npm
+npm install -g expo-cli
+
+# yarn
+yarn global add expo-cli
+```
+
+## Expo プロジェクト
+### 作成
+app の部分は任意の Expo プロジェクトフォルダ名を指定します。
+
+```bash
+expo init app
+```
+テンプレートを選択します。
+
+```bash
+# expo init app
+? Choose a template: (Use arrow keys)
+  ----- Managed workflow -----
+❯ blank                 a minimal app as clean as an empty canvas
+  blank (TypeScript)    same as blank but with TypeScript configuration
+  tabs                  several example screens and tabs using react-navigation
+  ----- Bare workflow -----
+  minimal               bare and minimal, just the essentials to get you started
+  minimal (TypeScript)  same as minimal but with TypeScript configuration
+```
+Expo プロジェクトの表示名を聞かれます。
+
+```bash
+? Choose a template: expo-template-blank
+? Please enter a few initial configuration values.
+  Read more: https://docs.expo.io/versions/latest/workflow/configuration/ ‣ 0% completed
+ {
+   "expo": {
+     "name": "<The name of your app visible on the home screen>",
+     "slug": "app"
+   }
+ }
+```
+yarn を使ってパッケージをインストールするか聞かれます。
+Y でインストール実行。（n を選択すると npm でパッケージをインストールします）
+
+```bash
+? Yarn v1.17.3 found. Use Yarn to install dependencies? (Y/n)
+```
+これで Expo プロジェクトのひな型が作成されました。
+ちなみに Expo プロジェクト作成後のディレクトリ構成は以下のようになります。
+
+```
+例
+ReactNative（大元のプロジェクトフォルダ）
+└ app（Expo プロジェクトフォルダ）
+   ├ .expo
+   ├ .expo-shared
+   ├ assets
+   ├ node_moodules
+   ├ .gitignore
+   ├ .watchmanconfig
+   ├ App.js
+   ├ app.json
+   ├ babel.config.js
+   ├ package.json
+   └ yarn.lock
+```
+
+### 起動
+#### 環境変数
+Expo サーバ起動時の IP を設定します。
+デフォルトでは Ubuntu の方の IP を使用し、CONNECTION を LAN で接続するため、Expo Client から接続できません。
+（一応、サーバ起動後に CONNECTION を Tunnel にすることで接続は可能です）
+
+- Ubuntu側で以下を`~/.profile`など各種 profile のいずれかに追記
+
+```bash
+export REACT_NATIVE_PACKAGER_HOSTNAME=(Windows側のIP)
+```
+
+- 各種 profile の読み込み
+
+```bash
+# 例
+source ~/.profile
+```
+
+#### Expo サーバ起動
+以下のいずれかで Expo サーバとして起動。
+
+```bash
+expo start
+
+npm start
+
+yarn start
+```
+しばらくするとQRコードが表示されるとともに、Expo DevTools（localhost:19002）がブラウザで自動的に立ち上がります。
+<img src="/screenshots/2019/wsl-react-native/expo-start.png" width="80%" alt="expo start時のQR表示画面" />
+
+## 動作確認
+### 実機確認
+Expo サーバ起動時に表示された QR を、iOS/Android 端末で読み込むことで、Expo Client 起動。ビルド開始。
+
+なお、注意点として、**Expo サーバになる PC と iOS/Android 端末は同じネットワークにつないでいる必要があります。**
+しばらくしてビルドが終わると初期ガイドが表示されます。
+<img src="/screenshots/2019/wsl-react-native/app-guide.png" width="40%" alt="Expoアプリのガイド画面" />
+
+ガイドを消すと、Expo アプリの画面が表示されます。これが実行結果になります。
+<img src="/screenshots/2019/wsl-react-native/app-preview.png" width="40%" alt="Expoアプリの実行結果画面" />
+
+なお、この状態でコードを変更すると、即座に再読み込みが走り画面に反映されます。
+ライブリロードが走っているそうです（ホットリロードとの違いがよくわかってません）
+
+### エミュレータでの確認
+Windows なので、Android のエミュレータのみを書いておきます。
+
+#### Android Studio のインストール
+<OG url="https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMhT4FlcbucI9A6orIx6JaS8MGdt-v1Pj7FM3rTiPk6l9J7pSnvrWaBoCf9cQAvD_BwE&gclsrc=aw.ds" />
+<img src="/screenshots/2019/wsl-react-native/android-studio.png" width="80%" alt="Android Studioの公式サイト トップ画面" />
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+1. 公式からダウンロード。
+2. ダウンロードしたインストーラを起動して、インストール（少し時間がかかります）
+3. インストールした Android Studio を起動
+  - 初回はセットアップウィザードがあるので、案内に沿って進めていきます
+  - 必要に応じてインストールする SDK を選択
+  （`Android SDK Build-Tools`や`Android Emulator`、`Android SDK Platform-Tools`、`Android SDK Tools`などは最初からチェックが入っているかと思われます）
+
+あとから SDK を追加したい場合は、トップ画面の右下の「Configure」→「SDK Manager」から SDK の一覧画面へ行けます。
+
+{/* <!-- textlint-enable  --> */}
+
+#### 環境変数の設定
+1. Android Studio のトップ画面の右下の「Configure」→「SDK Manager」から SDK の一覧画面へ
+
+2. Android SDK Location を控えておく
+
+3. 環境変数を追記
+Windows のシステム環境変数に追記します。
+
+```
+ANDROID_SDK ... (※2でコピーしたパス)
+PATH ... %ANDROID_SDK%\emulator と %ANDROID_SDK%\pratform_tools を追加
+```
+
+4. `emulator`コマンドと`adb`コマンドが使えるか確認
+
+#### Virtual Deviceの用意
+1. Android Studioトップ画面の「Configure」→「AVD Manager」を選択
+
+2. 「Create Virtual Device」を選択
+
+3. デバイスを選択して、システムイメージを選択して作成
+
+#### エミュレータの起動
+1. Android Studioトップ画面の「Configure」→「AVD Manager」からデバイス一覧へ
+
+2. Actions のプレイボタンを選択して起動
+
+なお、コマンドでエミュレータを起動する場合は以下のコマンドでいけます。
+
+```bash
+# デバイス名の一覧確認
+emulator -list-avds
+
+# 指定デバイスのエミュレータの起動
+emulator -avd (デバイス名)
+```
+
+3. Expo サーバを起動し、Expo DevTools（localhost:19002）の「Run on Android device/emulator」を選択
+初回のみエミュレータに Expo Client のインストールがあります。
+また、エミュレータでも同様に、コードを変更すると再読み込みが走ります。
+
+---
+WSL で無事環境が作れたのはよかったのですが、Expo サーバを起動後にしばらくしてネットが繋がらなくなる？（一応繋がってはいるが、ネット上のページにアクセスできない）状態になるのが謎です...。PCを再起動したら直ります。
+もしかしたら Expo 関係ない可能性がありますが、Expo のサーバ立ち上げたときしかその現象起きないんですよね。これさえなければいいのになぁ。
+↓
+2019/10/09追記
+これについて調べたことを記事に書きました。
+[WSLでexpo startして20～30分後にネットワーク不具合が起こる現象について調べたこと](/posts/2019-10-09-wsl-expo-network)
+
+## 参考リンクまとめ
+- [Expo](https://expo.io/)
+- [Android Studio](https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMhT4FlcbucI9A6orIx6JaS8MGdt-v1Pj7FM3rTiPk6l9J7pSnvrWaBoCf9cQAvD_BwE&gclsrc=aw.ds)
