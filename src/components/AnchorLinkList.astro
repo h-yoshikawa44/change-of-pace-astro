@@ -9,7 +9,7 @@ type Props = {
 const { markdownHeadings } = Astro.props;
 ---
 
-<ul>
+<ul class="mt-2">
   {
     markdownHeadings.map((heading) => (
       <AnchorLinkListItem href={`#${heading.slug}`}>{`${'#'.repeat(
