@@ -97,6 +97,10 @@
     @apply my-5;
   }
 
+  .remark-code-container {
+    @apply my-5 relative;
+  }
+
   .remark-code-title {
     @apply font-hackGen text-xs px-2.5 py-0.5 bg-slate-600 inline-block text-white leading-5 rounded-t-1;
   }
@@ -106,16 +110,12 @@
   }
 
   pre {
-    @apply p-4 relative mb-5;
+    @apply py-5 px-4;
   }
 
   pre,
   code {
     @apply font-hackGen;
-  }
-
-  :not(.remark-code-title) + pre {
-    @apply mt-4;
   }
 
   :not(pre) > code {
@@ -127,11 +127,15 @@
   }
 
   .copy-code-button {
-    @apply text-white text-xs absolute top-0 right-0 py-1 px-3 opacity-0;
+    @apply font-hackGen text-white text-xs absolute top-0 right-0 py-1 px-2 opacity-0;
+  }
+
+  .remark-code-title ~ .copy-code-button {
+    @apply top-[25px];
   }
 
   .copy-code-button:focus,
-  pre:hover > .copy-code-button {
+  .remark-code-container:hover > .copy-code-button {
     @apply opacity-100;
   }
 
