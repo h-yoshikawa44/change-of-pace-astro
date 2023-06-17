@@ -36,7 +36,16 @@ const createCopyButton = (code: HTMLPreElement): HTMLButtonElement => {
   return button;
 };
 
-const codePreCollection = document.querySelectorAll('pre.astro-code');
-codePreCollection.forEach((codePre: HTMLPreElement) => {
-  codePre.appendChild(createCopyButton(codePre));
+const codeContainerCollection = document.querySelectorAll(
+  'div.remark-code-container'
+);
+codeContainerCollection.forEach((codeContainer: HTMLDivElement) => {
+  const childrenList = Array.from(codeContainer.children);
+  // 子の先頭にコードブロックタイトル要素がつく場合があるので、find で pre 要素を探す
+  const codePre = childrenList.find(
+    (children) => children instanceof HTMLPreElement
+  );
+  if (codePre instanceof HTMLPreElement) {
+    codeContainer.appendChild(createCopyButton(codePre));
+  }
 });

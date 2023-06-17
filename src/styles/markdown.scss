@@ -98,7 +98,7 @@
   }
 
   .remark-code-container {
-    @apply my-5;
+    @apply my-5 relative;
   }
 
   .remark-code-title {
@@ -110,7 +110,7 @@
   }
 
   pre {
-    @apply py-5 px-4 relative;
+    @apply py-5 px-4;
   }
 
   pre,
@@ -127,11 +127,15 @@
   }
 
   .copy-code-button {
-    @apply text-white text-xs absolute top-0 right-0 py-1 px-3 opacity-0;
+    @apply font-hackGen text-white text-xs absolute top-0 right-0 py-1 px-2 opacity-0;
+  }
+
+  .remark-code-title ~ .copy-code-button {
+    @apply top-[25px];
   }
 
   .copy-code-button:focus,
-  pre:hover > .copy-code-button {
+  .remark-code-container:hover > .copy-code-button {
     @apply opacity-100;
   }
 
