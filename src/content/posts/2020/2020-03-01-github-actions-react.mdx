@@ -1,0 +1,839 @@
+---
+title: "GitHub ActionsでReact(SPA)アプリをS3にデプロイ（+ CloudFrontのキャッシュクリア）して、Slackに通知するまで"
+description: "GitHub Actionsを使った、React(SPA)アプリの自動デプロイ+Slack通知に挑戦した記録"
+pubDate: "2020-03-01"
+updatedDate: "2021-09-05"
+category: "develop"
+tags: ["GitHub Actions", "S3", "CloudFront", "Slack", 'React']
+---
+
+以前から業務で React を使用していましたが、デプロイは手動でやっていたため、自動化できたらいいなという話をチームでしていました。
+そこで、正式リリースもされた GitHub Actions をせっかくなので使ってみたいなと思い、自動化に挑戦してみました。
+
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/5b130ab87d73bd888bd9) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-10-05-github-actions-react) の方で更新しています。
+
+※2021/09/05追記 全体的に内容を更新しました。
+
+import OG from "@/components/OG.astro"
+
+## GitHub Actions とは？
+<OG url="https://github.co.jp/features/actions" />
+
+ざっくり言うと、GitHub が提供している、ワークフロー自動化機能のことです。
+あるトリガーをきっかけに、あらかじめ定義しておいた処理を自動実行する。
+
+- ビルド
+- 静的解析
+- テスト
+- デプロイ
+
+などといったものを自動化することで、いわゆる CI/CD 環境を構築できます。
+
+はじめはベータ版で公開されていましたが、2019年11月に正式公開されました。
+
+これまで CI/CD 環境を構築するにあたって、 Circle CI などの外部サービスと連携させて行うことが多かったです。
+ですが、この GitHub Actions に登場により、GitHub だけでも構築できるようになりました。
+
+こちらの記事で概要から機能まで幅広く解説されています。
+<OG url="https://knowledge.sakura.ad.jp/23478" />
+
+## 今回構築する構成
+React(SPA) アプリのビルド生成物を S3 バケットに配置。
+その S3 バケットをオリジンとして CDN（CloudFront ディストリビューション）を配置し、そこからコンテンツを配信する
+というシンプルな構成です。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+※インフラ構築するにあたって、AWS CloudFormation や Terraform 等の IaC（Infrastructure as Code）を実現するものを使う方式もありますが、当記事では使用しませんのでご注意ください。
+　また、AWS サービスを使用した Web・モバイルアプリ開発支援ツールである AWS Amplify についても同様に当記事では取り扱いません。
+
+{/* <!-- textlint-enable --> */}
+
+### OAI について
+<OG url="https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html" />
+
+`Origin Access Identity`の略称で、特別な CloudFront ユーザのことを指します。
+S3 バケットへのアクセスを、特定の CloutFront ディストリビューション経由からのみにするために使用するものです。
+
+通常、S3 バケット単体でもコンテンツを静的サイトとして公開する機能を持っており、そのドメインを CloudFront ディストリビューションのオリジンとして設定も可能です。
+しかし、S3 バケット単体でコンテンツを静的サイトとして公開するにあたっては、全てのユーザに S3 バケットへの読み取りアクセス許可を付与する必要があります。
+どんな人でも S3 バケットへ直接アクセスできるようになるわけで、セキュリティやアクセス制御などの問題が生じてきてしまいます。
+
+それを解決するため、特定の CloutFront ディストリビューション経由からのみ、S3 バケットへのアクセスを受け付けるようにするわけです。
+S3 バケット側から見て、どの CloudFront ディストリビューションからのみアクセスを受け付ければいいのか判断するものとして、この OAI が使われます。
+
+## 事前準備
+最初にまずこれらを準備しましょう。
+- AWS アカウント
+- Slack ワークスペース
+- React（SPA）アプリのコード + そのコードを管理している GitHub リポジトリ
+
+## S3 の準備
+GitHub Actions でデプロイする先を用意します。
+マネジメントコンソールで S3 の画面へ。
+
+### バケットの作成
+1. 「バケットを作成」を選択
+2. 一般的な設定
+    - バケット名を入力（全世界で一意の名前である必要があります）
+    - リージョンを選択
+3. このバケットのブロックパブリックアクセス設定
+    - パブリックアクセスをすべてブロックにチェック（デフォルトだとチェック済み）
+4. バケットのバージョニング
+    - 任意でどちらか選択
+5. タグ - オプション
+    - 任意でタグの追加
+6. デフォルトの暗号化
+    - 任意でどちらか選択
+7. 詳細設定
+    - 任意でどちらか選択
+8. 「バケットを作成」を選択
+
+作成したバケットの ARN（`arn:aws:s3:::バケット名`） は、ポリシー作成時に使用するので控えておきましょう。
+バケットのプロパティタブから確認できます。
+また、バケット名も GitHub Actions ワークフロー定義時に使用します。
+
+### 静的サイトとして公開に関して
+S3 にデプロイしたものを直接静的サイトとして公開もできますが、今回は CloudFront を介しての公開とするので**非公開のままで OK** です。
+
+## Cloud Front の準備
+マネジメントコンソールで CloudFront の画面へ。
+
+### ディストリビューションの作成
+最低限の設定のみ記載します。
+その他の項目は、ご自身の環境に応じて設定ください。
+
+1. 「ディストリビューションを作成」を選択
+2. オリジン
+    - オリジンドメイン：AWS オリジンとして、先ほど作成したバケット（`{※バケット名}.s3.amazonaws.com`）を選択
+    - S3 バケットアクセス：「はい、OAI を使用します」を選択
+      - オリジンアクセスアイデンティティ：既存の OAI を選択か、新しく OAI を作成して選択
+      - バケットポリシー：「はい、バケットポリシーを更新します」を選択
+3. デフォルトのキャッシュビヘイビア
+    - ※任意で設定
+4. 関数の関連付け
+    - ※任意で設定
+5. 設定
+    - デフォルトルートオブジェクト：「index.html」と入力
+6. 「ディストリビューションの作成」を選択
+
+これでディストリビューションが作成できました。
+以前は動作するようになるまで15分ほどかかりましたが、問題なければ即座に有効化のステータスになるかと思われます（設定にもよるかも）
+
+ディストリビューションの ARN をポリシー作成で使用するので控えておきましょう。
+`arn:aws:cloudfront::XXXXXXXXXXXX:distribution/{※ディストリビューションID}` のような形式です。
+また、ディストリビューションドメインも併せて確認しておきましょう。
+どちらも一般タブから確認できます。
+
+### 設定項目に関しての補足
+#### S3 バケットアクセスで OAI を使用
+OAI については、[冒頭](#oai-について)に書いた通りです。
+
+バケットポリシーで「はい、バケットポリシーを更新します」を選択することで、連携した S3 バケットのバケットポリシーに以下のものが追記されます。
+このポリシーによって、特定の OAI と紐づく CloudFront ディストリビューションのみ、アクセス許可を付与するようになっているわけです。
+
+```json
+{
+    "Version": "2008-10-17",
+    "Id": "PolicyForCloudFrontPrivateContent",
+    "Statement": [
+        {
+            "Sid": "1",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity {※OAI ID}"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "{S3バケットのARN}/*"
+        }
+    ]
+}
+```
+
+#### デフォルトルートオブジェクト
+ルート階層のオブジェクトとしたいものを指定します。
+今回の場合は「index.html」なので、index.html でアクセスを受け取る感じです。
+
+今回はやっていませんが、S3 バケットを直接静的サイトとして公開する設定にしている場合、その設定の中にもインデックスドキュメントを指定するところがあります。
+これと同様の設定のように思えますが、CloudFront 側でも設定しておく必要がありました（設定しないとブラウザからアクセスしたとき AccessDenied になりました）
+
+## S3 と CloudFront における動作確認
+ここまでで S3 と CloudFront の準備はできたので、試しに手動デプロイをして動作を見てみましょう。
+ビルドして、その成果物をデプロイします。
+
+create-react-app で作成した React アプリの場合は、以下でビルド。
+```bash
+yarn build
+```
+`build`ディレクトリにビルド成果物ができるので、`build`配下のものを作成した S3 バケットにアップロード。
+
+作成した CloudFront ディストリビューションのドメインにアクセスして、React アプリが問題なく動作していれば OK です。
+
+### 補足：S3 のみでの動作確認
+もし CloudFront ディストリビューションのドメインにアクセスしても React アプリが表示されない場合。
+問題個所の切り分けとして、まず S3 バケットへのデプロイ内容が問題ないか確認したい時もあるでしょう。
+
+そういった時、一時的に S3 バケットを**直接**静的サイトとして公開し、動作を確認するのも1つの方法です。
+
+1. 作成したバケットを選択
+2. プロパティタブ → 静的ウェブサイトホスティングの「編集」を選択
+3. 静的ウェブサイトホスティング：「有効にする」を選択
+4. ホスティングタイプ：「静的ウェブサイトをホストする」を選択
+5. インデックスドキュメント：「index.html」を入力
+6. エラードキュメント：任意で指定
+7. 「変更の保存」を選択
+
+静的ウェブサイトホスティングが有効と表示されていれば公開されています。
+ただ、これだけだとバケット（静的サイト）へのアクセスが許可されていないため、エンドポイントにアクセスしても403で弾かれてしまう状態です。
+そのため、ブロックパブリックアクセスの制御と、バケットポリシーでアクセス許可を付与する必要があります。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+ブロックパブリックアクセス (バケット設定)では、以下の2つを一時的に無効化。
+- 「新しいパブリックバケットポリシーまたはアクセスポイントポリシーを介して付与されたバケットとオブジェクトへのパブリックアクセスをブロックする」：バケットポリシーを編集できるようにするため
+- 「任意のパブリックバケットポリシーまたはアクセスポイントポリシーを介したバケットとオブジェクトへのパブリックアクセスとクロスアカウントアクセスをブロックする」：設定したバケットポリシーを介してのパブリックアクセスを受け付けるようにするため
+
+{/* <!-- textlint-emable --> */}
+
+バケットポリシー編集にあたっては、以下のアクセス許可が必要になるので注意です。
+- s3:GetBucketPolicy
+- s3:PutBucketPolicy
+
+アクセス許可タブ → バケットポリシーで「編集」を選択し、ポリシーを追記。
+（すでに記述しているバケットポリシーはどこかに控えておいて、ちゃんと戻せるようにしておきましょう）
+
+指定の S3 バケットコンテンツ全てへ、読み取り許可をする例.
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "{※S3 バケットの ARN}/*"
+        }
+    ]
+}
+```
+
+これでエンドポイントからアクセスして、React アプリが正常に動作するか確認してみましょう。
+問題なければ、**各種設定を戻すことを忘れないように**。
+
+## IAM の準備
+GitHub Actions でデプロイする際に使用する、デプロイ用の IAM ユーザを作成します。
+マネジメントコンソールで IAM の画面へ。
+
+### ポリシーの作成
+1. ポリシー一覧から「ポリシーを作成」を選択
+2. JSON に以下を記述して「次のステップ：タグ」を選択
+   `{}`の部分はこれまで控えたものに適宜置き換えてください。
+3. タグを追加
+    - 任意でタグを追加し、「次のステップ：確認」を選択
+4. ポリシーの確認
+    - 任意の名前と説明を入力して「ポリシーの作成」を選択
+
+2 で記述するポリシーの JSON.
+```json
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+            ],
+            "Resource": [
+                "{※S3バケットのARN}",
+                "{※S3バケットのARN}/*"
+            ]
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:GetDistribution",
+                "cloudfront:GetDistributionConfig",
+                "cloudfront:CreateInvalidation",
+                "cloudfront:ListInvalidations",
+                "cloudfront:GetInvalidation"
+            ],
+            "Resource": "{※CloudFrontディストリビューションのARN}"
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:ListDistributions",
+                "cloudfront:ListStreamingDistributions"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+```
+
+### ユーザの作成
+1. ユーザ一覧から「ユーザを追加」を選択
+2. ユーザ名は任意、アクセスの種類は「プログラムによるアクセス」のみ選択して「次のステップ：アクセス権限」を選択
+3. アクセス許可の設定
+    - 「既存のポリシーを直接アタッチ」を選択
+    - 先ほど作成したポリシーを選択
+    - アクセス権限の境界の設定は任意でどちらかを選択し、「次のステップ：タグ」を選択
+4. タグの追加
+    - 任意（そのまま次のステップでも OK）で追加して、「次のステップ：確認」を選択
+5. 確認して「ユーザの作成」を選択
+6. アクセスキーとシークレットキーを控えておく
+
+## Slack の準備
+GitHub Actions の結果を通知するための Webhook URL を用意します。
+
+### Slack App の作成
+作成時に From scratch と From an app nanifest の2パターンありますが、今回は前者で作成しています。
+
+1. Slack ワークスペースのワークスペース名のところからメニューを開く
+2. ビルド画面へ
+    - ※ワークスペースのオーナーの場合
+    設定と管理 → アプリを管理する → 右上の「ビルド」
+    - ※オーナーでない場合
+    その他管理項目 → アプリを管理する → 右上の「ビルド」
+3. 「Create New App」を選択
+4. 「From scratch」を選択
+    - App Name：任意の名前
+    - Development Slack Workspace：任意のワークスペース
+    - 「Create App」を選択
+
+以下、作成した App の画面で進めます。
+
+### Incomming Webhook URL の作成
+1. Building Apps for Slack の Add features and functionality を開いて、Incomming Webhooks を選択
+2. Activate Incoming Webhooks を ON にして、「Add New Webhook to Workspace」
+3. 投稿するチャンネルを選択して、「許可する」を選択
+
+これで Webhook URL が生成されるので控えておきます。
+投稿を担う Bots もあわせて作成されました。名前やアイコンを変えたければ編集しましょう。
+
+## GitHub の準備
+### React アプリ
+React アプリをリポジトリに push して用意しておきます。
+
+ちなみに自分は`create-react-app`にて作れる雛形でやりました。
+npx や yarn コマンドでサクッと作れますが、自分は yarn を使っているので、以降は yarn コマンドで書いていきます。
+
+```bash
+# TS
+yarn create react-app (アプリ名) --template typescript
+```
+
+それと GitHub Actions の中で ESLint を使いたいので、使いやすいように package.json の scripts に以下を追加しておきます。
+```json
+"scripts": {
+  .
+  .
+  .
+  "lint": "yarn run -s eslint './src/**/*.{js,jsx,ts,tsx}'"
+}
+```
+
+### GitHub Secrets
+GitHub Actions で使用する環境変数を設定します。
+公開したくない秘匿情報などを定義するのに向いており、GitHub Secrets に登録した変数の値は後から確認できないようになっています。
+
+リポジトリの Settings → Secrets で以下の情報を登録しておきましょう。
+
+- AWS_ACCESS_KEY_ID
+- AWS_SECRET_ACCESS_KEY
+- AWS_REGION
+- AWS_S3_BUCKET_NAME
+- SLACK_WEBHOOK_URL
+
+なお、GITHUB_TOKEN については自動で値がセットされるので、設定しなくて大丈夫です。
+
+### GitHub Actions のワークフロー定義ファイル作成
+ワークフロー定義ファイルは yml で記述して、リポジトリルート直下に`.github/workflows/ワークフロー定義ファイル名.yml`で配置します。
+配置する場所さえ合っていれば、ファイル名は何でも OK です。
+
+今回は Lint などのチェックを行うものと、デプロイを行うものとで2種類のワークフローを作成します。
+内容の説明に関しては、[ワークフロー定義ファイルの簡単な解説](#ワークフロー定義ファイルの簡単な解説)を参照ください。
+
+#### Lint などのチェック用ワークフロー例
+ブランチを問わず、push されたら動作するようにしてあります。
+今回は Lint チェックくらいしかやっておらず、もし失敗した時のみ Slack 通知をするようにしています。
+
+```yaml
+name: Develop Check
+on: push
+
+env:
+  project-name: ga-test
+
+jobs:
+  dev-check:
+    name: Lint
+    runs-on: ubuntu-20.04
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.17.3
+
+      - name: Get Yarn Cache Directory Path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-${{ env.project-name }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.project-name }}-
+
+      - name: Package Install
+        run: yarn install
+
+      - name: Lint
+        run: yarn lint
+
+      - name: Slack Notification by NonSuccess
+        uses: 8398a7/action-slack@v3
+        if: success() != true
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow
+          author_name: 'check'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+```
+
+#### デプロイ用のワークフロー例
+workflow_run を使って、main ブランチにおいて、チェック用ワークフローが終わった後、動作するようにしています。
+チェック用ワークフローの成功・失敗問わず動作するため、ジョブの実行条件として事前のワークフローが成功した時という条件を設定。
+
+```yaml
+name: Deploy
+on:
+  workflow_run:
+    workflows:
+      - "Develop Check"
+    branches:
+      - main
+    types:
+      - completed
+
+env:
+  project-name: ga-test
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-20.04
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    timeout-minutes: 5
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.17.3
+
+      - name: Get Yarn Cache Directory Path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Cache Node Modules
+        uses: actions/cache@v2
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-${{ env.project-name }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          restore-keys: |
+            ${{ runner.os }}-${{ env.project-name }}-
+
+      - name: Package Install
+        run: yarn install
+
+      - name: Build
+        run: yarn build
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME }}
+
+      - name: CloudFront Cache Clear
+        run: |
+          CFID=$(aws cloudfront list-distributions --query "DistributionList.Items[].{Id:Id,Origin:Origins.Items[0].DomainName}[?contains(Origin,'${{ secrets.AWS_S3_BUCKET_NAME }}.s3')] | [0].Id" | sed 's/"//g')
+          echo "aws cloudfront create-invalidation ${CFID}"
+          aws cloudfront create-invalidation --distribution-id ${CFID} --paths "/*"
+
+      - name: Slack Notification
+        uses: 8398a7/action-slack@v3
+        if: always()
+        with:
+          status: ${{ job.status }}
+          fields: repo,message,commit,author,action,eventName,ref,workflow
+          author_name: 'deploy'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+```
+
+#### workflow_run イベントの注意点
+この workflow_run イベントによって実行されるワークフローは、**デフォルトブランチ**の内容をベースとして動作することに注意が必要です。
+
+まず、**デフォルトブランチ**上のワークフロー定義ファイルの内容で実行されるということと。
+上記のワークフローの場合、main ブランチで push すれば、チェック用ワークフロー → デプロイ用ワークフロー と動作するようになっているわけですが...。
+例えば、デフォルトブランチが develop だったとすると checkout してくるコードが develop ブランチのものになります。
+そのため、デプロイする内容も develop ブランチのものになるわけです。
+
+デフォルトブランチは develop で運用しているけど、main ブランチの内容をデプロイしたい
+などといった場合は、明示的に参照する ref を指定することで対応できるようです。
+こちらの記事が参考になります。
+
+<OG url="https://blog.kengo-toda.jp/entry/2021/07/06/222400" />
+
+この仕様を理解していないと予期せぬ事故を引き起こす可能性があるので、取り扱いに十分注意しましょう。
+
+#### 補足：node_modules キャッシュの新しいやり方（※2021/10/24）
+setup-node アクションだけで、node_modules のキャッシュ使用定義ができるようになりました。
+使用しているパッケージマネージャに合わせて with.cache を追加するだけで OK。
+こちらの方がすっきりしますね。
+
+```yaml
+- name: Setup Node
+  uses: actions/setup-node@v2
+  with:
+    node-version: 14.17.3
+    cache: yarn
+```
+
+## いざ、GitHub Actions でデプロイ
+今回の定義内容では、 main ブランチに push する（もしくは main ブランチへのプルリクをマージする）ことで、デプロイ用のワークフローまで動作します。
+ちゃんと動作していれば、リポジトリの Actions からワークフローの状況を確認できるようになっているはずです。
+それぞれのステップのログも確認できるので、もしどこかでエラーになって失敗しても原因調査に役立ちます。
+
+無事最後まで成功していれば、CloudFront ディストリビューションドメインからアクセスしてみましょう。
+React アプリが問題なく表示されているでしょうか？
+
+そして、Slack にもちゃんと通知できているでしょうか？
+通知の内容は以下のような感じになります。
+
+成功
+<img src="/screenshots/2020/github-actions-react/github-actions-slack-success.png" width="80%" alt="ワークフロー成功時のSlack通知" />
+
+キャンセル
+<img src="/screenshots/2020/github-actions-react/github-actions-slack-canceled.png" width="80%" alt="ワークフローキャンセル時のSlack通知" />
+
+失敗
+<img src="/screenshots/2020/github-actions-react/github-actions-slack-failed.png" width="80%" alt="ワークフロー失敗時のSlack通知" />
+
+また、プルリクを出した時、そのリクエスト元ブランチのワークフロー実行状況が表示されるようになります。
+<img src="/screenshots/2020/github-actions-react/pull-request.png" width="80%" alt="ワークフロー実行ブランチでのプルリクエスト" />
+
+## ワークフロー定義ファイルの簡単な解説
+<OG url="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions" />
+<OG url="https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions" />
+
+### ワークフロー名
+GitHub の Actions 上では、この名前が表示されます。
+
+```yaml
+# チェック用ワークフロー
+name: Develop Check
+```
+
+```yaml
+# デプロイ用ワークフロー
+name: Deploy
+```
+
+### トリガー
+`on`でトリガーになるイベントを指定。
+指定できるイベントについては以下を参照ください。
+
+<OG url="https://docs.github.com/en/actions/reference/events-that-trigger-workflows" />
+
+```yaml
+# チェック用ワークフロー
+on: push
+```
+これだけだと、全ての push をトリガーとするので、ブランチやタグの指定で絞り込むことも出来ます。
+
+```yaml
+# デプロイ用ワークフロー
+on:
+  workflow_run:
+    workflows:
+      - "Develop Check"
+    branches:
+      - main
+    types:
+      - completed
+```
+workflow_run は他のワークフロー実行をトリガーとするものです。
+
+- workflows：依存させるワークフロー名
+- branches：どのブランチで依存させるワークフローが実行された時か
+- types：実行するタイミング
+  - completed：依存させるワークフローが終了した時（成功・失敗は関係なし）
+  - requested：依存させるワークフローがリクエストされた時
+
+1ファイルのワークフロー定義の中に複数のジョブがあり、その依存関係を定義する際は`needs`で出来ますが、別ファイルのワークフローに依存させたい時はこの workflow_run を使います。
+
+### ワークフローの環境変数
+ワークフロー全体で使用できる環境変数の指定。
+ここで設定したものは`env.〇〇`で使用できます。
+
+```yaml
+env:
+  project-name: ga-test
+```
+
+### ジョブ
+ワークフローで実行するジョブ定義を記述。複数指定可能です。
+
+```yaml
+# チェック用ワークフロー
+jobs:
+  dev-check: # ジョブID
+    name: Lint # ジョブ名
+    runs-on: ubuntu-20.04 # 実行環境
+    timeout-minutes: 5 # タイムアウト時間（分）
+
+    steps:
+      # 各種ステップの定義
+```
+
+```yaml
+# デプロイ用ワークフロー
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-20.04
+    if: ${{ github.event.workflow_run.conclusion == 'success' }} # 実行条件（今回の場合は、事前のワークフローが成功していること）
+    timeout-minutes: 5
+
+    steps:
+      # 各種ステップの定義
+```
+
+実行環境の種類については以下を参照。
+あらかじめ導入されている CLI ツールなども確認できます。
+
+<OG url="https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners" />
+
+どの実行環境にするとしても、なるべくバージョンまで指定した方がいいです。
+latest にしていると、その対象バージョンが更新されたときに予期せず動作しなくなる可能性があるので...。
+
+それとタイムアウト時間も設定しておいた方が無難です。
+ステップ定義ミスで、実行されたコマンドが入力応答待ちのままになるなど止まってしまったときに、どんどん無料枠の時間を食いつぶしてしまうことを避けられます。
+実際の実行時間を計測して、それに少し余裕を持たせるくらいで設定しておきましょう。
+
+`jobs.<job_id>.steps`で、そのジョブで実行するステップ処理を記述していきます。
+
+#### ステップ・リポジトリのチェックアウト
+リポジトリのコードを落としてきます。
+どのブランチの内容を参照するかは、トリガーイベントによって異なることに注意です。
+
+```yaml
+- name: Checkout
+  uses: actions/checkout@v2
+```
+
+`uses`で指定している actions は、あらかじめ実行する処理を定義しているもので、これを使用することでステップを組み立てやすくなります。
+実行環境のバージョンと同様に、このアクションのバージョンもなるべく指定しておいた方がいいです。
+
+#### ステップ・Node.js のセットアップ
+ちなみに Node.js だけでなく、いろんな言語のセットアップ action が提供されています。
+
+```yaml
+- name: Setup Node
+  uses: actions/setup-node@v2
+  with:
+    node-version: 14.17.3
+```
+
+#### ステップ・yarn のキャッシュを格納するディレクトリのパスを取得
+```yaml
+- name: Get Yarn Cache Directory Path
+  id: yarn-cache-dir-path
+  run: echo "::set-output name=dir::$(yarn cache dir)"
+```
+
+#### ステップ・キャッシュの復元もしくは作成
+`key`の完全一致で既存のキャッシュを探し、マッチすればキャッシュを`path`に復元。
+なければ`restore-key`の完全一致で既存のキャッシュを探し、マッチすればキャッシュを`path`に復元。
+さらになければ`restore-key`の部分一致で既存のキャッシュを探し、見つければ最新のキャッシュを`path`に復元。
+
+`key`の完全一致がなかった場合、このワークフローが成功して完了した際にキャッシュを作成します。
+
+今回の場合は key の一部として yarn.lock の内容をハッシュ化しているため、もしその内容に変更があった時に key が変わるようになっています。
+
+```yaml
+- name: Cache Node Modules
+  uses: actions/cache@v2
+  with:
+    path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+    key: ${{ runner.os }}-${{ env.project-name }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+    restore-keys: |
+      ${{ runner.os }}-${{ env.project-name }}-
+```
+
+キャッシュのあるなしで実行時間を比較してみたところ、こんな感じになりました。
+
+キャッシュなし・50s
+<img src="/screenshots/2020/github-actions-react/github-actions-no-cache.png" width="100%" alt="キャッシュなしの場合のワークフロー実行結果" />
+
+キャッシュあり・26s
+<img src="/screenshots/2020/github-actions-react/github-actions-cache.png" width="100%" alt="キャッシュありの場合のワークフロー実行結果" />
+
+#### ステップ・yarn でライブラリのインストール
+
+```yaml
+- name: Package Install
+  run: yarn install
+```
+
+#### ステップ・ESLint で静的解析チェック
+あらかじめ`package.json`に定義しておいた、ESLint 実行コマンドを実行。
+
+```yaml
+- name: Lint
+  run: yarn lint
+```
+
+#### ステップ・yarn でビルド
+ビルドの成果物は`./build`に格納されます。
+
+```yaml
+- name: Build
+  run: yarn build
+```
+
+#### ステップ・AWS Credentials の設定
+元々この記事では以下のアクションを使って、S3 デプロイ + CloudFront のキャッシュクリアを行う方法を紹介していました。
+
+<OG url="https://github.com/opspresso/action-s3-sync" />
+
+2021/09/05 時点で最終更新が 2020/06/05 であることと、内部的に使用されている AWS CLI が1系であることから、記事更新にあたって手動でコマンド実行する形式に変更しました。
+（このアクションで内部的に実行されているコマンドを参考にしています）
+今回使用している実行環境の Ubuntu 20.04 では AWS CLI の2系が導入済みなので、それを使っていきます。
+
+```yaml
+# デプロイ用ワークフロー
+- name: Configure AWS Credentials
+  uses: aws-actions/configure-aws-credentials@v1
+  with:
+    aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    aws-region: ${{ secrets.AWS_REGION }}
+```
+
+#### ステップ・S3 バケットにデプロイ
+ビルド生成物を S3 バケットに同期させる形で反映させています。
+
+```yaml
+# デプロイ用ワークフロー
+- name: Deploy to S3
+  run: |
+    aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME }}
+```
+
+#### ステップ・CloudFront ディストリビューションのキャッシュクリア
+ディストリビューション ID も GitHub Secrets に設定して、そこから使う手もありますが、今回は S3 バケット名から辿って特定する形式にしています。
+特定した ID をそのまま渡すと、余分なダブルクォートがついて`"ディストリビューションID"`というディストリビューション ID でアクセスしに行くため、アクセス許可がないよと弾かれてしまいました。
+そのため、sed を使ってダブルクォートを削除したうえで使用しています。
+
+```yaml
+# デプロイ用ワークフロー
+- name: CloudFront Cache Clear
+  run: |
+    CFID=$(aws cloudfront list-distributions --query "DistributionList.Items[].{Id:Id,Origin:Origins.Items[0].DomainName}[?contains(Origin,'${{ secrets.AWS_S3_BUCKET_NAME }}.s3')] | [0].Id" | sed 's/"//g')
+    echo "aws cloudfront create-invalidation ${CFID}"
+    aws cloudfront create-invalidation --distribution-id ${CFID} --paths "/*"
+```
+
+#### ステップ・Slackに通知
+<OG url="https://github.com/8398a7/action-slack" />
+<OG url="https://839.hateblo.jp/entry/2019/08/16/104624" />
+
+if で通知する条件を指定。
+
+- `success()`：ジョブの前のステップが成功した場合
+- `always()`：ジョブのこのステップが実行された場合
+- `cancelled()`：ワークフローがキャンセルされた場合
+- `failure()`：ジョブの前のステップが失敗した場合、もしくはジョブが失敗した場合
+
+status で指定している `job.status`にはそのジョブの成功、失敗、キャンセルに応じた値が入ります。
+fields は通知内容です。デフォルトでは repo と message のみとなっていますので、お好みで設定。
+
+```yaml
+# チェック用ワークフロー
+- name: Slack Notification by NonSuccess
+  uses: 8398a7/action-slack@v3
+  if: success() != true
+  with:
+    status: ${{ job.status }}
+    fields: repo,message,commit,author,action,eventName,ref,workflow
+    author_name: 'check'
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+```
+
+```yaml
+# デプロイ用ワークフロー
+- name: Slack Notification
+  uses: 8398a7/action-slack@v3
+  if: always()
+  with:
+    status: ${{ job.status }}
+    fields: repo,message,commit,author,action,eventName,ref,workflow
+    author_name: 'deploy'
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # 自動で設定される
+    SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }} # Slack投稿用のWebhook URL
+```
+
+---
+とりあえずデプロイまで無事到達できてよかったのですが、色々検証しながらやっていたら、かなり時間を使ってました(苦笑)
+まぁ、はじめてやることに時間かかるのはつきものでしょうか。
+GitHub Actions を使おうとしている方の何かの参考になれば幸いです。
+
+## 参考リンクまとめ
+- [GitHub Docs - GitHub Actions](https://help.github.com/ja/actions)
+- [GitHubの新機能「GitHub Actions」で試すCI/CD](https://knowledge.sakura.ad.jp/23478/)
+- [GitHub - actions/cache](https://github.com/actions/cache)
+- [GitHub Actionsでキャッシュが使えるようになって嬉しい！](https://qiita.com/ngmr_mo/items/0576bfcea8c4487a6b47)
+- [GitHub - 8398a7/action-slack](https://github.com/8398a7/action-slack)
+- [GitHub Actions(beta)向けにslack通知プラグインを作った](https://839.hateblo.jp/entry/2019/08/16/104624)
+- [GitHub Actions を使って AWS S3 に自動デプロイする](https://blog.honai.me/post/github-actions-aws-s3)
+- [GitHub ActionsでS3にデプロイする！](https://medium.com/anti-pattern-engineering/github-actions%E3%81%A7s3%E3%81%AB%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%99%E3%82%8B-ef58a019aa1e)
+- [CloudFrontエッジキャッシュクリアのみを行うユーザーの作成](https://dev.classmethod.jp/cloud/aws/cloudfront_invalidation_onlyuser/)
+- [AWS S3で静的Webページをホスティングする](https://qiita.com/dogwood008/items/a92abae789f4b0466f38)
+- [CloudfrontにアクセスしたらAccessDeniedでアクセス出来ない](https://blog.putise.com/cloudfront%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%97%E3%81%9F%E3%82%89accessdenied%E3%81%A7%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E5%87%BA%E6%9D%A5%E3%81%AA%E3%81%84/)
+- [CloudFront オリジンアクセスアイデンティティでクロスアカウントなS3オリジンへのアクセスを制限する](https://dev.classmethod.jp/cloud/aws/cloudfront-oai-for-cross-acount-s3/)
+- [【S3】Web アクセス制限いろいろ (CloudFront もあるよ)](https://hacknote.jp/archives/43218/)
+- [CloudFront + S3 で静的サイトを運用する際の注意点](https://qiita.com/ooxif/items/d28b7caf72bf5290588c)
+- [S3のバケットポリシーを書こうとしてもアクセス拒否される件について](https://qiita.com/hiroyuki7/items/611d6e66831523c9ec64)
+- [Check! GitHub Actions: 別のワークフローの実行リクエストまたは完了を契機にワークフローを実行する](https://zenn.dev/dzeyelid/articles/0dc97f76a7f33f2c27ca)
+- [GitHub Actionsのworkflow_runイベントでテストを回すときの要点](https://blog.kengo-toda.jp/entry/2021/07/06/222400)
