@@ -12,7 +12,7 @@ const { noTopHeading = false, isMarkdownPage = false } = Astro.props;
 <header
   class="sticky top-0 z-10 from-brand-start to-brand-end bg-gradient-to-b py-3 lg:static"
 >
-  <div class="mx-auto px-2 color-white container sm:px-4">
+  <div class="mx-auto px-4 color-white container">
     <div class="flex items-baseline">
       {
         noTopHeading ? (
@@ -27,7 +27,9 @@ const { noTopHeading = false, isMarkdownPage = false } = Astro.props;
             <a href="/">{SITE_TITLE}</a>
           </h1>
         )
-      }<p class="ml-4 color-white/75">{SITE_DESCRIPTION}</p>
+      }<p class="ml-4 hidden color-white/75 sm:block">
+        {SITE_DESCRIPTION}
+      </p>
       <div class="ml-auto mt-auto flex lg:hidden space-x-1">
         {
           isMarkdownPage && (
