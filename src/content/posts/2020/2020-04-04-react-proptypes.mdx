@@ -1,0 +1,440 @@
+---
+title: "JS×Reactにおけるpropsの型定義を担うPropTypes入門"
+description: "Reactにおいて必須概念である、コンポーネントのpropsの型チェックやバリデーションを行うPropTypesの使い方まとめ"
+pubDate: "2020-04-04"
+updatedDate: "2022-01-24"
+category: "develop"
+tags: ["JavaScript", "React"]
+---
+
+今回はコンポーネントに渡す props の使用を補助するものである PropTypes について書きました。
+
+import OG from "@/components/OG.astro"
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/bab6845472e4d428732c) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-09-23-react-proptypes) の方で更新しています。
+
+※2021/08/26追記 全体的に少し内容を見直しました。
+※2022/01/24追記 あくまでライブラリの記事であるとわかりやすくするために、記事タイトルを変更しました（旧：React入門 ～PropTypes編～）
+
+## PropTypes とは？
+<OG url="https://ja.reactjs.org/docs/typechecking-with-proptypes.html" />
+<OG url="https://github.com/facebook/prop-types" />
+
+React で登場するコンポーネントは、 props という任意の値を受け取ることができるようになっています。
+受け取ったコンポーネント側でこの props の値を使い、レンダリング内容に変化をつけたり、ロジックを作ったり。
+
+一見、便利な props ではありますが、通常ではどんな値でも受け取ることができてしまいます。
+そのため、props の型補完が効かなかったり。
+誤って想定と違う値を渡してしまうと、予期しない動作をしてアプリがクラッシュする...いったことも起こる可能性があったり。
+
+TypeScript を使用すれば props の型定義ができるため、こういった問題に対応できるのですが...。
+JavaScript を使用している場合は、このことを常に考慮する必要があります。
+
+これを補助するものとして、型定義機能を提供してくれるのが`PropTypes`です。
+元々は React 本体に組み込まれていましたが、バージョン15.5より`prop-types`という別パッケージとして切り分けされました。
+
+## インストール
+```bash
+yarn add prop-types
+```
+
+今回の使用バージョンは以下のとおりです。
+- React：17.0.2
+- prop-types：15.7.2
+
+## 基本的な使い方
+
+```jsx:App.js（コンポーネント呼び出し側）
+import PropsTypesComponent from './PropTypesComponent';
+
+const App = () => {
+  return (
+    <PropsTypesComponent name="太郎" />
+  )
+}
+
+export default App;
+```
+
+```jsx:PropsTypesComponent.js（コンポーネント側）
+import PropTypes from 'prop-types';
+
+const PropTypesComponent = ({ name }) => {
+  return (
+    <h2>Hello {name}</h2>
+  );
+}
+
+PropTypesComponent.propTypes = {
+  name: PropTypes.string
+};
+
+export default PropTypesComponent;
+```
+
+### ライブラリを import
+```jsx
+import PropTypes from 'prop-types';
+```
+
+### props ごとの型定義を記述
+```jsx
+コンポーネント名.propTypes = {
+  props名: PropTypes.型定義
+}
+```
+
+今回の場合.
+```jsx
+PropTypesComponent.propTypes = {
+  name: PropTypes.string
+};
+```
+
+これで props の型定義ができました。
+このコンポーネント呼び出し時に、props の入力補完が効くようになります。
+
+また、自動でバリデーションチェックが行われるようになり、無効な値が渡された場合は DevTools のコンソールに Warning が出力されます。
+上記の例では問題ありませんが、例えば PropsTypesComponent に渡している name の値を「1」など、string 以外の値にしてみます。
+すると、以下のような Warning がコンソールに出力されているはずです。
+
+<img src="/screenshots/2020/react-proptypes/warning.png" width="100%" alt="コンソールに出力されたPropTypesによるバリデーションエラーメッセージ" />
+
+あくまでコンソール上に Warning を出力するだけではありますが、これが出ないようにコーディングすれば、予期せぬ動作を減らすことができるわけです。
+加えて props にどんな型の値が入るのか可視化される。というメリットもあります。
+
+ただ、このバリデーションチェックはパフォーマンス上の理由から**開発モードの場合のみ動作**することに注意です。
+
+## 型定義の種類
+### 数値
+```jsx
+PropTypes.number
+```
+受け付ける例.
+
+```jsx
+1
+1.0
+```
+
+### 文字列
+```jsx
+PropTypes.string
+```
+受け付ける例.
+
+```jsx
+'太郎'
+'1'
+```
+
+### 真偽値
+```jsx
+PropTypes.bool
+```
+受け付ける例.
+
+```jsx
+true
+false
+```
+一応補足として、あくまで真偽値なので`'true'`などはダメです。
+文字列扱いなので、バリデーションに引っ掛かります。
+
+### 配列
+```jsx
+PropTypes.array
+```
+受け付ける例.
+
+```jsx
+[1, 'A']
+[{ id: 'A'}, { id: 'B' }]
+```
+
+配列であれば、その中の値の型までは問わないため非推奨のようです。
+中の値の型までチェックする場合は`arrayOf`を使います。
+
+```jsx
+PropTypes.arrayOf(型定義の種類)
+
+// 例
+PropTypes.arrayOf(PropTypes.number)
+```
+受け付ける例
+※ PropTypes.arrayOf(PropTypes.number) の場合.
+
+```jsx
+[1, 2, 3]
+```
+
+### オブジェクト
+```jsx
+PropTypes.object
+```
+受け付ける例.
+
+```jsx
+{ a: 'A', b: 'B' }
+```
+
+オブジェクトであれば、その中の値の型までは問わないため非推奨のようです。
+中の値の型までチェックする場合は`objectOf`か`shape`、もしくは`exact`を使います。
+
+`objectOf`は特定の型のみの場合。
+
+```jsx
+PropTypes.objectOf(型定義の種類)
+
+// 例
+PropTypes.objectOf(PropTypes.number)
+```
+受け付ける例
+※ PropTypes.objectOf(PropTypes.number) の場合.
+
+```jsx
+{ a: 1, b: 2 }
+```
+
+`shape`は型がバラバラの場合。
+
+```jsx
+PropTypes.shape({
+  props名: 型定義の種類,
+  props名: 型定義の種類
+})
+
+// 例
+PropTypes.shape({
+  num: PropTypes.number,
+  str: PropTypes.string
+})
+```
+受け付ける例
+※上の設定例の場合.
+
+```jsx
+{ num: 1, str: '太郎' }
+```
+
+`exact`も型がバラバラの場合です。
+`shape`との違いは、型定義した以外のものがオブジェクトに追加されているとバリデーションに引っ掛かります。
+こちらの方がより厳密に props をチェックする感じです。
+
+```jsx
+PropTypes.exact({
+  props名: 型定義の種類,
+  props名: 型定義の種類
+})
+
+// 例
+PropTypes.exact({
+  num: PropTypes.number,
+  str: PropTypes.string
+})
+```
+受け付ける例
+※上の設定例の場合.
+
+```jsx
+// ここにこの二つ以外のキー、値があると警告
+{ num: 1, str: '太郎' }
+```
+
+### 関数
+```jsx
+PropTypes.func
+```
+受け付ける例.
+
+```jsx
+() => {
+  console.log('func');
+}
+```
+
+### シンボル
+```jsx
+PropTypes.symbol
+```
+受け付ける例.
+
+```jsx
+Symbol()
+Symbol('test')
+```
+
+恥ずかしながら自分はシンボルって何？状態だったので調べたのですが、ES6 で追加された新しいプリミティブのデータ型だったのですね。
+
+<OG url="https://qiita.com/_lemon2003_/items/55c947f29b44f79dc859" />
+<OG url="https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol" />
+
+でも、いまいち使い方がよくわからない...。
+
+### 特定の値のいずれかの場合
+```jsx
+PropTypes.oneOf(['値１', '値２'])
+
+// 例
+PropTypes.oneOf(['A', 'B', 'C'])
+```
+受け付ける例
+※上の設定例の場合.
+
+```jsx
+'A'
+'B'
+'C'
+```
+
+### いろんなデータ型が渡される可能性がある場合
+```jsx
+PropTypes.oneOfType([
+  型定義の種類,
+  型定義の種類
+])
+
+// 例
+PropTypes.oneOfType([
+  PropTypes.number,
+  PropTypes.string
+])
+```
+受け付ける例
+※上の設定例の場合.
+
+```jsx
+1
+'1'
+'A'
+```
+
+### クラスオブジェクト
+```jsx
+PropTypes.instanceOf(クラス名)
+
+// 例
+PropTypes.instanceOf(Date)
+```
+受け付ける例
+※上の設定例の場合.
+
+```jsx
+new Date()
+```
+
+### React Element
+```jsx
+PropTypes.element
+```
+受け付ける例.
+
+```jsx
+<Test /> // 独自定義のコンポーネント
+<p>Test</p>
+```
+
+### React Element Type
+```jsx
+PropTypes.elementType
+```
+
+React.element と似ていますが、こちらは以下のような記述がありました。
+> 関数、文字列、または「要素のような」オブジェクト（React.Fragment、Suspenseなど）
+
+詳細は React の isValidElementType を見てね、とのこと。
+<OG url="https://github.com/facebook/react/blob/main/packages/shared/isValidElementType.js" />
+
+受け付ける例.
+
+```jsx
+Test // 独自定義のコンポーネント名（JSX を返す関数）
+React.Fragment
+React.Context
+React.Suspense
+```
+
+### レンダリングできるもの
+```jsx
+PropTypes.node
+```
+受け付ける例.
+
+```jsx
+1
+'A'
+['a', 'b']
+<p>Test</p>
+<Test /> // 独自定義のコンポーネント
+```
+数値、文字列、配列、React Element であればいいようです。
+真偽値やオブジェクトはバリデーションに引っ掛かりました。
+
+### 型は問わない
+```jsx
+PropTypes.any
+```
+
+どんな型でも受け付けるよ。というやつです。
+これを使ってしまうと PropTypes の意味があまりなくなってしまうので、どうしても使いたい時だけに留めておきましょう。
+
+### 必須
+```jsx
+PropTypes.型定義.isRequired
+
+// 例
+PropTypes.number.isRequired
+PropTypes.any.isRequired
+```
+
+### カスタムルール
+```jsx
+// カスタムルールの定義
+const customProp = (props, propName, componentName) => {
+  if (!/test/.test(props[propName])) {
+    return new Error(
+      'Invalid prop `' + propName + '` supplied to' +
+      ' `' + componentName + '`. Validation failed.'
+    );
+  }
+}
+
+// カスタムルールの使用
+コンポーネント名.propTypes = {
+  props名: customProp
+}
+```
+この例は props の値に`test`という文字列が含まれているかチェックするものです（公式ドキュメントのコードをベースにしています）
+
+## props のデフォルト値
+`defaultProps`を使って、props のデフォルト値を設定できます。
+もしその props に値が渡されなかった場合は、このデフォルト値がセットされます。
+また、型定義と並行して使用している場合は、このデフォルト値セットが行われた後でバリデーションチェックが行われます。
+
+```jsx
+コンポーネント名.defaultProps = {
+  props名: 値
+}
+
+// 例
+PropTypesComponent.defaultProps = {
+  defaultValue: 'default'
+}
+```
+
+---
+2021/08/26 時点で、自分は TypeScript をメインで使うようになったので、PropTypes と少し縁遠くなりました。
+ただ、JavaScript のままのアプリも一部管理しているので、そちらでは今でも継続して使用しています。
+
+最初は、渡す props が多いコンポーネントだと型定義がめんどくさいと感じる人少なくないんじゃないかなと。
+その分、それ以上のメリットがあると思っていますし、JavaScript × React アプリ開発時の使用をお勧めします。
+（自分の場合は慣れてくると、逆に型定義がないと不安な気持ちなるようになりました(笑)）
+
+## 参考リンク
+- [React - Doc - PropTypes を用いた型チェック](https://ja.reactjs.org/docs/typechecking-with-proptypes.html)
+- [GitHub - prop-types](https://github.com/facebook/prop-types)
+- [ReactのPropTypes Validator](https://qiita.com/park-jh/items/a7dc06a478b944e59222)
+- [Javascript - シ、シンボル(Symbol)って何？](https://qiita.com/_lemon2003_/items/55c947f29b44f79dc859)
+- [Stack Overflow - Difference between PropTypes.exact and PropTypes.shape](https://stackoverflow.com/questions/59019287/difference-between-proptypes-exact-and-proptypes-shape)
+- [Custom PropTypes Validator](https://qiita.com/park-jh/items/f06b9ce4a7a698b5c6c9)
