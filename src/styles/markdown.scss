@@ -97,6 +97,10 @@
     @apply my-5;
   }
 
+  .remark-code-container {
+    @apply my-5;
+  }
+
   .remark-code-title {
     @apply font-hackGen text-xs px-2.5 py-0.5 bg-slate-600 inline-block text-white leading-5 rounded-t-1;
   }
@@ -106,16 +110,12 @@
   }
 
   pre {
-    @apply p-4 relative mb-5;
+    @apply py-5 px-4 relative;
   }
 
   pre,
   code {
     @apply font-hackGen;
-  }
-
-  :not(.remark-code-title) + pre {
-    @apply mt-4;
   }
 
   :not(pre) > code {
