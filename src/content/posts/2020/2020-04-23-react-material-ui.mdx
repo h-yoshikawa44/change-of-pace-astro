@@ -1,0 +1,1074 @@
+---
+title: "React向けUIコンポーネントライブラリ、Material UI(v4)の紹介"
+description: "ReactのUIコンポーネントライブラリの1つであるMaterial UIについて、おおよそどんなことができるものなのか紹介"
+pubDate: "2020-04-23"
+updatedDate: "2022-01-24"
+category: "develop"
+tags: ["TypeScript", "React", "Material UI"]
+---
+
+今回は React 向けに UI コンポーネント群を提供する Material UI のお話です。
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/efa33101b0a02cba7759) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-09-24-react-material-ui) の方で更新しています。
+
+※2021/08/26追記 TypeScript ベース + バージョン 4.12.3 で全体的に見直しました。
+※2021/09/26追記 Material UI v5記事投稿に伴い、一部追記しました。
+※2022/01/24追記 あくまでライブラリの記事であるとわかりやすくするために、記事タイトルを変更しました（旧：React入門 ～Material UI(v4)編～）
+
+import OG from "@/components/OG.astro"
+
+## Material UI とは？
+最新
+<OG url="https://mui.com" />
+
+4系
+<OG url="https://v4.mui.com" />
+
+Google の Material デザインをベースに開発された、UI コンポーネントライブラリです。
+
+お手軽に Material デザインを取り入れられることに加えて、コンポーネントの種類が豊富に用意されているため、それらを組み合わせるだけでも見栄えの良いものを作ることができます。
+一からコンポーネントを作るのはつらいとか、デザインを考えるのが難しいとか、それらに工数をあまりかけたくないなどの場合にもおすすめです。
+
+React 向けの UI コンポーネントライブラリはいろんなものがあります。
+（2021/08/26時点で）最近では Chakra UI や daisy UI、Headless UI。などといった、Tailwind CSS をベースとしていたり、影響をうけたライブラリが特に伸びている印象ですね。
+そんな中でも、Material UI は変わらず伸び続けています。
+（Ant Design もすごい伸び続けてる👀）
+
+執筆時点でのリポジトリスター数（※2021/08/26更新）
+
+|UI コンポーネントライブラリ|GitHub スター数|最終リリース|
+|---|---|---|
+|[Material UI](https://github.com/mui-org/material-ui)|70.5k|2021/07/30|
+|[Ant Design](https://github.com/ant-design/ant-design)|73.9k|2021/08/16|
+|[Chakra UI](https://github.com/chakra-ui/chakra-ui)|20.1k|2021/08/09|
+|[daisyUI](https://github.com/saadeghi/daisyui)|4.5k|2021/08/22|
+|[Headless UI](https://github.com/tailwindlabs/headlessui)|10.5k|2021/07/29|
+|[React Toolbox](https://github.com/react-toolbox/react-toolbox)|8.7k|2018/06/02|
+|[Rebass](https://github.com/rebassjs/rebass)|7.4k|2019/08/28|
+|[Belle](https://github.com/nikgraf/belle)|2.5k|2017/10/10|
+|[MUI](https://github.com/muicss/mui)|4.4k|2020/06/02|
+|[Grommet](https://github.com/grommet/grommet)|7.4k|2021/07/28|
+|[React-Bootstrap](https://github.com/react-bootstrap/react-bootstrap)|19.8k|2021/06/04|
+|[reactstrap](https://github.com/reactstrap/reactstrap/)|10.1k|2021/01/20|
+
+## 注意書き
+あらかじめ言っておくのですが、今回はそこまで実践的なことは書いていません。
+というのも、Material UI の機能を紹介するにしても、できることが多すぎてどこを抜粋するか悩んでしまったためです（苦笑）
+
+公式ドキュメントを見ていただくとよくわかるのですが、あらゆる使用例、サンプルコード（JS、TS ともに）およびプレビュー表示が豊富に載っています。さらっと見ていくだけでも、こんなコンポーネントも用意されているのかと発見があって楽しいくらいです。
+
+なので、提供されているコンポーネントに関しては、大まかな概要を紹介する程度にとどめます。
+もし興味がわいた方はぜひ公式ドキュメントを見てみてください。
+各コードには CodeSandbox へのリンクもあるので、お気軽に試せますよ。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+~~2021/09/16時点で、5系が beta リリースされています~~ 2021/09/16に5系がリリースされましたが、**当記事では4系を扱っています。**
+4系と5系とでは、ブランド名が変わっていたり、一部コンポーネントの所属が変わっていたり（lab のものが core に取り込まれるなど）と大きな変更点もありますのでバージョンには注意です。
+↓
+※2021/09/26追記 v5 の記事を書きました。
+- [こんにちはMUI！ 新しくなったMaterial UI v5](/posts/2021-09-26-material-ui-v5)
+
+{/* <!-- textlint-enable --> */}
+
+## インストール
+一言で Material UI と言っても、パッケージ（ライブラリ）的にはいくつかに分かれています。
+その中で基本となるのが`@material-ui/core`で、このライブラリだけでもほとんどのコンポーネントが使用できます。
+
+```bash
+yarn add @material-ui/core
+```
+
+その他のライブラリとしては以下のようなものがあります。必要に応じて適宜インストールしてください。
+
+- `@material-ui/icons`：SVG アイコンコンポーネント集（アイコン一覧：[Material UI - Material Icons](https://v4.mui.com/components/material-icons/)）
+- `@material-ui/lab`：トグルボタンなど、core に取り込む前のコンポーネント集
+- `@material-ui/pickers`：Date Picker 的なコンポーネント集
+- `@material-ui/x-grid`：データグリッド機能を提供するコンポーネント（フル機能のエンタープライズ版）
+- `@material-ui/data-grid`：データグリッド機能を提供するコンポーネント（無料のコミュニティ版）
+
+今回の使用バージョンは以下のとおりです。
+- React：17.0.2
+- @material-ui/core：4.12.3
+- @material-ui/icons：4.12.2
+- @material-ui/lab：4.0.0-alpha.60
+- @material-ui/pickers：3.3.10
+- @material-ui/data-grid：4.0.0-alpha.37
+
+以下、記載しているコードは公式ドキュメントのコードを元にしています。
+画像や GIF に関しても、公式ドキュメントのプレビューが撮影元です。
+
+## 基本的な使い方
+使いたいコンポーネントをインポートして使用。
+独自定義のコンポーネントを使用する時とほぼ同じですが、コンポーネント特有の props を設定して見た目のカスタマイズができます。
+
+```tsx
+import { VFC } from 'react';
+import Button from '@material-ui/core/Button';
+
+const App: VFC = () => {
+  return (
+    <Button variant="contained" color="primary"/>
+      Test
+    </Button>
+  );
+}
+
+export default App;
+```
+
+## スタイルのカスタマイズ
+デザインシステムの実体であるスタイリングソリューションとしては JSS が採用されています。
+<OG url="https://github.com/cssinjs/jss" />
+
+カスタマイズ方法は、さすがに全部は紹介しきれないので、代表的なものだけ紹介。
+
+各コンポーネントは props でカスタマイズできる範囲外で、自分で好きなスタイルをあてることも可能です。
+JSX においてインラインスタイルを書く時と同様に、CSS プロパティ名はキャメルケースで記述することに注意です。
+
+スタイル定義の優先度は、低い方から.
+- 各コンポーネント特有の props によるスタイル
+- Hooks 式・styled-components 式・HOC 式による独自定義のスタイル
+- インラインスタイルによる独自定義のスタイル
+
+となります。
+もし同一の CSS プロパティを複数指定した場合は、この優先度に沿ってスタイルがあたります。
+
+### Hooks 式
+`@material-ui/core/styles`の`makeStyles`を使います。
+
+「クラス名とスタイル定義をマッピングしたものを返す関数」を生成するので、あとはその関数をコンポーネント側で使用して取り出し。
+従来の HTML・CSS でクラスをあてるように、各要素に割り当てていく方式です。
+
+```tsx
+import { VFC, ReactNode } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles({
+  button: {
+    backgroundColor: 'green'
+  }
+});
+
+type Props = {
+  children: ReactNode;
+}
+
+const HooksButton: VFC<Props> = ({ children }) => {
+  const classes = useStyles();
+
+  return (
+    <Button variant="contained" className={classes.button}>
+      {children}
+    </Button>
+  );
+}
+
+export default HooksButton;
+```
+
+引数を渡して、その値でスタイル定義をしたい場合はこんな感じ。
+クラス単位でも CSS プロパティ単位でも受け取ることができます。
+
+```tsx
+import { VFC, CSSProperties, ReactNode } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+type MyButtonStyle = {
+  bgColor: CSSProperties['backgroundColor'];
+  textColor: CSSProperties['color'];
+}
+
+const useStyles = makeStyles({
+  // クラス単位
+  button: (style: MyButtonStyle) => ({
+    backgroundColor: style.bgColor,
+  }),
+  textColor: {
+    // CSS プロパティ単位
+    color: (style: MyButtonStyle) => style.textColor
+  }
+});
+
+type Props = {
+  children: ReactNode;
+}
+
+const HooksExButton: VFC<Props> = ({ children }) => {
+  const styles = { bgColor: 'green', textColor: 'black'}
+  const classes = useStyles(styles);
+
+  return (
+    <Button
+      variant="contained"
+      className={`${classes.button} ${classes.textColor}`}
+    >
+      {children}
+    </Button>
+  );
+};
+
+export default HooksExButton;
+```
+この例では受け取った引数の値をそのまま使っていますが、引数と三項演算子の組み合わせで、あてるスタイルを分岐させたりということも可能です。
+さらにコンポーネントの呼び出し側から props で渡された値を引数として渡すようにすれば、コンポーネントの呼び出し側からスタイル指定する。ということもできますね。
+
+また、`makeStyles`では後述するテーマの情報を受け取れるので、その値を使ってスタイル定義もできます。
+
+```tsx
+import { VFC, ReactNode } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const useStyles = makeStyles((theme) => ({
+  button: {
+    backgroundColor: theme.palette.primary.dark
+  }
+}));
+
+type Props = {
+  children: ReactNode;
+}
+
+const HooksButton: VFC<Props> = ({ children }) => {
+  const classes = useStyles();
+
+  return (
+    <Button variant="contained" className={classes.button}>
+      {children}
+    </Button>
+  );
+}
+
+export default HooksButton;
+```
+
+### Styled Component 式
+`@material-ui/core/styles`の`styled`を使います。
+
+あらかじめスタイルをあてたコンポーネントを作成し、それを使用していくような方式です。
+
+```tsx
+import { VFC, ReactNode } from 'react';
+import { styled } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const CustomButton = styled(Button)({
+  backgroundColor: 'red'
+});
+
+type Props = {
+  children: ReactNode;
+}
+
+const StyledButton: VFC<Props> = ({ children }) => {
+  return <CustomButton variant="contained"/>{children}</CustomButton>;
+};
+
+export default StyledButton;
+```
+
+props の値を使ってスタイル定義をしたい場合はこんな感じ。
+color props は`Button`コンポーネントが元々受け付けている props のため、Omit で除外したうえで、独自定義側の color props 型定義と組み合わせています。
+
+```tsx
+import { VFC, CSSProperties, ReactNode } from 'react';
+import { styled } from '@material-ui/core/styles';
+import Button, { ButtonProps } from '@material-ui/core/Button';
+
+type MyButtonStyle = {
+  color: CSSProperties['backgroundColor'];
+};
+
+type MyButtonProps = MyButtonStyle & Omit<ButtonProps, keyof MyButtonStyle>;
+
+const CustomButton = styled(({ color, ...other }: MyButtonProps) => (
+  <Button {...other} />
+))({
+  // CSS プロパティ単位
+  // 型を MyButtonStyle にしているが、
+  // 実際は渡された props は全て受け取れる（今回だと variant, color, children）
+  backgroundColor: (props: MyButtonStyle) => props.color
+});
+
+type Props = {
+  children: ReactNode;
+}
+
+const StyledExButton: VFC<Props> = ({ children }) => {
+  return (
+    <CustomButton variant="contained" color="red"/>
+      {children}
+    </CustomButton>
+  );
+};
+
+export default StyledExButton;
+```
+こちらも同様に、コンポーネント（この例だと StyledExButton）の呼び出し側から props で渡された値を使うようにすれば、コンポーネントの呼び出し側からスタイル指定ができますね。
+
+### HOC 式（※旧式）
+`@material-ui/core/styles`の`withStyles`と`createStyles`を使います。
+
+`createStyles`で、クラス名とスタイル定義をマッピングしたものを作成。
+`withStyles`でラップすることにより、定義したスタイルとコンポーネントを結合。
+スタイルの情報は props の classes に格納されるので、それを従来の HTML・CSS でクラスをあてるように、各要素に割り当てていく方式です。
+
+```tsx
+import { VFC, ReactNode } from 'react';
+import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
+import Button from '@material-ui/core/Button';
+
+const styles = createStyles({
+  button: {
+    backgroundColor: 'orange'
+  }
+});
+
+type Props = WithStyles<typeof styles> & {
+  children: ReactNode;
+};
+
+const HOCButton: VFC<Props> = ({ classes, children }) => {
+  return (
+    <Button variant="contained" className={classes.button}>
+      {children}
+    </Button>
+  );
+};
+
+export default withStyles(styles)(HOCButton);
+```
+
+props の値を使ってスタイル定義をしたい場合はこんな感じ。
+こちらも、クラス単位でも CSS プロパティ単位でも受け取ることができます。
+
+```tsx
+import { VFC, CSSProperties, ReactNode } from 'react';
+import { withStyles, WithStyles, createStyles } from '@material-ui/core/styles';
+import Button, { ButtonProps } from '@material-ui/core/Button';
+
+type MyButtonStyle = {
+  bgColor: CSSProperties['backgroundColor'];
+  textColor: CSSProperties['color'];
+};
+
+const styles = createStyles({
+  // クラス単位
+  // 型を MyButtonStyle にしているが、
+  // 実際は呼び出し側から渡された props は全て受け取れる（今回だと bgColor, textColor, children）
+  button: (props: MyButtonStyle) => ({
+    backgroundColor: props.bgColor
+  }),
+  textColor: {
+    // CSS プロパティ単位
+    // 型を MyButtonStyle にしているが、
+    // 実際は呼び出し側から渡された props は全て受け取れる（今回だと bgColor, textColor, children）
+    color: (props: MyButtonStyle) => props.textColor
+  }
+});
+
+type Props = WithStyles<typeof styles> &
+  MyButtonStyle &
+  Omit<ButtonProps, 'color'> & {
+    children: ReactNode;
+  };
+
+const HOCButton: VFC<Props> = ({ classes, children }) => {
+  return (
+    <Button
+      variant="contained"
+      className={`${classes.button} ${classes.textColor}`}
+    >
+      {children}
+    </Button>
+  );
+};
+
+export default withStyles(styles)(HOCButton);
+```
+```tsx
+// コンポーネント呼び出し側
+<HOCButton bgColor="orange" textColor="white"/>
+  HOC
+</HOCButton>
+```
+
+### インラインスタイル
+これは別に Material UI 特有の方式ではないですが、style でインラインスタイルを書くことも出来ます。
+
+```tsx
+import { VFC, ReactNode } from 'react';
+import Button from '@material-ui/core/Button';
+
+type Props = {
+  children: ReactNode;
+}
+
+const InlineStyleButton: VFC<Props> = ({ children }) => {
+  return (
+    <Button
+      variant="contained"
+      style={{ backgroundColor: 'pink' }}
+    >
+      {children}
+    </Button>
+  );
+};
+
+export default InlineStyleButton;
+```
+
+### レイアウトコンポーネント
+Material UI には以下のようなレイアウト用のコンポーネントがあります。
+
+- Box：幅広いスタイルを props であてることができるコンポーネント
+- Container：コンテンツを水平方向に中央揃えするコンポーネント
+- Grid：Grid レイアウトが構成できるコンポーネント
+- Hidden：画面サイズによって表示非表示を切り替えられるコンポーネント
+- Image List：画像のコレクションを構成できるコンポーネント
+
+大まかなレイアウトは、これらのコンポーネントを使って組んでいくのもありです。
+この中で、`Box`コンポーネントだけ少し紹介します。
+
+#### Box コンポーネント
+HTML を書いていて、スタイルをあてるために要素を div や span で囲んでスタイルを書くということがよくあります。
+それと同じような感覚で扱える、`Box`コンポーネントというものが存在しており、これがなかなか便利です。
+
+下記のコードの例では`m`と指定していますが、これは`margin`のエイリアスです。
+スペースのデフォルトテーマ値は8であるため、8 * 2 = 16px が実際の設定値となります。
+
+```tsx
+import { VFC } from 'react';
+import { Box, Button } from '@material-ui/core';
+
+const App: VFC = () => {
+  return (
+    <Box m={2}>
+      <Button variant="contained"/>Test</Button>
+    </Box>
+  );
+}
+
+export default App;
+```
+この 8px というのは、マテリアルデザインにおいて使われる値で、この値を基準として要素を配置していくようになっています。
+そのため、`Box`コンポーネントを使うと、自然とその配置ができるというわけです。
+
+また、特定の CSS プロパティはテーマの値と関連付けられており、その値を使うことも出来ます。
+```tsx
+<Box
+  color="primary.main"
+  bgcolor="background.paper"
+  fontFamily="h6.fontFamily"
+  fontSize={{ xs: 'h6.fontSize', sm: 'h4.fontSize', md: 'h3.fontSize' }}
+  p={{ xs: 2, sm: 3, md: 4 }} // 画面サイズによって設定値を変化
+>
+  Test
+</Box>
+```
+
+あてられるスタイルとその props の書き方の種類一覧は、こちらをご参照ください。
+比較的よく使われる CSS プロパティが用意されている印象です。
+<OG url="https://v4.mui.com/system/api" />
+
+Material UI - System 配下のページで、種類ごとのドキュメントがあるので詳細はそちらを。
+<OG url="https://v4.mui.com/system/basics" />
+
+独自のデザイン性の高いものでなければ、この`Box`コンポーネントを活用することで、ほとんど CSS を書かずにすむなと個人的には感じました。
+
+### デフォルトテーマ
+`@material-ui/core`には、全体のスタイル定義であるテーマ情報も含まれており、デフォルトで適用されています。
+Material UI のコンポーネントは props でスタイルのカスタマイズができますが、仕組みとしては、その props の値によってクラスが割り当てられるようになっています。
+そのクラスのスタイル定義の設定値として、このテーマ情報から使っていたりするわけです。
+
+`@material-ui/core/styles`の`useTheme`で、そのテーマ情報にアクセスし使用できます。
+
+```tsx
+import { VFC } from 'react';
+import { Button } from '@material-ui/core';
+import { useTheme } from '@material-ui/core/styles';
+
+const App: VFC = () => {
+  const theme = useTheme();
+
+  return (
+    <Button
+      variant="contained"
+      style={{ backgroundColor: theme.palette.primary.light }}
+    >
+      Test
+    </Button>
+  );
+};
+
+export default App;
+```
+
+デフォルトテーマ情報に含まれている代表的なものとしては、以下のものがあります。
+- palette：パレットカラー
+- typography：フォントなど、文字に関する設定値（h1 などのタグ別のフォント情報も）
+- spacing：空白を計算する関数（デフォルトのベースは 8px で、8 * 引数 を返す）
+- breakpoints：ブレイクポイントの値と、メディアクエリ指定を補助する関数
+- z-index：z-index の設定値
+
+このデフォルトテーマが持っている情報に関しては、こちらをご参照ください。
+<OG url="https://v4.mui.com/customization/default-theme" />
+
+### デフォルトテーマベースの独自テーマ
+デフォルトテーマをベースとした独自テーマを作りたい場合は、`createTheme`を使った書き方ができます。
+
+ルート階層にて`ThemeProvider`コンポーネントを使ってラップすることで、下層のコンポーネントにテーマ情報を渡します。
+
+以下はデフォルトテーマのパレットカラーを上書きしている例になります。
+
+```tsx
+import ReactDOM from "react-dom";
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+.
+.
+.
+const theme = createTheme({
+  palette: {
+    primary: purple,
+  }
+});
+.
+.
+.
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>,
+  document.getElementById('root')
+);
+```
+テーマ情報は各コンポーネント側で使用できます。
+primary の元々の色は青ですが、変更しているので紫になります。
+一方、secondary の色は変更していないので、デフォルトテーマの色が使われます。
+
+```tsx
+import { VFC } from 'react';
+import Button from '@material-ui/core/Button';
+
+const App: VFC = () => {
+  return (
+    <div>
+      <Button variant="contained" color="primary"/>primary</Button>
+      <Button variant="contained" color="secondary"/>secondary</Button>
+    </div>
+  );
+}
+
+export default App;
+```
+デフォルトテーマに存在していない独自のプロパティを追加する場合は、型定義を拡張したうえで独自テーマを定義する感じです。
+また、`ThemeProvider`はネストして使うこともできるようになっています。
+
+ちなみに、`createTheme`と似ている`createMuiTheme`というものもあります。
+どうも元々`createMuiTheme`だったものが、`createTheme`に名称が変わったとのこと。
+（4系から5系への移行ガイドにその旨記述がありました）
+現在の4系では移行期間として両方存在しているみたいです。
+
+### 2014 マテリアルデザイン カラーパレット
+テーマ情報のなかにも primary や secondary といったカラー情報がありますが、その他に 2014 マテリアルデザイン カラーパレットというものが存在します。
+元々、マテリアルデザインによって2014年に作成されたもので、調和して機能するように設計された色で構成されています。
+
+使用するには`@material-ui/core/colors`からインポートして、HUE（赤、ピンクなどの色）と SHADE（500、600などの濃さ）を指定。
+
+```tsx
+import purple from '@material-ui/core/colors/purple';
+import red from '@material-ui/core/colors/red';
+
+const primary = red[500]; // #f44336
+const accent = purple['A200']; // #e040fb
+const accent = purple.A200; // #e040fb
+```
+
+色の種類については、こちらに一覧があります。
+<OG url="https://v4.mui.com/customization/color/#2014-material-design-color-palettes" />
+
+### カラー作成に使えるツール
+色を考えるときは、コミュニティの方が作られたツールを使うのも手です。
+
+- [create-mui-theme](https://react-theming.github.io/create-mui-theme/)：マテリアルデザインカラーツールを介して Material UI テーマを作成するためのオンラインツール
+- [material-ui-theme-editor](https://in-your-saas.github.io/material-ui-theme-editor/)：色を選択してライブプレビューを行うだけで、Material UI テーマを生成するツール
+- [Material palette generator](https://material.io/inline-tools/color/)：マテリアルパレットジェネレータを使用して、入力した任意の色のパレットを生成できるツール
+
+### その他スタイルの書き方
+このクラスの中のこの要素や、この要素のこのアクションといったような、ネストのスタイル指定はこのようになります。
+
+```tsx
+import { VFC } from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  msg: {
+    color: 'blue',
+    '& span': {
+      color: 'red',
+      '&:hover': {
+        color: 'black'
+      }
+    }
+  }
+})
+
+const App: VFC = () => {
+  const classes = useStyles();
+
+  return (
+    <Typography className={classes.msg}>
+      これは<span>テスト</span>です
+    </Typography>
+  )
+}
+
+export default App;
+```
+
+ここでは紹介していませんが、プレーンな CSS や CSS Modules との併用も可能です。
+Material UI で適用されているグローバル CSS をカスタマイズしたり。
+別ライブラリとしては、styled-comopnents や emotion との併用もできます（v5 ではこの2つがデザインシステムの実体として採用されています）
+
+## コンポーネントの種類
+大まかな種類の概要だけさらっと書きます。
+なので、ここに書いているもの以外のコンポーネントもあります。
+（それでも長くなりました...）
+
+()はどのライブラリに属しているかです。
+
+### Layout
+他のコンポーネントをラップして使われる、レイアウトに関するコンポーネント集。
+
+#### Box(core)
+他のコンポーネントをラップし、様々なスタイルをあてるためのコンポーネント。
+デフォルトでは div としてラップするが、他のものに指定もできる。
+[Box コンポーネント](#box-コンポーネント) の項も参照。
+
+#### Container(core)
+コンテンツを水平方向に中央揃えするコンポーネント。
+
+#### Grid(core)
+グリッドレイアウトを表現するためのコンポーネント。
+
+#### Hidden(core)
+コンポーネントを非表示にするコンポーネント。
+ブレイクポイントを設定して、画面幅によって非表示にするなどができる。
+
+#### ImageList(core)
+画像のコレクションを構成できるコンポーネント群。
+少し前のバージョンでは GridList だった。
+
+### Inputs
+フォームなどで使用する、入力に関するコンポーネント集。
+
+#### Button(core)
+ボタンコンポーネント群。
+Button はシンプルなものから、枠線あり、塗りつぶしのパターン。アイコンと組み合わせたものなど、いろんなパターンに対応。
+IconButton はアイコン自体をボタンにしたもの。
+
+Button の例
+<img src="/screenshots/2020/react-material-ui/button.png" width="40%" alt="Buttonコンポーネントのプレビュー画像"/>
+
+IconButton の例
+<img src="/screenshots/2020/react-material-ui/icon-button.png" width="40%" alt="IconButtonコンポーネントのプレビュー画像"/>
+
+#### ButtonGroup(core)
+ボタンをグループ化したコンポーネント。
+
+ButtonGroup の例
+<img src="/screenshots/2020/react-material-ui/button-group.png" width="40%" alt="ButtonGroupコンポーネントのプレビュー画像"/>
+
+#### Checkbox(core)
+チェックボックスコンポーネント。
+FormControlLabel と組み合わせることで、ラベル付きのものも作れる。
+
+Checkbox の例（FormControlLabel と組み合わせ）
+<img src="/screenshots/2020/react-material-ui/check-box.png" width="50%" alt="Checkboxコンポーネントのプレビュー画像"/>
+
+#### Fab(core)
+Floating Action Button の略。
+少し浮いているようなボタンのコンポーネント。
+
+Fab の例
+<img src="/screenshots/2020/react-material-ui/fab.png" width="40%" alt="Fabコンポーネントのプレビュー画像"/>
+
+#### Date / Time(pickers)
+Date Picker 的なコンポーネント群。
+詳細は Material-UI Pickers から。
+<OG url="https://material-ui-pickers.dev" />
+なお、この Material-UI Pickers はすでにアーカイブになっていて、Matarial UI 5系において lab の方に取り込まれるようです。
+
+ KeyboardDatePickerの例（variant に inline 指定）
+<img src="/gifs/2020/react-material-ui/date-picker-inline.gif" width="40%" alt="KeyboardDatePicker(inline)コンポーネントのプレビューGIF"/>
+
+KeyboardDatePicker の例（variant に dialog 指定）
+<img src="/gifs/2020/react-material-ui/date-picker-dialog.gif" width="40%" alt="KeyboardDatePicker(dialog)コンポーネントのプレビューGIF"/>
+
+KeyboardTimePicker の例
+<img src="/gifs/2020/react-material-ui/time-picker.gif" width="40%" alt="KeyboardTimePickerコンポーネントのプレビューGIF"/>
+
+#### Radio(core)
+ラジオボタンコンポーネント群。
+FormControlLabel と組み合わせることで、ラベル付きのものも作れる。
+
+RadioGroup、Radio の例
+<img src="/screenshots/2020/react-material-ui/radio.png" width="40%" alt="RadioGroup、Radioコンポーネントのプレビュー画像"/>
+
+#### Select(core)
+セレクトボックスコンポーネント。選択肢をグルーピングもできる。
+
+Select の例
+<img src="/gifs/2020/react-material-ui/select.gif" width="50%" alt="SelectコンポーネントのプレビューGIF"/>
+
+#### Slider(core)
+スライダーコンポーネント。
+
+Slider の例
+<img src="/screenshots/2020/react-material-ui/slider.png" width="40%" alt="Sliderコンポーネントのプレビュー画像"/>
+
+#### Switch(core)
+スイッチコンポーネント。
+FormControlLabel と組み合わせることで、ラベル付きのものも作れる。
+
+Switch の例
+<img src="/screenshots/2020/react-material-ui/switch.png" width="40%" alt="Switchコンポーネントのプレビュー画像"/>
+
+#### Text Field(core)
+テキスト入力フォームのコンポーネント群。
+マルチラインにしたり、セレクトボックスにしたりもできる。
+また、フォームにアイコンをつけたり、単位の文字をつけるといったことも可能。
+InputBase といった下位レベルのコンポーネントが複数存在しており、より細かくカスタマイズしたい時は、そちらを使うとよい。
+
+TextField の例
+<img src="/screenshots/2020/react-material-ui/text-field.png" width="40%" alt="TextFieldコンポーネントのプレビュー画像"/>
+
+### Navigation
+ナビゲーションに関するコンポーネント集。
+
+#### Bottom Navigation(core)
+スマホアプリでよくあるような、ボタンナビゲーションコンポーネント群。
+
+BottomNavigation、BottomNavigationAction の例
+<img src="/screenshots/2020/react-material-ui/button-navigation.png" width="40%" alt="BottomNavigation、BottomNavigationActionコンポーネントのプレビュー画像"/>
+
+#### Breadcrumbs(core)
+パンくずリスト的なコンポーネント。Link と組み合わせたりする。
+
+Breadcrumbs の例
+<img src="/screenshots/2020/react-material-ui/breadcrumbs.png" width="40%" alt="Breadcrumbsコンポーネントのプレビュー画像"/>
+
+#### Drawer(core)
+ドロワーコンポーネント。Button と組み合わせて、クリックされたときにドロワーを開くといったように使う。
+画面の上下左右どこからドロワーが開くか設定できる。
+
+Drawer の例（上から開いた例）
+<img src="/gifs/2020/react-material-ui/drawer.gif" width="40%" alt="DrawerコンポーネントのプレビューGIF"/>
+
+#### Link(core)
+リンクコンポーネント。React Router を併用する場合は、あまり使う機会ないかも？
+
+Link の例
+<img src="/screenshots/2020/react-material-ui/link.png" width="40%" alt="Linkコンポーネントのプレビュー画像"/>
+
+#### Menu(core)
+メニューコンポーネント群。
+Button と組み合わせて、クリックされたときにメニューを開くといったように使う。
+
+Menu、MenuItem の例（メニューを開いた後）
+<img src="/gifs/2020/react-material-ui/menu.gif" width="40%" alt="Menu、MenuItemコンポーネントのプレビューGIF"/>
+
+#### Stepper(core)
+ステッパーコンポーネント群。ステップ手順を踏んでいくような表現ができる。
+
+Stepper、Step、StepLabel の例
+<img src="/screenshots/2020/react-material-ui/stepper.png" width="40%" alt="Stepper、Step、StepLabelコンポーネントのプレビュー画像"/>
+
+#### Tabs(core)
+タブコンポーネント群。
+アイコンを使って、ボタンナビゲーションのようにもできる。
+
+Tabs の例
+<img src="/screenshots/2020/react-material-ui/tabs.png" width="50%" alt="Tabsコンポーネントのプレビュー画像"/>
+
+### Surfaces
+表面的な UI に関するコンポーネント集。
+
+#### App Bar(core)
+ヘッダーに使えるようなバーのコンポーネント群。
+
+AppBar、ToolBar の例
+<img src="/screenshots/2020/react-material-ui/app-bar.png" width="40%" alt="AppBar、ToolBarコンポーネントのプレビュー画像"/>
+
+#### Paper(core)
+積み重なった紙のような表現ができるコンポーネント。
+
+Paper の例
+<img src="/screenshots/2020/react-material-ui/paper.png" width="40%" alt="Paperコンポーネントのプレビュー画像"/>
+
+#### Card(core)
+カードコンポーネント群。文字だけでなく画像もいれられる。
+
+Card、CardActions、CardContent、CardHeader、CardMedia の例
+<img src="/screenshots/2020/react-material-ui/card.png" width="40%" alt="Card、CardActions、CardContent、CardHeader、CardMediaコンポーネントのプレビュー画像"/>
+
+#### Accordion(core)
+ハンバーガメニューのようなコンポーネント群。
+少し前のバージョンでは ExpansionPanel だった。
+
+Accordion、AccordionDetails、AccordionSummary の例
+<img src="/gifs/2020/react-material-ui/accordion.gif" width="50%" alt="Accordion、AccordionDetails、AccordionSummaryコンポーネントのプレビューGIF"/>
+
+### Feedback
+ユーザに状態を伝えるようなコンポーネント集。
+
+#### Progress(core)
+プログレスコンポーネント群。読み込み中の表現ができる。
+
+CircularProgress の例
+<img src="/gifs/2020/react-material-ui/progress.gif" width="40%" alt="CircularProgressコンポーネントのプレビューGIF"/>
+
+#### Dialog(core)
+ダイアログコンポーネント群。
+Button と組み合わせて、クリックされたときにダイアログを開くといったように使う。
+
+SimpleDialog の例
+<img src="/gifs/2020/react-material-ui/dialog.gif" width="40%" alt="SimpleDialogコンポーネントのプレビューGIF"/>
+
+#### Snackbar(core)
+トースト的な表現ができるコンポーネント群。
+Button と組み合わせて、クリックされたときにメッセージを出したり。
+Alert と組み合わせて、API リクエストエラー時のアラート表示にしたり。
+
+Snackbar の例
+<img src="/gifs/2020/react-material-ui/snack-bar.gif" width="50%" alt="SnackbarコンポーネントのプレビューGIF"/>
+
+#### Backdrop(Core)
+アプリ上の状態変化を表現できる、背景のコンポーネント。
+
+Backdrop の例（CircularProgress との組み合わせ）
+<img src="/gifs/2020/react-material-ui/backdrop.gif" width="40%" alt="BackdropコンポーネントのプレビューGIF"/>
+
+### Data Display
+データを表示することに関するコンポーネント集。
+
+#### Avatar(core)
+アバターコンポーネント群。
+画像や名称を指定してユーザのアイコンのような表現ができる。
+
+Avatar の例
+<img src="/screenshots/2020/react-material-ui/avatar.png" width="40%" alt="Avatarコンポーネントのプレビュー画像"/>
+
+#### Badge(core)
+バッジコンポーネント。アイコンなどと組み合わせて通知を表現できる。
+
+Badge の例
+<img src="/screenshots/2020/react-material-ui/badge.png" width="40%" alt="Badgeコンポーネントのプレビュー画像"/>
+
+#### Chip(core)
+チップコンポーネント。入力や属性、アクションを表現できる。
+
+Chip の例
+<img src="/screenshots/2020/react-material-ui/chip.png" width="50%" alt="Chipコンポーネントのプレビュー画像"/>
+
+#### Divider(core)
+線を表現できるコンポーネント。デフォルトでは hr として変換される。
+
+Divider の例（線の部分）
+<img src="/screenshots/2020/react-material-ui/divider.png" width="40%" alt="Dividerコンポーネントのプレビュー画像"/>
+
+#### Material Icons(icons)
+アイコンのコンポーネント集。アイコンの種類は [Material UI - Material Icons](https://v4.mui.com/components/material-icons/) を参照。
+
+#### Listr(core)
+リスト表示を表現できるコンポーネント群。
+
+List、ListItem、ListItemIcon、ListItemText の例
+<img src="/screenshots/2020/react-material-ui/list.png" width="40%" alt="List、ListItem、ListItemIcon、ListItemTextコンポーネントのプレビュー画像"/>
+
+#### Table(core)
+テーブル表示を表現できるコンポーネント群。
+テーブル内のパーツごとにコンポーネントが分かれており、ソート機能も導入できる。
+
+Table、TableBody、TableCell、TableContainer、TableHead、TableRow の例
+<img src="/screenshots/2020/react-material-ui/table.png" width="50%" alt="Table、TableBody、TableCell、TableContainer、TableHead、TableRowコンポーネントのプレビュー画像"/>
+
+#### Tooltip(core)
+ツールチップコンポーネント。
+ラップしているコンポーネントをホバーした時に、簡易説明を表示するような表現ができる。
+
+Tooltip の例
+<img src="/gifs/2020/react-material-ui/tooltip.gif" width="40%" alt="TooltipコンポーネントのプレビューGIF"/>
+
+#### Typography(core)
+文字表示を表現できるコンポーネント。
+文字位置や文字色、どのタグ（h1 など）とするか、どのタグのスタイルをあてるかなどを設定できる。
+
+Typography の例
+<img src="/screenshots/2020/react-material-ui/typography.png" width="40%" alt="Typographyコンポーネントのプレビュー画像"/>
+
+### Utils
+ユーティリティ的なコンポーネント集。
+
+#### Click Away Listener(core)
+要素の外でクリックイベントが発生したかどうかを検出するコンポーネント。
+
+#### CSS Baseline(core)
+normalize.css のような、CSS をリセットするコンポーネント群。
+ブラウザごとの表示を統一したい時に使用。
+
+#### Modal(core)
+モーダルコンポーネント。
+Dialog、Drawer、Menu、Popover から活用されている下位レベルのコンポーネント。
+モーダルダイアログを作成する場合は、Modal を直接使用するのではなく、Dialog コンポーネントを使用することを推奨としている。
+
+Modal の例
+<img src="/gifs/2020/react-material-ui/modal.gif" width="40%" alt="ModalコンポーネントのプレビューGIF"/>
+
+#### No SSR(core)
+ラップしたコンポーネントを SSR（サーバサイドレンダリング）の対象から外すコンポーネント。
+SSR の時間を短縮、SSR に対応していないコンポーネントをエスケープなどに使う。
+
+#### Popover(core)
+ポップオーバーコンポーネント。
+コンテンツを別のコンテンツの上に表示する表現ができる。
+
+Popover の例
+<img src="/gifs/2020/react-material-ui/popover.gif" width="40%" alt="PopoverコンポーネントのプレビューGIF"/>
+
+#### Popper(core)
+Popper.js をベースとしたポッパーコンポーネント。
+これもコンテンツを別のコンテンツの上に表示する表現ができる。
+上に表示されたコンテンツはスクロールについてこないなど、Popover と微妙な違いがある。
+
+Popper の例
+<img src="/gifs/2020/react-material-ui/popper.gif" width="40%" alt="PopperコンポーネントのプレビューGIF"/>
+
+#### Portal(core)
+ポータルコンポーネント。
+ラップしたコンポーネントを現在の DOM 階層外の新しいサブツリーへレンダリングすることに使う。
+
+#### Textarea Autosize(core)
+テキストエリアコンポーネント。
+デフォルトでは自由にサイズを変更できるが、サイズや行数を固定もできる。
+
+TextareaAutosize の例
+<img src="/gifs/2020/react-material-ui/textarea.gif" width="40%" alt="TextareaAutosizeコンポーネントのプレビューGIF"/>
+
+#### Collapse(core)
+ラップしたコンポーネントで、上から下へ表示される表現ができるコンポーネント。
+
+Collapse の例
+<img src="/gifs/2020/react-material-ui/collapse.gif" width="40%" alt="CollapseコンポーネントのプレビューGIF"/>
+
+#### Fade(core)
+ラップしたコンポーネントで、フェードイン、フェードアウトを表現できるコンポーネント。
+
+Fade の例
+<img src="/gifs/2020/react-material-ui/fade.gif" width="40%" alt="FadeコンポーネントのプレビューGIF"/>
+
+#### Grow(core)
+ラップしたコンポーネントを順番にフェードインするような表現ができるコンポーネント。
+
+Grow の例
+<img src="/gifs/2020/react-material-ui/grow.gif" width="40%" alt="GrowコンポーネントのプレビューGIF"/>
+
+#### Slide(core)
+ラップしたコンポーネントをスライド表示する表現ができるコンポーネント。スライドする方向は指定できる。
+
+Slide の例（derection に up 指定）
+<img src="/gifs/2020/react-material-ui/slide.gif" width="40%" alt="SlideコンポーネントのプレビューGIF"/>
+
+#### Zoom(core)
+ラップしたコンポーネントが、要素の中心から外側に広がるように表示する（もしくはその逆）表現ができるコンポーネント。
+
+Zoom の例
+<img src="/gifs/2020/react-material-ui/zoom.gif" width="40%" alt="ZoomコンポーネントのプレビューGIF"/>
+
+### Lab
+core へ組み込まれる前のコンポーネント集。
+
+#### Alert(lab)
+アラートコンポーネント群。ユーザへ促す注意や案内を表現する。
+
+Alert の例
+<img src="/screenshots/2020/react-material-ui/alert.png" width="50%" alt="Alertコンポーネントのプレビュー画像"/>
+
+#### Autocomplete(lab)
+サジェスト入力フォームを実現できるコンポーネント。複数選択式にすることも可能。
+
+AutoComplete の例
+<img src="/gifs/2020/react-material-ui/auto-complete.gif" width="40%" alt="AutoCompleteコンポーネントのプレビューGIF"/>
+
+#### Data Grid(x-grid, data-grid)
+データグリッドを表現できるコンポーネント群。
+表示だけの Table と違い、値を直接操作できるといった機能も持ち合わせているなど多機能で、ドキュメントの項目も多い。
+所属するライブラリとして、フル機能のエンタープライズ版である x-grid と、無料のコミュニティ版である data-grid がある。
+
+DataGrid の例
+<img src="/screenshots/2020/react-material-ui/data-grid.png" width="70%" alt="DataGridコンポーネントのプレビュー画像"/>
+
+#### Pagination(lab)
+ページネーションを表現できるコンポーネント群。
+
+Pagination の例
+<img src="/screenshots/2020/react-material-ui/pagination.png" width="40%" alt="Paginationコンポーネントのプレビュー画像"/>
+
+#### Rating(lab)
+レーティングを表現できるコンポーネント。
+
+Rating の例
+<img src="/gifs/2020/react-material-ui/rating.gif" width="40%" alt="RatingコンポーネントのプレビューGIF"/>
+
+#### Skeleton(lab)
+コンテンツの読み込み中にスケルトンを表示するような表現ができるコンポーネント。
+
+Skeleton の例
+<img src="/gifs/2020/react-material-ui/skeleton.gif" width="40%" alt="SketetonコンポーネントのプレビューGIF"/>
+
+#### Speed Dial(lab)
+スピードダイヤルで3~6の関連アクションを表示するような表現ができるコンポーネント群。
+
+SpeedDial、SpeedDialIcon、SpeedDialAction の例
+<img src="/gifs/2020/react-material-ui/speed-dial.gif" width="40%" alt="SpeedDial、SpeedDialIcon、SpeedDialActionコンポーネントのプレビューGIF"/>
+
+#### Timeline(lab)
+タイムラインを表現できるコンポーネント群。
+Icon や Paper と組み合わせると、よりリッチな表現ができる。
+
+Timeline、TimelineItem、TimelineSeparator、TimelineConnector、TimelineContent、TimelineDot の例
+<img src="/screenshots/2020/react-material-ui/timeline.png" width="40%"  alt="Timeline、TimelineItem、TimelineSeparator、TimelineConnector、TimelineContent、TimelineDotコンポーネントのプレビュー画像"/>
+
+#### Toggle Buttons(lab)
+トグルボタンコンポーネント群。
+
+ToggleButton、ToggleButtonGroup の例
+<img src="/screenshots/2020/react-material-ui/toggle-button.png" width="40%"  alt="ToggleButton、ToggleButtonGroupコンポーネントのプレビュー画像"/>
+
+#### Tree View(lab)
+ツリービューを表現できるコンポーネント群。
+
+TreeView、TreeItem の例
+<img src="/screenshots/2020/react-material-ui/tree-view.png" width="40%" alt="TreeView、TreeItemコンポーネントのプレビュー画像"/>
+
+---
+
+概要だけさらっと書くつもりがすごく長くなってしまいました。
+ここまで読んでくださった方、ありがとうございます！
+
+それだけ提供している機能が多いということでもあるので、味方につけるときっと頼もしい存在になってくれるのではないかと。
+ちなみに自分が過去に業務で使用していた時には、バージョン少し古く対応してなくて泣く泣く使うことができなかった機能もありました（笑）
+
+この記事を書くにあたって、改めて公式ドキュメントを読んで新しい発見もあって、より使いこなせるようになりたいなと思いました。
+Material UI がどんなものなのか、大まかにでも伝わっていれば幸いです。
+
+## 参考リンクまとめ
+- [Material UI](https://mui.com)
+- [Material UI v4](https://v4.mui.com/)
+- [Material UI Pickers](https://material-ui-pickers.dev/)
