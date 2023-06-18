@@ -1,0 +1,303 @@
+---
+title: "Docusaurus(v2)製サイトにGoogle AnalyticsとGoogle Search Consoleを導入する"
+description: "Docusaurus(v2)製のサイトにおいて、解析ツールやサイトマップの導入などのプラグインをまとめました"
+pubDate: "2020-05-03"
+updatedDate: "2021-04-02"
+category: "tool-and-service"
+tags: ["JavaScript", "Docusaurus"]
+---
+
+今年1月に 勉強記録 & ポートフォリオサイト として Docusaurus 製のサイトを作成しました。
+その後、Google Analytics と Google Search Console を導入したので、記事化しておきます。
+
+import OG from "@/components/OG.astro"
+
+## はじめに
+今回使用するバージョンはこちら。
+- @docusaurus/core：`2.0.0-alpha.54`
+- @docusaurus/preset-classic：`2.0.0-alpha.54`
+
+↓
+※2020/08/02追記.
+- @docusaurus/core：`2.0.0-alpha.61`
+- @docusaurus/preset-classic：`2.0.0-alpha.61`
+
+に対応。
+
+↓
+※2021/04/02修正.
+- @docusaurus/core：`2.0.0-alpha.72`
+- @docusaurus/preset-classic：`2.0.0-alpha.72`
+
+に対応。
+
+ここでは便宜上、ライブラリをプラグインと書いていきます（ Docusaurus のドキュメントもプラグインと書いてあるので）
+
+## @docusaurus/plugin-google-gtag
+Google Analytics や Google 広告を導入する際に使用するプラグイン。
+
+### @docusaurus/plugin-google-analytics との違い
+`@docusaurus/plugin-google-analytics`の方は analytics.js。
+<OG url="https://developers.google.com/analytics/devguides/collection/analyticsjs" />
+
+`@docusaurus/plugin-google-gtag`の方は gtag.js になります。
+<OG url="https://developers.google.com/analytics/devguides/collection/gtagjs" />
+
+恥ずかしながら、自分は最初この違いがよくわかっていなかったのですが、どうも gtag.js の方が今の世代になるそうです。
+Google Analytics の管理画面から確認できるトラッキングコードも、そういえば gtag の方でした。
+
+gtag.js に対して、analytics.js では Google Analytics にしか対応していません。
+
+公式ガイドと参考はこちら.
+<OG url="https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=ja" />
+<OG url="https://www.irep.co.jp/knowledge/blog/detail/id=45604" />
+
+### Google Analytics 導入
+※以前、ブログに導入したときの記事はこちら.
+- [Jekyll製ブログにGoogle Analytics導入](/posts/2019-07-06-google-analytics)
+
+#### サイトを Google Analytics に登録
+※前提として Google アカウントが必要になります。
+
+- すでに他サイト等で導入したことがある場合
+管理画面の左サイドバーの「管理」→ プロパティの「プロパティの作成」から。
+<img src="/screenshots/2020/docusaurus-ver-2-gtag/add-google-analytics.png" width="100%" alt="Google Analyticsの管理設定画面" />
+
+- 新規登録の場合
+[Google Analytics](https://www.google.com/analytics/web/?hl=ja)の「無料で利用する」から。
+
+導入対象種別を選択した後、種別に応じた基本情報（サイト URL など）を入力していきます。
+
+登録が終わると管理画面へ移行します。
+そこから「管理」 → プロパティの「トラッキング情報」 → 「トラッキングコード」へ行き、トラッキング ID を控えておきます。
+
+#### プラグインのインストール
+※`@docusaurus/preset-classic`プリセット使用時はすでに含まれているため、別途インストールは不要です。
+```bash
+yarn add @docusaurus/plugin-google-gtag
+```
+
+#### 設定の追記
+docusaurus.config.js に以下のように追記。
+`trackingID`に先ほど控えたトラッキング ID を設定します。
+
+※2020/08/02追記
+**`@docusaurus/preset-classic`プリセットが有効の場合**
+plugins に記述は不要で、themeConfig に gtag 設定を追記のみです。
+```javascript:docusaurus.config.js
+module.exports = {
+  themeConfig: {
+    gtag: {
+      trackingID: 'UA-XXXXXXXXX-X',
+      anonymizeIP: true,
+    },
+  },
+};
+```
+
+**`@docusaurus/preset-classic`プリセットが無効の場合**
+※`2.0.0-alpha.54`においては、プリセットが有効でも、こちらの記述でも動作しました。
+```javascript:docusaurus.config.js
+module.exports = {
+  plugins: ['@docusaurus/plugin-google-gtag'],
+  themeConfig: {
+    gtag: {
+      trackingID: 'UA-XXXXXXXXX-X',
+      anonymizeIP: true,
+    },
+  },
+};
+```
+なお、`anonymizeIP`に関しては任意です。
+有効化することで、収集する IP アドレスの末尾を0にして匿名化します。
+
+公式サポートはこちら.
+<OG url="https://support.google.com/analytics/answer/2763052?hl=ja" />
+
+匿名化すると、地域情報といった IP アドレスで判定しているようなデータの精度が落ちてしまいますが、GDPR （EU 一般データ保護規則）対応として必要になる場合もあるようです。
+
+また、IP 末尾が0に変わるため、指定 IP 除外のフィルタを設定する際も注意が必要です。
+
+#### プライバシーポリシーの用意
+Google Analytics を利用する際は、プライバシーポリシーを記載したページの用意が必要です。
+
+個人情報の保護や取り扱いについての方針を示す必要があり。
+- Cookie を使用していること
+- 設定で Cookie は無効にできること
+- 個人を特定する情報は収集しないこと
+- Google Analytics の利用規約
+
+などの記述が必要になります。
+
+---
+
+ここまで完了したら、サイトにアクセスしてみて、リアルタイムのアクティブユーザ数がカウントされていれば無事完了です。
+
+自分のアクセスを除外した場合は Google Analytics オプトアウト アドオンを導入するとよいです。
+<OG url="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja" />
+
+### Google Search Console 導入
+※以前、ブログに導入したときの記事はこちら（より詳細に書いてます）
+- [ブログでGoogle Search Consoleを導入する](/posts/2019-09-30-google-search-console)
+
+今回は、Google Analytics を先に導入しているものとして進めていきます。
+
+#### サイトを Google Search Console に登録
+- すでに他サイト等で導入したことがある場合
+管理画面の左上のプロパティ（URL など）を選択して「プロパティの追加」から。
+<img src="/screenshots/2020/docusaurus-ver-2-gtag/add-google-search-console.png" width="60%" alt="Google Search Consoleのプロパティ選択画面" />
+
+- 新規登録の場合
+[Google Search Console](https://search.google.com/search-console/about?hl=ja)にアクセスして、「今すぐ開始」から。
+
+プロパティタイプをどちらか選択（自分は URL プレフィックスにしています）
+- URL プレフィックス：そのURLのみの集計
+- ドメイン：「www」のありなしや「http://」「https://」の違いに関わらず一括で登録し、それぞれを集計
+
+所有権の確認では、Google Analytics を導入済みだと、そこから所有権を確認してくれますが、プロパティタイプがドメインの場合は DNS の確認が必要になるようです。
+
+#### プライバシーポリシーの用意
+Google Search Console に関しても、プライバシーポリシーに記述が必要になります。
+
+Google Analytics 導入時に作成したページをベースにして、追記しましょう。
+
+## @docusaurus/plugin-sitemap
+サイトマップを自動生成してくれるプラグイン。
+
+### プラグインのインストール
+※`@docusaurus/preset-classic`プリセット使用時はすでに含まれているため、別途インストールは不要です。
+```bash
+yarn add @docusaurus/plugin-sitemap
+```
+
+### 設定の追記
+docusaurus.config.js に以下のように追記。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+※2020/08/02追記
+**`@docusaurus/preset-classic`プリセットが有効の場合**
+plugins でなく、presets で使用プリセット設定を記述するところにサイトマップの設定を記述します。
+
+{/* <!-- textlint-enable --> */}
+
+```javascript:docusaurus.config.js
+module.exports = {
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+        // 追記
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          trailingSlash: false,
+        }
+      },
+    ],
+  ],
+}
+```
+
+**`@docusaurus/preset-classic`プリセットが無効の場合**
+こちらでは、plugins に使用プラグイン定義とともに設定を記述します。
+```javascript:docusaurus.config.js
+module.exports = {
+  plugins: [
+    [
+      '@docusaurus/plugin-sitemap',
+      {
+        changefreq: 'weekly',
+        priority: 0.5,
+        trailingSlash: false,
+      },
+    ],
+  ],
+};
+```
+
+#### changefreq
+ページの更新頻度。設定値はいかのいずれか。
+- always
+- hourly
+- daily
+- weekly
+- monthly
+- yearly
+- never
+
+#### priority
+サイト内の他のURLと比較したこのURLの優先度。
+0.0から1.0までの値を指定。0.5がデフォルト。
+
+これらの設定が全体のデフォルト設定になり、各ページで個別に changefreq と priority を設定できる？と思ったのですが、いまいちやり方がわからず...。
+
+#### trailingSlash
+サイトマップの各種 URL の末尾に`/`を付与するか。
+
+---
+
+これでサイトマップが自動生成されるようになり、`(ドメイン)/sitemap.xml`から確認できます。
+
+※2021/04/02追記
+以前は cacheTime の設定ができたのですが、v2.0.0-alpha.72 においては廃止になっていました。
+
+### サイトマップの読み込み
+Google Search Console にサイトマップを読み込ませることで、サイトを認識させ検索結果に表示させやすくできます。
+
+Google Search Console 管理画面の「サイトマップ」から、サイトマップの URL を指定して「送信」を選択。
+
+## 2.0.0-alpha.60前後か、`@docusaurus/preset-classic`プリセットの有効無効で設定方法が違う理由（※2020/08/02追記）
+バージョン`2.0.0-alpha.60`から、1つの Docusaurus 製サイトにおいて、同じプラグインを複数回使用できるという仕様が追加されたようです。
+<OG url="https://v2.docusaurus.io/docs/using-plugins/#multi-instance-plugins-and-plugin-ids" />
+
+ただ、この場合は以下のようにプラグインにそれぞれ ID を振るようにしなければならないとのこと。
+```javascript:docusaurus.config.js
+module.exports = {
+  plugins: [
+    [
+      '@docusaurus/plugin-xxx',
+      {
+        id: 'plugin-xxx-1',
+        // other options
+      },
+    ],
+    [
+      '@docusaurus/plugin-xxx',
+      {
+        id: 'plugin-xxx-2',
+        // other options
+      },
+    ],
+  ],
+};
+```
+もしこの ID を振っていなかった場合は、`default`がIDとなり、ID重複ということで以下のようなエラーになりました。
+```
+Error: Plugin docusaurus-plugin-google-gtag is used 2 times with id=default.
+To use the same plugin multiple times on a Docusaurus site, you need to assign a unique id to each plugin instance.
+```
+
+自分の場合、Docusaurus のバージョンアップ対応をした際に、このエラーに遭遇しました。
+設定を重複して書いたりしてないのになんで？と思いましたが、`@docusaurus/preset-classic`が有効になっていると、このプリセットに含まれているプラグインも有効となる。
+↓
+plugins に別途設定を書く
+と、2回使用しているとみなされるようです。
+
+なので、plugins の方には書かないようにしたところ、無事にエラーが出なくなりました。
+
+## 参考リンクまとめ
+- [Docusaurus v2 - Plugins](https://v2.docusaurus.io/docs/using-plugins)
+- [Google Analytics - analytics.js から gtag.js に移行する](https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=ja)
+- [Google アナリティクスのタグが古いままになっていませんか？](https://www.irep.co.jp/knowledge/blog/detail/id=45604/)
+- [Google Analytics](https://www.google.com/analytics/web/?hl=ja)
+- [Google Analytics サポート - アナリティクスでの IP 匿名化（IP マスキング）](https://support.google.com/analytics/answer/2763052?hl=ja)
+- [Google アナリティクス オプトアウト アドオン](https://tools.google.com/dlpage/gaoptout?hl=ja)
+- [Google Search Console](https://search.google.com/search-console/about?hl=ja)
+- [sitemaps.org - サイトマップの XML 形式](https://www.sitemaps.org/ja/protocol.html)
