@@ -1,0 +1,309 @@
+---
+title: "GitリポジトリをGitLabからGitHubへ移行する"
+description: "GitLabで管理していたリポジトリのコード（コミット履歴）、ブランチ、タグ、ラベル、マイルストーン、Issue、マジリクをGitHubへ移行するための手順を記録"
+pubDate: "2020-08-13"
+updatedDate: "2020-09-01"
+category: "develop"
+tags: ["GitLab", "GitHub"]
+---
+
+当ブログのソースコードは GitLab で管理していたのですが、普段 GitHub の方を使用することがほとんどなので、先日 GitHub へ移行しました。
+ソースコードのほかに、Issue やマジリクなどの移行できたので、その手順を残しておきます。
+
+import OG from "@/components/OG.astro"
+
+## 移行にあたって
+### ミラーリングで対応できるもの
+- ソースコード（+ コミット履歴）
+- ブランチ
+- タグ
+
+これらはリポジトリのミラーリングを行うことで比較的すぐに移行できます。
+
+これに加えて Wiki についても、Wiki データのミラーリングを行うことで対応できるようです。
+※今回は Wiki については試してません。
+
+### 移行スクリプトで対応できるもの
+以下のデータも移行したかったのですが、リポジトリのミラーリングでは対応していませんでした。
+- ラベル
+- マイルストーン
+- Issue
+- マジリク
+
+しかし、有志の方がこれらのデータを移行するスクリプトを公開されていたので、今回はこちらを使わせていただきました。
+<OG url="https://github.com/piceaTech/node-gitlab-2-github" />
+
+### 移行スクリプトを使うための前提
+- Node.js 導入済み
+- npm か yarn コマンドが使えること
+
+ちなみに移行元、移行先ともにプライベートリポジトリでも使用できました。
+
+### 移行の仕様
+移行スクリプトの [2020/08/08 時点](https://github.com/piceaTech/node-gitlab-2-github/tree/cf9b3761b4b398883f89e3cb68005fa81c9157e2)での仕様です。
+
+#### ラベル
+GitHub のデフォルトのラベルに、移行したラベルが追加されます。
+色も同じっぽかったです。
+
+また、`gitlab merge request`というラベルも追加されます。
+このラベルは、マジリクを Issue 変換したものに付与されます。
+
+#### マイルストーン
+タイトルや対象範囲、open か close なのかなど、ほぼそのまま移行されます。
+
+#### Issue
+移行元
+※すみません、移行元のスクショは撮り忘れました...。
+
+移行先
+<img src="/screenshots/2020/migrate-gitlab-to-github/convert-issue.png" width="100%" alt="移行先のGitHub Issue詳細画面" />
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+タイトルやコメント、open なのか close なのかなど、ほぼそのまま移行されます。
+ただ、その作成日時は移行実施した日時になるため、コメントに`In GitLab by @h-yoshikawa0724 on Jun 28, 2020, 18:14`のような、移行元での情報が記載されるようになっています。
+
+画像アップロード内容まで移行されるかは未確認ですが、S3にアップロードするような設定もあるようです。
+
+また、何らかの原因で Issue 移行（移行先リポジトリに Issue 作成）に失敗することがありますが、その救済設定（`useReplacementIssuesForCreationFails`）がデフォルトで有効になっています。
+（[移行スクリプトの設定](#移行スクリプトの設定)も参照）
+
+{/* <!-- textlint-enable --> */}
+
+自分の場合は、最初の頃、少し手伝ってもらっていた先輩が作ったIssue が移行時にエラーとなっていました。
+移行元と移行先ともにプライベートリポジトリであったこと、今は移行元リポジトリからも抜けていて、移行先リポジトリにいなかったことが、恐らくエラーの原因じゃないかと思われます。
+
+この設定が有効になっていると、以下のような代替 Issue が作成されます。
+移行元の Issue の説明が失われてしまいますが、その他の情報は引き継がれるようです。
+<img src="/screenshots/2020/migrate-gitlab-to-github/convert-replacement-issue.png" width="100%" alt="移行先のGitHub （代替）Issue詳細画面" />
+
+#### マジリク
+そのマジリクの状態に応じて、挙動が変わります。
+
+1. Open → プルリク（Open）に移行される？（今回、この状態のマジリクがなかったので未確認）
+2. Closed → プルリク（Closed）に移行される
+3. Merged + ブランチ削除済み → Issue（Closed）に変換される（`gitlab merge request`のラベルがつく）
+4. Merged + ブランチあり → エラーで変換されない
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+こちらについても作成日時は移行実施した日時になるため、コメントに`In GitLab by @h-yoshikawa0724 on Jun 28, 2020, 18:14`のような、移行元での情報が記載されます。
+
+{/* <!-- textlint-enable  --> */}
+
+注意点としては、マージ済みの際の挙動でしょうか。
+3については以下のような感じです。
+
+移行元
+<img src="/screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-before.png" width="100%" alt="移行元のGitLab マージ済みマジリク一覧画面" />
+
+移行先
+<img src="/screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-after.png" width="100%" alt="移行先のGitHub 変換されたクローズ済みIssue一覧画面" />
+
+<img src="/screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-info.png" width="100%" alt="移行先のGitHub 変換されたクローズ済みIssue詳細画面" />
+
+4については、マージ元のブランチはあるが、マージ先との差分がないためにエラーとなってしまうようです。
+何も移行されない問題がありますが、移行スクリプトの設定（`useIssuesForAllMergeRequests`）により、強制的に3と同じ挙動にすることで対応可能です。
+（[移行スクリプトの設定](#移行スクリプトの設定)も参照）
+
+#### 使用上限
+[README - import-limit](https://github.com/piceaTech/node-gitlab-2-github#import-limit) に注意書きがあります。
+
+この移行スクリプトでは、内部的に GitHub API を使用しています。
+この GitHub API では、1時間あたり5000 API リクエストという制限があるため、移行内容が多いリポジトリだと**上限に引っ掛かる可能性がある**ことに注意です。
+
+## リポジトリ移行手順
+前置きが長くなってしまいましたが、ここから実際の手順になります。
+
+### リポジトリの用意とミラーリング
+**※補足**
+- 移行元 - GitLabリポジトリ：h-yoshikawa0724/changeofpace
+- 移行先 - GitHubリポジトリ：h-yoshikawa0724/change-of-pace
+
+として書いていっているので、適宜ご自分のリポジトリ情報に置き換えてください。
+
+---
+
+1. GitHub で移行先リポジトリを用意（作成するだけで OK）
+
+2. 移行元のベアリポジトリをクローン
+```bash
+git clone --mirror git@gitlab.com:h-yoshikawa0724/changeofpace.git
+```
+
+3. 移行元のベアリポジトリを、移行先に反映
+```bash
+cd changeofpace.git
+
+git push --no-verify --mirror git@github.com:h-yoshikawa0724/change-of-pace.git
+```
+
+この時点で、コード（コミット履歴）、ブランチ、タグは移行完了です。
+
+なお、ベアリポジトリというのは作業ディレクトリを持たず、操作履歴などの情報のみを持つリポジトリのことを指すそうです。
+末尾に`.git`とつくのも特徴で、実際に配下ディレクトリを見ると以下のようになっていました。
+```bash
+ls changeofpace.git/
+
+config  description  HEAD  hooks/  info/  objects/  packed-refs  refs/
+```
+<OG url="https://qiita.com/devzooiiooz/items/56a02342d9d65d79f6c3" />
+
+### アクセストークンの用意
+#### GitLab
+プロフィールアイコンのSettings → Access Tokens. から。
+`api`と`read_repository`の scope を持ったトークンを生成し、その値を控えておきます。
+
+<img src="/screenshots/2020/migrate-gitlab-to-github/access-token-gitlab.png" width="100%" alt="GitLabでのアクセストークン設定画面" />
+
+#### GitHub
+プロフィールアイコンのSettings → Developer settings → Personal access tokens. から。
+「Generate new token」を押すと、アカウントのパスワード入力を求められるので入力。
+`repo`の scope を持ったトークンを生成し、その値を控えておきます。
+
+<img src="/screenshots/2020/migrate-gitlab-to-github/access-token-github.png" width="100%" alt="GitHubでのアクセストークン設定画面" />
+
+### 移行スクリプトの用意
+1. 移行スクリプトのダウンロード
+```bash
+git clone https://github.com/piceaTech/node-gitlab-2-github.git
+```
+
+2. ライブラリのインストール
+```bash
+cd node-gitlab-2-github
+
+npm -i
+# or
+yarn install
+```
+
+### 移行スクリプトの設定
+#### 設定ファイルの用意
+1. `src/settings.ts`に以下を追記（`useReplacementIssuesForCreationFails: boolean;`の下にでも）
+```typescript
+useIssuesForAllMergeRequests: boolean;
+```
+※最近追加された設定の型定義が漏れていたようです。これがないとスクリプトが動きません。
+  ただ、自分がこの修正のプルリクを出したので、マージされるなり対応されたら、この手順は不要になります。
+  → **2020/09/01追記** **無事[マージ](https://github.com/piceaTech/node-gitlab-2-github/pull/74)されました！**
+
+2. `sample_settings.ts`を`settings.ts`にリネームして、設定を編集
+自分の場合の例.
+```typescript
+import Settings from './src/settings';
+
+export default {
+  gitlab: {
+    // url: 'https://gitlab.mycompany.com' // 公式でなく独自にホスティングしている場合のみ、その URL
+    token: 'XXXXXXXXXXXXX', // 先ほど控えたトークン
+    projectId: 'XXXXXXX', // 後述参考
+  },
+  github: {
+    // baseUrl: 'https://gitlab.mycompany.com:123/etc', // 公式でなく独自にホスティングしている場合のみ、その URL
+    owner: 'h-yoshikawa0724', // 移行先リポジトリのオーナーアカウント ID
+    token: 'XXXXXXXXXXXXX', // 先ほど控えたトークン
+    repo: 'change-of-pace', // 移行先リポジトリ名
+  },
+  usermap: {
+    'h-yoshikawa0724': 'h-yoshikawa0724', // GitLab アカウントID: GitHub アカウント ID のマッピング（移行時にこれに応じて変換される）
+  },
+  projectmap: {
+    'h-yoshikawa0724/changeofpace': 'h-yoshikawa0724/change-of-pace', // GitLab リポジトリ名: GitHub リポジトリ名
+  },
+  conversion: {
+    useLowerCaseLabels: true,
+  },
+  debug: false, // デバッグ実行するかどうか
+  usePlaceholderIssuesForMissingIssues: true, // 削除されたIssue があった時などに、移行元と移行先とでその分 Issue 番号がずれるを防ぐために空の Issue を作成するか
+  useReplacementIssuesForCreationFails: true, // 何らかの原因で Issue 移行に失敗した際に、代替 Issue を作成するか（移行元の説明は失われるが、それ以外は引き継がれる）
+  useIssuesForAllMergeRequests: true, // 強制的に全ての移行元マジリクを移行先 Issue に変換するか
+  skipMatchingComments: [], // コメント移行をスキップするワード設定（このワードを含むコメントは移行されない、ワードの大文字小文字は区別しない）
+  mergeRequests: {
+    logFile: './merge-requests.json',
+    log: false, // 移行元マジリクを logFile に出力するかどうか（出力する場合は移行先へ移行されない）
+  },
+} as Settings;
+```
+設定の詳細や他の設定が知りたい場合は、[README - Where to find info for the settings.ts](https://github.com/piceaTech/node-gitlab-2-github#where-to-find-info-for-the-settingsts) に説明が記載されています。
+
+#### プロジェクト ID の確認方法
+GitLab のリポジトリトップ画面に表示されているので、そこで確認できます。
+
+もしくは、一度`projectId`を`null`にした状態で、このスクリプトを実行すると確認できます。
+他の設定が問題なければ、リポジトリの一覧が表示されて、そこへプロジェクト ID が表示されるようになっています。
+```bash
+yarn start
+
+yarn run v1.22.4
+node node_modules/ts-node/dist/bin.js ./src/index.ts
+XXXXXXX          change-of-pace         --
+
+
+
+Select which project ID should be transported to github. Edit the settings.js accordingly. (gitlab.projectID)
+
+
+
+Done in 14.89s.
+```
+
+### 移行スクリプトの実行
+```bash
+npm run start
+# or
+yarn start
+```
+
+これで移行が開始されます。
+当然、移行内容の量が多いほど時間がかかるので気長に待ちましょう。
+
+```
+Transfer complete!
+```
+と表示されたら移行完了です。
+ちゃんと移行されているか確認してみましょう。
+
+ちなみに自分の場合は、設定の関係上2回実行することになったのですが、**基本的には**前回の移行で作成された分と重複して移行（作成）されるということはないようです。
+
+ログ出力を見た感じ、
+ラベルやマイルストーンは「既に存在しています」
+Issue やプルリクは「更新しました」
+みたいな英語が表示されていたような気がします。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+ただ、`useReplacementIssuesForCreationFails`設定により作られた代替 Issue（Issue タイトル末尾に`[REPLACEMENT ISSUE]`がついているもの）に関しては、既に存在すると認識されないようで、重複して作られてしまいました。
+
+{/* <!-- textlint-enable --> */}
+
+## その他の設定移行
+必要に応じて、その他の設定も移行しましょう。
+自分の場合は、移行元リポジトリと Netlify を連携させていたので、移行先リポジトリで連携しなおしました。
+
+### Netlify
+Settings → Build & Deploy → Continuous Deployment → Build settings → 「Edit settings」
+から、連携するリポジトリ更新。
+
+## 後処理
+これもまた必要に応じて行いましょう。
+
+- 旧 GitLab リポジトリの削除
+- ミラーリング時にローカルへ作った、ベアリポジトリの削除
+- 今回移行したプロジェクトのローカルリポジトリのリモートURLを、移行先リポジトリの方に設定
+- アクセストークンを削除
+
+---
+今回、特に大きな問題もなくリポジトリの移行ができて安心しました。
+
+この移行スクリプトを作成された方に感謝ですね！
+使い方をちゃんと理解したうえで使用すれば、とても便利なスクリプトなので、移行を考えられている方はぜひ使ってみてはいかがでしょうか。
+
+ではでは。
+
+## 参考リンクまとめ
+- [GitHub - node-gitlab-2-github](https://github.com/piceaTech/node-gitlab-2-github)
+- [GitLabからGitHubへの移行](https://qiita.com/nishioka-sctv/items/e66cdab447aaf6ecb77c)
+- [GitLab の Issue を GitHub に移行する node.js スクリプトを試す](https://mseeeen.msen.jp/migrate-gitlab-issues-to-github/)
+- [gitのベアリポジトリとノンベアリポジトリ](https://qiita.com/devzooiiooz/items/56a02342d9d65d79f6c3)
