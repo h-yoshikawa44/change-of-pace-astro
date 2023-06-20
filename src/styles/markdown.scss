@@ -75,6 +75,10 @@
     @apply max-w-full h-auto my-4 mx-auto block drop-shadow-md;
   }
 
+  .scroll-table-block {
+    @apply overflow-x-auto;
+  }
+
   table {
     @apply my-4 border border-slate-300 w-full text-sm border-collapse leading-normal overflow-auto;
   }
