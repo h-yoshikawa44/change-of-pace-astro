@@ -17,6 +17,11 @@
           "."
         ],
         "allowEmojiAtEnd": true
+      },
+      "ja-no-successive-word": {
+        "allow": [
+          "/ほど/i"
+        ]
       }
     }
   }
