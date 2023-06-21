@@ -1,0 +1,274 @@
+---
+title: "情報整理から記録まで、Notionを活用してみる"
+description: "Notionの基本概念説明から、実際の活用例の紹介まで"
+pubDate: "2020-11-27"
+updatedDate: "2020-11-27"
+category: "tool-and-service"
+tags: ["ブログ", "Notion"]
+---
+
+会社を辞めて、現在療養中のよしです。
+療養する最中、身辺整理といいますか、いろんな情報を整理・集約したいなという思いが出てきました。
+そこで、以前から存在を知っていたものの、全然活用できていなかった Notion を活用してみました。
+
+import OG from "@/components/OG.astro"
+
+## Notion とは？
+<img src="/screenshots/2020/notion-introduction/notion.png" width="100%" alt="Notionのトップページ" />
+
+<OG url="https://www.notion.so" />
+
+「All-in-one workspace」とあるように、実に幅広い機能を備えているサービスです。
+例として、メモ・ノート機能、タスク管理、データベース管理など。
+
+従来これらの機能は、それぞれに特化したサービスやアプリを組み合わせて使われてきたのではないでしょうか。
+Notion を使えば、それを Notion ひとつに集約させることができます。
+
+Web アプリだけでなく、デスクトップアプリ、iOS/Android アプリも用意されており、それぞれのプラットフォームで行われた編集は同期されます。
+
+### Notion の基本
+
+#### ワークスペース
+Notion の基本構造としては、まずワークスペースを作成し、その中にページを作成していくようになっています。
+
+#### ページ
+ページは新規作成すると、まっさらなページが作られます。
+メモ書きするもよし、ドキュメントを書くもよし。豊富に用意されているテンプレートを使用するもよし。
+
+マークダウンが使えるので、多くのエンジニアの方にとってはとっつきやすいのではないかと（一部使えない記法や、違う使い方になっているものもあります。）
+
+`/`からショートカットを呼び出して、マークダウン要素をはじめとした、後述するブロック要素の挿入もできます。
+
+ページに他のページを紐づけたり、階層構造にしたり。
+よく使うページはサイドバーに追加もできます。
+
+自分のワークスペースのサイドバー
+<img src="/screenshots/2020/notion-introduction/notion-sidebar.png" width="30%" alt="Notion 自分のワークスペースのサイドバー表示" />
+
+#### ブロック
+h1～h3 をはじめとしたマークダウン要素、画像など、ページ内を構成する要素はブロックとなります。
+
+このブロック単位で、ドラッグ & ドロップで移動させられたり、文字色や背景色を変えたり、削除したりということが可能です。
+
+簡単な例
+<img src="/screenshots/2020/notion-introduction/notion-page-block.png" width="80%" alt="Notion ページとブロックの図" />
+
+基本的には上から下への流れですが、ブロックをブロックの右隣に移動させて横並びになんかもできたりします。
+
+それと、ブロックの一種としてデータベースの存在があります。
+これはページ情報を集約してデータとして扱い一覧表示するようなもので、表示方法の種類は執筆時現在、以下の6つです。
+
+（スクショは Notion Template Gallery より）
+<OG url="https://www.notion.so/ja-jp/templates" />
+
+**Table**
+<img src="/screenshots/2020/notion-introduction/notion-table.png" width="80%" alt="Notion Table表示の例" />
+
+**Board**
+<img src="/screenshots/2020/notion-introduction/notion-board.png" width="80%" alt="Notion Board表示の例" />
+
+**List**
+<img src="/screenshots/2020/notion-introduction/notion-list.png" width="80%" alt="Notion List表示の例" />
+
+**Calendar**
+<img src="/screenshots/2020/notion-introduction/notion-calendar.png" width="80%" alt="Notion Calendar表示の例" />
+
+**Gallery**
+<img src="/screenshots/2020/notion-introduction/notion-gallery.png" width="80%" alt="Notion Gallery表示の例" />
+
+**Timeline**
+<img src="/screenshots/2020/notion-introduction/notion-timeline.png" width="80%" alt="Notion Timeline表示の例" />
+
+ちなみにこの表示方法は、どれか1つのみだけ使用ということでなく、同じデータをもとに複数の表示方法を併用して切り替えるということができます。
+
+また、同じ表示方法であっても、検索条件のフィルターの有無などで使い分けることも可能です。
+
+---
+
+Notion の基本概念はこんな感じで、使ってみるとわかるのですが、割と自由にいろんなことができます。
+
+自由ゆえに使い方を悩む場合は、用意されている公式のテンプレートや他のユーザの方が公開しているテンプレートを参考にすると、面白いアイデアが浮かぶやもしれません。
+
+料金プランはありますが、フリー（Personal）プランでも出来ることは多いので、まずは使ってみてはいかがでしょう？
+（以前のフリープランではブロック数の制限がありましたが、2020年5月にその制限がなくなりました）
+
+## 自分の活用方法
+
+### 日々の記録
+※フルページキャプチャの都合で、日記のテーブル上部に集計行がかぶってますが、本来はテーブル下部に追従する形であります。
+<img src="/screenshots/2020/notion-introduction/dashboard.png" width="80%" alt="Notion 日々の記録ページ" />
+
+毎日開く自分用のダッシュボード的なページで、月ごとに作成する想定です。
+
+Twitter でこちらの方の記事を見かけて、すごくいいなーと思い、思いっきり真似させていただきました。ありがとうございます🙇
+
+<OG url="https://blog.35d.jp/2020-06-01-notion-weather" />
+<OG url="https://blog.35d.jp/2020-07-06-notion-daily-log" />
+
+他にもいろんな Notion の使い方を紹介されていて、とても参考にさせていただきました。
+<OG url="https://blog.35d.jp/2020-06-30-notion-matome" />
+
+ちなみにこの記事の作者様から、リアクションをいただいて嬉しかったです！
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">素敵です！👏 <a href="https://t.co/4PGnRF02qJ">https://t.co/4PGnRF02qJ</a>
+  </p>&mdash; Yuji Tsuburaya (@___35d)
+  <a href="https://twitter.com/___35d/status/1323579665269678082?ref_src=twsrc%5Etfw">November 3, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+さらっと中身を説明すると、こんな感じです。
+- テーマ：今年のテーマと今月テーマをいつでも見られるように
+- 生活ルーティン：日々行うことのメモ
+- 運勢：某占いの開運3か条（これを気にかけて、何かいいことあればラッキー）
+- 今月やること：ふわっとやること管理
+- 天気予報：参考記事そのままのお天気ウィジェット
+- 日記：
+  - Date：日付
+  - Highlight：その日あったことのハイライト
+  - Weather：天気
+  - Condition：朝昼夜の体調
+  - Stepper：ステッパーで運動したか
+  - EMS：EMS（低周波電流） でマッサージしたか
+  - Sunbath：外で陽にあたったか
+  - Medicine：常用薬以外に服用した薬
+  - diary：簡単な日記
+
+現在は会社を退職して療養中の身であるため、体調に関連する事項が多めですね。
+
+日々の体調を記録して、体調の傾向を分析しようかなぁとか。
+精神疾患に対して、運動や陽に当たることが効果的と聞くけどどうなのか？とか。
+
+あとは単純に日々の振り返りができるというのもありますね。
+これまで iPhone のメモ帳アプリに簡単な日記はつけてましたが、Notion に移行してより振り返りやすくなりました。
+こうして日記部分見ると、病んでますねぇ（苦笑）
+
+このページの内容に関しては、特に試行錯誤をして日々アップデートしていこうと思っています。
+（今月色々試すつもりが、気力の落ちた期間が続き、あまりできてないのはここだけの話...）
+
+### ドキュメント下書き・メモ
+<img src="/screenshots/2020/notion-introduction/draft.png" width="80%" alt="Notion ドキュメント下書き・メモページ" />
+
+技術記事・ドキュメントの下書きやメモを集約したページです。
+特に変わったことはしていません。
+
+これまで記事執筆は VSCode でやっていましたが、これからは Notion でざっと下書きをして、VSCode で手直しをしようかなと思っています。
+
+### 参考書一覧
+持っている本のページ
+<img src="/screenshots/2020/notion-introduction/books.png" width="80%" alt="Notion 持っている本ページ" />
+
+主に技術本のギャラリーページです。
+現在持っている本と、気になっている本の情報を整理しておきたかったので作りました。
+
+本のページに画像をいれておくと、ギャラリー表示へ切り替えた時に表示してくれるので、表紙の画像をいれてあります。
+画像のどの部分を表示するかも決められるので、調整しておくと見栄えよくできていいですね。
+
+表示している日付は、出版日です。
+出版されてから日が経ってるのにまだ読んでないの？という、積読へのちょっとした圧です(笑)
+
+### リンク集
+リンク集の一部抜粋
+<img src="/screenshots/2020/notion-introduction/links-example.png" width="80%" alt="Notion リンク集ページ一部抜粋" />
+
+元々、各種ブラウザや Twitter のブックマークを集約するべく作ったページです。
+Notion に集めておけば、PC・スマホどちらからもアクセスできますからね。
+
+技術やサービスの公式サイトから、ちょっとした Tips 記事やツイートまで、いろんな情報のリンク集です。
+
+１つのテーブルに全てを集約するのはさすがに大変なので、ざっくりとしたジャンル分けをしています。
+設計とかデザイン、言語ごととか、割とテキトーですが...。
+それぞれでテーブルを作って整理してます。
+
+### 開発フロー
+このページはまだ構想程度なので、スクショはなしで。
+個人開発をする上での、自分なりの開発フローテンプレートのようなものを作れたらいいなと思っています。
+
+一言で開発と言っても実際にサービスやアプリケーションを作るとするなら、企画～要件定義～設計～実装～テスト～運用と、やることはたくさんあります。
+（ちょっと作ってみた程度なら、必ずしもかっちりとやる必要はないとでしょうが...）
+
+やることたくさんありすぎて、どこから手を付けたらいいかわからないを防ぐとか。
+最低限気をつけるべきことを忘れないようにするとか。
+
+あとは、開発の流れをちゃんと身につけたいとか。
+自分は Web プログラマーとして、約3年ほどの経験ですが、上流工程は正直あまり経験がありません。
+それってどうなの？やばくない？という危機感みたいなものもあり。
+
+そういった思いから、構想中です。
+
+とはいえ、ずっと構想していてもしょうがないので、実際に何か個人開発しながら試していきつつ、組み立てていった方がいいかなぁと思い始めているところです。
+
+## その他の活用例など
+### Web サービスの Q & A ページ
+Notion で作成したページは、基本的にはアクセス権限がある方しかアクセスできませんが、一般公開させることも可能です。
+公開にあたって参照のみなどの、権限設定も行えるので安心ですね。
+
+この公開設定を使って、Q & A ページを運用しているサービスを見かけたことがあります。
+
+Notion で作成したページがそのまま公開されるわけなので、すぐに追記・編集ができますし、非エンジニアの方にとっても扱いやすいかと。
+
+### Fast Notion
+日々の記録ページで参考にさせていただいたブログの作者様である、Yuji Tsuburaya さん作の iOS / Android アプリです。
+<OG url="https://apps.apple.com/jp/app/fast-notion/id1505194382" />
+<OG url="https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja" />
+
+自分の Notion ページに素早くメモを取ることができるアプリだそうです。
+すぐにパパっとメモを書きたい方にとっては、重宝しそうですね。
+
+<blockquote class="twitter-tweet">
+   <p lang="ja" dir="ltr">🚀 Fast Notion というアプリを作ってリリースしました！<br /><br />4/1 にこっそりとβリリースして色々な方に触っていただいていたのですが、<br />・2ヶ月間大きなバグもなく安定して動いている<br />・Android 版も昨日リリースした<br />ということで、ようやくリリースブログ書きました🙌<a href="https://t.co/oVYm4bQxQ0">https://t.co/oVYm4bQxQ0</a>
+  </p>&mdash; Yuji Tsuburaya (@___35d)
+  <a href="https://twitter.com/___35d/status/1266503600890675214?ref_src=twsrc%5Etfw">May 29, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Notion Blog
+<OG url="https://notion-blog.now.sh" />
+Notion Blog というオープンソースプロジェクトで、 Notion を使ってブログを作れます。
+
+フロントエンドが Next.js、バックエンドが Notion という形になり、Next.js から Notion 上の記事を読み取りレンダリングするという構成になっているそうです。
+ちなみに、デザイン等のカスタマイズや独自ドメインをあてることも出来るとのこと。
+
+Yuji Tsuburaya さんのブログに、Notion Blog について解説されている連載記事がありました。
+詳しく解説されているので、とても参考になります。
+<OG url="https://blog.35d.jp/2020-05-23-notion-blog-1" />
+
+### Wraptas（※旧：Anotion）
+※2021/09/11 に名称とドメインが新しくなりました。
+
+<OG url="https://wraptas.com" />
+Wraptas というサービスでも、Notion を使ったブログ、Web サイトが作れます。
+
+こちらは国内産で、nabettu さんという方が作られています。
+2020/10 にリリースされてから、日々アップデートが行われています。
+
+<blockquote class="twitter-tweet">
+ <p lang="ja" dir="ltr"><a href="https://twitter.com/hashtag/Anotion?src=hash&amp;ref_src=twsrc%5Etfw">#Anotion</a> のサービス名を <a href="https://twitter.com/hashtag/Wraptas?src=hash&amp;ref_src=twsrc%5Etfw">#Wraptas</a> へ変更しました！同時にドメインも変更し、.comへ移行しました💪<br />サービス内容は変わっていませんが、引き続き&quot;Wraptas&quot;をよろしくお願いします！<br /><br />移行作業で疲れたので今日はアイス食べて休憩します😪笑<a href="https://t.co/evoNfR7uJZ">https://t.co/evoNfR7uJZ</a>
+ </p>&mdash; nabettu🍲NotionでWebサイトが作れるサービス (@nabettu) <a href="https://twitter.com/nabettu/status/1436543962852986886?ref_src=twsrc%5Etfw">September 11, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+なお Notion Blog と違い、こちらは有料のサービスになります。
+ただ、無料トライアル期間があるので、気になる方は一度試してみてはいかがでしょうか。
+
+---
+
+Notion の基本概念説明から、実際の活用例の紹介までしてみました。
+Notion は本当にいろんなことができるなぁと。
+
+元々、自分は Notion の存在を以前から知ってはいたのですが、結局あまり使えていませんでした。
+
+現在こうして療養中の身となり、時間があるので Notion を改めて使用して良さに触れて、積極的に活用していこうと思った次第です。
+少なくとも年内は療養することになりそうなので、そのなかで試行錯誤してみて、来年から本格的に活用していきたいですね。
+
+この記事が Notion 活用の参考になれば幸いです。
+
+## 参考リンクまとめ
+- [Notion](https://www.notion.so/)
+- Fast Notion：[iOS](https://apps.apple.com/jp/app/fast-notion/id1505194382)/[Android](https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja)
+- [Notion Blog](https://notion-blog.now.sh/)
+- [Wraptas](https://wraptas.com/)
+- [Notion にお天気ウィジェットを配置し、毎日の天気を確認する](https://blog.35d.jp/2020-06-01-notion-weather)
+-  [Notion 7月分のデイリーログページを作成した](https://blog.35d.jp/2020-07-06-notion-daily-log)
+- [このブログで紹介した Notion の使い方まとめ（企業・プライベート）](https://blog.35d.jp/2020-06-30-notion-matome)
+- [Notion Blog でブログを開設する【Notion Blog 徹底解説 #1】](https://blog.35d.jp/2020-05-23-notion-blog-1)
