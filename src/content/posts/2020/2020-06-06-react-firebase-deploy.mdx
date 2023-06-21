@@ -1,0 +1,370 @@
+---
+title: "React(SPA)アプリをFirebase Hostingにデプロイ"
+description: "Firebaseに登録してプロジェクトを作成、アプリを追加して、React(SPA)アプリを連携させてFirebase Hostingにデプロイするまでの手順を記録"
+pubDate: "2020-06-06"
+updatedDate: "2021-09-05"
+category: "develop"
+tags: ["GitHub Actions", "Firebase", "React"]
+---
+
+先日、初めて Firebase を使ってデプロイする機会がありました。
+基本的には案内に沿って進めるだけでしたが、せっかくなので手順をメモしておきます。
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/441da9ac75eaeea00537) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-10-06-react-firebase-deploy) の方で更新しています。
+
+import OG from "@/components/OG.astro"
+
+## 前提
+- デプロイする React アプリがすでにある
+- npm or yarn が使える環境である（自分は yarn を使用しているので、以降 yarn で書いていきます）
+
+## Firebase 側
+<OG url="https://firebase.google.com" />
+
+### 新規登録・プロジェクト作成
+1. Firebase へアクセス
+
+2. 「使ってみる」「プロジェクトを作成」を選択
+<img src="/screenshots/2020/react-firebase-deploy/firebase.png" width="80%" alt="Firebase トップ画面" />
+
+3. プロジェクトの作成
+    - プロジェクト名を入力 + 利用規約にチェック して「続行」
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-project-name.png" width="80%" alt="Firebaseプロジェクト プロジェクト名入力画面" />
+    - Google Analytics を有効にして「続行」（※今回は有効にしていますが任意）
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-ga.png" width="80%" alt="Firebaseプロジェクト Google Analytics設定画面" />
+    - 連携する Google Analytics アカウントを選択（もしくは新規作成）して「プロジェクトを作成」
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-ga-account.png" width="80%" alt="Firebaseプロジェクト Google Analytics連携設定画面" />
+
+少し時間がかかりますが、これでプロジェクトが作成されます。
+
+### アプリを追加
+1. プロジェクトトップから、追加するアプリのプラットフォームの中から「ウェブ」を選択
+<img src="/screenshots/2020/react-firebase-deploy/firebase-project-top.png" width="80%" alt="Firebaseプロジェクト トップ画面" />
+
+2. ウェブアプリに Firebase を追加
+    - アプリのニックネームを入力 + Firebase Hosting 設定を有効化 して「アプリを登録」
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-add.png" width="80%" alt="Firebaseアプリ追加 基本設定画面" />
+    - Firebase SDK を予約済み URL から使用する場合は、スクリプトを控えておき「次へ」（※予約済み URL については[こちら](#firebase-sdk-の導入)も参照）
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-sdk.png" width="80%" alt="Firebaseアプリ追加 SDKスクリプト案内画面" />
+    - Firebase CLI のインストール方法を確認して「次へ」
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-cli-install.png" width="80%" alt="Firebaseアプリ追加 CLIインストール案内画面" />
+    - Firebase Hosting へのデプロイ方法を確認して「コンソールに進む」
+    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-hosting-deploy.png" width="80%" alt="Firebaseアプリ追加 デプロイ案内画面" />
+
+これで Firebase プロジェクトにウェブアプリが追加されました。
+
+## React アプリ側
+基本的には、Firebase プロジェクトにアプリを追加した時に表示された手順で進めていきます。
+
+### Firebase SDK の導入
+Firebase SDK を導入する方法としては、以下の3つがあり。
+
+- 予約済み URL にあるものを読み込み使用する
+- CDN で配信されているものを読み込み使用する
+- ライブラリとしてインストールし使用する
+
+Firebase SDK Snippet に関しては Firebase プロジェクトの「設定」「プロジェクトを設定」のマイアプリから確認できます。
+
+補足として、予約済み URL というのは Firebase Hosting での URL のことを指します。
+その URL 配下に SDK およびアプリの識別情報のファイルが配置されるようになっており、それを読み込んで SDK を使用する形になります。
+そのため、この方法は Firebase Hosting を使ってホスティングする場合のみ、使用可能です。
+主に同じコードを複数の Firebase Hosting へデプロイする際に便利な方法のようです。
+
+自分も最初は予約済み URL での方法にしていましたが、`yarn start`での通常のローカルサーバからは SDK を読み込むことができないために、Warning が出てしまいます。
+これが気になりやめました。
+
+**※2020/10/18追記**
+`firebase serve`によるエミュレートであれば、予約済み URL 経由の SDK 使用が可能のようです。
+ただ、こちらの場合は、あくまでビルド生成物ディレクトリの中身をローカルでホスティングしているものです。
+そのため、デプロイ前のテストに使うような感じで、ホットリロードで動作を見ながら開発という用途には向いていません。
+
+今回はライブラリとしてインストールして使用する方法で進めます。
+
+#### ライブラリのインストール
+```bash
+yarn add firebase
+```
+
+#### `.env`を作成
+設定値は Firebase SDK Snippet の「構成」から確認できます。
+<img src="/screenshots/2020/react-firebase-deploy/firebase-sdk.png" width="80%" alt="Firebase SDK Snippet 構成情報画面" />
+
+`.env`の例.
+
+```:env
+# Firebase
+REACT_APP_APP_KEY=※apikey
+REACT_APP_AUTH_DOMAIN=※authDomain
+REACT_APP_DATABASE_URL=※databaseURL
+REACT_APP_PROJECT_ID=※projectId
+REACT_APP_STORAGEBUCKET=※storageBucket
+REACT_APP_MESSAGING_SENDER_ID=※messagingSenderId
+REACT_APP_APP_ID=※appId
+REACT_APP_MEASUREMENT_ID=※measurementId
+```
+
+#### Firebase SDK の初期化を行うファイルを作成
+各種 Firebase の機能を使うには最初に初期化処理を行う必要があります。
+そのため、初期化処理をするファイルをあらかじめ用意しておき、機能を使う際、 import するようにします。
+
+例.
+
+```javascript:libs/firebase.js
+import firebase from 'firebase/app';
+import 'firebase/analytics';
+
+const config = {
+  apiKey: process.env.REACT_APP_APP_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
+  measurementId: process.env.REACT_APP_MEASUREMENT_ID,
+};
+
+firebase.initializeApp(config);
+
+export default firebase;
+```
+
+#### Google Analyticsにデータ送信する設定を追記
+自分の場合は`index.js`に追記しました。
+最初は、SDK 組み込みだけで自動的にデータ送信してくれるものと思っていましたが、`firebase.analytics()`をやらないといけないようです。
+
+以下の内容を`ReactDOM.render`の上に追記。
+
+```jsx:index.js
+import firebase from './libs/Firebase';
+
+// 本番環境のみ計測
+if (process.env.NODE_ENV === 'production') {
+  firebase.analytics();
+}
+.
+.
+.
+```
+
+### Firebase プロジェクトのアプリとの連携
+#### Firebase CLI の導入
+```bash
+yarn global add firebase-tools
+```
+
+これで firebase コマンドが使えるようになります。
+
+#### firebase へログイン
+もし Docker の Node.js 環境を使用している場合は、OAuth 認証で`9005`ポートを使用するので事前に開けておきましょう。
+
+```bash
+firebase login
+```
+
+```
+Firebase optionally collects CLI usage and error reporting information to help improve our products. Data is collected in accordance with Google's privacy policy (https://policies.google.com/privacy) and is not used to identify you.
+
+? Allow Firebase to collect CLI usage and error reporting information? (Y/n)
+```
+> Firebase はオプションで、CLI の使用状況とエラー報告情報を収集して、製品の改善に役立てます。データは Google のプライバシーポリシー（ https://policies.google.com/privacy ）に従って収集され、ユーザーの特定には使用されません。
+>
+> Firebase が CLI の使用状況とエラー報告情報を収集することを許可しますか？ （はい/いいえ）
+
+任意で回答。
+
+```
+To change your data collection preference at any time, run `firebase logout` and log in again.
+```
+> データ収集の設定をいつでも変更するには、 `firebase logout`を実行して、再度ログインします。
+
+```
+Visit this URL on this device to log in:
+https://accounts.google.com/o/oauth2/auth?XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+Waiting for authentication...
+```
+認証のための URL が表示されるので、ブラウザでアクセス（Docker を使用しない場合は、恐らく自動でブラウザが開きます）
+
+内容を確認して「許可」
+<img src="/screenshots/2020/react-firebase-deploy/firebase-oauth.png" width="60%" alt="Firebase Googleアカウント認証確認画面" />
+
+```
+✔  Success! Logged in as XXX@gmail.com
+```
+無事に認証できると CLI 側はこの表示が出ます。
+また、ブラウザ側では以下のような表示が出ます。
+<img src="/screenshots/2020/react-firebase-deploy/firebase-oauth-complete.png" width="60%" alt="Firebase認証完了画面" />
+
+#### 連携・初期化処理
+```bash
+firebase init
+```
+
+```
+? Which Firebase CLI features do you want to set up for this folder? Press Space to select features, then Enter to confirm your choices. (Press <space> to select, <a> to toggle all, <i> to invert selection)
+❯◯ Database: Deploy Firebase Realtime Database Rules
+ ◯ Firestore: Deploy rules and create indexes for Firestore
+ ◯ Functions: Configure and deploy Cloud Functions
+ ◯ Hosting: Configure and deploy Firebase Hosting sites
+ ◯ Storage: Deploy Cloud Storage security rules
+ ◯ Emulators: Set up local emulators for Firebase features
+```
+> このフォルダに設定する Firebase CLI 機能はどれですか？スペースを押して機能を選択し、Enter を押して選択を確認します。 （スペース を押して選択、a を押してすべてを切り替え、i を押して選択を反転します）
+
+今回は`Hosting`のみ選択。
+
+```
+First, let's associate this project directory with a Firebase project.
+You can create multiple project aliases by running firebase use --add,
+but for now we'll just set up a default project.
+
+? Please select an option: (Use arrow keys)
+❯ Use an existing project
+  Create a new project
+  Add Firebase to an existing Google Cloud Platform project
+  Don't set up a default project
+```
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-mixed-period --> */}
+
+> まず、このプロジェクトディレクトリを Firebase プロジェクトに関連付けます。
+複数のプロジェクトエイリアスを作成するには、firebase use --add,
+> ただし、ここではデフォルトのプロジェクトを設定します。
+
+{/* <!-- textlint-enable --> */}
+
+今回はすでに Firebase プロジェクトを作っているので`Use an existing project`を選択。
+
+```
+? Select a default Firebase project for this directory: (Use arrow keys)
+❯ project-name (project-name)
+```
+> このディレクトリのデフォルトの Firebase プロジェクトを選択：（矢印キーを使用）
+
+連携させるプロジェクトを選択。
+
+```
+Your public directory is the folder (relative to your project directory) that
+will contain Hosting assets to be uploaded with firebase deploy. If you
+have a build process for your assets, use your build's output directory.
+
+? What do you want to use as your public directory? (public)
+```
+> パブリックディレクトリは、プロジェクトディレクトリを基準にしたフォルダです。
+> firebase deploy でアップロードされるホスティングアセットが含まれます。もし、あなたが
+アセットのビルドプロセスがある場合は、ビルドの出力ディレクトリを使用します。
+
+`yarn build`での生成物は`/build`に作成されるので、`build`と入力。
+
+```
+? Configure as a single-page app (rewrite all urls to /index.html)? (y/N)
+```
+> SPA アプリとして構成しますか（すべての URL を /index.html に書き換えます）？ （はい/いいえ）
+
+今回は SPA なので`y`を入力。
+
+```
+✔  Wrote build/index.html
+
+i  Writing configuration info to firebase.json...
+i  Writing project information to .firebaserc...
+
+✔  Firebase initialization complete!
+```
+これで設定ファイルが作成されて、連携は完了です。
+
+### Firebase Hosting へデプロイ
+ビルドして、その生成物をデプロイします。
+
+```bash
+yarn build
+
+# 全ての Firebase サービスリソースをデプロイ
+firebase deploy
+
+# Hosting のリソースのみデプロイ + コメント
+firebase deploy --only hosting -m "※任意のコメント"
+```
+※2021/09/05追記
+デプロイ時にコメントをつけておくと、Firebase Hosting のデプロイ履歴にも表示されるのでわかりやすくなります。
+
+```
+=== Deploying to 'project-name'...
+
+i  deploying hosting
+i  hosting[project-name]: beginning deploy...
+i  hosting[project-name]: found 19 files in build
+✔  hosting[project-name]: file upload complete
+i  hosting[project-name]: finalizing version...
+✔  hosting[project-name]: version finalized
+i  hosting[project-name]: releasing new version...
+✔  hosting[project-name]: release complete
+
+✔  Deploy complete!
+
+Project Console: https://console.firebase.google.com/project/project-name/overview
+Hosting URL: https://project-name.web.app
+```
+表示されるホスティング URL にアクセスして、アプリの内容がちゃんと表示されれば、無事デプロイ完了です。
+
+## おまけ・GitHub Actions での自動デプロイ
+※2021/09/05追記.
+
+### CI 用トークンの取得
+Firebase CLI を使うためにブラウザでログインが必要になりましたが、CI 環境ではそういうわけにもいかないのでトークンを使用する方法が提供されています。
+
+まずはローカルで以下コマンドを実行してログインし、CI 環境用のトークンを取得。
+```bash
+firebase login:ci
+```
+後はこのトークンを Firebase CLI 使用時にオプションで渡すようにすれば OK です。
+GitHub Secrets に`FIREBASE_TOKEN`と登録しておいて、そこから使うようにします。
+
+### ビルド
+※Node.js のセットアップやライブラリのインストールのステップ部分については、当記事では省略します。
+
+今回は、Firebase アプリの情報を環境変数で管理しているので、CI 環境でも環境変数を設定。
+GitHub Secrets にあらかじめ登録しておき、その値で設定する例です。
+
+```yaml
+# ビルド
+- name: Build
+  env:
+    REACT_APP_APP_KEY: ${{ secrets.REACT_APP_APP_KEY }}
+    REACT_APP_AUTH_DOMAIN: ${{ secrets.REACT_APP_AUTH_DOMAIN }}
+    REACT_APP_DATABASE_URL: ${{ secrets.REACT_APP_DATABASE_URL }}
+    REACT_APP_PROJECT_ID: ${{ secrets.REACT_APP_PROJECT_ID }}
+    REACT_APP_STORAGEBUCKET: ${{ secrets.REACT_APP_STORAGEBUCKET }}
+    REACT_APP_MESSAGING_SENDER_ID: ${{ secrets.REACT_APP_MESSAGING_SENDER_ID }}
+    REACT_APP_APP_ID: ${{ secrets.REACT_APP_APP_ID }}
+    REACT_APP_MEASUREMENT_ID: ${{ secrets.REACT_APP_MEASUREMENT_ID }}
+  run: yarn build
+```
+
+### デプロイ
+Firebase CLI を使えるアクションがあるので、これを使うと楽にデプロイできます。
+
+<OG url="https://github.com/w9jds/firebase-action" />
+
+```yaml
+- name: Deploy to Firebase Hosting
+  uses: w9jds/firebase-action@v2.0.0
+  with:
+    args: deploy --only hosting -m \"${{ github.event.head_commit.message }}\"
+  env:
+    FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+```
+2021/09/05 時点で最終リリースが 2020/11/09 というのが少し気になるところですが、比較的最近のコミット履歴はありましたので、このアクションを紹介してみました。
+
+---
+Firebase を初めて使いましたが、思っていた以上に簡単にデプロイ出来てよかったです。
+React との相性もいいみたいですし、他の機能も使ってみたいなーと。
+可能性が広がりますね！
+
+## 参考リンクまとめ
+- [Firebase](https://firebase.google.com)
+- [stack overflow - Google analytics on my React app with firebase SDK](https://stackoverflow.com/questions/58483428/google-analytics-on-my-react-app-with-firebase-sdk)
+- [docker でfirebaseを試したメモ](https://qiita.com/hibohiboo/items/091286736c461fe68fd5)
+- [GitHub - firebase-action](https://github.com/w9jds/firebase-action)

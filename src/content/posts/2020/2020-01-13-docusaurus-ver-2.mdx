@@ -1,0 +1,633 @@
+---
+title: "勉強した内容をDocusaurus(v2)でドキュメント化してみる"
+description: "TILリポジトリにコミットしていた、勉強したコードやメモなどをドキュメント化するべくDocusaurusを使ってみた"
+pubDate: "2020-01-13"
+updatedDate: "2021-04-02"
+category: "develop"
+tags: ["TIL", "JavaScript", "Docusaurus"]
+---
+
+
+勉強したことは何かしらメモしたり、記録を残したりすることが多いでしょうが、どうせ後から見直すなら見やすい方がいいですよね。
+ドキュメント化して整理するべく Docusaurus を使ってみました。
+
+import OG from "@/components/OG.astro"
+
+## Docusaurus とは？
+<img src="/screenshots/2020/docusaurus-ver-2/docusaurus.png" width="100%" alt="Docusaurus 公式ドキュメント トップ画面" />
+
+<OG url="https://v1.docusaurus.io" />
+<OG url="https://docusaurus.io" />
+
+Facebook 製の、React をベースとしたドキュメント特化の静的サイトジェネレータです。
+その特性の通り、主に OSS のドキュメントサイトの作成に使用されています。
+
+## なぜ Docusaurus？
+昨年末の記事で書いていたので以下、引用します。
+
+> 個人勉強のコードは学習記録の可視化にもなるということで、上記にも書いている TIL リポジトリにコミットしています。これは今後も継続していきます。
+>
+>> TILとは
+>>「Today I Learned」の略で、Github 上に TIL というリポジトリを作成してそこに今日覚えたことを書いていくというものです。
+>
+> ※TIL リポジトリに関する過去記事はこちら
+> - [TILリポジトリで小さなアウトプット](/posts/2019-03-25-til)
+> - [TILリポジトリが150コミット突破](/posts/2019-08-17-til-150)
+>
+> ただ、途中まではいい感じかなーと思っていたのですが、だんだん散らかってきたといいますが、勉強した内容をドキュメントみたいにちゃんとまとめたいという思いが出てきました。
+>
+> そこで、OSS のドキュメントがどうなっているか見てみようということで、create-react-app のドキュメントのコードを見ていたところ、どうも`Docusaurus`というドキュメント特化の静的サイトジェネレータを使っていることがわかりました。
+>
+> 今後、これを導入して勉強したことのドキュメントを作ろうか検討中です。
+> 言語のバージョンアップで仕様が変わるなど、ドキュメントの更新や整備が大変では...という懸念点もありますが、まずはやってみようかと。
+> 自己満足みたいなところがあるので、このドキュメントを評価材料にしてもらおうとかはあんまり考えていません。というか、評価材料になりえるものなんでしょうか...？
+
+簡潔に言ってしまえば、冒頭に書いた通り、勉強したことを後から見返しやすいようにしたいからドキュメント化してみよう。といった感じです。
+
+ということで、早速導入してみました。
+
+**※追記 2021年末くらいからは Notion で TIL 活動をすることにしたので、リポジトリの活動停止してます。**
+
+## Docusaurus の導入
+### 使用バージョンについて
+安定版としては執筆時点で`1.14.4`が最新です。
+`docusaurus-init`という雛形ドキュメントを作成してくれる CLI ツールがあるので、比較的楽に導入できます。
+また、これで作成された雛形ドキュメントの中には Docker に関するファイルも含まれ、ローカルで Docker でサーバを立ち上げて作業するということができるようになっています。
+
+便利だなーと思いながら導入したのですが、実際に使ってみるとちょっと気になる点がありました。
+
+Docusaurus の1系には i18n による翻訳機能が搭載されているのですが、どうも英語でドキュメントを書いていく前提の作りになっているようでした。
+最初に英語で書いて、それを多言語に翻訳していくような。
+
+各ドキュメントのタイトルといった、翻訳対象になりそうなものを検知して`i18n/en.json`ファイルにまとめてくれる機能があり。
+便利ではあるものの、このファイルはあくまで英語用のファイルです。
+ドキュメントを日本語で書いていようと`i18n/en.json`ファイルにまとめられます。
+
+GitHub のコードを見たりもしましたが、ドキュメントを書いていく上でのデフォルト言語は変えられなさそうでした。
+
+そこでいろいろと調べているうちに、開発中の alpha 版ではあるものの、2系も使えることに気づきました。
+2系は一から作り直されているようで、翻訳機能はまだ搭載されていませんが、それ以外の1系の主な機能は移植されているとのこと。
+現状日本語でしか作らないつもりなので十分です。
+
+すでに2系を使われている OSS ドキュメントもありますし、むしろ、2系を使った方がいいのではないか？ということで、今回は2系を使うことにしました。
+なお、執筆時点での最新バージョンは`2.0.0-alpha.40`です。
+↓
+※2020/05/03追記  `2.0.0-alpha.54`に対応して一部修正。
+※2020/10/12追記  `2.0.0-alpha.65`に対応して一部修正。
+※2021/04/02追記  `2.0.0-alpha.72`に対応して一部修正。
+
+### 導入手順
+前提として以下が必要です。
+- Node.js：12.13.0以上
+- yarn：1.5以上
+
+`npx`コマンドを使って、Docusaurus 導入 + 雛形作成の CLI ツールを直接利用します。
+
+```bash
+npx @docusaurus/init@latest init [name] [template]
+```
+
+今回は classic テンプレートでの導入で進めます。
+（以降の内容は**classic テンプレートでの内容である**ことに注意です）
+```bash
+npx @docusaurus/init@latest init website classic
+```
+なお、`classic`以外のテンプレートとしては`facebook`、`bootstrap`などがあります。
+
+```
+website
+├ blog
+│  ├ 2019-05-28-hola.md
+│  ├ 2019-05-29-hello-world.md
+│  └ 2020-05-30-welcome.md
+├ docs
+│  ├ create-a-blog-post.md
+│  ├ create-a-document.md
+│  ├ create-a-page.md
+│  ├ getting-started.md
+│  ├ markdown-features.mdx
+│  └ thank-you.md
+├ node_modules
+├ src
+│  ├ css
+│  │  └ custom.css
+│  └ pages
+│      ├ index.js
+│      ├ markdown-page.md
+│      └ styles.module.css
+├ static
+│  ├ img
+│  │  ├ docusaurus.png
+│  │  ├ favicon.ico
+│  │  ├ logo.svg
+│  │  ├ undraw_docusaurus_mountain.svg
+│  │  ├ undraw_docusaurus_react.svg
+│  │  └ undraw_docusaurus_tree.svg
+│  └ .nojekyll
+├ .gitignore
+├ babel.config.js
+├ docusaurus.config.js
+├ package.json
+├ README.md
+├ sidebars.js
+└ yarn.lock
+```
+この classic テンプレートには、基本的なテーマやプラグインをまとめたプリセットである`@docusaurus/preset-classic`が含まれています。
+
+`@docusaurus/preset-classic`に含まれているものはこちら.
+- @docusaurus/theme-classic
+- @docusaurus/theme-search-algolia
+- @docusaurus/plugin-content-docs
+- @docusaurus/plugin-content-blog
+- @docusaurus/plugin-content-pages
+- @docusaurus/plugin-debug
+- @docusaurus/plugin-google-analytics
+- @docusaurus/plugin-google-gtag
+- @docusaurus/plugin-sitemap
+
+サーバの起動.
+```bash
+yarn start
+```
+サーバを起動すると、自動でブラウザが立ち上がり、`localhost:3000`が開きます。
+
+以下のような画面が表示されればOKです。
+<img src="/screenshots/2020/docusaurus-ver-2/docusaurus-init-top.png" width="100%" alt="Docusaurus 2系の雛形ドキュメントのトップ画面" />
+
+ちなみにホットリロードに対応しているので、基本的には変更が即座に反映されます（一部設定はサーバを再起動しないといけないときもありました）
+
+## Docusaurus の基本的な構成
+### ページ
+Docusaurus では通常のページやドキュメントページが作れるほか、ブログを書くこともできます。
+確かに OSS だと開発ブログみたいなものがあったりしますよね。
+
+ページの種別ごとにディレクトリ階層が決まっています。
+- 通常のページ：`src/pages`配下
+- ドキュメントページ：`docs`配下
+- ブログページ：`blog`配下
+
+通常のページは React 式にも書けますし、マークダウンファイルでも書けます。
+また、mdx にも対応しています。
+
+### サイトの基本設定
+docusaurus.config.js にまとめられています。
+
+```javascript:docusaurus.config.js
+/** @type {import('@docusaurus/types').DocusaurusConfig} */
+module.exports = {
+  title: 'My Site',
+  tagline: 'The tagline of my site',
+  url: 'https://your-docusaurus-test-site.com',
+  baseUrl: '/',
+  onBrokenLinks: 'throw',
+  onBrokenMarkdownLinks: 'warn',
+  favicon: 'img/favicon.ico',
+  organizationName: 'facebook', // Usually your GitHub org/user name.
+  projectName: 'docusaurus', // Usually your repo name.
+  themeConfig: {
+    navbar: {
+      title: 'My Site',
+      logo: {
+        alt: 'My Site Logo',
+        src: 'img/logo.svg',
+      },
+      items: [
+        {
+          to: 'docs/',
+          activeBasePath: 'docs',
+          label: 'Docs',
+          position: 'left',
+        },
+        {to: 'blog', label: 'Blog', position: 'left'},
+        {
+          href: 'https://github.com/facebook/docusaurus',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
+    },
+    footer: {
+      style: 'dark',
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Getting Started',
+              to: 'docs/',
+            },
+          ],
+        },
+        {
+          title: 'Community',
+          items: [
+            {
+              label: 'Stack Overflow',
+              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+            },
+            {
+              label: 'Discord',
+              href: 'https://discordapp.com/invite/docusaurus',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/docusaurus',
+            },
+          ],
+        },
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Blog',
+              to: 'blog',
+            },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/facebook/docusaurus',
+            },
+          ],
+        },
+      ],
+      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+  },
+  presets: [
+    [
+      '@docusaurus/preset-classic',
+      {
+        docs: {
+          sidebarPath: require.resolve('./sidebars.js'),
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/',
+        },
+        blog: {
+          showReadingTime: true,
+          // Please change this to your repo.
+          editUrl:
+            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+        },
+        theme: {
+          customCss: require.resolve('./src/css/custom.css'),
+        },
+      },
+    ],
+  ],
+};
+
+```
+
+### ナビゲーションバー
+docusaurus.config.js の themeConfig のなかに設定があります。
+
+react-router-dom の Link タグの書き方に似ていますね。
+to には相対パスで URL を指定します。
+内部リンクだけでなく、外部リンクも設定できます。
+
+```javascript:docusaurus.config.js
+// ※一部抜粋
+navbar: {
+  title: 'My Site',
+  logo: {
+    alt: 'My Site Logo',
+    src: 'img/logo.svg',
+  },
+  items: [
+    {
+      to: 'docs/',
+      activeBasePath: 'docs',
+      label: 'Docs',
+      position: 'left',
+    },
+    {to: 'blog', label: 'Blog', position: 'left'},
+    {
+      href: 'https://github.com/facebook/docusaurus',
+      label: 'GitHub',
+      position: 'right',
+    },
+  ],
+},
+```
+
+画面側
+<img src="/screenshots/2020/docusaurus-ver-2/navbar.png" width="100%" alt="ナビゲーションバー" />
+
+### サイドバー
+sidebars.js に設定があります。
+
+ここで指定している`create-a-page`などは各ドキュメントの id です。
+この id は、デフォルトでドキュメントのマークダウンファイル名から拡張子を抜いたものが割り当てられますが、マークダウンファイル側で別途 id を指定することも出来ます。
+
+ここでサイドバーとドキュメントの紐づけが行われ、表示上ではデフォルトで title が使われます。
+（ドキュメントタイトルとサイドバー表示タイトルを分けたい場合は、マークダウンファイル側で sidebar_label を設定することで対応できます）
+
+```javascript:sidebars.js
+module.exports = {
+  docs: [
+    {
+      type: 'category',
+      label: 'Docusaurus Tutorial',
+      items: [
+        'getting-started',
+        'create-a-page',
+        'create-a-document',
+        'create-a-blog-post',
+        'markdown-features',
+        'thank-you',
+      ],
+    },
+  ],
+};
+
+```
+
+ドキュメントのマークダウンファイル.
+```md
+※Frontmatter 部分
+---
+title: Create a Blog Post
+---
+```
+
+画面側
+<img src="/screenshots/2020/docusaurus-ver-2/sidebar.png" width="60%" alt="サイドバー" />
+
+階層構造にしたい場合は、以下のように書けば OK。
+
+```javascript:sidebars.js
+module.exports = {
+  docs: {
+    Guides: [
+      'creating-pages',
+      {
+        type: 'category',
+        label: 'Docs',
+        collapsed: false,
+        items: ['markdown-features', 'sidebar'],
+      },
+    ],
+  },
+};
+```
+
+画面側
+<img src="/screenshots/2020/docusaurus-ver-2/sidebar-subcategory.png" width="50%" alt="階層構造にしたサイドバー" />
+
+### フッター
+docusaurus.config.js の themeConfig のなかに設定があります。
+
+```javascript:docusaurus.config.js
+// ※一部抜粋
+footer: {
+  style: 'dark',
+  links: [
+    {
+      title: 'Docs',
+      items: [
+        {
+          label: 'Getting Started',
+          to: 'docs/',
+        },
+      ],
+    },
+    {
+      title: 'Community',
+      items: [
+        {
+          label: 'Stack Overflow',
+          href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+        },
+        {
+          label: 'Discord',
+          href: 'https://discordapp.com/invite/docusaurus',
+        },
+        {
+          label: 'Twitter',
+          href: 'https://twitter.com/docusaurus',
+        },
+      ],
+    },
+    {
+      title: 'More',
+      items: [
+        {
+          label: 'Blog',
+          to: 'blog',
+        },
+        {
+          label: 'GitHub',
+          href: 'https://github.com/facebook/docusaurus',
+        },
+      ],
+    },
+  ],
+  copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+},
+```
+
+画面側
+<img src="/screenshots/2020/docusaurus-ver-2/footer.png" width="100%" alt="フッター" />
+
+### URL
+
+#### 通常のページ
+基本的には`/{拡張子なしファイル名}`になります。
+`src/pages`配下でディレクトリ階層が分かれていれば、`/{dir}/{拡張子なしファイル名}`といった感じです。
+
+ただ、ファイル名が`index.js`だった場合は`/`になります。
+まとめると以下のような感じです。
+- /src/pages/index.js → `/`
+- /src/pages/foo.js → `/foo`
+- /src/pages/foo/test.js → `/foo/test`
+- /src/pages/foo/index.js → `/foo/`
+
+#### docs 配下のドキュメント
+マークダウンファイルの FrontMatter に slug があるか、docs 配下でディレクトリ階層になっているかで変わってきます。
+- slug 設定あり：`/docs/{slug}`
+- slug 設定なし： `/docs/{dir}/{id}`
+
+```
+docs
+├ greeting.md
+└ guide
+    └ hello.md
+```
+- `docs/greeting`
+- `docs/guide/hello`
+
+となります。
+
+#### ブログ
+- トップ：`/blog`
+
+ブログ記事の URL も FrontMatter に slug があるかで変化します。
+- slug 設定あり：`/blog/{slug}`
+- slug 設定なし：`/blog/{YYYY}/{MM}/{dd}/{id}`
+
+## デプロイ
+今回は Netlify でデプロイして、いつでもサイトとして見られるようにしておきます。
+
+### 初回デプロイ
+1. docusaurus.config.js の内容を確認
+  - url と baseUrl の設定を確認してください
+  - url は Netlify で公開する上での URL（Netlify のサブドメインは`{プロジェクト名}.netlify.app`）
+  - baseUrl は`/`のままでも問題なかったです
+2. netlify.toml を用意
+```toml:netlify.toml
+[build]
+  publish = "build"
+  command = "yarn build"
+
+[build.environment]
+  NODE_ENV = "production"
+```
+
+もしサブディレクトリにサイトのソースがある場合は、base で指定すれば対応できます。
+```toml:netlify.toml
+[build]
+  base    = "website"
+  publish = "build"
+  command = "yarn build"
+```
+
+3. Netlify とリポジトリを連携させてデプロイ
+基本的なやり方は過去記事に書いているので、こちらをご覧ください。
+- [Netlifyでブログをデプロイ](develop/2019/02/10/netlify-deploy)
+
+ビルド・デプロイの設定例
+<img src="/screenshots/2020/docusaurus-ver-2/docusaurus-netlify.png" width="80%" alt="Netlifyのビルド設定" />
+
+これでうまくいっていればデプロイされて、サイトとして閲覧できるようになれるはずです。
+
+### 2回目からのデプロイ
+初回デプロイ以降は、デプロイブランチが更新されるたびに自動でデプロイを行ってくれます。
+そのほか、デプロイブランチに対するプルリク（マジリク）を出したときに、デプロイのプレビューを生成してくれるので、マージした後にどうなるか事前に確認ができます。
+
+### 補足：Node.js のバージョン指定
+バージョン指定をしたい場合は、以下の2通りのやり方があります。
+
+- 環境変数に`NODE_VERSION`でバージョンを設定する（設定方法は以下のいずれか）
+  - `netlify.toml`に記述する
+  - Netlify の管理画面の Settings → Build & Deploy → Environment で設定
+- `.node-version`か`.nvmrc`をリポジトリ直下に作成して、バージョンを記述する。
+
+## Textlint の導入（2020/1/19追記）
+<OG url="https://github.com/textlint/textlint" />
+Textlint は文書向けの Lint ツールです。
+せっかくなので使用してみることにしました。
+
+### 導入手順
+1. インストール
+```bash
+yarn add -D textlint textlint-rule-preset-ja-technical-writing
+```
+Textlint 単体だと何もルールを持っていないので、技術書向けのルールセットである`textlint-rule-preset-ja-technical-writing`を一緒にインストールしています。
+<OG url="https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing" />
+
+2. 設定ファイルの作成
+```bash
+yarn run -s textlint --init
+```
+以下のような`.textlintrc`ファイルが作られます。
+すでにインストールしているルールを認識して作ってくれるようです。
+```:.textlintrc
+{
+  "filters": {},
+  "rules": {
+    "preset-ja-technical-writing": true
+  }
+}
+```
+
+### コマンドで実行
+この時点でコマンドが使えるようになっています。
+設定ファイルで設定したルールに沿ってチェックされます。
+```bash
+yarn run -s textlint (ファイルパス)
+```
+
+また、以下のコマンドではルールにもよりますが、自動修正できるものは修正してくれるようです。
+```bash
+yarn run -s textlint --fix (ファイルパス)
+```
+
+### VSCode 上で実行
+毎回コマンド実行するのも手間なので、VSCode のエディタ上で確認できるようにしておきます。
+
+<OG url="https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint" />
+インストールして、必要に応じて VSCode を再起動。
+プロジェクトルート直下に`.textlintrc`や`node_modules`がある場合は、この時点で動作します。
+
+もしサブディレクトリにサイトのソースがある場合は、この拡張の設定で別途`.textlintrc`や`node_modules`のパスの指定が必要になります。
+
+設定例.
+- Textlint: Config Path → website/.textlintrc
+- Textlint: Node Path → website/node_modules
+
+その他の設定には以下のようなものがあります。この辺はお好みで。
+- Textlint: Auto Fix On Save（保存時に自動修正できるものを修正するか）
+- Textlint: Run（入力時にチェックするか、保存時にチェックするか）
+
+こんな感じで動いてくれるようになります。
+<img src="/screenshots/2020/docusaurus-ver-2/textlint.png" width="100%" alt="VSCode上で動作するTextlint" />
+
+### 設定のカスタマイズ
+今回使用している`textlint-rule-preset-ja-technical-writing`は複数のルールから構成されており、ルールそれぞれのカスタマイズが可能です。
+デフォルト値が厳しめに設定されているため、自分に合った設定へカスタマイズしてみましょう。
+
+デフォルトルール一覧.
+- 1文の長さは100文字以下とする
+- カンマは1文中に3つまで
+- 読点は1文中に3つまで
+- 連続できる最大の漢字長は6文字まで
+- 漢数字と算用数字を使い分けます
+- 「ですます調」、「である調」を統一します
+- 文末の句点記号として「。」を使います
+- 二重否定は使用しない
+- ら抜き言葉を使用しない
+- 逆接の接続助詞「が」を連続して使用しない
+- 同じ接続詞を連続して使用しない
+- 同じ助詞を連続して使用しない
+- UTF8-MAC 濁点を使用しない
+- 不必要な制御文字を使用しない
+- 感嘆符!！、感嘆符?？を使用しない
+- 半角カナを使用しない
+- 弱い日本語表現の利用を使用しない
+- 同一の単語を間違えて連続しているのをチェックする
+- よくある日本語の誤用をチェックする
+- 冗長な表現をチェックする
+- 入力ミスで発生する不自然なアルファベットをチェックする
+- 対になっていない括弧をチェックする
+
+
+設定例.
+```:.textlintrc
+{
+  "filters": {},
+  "rules": {
+    "preset-ja-technical-writing": {
+      "sentence-length": {
+        "max" : 90
+      },
+    }
+  }
+}
+```
+この場合、sentence-length（1文の長さ）を90以下にして、それ以外のルールはデフォルト値が使われます。
+他の設定や例外の設定の仕方などは textlint-rule-preset-ja-technical-writing の README を参考にしてください。
+
+---
+ここまで簡単に概要を書きました。
+開発版とはいえ、2系の方が扱いやすい印象をうけました。
+これから少しずつ、TIL リポジトリにあげた勉強内容をドキュメント化していきますー。
+
+また、プログラマーとしての経歴や経験をまとめたページなんかも作ったり、当ブログとリンクさせたりしていきたいですね。
+
+## 参考リンクまとめ
+- [Docusaurus（1系）](https://docusaurus.io/)
+- [Docusaurus（2系）](https://v2.docusaurus.io/)
+- [Netlify docs - Manage build dependencies](https://docs.netlify.com/configure-builds/manage-dependencies/)
+- [GitHub - textlint-rule-preset-ja-technical-writing](https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing)
+- [VS Codeでtextlintを使って文章をチェックする](https://qiita.com/azu/items/2c565a38df5ed4c9f4e1)
+- [vscode-textlint](https://marketplace.visualstudio.com/items?itemName=taichi.vscode-textlint&ssr=false#overview)

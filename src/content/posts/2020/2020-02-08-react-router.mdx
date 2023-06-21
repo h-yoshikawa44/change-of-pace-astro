@@ -1,0 +1,809 @@
+---
+title: "ルーティングライブラリ、React Router(v5)入門"
+description: "Reactアプリケーションにルーティングを設定するデファクトのライブラリである、React Router(v5)のおおまかな使い方まとめ"
+pubDate: "2020-02-08"
+updatedDate: "2022-01-24"
+category: "develop"
+tags: ["TypeScript", "React"]
+---
+
+前回は React の基礎的なことをまとめましたが、今回は React アプリのルーティング設定をするうえでよく使われている React Router についてまとめました。
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/aa78b6c7cd1ef43549bf) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-09-22-react-router) の方で更新しています。
+
+※2021/08/22追記 TypeScript ベースで、全体的に大幅加筆修正を行いました。
+※2022/01/24追記  あくまでライブラリの記事であるとわかりやすくするために、記事タイトルを変更しました（旧：React入門 ～React Router(v5)編～）
+
+import OG from "@/components/OG.astro"
+
+## React Router とは？
+最新
+<OG url="https://reacttraining.com/react-router" />
+
+5系
+<OG url="https://v5.reactrouter.com" />
+
+React で SPA を書くにあたって、DOM を書き換えて複数ページがあるように見せても URL が変わらないため、ブラウザからは1つのページとしてしか認識されません。
+そこで、SPA の画面状態と URL とを紐づけ、さらにブラウザ履歴の同期を行います。
+そうすることで、疑似的なページ遷移を実現できます。
+
+これにより URL を指定して直接特定の画面にいけたり、ブラウザバックを利用できるようになるわけです。
+また、クライアントサイドでのページ遷移となるため、高速に遷移します。
+
+これを行ってくれるデファクトのルーティングライブラリが`React Router`です。
+ブラウザ履歴を管理する History API を React Router を通して操作していく形になります。
+
+## インストール
+React Router は Web とネイティブともに対応しています。
+今回は Web アプリに導入するので、react-router-dom とその型定義を追加。
+```bash
+yarn add react-router-dom @types/react-router-dom
+```
+react-router も必要になりますが、react-router-dom の依存関係にあるので、一緒に追加されます。
+
+今回の使用バージョンは以下のとおりです。
+- React：17.0.2
+- react-router-dom：5.2.0
+- react-router：5.2.0
+- @types/react-router-dom：5.1.8
+
+※2022/01/24追加
+2021/11に6系がリリースされましたが、**当記事では5系を扱っていることに注意です。**
+5系と6系とでは、破壊的な変更も行われています。
+
+## 基本的な使い方
+これ以降のコードは公式ドキュメントをコードを引用、もしくは元にしています。
+
+```tsx
+import { VFC } from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+
+const Home: VFC = () => {
+  return <h2>Home</h2>;
+}
+
+const About: VFC = () => {
+  return <h2>About</h2>;
+}
+
+const Users: VFC = () => {
+  return <h2>Users</h2>;
+}
+
+const App: VFC = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to='/'>Home</Link>
+            </li>
+            <li>
+              <Link to='/about'>About</Link>
+            </li>
+            <li>
+              <Link to='/users'>Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path='/about'>
+            <About />
+          </Route>
+          <Route path='/users'>
+            <Users />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+
+<img src="/gifs/2020/react-router/router-standard.gif" width="80%" alt="React Routerの基本動作GIF" />
+
+### ルーティングに必要なものを import
+使用するコンポーネントを import します。
+
+```tsx
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link
+} from 'react-router-dom';
+```
+
+### ルート階層で、コンポーネント全体をプロバイダーコンポーネントで囲う
+React Router が提供しているプロバイダーコンポーネントは複数存在しています。
+- BrowserRouter：HTML の History API（pushState、replaceState、popstate イベント）を使用して UI を URL と同期させるルーター
+- HashRouter：URL のハッシュ部分（window.location.hash）を使用して UI を URL と同期させるルーター
+- StaticRouter：location を変更しないルーター
+- MemoryRouter：URL の履歴をメモリに保持するルーター（アドレスバーの読み取りまたは書き込みは行わない）
+
+この中で、今回は`BrowserRouter`を使っていきます。
+現在の一般的な SPA 開発では、この`BrowserRouter`を使われることが多いようです。
+
+```tsx
+const App: VFC = () => {
+  return (
+    <BrowserRouter>
+    .
+    .
+    .
+    </BrowserRouter>
+  )
+}
+```
+
+プロバイダーコンポーネントとはなんぞや？という方は、このコンポーネントの子コンポーネント全体に特定の値や機能を提供するものと、まずは思ってもらえればいいかなと。
+（context の話が出てくることになりますが、ここでは書きません）
+
+上記のプロバイダーコンポーネントでは、ルーティングに関する機能を提供してくれます。
+ルート階層で囲っておくことで、その下層のコンポーネントでルーティングに関する機能が使えるようになるわけです。
+
+### ルーティングの定義
+`Switch`コンポーネントで囲い、その中に`Route`コンポーネントでそれぞれのルートを定義。
+この`Switch`コンポーネントは、現在の URL と一致する Route を上から順に探し、最初に一致するルートの内容を返すようになっています。
+
+注意点として、通常では前方一致で比較します。
+例として path が`/about`の場合、`/about/a`などでも一致とみなされます。
+精度を変えたい場合は、[ルート照合の精度指定](#ルート照合の精度指定)参照。
+
+```tsx
+const Home: VFC = () => {
+  return <h2>Home</h2>;
+}
+
+const About: VFC = () => {
+  return <h2>About</h2>;
+}
+
+const Users: VFC = () => {
+  return <h2>Users</h2>;
+}
+.
+.
+.
+<Switch>
+  <Route path='/about'>
+    <About />
+  </Route>
+  <Route path='/users'>
+    <Users />
+  </Route>
+  <Route path='/'>
+    <Home />
+  </Route>
+</Switch>
+
+```
+
+なお、Route の path は一度に複数定義も可能です。
+以下の場合は、`/about`、`/profile`両方で About コンポーネントをレンダリングします。
+```tsx
+<Route path={['/about', '/profile']}>
+  <About />
+</Route>
+```
+
+### リンクの作成
+`Link`コンポーネントでリンクを作成。to でリンク先情報を指定。
+後に a タグへ変換されることになりますが、通常の a タグと違い、クライアントサイドで遷移が動作します。
+通常の a タグを使うと React Router の管理外となり、アプリ全体が再読み込みされて履歴が消えてしまうので注意。
+内部リンクは Link コンポーネント、外部リンクは a タグと使い分けるイメージです。
+
+なお、この例では同じコンポーネント内に共存していますが、`Link`コンポーネントは`Switch`や`Route`コンポーネントを使用しているコンポーネント内でしか使用できないということはありません。
+ルーティングプロバイダーコンポーネントの配下であれば、どこでも使用できます。
+
+```tsx
+<nav>
+  <ul>
+    <li>
+      <Link to='/'>Home</Link>
+    </li>
+    <li>
+      <Link to='/about'>About</Link>
+    </li>
+    <li>
+      <Link to='/users'>Users</Link>
+    </li>
+  </ul>
+</nav>
+```
+ちなみに、リンク URL と現在の URL が一致した時に、スタイルを追加できる NavLink コンポーネントという拡張バージョンがあったりもします。
+<OG url="https://v5.reactrouter.com/web/api/NavLink" />
+
+これで基本的なルーティングが作成できました。
+
+## Hooks API
+React Router が提供しているフックは以下の4種類です。
+- useHistory
+- useLocation
+- useParams
+- useRouteMatch
+
+### useHistory
+<OG url='https://v5.reactrouter.com/web/api/history' />
+React Router が提供する history オブジェクトを返すフック。
+
+履歴の数である length
+最後に実行されたアクションである action（PUSH・REPLACE・POP）
+location オブジェクトとブラウザ履歴に関する関数などを持っているものです。
+
+この history オブジェクトは HTML の History API と完全一致ではありませんが、おおよそ似たようなブラウザ履歴に関する処理ができるようになっています。
+
+```tsx
+// 履歴の追加
+history.push('/about')
+
+// 履歴の追加 + ユーザ定義データの受け渡し
+history.push('/about', { someState: 'foo' });
+
+// 履歴の書き換え
+history.replace('/about');
+
+// 履歴の書き換え + ユーザ定義データの受け渡し
+history.replace('/about', { someState: 'foo' });
+
+// 履歴を2つ（引数の値分）進める
+history.go(2);
+
+// 履歴を1つ戻る
+history.goBack();
+
+// 履歴を1つ進める
+history.goForward();
+
+// 上記の履歴変更の前に記述しておくと、遷移前にアラートを出す
+history.block('このページを離れますか？');
+```
+特定の処理後に遷移させたい（例：ログアウト処理後にログイン画面へリダイレクト）時や、特定の要素をクリックしたときに遷移させたい時などに活用できます。
+
+ボタンを押した時に遷移させる例.
+```tsx
+import { VFC } from 'react';
+import { useHistory } from 'react-router-dom';
+
+const Home: VFC = () => {
+  const history = useHistory();
+
+  const handleClick = () => {
+    history.push('/about');
+  };
+
+  return (
+    <>
+      <h2>Home</h2>
+      <button type="button" onClick={handleClick}>
+        Go about
+      </button>
+    </>
+  );
+};
+
+export default Home;
+```
+history オブジェクトの中身（history.push で /about に遷移した後の例）
+<img src="/screenshots/2020/react-router/history.png" width="70%" alt="コンソールに出力したhistoryオブジェクトの内容" />
+
+あくまで処理の中でブラウザ履歴の操作をしているので、場合によっては、ユーザから見てクリックするまで挙動がわからない。遷移なのに別タブで開くことができない。となってしまう可能性があります。
+特定の要素をクリックで遷移させたい時は、`Link`コンポーネントの使用も検討してみましょう。
+
+### useLocation
+<OG url="https://v5.reactrouter.com/web/api/location" />
+React Router が提供する location オブジェクトを返すフック。
+
+location オブジェクトは以下の情報を持っています。
+- pathname：URL
+- search：クエリパラメータ
+- hash：URL ハッシュ
+- state：ユーザ定義のデータ
+
+これらの情報は`Link`コンポーネントや、history オブジェクトで履歴操作時に渡すことができます。
+その情報を遷移先のコンポーネント側で使いたい場合に活用します。
+
+```tsx
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+} from 'react-router-dom';
+
+const to = {
+  pathname: '/users',
+  search: '?class=A',
+  hash: '#user-hash',
+  state: { test: 'test-state' }
+};
+.
+.
+.
+<Link to={to}>Users</Link>
+.
+.
+.
+<Switch>
+  <Route path='/users'>
+    <Users />
+  </Route>
+</Switch>
+```
+
+```tsx
+import { VFC } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const Users: VFC = () => {
+  const location = useLocation();
+  return (
+    <>
+      <h2>Users</h2>
+      <p>pathname：{location.pathname}</p>
+      <p>search：{location.search}</p>
+      <p>hash：{location.hash}</p>
+      <p>state：{(location.state as { test: string }).test}</p>
+    </>
+  );
+}
+
+export default Users
+```
+location オブジェクトの中身
+<img src="/screenshots/2020/react-router/location.png" width="70%" alt="コンソールに出力したlocationオブジェクトの内容" />
+
+動作
+<img src="/gifs/2020/react-router/router-uselocation.gif" width="80%" alt="useLocationを使用した場合の動作GIF" />
+
+ちなみにクエリパラメータを取り出して扱いたい場合は、`query-string`というライブラリを使うと便利です。
+
+<OG url="https://github.com/sindresorhus/query-string" />
+
+location オブジェクトのクエリパラメータに対して、以下のようにすると`{ class: 'A' }`のようにオブジェクト形式に変換してくれるため、扱いやすくなります。
+```jsx
+import queryString from 'query-string';
+.
+.
+.
+queryString.parse(location.search)
+```
+
+クエリパラメータを頻繁に扱う場合は、あらかじめ`useLocation`と`query-string`を組み合わせたカスタムフックを作っておく手もありです。
+
+### useParams
+<OG url="https://v5.reactrouter.com/web/api/match" />
+React Router が提供する match オブジェクトの中から、 パスパラメータ部分のみ返すフック。
+遷移元から受け取ったパスパラメータを保持しているため、その情報を遷移先のコンポーネント側で使いたい場合に活用します。
+
+パスパラメータを受け付けるようにするには、Route コンポーネントの path で`:aboutId`のように`:`をつけて定義。
+この状態で、リンク時にパスパラメータを指定するようにすれば、遷移先の方で取り出せます。
+
+```tsx
+import { VFC } from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useParams
+} from 'react-router-dom';
+.
+.
+.
+<Link to='/about/1'>About</Link>
+.
+.
+.
+<Switch>
+  <Route path='/about/:aboutId'>
+    <About />
+  </Route>
+</Switch>
+
+const About: VFC = () => {
+  // { aboutId: '1' } からの、分割代入 + ショートハンド
+  const { aboutId } = useParams<{aboutId: string}>();
+  return <h2>About：{aboutId}</h2>
+}
+```
+動作
+<img src="/gifs/2020/react-router/router-useparam.gif" width="80%" alt="usePamramを使用した場合の動作GIF" />
+
+ちなみにパスパラメータ定義に`?`をつけると任意パラメータにもできたりします。
+```tsx
+<Route path='/about/:aboutId?'>
+  <About />
+</Route>
+
+const About: VFC = () => {
+  const { aboutId } = useParams<{aboutId?: string}>();
+  return <h2>About：{aboutId ?? 'none' }</h2>
+}
+```
+
+### useRouteMatch
+<OG url="https://v5.reactrouter.com/web/api/match" />
+React Router が提供する match オブジェクトを返すフック。
+
+match オブジェクトは以下の情報を持っています。
+- path：ルートパス
+- url：URL
+- isExact：URL がルートパスと一致するか
+- params：パスパラメータのオブジェクト
+
+Route コンポーネントが現在の URL を照合するのと同じ方法で、照合するようになっているようです。
+
+活用例の1つとして、ネストしたルーティングを実現できます。
+
+```tsx
+import { VFC } from 'react';
+import {
+  BrowserRouter,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch
+} from 'react-router-dom';
+
+const Home: VFC = () => {
+  return <h2>Home</h2>;
+}
+
+const Topics: VFC = () => {
+  const match = useRouteMatch();
+
+  return (
+    <div>
+      <h2>Topics</h2>
+
+      <ul>
+        <li>
+          <Link to={`${match.url}/components`}>Components</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/props-v-state`}>
+            Props v. State
+          </Link>
+        </li>
+      </ul>
+
+      <Switch>
+        <Route path={`${match.path}/components`}>
+          <h3>Components</h3>
+        </Route>
+        <Route path={`${match.path}/props-v-state`}>
+          <h3>props-v-state</h3>
+        </Route>
+      </Switch>
+    </div>
+  );
+}
+
+const App: VFC = () => {
+  return (
+    <BrowserRouter>
+      <div>
+        <ul>
+          <li>
+            <Link to='/'>Home</Link>
+          </li>
+          <li>
+            <Link to='/topics'>Topics</Link>
+          </li>
+        </ul>
+
+        <Switch>
+          <Route path='/topics'>
+            <Topics />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+```
+match オブジェクトの中身
+<img src="/screenshots/2020/react-router/match.png" width="70%" alt="コンソールに出力したmatchオブジェクトの内容" />
+
+動作
+<img src="/gifs/2020/react-router/router-nest.gif" width="80%" alt="ネストしたルーティングの動作GIF" />
+
+## その他の使い方
+### ルート定義方法の種類
+#### Switch コンポーネント + Route コンポーネントで囲う形で子要素として渡す
+現在推奨されるスタンダードなやり方。
+`Switch`コンポーネントを使用しているため、配下の Route を上から順に照合していって、**最初に一致**したものがレンダリングされます。
+```tsx
+<Switch>
+  <Route path='/about'>
+    <About />
+  </Route>
+  <Route path='/users'>
+    <Users />
+  </Route>
+  <Route path='/'>
+    <Home />
+  </Route>
+</Switch>
+```
+
+この他にも指定方法はありますが、それらは主に Hooks API が導入される前のバージョンで使われていた方法で、以下のようなものがあります。
+これらを`Switch`コンポーネントと併用しない場合は、**一致するルート全て**がレンダリングされることになるため、扱いには注意が必要です。
+
+#### Route コンポーネントの component に渡す
+```tsx
+<Route path='/about' component={About} />
+<Route path='/users' component={Users} />
+<Route path='/home' component={Home} />
+```
+この方法の特徴として、React Router は React.createElement を使用して、指定されたコンポーネントから新しい React 要素を作成します。
+レンダリングごとに新しいコンポーネントを作成する形になるようです。
+そのため、既存コンポーネントを更新するだけでなく、既存コンポーネントをアンマウント → 新しいコンポーネントをマウントのような挙動になるとのこと。
+
+また、この方法では、渡すコンポーネントに props を指定できません。
+その代わりに、`RouteComponentProps`型のオブジェクトが props へ渡されるようになっています。
+
+この`RouteComponentProps`には以下のものが含まれています。
+- history オブジェクト
+- location オブジェクト
+- match オブジェクト
+- staticContext
+
+通常これらは Hooks API で取得できるものです。
+
+component、render、children が同時に定義されていた場合、component は2番目の優先度となります。
+
+#### Route コンポーネントの render に渡す
+```tsx
+<Route path="/about" render={() => <About />} />
+<Route path="/users" render={() => <Users />} />
+<Route path="/home" render={() => <Home />} />
+```
+
+ルートが一致したときに呼び出される関数として定義するやり方。
+この render の引数には、`RouteComponentProps`型のオブジェクトが渡されるようになっているので、それを利用した処理が可能です。
+
+component、render、children が同時に定義されていた場合、render は3番目の優先度となります。
+
+#### Route コンポーネントの children に渡す
+```tsx
+<Route path="/about" children={() => <About />} />
+<Route path="/users" children={() => <Users />} />
+<Route path="/home" children={() => <Home />} />
+```
+
+render の時と似ていますね。
+挙動としても render と似ていますが、children に渡している関数は、ルートが一致したかどうかに関係なく呼び出されます。
+ルートが一致した時のみ、同様に引数へ`RouteComponentProps`型のオブジェクトが渡されるようになっているため、ルートが一致するかどうかで UI を動的に切り替えるようなことも可能とのこと。
+
+component、render、children が同時に定義されていた場合、children は1番目の優先度となります。
+
+### リンク定義方法の種類
+#### URL 形式
+URL のみのシンプルなパターン。
+```tsx
+<Link to='/about'>About</Link>
+```
+
+#### オブジェクト形式
+location オブジェクト形式のパターン。
+```tsx
+<Link
+  to={{
+    pathname: '/about',
+    search: '?class=A',
+    hash: '#user-hash',
+    state: { test: 'test-state' }
+  }}
+>
+  About
+</Link>
+```
+#### 関数形式
+現在の location 情報を引数として、location オブジェクト形式か URL 形式を返すパターン。
+```tsx
+// オブジェクト形式
+<Link to={location => ({ ...location, pathname: '/about' })} >About</Link>
+
+// URL 形式
+<Link to={location => `${location.pathname}?sort=name`} >About</Link>
+```
+
+### ルート照合の精度指定
+デフォルトは前方一致です。
+
+#### 完全一致
+exact をつけます。
+
+```tsx
+<Route path='/about' exact>
+  ...
+</Route>
+```
+
+#### 末尾スラッシュ有無確認
+path の末尾にスラッシュをつける + strict をつけます。
+`/abount/`に対して`/about`は一致とみなされません。
+
+```tsx
+<Route path='/about/' strict>
+  ...
+</Route>
+```
+
+#### 大文字・小文字確認
+sensitive をつけます。
+大文字小文字を厳密に照合するようになります。
+
+```tsx
+<Route path='/about' sensitive>
+  ...
+</Route>
+```
+
+### ルート定義していない URL にアクセスされた場合のルート定義
+`Route`コンポーネントの path で`*`を指定すると全受けにできるのを利用します。
+`Switch`コンポーネントの仕様上、上から Route を照合していくので、最後に追加しておきます。
+
+```tsx
+<Switch>
+  <Route path='/about'>
+    <About />
+  </Route>
+  <Route path='/users'>
+    <Users />
+  </Route>
+  <Route path='*'>
+    <Error />
+  </Route>
+</Switch>
+```
+
+### アプリ内リダイレクト
+#### history.replace
+`useHistory`の項でも書いた通り、`history.replace`で履歴の書き換えができるので、これで対応できます。
+ロジックの中でリダイレクトさせたい時など。
+
+#### Redirect コンポーネント
+to にリダイレクト先情報（URL 形式、location オブジェクト形式）を指定することで、そちらにリダイレクトさせられます。
+何らかのフラグ変数によって、リダイレクトさせるか切り分ける時など。
+
+以下は`authenticated`変数によって遷移する先を変化させている例です。
+```tsx
+<Switch>
+  <Route path='/mypage'>
+    {authenticated ? <MyPage /> : <Redirect to="/" />}
+  </Route>
+  <Route path='/login'>
+    {authenticated ? <Redirect to="/mypage" /> : <Login />}
+  </Route>
+</Switch>
+```
+ログインしている時にログイン画面へアクセスすると、マイページ画面にリダイレクト。
+ログインしていない時にマイページ画面へアクセスすると、ログイン画面にリダイレクト。
+といった感じ。
+
+毎回、分岐を書くのがめんどくさければ、認証ルート用と非認証用ルートで Route コンポーネントの薄いラッパーを作るのもありです。
+公式の example - Redirects(Auth) が参考になります。
+<OG url="https://v5.reactrouter.com/web/example/auth-workflow" />
+
+また、以下のような書き方もできます。
+こちらの場合は from を使用していて、from の URL にアクセスされたら、to の location にリダイレクトします。
+
+```tsx
+<Switch>
+  <Redirect from='/test' to='/other' />
+  <Route path='/other'>
+    <Other />
+  </Route>
+  .
+  .
+  .
+</Switch>
+```
+
+### フレンドリーフォワーディング
+ログイン時にしかアクセスできない画面に、未ログイン状態でアクセスしたとします。
+大体の Web アプリはログイン画面にリダイレクトして、ログインを要求されるでしょう。
+そうやってログインした後、ログイン後のアプリトップ画面でなく、元々アクセスしようとしていた画面に遷移してくれると嬉しいよね。というやつのことです。
+
+クエリパラメータに URL を保持しておいて、ログイン後にその URL へリダイレクトさせる。
+というのを割と見かける気がしますが、以下の例では location オブジェクトの state を活用してみています。
+
+まず以下のような認証ルート用のラッパーコンポーネントを用意。
+```tsx
+type Props = ComponentPropsWithRef<typeof Route>;
+
+const AuthRoute: VFC<Props> = ({ children, ...rest }) => {
+  // 認証情報を取得
+  const { authenticated } = useAuth();
+
+  return (
+    <Route
+      {...rest}
+      render={({ location }) =>
+        authenticated ? (
+          children
+        ) : (
+          <Redirect
+            to={{
+              pathname: '/login',
+              state: { from: location }
+            }}
+          />
+        )
+      }
+    />
+  );
+}
+```
+
+認証していれば、子要素のコンポーネントを返す。
+認証しなければ、ログイン画面へリダイレクトする。
+というものです。
+リダイレクト時に、その時の location 情報（元々アクセスしようとしていた画面情報）を state にセットしておきます。
+
+あとは Login コンポーネント側でそれを取得しておいて、ログイン後にその Location 情報でリダイレクトさせれば OK です。
+```tsx
+import { Location } from 'history';
+.
+.
+.
+const Login: VFC = () => {
+  const history = useHistory();
+  const location = useLocation();
+  const { login } = useAuth();
+
+  const { from } = (location.state as { from: Location }) || { from: { pathname: '/' } };
+
+  const handleLogin = () => {
+    login(); // ログイン処理
+    history.replace(from);
+  };
+
+  return (
+    <div>
+      <form>
+        {/* フォーム要素 */}
+        .
+        .
+        .
+        <button type="submit" onClick={handleLogin}>ログイン</button>
+      </form>
+    </div>
+  );
+}
+
+```
+
+これも先ほど触れた公式の [example - Redirects(Auth)](https://v5.reactrouter.com/web/example/auth-workflow) が参考になります。
+
+---
+※2021/08/21追記
+全体加筆修正・更新にあたり、現在は Hooks API を使うことが一般的になっているため、HOC 式の項は削除しました。
+HOC 式が気になるという方は、公式ドキュメント withRouter をご参照ください。
+<OG url="https://v5.reactrouter.com/web/api/withRouter" />
+
+## 参考リンクまとめ
+- [React Router](https://reacttraining.com/react-router/)
+- [Hookにも対応！Vue.jsエンジニアのためのReact Router v5入門](https://www.hypertextcandy.com/react-router-for-vuejs-developer)
+- [GitHub - oukayuka/Riakuto-StartingReact-ja3.1 ※書籍](https://github.com/oukayuka/Riakuto-StartingReact-ja3.1)

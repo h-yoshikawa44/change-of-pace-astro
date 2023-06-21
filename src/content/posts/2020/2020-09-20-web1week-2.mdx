@@ -1,0 +1,221 @@
+---
+title: "ハッカソンイベントで、「2」に近い式をあてるゲームを作ってみた"
+description: "1週間でWebサービスを作るweb1week（お題「2」に参加したので、使用した技術やどんな感じでやっていたのか、やってみてどうだったかのレポート"
+pubDate: "2020-09-28"
+updatedDate: "2020-09-28"
+category: "event"
+tags: ["JavaScript", "React", "web1week"]
+---
+
+こんにちは、最近「個人開発ガリガリやって実力つけたいなー」と思っているよしです。
+先日、web1week に参加してきました。
+色々とてんやわんやしながらも、なんとか投稿までいけたので、レポートを残しておきますー。
+
+import OG from "@/components/OG.astro"
+
+## はじめに
+### web1week の概要
+「1週間でお題に沿った Web サービスを作ってみよう」というハッカソン的なイベントです。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">9/7～9/13の1週間でWebサービスを作るイベントです！　Hello worldレベルのサービスでもOKですのでぜひご参加をお願いします！
+  <a href="https://twitter.com/hashtag/%E9%A7%86%E3%81%91%E5%87%BA%E3%81%97%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2?src=hash&amp;ref_src=twsrc%5Etfw">#駆け出しエンジニア</a>
+  仲間が多い方は是非シェアもお願いします～<br />お題は「2」です。
+  <a href="https://t.co/cl4XbPFici">https://t.co/cl4XbPFici</a>
+  </p>&mdash; だら🎄いろいろつくってる (@dala00) <a href="https://twitter.com/dala00/status/1302622342951002115?ref_src=twsrc%5Etfw">September 6, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### 参加したきっかけ
+前回も参加して楽しかったので。
+
+前回参加の時は割と使える時間が多かった一方、今回は仕事が終わった後か休日で開発することになりました。
+なので、最初はどうしようかとも思いましたが、他の参加者の皆さんの多くは同じ状況下で開発されているはずなので、まぁどうにかなるだろう...くらいの気持ちで参加してました。
+
+※前回参加時のレポート記事.
+- [ハッカソンイベントで、React Konva 製のジグソーパズルっぽいパズルを作ってみた](/posts/2020-05-28-web1week-like)
+
+## 自分が作ったもの
+<OG url="https://github.com/h-yoshikawa44/close-to-2" />
+今回のお題は「2」ということで、
+計算結果が一番「2」に近い式をあてるゲームを作りました。
+一応、スマホでも遊べます。
+
+<img src="/gifs/2020/web1week-2/close-to-2-overview.gif" width="60%" alt="ゲームのプレイ画面GIF" />
+
+<OG url="https://crieit.net/boards/web1week-202009/Close-to-2" />
+イベントボードへの投稿から引用。
+> 初級、中級、上級で遊べて、難易度が高いほど長い式になり、30秒で何問正答できるかな？というゲームです。
+> 自分で作っておいてなんですが、暗算得意じゃないと無理ゲーじゃねーかと思いました。
+
+### なんでこれを作ろうとしたのか
+こちらもボードへの投稿に書いていたので引用。
+> 元々は「２」に関するクロスワードを作ろうとしていたのですが、「２」縛りで問題を考えるのがしんどいの極みだったので変えました（しかも土曜...）
+> その時点ですでに投稿されていた方（特に、きらぷかさんとDE-TEIU さん）の作品を見て、シンプルなゲームでも十分面白いものが作れるんだなぁと思い、今回の作品に至りました。
+> （他の方の作品を参考にさせていただきましたが、丸パクリレベルになってしまわないよう気を付けたつもりです）
+
+### 技術構成
+最初は前回同様、Docker の Node.js コンテナを使おうとしてました。
+ただ、yarn コマンドやアプリ自体の動作速度、VSCode で開発する上での環境など色々考えたらめんどくさくなったので、WSL の Node.js を使いました。
+（フロント開発でわざわざDocker使う意味ある？という議論も見かけたことがあったので...）
+
+本番は GitHub Pages でホスティングしています（gh-pages でデプロイ）
+
+使用した主なライブラリはこちら.
+- React：言わずと知れたUI構築ライブラリ（create-react-app で導入）
+- Material UI：UI コンポーネント集
+- React Share：各種 SNS のシェアボタン集
+- React Snap：SPA の OGP 設定
+- PropTypes：props のバリデーション
+- ESLint：静的解析
+- Prettier：コードフォーマッター
+
+前回同様、基本的な UI は Material UI で構築。
+一部、前回作ったコンポーネントを流用したものもあります。
+
+### どんな感じで開発してたのか
+大体こんなでしたが、「8日目」があるところからわかるように、1日遅刻投稿です（苦笑）
+
+#### 1日目：9/7(月)
+「2」というお題を目にして、何を作るか悩みました。
+前回、React Konva というライブラリを使用したので、今回も何かライブラリを使おうかと Reactのライブラリを調べてました。
+
+そこで React Crossword という、クロスワードを作れるライブラリを見つけ、これで何かやろうかな？となりました。
+<OG url="https://github.com/JaredReisinger/react-crossword" />
+
+#### 2日目：9/8(火)
+クロスワードで何かするのであれば問題を考える必要があります。
+とりあえず環境構築だけしておこうと、この日はリポジトリ作って環境構築まで。
+
+#### 3日目：9/9(水)
+技術構成のところで書いた通り、わざわざ Docker 環境を使うの微妙だなと思ったので WSL を使う方向へ移行。
+React Crossword を試してみたかったので試してみてました。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">おおー、ライブラリでホントにクロスワードできたー。<br />（公式のサンプルコード）
+  <a href="https://twitter.com/hashtag/web1week?src=hash&amp;ref_src=twsrc%5Etfw">#web1week</a>
+  <a href="https://t.co/4dA2snPpzC">pic.twitter.com/4dA2snPpzC</a>
+  </p>&mdash; よし (@yoshi44_lion)
+  <a href="https://twitter.com/yoshi44_lion/status/1303696169445462017?ref_src=twsrc%5Etfw">September 9, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+#### 4日目：9/10(木)
+「2」をいろんな言語の読み方にして成立するような問題を考えてました。
+
+#### 5日目：9/11(金)
+この日も問題を考えるも、あまり進まず...。
+
+#### 6日目：9/12(土)
+さすがに問題をどうにかしないと...と焦り出しました（遅い）
+
+「2」をいろんな言語の読み方にして成立するような問題を考えていたものの、思いのほか難しい
+↓
+これ無理じゃね？
+↓
+読み方でなく「2」が含まれるものに関する問題（例：2月の和風月名 → キサラギ）に移行してみる
+↓
+縦読み、横読みを成立させるのが難しい
+↓
+これ無理じゃね？
+
+みたいな感じになった結果、クロスワードは諦めることに...。
+
+じゃあ、何を作ろうか？というところで、すでに投稿されていた他の参加者の方の作品を見て、シンプル路線へ転向することにしました。
+ここからやっと当作品を作り始めます。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">元々、2に関するクロスワード作ろうとしてたけど、問題考えるのがしんどすぎて、他のものに切り替え中。<br /><br />明日、とりあえず公開できる程度になればいいなぁ。<a href="https://twitter.com/hashtag/web1week?src=hash&amp;ref_src=twsrc%5Etfw">#web1week</a>
+  </p>&mdash; よし (@yoshi44_lion)
+  <a href="https://twitter.com/yoshi44_lion/status/1304802019585060864?ref_src=twsrc%5Etfw">September 12, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+#### 7日目：9/13(日)
+何とか実装が進み、一旦デプロイしてみようとなりました。
+前回は Firebase Hosting を使用しましたが、今回は使うまでもないかなということで GitHub Pages でホスティングすることに。
+
+GitHub Actions でデプロイする記事を見かけたので、それでやろうと試みるもビルドで失敗。
+どうも ESLint の react-hooks/exhaustive-deps ルールに引っ掛かっていたようです（.eslintrc 設定に含まれていなくても、ビルド時にチェックされる？）
+
+対応方法を調べて試すも、なかなか解決せず。
+一旦は無効化で対応（あまりよくないことでしょうが...）
+ビルドはパスするようになり、デプロイ自体は成功しているものの、なぜか真っ白なページしか表示されず...。
+
+この時点では、もうヘロヘロで瀕死だったので、この日は諦めて終わりました。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">ゲームとしてはできてるんだけど、<br />ESLint の新ルールにビルドを阻まれ、<br />GitHub Pages にデプロイできる GitHub Actions 試そうとしたら、デプロイ自体は成功してるっぽいのに、URL にアクセスしても何も表示されないし。<br /><br />やり方悪いんかな...。もう疲れた...。<br />一旦終わろう。<br /><br />
+  <a href="https://twitter.com/hashtag/web1week?src=hash&amp;ref_src=twsrc%5Etfw">#web1week</a>
+  </p>&mdash; よし (@yoshi44_lion)
+  <a href="https://twitter.com/yoshi44_lion/status/1305160798155673601?ref_src=twsrc%5Etfw">September 13, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+#### 8日目：9/14(月)
+gh-pages を使用して手動デプロイしてみても真っ白ページに。
+試しに S3 へデプロイしたら普通に動作したので、GitHub Pages の問題と切り分け。
+
+真っ白ページの原因を特定。
+GitHub Pages 特有の注意点を見落としていただけだったようです。
+こちらの記事にまさしくなことが書いてありました。
+<OG url="https://qiita.com/rhirayamaaan/items/cdbda70670157a8fb705" />
+
+ただ、これでもなぜか GitHub Actions でのデプロイは真っ白ページのままだったので、以降は手動デプロイでやるように。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">GitHub Pages のデプロイで動いたー。<br />どうも package.json に homepage キーで URL を指定する必要があったらしい。<br /><br />そういえば Jekyll をデプロイするうえでの注意点とかで、前に見たことあったような…。<br />なんか URL がずれておかしくなる的な。
+  <a href="https://twitter.com/hashtag/web1week?src=hash&amp;ref_src=twsrc%5Etfw">#web1week</a>
+  </p>&mdash; よし (@yoshi44_lion)
+  <a href="https://twitter.com/yoshi44_lion/status/1305355374346661890?ref_src=twsrc%5Etfw">September 14, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+無事動作確認できたし投稿するかと思いましたが、こういうのはやはり OGP 設定や Twitter シェア機能を付けた方がいいよなぁ...ということで対応することに。
+この時点でもヘロヘロ気味だったので、やっつけで対応して、日が変わる直前に何とか投稿しました。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">なんとか形にできたー。<br />計算結果が一番「２」に近い式をあてるゲームを作りました。<br />よろしければ遊んでやってください🙏<br /><br />Close to 2 - （9/7～9/13）１週間でWebサービスを作るイベント - お題「2」 - Boards - Crieit
+  <a href="https://t.co/HDSKmfCsWo">https://t.co/HDSKmfCsWo</a>
+  <a href="https://twitter.com/hashtag/Crieit?src=hash&amp;ref_src=twsrc%5Etfw">#Crieit</a>
+  <a href="https://twitter.com/hashtag/web1week?src=hash&amp;ref_src=twsrc%5Etfw">#web1week</a>
+  </p>&mdash; よし (@yoshi44_lion)
+  <a href="https://twitter.com/yoshi44_lion/status/1305520904642805760?ref_src=twsrc%5Etfw">September 14, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## おおよそどんなことをやっているのか
+特に変わったことはしてないので、ソースコード見てもらった方が早いかとー。
+
+参考にさせていただいた記事はこちらなど.
+<OG url="https://keizokuma.com/js-array-object-sort" />
+<OG url="https://qiita.com/netebakari/items/7c1db0b0cea14a3d4419" />
+
+### 課題
+React Hooks のこととか、もうちょっとわかったら、全体的にもっとスマートな書き方できるんでしょうかね...。
+なんかごちゃついてる感。
+
+OGP はやっつけで5分くらいで作りました(笑)
+
+Twitter シェアボタンは、公式のものを SPA で使うには少し工夫がいるということで、なんかうまくいきませんでした...。
+なので今回は React Share を頼りました。
+本当は Twitter アイコンとともにツイートと書かれたボタンにしたかったのですが、React Share だとできないっぽい？ということで妥協することに。
+
+## 今回参加してどうだったか
+楽しかったですが、前回以上にてんやわんやしてたなぁと(笑)
+特に最後の方。まぁ、自分が前半悠長にやってたせいなんですが。
+
+Twitter シェアボタンを導入したおかげて、遊んでくださってる方の存在を確認できました。
+確認できるとやはり嬉しいですね！
+
+他の方の投稿を見るのも楽しい + 勉強になりますし、こういったイベントに参加するのはいい経験になりますね。
+web1week はほどよくゆるい感じの雰囲気があるので、敷居が低くて参加しやすいなと。
+また開催されることがありましたら、余程忙しくない限りはなるべく参加していきたいなーと。
+
+ありがとうございました！
+
+## 参考リンクまとめ
+- [GitHub - React CrossWord](https://github.com/JaredReisinger/react-crossword)
+- [JavaScriptで要素がオブジェクトの配列を日付や数値でソートする方法](https://keizokuma.com/js-array-object-sort/)
+- [JavaScriptで重複排除を自分で実装してはいけない（Setを使う）](https://qiita.com/netebakari/items/7c1db0b0cea14a3d4419)
+- [create-react-appとTypeScriptでサラッと作ったSPAをgh-pagesにスルッとデプロイすっぞ！](https://qiita.com/rhirayamaaan/items/cdbda70670157a8fb705)

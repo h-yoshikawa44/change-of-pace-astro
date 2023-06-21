@@ -1,0 +1,139 @@
+---
+title: "ドメインをお名前.comからGoogle Domainsに移管する"
+description: "ブログのドメインをお名前.comで取得 + DNS設定していたのを、Google Domailsの方にドメイン移管 + DNS設定移行した手順の記録"
+pubDate: "2020-04-11"
+updatedDate: "2020-04-11"
+category: "tool-and-service"
+tags: ["ブログ"]
+---
+
+昨年、お名前.com でドメインを取得してブログに設定していたのですが、この度 Google Domains に移管しました。
+移管ってどうやるの？状態からでしたが、調べながら実際に行った手順をまとめましたので、よかったらご活用ください。
+
+import OG from "@/components/OG.astro"
+
+## Google Domains とは？
+<OG url="https://domains.google/intl/ja_jp" />
+
+Google が提供しているドメインサービスです。
+2015年にサービスができたばかりの頃は海外のみ対象で日本では利用できなかったようですが、現在は日本でも利用でき、2018年5月頃からサイトも日本語に対応しています。
+
+お名前.com と比べるとドメイン取得料金が高いらしいのですが、個人的にはそこまで気にならなかったですし、比較的 UI がわかりすく好印象をうけました。
+また、Google ということで安心感もありましたし。
+別サイト用のドメインを取得する機会があったので、どうせなら Google Domains でやっちゃうかとなりました。
+
+ちなみに Netlify でホスティングしているサイトに独自ドメインを設定する方法は、過去に記事を書いているのでよろしければそちらもどうぞ。
+- [Netlifyでホスティングしているサイトに独自ドメインを設定する](/posts/2019-07-09-custom-domain)
+
+## 移管手順
+### 移管する上での注意事項
+- Google Domains へ移管申請時に **ドメイン登録期間を1年延長する（1年分の登録延長料金を支払う）** 必要があります
+- 移管するドメインが JP ドメイン + 契約終了まで7日以内だと移管ができません（お名前.com の場合）
+
+### お名前.com 側での事前準備
+[お名前.com Navi ログイン](https://www.onamae.com/navi/login/?btn_id=navi_login_onamaetop_header_newdesign&ab=navilogin_other_abflow)からログインします。
+
+#### 移管ロック確認
+ドメインがロックされていると移管が行えないので、解除する必要があります。
+
+1. トップ画面、ご利用状況の「ドメイン一覧」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-top.png" width="80%" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
+
+2. ドメイン一覧の右上「ドメイン機能一覧」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-domain-list.png" width="80%" alt="お名前.com Navi ドメイン一覧画面のドメイン機能一覧選択" />
+
+3. ドメイン移管の「ドメイン移管ロック」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-domain-change.png" width="80%" alt="お名前.com Navi ドメイン機能一覧画面のドメイン移管ロック選択" />
+
+4. 移管ロックが OFF なことを確認（ON の場合は OFF にする）
+<img src="/screenshots/2020/domain-transfer/onamae-domain-lock.png" width="80%" alt="お名前.com Navi ドメイン移管ロック確認画面" />
+
+#### AuthCode 確認
+ドメイン移管をする際に使用するので、確認して控えておきます。
+
+1. トップ画面、ご利用状況の「ドメイン一覧」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-top.png" width="80%" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
+
+2. ドメイン一覧から、移管するドメインを選択
+
+3. AuthCode を表示して控えておく
+<img src="/screenshots/2020/domain-transfer/onamae-domain-authcode.png" width="80%" alt="お名前.com Navi ドメイン詳細画面のAuthCode表示" />
+
+#### Whois 情報公開代行サービス無効化
+通常 Whois でドメインに対しての問い合わせが行われたときに、管理者の情報として個人情報が公開されてしまいます。
+その情報をドメインサービス側の情報に差し替えてくれるものが Whois 情報公開代行です。
+
+Whois 情報公開代行サービスを有効にしていると、移管先から移管リクエストを送った際に拒否されてしまうので解除する必要があります。
+**※ドメインプロテクション機能で変更を制限している場合は、そちらを先に解除しておかないと無効化ができないので注意です。**
+
+1. トップ画面、ご利用状況の「ドメイン一覧」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-top.png" width="80%" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
+
+2. ドメイン一覧の右上「ドメイン機能一覧」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-domain-list.png" width="80%" alt="お名前.com Navi ドメイン一覧画面のドメイン機能一覧選択" />
+
+3. 登録情報の設定「Whois 情報公開代行」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-whois.png" width="80%" alt="お名前.com Navi ドメイン機能一覧画面のWhois情報公開代行選択" />
+
+{/* <!-- textlint-disable ja-technical-writing/max-kanji-continuous-len --> */}
+
+4. 右下の「Whois 情報公開代行設定の解除はこちら」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-whois-setting.png" width="80%" alt="お名前.com Navi Whois情報公開代行設定画面のWhois情報公開代行設定の解除はこちら選択" />
+
+{/* <!-- textlint-enable --> */}
+
+5. ドメインを選択後、解除対象に「Whois 公開代行（メール転送付き）」を選択し「確認」を選択
+<img src="/screenshots/2020/domain-transfer/onamae-whois-setting2.png" width="80%" alt="お名前.com Navi Whois情報公開代行設定解除画面の解除対象と確認選択" />
+
+6. 「注意事項に同意」にチェックし、「確定」を選択
+
+### Google Domains 側で移管申請
+1. [Google Domains](https://domains.google/intl/ja_jp/) にログイン後、サイドバーの「移管」を選択
+  ※トップの「すでにお持ちのドメインを移管しましょう」からでもいけます。
+
+2. 移管するドメインを入力
+
+3. ドメインの準備 ステップ2：先ほど控えた AuthCode を認証コードとして入力して「続行」を選択
+   ※ステップ1はドメインロックを解除している時点で済になります。
+<img src="/screenshots/2020/domain-transfer/google-domain-authcode.png" width="80%" alt="Google Domains ドメインの準備 ステップ2 認証コード入力" />
+
+4. ウェブ設定のインポート：お好みで DNS 設定を移行するか選択して「続行」を選択
+  （自分は「DNS 設定をコピーして Google に任せる」の方にしました）
+  ちなみに「リソースレコードを表示」を選択すると、移行する DNS 設定の内容が確認できます。
+<img src="/screenshots/2020/domain-transfer/google-domain-setting-import.png" width="80%" alt="Google Domains ウェブ設定のインポート 続行選択" />
+
+5. 登録の設定：設定を確認して「購入手続きに進む」を選択
+   デフォルトでプライバシー保護が有効になっているのは頼もしいですね。
+<img src="/screenshots/2020/domain-transfer/google-domain-purchase.png" width="80%" alt="Google Domains 登録の設定 購入手続きに進む選択" />
+
+6. 住所など個人情報の入力をして「保存して続行」
+
+7. 入力した内容と支払情報を確認して「購入」
+   ※GCP などで支払い情報を登録したことがある場合は、自動で情報がセットされるみたいです
+
+ここまでで一旦移管申請は終わりです。
+あとは双方のドメインサービス間でやり取りが行われて、その最終確認が行われます。
+
+### 最終確認
+この時点の、Google Domains の「マイドメイン」では以下のような状態になります。
+<img src="/screenshots/2020/domain-transfer/google-domain-mydomain.png" width="80%" alt="Google Domains マイドメイン 移管ステータス確認" />
+
+Google Domains での移管申請後、お名前.comから「【重要】トランスファー申請に関する確認ご連絡」という件名のメールが届きます。自分の場合は15分くらいして届きましたが、場合によっては時間がかかるようです。
+
+このメールに移管承認手続きのためのURLが記載されているのでアクセスし、移管手続きに関する注意事項を確認したら「承認する」「決定」と進み、移管承認が完了します。
+（移管承認完了に関するメールも届きます）
+
+この後、再度 Google Domains の「マイドメイン」を確認し、保留中のドメインからマイドメインの方に移っていれば移管完了になります（自分の場合、移管承認から15分くらいかかりました）
+
+お疲れさまでした。
+
+---
+思っていたよりは簡単に移管ができてよかったです。
+気になったところとしては、作業していてお名前.com の UI が何度かコロコロ変わっていたのがよくわからなかったです...。
+複数パターンの UI が混在しているんでしょうかね？
+
+まぁ、今後は Google Domains でドメインを管理していきますー。
+
+## 参考リンクまとめ
+- [Google Domains](https://domains.google/intl/ja_jp)
+- [お名前comからgoogle domainsにドメイン移管する](https://qiita.com/fnifni/items/0daca17e0750659f2866)

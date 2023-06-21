@@ -14,7 +14,13 @@
       "no-exclamation-question-mark": false,
       "ja-no-mixed-period": {
         "allowPeriodMarks": [
-          "\n- "
+          "."
+        ],
+        "allowEmojiAtEnd": true
+      },
+      "ja-no-successive-word": {
+        "allow": [
+          "/ほど/i"
         ]
       }
     }

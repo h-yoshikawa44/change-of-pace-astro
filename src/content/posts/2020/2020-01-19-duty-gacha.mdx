@@ -1,0 +1,532 @@
+---
+title: "GAS + スプレッドシート + Slackで当番決めに使えるガチャを作ってみた"
+description: "スプレッドシートのデータと連携させたGASを使って、Slackから呼び出せるガチャを作ってみた"
+pubDate: "2020-01-19"
+updatedDate: "2020-02-16"
+category: "develop"
+tags: ["サーバレス", "Slack", "Google Apps Script"]
+---
+
+GAS こと Google Apps Script は、手軽に bot や他の Google サービスと連携したツールを作れるから、ちょっと楽しいですよね。
+今回はスプレッドシートと組み合わせて、Slack から呼び出して使えるガチャを作ってみました。
+
+※この記事は [Qiita](https://qiita.com/h-yoshikawa44/items/b5a0f2fe81fe0e9a45c2) からの転載です。
+
+import OG from "@/components/OG.astro"
+
+## 作ろうと思った背景
+自分が所属している事業部では、毎月月末にとある当番を決めるのに Slack Bot を使ってガチャみたいにやっていました。
+
+ただ、これだと設定された文言のいずれかをランダムで返しているだけなので、先月に担当した人がまた抽選されたりといった問題がありました。
+
+そこで当番履歴をスプレッドシートに記録しておいて、抽選のたびに当番履歴のメンバーを除外して、抽選するようにすればいいんじゃないか？と思い、思い切って作ってみました。
+
+**※2020/01/27追記**
+当月の当番抽選がすでに行われており、当月の当番履歴がすでにある場合は、新たに抽選せずにその履歴情報から当番を通知するように改修しました。
+
+## 構成図
+<img src="/screenshots/2020/duty-gacha/architecture.png" width="100%" alt="当番ガチャの構成図" />
+
+全体の処理のおおまかな流れとしてはこんな感じです。
+
+※[下部](#webhook-のやり方が変わった)でも書いているのですが、今回は**旧方式**の Webhook を使用しているので注意です。
+
+## 作り方
+### Incoming Webhook の用意
+まずは Slack に投稿する部分を担う、Incoming Webhook を用意します。
+（Slack のワークスペースはすでにあるものとして、進めていきます）
+
+1. Slack ワークスペースのワークスペース名のところからメニューを開く
+2. App 管理画面へ
+  - ※ワークスペースのオーナーの場合
+    その他管理項目 → App 管理
+  - ※オーナーでない場合
+    Slackをカスタマイズ → 左上のメニューを開く → App管理
+3. Incoming Webhook 設定の追加画面へ
+  - ※Incoming Webhook をまだ導入していない場合
+    「App ディレクトリを検索」のところに Incoming Webhook で検索し選択 → Slack へ追加
+  - ※すでに Incoming Webhook を導入済みの場合
+    カスタムインテグレーション → Incoming Webhook → Slack に追加
+4. チャンネルへの投稿で、投稿したいチャンネルを選択し、Incoming Webhook インテグレーションの追加を選択
+5. インテグレーションの設定
+  - **Webhook URL を控えておく（GAS 側で使います）**
+  - 名前やアイコンを必要に応じてカスタマイズ
+6. 設定を保存を選択
+
+### スプレッドシートの用意
+スプレッドシートを作成、以下のようなシートを用意します。ここではシートの名称を`当番履歴表`としてください。
+<img src="/screenshots/2020/duty-gacha/sheet.png" width="100%" alt="用意するスプレッドシートの内容" />
+
+#### メンバー表
+ガチャ対象は〇か×で選択できるようにしておき、メンバーがガチャに参加するかどうかをここで制御できるようにします。
+ガチャ対象列のデータ範囲を選択 → データ → データの入力規則
+以下のように設定しておきます。
+<img src="/screenshots/2020/duty-gacha/gacha-select.png" width="80%" alt="メンバー表のデータの入力規則設定" />
+
+Slack member_id は Slack にガチャ結果を投稿する際に、メンションをつけるために使用します。
+こちらは Slack 上で確認できます。
+チャンネルのメンバーリストなどから、メンバーを選択し簡易プロフィールを表示。
+アイコン画像を選択してプロフィールを表示し、三点リーダから確認。
+<img src="/screenshots/2020/duty-gacha/slack-profile.png" width="50%" alt="Slackアカウントのプロフィール画面" />
+
+#### 当番履歴表
+履歴がある場合は記述しておきます。
+ない場合は、表のヘッダー部分のみ記述で問題ありません。
+
+### GAS の用意
+スプレッドシート上で ツール → スクリプトエディタ から GAS エディタへ行けます。
+以下のコードを用意します（~~なお、現時点で GAS では ES6 記法は使えません~~）
+
+※2020/2/16 追記
+v8 ランタイムに対応したため、let やアロー関数などが新たに使用できるようになりました。
+これに伴いリファクタリングを行っています。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+ランタイムの変更は、GAS エディタを開いたときに表示される案内（`Enable new Apps Script runtime powered by Chrome V8 for this project.`）から変更する。
+もしくは、実行 → Chrome V8 を搭載した新しい Apps Script ランタイムを有効にする からできます。
+
+{/* <!-- textlint-enable --> */}
+
+```javascript
+// スプレッドシートのデータを元に当番ガチャを行い、結果を Slack に投稿する
+function dutyGacha() {
+  // メンバー表のデータ部分のセル範囲
+  const memberDataCellRange = 'A4:C23';
+  // 当番履歴表の開始列
+  const historyDataColumnRangeStart = 'E';
+  // 当番履歴表の終了列
+  const historyDataColumnRangeEnd = 'G';
+  // 当番履歴表の列範囲
+  const historyDataColumnRange = historyDataColumnRangeStart + ':' + historyDataColumnRangeEnd;
+  // ガチャから除外する履歴件数
+  const historyDataTargetNum = 5;
+  // 抽選する当番の人数
+  const dutyMemberNum = 2;
+  let msg;
+  try {
+    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('当番履歴表');
+    const filterHistoryData = getFilterHistoryData(sheet, historyDataColumnRange);
+    const lastIndex = filterHistoryData.length - 1;
+    const thisMonthMemberNameList = getThisMonthMemberNameList(filterHistoryData, lastIndex, dutyMemberNum);
+    // 当月の当番履歴情報がすでにある場合はそのメンバーの情報を取得
+    if (thisMonthMemberNameList !== null) {
+      const thisMonthMemberList = getThisMonthMemberList(sheet, memberDataCellRange, thisMonthMemberNameList, dutyMemberNum);
+      msg = createNoticeMsg(thisMonthMemberList, false);
+    // ない場合は抽選に必要な情報を取得し、抽選を行い、スプレッドシートに書き込み
+    } else {
+      const joinMemberList = getJoinMemberList(sheet, memberDataCellRange, dutyMemberNum);
+      const historyMenberList = getHistoryMemberList(filterHistoryData, lastIndex, historyDataTargetNum, dutyMemberNum);
+      const gachaMemberList = getGachaMemberList(joinMemberList, historyMenberList, dutyMemberNum);
+      const dutyMemberList = getDutyMemberList(gachaMemberList, dutyMemberNum);
+      msg = createNoticeMsg(dutyMemberList, true);
+
+      const insertRow = sheet.getRange(historyDataColumnRangeStart + sheet.getMaxRows()).getNextDataCell(SpreadsheetApp.Direction.UP).getRow() + 1;
+      const insertRange = historyDataColumnRangeStart + insertRow + ':' + historyDataColumnRangeEnd + insertRow;
+      const insertDataArr = createInsertData(dutyMemberList);
+      // スプレッドシートに当月当番データを書き込み
+      sheet.getRange(insertRange).setValues(insertDataArr);
+      // スプレッドシートに書き込んだ行に罫線を引く
+      sheet.getRange(insertRange).setBorder(false, true, true, true, true, false);
+    }
+  } catch (e) {
+    msg = 'エラーが発生しました：' + '\nstack：\n' + e.stack;
+    Logger.log(msg);
+  }
+
+  try {
+    const WEBHOOK_URL = PropertiesService.getScriptProperties().getProperty('WEBHOOK_URL');
+    const jsonData =
+        {
+          'text': msg
+        };
+    const payload = JSON.stringify(jsonData);
+    const options =
+        {
+          'method': 'post',
+          'contentType': 'application/json',
+          'payload': payload
+        };
+    UrlFetchApp.fetch(WEBHOOK_URL, options);
+  } catch (e) {
+    Logger.log('送信エラー：' + '\nstack：\n' + e.stack);
+  }
+}
+
+// 当番履歴表の列のデータから空白セルを除いたものを返す
+function getFilterHistoryData(sheet, historyDataColumnRange) {
+  const range = sheet.getRange(historyDataColumnRange);
+  const historyData = range.getValues();
+  return historyData.filter(data => data[0] !== '');
+}
+
+// 当番履歴表に当月当番の情報があればそのメンバー名を、なければ null を返す
+function getThisMonthMemberNameList(filterHistoryData, lastIndex, dutyMemberNum) {
+  if (Utilities.formatDate(filterHistoryData[lastIndex][0], 'JST', 'yyyy/MM')
+                           === Utilities.formatDate(new Date(), 'JST', 'yyyy/MM')) {
+    const historyDataTargetNum = 1;
+    return getHistoryMemberList(filterHistoryData, lastIndex, historyDataTargetNum, dutyMemberNum);
+  } else {
+    return null;
+  }
+}
+
+// メンバー表から当月当番メンバーの slack_id と名前を抽出して、オブジェクトの配列で返す
+function getThisMonthMemberList(sheet, memberDataCellRange, thisMonthMemberNameList, dutyMemberNum) {
+  const memberData = sheet.getRange(memberDataCellRange).getValues();
+  let thisMonthMemberList = [];
+  memberData.map(data => {
+    if (thisMonthMemberNameList.includes(data[2])) {
+      thisMonthMemberList.push({id: data[1], name: data[2]});
+    }
+  });
+  if (thisMonthMemberList.length < dutyMemberNum) {
+    throw new Error('当月当番メンバーの情報がメンバー表に不足しています。');
+  }
+  return thisMonthMemberList;
+}
+
+// メンバー表からガチャ参加メンバーの slack_id と名前を抽出して、オブジェクトの配列で返す
+function getJoinMemberList(sheet, memberDataCellRange, dutyMemberNum) {
+  const memberData = sheet.getRange(memberDataCellRange).getValues();
+  let joinMemberList = [];
+  memberData.map(data => {
+    if (data[0] === '〇') {
+      joinMemberList.push({id: data[1], name: data[2]});
+    }
+  });
+  if (joinMemberList.length < dutyMemberNum) {
+    throw new Error('ガチャ参加メンバーが抽選する当番の人数より少ないです。ガチャ参加メンバーを増やしてください。');
+  }
+  return joinMemberList;
+}
+
+// 当番履歴表から指定件数分の履歴メンバーを抽出して配列で返す
+function getHistoryMemberList(filterHistoryData, lastIndex, historyDataTargetNum, dutyMemberNum) {
+  let historyMenberList = [];
+  for (let i = 0; i < historyDataTargetNum; i++) {
+    for (let l = 1; l <= dutyMemberNum; l++) {
+      if (filterHistoryData[lastIndex - i][l] === '') {
+        continue;
+      }
+      if (filterHistoryData[lastIndex - i][l].match(/当番.*/)) {
+        return historyMenberList;
+      }
+      historyMenberList.push(filterHistoryData[lastIndex - i][l]);
+    }
+  }
+  return historyMenberList;
+}
+
+// ガチャ参加メンバーから履歴メンバーを除外したものを配列で返す
+function getGachaMemberList(joinMemberList, historyMenberList, dutyMemberNum) {
+  const gachaMemberList = joinMemberList.filter(data => historyMenberList.indexOf(data.name) === -1);
+  if (gachaMemberList.length < dutyMemberNum) {
+    throw new Error('ガチャ参加メンバーから履歴メンバーを除外した数が、抽選する当番の人数より少ないです。ガチャ参加メンバーを増やしてください。');
+  }
+  return gachaMemberList;
+}
+
+// 抽選する当番人数分、当番抽選を行い、当月の当番メンバーの配列を返す
+function getDutyMemberList(gachaMenberList, dutyMemberNum) {
+  let dutyMemberList = [];
+  let index;
+  for (let i = 0; i < dutyMemberNum; i++) {
+    do {
+      index = random(gachaMenberList.length);
+    } while (dutyMemberList.includes(gachaMenberList[index]));
+    dutyMemberList[i] = gachaMenberList[index];
+  }
+
+  return dutyMemberList;
+}
+
+// 0～(length-1)の乱数を返す
+function random(length) {
+  //例 5人の場合 0~0.9999… * 5 の小数点切り捨てで、0~4になる
+  return Math.floor(Math.random() * length);
+}
+
+// Slack 通知メッセージを作成して返す
+function createNoticeMsg(noticeMemberList, gachaFlg) {
+  let noticeMsg = '今月の当番\n';
+  // 新たにガチャを行った場合の通知メッセージ
+  if (gachaFlg) {
+    noticeMemberList.forEach(memberData => {
+      noticeMsg += ':penguin:<ﾃﾞﾚﾚﾚﾚﾚﾃﾞﾃﾞﾝ!!　<' + memberData.id + '> さん\n';
+    });
+  // 新たにガチャを行わなかった場合の通知メッセージ
+  } else {
+    noticeMemberList.forEach(memberData => {
+      noticeMsg += ':penguin:<ﾃﾞﾃﾞﾝ!!　<' + memberData.id + '> さん\n';
+    });
+    noticeMsg += '(すでに今月ガチャ済み)\n';
+  }
+  return noticeMsg;
+}
+
+// スプレッドシートに記録する当月データの二次元配列を返す
+function createInsertData(dutyMemberList) {
+  let insertData = [Utilities.formatDate(new Date(), 'JST', 'yyyy/MM')];
+  dutyMemberList.forEach(memberData => insertData.push(memberData.name));
+  const insertDataArr = [insertData];
+  return insertDataArr;
+}
+```
+大まかな流れとしては以下のような感じです。
+
+**※シートデータの当番履歴表に当月の当番情報がすでにある場合.**
+```
+スプレッドシートの当番履歴表シートのデータをまるごと取得
+↓
+当番履歴表に当月の当番情報があるかチェック
+↓
+シートデータのメンバー表から当月の当番メンバー情報のみ取得
+↓
+Slack 投稿メッセージの作成
+↓
+投稿
+```
+
+**※シートデータの当番履歴表に当月の当番情報がなく、新たに抽選する場合**
+```
+スプレッドシートの当番履歴表シートのデータをまるごと取得
+↓
+当番履歴表に当月の当番情報があるかチェック
+↓
+シートデータのメンバー表からガチャ対象が〇になっているメンバー情報のみ取得
+↓
+シートデータの当番履歴表から指定した件数分、履歴データを取得
+↓
+取得したメンバー情報から、履歴にあるメンバー情報を除外
+↓
+残りのメンバーで、指定当番人数分ガチャ抽選を行う
+↓
+Slack 投稿メッセージの作成
+↓
+ガチャ抽選結果をシートの当番履歴表に記述（＋罫線をひく）
+↓
+投稿
+```
+
+#### 変数
+dutyGacha 関数の最初で初期化している変数については、スプレッドシートからデータを取得するにあたってのデータ範囲の指定であったり、ガチャの機能を制御したりするものです。
+
+**特にデータ範囲に関しては、スプレッドシートの状態とあっていないと予期しない動作を起こすので注意してください。**
+
+```javascript
+// メンバー表のデータ部分のセル範囲
+const memberDataCellRange = 'A4:C23';
+// 当番履歴表の開始列
+const historyDataColumnRangeStart = 'E';
+// 当番履歴表の終了列
+const historyDataColumnRangeEnd = 'G';
+// 当番履歴表の列範囲
+const historyDataColumnRange = historyDataColumnRangeStart + ':' + historyDataColumnRangeEnd;
+// ガチャから除外する履歴件数
+const historyDataTargetNum = 5;
+// 抽選する当番の人数
+const dutyMemberNum = 2;
+```
+
+#### プロパティストア
+GAS にはプロパティストアという機能があります。
+これは、プロジェクトやドキュメントに紐付けて、キーと値形式でデータを格納できる機能で、コードにべた書きしたくない情報などを格納しておくのに向いています。いわば環境変数を別ファイルで管理するような感じです。
+プロパティストアには3種類あるのですが、今回はその中でプロジェクトに紐づくデータを管理できる、スクリプトプロパティを使用しています。
+
+設定の仕方
+GAS エディタ上で ファイル → プロジェクトのプロパティ を選択。
+スクリプトのプロパティ タブで 行を追加 から。
+**今回の場合は、キーを`WEBHOOK_URL`、値を`（先ほど控えたIncomming WebhookのURL）`を追加します**
+
+**※注意点**
+**スクリプトプロパティの編集は、そのGASコードおよび連携している Google サービスのオーナーのアカウントでないとできません。**
+
+スクリプトプロパティを取得するには以下のようにして、キーを指定します。
+
+```javascript
+const webHookUrl = PropertiesService.getScriptProperties().getProperty('WEBHOOK_URL');
+```
+
+#### 投稿メッセージ
+Imcoming Webhook URL へ送信する際に、以下のようにパラメータとして渡せば、それが投稿メッセージになります。（msg 変数に投稿メッセージが入っています）
+
+```javascript
+// Slack 通知メッセージを作成して返す
+function createNoticeMsg(noticeMemberList, gachaFlg) {
+  let noticeMsg = '今月の当番\n';
+  // 新たにガチャを行った場合の通知メッセージ
+  if (gachaFlg) {
+    noticeMemberList.forEach(function(memberData) {
+      noticeMsg += ':penguin:<ﾃﾞﾚﾚﾚﾚﾚﾃﾞﾃﾞﾝ!!　<' + memberData.id + '> さん\n';
+    });
+  // 新たにガチャを行わなかった場合の通知メッセージ
+  } else {
+    noticeMemberList.forEach(function(memberData) {
+      noticeMsg += ':penguin:<ﾃﾞﾃﾞﾝ!!　<' + memberData.id + '> さん\n';
+    });
+    noticeMsg += '(すでに今月ガチャ済み)\n';
+  }
+  return noticeMsg;
+}
+```
+
+投稿メッセージに関して、絵文字も使用できます。`:penguin:`のようにnameで指定すればOKです。
+また、個人へのメンションについては`<member_id>`の形式で指定すると、自動的に`@name`形式に変換してくれます。
+全体メンションの場合は`<!here>`と`<!channel>`で、それぞれ`@here`、`@channel`になります。
+
+```javascript
+// Slack 通知メッセージを作成して返す
+function createNoticeMsg(gachaMenber, dutyMemberList) {
+  let noticeMsg = '';
+  dutyMemberList.forEach(function(memberData) {
+    noticeMsg += ':penguin:<ﾃﾞﾚﾚﾚﾚﾚﾃﾞﾃﾞﾝ!!　<' + memberData.id + '> さん\n';
+  });
+  return noticeMsg;
+}
+```
+
+### Slack 投稿のテスト
+ここまできたら、ガチャを行って、その内容を Slack へ投稿できるようになります。
+GAS エディタ上から実行してみましょう。
+GAS エディタ上で 実行 → 関数を実行 → dutyGacha を選択。
+初回実行時はアクセス権の許可がいるので、確認して許可してください。
+<img src="/screenshots/2020/duty-gacha/gas-run-account1.png" width="70%" alt="アクセス権の許可確認モーダル１" />
+
+<img src="/screenshots/2020/duty-gacha/gas-run-account2.png" width="70%" alt="アクセス権の許可確認モーダル２" />
+
+なお、案内にある通り、後でこのアクセス権を確認・削除は以下から行えます。
+<OG url="https://myaccount.google.com/permissions" />
+
+当番履歴表に当月の当番情報がなく、新たに抽選した場合、
+以下のようにメッセージが投稿されていて、スプレッドシートの当番履歴表に履歴が追加されていたらOKです。
+上が member_id に該当するアカウントがある場合。
+下がない場合で、member_id がそのまま出力されます。
+<img src="/screenshots/2020/duty-gacha/result-gacha.png" width="70%" alt="Slack投稿結果(新たにガチャを行った場合)" />
+
+当番履歴表に当月の当番情報がすでにある場合は、その当月の当番がSlackに投稿されていれば OK です。
+こちらは新たにスプレッドシートに書き込みは行いません。
+
+<img src="/screenshots/2020/duty-gacha/result-no-gacha.png" width="70%" alt="Slack投稿結果(新たにガチャを行わなかった場合)" />
+
+うまく投稿できない場合は、ここまでの設定を見直してみてください。
+また、以下の場合はエラーとなるようにしています。
+- すでに履歴がある当月の当番メンバーの情報がメンバー表に存在しない
+- ガチャ参加メンバーが抽選する当番の人数より少ない
+- ガチャ参加メンバーから履歴メンバーを除外した数が、抽選する当番の人数より少ない
+
+あとは、当番履歴表の下に関係ないデータを入れると、当番履歴表の最終行を取得する時におかしくなります。
+
+ちなみに historyDataTargetNum 変数の値（ガチャから除外する履歴件数）より、当番履歴表のデータ件数が少ない場合でもエラーにはならず、存在する履歴データで処理します。
+
+### Outgoing Webhook との連携
+今度は、このガチャを Slack の指定のチャンネルから実行できるようにしていきます。
+
+#### Slack 側
+1. Slack ワークスペースのワークスペース名のところからメニューを開く
+2. App 管理画面へ
+  - ※ワークスペースのオーナーの場合
+    その他管理項目 → App 管理
+  - ※オーナーでない場合
+    Slack をカスタマイズ → 左上のメニューを開く → App 管理
+3. Outgoing Webhook 設定の追加画面へ
+  - ※Outgoing Webhook をまだ導入していない場合
+    「App ディレクトリを検索」のところに Outgoing Webhook で検索し選択 → Slackへ追加
+  - ※すでに Outgoing Webhook を導入済みの場合
+    カスタムインテグレーション → Outgoing Webhook → Slack に追加
+4. ガチャを呼び出せるようにするチャンネルを選択し、Outgoing Webhook インテグレーションの追加を選択
+5. インテグレーションの設定
+  - **トークンを控えておく（GAS 側で使います）**
+
+**この段階ではまだ設定を保存としないで、そのまま設定画面のままにしておきます。**
+
+#### GAS 側
+1. スクリプトプロパティに先ほど控えたトークンを登録。（ここではキーを`SLACK_OUTGOING_TOKEN`としています）
+2. 以下のコードを dutyGacha 関数の上に追加します。
+
+```javascript
+// POST リクエスト時に当番ガチャを実行する
+// （トークン認証を行い、特定の Slack チャンネルからのリクエストのみ受付）
+function doPost(e) {
+  const verifyToken = PropertiesService.getScriptProperties().getProperty('SLACK_OUTGOING_TOKEN');
+
+  if (verifyToken !== e.parameter.token) {
+    throw new Error("トークンが違います。");
+  }
+  dutyGacha();
+}
+```
+Outgoing Webhook で GAS にアクセスがあった時の処理は`doPost`関数で記述できます。
+最初にトークンで認証し、予期しないアクセスははじくようにしておき、その後に dutyGacha 関数を実行します。
+
+
+3. GASのコードを公開
+GAS エディタ上から 公開 → ウェブアプリケーションとして導入.
+- Project version...公開するバージョンを指定。新しくバージョンを作る場合はNewを選択
+- Execute the app as...実行時にどのアカウントで実行するか。`Me`を選択
+- Who has access to the app...このアプリケーションへのアクセス権限。Outgoing Webhookからのアクセスを受け入れるために`Anyone, even anonymous`を選択
+
+公開すると`Current web app URL`が表示されるので控えておきます。
+
+#### 再度 Slack 側
+インテグレーションの設定の続きを行います。
+
+1. インテグレーションの設定
+  - チャンネル...どのチャンネルから実行できるようにするか選択
+  - 引き金となる言葉...トリガーの言葉を入力（例：がちゃる）
+  - URL...先ほど控えた GAS アプリケーションのURLを記述
+  - 名前やアイコンはそのままで問題なし
+
+### Slack 側から呼び出し
+ここまで来たら、Slack の指定したチャンネルからトリガーワードで呼び出せるようになっているはずです。
+呼び出してみましょう。うまくメッセージが投稿され、スプレッドシートに履歴が記述されたでしょうか。
+
+### スプレッドシート上でガチャ実行
+スプレッドシート上でもガチャを実行したいという場合は、適当な図形を作成して、それにスクリプトを割り当てると実現できます。
+
+1. スプレッドシート上で 挿入 → 図形描画 で適当な図形を作成してシートに挿入
+2. 挿入した図形を右クリックで選択し、三点リーダからスクリプトの割り当てを選択
+3. dutyGacha 関数を指定
+
+### 後から設定をカスタマイズしたい時は
+例として抽選する当番の人数を増やしたい時はこんな感じ。
+
+1. スプレッドシートの当番履歴表の右側に列を追加する
+2. GAS の dutyGacha 関数の最初で初期化している以下の変数の値を合わせる
+  - `historyDataColumnRangeEnd`...変数の値を、追加した列に合わせる
+  - `dutyMemberNum`...新しい当番人数を指定
+3. GAS を再度公開する（公開 → ウェブアプリケーションとして導入 → New バージョンで指定して公開）
+
+特に、3の GAS の再度公開は忘れがちなので注意して下さい。
+
+基本的には、何かしらGASのコードを更新したら再度公開するようにすれば大丈夫かと。
+
+## Webhook のやり方が変わった？
+このガチャを作成した後に知ったのですが、今回使用した Webhook の方式がどうやら旧方式になるらしく...。
+新方式として Slack App を個別に作成し、そのなかで Webhook の設定をするものになったそうです。
+<OG url="https://qiita.com/kshibata101/items/0e13c420080a993c5d16" />
+
+すぐに旧方式が使えなくなるようではないですが、将来的にはなくなるようなので、いずれは方式を新しくしておきたいですね。
+
+新方式もちょっとやってみたところ、Incomming Webhook はすんなりできました。
+ただ、Outgoing Webhookの代わりとなると思われる Event Subscriptions がよくわかりませんでした。
+トリガーワードが設定できないっぽい...？
+`message.channels`のイベントを設定したら、メッセージ投稿で反応するっぽい？ですが、投稿の度に毎回 GAS へリクエストされるとしたら微妙なような...。
+スラッシュコマンドとかでやった方がいいんですかね、う～ん。
+
+---
+連携させることで、GAS からスプレッドシートの操作ができるのは便利ですが、元となるスプレッドシートの状態がおかしかったりすると、うまく動作しなくなる問題があります。
+スプレッドシートの変化に対応できるような GAS を書くことも考えたものの、どこまで対応すべきなのか？というところを悩み。
+結果、dutyGacha 関数の最初で初期化することで、せめて修正しやすくしようとしてみました。
+ここらへんってどうすべきなんでしょうね...。悩ましいところです。
+
+また何か作るネタを思いついたら GAS で作ってみますー。
+
+## 参考リンクまとめ
+- [【初心者向けGAS】プロパティストアの概要とスクリプトプロパティの編集方法](https://tonari-it.com/gas-property-store/)
+- [【初心者向けGAS】スクリプトプロパティを操作してそのデータを取り出す方法](https://tonari-it.com/gas-properties-script-property/)
+- [【GAS】1行で書ける！特定列の最終行・特定行の最終列を取得する方法](https://moripro.net/gas-get-specified-lastcol-lastrow)
+- [SlackのIncoming Webhooksでメンションを飛ばす方法](https://qiita.com/ryo-yamaoka/items/7677ee4486cf395ce9bc)
+- [Google Apps Scriptでスプレッドシートにデータ行を挿入する２つの方法](https://tonari-it.com/gas-spreadsheet-insertrows-splice/)
+- [【GAS】スプレッドシートの枠線設定機能まとめ【サンプルソース付】](https://caymezon.com/gas-border/)
+- [slackのIncoming webhookが新しくなっていたのでまとめてみた](https://qiita.com/kshibata101/items/0e13c420080a993c5d16)

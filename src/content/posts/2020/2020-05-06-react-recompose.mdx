@@ -1,0 +1,623 @@
+---
+title: "React×HOC環境を支援する、Recompose入門"
+description: "高階コンポーネント (Higher-Order Component)を扱うユーティリティ的なライブラリである、Recomposeの主な機能を紹介"
+pubDate: "2020-05-06"
+updatedDate: "2022-01-24"
+category: "develop"
+tags: ["JavaScript", "React"]
+---
+
+今回は React Hooks が普及する前の話。
+主に関数コンポーネントに機能を付与することに使われる HOC を取り扱う Recompose についてです。
+
+※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/e6988691c6a0a9bd6833) からの転載です。
+  現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-10-03-react-recompose) の方で更新しています。
+
+※2022/01/24追記 あくまでライブラリの記事であるとわかりやすくするために、記事タイトルを変更しました（旧：React入門 ～Recompose編～）
+
+import OG from "@/components/OG.astro"
+
+## Recompose とは？
+<OG url="https://github.com/acdlite/recompose" />
+
+前提知識として、React には高階コンポーネント (Higher-Order Component、通称 HOC)という概念があります。
+具体的には、あるコンポーネントを受け取って、それに機能を付与した新規のコンポーネントを返すような関数のことを指します。
+これまでの記事でも HOC と書いていたものは、これのことでした。
+
+HOC を利用することで、HOC 側にロジック、コンポーネント側はビューといったように責務を分離させたり、ロジック部分を複数のコンポーネントで再利用したりといったことができます。
+また、state やライフサイクルを持てない関数コンポーネントに、これらの機能を付与も可能です。
+
+Recompose はこの HOC を扱うユーティリティ的なライブラリです。
+以前は多くの方々に利用されていましたが、React 16.8 で追加された React Hooks により、React 本体だけでも同様のことができるようになりました。
+
+そのためライブラリの更新はすでに止まっており、今後は使われなくなっていくのではないかと考えられますが、業務で使用する機会があったので今回記事として書くことにしました。
+
+## インストール
+```bash
+yarn add recompose
+```
+今回使用するバージョンは`0.30.0`です。
+
+## 使い方
+以下、記載しているコードは公式サンプルのコードを元にしています。
+
+### 基本的な使い方
+HOC を使う場合、主に以下のような書き方をします。
+
+```jsx
+const enhance = HOC(Component);
+```
+
+ここでの定数名、HOC 名、コンポーネントはあくまで仮のものです。
+その中身としては、以下のようなものになります。
+
+- enhance：機能が追加され、新たに作成されたコンポーネント
+- HOC：引数のコンポーネントに何らかの処置を施す関数
+- Componet：元となるコンポーネント
+
+元となるコンポーネントをHOCでラップするイメージですね。
+
+これを踏まえたうえで、Recompose が提供する HOC を使用した例がこちら。
+
+```jsx
+import React from 'react';
+import { withState } from 'recompose';
+
+const enhance = withState('counter', 'setCounter', 0);
+
+const Component = enhance(({ counter, setCounter }) => {
+  return (
+    <div>
+      <p>カウンター: {counter}</p>
+      <button onClick={() => setCounter(n => n + 1)}>Increment</button>
+      <button onClick={() => setCounter(n => n - 1)}>Decrement</button>
+    </div>
+  );
+});
+
+export default Component;
+```
+
+<img src="/gifs/2020/react-recompose/state-counter.gif" width="60%" alt="withStateを使用したカウンターのGIF" />
+
+上記では state を扱えるようにする`withState`で、ビュー側であるコンポーネントをラップするようになっています。`withState`で定義した state と state を更新する関数は props に渡されるので、そこから使用できます。
+
+### 複数の HOC を併用するやり方
+Recompose ではいろんな種類の HOC が提供されているので、それらを併用して使用したい場合もあります。
+
+その場合、普通にやろうとすると以下のようになります。
+
+```jsx
+const enhance = HOC1(HOC2(Component));
+```
+実際のコードにするとこんな感じです。
+`withState`と`withHandlers`の組み合わせ。
+
+```jsx
+import React from 'react';
+import { withState, withHandlers } from 'recompose';
+
+const stateEnhance = withState('counter', 'setCounter', 0);
+
+const handleEnhance = withHandlers({
+  incrementCounter: props => () => {
+    props.setCounter(v => v + 1)
+  },
+  decrementCounter: props => () => {
+    props.setCounter(v => v - 1)
+  },
+});
+
+const Component = stateEnhance(handleEnhance((
+  { counter, incrementCounter, decrementCounter }) => {
+  return (
+    <div>
+      <p>カウンター: {counter}</p>
+      <button onClick={incrementCounter}>Increment</button>
+      <button onClick={decrementCounter}>Decrement</button>
+    </div>
+  );
+}));
+
+export default Component;
+```
+この例では2つの HOC なのでまだいい方ですが、こここからさらに数が増えるとラップする数が増えて可読性が落ちてえらいことに...。
+また、先に書いた HOC から実行されるので、上記のように`withHandlers`のなかで`withState`にて定義したものを使用している場合は、`withState`の方を先に書く必要があります。
+
+この可読性の問題を解消するためには`compose`という関数を使うとよいです。
+`compose`を使うと、以下のように書くことができます。
+
+```jsx
+const enhance = compose(HOC1, HOC2)(Component);
+```
+実際のコードだとこんな感じです。
+複数の HOC をまとめて書けるので、すっきりしますね。
+
+```jsx
+import React from 'react';
+import { compose, withState, withHandlers } from 'recompose';
+
+const enhance = compose(
+  withState('counter', 'setCounter', 0),
+  withHandlers({
+    incrementCounter: props => () => {
+      props.setCounter(v => v + 1)
+    },
+    decrementCounter: props => () => {
+      props.setCounter(v => v - 1)
+    }
+  })
+)
+
+const ComposeComponent = enhance(
+  ({
+    counter,
+    incrementCounter,
+    decrementCounter
+  }) => {
+    return (
+      <div>
+        <p>カウンター：{counter}</p>
+        <button onClick={incrementCounter}>Increment</button>
+        <button onClick={decrementCounter}>Decrement</button>
+      </div>
+    )
+})
+
+export default ComposeComponent;
+```
+### Redux との併用
+Redux と併用したい場合は、react-redux の`connect`を使うとよいです。
+この`connect`も HOC が使われているそうで、同様に`compose`で他の HOC とまとめて書くことができます。
+
+```jsx
+import React from 'react';
+import { connect } from 'react-redux';
+import { compose } from 'recompose';
+import { bindActionCreators } from 'redux';
+import { incrementOn, decrementOn } from '../../Actions/Counter';
+
+const enhance = compose(
+  connect(
+    state => ({
+      counter: state.counter
+    }),
+    dispatch => ({
+      actions: bindActionCreators({ incrementOn, decrementOn }, dispatch)
+    })
+  )
+)
+
+const ComposeComponent = enhance(
+  ({ counter, actions }) => {
+    return (
+      <div>
+        <p>カウンター：{counter}</p>
+        <button onClick={actions.incrementOn}>Increment</button>
+        <button onClick={actions.decrementOn}>Decrement</button>
+      </div>
+    )
+})
+
+export default ComposeComponent;
+```
+
+### HOC の種類
+数が多いので一部のみ紹介。
+
+#### 無駄な再レンダリングを抑制する：pure
+props が変更されない限り、コンポーネントが更新されないようにします。
+変更されたことを検知するロジックとしては`shallowEqual`が使われているようです。
+
+```jsx
+import React from 'react';
+import { pure } from 'recompose';
+
+const enhance = pure;
+
+const Component = enhance(
+  () => {
+    return (
+      <div>
+        <p>pure test</p>
+      </div>
+    );
+});
+
+export default Component;
+```
+
+#### props を置き換える：mapProps
+現在の props を関数が返すものに置き換えます。
+
+`mapProps`実行後は、`num1`と`num2`はなくなり、`sum`という props のみに置き換えられます。
+
+使用例（propsに num1={10}、num={20} 指定）
+
+```jsx
+import React from "react";
+import { mapProps } from 'recompose';
+
+const enhance = mapProps(props => {
+  return {
+    sum: props.num1 + props.num2
+  }
+})
+const Component = enhance(({ num1, num2, sum }) => {
+  return (
+    <div>
+      <p>{num1 ? num1 : 'propsなし'}</p>
+      <p>{num2 ? num2 : 'propsなし'}</p>
+      <p>{sum}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+
+<img src="/screenshots/2020/react-recompose/map-props.png" width="60%" alt="mapPropsを使ったサンプル画像" />
+
+#### props を追加する：withProps
+現在の props に関数が返すものを追加します。
+
+使用例（propsに num1={10}、num2={20} 指定）
+
+```jsx
+import React from "react";
+import { withProps } from 'recompose';
+
+const enhance = withProps(props => {
+  return {
+    sum: props.num1 + props.num2
+  }
+})
+const Component = enhance(({ num1, num2, sum }) => {
+  return (
+    <div>
+      <p>{num1 ? num1 : 'propsなし'}</p>
+      <p>{num2 ? num2 : 'propsなし'}</p>
+      <p>{sum}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+
+<img src="/screenshots/2020/react-recompose/with-props.png" width="60%" alt="withPropsを使ったサンプル画像" />
+
+#### 指定した props が変更された時のみ、props を追加する：withPropsOnChange
+基本的には`withProps`と同じであるものの、こちらは指定した props が変更された場合のみ props の追加が行われます。
+
+使用例.
+
+```jsx
+import React from "react";
+import { withPropsOnChange } from 'recompose';
+
+const enhance = withPropsOnChange(['num'], props => {
+  return {
+    sum: props.num * 2
+  }
+})
+const Component = enhance(({ num, sum }) => {
+  return (
+    <div>
+      <p>{num ? num : 'propsなし'}</p>
+      <p>{sum ? sum : 'propsなし'}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+props に`num`を指定しなかった場合
+<img src="/screenshots/2020/react-recompose/with-props-on-change-no-props.png" width="60%" alt="withPropsOnChangeを使って、propsを指定しなかった場合のサンプル画像" />
+
+props に`num`を指定した場合
+<img src="/screenshots/2020/react-recompose/with-props-on-change.png" width="60%" alt="withPropsOnChangeを使って、propsを指定した場合のサンプル画像" />
+
+#### props のデフォルト値を指定する：defaultProps
+React 本体で使用できる`defaultProps`プロパティとほぼ同じことができるものの、厳密には違う模様。
+なお、コンポーネント呼び出し時に対象の props が指定されていた時は、そちらが優先して使われます。
+
+使用例（props に指定なし）
+
+```jsx
+import React from "react";
+import { defaultProps } from 'recompose';
+
+const enhance = defaultProps({
+  text: 'default'
+})
+
+const Component = enhance(({ text }) => {
+  return (
+    <div>
+      <p>{text}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+<img src="/screenshots/2020/react-recompose/default-props.png" width="60%" alt="defaultPropsを使ったサンプル画像" />
+
+#### props の名前を変更する：renameProp
+第1引数の名称の props を第2引数の名称にリネーム。
+この HOC 1つにつき、1つしか書けません。
+
+使用例（props に`text="テスト"`を指定）
+
+```jsx
+import React from "react";
+import { renameProp } from 'recompose';
+
+const enhance = renameProp('text', 'renameText');
+
+const Component = enhance(({ text, renameText }) => {
+  return (
+    <div>
+      <p>{text ? text : 'propsなし'}</p>
+      <p>{renameText ? renameText : 'propsなし'}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+<img src="/screenshots/2020/react-recompose/rename-prop.png" width="60%" alt="renamePropを使ったサンプル画像" />
+
+#### 一度に複数の props の名前を変更する：renameProps
+renameProps の複数版。
+
+使用例（propsに`text="テスト" num={10}`を指定）
+
+```jsx
+import React from "react";
+import { renameProps } from 'recompose';
+
+const enhance = renameProps({
+  'text': 'renameText',
+  'num': 'renameNum'
+});
+
+const Component = enhance(({ text, renameText, num, renameNum }) => {
+  return (
+    <div>
+      <p>{text ? text : 'propsなし'}</p>
+      <p>{renameText ? renameText : 'propsなし'}</p>
+      <p>{num ? num : 'propsなし'}</p>
+      <p>{renameNum ? renameNum : 'propsなし'}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+<img src="/screenshots/2020/react-recompose/rename-props.png" width="60%" alt="renamePropsを使ったサンプル画像" />
+
+#### 平坦化した props を追加する：flattenProp
+あくまで平坦化した props を追加なので、平坦化の元になった props もそのまま残ります。
+
+使用例（propsに`obj={{'a': 'A', 'b': 'B', 'c': 'C'}}`を指定）
+
+```jsx
+import React from "react";
+import { flattenProp } from 'recompose';
+
+const enhance = flattenProp('obj');
+
+const Component = enhance(({ obj, a, b, c }) => {
+  return (
+    <div>
+      <p>{obj.a}・{obj.b}・{obj.c}</p>
+      <p>{a}</p>
+      <p>{b}</p>
+      <p>{c}</p>
+    </div>
+  );
+});
+
+export default Component;
+```
+<img src="/screenshots/2020/react-recompose/flatten-prop.png" width="60%" alt="flattenPropを使ったサンプル画像" />
+
+#### state を追加する：withState
+第1引数に state 名、第2引数に state を更新する関数、第3引数にデフォルト値を指定します。
+state を更新する関数を使用する際の引数は、ただ設定値だけを渡すほかに、現在の値を引数とした処理の記述も可能です。
+デフォルト値の指定に関しても、単純な値のほかにコールバック関数も指定できます。
+
+使用例（基本的な使い方の例と同じです）
+
+```jsx
+import React from 'react';
+import { withState } from 'recompose';
+
+const enhance = withState('counter', 'setCounter', 0);
+
+const Component = enhance(({ counter, setCounter }) => {
+  return (
+    <div>
+      <p>カウンター: {counter}</p>
+      <button onClick={() => setCounter(n => n + 1)}>Increment</button>
+      <button onClick={() => setCounter(n => n - 1)}>Decrement</button>
+    </div>
+  );
+});
+
+export default Component;
+```
+<img src="/gifs/2020/react-recompose/state-counter.gif" width="60%" alt="withStateを使用したカウンターのGIF" />
+
+#### 関数ハンドラーを追加する：withHandlers
+定義した関数ハンドラーには props が渡されるので、その値を使った処理を記述できます。
+
+使用例（複数の HOC を併用するやり方の例と同じです）
+
+```jsx
+import React from 'react';
+import { compose, withState, withHandlers } from 'recompose';
+
+const enhance = compose(
+  withState('counter', 'setCounter', 0),
+  withHandlers({
+    incrementCounter: props => () => {
+      props.setCounter(v => v + 1)
+    },
+    decrementCounter: props => () => {
+      props.setCounter(v => v - 1)
+    }
+  })
+)
+
+const ComposeComponent = enhance(
+  ({
+    counter,
+    incrementCounter,
+    decrementCounter
+  }) => {
+    return (
+      <div>
+        <p>カウンター：{counter}</p>
+        <button onClick={incrementCounter}>Increment</button>
+        <button onClick={decrementCounter}>Decrement</button>
+      </div>
+    )
+})
+
+export default ComposeComponent;
+```
+※プレビューは withState の例と同じなので省略。
+
+#### state と関数ハンドラーを追加する：withStateHandlers
+state と、その state に関する関数ハンドラーをまとめて定義したい時は、こちらを使用。
+
+使用例（props に指定なし）
+
+```jsx
+import React from 'react';
+import { withStateHandlers } from 'recompose';
+
+const enhance = withStateHandlers(
+  ({ initialCounter = 0 }) => ({
+    counter: initialCounter,
+  }),
+  {
+    incrementOn: props => () => ({
+      counter: props.counter + 1,
+    }),
+    decrementOn: props => () => ({
+      counter: props.counter - 1,
+    }),
+    resetCounter: (_, { initialCounter = 0 }) => () => ({
+      counter: initialCounter,
+    }),
+  }
+)
+
+const ComposeComponent = enhance(
+  ({ counter, incrementOn, decrementOn, resetCounter }) => {
+    return (
+      <div>
+        <p>カウンター：{counter}</p>
+        <button onClick={incrementOn}>Increment</button>
+        <button onClick={decrementOn}>Decrement</button>
+        <button onClick={resetCounter}>Reset</button>
+      </div>
+    )
+})
+
+export default ComposeComponent;
+```
+<img src="/gifs/2020/react-recompose/state-handlers-counter.gif" width="60%" alt="withStateHandlersを使用したカウンターのGIF" />
+
+#### ローカル Reducer を追加する：withReducer
+Action を発行して、そのタイプに応じた状態更新をする Redux ライクな処理を書くことができます。
+Redux を使うまでではないが、より複雑な状態管理をしたいという時に向いています。
+
+```jsx
+import React from 'react';
+import { compose, withReducer, withHandlers } from 'recompose';
+
+const counterReducer = (count, action) => {
+  switch (action.type) {
+    case 'INCREMENT':
+      return count + 1
+    case 'DECREMENT':
+      return count - 1
+    default:
+      return count
+  }
+}
+
+const enhance = compose(
+  withReducer('counter', 'dispatch', counterReducer, 0),
+  withHandlers({
+    incrementOn: props => () => props.dispatch({type: 'INCREMENT'}),
+    decrementOn: props => () => props.dispatch({type: 'DECREMENT'}),
+  })
+);
+
+const ComposeComponent = enhance(
+  ({ counter, incrementOn, decrementOn }) => {
+    return (
+      <div>
+        <p>カウンター：{counter}</p>
+        <button onClick={incrementOn}>Increment</button>
+        <button onClick={decrementOn}>Decrement</button>
+      </div>
+    );
+});
+
+export default ComposeComponent;
+```
+※プレビューは withState の例と同じなので省略。
+
+#### ライフサイクルを追加する：lifecycle
+`componentDidMount`をはじめとした、ライフサイクルを追加できます。
+
+使用例.
+
+```jsx
+import React from 'react';
+import { compose, withState, lifecycle } from 'recompose';
+
+const enhance = compose(
+  withState('text', 'setText', ''),
+  lifecycle({
+    componentDidMount() {
+      this.props.setText('initial');
+    }
+  })
+)
+
+const ComposeComponent = enhance(({ text }) => {
+    return (
+      <div>
+        <p>{text}</p>
+      </div>
+    )
+})
+
+export default ComposeComponent;
+```
+
+<img src="/screenshots/2020/react-recompose/lifecycle.png" width="60%" alt="lifecycleを使用したサンプル画像" />
+
+---
+Recompose は業務で使用した経験があったので、記事に起こすのそんなに難しくないと思いきや、思いのほか機能が多かったです（苦笑）
+自分が使った機能はほんの一部にすぎなかったようです。
+
+またもや長くなって力尽きたので、一部機能のみ紹介にしました。
+気が向いたら他の機能も書くかも？
+
+今後使われなくなっていくと思われるライブラリではありますが、保守案件とかで触れる機会がある可能性はあるので、さらっとした知識は一応持っておきたいですね。
+
+## 参考リンクまとめ
+- [GitHub - recompose](https://github.com/acdlite/recompose)
+- [Recompose](https://recompose.docsforhumans.com/)
+- [React - 高階 (Higher-Order) コンポーネント](https://ja.reactjs.org/docs/higher-order-components.html)
+- [小さく始めるrecompose 〜Reactリファクタリング手引き〜](https://qiita.com/usagi-f/items/a04e8129654b43ee7d37)
+- [recomposeではじめるReact Higher-order Components(HoCs)](https://qiita.com/locol23/items/ad9c7553176c239f0b15)

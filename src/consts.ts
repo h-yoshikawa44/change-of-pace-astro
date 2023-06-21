@@ -55,7 +55,7 @@ export const TAG_ICON_CLASS_MAP = {
   gitlabCi: 'i-logos:gitlab',
   gitlab: 'i-logos:gitlab',
   git: 'i-logos:git-icon',
-  // googleAppScript: '',
+  // googleAppsScript: '',
   homeBrew: 'i-logos:homebrew',
   // hp: '',
   html: 'i-logos:html-5',

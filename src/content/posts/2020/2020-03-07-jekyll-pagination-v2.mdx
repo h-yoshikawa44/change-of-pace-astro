@@ -1,0 +1,265 @@
+---
+title: "Jekyll製ブログのカテゴリーページにもページネーションを導入する"
+description: "デフォルトで入っているjekyll-paginateではカテゴリーページに対応していなかったので、jekyll-paginate-v2を使ってページネーションを導入した備忘録"
+pubDate: "2020-03-07"
+updatedDate: "2020-03-07"
+category: "develop"
+tags: ["ブログ", "Ruby", "Jekyll"]
+---
+
+
+以前、当ブログのカテゴリーページにページネーションを導入したのですが、記事化していなかったので、当時の記録を掘り起こしながら導入手順を書いてみます。
+
+import OG from "@/components/OG.astro"
+
+## 元々あるページネーション
+現時点で、当ブログで使用しているJekyllのバージョンは`3.8.1`です。
+この Jekyll 3系ではデフォルトで`jekyll-paginate`プラグインが導入されており、トップページではページネーションが有効になっていました。
+
+<OG url="http://jekyllrb-ja.github.io/docs/pagination" />
+
+ただ、カテゴリーページにもページネーションを有効にしたいなと思い調べると、`jekyll-paginate`プラグインでは対応していないとのこと。
+代わりに`jekyll-paginate-v2`プラグインを使用するように公式でも案内があったため、こちらへ移行することにしました。
+
+## jekyll-paginate-v2導入
+※以下導入手順を書いていきますが、使用テーマによって微妙に違いのある可能性があります。
+（自分は現時点で [Hydeout](https://github.com/fongandrew/hydeout) の`4.0.2`を使用しています）
+
+### プラグインのインストール
+Gemfileに追記。
+
+```:Gemfile
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-sitemap"
+  gem "jekyll-paginate-v2" ←追記
+end
+```
+
+インストール.
+```bash
+bundle install
+```
+
+### 基本設定
+#### _config.yml
+1. 使用プラグインを修正
+```yaml:_config.yml
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap
+```
+↓
+```yaml:_config.yml
+plugins:
+  - jekyll-feed
+  - jekyll-paginate-v2 # 変更
+  - jekyll-sitemap
+```
+
+2. 旧ページネーション設定を書き換え
+```yaml:_config.yml
+paginate: 8
+paginate_path: "page:num"
+```
+↓
+```yaml:_config.yml
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
+  title: ':title - :num'
+  sort_reverse: true
+```
+
+- enabled：ページネーションの有効化
+- per_page：ページネーションの1ページ当たりのリンク数
+- permalink：ページネーションでページ送りしたときのURL（:numにはページ数が入る）
+- title：ページネーションでページ送りしたときの表示タイトル（:titleにはそのページのタイトル、:numにはページ数）
+- sort_reverse：リンクの並び順を記事が新しい順にするか
+
+#### _layouts/index.html
+トップページのレイアウトファイルです。
+デフォルトでは`jekyll-paginate`が導入されているため、恐らく以下のようなものが含まれていると思われます。
+
+- pagination-newer.html：ページを1ページ戻す部分
+- pagination-older.html：ページを1ページ進める部分
+- paginator.posts：ページネーションでの1ページあたりの数の記事情報が入っている
+
+ここについては特に変更しなくてよいです。
+
+```html:_layouts/index.html
+---
+layout: default
+---
+
+<div class="content">
+  {% include pagination-newer.html %}
+
+  {{ content }}
+
+  {% for post in paginator.posts %}
+  <article class="post-body">
+    <h2 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h2>
+    {% include post-meta.html post=post %}
+
+    {% if post.excerpt %}
+      {{ post.excerpt }}
+    {% else %}
+      {{ post.content }}
+    {% endif %}
+
+    {% if post.excerpt %}
+      {% comment %}Excerpt may be equal to content. Check.{% endcomment %}
+      {% capture content_words %}
+        {{ post.content | number_of_words }}
+      {% endcapture %}
+      {% capture excerpt_words %}
+        {{ post.excerpt | number_of_words }}
+      {% endcapture %}
+
+      {% if content_words != excerpt_words %}
+        <a href="{{ site.baseurl }}{{ post.url }}">More &hellip;</a>
+      {% endif %}
+    {% endif %}
+  </article>
+  {% endfor %}
+
+  {% include pagination-older.html %}
+</div>
+```
+
+#### index.html
+トップページの html ファイルです。
+
+front matter に以下を追記します。
+これがないと、レイアウトファイルの`paginator.posts`に何も値が入らないため、トップページ表示の際に何も表示されなくなってしまいました。
+
+```yaml:index.html
+pagination:
+  enabled: true
+```
+
+#### ※注意点・URL
+使用テーマの影響の可能性もありますが、この設定をしたことで URL が`/`であるかを条件とした分岐処理が一部うまく動かなくなりました。
+
+その個所については URL が`/index.html`であるかというように修正して対応しました。
+
+---
+
+この時点ではページネーションの基本設定をやっただけなので、カテゴリーページにページネーションはまだついていません。
+
+### カテゴリーページへの設定
+#### 各カテゴリーページのマークダウンファイル
+front matter にページネーションの設定を追記します。
+
+以下は当ブログのプログラミングカテゴリーの例です。
+`permalink`、`pagination`が今回必要な設定です。
+
+例.
+```yaml
+---
+layout: category
+title: プログラミング
+permalink:  '/プログラミング/'
+sidebar_sort_order: 3
+pagination:
+  enabled: true
+  category: プログラミング
+  permalink: '/:num/'
+---
+```
+
+この場合、URL は`(ドメイン)/プログラミング/index.html`や`(ドメイン)/プログラミング/(ページ数)`といったようになります。
+
+#### _layouts/category.html
+カテゴリーページのレイアウトファイルです。
+`pagination-newer.html`と`pagination-older.html`の include を追記。
+加えて、` {% for post in site.categories[category] %}`となっていたところを`{% for post in paginator.posts %}`に。
+ページネーションでの1ページあたりの数の記事情報でforを回すようにします。
+
+以下は一例.
+
+```html:_layouts/category.html
+---
+layout: page
+---
+
+{% unless page.content == '' %}
+  {{ content }}
+{% endunless %}
+
+{% include pagination-newer.html %}
+
+<ul class="posts-list">
+  {% assign category = page.category | default: page.title %}
+  {% for post in paginator.posts %}
+    <li>
+      <h3>
+        <a href="{{ site.baseurl }}{{ post.url }}">
+          {{ post.title }}
+          <small>{{ post.date | date_to_string }}
+            {% for tag in post.tags %}
+              {{ tag }}
+            {% endfor %}
+          </small>
+        </a>
+      </h3>
+    </li>
+  {% endfor %}
+</ul>
+
+{% include pagination-older.html %}
+```
+
+
+これでカテゴリーページでもページネーションが有効になります。
+
+#### ※注意点・カテゴリーページへのリンク
+自分が使用しているテーマの場合、サイドバーにカテゴリーページへのリンクがあり、元々以下のようなコードになっていました。
+
+```html:_includes/category-links.html
+{% comment %}
+  Dynamically generate list of links to all category pages
+{% endcomment %}
+{% assign pages_list = site.pages|sort:"sidebar_sort_order" %}
+{% for node in pages_list %}
+  {% if node.title != null %}
+    {% if node.layout == "category" %}
+      <a class="category-link {% if page.url == node.url %} active{% endif %}"
+          href="{{ node.url | relative_url }}">{{ node.title }}</a>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+```
+
+するとカテゴリーページのページネーションを有効にしたことで、サイドバーのリンクが以下のようになってしまいました。
+ページネーションの各ページまでリンクに出てしまっています。
+
+<img src="/screenshots/2020/jekyll-pagination-v2/category-link.png" width="50%" alt="サイドバーのカテゴリーページへのリンク" />
+
+なので、_includes/category-links.html ファイルを新たに作成して、以下のような内容で上書きするようにしました。
+これでページネーションの各ページが出なくなります。
+
+```html:_includes/category-links.html
+{% comment %}
+  Dynamically generate list of links to all category pages
+{% endcomment %}
+
+{% assign pages_list = site.pages|sort:"sidebar_sort_order" %}
+{% for node in pages_list %}
+  {% if node.title and node.autogen == nil and node.layout == "category" %}
+    <a class="category-link {% if page.url == node.url %} active{% endif %}" href="{{ node.url | relative_url }}">{{ node.title | escape }}</a>
+  {% endif %}
+{% endfor %}
+```
+
+## 参考リンクまとめ
+- [Jekyll - ドキュメント](http://jekyllrb-ja.github.io/)
+- [GitHub - jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2)
+- [GitHub - hydeout](https://github.com/fongandrew/hydeout)

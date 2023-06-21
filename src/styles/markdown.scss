@@ -75,6 +75,10 @@
     @apply max-w-full h-auto my-4 mx-auto block drop-shadow-md;
   }
 
+  .scroll-table-block {
+    @apply overflow-x-auto;
+  }
+
   table {
     @apply my-4 border border-slate-300 w-full text-sm border-collapse leading-normal overflow-auto;
   }
@@ -141,5 +145,12 @@
 
   blockquote {
     @apply font-italic text-slate-500 border-l-3 border-slate-400 pl-4 my-4;
+  }
+
+  // ツイートの埋め込みをすると
+  // インラインスタイルで余白定義されているので上書きする
+  div.twitter-tweet:is([style]) {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
   }
 }

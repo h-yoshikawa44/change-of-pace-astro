@@ -1,0 +1,118 @@
+---
+title: "Jekyll製ブログの各見出しに自動アンカー生成を導入する"
+description: "Jekyllで各hタグに自動的にアンカーをつけてくれる拡張の導入手順"
+pubDate: "2020-01-04"
+updatedDate: "2020-01-04"
+category: "develop"
+tags: ["ブログ", "Ruby", "Jekyll"]
+---
+
+Qiita や GitHubのマークダウンって、各見出しに自動的にアンカーがついていて、すぐにその見出しのリンク取得できるから便利ですよね。
+あれを Jekyll で導入する方法を調査して、よいものを見つけたので早速導入してみました。
+
+import OG from "@/components/OG.astro"
+
+## 調査したきっかけ
+自分はとあるエンジニアのコミュニティに参加しています。
+そのコミュニティを立ち上げられた方を Twitter でフォローさせていただいているのですが...。
+あるとき、その方が「Jekyll で見出しにアンカーを自動で付与する方法はないか？」というつぶやきをされていました。
+
+最初は目次から見出しへ飛べるようにするのかな？と思ってやりとりをしたのですが、そこで Qiita や GitHub の見出しの話になりました。
+Qiita や GitHub のマークダウンの見出しって、自動的にアンカーリンクが付与されていて、すぐにその見出しのアンカーリンクが取得できるんですよね。
+あれってどうやってるんだろうと。
+
+そこで何かプラグイン等がないか調査してみることにしました。
+何か見つかれば当ブログにも導入できるなと。
+
+## jekyll-anchor-headings
+調査したところ、こちらのリポジトリを見つけました。
+<OG url="https://github.com/allejo/jekyll-anchor-headings" />
+
+### 概要
+> GitHub Pages can't run custom Jekyll plug-ins so when generating anchors for your headings (i.e. h1 - h6), you're stuck with JavaScript solutions that will inject anchors. But what if your users don't have JavaScript enabled on their browsers? If you're building a static website, why not make your anchors static as well?
+
+簡単に静的サイト構築のできる GitHub Pages でも Jekyll が使われているのですが、あちらはプラグインが使用できないという制約があります。
+そこで JavaScript で見出しをカスタマイズするという選択肢が出ますが、JavaScriptが無効化されていると、利用できません。
+静的サイトでは、アンカーも静的にしましょうといったことが書いてありました。
+
+> A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript
+
+こちらに書いてあるとおり、プラグインや JavaScript を使わずとも、このスニペットを使えば、見出しに自動的にアンカーを付与できますよとのことです。
+プラグインでないので GitHub Pages でも問題なく使用できます。
+
+### 導入実績
+こちらも README に記述がありました。
+比較的有名なサービスや OSS のドキュメントに使われているそうです。
+すごいですね！
+
+> - Travis CI Docs (fixed in #1960)
+> - Bitrise's Documentation
+> - di's personal website
+> - sitespeed.io
+> - Duality's developer docs
+> - Australia's Vote Flux campaign
+> - mlpack.org
+> - Riot.js website
+> - "Just the Docs" Jekyll theme
+> - Microsoft's TypeScript website
+> - VMWare's Octant documentation
+
+### 導入方法
+導入はとても簡単です。
+
+1. リポジトリから最新の`anchor_headings.html`ファイルをダウンロードする
+
+2. ダウンロードしたファイルを、自ブログコードの`_includes`配下に格納
+
+3. レイアウトファイルで`{{ content }}`のところを以下のように置き換える
+
+```html
+{% include anchor-headings.html html=content %}
+```
+
+自分は`_layouts/default.html`の該当箇所を置き換えました。
+他のレイアウトファイルもこのレイアウトファイルをベースにしているので、まとめて適用できました。
+
+### オプション
+include 文にオプションを渡すことができます。
+
+一例はこちら.
+- beforeHeading
+  見出しの文字の前にアンカーを生成するか（bool で指定、デフォルトは false）
+- anchorBody
+  アンカー内に配置するコンテンツ（string で指定、デフォルトは''）
+  文字列で指定ですが、HTML の i タグで指定もできました。
+- anchorClass
+  アンカーに指定するクラス（string で指定、デフォルトは''）
+  このクラスに CSS をあてて、カスタマイズもできます。
+
+
+詳しくはリポジトリの README でご確認ください。
+<OG url="https://github.com/allejo/jekyll-anchor-headings#parameters" />
+
+自分の場合は以下のようにしました。
+
+```html
+{% include anchor-headings.html html=content anchorBody='#' anchorClass='anchor-heading' %}
+```
+
+---
+
+とても簡単に見出しに自動アンカーを導入できました！
+Jekyll を利用している方はぜひ導入してみてはどうでしょうか。
+
+README を読んでて気づいたのですが、この製作者の方は、以前目次導入の調査をしていた時に見つけた jekyll-toc を作った方でもあったそうです。
+<OG url="https://github.com/allejo/jekyll-toc" />
+jekyll-toc に関しても、同様に導入でき、GitHub Pages でも使えるようになっていました。
+
+こういう便利なものを作れる方ってすごいですね！
+自分もいつか挑戦してみようかな...。
+
+---
+
+遅ればせながら、あけましておめでとうございます。
+今年も少しずつブログ書いていきますので、どうぞよろしくお願い致します。
+
+## 参考リンクまとめ
+- [GitHub - jekyll-anchor-headings](https://github.com/allejo/jekyll-anchor-headings)
+- [GitHub - jekyll-toc](https://github.com/allejo/jekyll-toc)
