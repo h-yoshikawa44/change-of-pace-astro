@@ -1,9 +1,9 @@
 ---
-import { getCollection } from 'astro:content';
 import type { GetStaticPathsOptions, Page } from 'astro';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import PostPage from '@/pageComponents/posts/[page].astro';
-import { PAGE_SIZE } from '@/consts';
+import PostPagingList from '@/features/post/PostPagingList.astro';
+import { PAGE_SIZE, RSS_LINKS } from '@/consts';
 import { extractPostSlug } from '@/utils/extractPostSlug';
 
 type Props = {
@@ -24,6 +24,14 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
 // コンポーネントの page と衝突するのか ts エラーが出てしまうのでリネームして回避
 const { page: pageProps } = Astro.props;
+const prev = pageProps.currentPage === 2 ? '/' : pageProps.url.prev;
 ---
 
-<PostPage page={pageProps} />
+<PostPagingList
+  headTitle={`記事一覧 - ${pageProps.currentPage}`}
+  pageTitle={`記事一覧 - ${pageProps.currentPage}`}
+  rss={RSS_LINKS.all}
+  postList={pageProps.data}
+  previousUrl={prev}
+  nextUrl={pageProps.url.next}
+/>
