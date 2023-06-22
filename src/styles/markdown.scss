@@ -106,6 +106,7 @@
   }
 
   .remark-code-title {
+    word-break: break-word;
     @apply font-hackGen text-xs px-2.5 py-0.5 bg-slate-600 inline-block text-white leading-5 rounded-t-1;
   }
 
@@ -130,12 +131,9 @@
     @apply bg-transparent text-inherit;
   }
 
+  // top は動的にしたいので、スクリプト側で設定する
   .copy-code-button {
-    @apply font-hackGen text-white text-xs absolute top-0 right-0 py-1 px-2 opacity-0;
-  }
-
-  .remark-code-title ~ .copy-code-button {
-    @apply top-[25px];
+    @apply font-hackGen text-white text-xs absolute right-0 py-1 px-2 opacity-0;
   }
 
   .copy-code-button:focus,

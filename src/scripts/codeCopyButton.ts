@@ -26,9 +26,17 @@ const onCopy = async (ev: MouseEvent, codePre: HTMLPreElement) => {
   resetCopyButtonText(ev.target);
 };
 
-const createCopyButton = (code: HTMLPreElement): HTMLButtonElement => {
+const createCopyButton = (
+  code: HTMLPreElement,
+  codeTitleHeight?: number
+): HTMLButtonElement => {
   const button = document.createElement('button');
-  button.className = 'copy-code-button';
+  button.className = `copy-code-button`;
+  // Tailwind の動的クラスだと、うまくスタイルが当たらないため、style で付与する
+  button.setAttribute(
+    'style',
+    `top: ${codeTitleHeight ? codeTitleHeight + 1 : 1}px`
+  );
   button.type = 'button';
   button.innerText = 'Copy';
   button.addEventListener('click', (ev) => onCopy(ev, code));
@@ -41,11 +49,18 @@ const codeContainerCollection = document.querySelectorAll(
 );
 codeContainerCollection.forEach((codeContainer: HTMLDivElement) => {
   const childrenList = Array.from(codeContainer.children);
+
+  // コピーボタンの top がコードブロックタイトル要素の高さに依存するので、高さを取得
+  const codeTitle = childrenList.find(
+    (children) => children.classList.value === 'remark-code-title'
+  );
+  const codeTitleHeight = codeTitle?.clientHeight;
+
   // 子の先頭にコードブロックタイトル要素がつく場合があるので、find で pre 要素を探す
   const codePre = childrenList.find(
     (children) => children instanceof HTMLPreElement
   );
   if (codePre instanceof HTMLPreElement) {
-    codeContainer.appendChild(createCopyButton(codePre));
+    codeContainer.appendChild(createCopyButton(codePre, codeTitleHeight));
   }
 });
