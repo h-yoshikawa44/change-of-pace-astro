@@ -1,5 +1,68 @@
 ---
-import AboutPage from '@/pageComponents/about.astro';
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { ACCOUNT_LINKS } from '@/consts';
+import '@/styles/markdown.scss';
 ---
 
-<AboutPage />
+<BaseLayout title="About" description="h-yoshikawa44の簡易的なプロフィール">
+  <h2 class="mb-8 text-2xl font-600">About</h2>
+  <div class="flex items-center">
+    <img src="/my-icon.png" alt="h-yoshikawa44のアイコン" width="30%" />
+    <div class="ml-8 flex flex-col space-y-3">
+      <h3 class="text-xl">よし（h-yoshikawa44）</h3>
+      <div class="flex items-center space-x-4">
+        <a href={ACCOUNT_LINKS.github}
+          ><span class="i-logos:github-icon block text-2xl"></span></a
+        >
+        <a href={ACCOUNT_LINKS.twitter}
+          ><span class="i-logos:twitter block text-2xl"></span></a
+        >
+      </div>
+      <p>
+        Web Developer。<br />
+        ここ数年はフロントエンドメインで活動しています。 <br
+        />経歴や経験技術、資格などは<a
+          href={ACCOUNT_LINKS.portfolio}
+          class="underline underline-offset-2 decoration-solid"
+          >ポートフォリオ</a
+        >を参照。
+      </p>
+    </div>
+  </div>
+  <hr class="my-8" />
+  <!-- ここから下はマークダウンと同じスタイルを使う -->
+  <div class="markdown-content">
+    <div>
+      <h3>略歴</h3>
+      <div>
+        <p>2017/10からエンジニアをやっています。</p>
+        <p>
+          元々はバックエンド寄りの技術スタックでしたが、React の宣言的 UI
+          に触れてからフロントエンドに関心を持つようになって、フロントエンドに転向したようなやつです。<br
+          />
+          主に関心があるのは TypeScript / React / Next.js 周辺。最近は Astro とかも。
+        </p>
+      </div>
+    </div>
+    <div>
+      <h3>当ブログで書いていること</h3>
+      <div>
+        <p>
+          主に自分の関心があることについて、自分の頭の情報整理も兼ねて記事を書いています。<br
+          />
+          なので、React / Next.js 周りが割と多い傾向ですね。<br />
+          誰かの役に立てばいいなと思いつつ、起点は自分のために書いているので、マイペースに投稿中（1年で12記事程度）
+        </p>
+        <p>
+          技術記事の他に、技術関連ツール・サービスや資格試験レポート。技術イベントの資料リンク集、たまに雑談ネタなども投稿しています。<br
+          />
+          それと自分が精神疾患と付き合いながら生きているので、体調のことも書くことがあります（ここは好みが分かれるかも）
+        </p>
+        <p>
+          全記事の RSS に加え、記事カテゴリごとの RSS
+          も提供しているので、お好みに合わせてご活用ください。
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>
