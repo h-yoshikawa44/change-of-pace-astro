@@ -1,10 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
 import type { GetStaticPathsOptions, Page } from 'astro';
+import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
-import { CATEGORY_LIST, CATEGORY_MAP } from '@/consts';
+import PostPagingList from '@/features/post/PostPagingList.astro';
+import { CATEGORY_LIST, CATEGORY_MAP, RSS_LINKS } from '@/consts';
 import { extractPostSlug } from '@/utils/extractPostSlug';
-import CategoryPage from '@/pageComponents/[category]/[page].astro';
 
 type Params = {
   category: keyof typeof CATEGORY_MAP;
@@ -36,4 +36,11 @@ const { page: pageProps } = Astro.props;
 const { category } = Astro.params as Params;
 ---
 
-<CategoryPage category={category} page={pageProps} />
+<PostPagingList
+  headTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${pageProps.currentPage}`}
+  pageTitle={`${CATEGORY_MAP[category]} 記事一覧 - ${pageProps.currentPage}`}
+  rss={RSS_LINKS[category]}
+  postList={pageProps.data}
+  previousUrl={pageProps.url.prev}
+  nextUrl={pageProps.url.next}
+/>
