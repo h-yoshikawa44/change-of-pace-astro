@@ -1,0 +1,1282 @@
+---
+title: "React × LaravelでReact Queryの練習がてら、ログイン機能を作ってみた"
+description: "React Queryを使ったログイン画面を実装した例"
+pubDate: "2021-03-21"
+updatedDate: "2023-06-22"
+category: "develop"
+tags: ["TypeScript", "React", "React Query", "PHP", "Laravel"]
+---
+
+React の状態管理ライブラリと言うと Redux や Recoil がメジャーなイメージでしょうか。
+少し前から React Query なるものが便利らしいぞと見聞きしたので使ってみたのを、せっかくなので記事にしてみました。
+
+import OG from "@/components/OG.astro"
+
+※2023/06/22 各種リンクの URL を tanstack.com をベースに更新しました。
+
+## React Query とは？
+<OG url="https://tanstack.com/query/v3" />
+
+ものすごくざっくりいうと、React アプリで使用するデータの取得、更新。そのデータ管理まで一気にやってくれるライブラリといった感じです。
+
+データの取得や更新の方法はこちらで指定する必要がありますが、実体のデータを Promise で返す関数なら何でも使えます。
+なので、fetch でも ky でも axios でも OK。
+
+キャッシュ機能が統合されており、取得したデータは指定したクエリキーと紐づけて管理されます。
+このキャッシュされたデータは、どのコンポーネントからもアクセス可能です。
+キャッシュの有効時間が過ぎると、バックグラウンドでデータの再取得が自動で行われるようになっています。
+（その分、API リクエスト等が増えるということでもあるので、導入するアプリに応じてオプションで調整した方がいいです）
+
+それと個人的に特にいいなと思った部分として、データ取得、更新の状態を返してくれます。
+データ取得中なのか、成功したのか、エラーになったのかといったあたり。
+この状態を使って、読み込み中やエラーの時の UI に切り替えるということも、楽にできるようになっています。
+
+### 使用例
+React Query を使えるようにするには、まず最初に`QueryClient`を作成。
+アプリを`QueryClientProvider`で囲み、そこに作成したクライアントを渡すようにします。
+こうすることで、この配下のコンポーネントで React Query の機能が使えるようになります。
+
+React Query が提供するフックはいろいろあるのですが、基本となるものとしては以下の2つです。
+- データ取得：useQuery
+- データ更新：useMutation
+
+### useQuery
+<OG url="https://tanstack.com/query/v3/docs/react/reference/useQuery" />
+
+公式の例
+<OG url="https://codesandbox.io/s/github/tanstack/query/tree/v3/examples/simple" />
+
+```jsx
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from "react";
+import ReactDOM from "react-dom";
+import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient();
+
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  );
+}
+
+function Example() {
+  const { isLoading, error, data, isFetching } = useQuery("repoData", () =>
+    fetch(
+      "https://api.github.com/repos/tannerlinsley/react-query"
+    ).then((res) => res.json())
+  );
+
+  if (isLoading) return "Loading...";
+
+  if (error) return "An error has occurred: " + error.message;
+
+  return (
+    <div>
+      <h1>{data.name}</h1>
+      <p>{data.description}</p>
+      <strong>👀 {data.subscribers_count}</strong>{" "}
+      <strong>✨ {data.stargazers_count}</strong>{" "}
+      <strong>🍴 {data.forks_count}</strong>
+      <div>{isFetching ? "Updating..." : ""}</div>
+      <ReactQueryDevtools initialIsOpen />
+    </div>
+  );
+}
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
+```
+`useQuery`に対して、以下を渡しています。
+- 第1引数：クエリキー
+- 第2引数：データ取得の関数
+
+クエリキーには配列の指定もできます。データ取得の関数により取得されたデータは、このクエリキーと紐づけて管理されます。
+また、第3引数にオプションのオブジェクトを渡して、成功時や失敗時の処理を書いたりとカスタマイズすることも出来たりします。
+
+### useMutation
+<OG url="https://tanstack.com/query/v3/docs/react/reference/useMutation" />
+
+公式の例（`useQuery`と`useMutation`）　※2023/06/22時点では TypeScript になっていました
+<OG url="https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript" />
+```jsx
+import React from 'react'
+import axios from 'axios'
+import {
+  useQuery,
+  useQueryClient,
+  useMutation,
+  QueryClient,
+  QueryClientProvider,
+} from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+const queryClient = new QueryClient()
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  )
+}
+function Example() {
+  const queryClient = useQueryClient()
+  const [text, setText] = React.useState('')
+  const { status, data, error, isFetching } = useQuery('todos', async () => {
+    const res = await axios.get('/api/data')
+    return res.data
+  })
+  const addTodoMutation = useMutation(
+    text => axios.post('/api/data', { text }),
+    {
+      // Optimistically update the cache value on mutate, but store
+      // the old value and return it so that it's accessible in case of
+      // an error
+      onMutate: async text => {
+        setText('')
+        await queryClient.cancelQueries('todos')
+        const previousValue = queryClient.getQueryData('todos')
+        queryClient.setQueryData('todos', old => ({
+          ...old,
+          items: [...old.items, text],
+        }))
+        return previousValue
+      },
+      // On failure, roll back to the previous value
+      onError: (err, variables, previousValue) =>
+        queryClient.setQueryData('todos', previousValue),
+      // After success or failure, refetch the todos query
+      onSuccess: () => {
+        queryClient.invalidateQueries('todos')
+      },
+    }
+  )
+  return (
+    <div>
+      <p>
+        In this example, new items can be created using a mutation. The new item
+        will be optimistically added to the list in hopes that the server
+        accepts the item. If it does, the list is refetched with the true items
+        from the list. Every now and then, the mutation may fail though. When
+        that happens, the previous list of items is restored and the list is
+        again refetched from the server.
+      </p>
+      <form
+        onSubmit={e => {
+          e.preventDefault()
+          addTodoMutation.mutate(text)
+        }}
+      >
+        <input
+          type="text"
+          onChange={event => setText(event.target.value)}
+          value={text}
+        />
+        <button>{addTodoMutation.isLoading ? 'Creating...' : 'Create'}</button>
+      </form>
+      <br />
+      {status === 'loading' ? (
+        'Loading...'
+      ) : status === 'error' ? (
+        error.message
+      ) : (
+        <>
+          <div>Updated At: {new Date(data.ts).toLocaleTimeString()}</div>
+          <ul>
+            {data.items.map(datum => (
+              <li key={datum}>{datum}</li>
+            ))}
+          </ul>
+          <div>{isFetching ? 'Updating in background...' : ' '}</div>
+        </>
+      )}
+      <ReactQueryDevtools initialIsOpen />
+    </div>
+  )
+}
+```
+`useMutation`に対して、以下を渡しています。
+- 第1引数：データ更新の関数
+- 第2引数：オプションのオブジェクト
+
+この第1引数に指定した関数は、`useMutation`が呼ばれただけでは実行されません。
+`useMutation`の返り値の中に、この関数を実行するトリガー関数（mutate）が含まれており、それを使うことで初めて実行されるようになっています。
+上記の例だと`addTodoMutation.mutate(text)`の部分です。
+トリガー関数に渡した引数が、そのままデータ更新の関数に渡されます。
+
+上記の例で使われているオプションをさらっと説明すると、こんな感じです。
+- onMutate：データ更新の関数が実行される前に、先に実行される処理（前処理を書く）
+- onError：エラー発生時に実行される処理
+- onSuccess：成功時に実行される処理
+
+成功時、エラー時ともに実行される onSettled というものもあります。
+
+また、onSuccess、onError、onSettled に関しては、`useMutation`だけでなく、トリガー関数のオプション引数としても渡すことができます。
+どちらにも同名のオプションを渡している場合は、`useMutation`に渡した方が先に実行されます。
+
+---
+
+ちなみに`ReactQueryDevtools`は開発支援の DevTools です。
+キャッシュの状態などがわかるので、いれておくとよいです。
+
+詳細については公式ドキュメントをご確認ください。
+
+## 今回作ってみたもの
+勉強用の個人開発でログイン画面を作りました。
+React（Laravel Mix）× Laravel による SPA × API 構成です。
+
+<img src="/gifs/2021/laravel-react-query-auth/email-login.gif" width="100%" alt="ログイン画面でログインする流れのGIF" />
+
+メールアドレスとパスワードでログインのスタンダードなタイプ。
+後々、ソーシャルログインとゲストログインにしたいということもあり、今回メール認証は特にやっていません。
+
+また、API の認証方式については Cookie を使ったステートフルなものになります。
+
+実装にあたっていろんな文献を参考にさせていただいたのですが、以下の2つは特にお世話になりました。
+
+※連載記事
+<OG url="https://www.hypertextcandy.com/vue-laravel-tutorial-introduction" />
+※書籍
+<OG url="https://github.com/oukayuka/Riakuto-StartingReact-ja3.1" />
+
+それと各種ライブラリの公式ドキュメントも。
+
+## 前提
+今回使用した各種バージョンは以下のとおりです。
+
+基本部分.
+- Node.js：14.2.0
+- TypeScript：4.1.3
+- React：16.14.0
+- PHP：7.4.14
+- Laravel：6.20.9
+
+ライブラリ.
+- Material UI
+  - core：4.11.3
+  - lab：4.0.0-alpha.57
+- axios：0.21.1
+- react-router-dom：5.2.0
+- react-query：3.12.1
+
+以下のセットアップはすでにすんでいるものとして進めます。
+- マイグレーション実行
+- Laravel UI で React の導入
+- TypeScript のセットアップ
+- ライブラリインストール
+
+## ディレクトリ構成
+Laravel 側は特に変わったことをしてないので、React 側だけ記載します。
+
+Laravel プロジェクトの resources/ts 配下.
+```
+├ components
+│   ├ molecules
+│   │   └ LoginAlert.tsx
+│   ├ organisms
+│   │   └ Header.tsx
+│   ├ pages
+│   │   ├ Loding.tsx
+│   │   ├ Login.tsx
+│   │   └ Memo.tsx
+├ constants
+│   └ statusCode.ts
+├ containers
+│   ├ organisms
+│   │   └ Header.tsx
+│   ├ pages
+│   │   ├ Login.tsx
+│   │   └ Memo.tsx
+├ hooks
+│   ├ auth
+│   │   ├ index.ts
+│   │   ├ useLogin.ts
+│   │   └ useLogout.ts
+│   ├ user
+│   │   ├ index.ts
+│   │   ├ useCurrentUser.ts
+│   │   └ useGetUserQuery.ts
+├ models
+│   └ User.ts
+├ app.tsx
+└ bootstrap.js
+```
+
+以降、今回の実装のコードを記載していますが、だいぶ長くなりました...🙄
+GitHub で見たいという方は、こちらのリポジトリにタグをつけてあります。
+<OG url="https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Flaravel-react-query-auth" />
+
+※2021/09/13追記 関数コンポーネントの型定義に FC ばっかり使ってますが、FC から children がなくなるまでは VFC を使った方がいいです...。
+
+## API（Laravel）側
+※今回、ユーザ新規登録の部分は記載していません。
+Laravel に元々備わっているものを使って API を作るなり、tinker でユーザを作っておくなりでご対応ください。
+
+### ルーティング
+画面の振り分けは React 側で行うので、Laravel 側では全てのリクエストを受けるようにします。
+
+```php:routes/web.php
+Route::get('/{any?}', fn() => view('index'))->where('any', '.+');
+```
+
+※2021/05/19 追記
+全受けにすると、API ルートで where 制約をかけた際に予期しない動作を引き起こすので api プレフィックスは除外しておいた方がいいです。
+（制約外のパスパラメータでアクセスすると404のはずなのに、このルートに来て200になってしまうので）
+
+```php:routes/web.php
+Route::get('/{any?}', fn() => view('index'))->where('any', '(?!api).+');
+```
+
+### API ルートで使用するミドルウェアグループの変更
+今回は Cookie を使った認証にしていきます。
+下記のとおり、それに必要なミドルウェアは web のミドルウェアグループに含まれています。
+
+```php:app/Http/Kernel.php
+protected $middlewareGroups = [
+    'web' => [
+        \App\Http\Middleware\EncryptCookies::class,
+        \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+        \Illuminate\Session\Middleware\StartSession::class,
+        // \Illuminate\Session\Middleware\AuthenticateSession::class,
+        \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+        \App\Http\Middleware\VerifyCsrfToken::class,
+        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+    ],
+
+    'api' => [
+        'throttle:60,1',
+        \Illuminate\Routing\Middleware\SubstituteBindings::class,
+    ],
+];
+```
+それを API でも使うように思い切って変えました。
+
+```php:app/Providers/RouteServiceProvider.php
+    protected function mapApiRoutes()
+    {
+        // Webミドルウェアグループの機能を使いたいのでwebへ
+        Route::prefix('api')
+             ->middleware('web')
+             ->namespace($this->namespace)
+             ->group(base_path('routes/api.php'));
+    }
+```
+なんか抵抗があるという場合は、ステートフルな API 用のミドルウェアグループを新たに作って、それを割り当てるのも手です。
+
+#### CSRF 対策について
+この web のミドルウェアグループには CSRF 対策の機能を持つ、`\App\Http\Middleware\VerifyCsrfToken::class`も含まれています。
+なので、リクエストの際には CSRF トークンを送らないとはじかれます。
+<OG url="https://readouble.com/laravel/6.x/ja/csrf.html" />
+
+今回の場合、SPA 側からのリクエストには axios を使用するので、リクエストヘッダに`X-XSRF-TOKEN`をつけて送る必要があります。
+ただ、このあたりの設定に関して特にやることはありません。
+
+`\App\Http\Middleware\VerifyCsrfToken::class`で以下の設定があり、レスポンスヘッダの`Set-Cookie`に`XSRF-TOKEN`を設定してくれています。
+```php
+/**
+ * Indicates whether the XSRF-TOKEN cookie should be set on the response.
+ *
+ * @var bool
+ */
+protected $addHttpCookie = true;
+```
+そして、axios は Cookie に`XSRF-TOKEN`があると、自動で`X-XSRF-TOKEN`にセットして送ってくれるようになっているためです。
+
+### ログイン API
+Laravel が元々備えている機能を拡張して使用。
+
+`LoginController`で使用されている`AuthenticatesUsers`トレイトに認証に関するメソッドが定義されています。
+そこにログイン API のレスポンスカスタマイズ用のメソッドとして`authenticated`があります。
+これを使用して、ログイン時はログインしたユーザ情報を返すように。
+
+```php:app/Http/Controllers/Auth/LoginController.php
+/**
+ * ログインAPI レスポンスカスタマイズ用メソッド
+ *
+ * @param Illuminate\Http\Request $request
+ * @param \App\User $user
+ * @return \App\User
+ */
+protected function authenticated(Request $request, $user)
+{
+    return $user;
+}
+```
+
+API のルートに追加。
+
+```php:routes/api.php
+Route::post('/login', 'Auth\LoginController@login')->name('login');
+```
+
+### ログアウト API
+ログイン API と同様に作成。
+
+こちらは`loggedOut`メソッドがレスポンスカスタマイズ用のメソッドになります。
+
+※2021/04/13 追記
+レスポンスは`response(null, 204)`で204を返した方がいいやもしれません。
+※2021/04/27 追記
+セッション再生成処理は、大元のログアウト処理の中ですでに行われているので不要です。
+
+```php:app/Http/Controllers/Auth/LoginController.php
+/**
+ * ログアウトAPI レスポンスカスタマイズ用メソッド
+ *
+ * @param Illuminate\Http\Request $request
+ * @return \Illuminate\Http\JsonResponse
+ */
+protected function loggedOut(Request $request)
+{
+    // セッションを再生成する
+    $request->session()->regenerate();
+
+    return response()->json();
+}
+```
+
+API のルートに追加。
+
+```php:routes/api.php
+Route::post('/logout', 'Auth\LoginController@logout')->name('logout');
+```
+
+### ログインユーザ取得 API
+新しくコントローラーを作って定義します。
+この API は認証をかけたかったので、auth ミドルウェアを使用。
+
+```php:app/Http/Controllers/UserController.php
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
+class UserController extends Controller
+{
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    /**
+     * 現在ログインしているユーザ情報取得
+     *
+     * @return \App\User|null
+     */
+    public function show()
+    {
+        return Auth::user();
+    }
+}
+
+```
+
+API のルートに追加。
+
+```php:routes/api.php
+Route::get('/users/me', 'UserController@show')->name('user');
+```
+
+User モデルのレスポンスのプロパティを変更。
+
+```php:app/User.php
+/**
+ * The attributes that should be visible for arrays.
+ *
+ * @var array
+ */
+protected $visible = [
+    'name',
+];
+```
+元々は`$hidden`で書いてあるのですが、今回の場合は React 側で一旦 name しか使わないので、`$visible`で name のみ返すようにしています。
+
+### ログイン済みの時に、非ログイン時にしかアクセスできない機能にアクセスした時のリダイレクト設定
+元々は`RouteServiceProvider::HOME`へリダイレクトするようになっています。
+ただ、それだと HTML が返ってきてしまい SPA 的には不都合なので、ログインユーザ取得 API に変えておきます。
+
+```php:app/Http/Middleware/RedirectIfAuthenticated.php
+/**
+ * Handle an incoming request.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @param  \Closure  $next
+ * @param  string|null  $guard
+ * @return mixed
+ */
+public function handle($request, Closure $next, $guard = null)
+{
+    if (Auth::guard($guard)->check()) {
+        return redirect()->route('user');
+    }
+
+    return $next($request);
+}
+```
+
+## SPA（React）側
+`bootstrap.js`は特に変更していないので割愛。
+
+### アプリ初期化 + ルーティング
+1ファイルの中でやってるので長いですが、こんな感じです。
+
+```tsx:resources/ts/app.tsx
+import React, { FC } from 'react';
+import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import { QueryClient, QueryClientProvider, useQueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import Login from './containers/pages/Login';
+import Memo from './containers/pages/Memo';
+import Loding from './components/pages/Loding';
+import { useGetUserQuery, useCurrentUser } from './hooks/user';
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes React and other helpers. It's a great starting point while
+ * building robust, powerful web applications using React + Laravel.
+ */
+require('./bootstrap');
+
+/**
+ * Next, we will create a fresh React component instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+// require('./components/Example');
+
+const client = new QueryClient();
+
+type Props = {
+  exact?: boolean;
+  path: string;
+  children: React.ReactNode;
+};
+
+const UnAuthRoute: FC<Props> = ({ exact = false, path, children }) => {
+  const user = useCurrentUser();
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={() => (user ? <Redirect to={{ pathname: '/' }} /> : children)}
+    />
+  );
+};
+
+const AuthRoute: FC<Props> = ({ exact = false, path, children }) => {
+  const user = useCurrentUser();
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={({ location }) =>
+        user ? (
+          children
+        ) : (
+          <Redirect to={{ pathname: '/login', state: { from: location } }} />
+        )
+      }
+    />
+  );
+};
+
+const App: FC = () => {
+  const queryClient = useQueryClient();
+  const { isLoading } = useGetUserQuery({
+    retry: 0,
+    initialData: undefined,
+    onError: () => {
+      queryClient.setQueryData('user', null);
+    },
+  });
+
+  if (isLoading) {
+    return <Loding />;
+  }
+
+  return (
+    <Switch>
+      <UnAuthRoute exact path="/login">
+        <Login />
+      </UnAuthRoute>
+      <AuthRoute exact path="/">
+        <Memo />
+      </AuthRoute>
+    </Switch>
+  );
+};
+
+if (document.getElementById('app')) {
+  ReactDOM.render(
+    <Router>
+      <QueryClientProvider client={client}>
+        <CssBaseline />
+        <App />
+        {process.env.NODE_ENV === 'development' && (
+          <ReactQueryDevtools initialIsOpen={false} />
+        )}
+      </QueryClientProvider>
+    </Router>,
+    document.getElementById('app')
+  );
+}
+```
+
+#### React Query のセットアップ
+冒頭に書いた通り、まず`QueryClient`を作成。
+アプリを`QueryClientProvider`で囲み、そこに作成したクライアントを渡します。
+
+```tsx
+const client = new QueryClient();
+```
+
+```tsx
+if (document.getElementById('app')) {
+  ReactDOM.render(
+    <Router>
+      <QueryClientProvider client={client}>
+        <CssBaseline />
+        <App />
+        {process.env.NODE_ENV === 'development' && (
+          <ReactQueryDevtools initialIsOpen={false} />
+        )}
+      </QueryClientProvider>
+    </Router>,
+    document.getElementById('app')
+  );
+}
+```
+
+#### ログインユーザ情報の保持
+まず最初にログインユーザを取得する処理を入れることで、永続化っぽいことをしています。
+この`useGetUserQuery`フックは`useQuery`をラップしたカスタムフックで、ログインユーザ情報が取得できた時は user キーの中へセットするようにしてあります（後述）
+
+逆にログインユーザが取得できなかった場合は`null`をセット。
+なお、最初の1回だけでいいので、リトライ回数は0に。
+
+`isLoading`を取得して、取得中の時は簡単なローディング画面を表示するようにしています。
+```tsx
+const App: FC = () => {
+  const queryClient = useQueryClient();
+  const { isLoading } = useGetUserQuery({
+    retry: 0,
+    initialData: undefined,
+    onError: () => {
+      queryClient.setQueryData('user', null);
+    },
+  });
+
+  if (isLoading) {
+    return <Loding />;
+  }
+
+  return (
+    <Switch>
+      <UnAuthRoute exact path="/login">
+        <Login />
+      </UnAuthRoute>
+      <AuthRoute exact path="/">
+        <Memo />
+      </AuthRoute>
+    </Switch>
+  );
+};
+```
+
+#### 認証ルートと非認証ルート
+React Router が持っている`Route`コンポーネントをラップしたコンポーネントをそれぞれ作成。
+この実装は React Router 公式の例を参考にしました。
+<OG url="https://v5.reactrouter.com/web/example/auth-workflow" />
+
+`useCurrentUser`フックは、キャッシュからログインユーザ情報を取得するカスタムフックです（後述）
+ログインユーザ情報の有無でリダイレクトするようにしています。
+
+認証ルートの方でリダイレクト時に location を state にセットしているのは、フレンドリーフォワーディングのためです。
+
+```tsx
+type Props = {
+  exact?: boolean;
+  path: string;
+  children: React.ReactNode;
+};
+
+const UnAuthRoute: FC<Props> = ({ exact = false, path, children }) => {
+  const user = useCurrentUser();
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={() => (user ? <Redirect to={{ pathname: '/' }} /> : children)}
+    />
+  );
+};
+
+const AuthRoute: FC<Props> = ({ exact = false, path, children }) => {
+  const user = useCurrentUser();
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={({ location }) =>
+        user ? (
+          children
+        ) : (
+          <Redirect to={{ pathname: '/login', state: { from: location } }} />
+        )
+      }
+    />
+  );
+};
+```
+
+### ローディング画面
+#### Presentational Component
+
+画面中央にスピナーを出すだけのシンプルな画面です。
+
+```tsx:resources/ts/components/pages/Loding.tsx
+import React, { FC } from 'react';
+import Box from '@material-ui/core/Box';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Container from '@material-ui/core/Container';
+
+const Loding: FC = () => (
+  <Container maxWidth="xs">
+    <Box
+      width={1}
+      height="100vh"
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+    >
+      <CircularProgress color="inherit" />
+    </Box>
+  </Container>
+);
+
+export default Loding;
+```
+
+### ヘッダー
+#### Container Component
+`useLogout`フックは`useMutation`をラップしたカスタムフックです（後述）
+ログアウト処理を行う関数を実行するトリガー関数を受け取り、ログアウトボタン押下時の関数の中で実行しています。
+ログアウト処理が成功した場合はログイン画面へリダイレクトするようにしています。
+
+```tsx:resources/ts/containers/organisms/Header.tsx
+import React, { FC, useCallback } from 'react';
+import { useHistory } from 'react-router-dom';
+import Header from '../../components/organisms/Header';
+import { useLogout } from '../../hooks/auth';
+import { useCurrentUser } from '../../hooks/user';
+
+const EnhancedHeader: FC = () => {
+  const user = useCurrentUser();
+
+  const history = useHistory();
+  const { mutate } = useLogout();
+
+  const handleLogout = useCallback(() => {
+    mutate(undefined, {
+      onSuccess: () => {
+        history.push('/login');
+      },
+    });
+  }, [history, mutate]);
+
+  return <Header userName={user?.name} handleLogout={handleLogout} />;
+};
+
+export default EnhancedHeader;
+```
+
+#### Presentational Component
+ヘッダーにユーザ名表示とログアウトボタンを置くというと、メニューにすることが多いと思われますが、今回は横に並べて配置にしています。
+
+```tsx:resources/ts/components/organisms/Header.tsx
+import React, { FC } from 'react';
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import useTheme from '@material-ui/core/styles/useTheme';
+
+type Props = {
+  userName?: string;
+  handleLogout: VoidFunction;
+};
+
+const Header: FC<Props> = ({ userName, handleLogout }) => {
+  const theme = useTheme();
+  return (
+    <>
+      <AppBar
+        position="sticky"
+        style={{
+          color: theme.palette.text.primary,
+          backgroundColor: 'white',
+        }}
+      >
+        <Toolbar>
+          <Typography
+            component="h1"
+            variant="h6"
+            style={{ flexGrow: 1 }}
+            align="center"
+          >
+            OOUI-MEMO
+          </Typography>
+          {userName && (
+            <>
+              <Typography>{userName}</Typography>
+              <Button type="button" onClick={handleLogout}>
+                ログアウト
+              </Button>
+            </>
+          )}
+        </Toolbar>
+      </AppBar>
+    </>
+  );
+};
+
+export default Header;
+```
+
+### ログインアラート表示
+#### 定数
+Laravel から返されるステータスコードを定数で定義しています。
+とりあえずこの2つだけ。
+
+```ts:resources/ts/constants/statusCode.ts
+// バリデーションエラー
+export const UNPROCESSABLE_ENTITY = 422;
+
+// サーバエラー
+export const INTERNAL_SERVER_ERROR = 500;
+```
+
+#### Presentational Component
+ログイン画面において、ログイン失敗時に表示するアラートのコンポーネント。
+
+```tsx:resources/ts/components/molecules/LoginAlert.tsx
+import React, { FC } from 'react';
+import Alert from '@material-ui/lab/Alert';
+import AlertTitle from '@material-ui/lab/AlertTitle';
+import {
+  UNPROCESSABLE_ENTITY,
+  INTERNAL_SERVER_ERROR,
+} from '../../constants/statusCode';
+
+type Props = {
+  statusCode: number;
+};
+
+const LoginAlert: FC<Props> = ({ statusCode }) => (
+  <>
+    {statusCode === UNPROCESSABLE_ENTITY && (
+      <Alert severity="error">
+        <AlertTitle>認証失敗</AlertTitle>
+        入力した情報に誤りがないかご確認ください。
+      </Alert>
+    )}
+    {statusCode === INTERNAL_SERVER_ERROR && (
+      <Alert severity="error">
+        <AlertTitle>サーバエラー</AlertTitle>
+        予期しないエラーが発生しました。恐れ入りますが時間をおいて再度お試しください。
+      </Alert>
+    )}
+  </>
+);
+
+export default LoginAlert;
+```
+ちなみにこういうやつです。
+<img src="/screenshots/2021/laravel-react-query-auth/login-alert.png" width="40%" alt="ログイン画面でのアラート表示画像" />
+
+### ログイン画面
+#### Container Component
+`useLogin`フックは`useMutation`をラップしたカスタムフックです（後述）
+ログイン処理を行う関数を実行するトリガー関数を受け取り、ログインボタン押下時の関数の中で実行しています。
+
+フレンドリーフォワーディングにするため、location.state にセットされたものがあれば、ログイン時にその URL へリダイレクトするようにしています。
+
+※2021/05/31 追記
+from の型を string にしてしまっていますが、正しくは`history`の`Location`ですね...。
+
+```tsx:resources/ts/containers/pages/Login.tsx
+import React, { FC, useState, useCallback } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
+import Login from '../../components/pages/Login';
+import { useLogin } from '../../hooks/auth';
+
+const EnhancedLogin: FC = () => {
+  const history = useHistory();
+  const location = useLocation();
+  const { from } = (location.state as { from: string }) || {
+    from: { pathname: '/' },
+  };
+
+  const { error, isLoading, mutate } = useLogin();
+  const statusCode = error?.response?.status;
+
+  const [email, setEmail] = useState('');
+  const [password, serPassword] = useState('');
+
+  const handleChangeEmail = useCallback(
+    (ev: React.ChangeEvent<HTMLInputElement>) => {
+      setEmail(ev.target.value);
+    },
+    []
+  );
+
+  const handleChangePassword = useCallback(
+    (ev: React.ChangeEvent<HTMLInputElement>) => {
+      serPassword(ev.target.value);
+    },
+    []
+  );
+
+  const handleLogin = useCallback(
+    (ev: React.FormEvent<HTMLFormElement>) => {
+      ev.preventDefault();
+      if (!email || !password) {
+        return;
+      }
+      mutate(
+        { email, password },
+        {
+          onSuccess: () => {
+            history.replace(from);
+          },
+        }
+      );
+    },
+    [email, password, history, from, mutate]
+  );
+
+  return (
+    <Login
+      email={email}
+      password={password}
+      handleChangeEmail={handleChangeEmail}
+      handleChangePassword={handleChangePassword}
+      statusCode={statusCode}
+      isLoading={isLoading}
+      handleLogin={handleLogin}
+    />
+  );
+};
+
+export default EnhancedLogin;
+```
+
+#### Presentational Component
+ログイン実行中に再度ボタンを押されないようにするため、`isLoading`を使って、実行中は`Backdrop`を表示するようにしています。
+（暗転してスピナークルクル表示の部分）
+
+```tsx:resources/ts/components/pages/Login.tsx
+import React, { FC } from 'react';
+import Backdrop from '@material-ui/core/Backdrop';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Container from '@material-ui/core/Container';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import TextField from '@material-ui/core/TextField';
+import useTheme from '@material-ui/core/styles/useTheme';
+import Header from '../../containers/organisms/Header';
+import LoginAlert from '../molecules/LoginAlert';
+
+type Props = {
+  email: string;
+  password: string;
+  handleChangeEmail: (ev: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChangePassword: (ev: React.ChangeEvent<HTMLInputElement>) => void;
+  statusCode?: number;
+  isLoading: boolean;
+  handleLogin: (ev: React.FormEvent<HTMLFormElement>) => void;
+};
+
+const Login: FC<Props> = ({
+  email,
+  password,
+  handleChangeEmail,
+  handleChangePassword,
+  statusCode,
+  isLoading,
+  handleLogin,
+}) => {
+  const theme = useTheme();
+  return (
+    <>
+      <Header />
+      <Container maxWidth="xs">
+        <Card style={{ margin: `${theme.spacing(6)}px 0` }}>
+          <CardHeader title="login" style={{ textAlign: 'center' }} />
+          <CardContent>
+            <form onSubmit={handleLogin}>
+              <Box
+                p={2}
+                display="flex"
+                flexDirection="column"
+                alignItems="center"
+              >
+                {statusCode && <LoginAlert statusCode={statusCode} />}
+                <TextField
+                  label="メールアドレス"
+                  variant="outlined"
+                  fullWidth
+                  value={email}
+                  margin="normal"
+                  required
+                  autoComplete="email"
+                  autoFocus
+                  onChange={handleChangeEmail}
+                />
+                <TextField
+                  type="password"
+                  label="パスワード"
+                  variant="outlined"
+                  fullWidth
+                  value={password}
+                  margin="normal"
+                  required
+                  autoComplete="current-password"
+                  onChange={handleChangePassword}
+                />
+                <Box my={2}>
+                  <Button type="submit" color="primary" variant="contained">
+                    ログイン
+                  </Button>
+                </Box>
+              </Box>
+            </form>
+          </CardContent>
+        </Card>
+      </Container>
+      <Backdrop style={{ zIndex: theme.zIndex.drawer + 1 }} open={isLoading}>
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    </>
+  );
+};
+
+export default Login;
+```
+
+### メモ（アプリホーム）画面
+#### Container Component
+まだ未実装なので特に処理はないです。
+
+```tsx:resources/ts/containers/pages/Memo.tsx
+import React, { FC } from 'react';
+import Memo from '../../components/pages/Memo';
+
+const EnhancedMemo: FC = () => <Memo />;
+
+export default EnhancedMemo;
+```
+
+#### Presentational Component
+アプリのホーム画面になるわけですが、まだ未実装なので、とりあえず Memo とだけ表示するようにしています。
+
+```tsx:resources/ts/components/pages/Memo.tsx
+import React, { FC } from 'react';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Header from '../../containers/organisms/Header';
+
+const Memo: FC = () => (
+  <>
+    <Header />
+    <Container>
+      <Box m={4}>Memo</Box>
+    </Container>
+  </>
+);
+
+export default Memo;
+```
+
+### User モデル定義
+name だけのシンプルな型定義です。
+
+```ts:resources/ts/models/User.ts
+export type User = {
+  name: string;
+};
+```
+
+### 認証に関するカスタムフック
+#### useLogin
+`useMutation`をラップした、ログイン処理を行うためのカスタムフック。
+成功時は、返却されたログインユーザ情報を user キーにセット。
+
+```ts:resources/ts/hooks/auth/useLogin.ts
+import { useQueryClient, UseMutationResult, useMutation } from 'react-query';
+import axios, { AxiosError } from 'axios';
+import { User } from '../../models/User';
+
+type FormData = {
+  email: string;
+  password: string;
+};
+
+const login = async (formData: FormData): Promise<User> => {
+  const { data } = await axios.post('/api/login', formData);
+  return data;
+};
+
+const useLogin = (): UseMutationResult<
+  User,
+  AxiosError,
+  FormData,
+  undefined
+> => {
+  const queryClient = useQueryClient();
+
+  return useMutation(login, {
+    onSuccess: (data) => {
+      queryClient.setQueryData('user', data);
+    },
+  });
+};
+
+export default useLogin;
+```
+
+#### useLogout
+`useMutation`をラップした、ログアウト処理を行うためのカスタムフック。
+成功時は、user キーのキャッシュをリセット。
+
+※2021/04/13 追記
+ログアウト API のレスポンスで何も返さない場合は、logout 関数でも何も返さず void 型にした方がいいかもです。
+
+```ts:resources/ts/hooks/auth/useLogout.ts
+import { useQueryClient, UseMutationResult, useMutation } from 'react-query';
+import axios, { AxiosError } from 'axios';
+
+const logout = async (): Promise<[]> => {
+  const { data } = await axios.post('/api/logout');
+  return data;
+};
+
+const useLogout = (): UseMutationResult<[], AxiosError, void, undefined> => {
+  const queryClient = useQueryClient();
+
+  return useMutation(logout, {
+    onSuccess: () => {
+      queryClient.resetQueries('user');
+    },
+  });
+};
+
+export default useLogout;
+```
+
+#### 名前付きエクスポート
+使いやすいように、再度エクスポートしてます。
+
+```ts:resources/ts/hooks/auth/index.ts
+export { default as useLogin } from './useLogin';
+export { default as useLogout } from './useLogout';
+```
+
+### ユーザに関するカスタムフック
+#### useGetUserQuery
+`useQuery`をラップした、ログインユーザ情報取得処理を行うカスタムフック。
+
+※2021/04/13 追記
+useGetUserQuery の返り値の型は UseQueryResult ですね...（中身的には一緒だったりするんですが）
+
+```ts:resources/ts/hooks/user/useGetUserQuery.ts
+import { QueryObserverResult, useQuery, UseQueryOptions } from 'react-query';
+import axios, { AxiosError } from 'axios';
+import { User } from '../../models/User';
+
+const getLoginUser = async (): Promise<User> => {
+  const { data } = await axios.get('/api/users/me');
+  return data;
+};
+
+const useGetUserQuery = <TData = User>(
+  options?: UseQueryOptions<User, AxiosError, TData>
+): QueryObserverResult<TData, AxiosError> =>
+  useQuery('user', getLoginUser, options);
+
+export default useGetUserQuery;
+```
+
+#### useCurrentUser
+キャッシュからログインユーザ情報を取得するカスタムフック。
+いろんなところで使用するのでカスタムフック化してます。
+
+```ts:resources/ts/hooks/user/useCurrentUser.ts
+import { useQueryClient } from 'react-query';
+import { User } from '../../models/User';
+
+// ログイン：User  非ログイン時：null  デフォルト：undefined
+const useCurrentUser = (): User | null | undefined => {
+  const queryClient = useQueryClient();
+  return queryClient.getQueryData('user');
+};
+
+export default useCurrentUser;
+```
+
+#### 名前付きエクスポート
+使いやすいように、再度エクスポートしてます。
+改行してるのは、なんとなく API リクエストとそれ以外とでわかりやすくしたかったので。
+
+```ts:resources/ts/hooks/auth/index.ts
+export { default as useGetUserQuery } from './useGetUserQuery';
+
+export { default as useCurrentUser } from './useCurrentUser';
+```
+
+---
+ものすごく長くなってしまいましたが、今回はこんな感じで実装してみました。
+
+特に React 側に関しては、なるべくきれいに書けるようになりたいという思いもあり、[りあクト！](https://github.com/oukayuka/Riakuto-StartingReact-ja3.1)のコードを参考にしながら、コード分割をしていきました。
+試行錯誤しながらやっていったので、時間もかかってコミット数も無駄に多いです🙄
+
+TypeScript に関しては、まだ使い始めたばかりなので慣れてないのですが、型定義がきれいにハマった時の入力補完が便利でやばいですね(笑)
+引き続き向き合っていきます。
+
+課題として.
+- React.Suspense を使って宣言的に書く
+- CSRF トークンの期限が切れたときの対応をいれる
+- React QUery のオプションの調整
+
+とか、まだできそうなことはあるので、そのへんはおいおいやっていこうかとー。
+
+この実装が何かの参考になれば幸いです。
+
+## 参考リンクまとめ
+- [Laravel 6.x](https://readouble.com/laravel/6.x/ja)
+- [React Query](https://tanstack.com/query/v3)
+- [React Router](https://v5.reactrouter.com)
+- [Material UI](https://v4.mui.com)
+- [Vue + Vue Router + Vuex + Laravelで写真共有アプリを作ろう ※連載記事](https://www.hypertextcandy.com/vue-laravel-tutorial-introduction)
+- [GitHub - oukayuka/Riakuto-StartingReact-ja3.1 ※書籍](https://github.com/oukayuka/Riakuto-StartingReact-ja3.1)
+- [React Queryを用いた開発事例の紹介](https://fintan.jp/?p=5583)
