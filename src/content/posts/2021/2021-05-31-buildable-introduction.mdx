@@ -1,0 +1,358 @@
+---
+title: "ローコードでAPI作成～テスト～デプロイまでできる開発者プラットフォーム「Buildable」をさらっと紹介してみる"
+description: "Buildableの基本概念や機能をさらっと紹介"
+pubDate: "2021-05-31"
+updatedDate: "2023-06-23"
+category: "develop"
+tags: ["ローコード", "Buildable"]
+---
+
+こんにちは、個人開発はこだわり始めると終わりどころが見つからんよねぇと最近思ったりしている よし です。
+先日、Buildable というローコードサービスを知った機会があったので、シェアします。
+
+※翻訳には Google 翻訳を使用しています。
+
+※2023/06/23追記
+現在では Event という名にサービス名が変わっており、この記事の内容はかなり古くなっていそうです。
+
+import OG from "@/components/OG.astro"
+
+## Buildable とは？
+<OG url="https://www.buildable.dev" />
+
+公式サイトトップ.
+> Code assembly for the modern developer
+>
+> Stop wrestling with third-party API documentation, hacking together microservices and wasting time debugging deployments. Build robust web apps that scale with your business.
+
+↓
+
+> 現代の開発者のためのコードアセンブリ
+>
+> サードパーティの API ドキュメントと格闘したり、マイクロサービスをハッキングしたり、デプロイのデバッグに時間を浪費したりするのをやめてください。 ビジネスに合わせて拡張できる堅牢な Web アプリを構築します。
+
+公式ドキュメントの冒頭.
+> Buildable is the most sophisticated low code builder on the planet. We've been able to scale our community dramatically by sticking to the principles of those that are most important to us - our developers.
+>
+> These principles are as follows:
+> - Buildable is invite-only
+> - Buildable empowers developers to build 20x faster
+> - Buildable is a full stack orchestration tool
+
+↓
+
+> Buildable は、地球上で最も洗練されたローコードビルダーです。 私たちは、私たちにとって最も重要な原則、つまり開発者の原則に固執することで、コミュニティを劇的に拡大することができました。
+>
+> これらの原則は次のとおりです。
+> - Buildable は招待制です
+> - Buildable は、開発者が 20 倍速くビルドできるようにします
+> - Buildable はフルスタックのオーケストレーションツールです
+
+この文言だけだと「うーん、よくわからん」となる方もいそうですね。
+自分が実際に少し触ってみた感じだと「**ローコードでAPI作成～テスト～デプロイまでできる開発プラットフォーム**」という認識でまずはいいかなと思いました。
+ネイティブ統合されているサービスもあるので、そのサービスと連携した API が作りやすくなっていたりします。
+
+### 運営企業
+<OG url="https://www.linkedin.com/company/buildable-dev" />
+
+カナダにある同名の企業のようです。
+公式サイトに AngelList のリンクがあるので、スタートアップ企業っぽいですね。
+
+いつ正式リリースされたのかは、よくわかりませんでした。
+ただ、Linkedin にこんな[投稿](https://www.linkedin.com/posts/buildable-dev_lowcode-lowcodenocode-lowcodedevelopment-activity-6780611243125432320-qLqN)をされていたのが2か月前（2021/03）だったので、そのあたりなのかなと推測してみたり。
+
+### Buildable を知ったきっかけ
+Buildable は招待制のサービスだったりします。
+
+> Buildable is a community-driven, invite-only developer platform. To get access, you'll need to hunt your network and find an invite code from an existing member or reach out to our Community team
+
+↓
+
+> Buildable は、コミュニティ主導の招待制の開発者プラットフォームです。アクセスするには、ネットワークを探して既存のメンバーから招待コードを見つけるか、コミュニティ チームに連絡する必要があります。
+
+ある日、自分のところに招待メールが届きました。
+どこからアドレスを...？とも思いましたが、どうもとあるリポジトリ経由で自分の GitHub アカウントを見つけメールが来たみたいです。
+（今はアドレス非公開にしているはずでは...と思いつつ、過去に非公開としていなかった時期があるのでそこからかな？と）
+
+こういった招待メールを受け取ったのは初めてだったので、正直戸惑いました。
+ググっても、公式サイトや会社の情報くらいしか出てこず。
+Twitter で検索しても、全然ヒットせず...。
+（buildable だと一般単語で全然関係ないのばかりヒットするため、buildable.dev にて検索してました）
+
+公式サイトにリンクがある、公式 Twitter アカウントと思われるアカウントは凍結していたり。
+<OG url="https://twitter.com/BuildableDev" />
+（記事投稿して少し経過後に見たら、凍結解除されてました）
+
+もし他の方にも招待メールを送っているのであれば、なにかしらヒットしそうなんですけどね。
+リリースしたばかりで知名度がまだないサービスなのかな？と思いつつ、
+失礼ながら、あれ、これ大丈夫なヤツ？と少し心配になったのが正直なところです。
+
+**今回記事を書いたのは、もし何かご存じの方がいれば情報を知りたいという理由もあります。**
+**そのため、何か問題があれば、この記事は削除するかもしれません。**
+
+（Zenn の方にもクロス投稿しているので、何かあればそちらにコメントいただければと）
+
+~これらを加味しても気になるという方がいれば、一応自分の[招待コード](https://bldbl.co/HitomiYzNiNj)からどうぞ。~
+※2023/06/23 招待コード使用できなくなっていました。
+
+ちなみにこの招待コードは、アカウント作成すると、自動でその人の招待コードが生成されるようになっています。
+Clubhouse なんかと同じ感じでしょうか。
+招待枠は無限なのと、招待ごとに何か報酬がもらえるらしいです。
+
+### 料金プラン
+スクショ撮ると大きくなってしまいましたが、執筆時点でこんな感じになっていました。
+<img src="/screenshots/2021/buildable-introduction/pricing.png" width="70%" alt="Buildable - 料金プラン画像" />
+
+## Buildable における概念
+※これ以降、記述する仕様は執筆時点の仕様であることに注意です。
+
+### レシピ
+レシピは、スケーラブルでデプロイしやすいロジックバンドルです。
+という記述がありますが、要はレシピを作る → API の中身を作る みたいなことです。
+
+作成画面は以下のようになっています（公式チュートリアルで作成するレシピ）
+<img src="/screenshots/2021/buildable-introduction/recipe.png" width="100%" alt="Buildable - レシピ作成画面画像" />
+
+新しくレシピを作成すると、Workstation という環境（テスト環境的なやつ）にエンドポイントが自動で作成されます。
+その中身の処理フローを左側の GUI エディタで操作して作り、処理の詳細を右側のエディタで設定していく感じです。
+
+#### ステップ
+処理フローで作れるステップは以下のものがあります。
+
+logic
+- Conditional：分岐処理
+- Function：関数（JavaScript ベース）
+- Request：外部 API リクエスト
+- Response：この API のレスポンス生成
+- Default Database：データベースアクセス
+- Loop：ループ処理
+- Secret：秘匿化された変数キーを追加
+- AccessControl：アクセス制御ルールを適用
+
+Integrations（これ以外を使いたい時はリクエスト送って、リクエストが多かったものは追加していくそうです）
+- Twilio：SMS メッセージ送信
+- Stripe：支払いの処理とサブスクリプションの管理
+- SendGrid：メール送信
+- Google：OAuth
+- Facebook：OAuth
+- Amazon S3：ストレージの利用
+- Fidel：クレジット カードのトランザクションを追跡
+- Google Places：Google で場所データを検索
+- Slack：メッセージを送信
+- Plaid：銀行口座の詳細を取得
+
+各ステップで実行するための条件指定をしたりもできるようでした。
+
+現状、Function で使用できる npm パッケージはこちら。
+こちらも使いたいパッケージが別にある場合は、リクエストしてくださいとのことです。
+- @buildable/recipes：Buildable 特有の処理が行えるパッケージ
+- bcrypt
+- crypto
+- cryptr
+- date-fns
+- jsonwebtoken
+- lodash
+- md5
+- moment
+- moment-timezone
+- numberToWords
+- ramda
+- sentiment
+- string
+- uuid
+- cheerio
+
+また、Function 内では`$step`というグローバル変数を使うことができ、前のステップの出力データにアクセスしたりということが可能となっています。
+
+#### エンドポイント
+上記にも書いた通り、レシピを作成すると自動で Workstation という環境（テスト環境的なやつ）にエンドポイントが作成されます。
+
+URL の形式としては、以下のようになっています。
+```
+https://api.buildable.dev/trigger/v2/[環境]-[トリガーID]
+```
+環境のところはこういう割り当てになっていました。
+- Workstation → test
+- Production → live
+
+メソッドは変更できなかったので、今のところ POST 固定っぽいです。
+ちょっと不思議ですが。
+
+また、認証をかけることもできるようでした。
+
+#### テスト
+「Test recipe」ボタンを押すだけで、作成したレシピのテストができます。簡単ですね。
+各ステップでポーズ（ブレイクポイント的なやつ）を設定ができますし、各ステップごとの結果が見られます。
+また、各ステップごとのテストもできるなど、デバッグもしやすくなっているようです。
+
+ただ、Production 環境においては、レシピ単位のテストしかできないようになっていました。
+
+#### デプロイ
+「Deploy」ボタンを押して確認モーダルで「Deploy Recipe」を押すだけでデプロイされます。これも簡単ですね。
+大体は数秒、長くても数分で終わるようです。
+
+Workstation 環境の内容がそのままデプロイされるようでした。
+Production 環境に関しては、内容確認はできるのですが変更は出来ないようになっていました。安全上の理由でそうなっているそうです。
+
+ちなみに Production 環境のエンドポイントのみ、外部からリクエストできるということではなく、Workstation 環境のエンドポイントでも外部からリクエストできました。
+なお、このエンドポイントだけでなく、スケジューラ機能も今後実装予定だそうです。
+
+#### テンプレート
+事前にテストもされているレシピの雛形的なやつ。自分のレシピに追加できます。
+
+このテンプレートを扱うカタログという画面があるのですが、なぜかダッシュボードのサイドバーには表示されていません。
+ただ、公式ドキュメントでは普通にこの画面について触れられているので、試しに直接 URL へアクセスしてみたらいけました（苦笑）
+```
+https://app.buildable.dev/catalog
+```
+<img src="/screenshots/2021/buildable-introduction/catalog.png" width="100%" alt="Buildable - カタログ画面画像" />
+
+これが今の仕様なのか謎ですが、一応フィードバックは送っておきました。
+
+#### タグとコミュニティ
+レシピには好きなハッシュタグをつけることができます。
+
+また、後述するコミュニティに公開するということができるようになっています。
+ここでいう公開は、エンドポイントを公開ということではなく、レシピ自体を公開する感じです。
+
+### サービス
+サービスというと外部サービスを連想しそうですが、Buildable においてはデータリソースのことです。
+
+ダッシュボード画面はこんな感じ。
+<img src="/screenshots/2021/buildable-introduction/services.png" width="100%" alt="Buildable - サービス画面画像" />
+
+デフォルトでは、MongoDB が割り当てられています。
+プロバイダーが Google Cloud とあるので、内部的には GCP が使われてるみたいですね。
+
+他のデータリソースサービスを追加することも出来るようですが、今のところベータ版のみだそうです。
+- Athena
+- BigQuery
+- CouchDB
+- Databricks
+- DynamoDB
+- ElasticSearch
+- Ghost
+- Kafka
+- Kong
+- MongoDB
+- MySQL
+- Oracle
+- PostgreSQL
+- Redis
+- RethinkDB
+- Salesforce
+- WordPress
+
+デフォルトデータベース画面
+<img src="/screenshots/2021/buildable-introduction/services-database.png" width="100%" alt="Buildable - デフォルトデータベース画面画像" />
+
+key を追加するとそのアクションが自動作成され、レシピから利用できるようになります。
+
+アクションの種類は以下の6種類。基本操作が行える感じですね。
+- Create
+- Update
+- Delete
+- Get by id
+- List
+- Count
+
+#### Workstation 環境と Production 環境
+key とアクションを作っておくことで、レシピから利用できるようになるわけですが、ここで1つ疑問が浮かびました。
+レシピのデプロイのところで書いたように、デプロイ時は Workstation 環境の内容がそのまま Production 環境にデプロイされ、Production 環境は直接編集できません。
+あれ、これってテスト環境と本番環境で DB 接続先変えたい時とかどうするんだろう？
+変えられないということは、テスト用と本番用とデータ混ざる？。いや、そんなことある？と。
+
+試しにデータを作成する API を実行して、デフォルトデータベースを見てみると、一応分けてはくれるみたいでした。
+
+デフォルトデータベースの leads キー のデータ画面
+<img src="/screenshots/2021/buildable-introduction/services-database-data.png" width="100%" alt="Buildable - デフォルトデータベース・key のデータ画面画像" />
+
+右上の「Viewing test data」というところを切り替えることで、環境ごとのデータが参照できました。
+ちょっと不思議な感じですね。
+
+### コミュニティ
+公式ドキュメントでは coming soon になっていますが、実装されていました。
+（公式ドキュメントの更新が追いついてないのかも？）
+
+コミュニティ画面
+<img src="/screenshots/2021/buildable-introduction/community.png" width="100%" alt="Buildable - コミュニティ画面画像" />
+
+コミュニティに公開された、他のユーザのレシピを見ることができます。
+これらのレシピは Fork して、自分のレシピに加えることも出来たりします。
+
+自分は他のノーコード、ローコードサービスをあまり知らないのであれですが、こういう仕組みがあるのはなんだか新鮮に感じました。
+
+## おまけ
+### 公式チュートリアル
+公式サイトにてチュートリアルが用意されています。
+
+チュートリアル冒頭では Morning Brew というニュースレターメディアサービスに触れられており、そのサービスをもとにした内容となっています。
+（といっても、実際にメール送信するところは次のステップとなっています）
+
+自分は一応最後まで到達できたのですが、一部コードのミスがあったり、全てのコードは載ってなかったりしました。
+コードのミスに関しては、使用ライブラリのバージョンの関係で書き方が変わっただけ可能性もありますが、一応フィードバックは送っておきました。
+記載されていないコードに関しては、チュートリアル冒頭に CodeSandbox のリンクがあるのでそちらで確認するとよいです。
+
+元コードは JavaScript になっているのを、自分は意地でも TypeScript でやったので、こちらも一応載せておきますね。
+何かの参考になれば（型定義が一部微妙なのはご容赦ください🙇‍♂️）
+<OG url="https://github.com/h-yoshikawa44/buildable-tutorial" />
+
+ちなみに YouTube 動画でも別のチュートリアルがあるようです。
+<OG url="https://www.youtube.com/playlist?list=PL5xN9Zn1k9D2qsMsfERWjIsSIVrFq5tYT" />
+
+### Zapier の API 版？
+自分がこの Buildable の機能をおおよそ知った時、ふと Zapier が浮かびました。
+Zapier といえば、ノーコードでサービスとサービスを連携してツールを作ることができますよね。
+Buildable はローコードな分、それより自由度が増して出来ることが増えた感じなのかなと。
+
+そんなことを思っていたら、公式ドキュメントにこれの回答のようなことが書いてありました。
+
+> Are you like a 'Zapier for developers'?
+>
+> Not quite. While we feel like a workflow tool, Buildable extends far beyond simple automations. Let's dig into it.
+> Zapier is a workflow automation tool for primarily non-technical folks, like ops leads and marketers. It's mostly used for creating simple automations, such as sending recent updates from a Google Sheet to a Slack channel or storing recent Zoom recordings in a Google Drive folder. In other words, you connect together third-party API functions that you use operationally to reduce redundant manual labour. As a matter of fact, we use Zapier internally at Buildable and it's a great tool for the periphery of your tech stack.
+> Buildable, on the other hand, is an API-orchestration tool for Javascript & Python developers and is an accelerant of your core tech stack. It's designed specifically for you to be able to extend existing APIs or build net new APIs in seconds. It helps accelerate (to an order of magnitude) the:
+> - development of your core web app features,
+> - the manipulation of your data and the
+> - deployment cadences that get your features to production
+>
+> With our Community feature launch, we're also a community of avid developers committed to helping push innovation amongst our peers via shared/published logic bundles.
+
+↓
+
+> あなたは「開発者向けの Zapier」のようなものですか?
+>
+> そうではありません。私たちはワークフロー ツールのように感じますが、Buildable は単純な自動化をはるかに超えています。それを掘り下げてみましょう。
+> Zapier は、運用担当者やマーケティング担当者など、主に非技術者向けのワークフロー自動化ツールです。主に、Google Sheet から Slack チャネルに最近の更新を送信したり、最近の Zoom の記録を Google Drive フォルダーに保存したりするなど、単純な自動化を作成するために使用されます。言い換えれば、冗長な手作業を減らすために運用上使用するサードパーティの API 関数を一緒に接続します。実際、私たちは Buildable の内部で Zapier を使用しており、技術スタックの周辺に最適なツールです。
+>
+> 一方、Buildable は、Javascript および Python 開発者向けの API オーケストレーション ツールであり、コア技術スタックを加速させます。これは、既存の API を拡張したり、まったく新しい API を数秒で構築したりできるように特別に設計されています。これは、以下を (桁違いに) 加速するのに役立ちます。
+> - コア Web アプリ機能の開発、
+> - あなたのデータの操作と
+> - 機能を本番環境に移行するためのデプロイ ケイデンス
+>
+> コミュニティ機能のリリースにより、私たちは、共有/公開されたロジックバンドルを介してピア間のイノベーションを促進することに熱心な開発者のコミュニティでもあります。
+
+## 追記：2023/06/23時点のサービス
+久しぶりにサイトへアクセスしてみたところ、サービス名をはじめガラッと雰囲気が変わっていました。
+<OG url="https://www.event.dev/" />
+
+Twitter も ID が変わったようです。
+<OG url="https://twitter.com/eventcloudhq" />
+
+招待制で使用できたのもなくなり、wait list になっていました。
+正式リリースはまだ先なのかな...？
+
+---
+さらっと Buildable について紹介してみました。
+冒頭にも書いた通り戸惑いはありましたが、実際に触れてみて、ちょっと面白そうなサービスだなと思ったのも事実です。
+
+公式ドキュメントと実体があってなかったり、公式サイトにデッドリンクがいくつかあったり...。
+多少粗が目立つ部分はありますが、段々改善されていくんじゃないかと。今後の展開が気になるところですね。
+フィードバック送ってくれーと常に上部に表示されるくらいなので、実際に使ってみた方はぜひフィードバックを送ってみてはいかがでしょうか。
+
+何かあれば、また記事を書くやもしれません。
+ではではー。
+
+## 参考リンクまとめ
+- [Buildable](https://www.buildable.dev/)
+- [Linkedin - Buildable](https://www.linkedin.com/company/buildable-dev/)
