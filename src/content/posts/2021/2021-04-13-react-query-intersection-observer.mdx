@@ -1,0 +1,1006 @@
+---
+title: "React QueryとIntersection Observer APIで無限スクロールを作ってみた"
+description: "React QueryとIntersection Observer APIを使って、無限スクロールを実装した例"
+pubDate: "2021-04-13"
+updatedDate: "2023-06-23"
+category: "develop"
+tags: ["TypeScript", "React", "React Query", "PHP", "Laravel"]
+---
+
+前回、React Query の記事を書いたのですが、今回はその派生記事です。
+React Query と Intersection Observer API を使った無限スクロールを実装したので記事にしてみました。
+
+※2023/06/23 各種リンクの URL を tanstack.com をベースに更新しました。
+
+import OG from "@/components/OG.astro"
+
+## はじめに
+React Query の概要については、前回の記事にも書いたので省略します。
+
+[React × LaravelでReact Queryの練習がてら、ログイン機能を作ってみた](/posts/2021-03-21-laravel-react-query-auth)
+
+データ取得にあたって、通常は`useQuery`を使いますが、無限スクロール実装においては`useInfiniteQuery`を使います。
+
+<OG url="https://tanstack.com/query/v3/docs/react/reference/useInfiniteQuery" />
+
+そして、次ページデータ読み込みタイミング検知として、Intersection Observer（交差監視） API というものを使います。
+
+<OG url="https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API" />
+
+> ターゲットとなる要素が、祖先要素もしくは文書の最上位のビューポートと交差する変更を非同期的に監視する方法を提供します。
+
+これを使用することで、特定の要素が指定の割合分、画面へ表示された時に特定の処理をする、ということができます。
+
+### 使用例
+公式の例 では、Next.js の中で使われていました　※2023/06/22時点ではコードが変わっていました。
+<OG url="https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/load-more-infinite-scroll" />
+
+```js:hooks/useIntersectionObserver.js
+import React from 'react'
+
+export default function useIntersectionObserver({
+  root,
+  target,
+  onIntersect,
+  threshold = 1.0,
+  rootMargin = '0px',
+  enabled = true,
+}) {
+  React.useEffect(() => {
+    if (!enabled) {
+      return
+    }
+
+    const observer = new IntersectionObserver(
+      entries =>
+        entries.forEach(entry => entry.isIntersecting && onIntersect()),
+      {
+        root: root && root.current,
+        rootMargin,
+        threshold,
+      }
+    )
+
+    const el = target && target.current
+
+    if (!el) {
+      return
+    }
+
+    observer.observe(el)
+
+    return () => {
+      observer.unobserve(el)
+    }
+  }, [target.current, enabled])
+}
+
+```
+
+```jsx:pages/index.js
+import React from 'react'
+import Link from 'next/link'
+import axios from 'axios'
+
+import { useInfiniteQuery, QueryClient, QueryClientProvider } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+
+//
+
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
+
+const queryClient = new QueryClient()
+
+export default function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <Example />
+    </QueryClientProvider>
+  )
+}
+
+function Example() {
+  const {
+    status,
+    data,
+    error,
+    isFetching,
+    isFetchingNextPage,
+    isFetchingPreviousPage,
+    fetchNextPage,
+    fetchPreviousPage,
+    hasNextPage,
+    hasPreviousPage,
+  } = useInfiniteQuery(
+    'projects',
+    async ({ pageParam = 0 }) => {
+      const res = await axios.get('/api/projects?cursor=' + pageParam)
+      return res.data
+    },
+    {
+      getPreviousPageParam: firstPage => firstPage.previousId ?? false,
+      getNextPageParam: lastPage => lastPage.nextId ?? false,
+    }
+  )
+
+  const loadMoreButtonRef = React.useRef()
+
+  useIntersectionObserver({
+    target: loadMoreButtonRef,
+    onIntersect: fetchNextPage,
+    enabled: hasNextPage,
+  })
+
+  return (
+    <div>
+      <h1>Infinite Loading</h1>
+      {status === 'loading' ? (
+        <p>Loading...</p>
+      ) : status === 'error' ? (
+        <span>Error: {error.message}</span>
+      ) : (
+        <>
+          <div>
+            <button
+              onClick={() => fetchPreviousPage()}
+              disabled={!hasPreviousPage || isFetchingPreviousPage}
+            >
+              {isFetchingNextPage
+                ? 'Loading more...'
+                : hasNextPage
+                ? 'Load Older'
+                : 'Nothing more to load'}
+            </button>
+          </div>
+          {data.pages.map(page => (
+            <React.Fragment key={page.nextId}>
+              {page.data.map(project => (
+                <p
+                  style={{
+                    border: '1px solid gray',
+                    borderRadius: '5px',
+                    padding: '10rem 1rem',
+                    background: `hsla(${project.id * 30}, 60%, 80%, 1)`,
+                  }}
+                  key={project.id}
+                >
+                  {project.name}
+                </p>
+              ))}
+            </React.Fragment>
+          ))}
+          <div>
+            <button
+              ref={loadMoreButtonRef}
+              onClick={() => fetchNextPage()}
+              disabled={!hasNextPage || isFetchingNextPage}
+            >
+              {isFetchingNextPage
+                ? 'Loading more...'
+                : hasNextPage
+                ? 'Load Newer'
+                : 'Nothing more to load'}
+            </button>
+          </div>
+          <div>
+            {isFetching && !isFetchingNextPage
+              ? 'Background Updating...'
+              : null}
+          </div>
+        </>
+      )}
+      <hr />
+      <Link href="/about">
+        <a>Go to another page</a>
+      </Link>
+      <ReactQueryDevtools initialIsOpen />
+    </div>
+  )
+}
+```
+
+#### useInfiniteQuery
+基本的な使い方としては`useQuery`と似ており、以下のようになっています。
+- 第1引数：クエリキー
+- 第2引数：データ取得の関数
+- 第3引数：オプション
+
+
+渡せるオプションや、取得できる返り値の種類も`useQuery`のものがベースとなっており、そこにページングに関するものが追加されている形です。
+
+オプションの`getPreviousPageParam`と`getNextPageParam`が特に重要なもの。
+ここで返した値がそれぞれ前ページ、次ページのデータを取得する際の`pageParam`として使われます。
+値がない時は、それぞれ前ページ、次ページがないものとして認識されます。
+
+返り値の data の pages キーに1ページあたりのレスポンスデータが配列で格納されていくようになっています。
+0：1ページ目
+1：2ページ目
+といった感じ。
+
+返り値の`fetchPreviousPage`と`fetchNextPage`がそれぞれ前ページ、次ページのデータを取得する関数です。
+この例だと、ボタンを押した時と Intersection Observer API で交差を検知した時、実行するようになっていますね。
+
+#### Intersect Observer API
+Intersect Observer API をラップしたカスタムフックが作られていますね。
+
+コンストラクタに渡されたオプションについて書くと、こんな感じです。
+- root：交差監視の元となる要素（デフォルトではブラウザのビューポート）
+- onIntersect：交差検知時に実行されるコールバック
+- threshold：交差率
+- rootMargin：root 要素のマージン
+
+この内容でオブザーバーを作成して、`observe`関数で監視対象の要素を指定することで監視が動作し、監視対象が交差率を超えたときに通知。
+コールバックが実行される、という仕組みになっています。
+
+上記の例で言うと、こんな感じ。
+- root：指定なし（ブラウザのビューポート）
+- onIntersect：`fetchNextPage`（次ページ読み込み関数）
+- threshold：1.0
+- rootMargin：opx
+- 監視対象：loadMore ボタン
+
+なので、ブラウザのビューポートの中で loadMore ボタン要素が100%表示（全体が表示）されると検知され、次ページ読み込みを実行...ということになります。
+
+ちなみにターゲット要素が25%見えるたびに処理をしたいといった場合は、threshold に`[0, 0.25, 0.5, 0.75, 1]`と配列でわたすことにより対応できたりします。
+
+また、`unobserve`関数を使うことで、そのターゲット要素の監視を解除できます。
+上記の例では useEffect でクリーンアップ関数として使われますね。
+
+## 今回作ってみたもの
+<img src="/gifs/2021/react-query-intersection-observer/infinite-scroll.gif" width="100%" alt="無限スクロールするGIF" />
+
+左側の無限スクロールの部分です。
+（わかりやすくするために1ページ当たりの件数を10件にしています）
+前回と同じ勉強用の個人開発で実装したものになります。
+
+公式の実装例をベースとして、実装してみました。
+
+## 前提
+React（Laravel Mix）× Laravel による SPA × API 構成で実装しました。
+といっても、各種フレームワークのページネーション機能仕様に合わせてさえもらえればいいので、API 側はなんでもいけると思われます。
+
+今回使用した各種バージョンは以下のとおりです。
+
+基本部分.
+- Node.js：14.2.0
+- TypeScript：4.1.3
+- React：16.14.0
+- PHP：7.4.14
+- Laravel：6.20.9
+
+ライブラリ.
+- Material UI
+  - core：4.11.3
+  - lab：4.0.0-alpha.57
+- axios：0.21.1
+- react-query：3.12.1
+- camelcase-keys：6.2.2
+
+## ディレクトリ構成
+今回も Laravel 側は特に変わったことをしてないので、React 側だけ記載します。
+（全部載せると多いので、当記事の趣旨にあまり関係ないものは省略しています）
+
+Laravel プロジェクトの resources/ts 配下.
+```
+├ components
+│   ├ molecules
+│   │   ├ MemoListHeader.tsx
+│   │   ├ MemoListItem.tsx
+│   │   └ MemoListItemSkeleton.tsx
+│   ├ organisms
+│   │   └ MemoList.tsx
+│   ├ pages
+│   │   └ Memo.tsx
+├ constants
+│   └ statusCode.ts
+├ containers
+│   ├ organisms
+│   │   └ MemoList.tsx
+│   ├ pages
+│   │   └ Memo.tsx
+├ hooks
+│   ├ memo
+│   │   ├ index.ts
+│   │   └ useGetmemoListQuery.ts
+│   ├ util
+│   │   ├ index.ts
+│   │   └ useIntersectionObserver.ts
+├ models
+│   ├ Memo.ts
+│   └ Memos.ts
+└ app.tsx
+```
+
+今回もリポジトリにタグをつけていますので、GitHub で見たいという方はこちらをどうぞ。
+<OG url="https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Freact-query-intersection-observer" />
+
+※2021/09/13追記 関数コンポーネントの型定義に FC ばっかり使ってますが、FC から children がなくなるまでは VFC を使った方がいいです...。
+
+## API（Laravel）側
+※User モデルとリレーションを持つ、Memo モデルがあるものとして進めます。
+
+### メモ一覧取得 API
+ログインユーザのメモ一覧取得 API を作成。
+
+更新日時の降順にしたかったので`orderBy`で指定。
+ページネーションを有効にするため、`paginate`で取得したものを返すようにしています。
+
+この`paginate`の引数に渡した値が1ページ当たりの件数になりますので、この辺はお好みで。
+
+```php:app/Http/Controllers/MemoController
+/**
+ * Create a new controller instance.
+ *
+ * @return void
+ */
+public function __construct()
+{
+    $this->middleware('auth');
+}
+
+/**
+ * （ログインユーザの）メモ一覧取得API
+ *
+ * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
+ */
+public function index()
+{
+    $user = Auth::user();
+    $memos = Memo::where('user_id', $user->user_id)->orderBy(Memo::UPDATED_AT, 'desc')->paginate(30);
+
+    return $memos;
+}
+```
+
+API のルートに追加.
+```php:routes/api.php
+Route::get('/memos', 'MemoController@index')->name('memo.index');
+```
+
+#### ページネーションを有効にした場合の挙動
+Laravel においてページネーションを有効にすると、レスポンスが以下のように変化します。
+data 以外にページネーションに関するものが追加されていますね。
+```json
+{
+   "total": 32,
+   "per_page": 30,
+   "current_page": 1,
+   "last_page": 2,
+   "first_page_url": "http://localhost/api/memos?page=1",
+   "last_page_url": "http://localhost/api/memos?page=2",
+   "next_page_url": "http://localhost/api/memos?page=2",
+   "prev_page_url": null,
+   "from": 1,
+   "to": 30,
+   "path": "http://localhost/api/memos",
+   "data":  [
+     {
+       "memo_id": "c53f4b50-2556-4285-b63c-0acca6da001f",
+       "title": "Est sequi sapiente laudantium maxime aut.",
+       "content": "Facere blanditiis et mollitia animi sapiente suscipit eos. Sunt earum dolorem soluta. Autem laboriosam dolor sed voluptas. Laudantium maiores enim numquam voluptas reprehenderit.",
+       "created_at": "2021-03-29 16:33:04",
+       "updated_at": "2021-03-29 16:33:04",
+     }
+    .
+    .
+    .
+    {
+       "memo_id": "5ada62cd-b590-4c7f-9198-da6a2996f49e",
+       "title": "Numquam dolorem maiores quo natus quos tenetur.",
+       "content": "Ut quibusdam amet optio amet. Rem ipsam quia sit. Impedit et at enim error et. Error consequatur dolore velit illo debitis inventore.",
+       "created_at": "2021-03-29 16:33:04",
+       "updated_at": "2021-03-29 16:33:04",
+    }
+  ]
+}
+```
+`last_page_url`などにもあるように、クエリパラメータで`page`を渡すことによって、そのページのデータを取得できるようになっています。
+
+この仕様を把握したうえで、フロント側からリクエストします。
+
+## SPA（React）側
+### アプリ初期化 + ルーティング
+React Query のセットアップを行いルーティングをしているという、前回の記事での内容と大体同じですが、一応載せておきます。
+（解説を知りたい場合は前回の記事を参照ください）
+
+React Query のデフォルトリトライ回数の変更をしていますが、この辺はお好みで。
+
+`/:memoId?`のルートが今回無限スクロールを実装したメモ画面のルートになります。
+ちなみに`?`をつけているのはあえてやってますが、当記事の趣旨には関係ない部分なので、ここで解説はしません。
+
+```tsx:resources/ts/app.tsx
+import React, { FC } from 'react';
+import ReactDOM from 'react-dom';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import { QueryClient, QueryClientProvider, useQueryClient } from 'react-query';
+import { ReactQueryDevtools } from 'react-query/devtools';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
+import Login from './containers/pages/Login';
+import Memo from './containers/pages/Memo';
+import Loding from './components/pages/Loding';
+import { useGetUserQuery, useCurrentUser } from './hooks/user';
+
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes React and other helpers. It's a great starting point while
+ * building robust, powerful web applications using React + Laravel.
+ */
+require('./bootstrap');
+
+/**
+ * Next, we will create a fresh React component instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+// require('./components/Example');
+
+const client = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+    },
+    mutations: {
+      retry: 1,
+    },
+  },
+});
+
+type Props = {
+  exact?: boolean;
+  path: string;
+  children: React.ReactNode;
+};
+
+const UnAuthRoute: FC<Props> = ({ exact = false, path, children }) => {
+  const user = useCurrentUser();
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={() => (user ? <Redirect to={{ pathname: '/' }} /> : children)}
+    />
+  );
+};
+
+const AuthRoute: FC<Props> = ({ exact = false, path, children }) => {
+  const user = useCurrentUser();
+  return (
+    <Route
+      exact={exact}
+      path={path}
+      render={({ location }) =>
+        user ? (
+          children
+        ) : (
+          <Redirect to={{ pathname: '/login', state: { from: location } }} />
+        )
+      }
+    />
+  );
+};
+
+const App: FC = () => {
+  const queryClient = useQueryClient();
+  const { isLoading } = useGetUserQuery({
+    retry: 0,
+    initialData: undefined,
+    onError: () => {
+      queryClient.setQueryData('user', null);
+    },
+  });
+
+  if (isLoading) {
+    return <Loding />;
+  }
+
+  return (
+    <Switch>
+      <UnAuthRoute exact path="/login">
+        <Login />
+      </UnAuthRoute>
+      <AuthRoute path="/:memoId?">
+        <Memo />
+      </AuthRoute>
+    </Switch>
+  );
+};
+
+if (document.getElementById('app')) {
+  ReactDOM.render(
+    <Router>
+      <QueryClientProvider client={client}>
+        <CssBaseline />
+        <App />
+        {process.env.NODE_ENV === 'development' && (
+          <ReactQueryDevtools initialIsOpen={false} />
+        )}
+      </QueryClientProvider>
+    </Router>,
+    document.getElementById('app')
+  );
+}
+```
+
+### メモ一覧
+構造として、メモ画面を構成する Memo コンポーネントがあり。
+- メモ一覧を構成する MemoList コンポーネント
+- メモ詳細を構成する MemoDetail コンポーネント
+
+を使っています。
+
+Memo コンポーネントと MemoDetail コンポーネントでやっていることは、当記事の趣旨に直接関係ないので割愛します。
+
+#### Container Component
+当記事の趣旨に関係ない部分もありますが、一旦、全容を載せると以下のようになっています。
+
+```tsx:resources/ts/containers/organisms/MemoList.tsx
+import React, { FC, useCallback, useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+import MemoList from '../../components/organisms/MemoList';
+import { useGetMemoListQuery, usePostMemoMutation } from '../../hooks/memo';
+import { useIntersectionObserver } from '../../hooks/util';
+
+type Props = {
+  memoId?: string;
+};
+
+const EnhancedMemoList: FC<Props> = ({ memoId }) => {
+  const {
+    isFetching,
+    isLoading,
+    error,
+    data: paginateMemos,
+    hasNextPage,
+    isFetchingNextPage,
+    fetchNextPage,
+  } = useGetMemoListQuery();
+  const history = useHistory();
+  const statusCode = error?.response?.status;
+
+  // データ取得中でない + 画面幅が広い + メモ未選択時は、メモ一覧の一番新しいメモへ遷移
+  const theme = useTheme();
+  const iswideDisplay = useMediaQuery(theme.breakpoints.up('sm'));
+  useEffect(() => {
+    const firstMemoId = paginateMemos?.pages[0]?.data[0].memoId;
+    if (!isFetching && !memoId && iswideDisplay && firstMemoId) {
+      history.push(`/${firstMemoId}`);
+    }
+  }, [history, isFetching, paginateMemos, memoId, iswideDisplay]);
+
+  // 無限スクロール処理
+  const { loadMoreRef } = useIntersectionObserver({
+    onIntersect: fetchNextPage,
+    enabled: hasNextPage,
+  });
+
+  const { mutate } = usePostMemoMutation();
+  const handleAddMemo = useCallback(() => {
+    mutate({ title: '', content: '' });
+  }, [mutate]);
+
+  const handleSelectItem = useCallback(
+    (selectMemoId: string) => {
+      history.push(`/${selectMemoId}`);
+    },
+    [history]
+  );
+
+  return (
+    <MemoList
+      paginateMemos={paginateMemos?.pages}
+      isLoading={isLoading}
+      statusCode={statusCode}
+      loadMoreRef={loadMoreRef}
+      hasNextPage={hasNextPage}
+      isFetchingNextPage={isFetchingNextPage}
+      handleAddMemo={handleAddMemo}
+      handleSelectItem={handleSelectItem}
+    />
+  );
+};
+
+export default EnhancedMemoList;
+```
+無限スクロールに関係する部分をさらっと説明します。
+
+**・useInfiniteQuery を使ったデータ取得**
+```tsx
+const {
+    isFetching,
+    isLoading,
+    error,
+    data: paginateMemos,
+    hasNextPage,
+    isFetchingNextPage,
+    fetchNextPage,
+  } = useGetMemoListQuery();
+  const history = useHistory();
+  const statusCode = error?.response?.status;
+```
+
+useGetMemoListQuery という`useInfiniteQuery`をラップしたカスタムフックを使って、メモ一覧を取得しています。
+データだけでなく、読み込み中などの UI 表示に使用するものや次ページに関するものも併せて取得。
+- isFetching：データ取得中であるか
+- isLoading：（既存のキャッシュがない）初回データ取得中であるか
+- error：エラー内容（エラー時のみ）
+- hasNextPage：次ページがあるか
+- isFetchingNextPage：次ページデータを取得中であるか
+- fetchNextPage：次ページ取得関数
+
+**・Intersection Observer API の設定**
+```tsx
+  // 無限スクロール処理
+  const { loadMoreRef } = useIntersectionObserver({
+    onIntersect: fetchNextPage,
+    enabled: hasNextPage,
+  });
+```
+
+Intersection Observer API をラップしたカスタムフックを使用して、無限スクロールの設定をしています。
+loadMoreRef はコールバック ref になっており、無限スクロール検知用の要素へ渡すように。
+
+オプション設定により、次ページが存在する場合のみ監視し、通知を検知した時に次ページを読み込むようにしています。
+
+**・取得したデータを渡す**
+冒頭に書いた通り。`useInfiniteQuery`で取得したデータは、pages キーの中に配列で格納されるので、それを渡します。
+その他、UI 側で使用するものを一緒に渡しています。
+```tsx
+return (
+  <MemoList
+    paginateMemos={paginateMemos?.pages}
+    isLoading={isLoading}
+    statusCode={statusCode}
+    loadMoreRef={loadMoreRef}
+    hasNextPage={hasNextPage}
+    isFetchingNextPage={isFetchingNextPage}
+    handleAddMemo={handleAddMemo}
+    handleSelectItem={handleSelectItem}
+  />
+);
+```
+
+#### Presentational Component
+初回読み込み中はスケルトン表示、エラー時はアラート表示、読み込みが終わり次第、データを使ったメモ一覧を表示するようにしています。
+エラー表示はとりあえず500エラーの時だけ。
+
+```tsx:resources/ts/components/organisms/MemoList.tsx
+import React, { FC } from 'react';
+import Box from '@material-ui/core/Box';
+import List from '@material-ui/core/List';
+import GeneralAlert from '../atoms/GeneralAlert';
+import MemoListHeader from '../molecules/MemoListHeader';
+import MemoListItem from '../molecules/MemoListItem';
+import MemoListItemSkeleton from '../molecules/MemoListItemSkeleton';
+import { INTERNAL_SERVER_ERROR } from '../../constants/statusCode';
+import { Memos } from '../../models/Memos';
+
+type Props = {
+  paginateMemos?: Memos[];
+  isLoading: boolean;
+  statusCode?: number;
+  loadMoreRef: (node: Element) => void;
+  hasNextPage?: boolean;
+  isFetchingNextPage: boolean;
+  handleAddMemo: VoidFunction;
+  handleSelectItem: (selectMemoId: string) => void;
+};
+
+const MemoList: FC<Props> = ({
+  paginateMemos,
+  isLoading,
+  statusCode,
+  loadMoreRef,
+  hasNextPage,
+  isFetchingNextPage,
+  handleAddMemo,
+  handleSelectItem,
+}) => {
+  if (isLoading) {
+    return (
+      <>
+        <Box height={48} px={2} />
+        {[1, 2, 3, 4, 5].map((value) => (
+          <MemoListItemSkeleton key={value} />
+        ))}
+      </>
+    );
+  }
+
+  if (statusCode) {
+    return (
+      <>
+        <Box height={48} px={2} />
+        {statusCode === INTERNAL_SERVER_ERROR && (
+          <GeneralAlert
+            type="error"
+            title="サーバエラー"
+            content="予期しないエラーが発生し、メモデータ取得に失敗しました。恐れ入りますが時間をおいて再度お試しください。"
+          />
+        )}
+      </>
+    );
+  }
+
+  let loadMoreMessage;
+  if (isFetchingNextPage) {
+    loadMoreMessage = '読み込み中...';
+  } else {
+    loadMoreMessage = hasNextPage ? '続きを読み込む' : ' ';
+  }
+
+  return (
+    <>
+      <MemoListHeader handleAddMemo={handleAddMemo} />
+      {/* 140px = ヘッダー：64 + メモ一覧ヘッダー：48 + 下部余白：28 */}
+      <List style={{ height: 'calc(100vh - 140px)', overflowY: 'scroll' }}>
+        {paginateMemos?.map((page) => (
+          <React.Fragment key={page.currentPage}>
+            {page.data.map((memo) => (
+              <MemoListItem
+                key={memo.memoId}
+                memoId={memo.memoId}
+                title={memo.title}
+                content={memo.content}
+                handleSelectItem={handleSelectItem}
+              />
+            ))}
+          </React.Fragment>
+        ))}
+        <Box {...{ ref: loadMoreRef }} textAlign="center">
+          {loadMoreMessage}
+        </Box>
+      </List>
+    </>
+  );
+};
+
+export default MemoList;
+```
+
+**・データ表示とスクロール**
+```tsx
+  {/* 140px = ヘッダー：64 + メモ一覧ヘッダー：48 + 下部余白：28 */}
+  <List style={{ height: 'calc(100vh - 140px)', overflowY: 'scroll' }}>
+    {paginateMemos?.map((page) => (
+      <React.Fragment key={page.currentPage}>
+        {page.data.map((memo) => (
+          <MemoListItem
+            key={memo.memoId}
+            memoId={memo.memoId}
+            title={memo.title}
+            content={memo.content}
+            handleSelectItem={handleSelectItem}
+          />
+        ))}
+      </React.Fragment>
+    ))}
+    .
+    .
+    .
+  </List>
+```
+
+渡されたデータ配列を map で回します。
+1ページあたりのデータの data キーをさらに map を使って回して、一件ずつのデータで MemoListItem コンポーネントを構築しています。
+
+このメモ一覧をスクロールしたいので、height と overflowY を設定。
+height の値の計算はコメントに書いている通りです。
+動的に計算できればいいなと思ったのですが、複雑になりそうだったので固定で指定しています。
+
+**・無限スクロール検知用要素**
+```ts
+  let loadMoreMessage;
+  if (isFetchingNextPage) {
+    loadMoreMessage = '読み込み中...';
+  } else {
+    loadMoreMessage = hasNextPage ? '続きを読み込む' : ' ';
+  }
+```
+```tsx
+  <Box {...{ ref: loadMoreRef }} textAlign="center">
+    {loadMoreMessage}
+  </Box>
+```
+メモ一覧の末尾に Box コンポーネントで要素を置いており、これにコールバック ref を渡しています。
+この要素がどれだけ表示されたかで検知するようにしているわけです。
+
+状態に応じて表示内容を変えたいので、分岐でメッセージを作っています。
+
+### モデル
+
+#### Memo
+
+```ts:models/Memo.ts
+export type Memo = {
+  memoId: string;
+  title: string;
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
+};
+```
+
+#### Memos
+Laravel のレスポンス形式に合わせてますが、データ取得時にプロパティキーをキャメルケースに変換するので、こちらではキャメルケースで定義しています。
+
+```ts:models/Memos.ts
+import { Memo } from './Memo';
+
+export type Memos = {
+  total: number;
+  perPage: number;
+  currentPage: number;
+  lastPage: number;
+  firstPageUrl: string;
+  lastPageUrl: string;
+  nextPageUrl: string | null;
+  prevPageUrl: string | null;
+  path: string;
+  from: number;
+  to: number;
+  data: Memo[];
+};
+```
+
+### カスタムフック
+※作成したカスタムフックは、それぞれ index.ts で名前付きで再エクスポートしています。
+
+#### useGetMemoListQuery
+`useInfiniteQuery`をラップした、メモ一覧取得のためのカスタムフック。
+成功時は、取得したデータを memos キーにセット。
+
+```ts:resources/ts/hooks/memo/useGetMemoListQuery.ts
+import {
+  UseInfiniteQueryResult,
+  UseInfiniteQueryOptions,
+  useInfiniteQuery,
+} from 'react-query';
+import axios, { AxiosError } from 'axios';
+import camelcaseKeys from 'camelcase-keys';
+import { Memos } from '../../models/Memos';
+
+const getMemoList = async ({ pageParam = 1 }): Promise<Memos> => {
+  const { data } = await axios.get(`/api/memos?page=${pageParam}`);
+  return camelcaseKeys(data, { deep: true });
+};
+
+const useGetMemoListQuery = <TData = Memos>(
+  options?: UseInfiniteQueryOptions<Memos, AxiosError, TData>
+): UseInfiniteQueryResult<TData, AxiosError> =>
+  useInfiniteQuery('memos', getMemoList, {
+    ...options,
+    getPreviousPageParam: (firstPage) =>
+      firstPage.prevPageUrl ? firstPage.currentPage - 1 : false,
+    getNextPageParam: (lastPage) =>
+      lastPage.nextPageUrl ? lastPage.currentPage + 1 : false,
+  });
+
+export default useGetMemoListQuery;
+```
+API 定義のところで書いたように、Laravel でページネーションを有効にすると、`page`クエリパラメータで取得ページを指定できるので、こちらもそれに合わせます。
+
+`getPreviousPageParam`オプションでは、前ページの URL が存在する時に、現在のページ数から -1 したページ数を返すように。
+
+同様に`getNextPageParam`オプションでは、次ページの URL が存在する時に、現在のページ数から +1 したページ数を返すように。
+
+ちなみに取得したデータのプロパティキーのスネークケース・キャメルケース問題解消のために`camelcaseKeys`で変換をかけています。本来は axios の interceptors でまとめてやった方がいいと思われます。
+
+#### useIntersectionObserver
+Intersect Observer API をラップしたカスタムフック。
+公式の実装例をベースとしています。
+
+```ts:resources/ts/hooks/util/useIntersectionObserver.ts
+import React, { useState, useCallback, useEffect } from 'react';
+import { FetchNextPageOptions, InfiniteQueryObserverResult } from 'react-query';
+import { AxiosError } from 'axios';
+
+type Argument = {
+  root?: React.RefObject<HTMLElement> | null;
+  onIntersect: (
+    options?: FetchNextPageOptions | undefined
+  ) => Promise<InfiniteQueryObserverResult<unknown, AxiosError>>;
+  threshold?: number | number[];
+  rootMargin?: string;
+  enabled?: boolean;
+};
+
+type Response = {
+  loadMoreRef: (node: Element) => void;
+};
+
+const useIntersectionObserver = ({
+  root = null,
+  onIntersect,
+  threshold = 1.0,
+  rootMargin = '0px',
+  enabled = true,
+}: Argument): Response => {
+  const [target, setTarget] = useState<Element | null>(null);
+
+  // コールバックref（呼び出し側はこれを無限スクロール検知用要素のrefに渡せばいい）
+  const loadMoreRef = useCallback((node: Element) => {
+    if (node !== null) {
+      setTarget(node);
+    }
+  }, []);
+
+  const newIntersectionObserver = useCallback(
+    () =>
+      new IntersectionObserver(
+        (entries) =>
+          entries.forEach((entry) => entry.isIntersecting && onIntersect()),
+        {
+          root: root && root.current,
+          rootMargin,
+          threshold,
+        }
+      ),
+    [root, onIntersect, threshold, rootMargin]
+  );
+
+  useEffect(() => {
+    if (!enabled) {
+      return;
+    }
+    const el = target;
+
+    if (!el) {
+      return;
+    }
+    const observer = newIntersectionObserver();
+
+    observer.observe(el);
+
+    // eslint-disable-next-line consistent-return
+    return () => {
+      observer.unobserve(el);
+    };
+  }, [enabled, target, newIntersectionObserver]);
+
+  return { loadMoreRef };
+};
+
+export default useIntersectionObserver;
+```
+
+公式の例ではターゲット要素の指定に useRef の ref オブジェクトが使用されていましたが、コールバック ref にしています。
+というのも ref オブジェクトの仕様上、少し都合が悪かったためです。
+
+<OG url="https://ja.reactjs.org/docs/hooks-reference.html#useref" />
+
+> useRef は中身が変更になってもそのことを通知しないということを覚えておいてください。.current プロパティを書き換えても再レンダーは発生しません。DOM ノードを ref に割り当てたり割り当てを解除したりする際に何らかのコードを走らせたいという場合は、コールバック ref を代わりに使用してください。
+
+自分の場合、初回データ取得中はスケルトンのみを表示していて、取得後に実際のデータのメモ一覧 + loadMore 要素を表示するようにしています。
+
+つまり、ターゲット要素の ref が
+初回データ取得中：なし（null）
+↓
+データ取得後：loadMore 要素
+と変化するわけですが、ref オブジェクトだとそれを通知してくれません。
+
+その結果、オブザーバーの監視対象がうまく設定されず動作しなくなってしまいました。
+そのため、コールバック ref を使うことで対応しています。
+
+それと useEffect で値を返す return と返さない return が混在しているせいか、ESLint の consistent-return ルールにひっかかったので、無効にしています。
+（うまい対応方法があれば知りたい...）
+
+---
+実は Intersection Observer API の存在を、公式の実装例を見て初めて知ったわけですが、なかなか便利だなぁと思いました。
+今回は`useInfiniteQuery`と組み合わせて使うような作りで作ってはいますが、少し変えれば他の状態管理ライブラリ等でも使えそうです。
+
+React Query の機能をまた1つ知れて、良い勉強になりました。
+引き続き、使っていきますー。
+
+## 参考リンクまとめ
+- [React Query](https://tanstack.com/query/v3)
+- [Material UI](https://v4.mui.com)
+- [MDN - Intersection Observer API](https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API)
+- [React - フック API リファレンス - useRef](https://ja.reactjs.org/docs/hooks-reference.html#useref)
