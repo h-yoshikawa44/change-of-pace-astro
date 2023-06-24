@@ -1,0 +1,1241 @@
+---
+title: "React × LaravelでSocialiteを使ったGitHubソーシャルログインを実装してみた"
+description: "Socialiteを使ってソーシャルログイン画面を実装した例"
+pubDate: "2021-05-19"
+updatedDate: "2021-11-27"
+category: "develop"
+tags: ["TypeScript", "React", "React Query", "PHP", "Laravel", "Socialite"]
+---
+
+以前、React × Laravel で簡易なログイン機能を作った記事を書いたのですが、あれからソーシャルログインを実装する機会がありました。
+正直微妙な部分もありつつ、せっかく実装したので記事化して供養します🙏
+
+import OG from "@/components/OG.astro"
+
+## はじめに
+以前の記事に引き続き、React 側の状態管理には React Query を使用。
+
+ソーシャルログインを実装するにあたって、Laravel 側では OAuth ライブラリのラッパーである Socialite を使用しました。
+
+<OG url="https://github.com/laravel/socialite" />
+
+デフォルトでは以下のサービスに対応しています。
+- Facebook
+- Twitter
+- Google
+- LinkedIn
+- GitHub
+- GitLab
+- Bitbucket
+
+他のサービスでのソーシャルログインを実装したいという場合は、コミュニティの方々が作られている Socialite を拡張したものを使うとよいです。
+ものすごく幅広いサービスに対応しています。
+
+<OG url="https://socialiteproviders.com" />
+
+## 今回作ってみたもの
+<img src="/gifs/2021/react-query-socialite/github-social-login.gif" width="100%" alt="GitHubでのソーシャルログイン処理の流れのGIF" />
+
+ソーシャルログイン機能。
+
+認証プロバイダーとなるサービスは、今回 GitHub を使用しました。
+どのサービスにするとしても、基本的な実装方法は一緒かと思われますが、部分的に異なる可能性があることにご留意ください。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+また、API の認証方式については Cookie を使ったステートフルなものになります。
+（※2021/11/25追記...Laravel の api ルートで使用するミドルウェアグループを変更、web のミドルウェアグループにある Cookie やセッションの機能を api ルートでも使用する、ということをしています）
+
+{/* <!-- textlint-enable --> */}
+
+実装にあたって、主に以下の記事を参考にさせていただきました。
+
+<OG url="https://qiita.com/tetsu-upstr/items/d1cccfac362872ed140c" />
+<OG url="https://qiita.com/KeisukeKudo/items/18dd8a342a4bdd43913c" />
+<OG url="https://qiita.com/hareku/items/ea09602bf40bf0a42040" />
+
+## 前提
+React（Laravel Mix）× Laravel による SPA × API 構成です。
+
+今回使用した各種バージョンは以下のとおりです。
+
+基本部分.
+- Node.js：14.2.0
+- TypeScript：4.1.3
+- React：16.14.0
+- PHP：7.4.14
+- Laravel：6.20.9
+
+ライブラリ - React 側.
+- Material UI
+  - core：4.11.3
+  - icons：4.11.2
+  - lab：4.0.0-alpha.57
+- axios：0.21.1
+- react-query：3.12.1
+- camelcase-keys：6.2.2
+
+ライブラリ - Laravel 側.
+- socialite：5.2.3
+
+## おおまかな処理の流れ
+### 主な登場人物
+- ユーザ
+
+- 画面
+  - ログイン画面
+  - ソーシャルログイン処理中画面
+  - アプリホーム画面
+  - （GitHub の）OAuth 認可画面
+
+- API
+  - OAuth 認可画面 URL 取得 API
+  - ソーシャルログイン API
+
+- モデル
+  - ユーザ
+  - 認証プロバイダー（ユーザを親に持つ）
+
+### 処理のフロー
+ざっくり書くとこんな感じです。
+※GitHub OAuth 認可画面へリダイレクト時に、GitHub 未ログインであれば先にログインが必要になります。
+
+- ログイン画面
+  - ユーザがログイン画面で、「Login with GitHub」ボタンを押下
+    → OAuth 認可画面 URL 取得 API で URL 取得
+    - 失敗時：エラー表示
+    - 成功時：取得した URL にリダイレクト
+
+- GitHub OAuth 認可画面
+  - ユーザが認可承認もしくはキャンセル
+    → ソーシャルログイン処理中画面をコールバック
+
+- ソーシャルログイン処理中画面
+  - 認可失敗（キャンセル含む）時：エラー表示
+  - 認可成功時：ソーシャルログイン API で以下のソーシャルログイン処理後に、アプリホーム画面へ
+    - GitHub アカウントと紐づくユーザがあれば、そのユーザでログイン
+    - 紐づくユーザはないが、同一メールアドレスユーザがあれば紐づけて、そのユーザでログイン
+    - ユーザがなければ、GitHub アカウントと紐づけたうえでユーザ新規登録して、そのユーザでログイン
+
+## ディレクトリ構成
+今回も Laravel 側は特に変わったことをしてないので、React 側だけ記載します。
+（全部載せると多いので、当記事の趣旨にあまり関係ないものは省略しています）
+
+Laravel プロジェクトの resources/ts 配下.
+```
+├ components
+│   ├ atoms
+│   │   ├ GeneralAlert.tsx
+│   │   └ GitHubLoginButton.tsx
+│   ├ molecules
+│   │   └ SocialLoginAlert.tsx
+│   ├ pages
+│   │   ├ Login.tsx
+│   │   └ SocialLoginProgress.tsx
+├ constants
+│   └ statusCode.ts
+├ containers
+│   ├ pages
+│   │   ├ Login.tsx
+│   │   └ SocialLoginProgress.tsx
+├ hooks
+│   ├ auth
+│   │   ├ index.ts
+│   │   ├ useOAuthUrl.ts
+│   │   └ useSocialLogin.ts
+├ models
+│   └ OAuth.ts
+└ app.tsx
+```
+
+今回も同様にリポジトリにタグをつけていますので、GitHub で見たいという方はこちらをどうぞ。
+<OG url="https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Freact-query-socialite" />
+
+※2021/09/13追記 関数コンポーネントの型定義に FC ばっかり使ってますが、FC から children がなくなるまでは VFC を使った方がいいです...。
+
+## 前準備
+認証プロバイダーとなるサービスで、クライアント ID を発行する必要があります。
+
+### クライアント ID とクライアントシークレットの発行
+GitHub の場合は以下のようになります。
+Authorization callback URL は今回の場合、ソーシャルログイン処理中画面の URL ですね。
+
+- ログイン後、ユーザアイコンから「Settings」を選択
+- 「Developer settings」を選択
+- 「OAuth Apps」を選択し、「New OAuth App」でアプリを作成
+- 必要な情報を入力し「Register application」
+  - Application name（アプリ名・必須）
+  - Homepage URL（アプリのホームページ URL・必須）
+  - Application description（アプリの説明・任意）
+  - Authorization callback URL（OAuth 処理後にコールバックする URL・必須）
+
+これで OAuth 用のアプリが作成され、クライアント ID が発行されます。
+クライアントシークレットも発行する必要があるので、アプリ設定画面から「Generate a new client secret」で発行。
+ともに控えておきます。
+
+#### アプリの設定がどのように使われるか
+画面的な部分で自分が確認できたところとしては、こんな感じです。
+Application logo については、一度 OAuth アプリ作成後に設定できます。
+
+OAuth 前のログイン画面
+<img src="/screenshots/2021/react-query-socialite/login-before-oauth.png" width="80%" alt="OAuth前のログイン画面画像 - Application logo、Application name" />
+
+OAuth 認可画面
+<img src="/screenshots/2021/react-query-socialite/oauth.png" width="80%" alt="OAuth認可画面 - Application logo、Application name、Authorization callback URL（ドメイン部分まで）" />
+
+Authorized OAuth Apps 画面
+<img src="/screenshots/2021/react-query-socialite/oauth-app.png" width="80%" alt="Authorized OAuth Apps画面 - Application logo、Application name、Homepage URL" />
+
+### 環境変数に追加
+先ほど控えた値を設定。
+`GITHUB_CALLBACK_URL`については、Authorization callback URL で設定したものと同じで OK です。
+
+.env の例.
+```
+GITHUB_CLIENT_ID=XXXXXXXXXXXXXXXXXXX
+GITHUB_CLIENT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+GITHUB_CALLBACK_URL=http://localhost:80/login/github/callback
+```
+
+```php:config/services.php
+'github' => [
+    'client_id' => env('GITHUB_CLIENT_ID'),
+    'client_secret' => env('GITHUB_CLIENT_SECRET'),
+    'redirect' => env('GITHUB_CALLBACK_URL'),
+],
+```
+
+## API（Laravel）側
+### Web ルートの確認
+Laravel Mix を使った SPA × API 構成だと、Web ルートは全受けにして、SPA 側で画面切り分けというやり方になることが多いでしょうか。
+
+ここでの注意点として、`api`プレフィックスのルートは除外しておかないと、API ルートで where での制約をかけたときに予期しない動作を起こす原因になります。
+
+というのも、where で制約をかけた場合に制約外のパスパラメータでアクセスすると、ルート不一致として通常は404が返ります。
+...が、ここで全受けにしてると、このルートに来てしまい200が返るという現象が起きてしまいます。
+
+```php:routes/web.php
+// apiプレフィックスは除外
+Route::get('/{any?}', fn() => view('index'))->where('any', '(?!api).+');
+```
+
+### users テーブルの改修
+ソーシャルログインにおいてはパスワードを使用しないため、null 許容にしておきます。
+（メールアドレスについては、認証プロバイダーとなるサービスによっては取得できないものもあるようなので、その場合はメールアドレスも null 許容にしておきましょう。）
+
+マイグレーションファイル.
+```php
+<?php
+
+use App\Enums\AuthType;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class ChangeSocialLoginUsersTable extends Migration
+{
+    public function __construct()
+    {
+        // dbalがenum型のカラム変更に対応していないので、エラー回避策としてstringにマッピングする
+        DB::getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'string');
+    }
+
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            // ソーシャルログインではパスワードを使わないのでnull許容にする
+            $table->string('password')->nullable()->comment('パスワード')->change();
+
+            $table->enum('auth_type', AuthType::getValues())->after('name')->comment('認証タイプ【' . implode(', ', AuthType::getValues()) . '】');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('users', function (Blueprint $table) {
+            $table->string('password')->nullable(false)->comment('パスワード')->change();
+
+            $table->dropColumn('auth_type');
+        });
+    }
+}
+```
+
+#### 認証タイプについて
+認証タイプについては、以下の3パターンを enum で持たせています。
+- ソーシャルログイン
+- メール・パスワードログイン
+- どちらも
+
+個人的に処理分けに使用するつもりなので追加してますが、別になくてもいいので詳細は省略します。
+
+ちなみに enum 型を扱う注意点として、テーブル情報変更を担う dbal が enum 型カラムの変更に対応していません（追加はできます）
+
+enum 型カラム自体の内容変更でなくても、enum 型カラムを持つテーブルの内容変更というだけでエラーになってしまいます。
+今回の場合だとロールバックで down メソッド実行時とか。
+そのため、エラー回避策として一旦 string にマッピングするという対応を入れています。
+
+<OG url="https://yshrfmru.hatenablog.com/entry/2019/01/06/191235" />
+
+### 認証プロバイダーテーブル作成
+ユーザと紐づく認証プロバイダーとなるサービスを管理するテーブルを作成します。
+認証プロバイダーとなるサービスが1つのみの場合は、users テーブルにカラム増やして対応でもいいですが、今回は別でテーブルを作りました。
+
+もしユーザが削除された時は、一緒に削除したいので cascade を設定しています。
+自分の場合、users テーブルの主キーは UUID で`user_id`という名前にしているので以下のようになっていますが、適宜置き換えてださい。
+
+マイグレーションファイル.
+```php
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class CreateIdentityProvidersTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('identity_providers', function (Blueprint $table) {
+            $table->uuid('user_id')->comment('ユーザID');
+            $table->foreign('user_id')->references('user_id')->on('users')->onDelete('cascade'); // 外部キー制約
+            $table->string('provider_name')->comment('プロバイダー名');
+            $table->string('provider_user_id')->comment('プロバイダーユーザID');
+            $table->primary(['provider_name', 'provider_user_id']); // 複合キー
+            $table->unique(['user_id', 'provider_name']); // 複合ユニーク
+            $table->dateTime('created_at')->nullable()->comment('作成日時');
+            $table->dateTime('updated_at')->nullable()->comment('更新日時');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('identity_providers');
+    }
+}
+```
+
+### モデルファイルの用意
+`identity_providers`テーブルを作ったので、モデルファイルも作っておきます。
+
+```php:app/IdentityProvider.php
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class IdentityProvider extends Model
+{
+    protected $primaryKey = ['provider_name', 'provider_user_id'];
+    public $incrementing = false;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['provider_name', 'provider_user_id'];
+
+    /**
+     * リレーション - User
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function user()
+    {
+        return $this->belongsTo('App\User', 'user_id', 'user_id');
+    }
+}
+```
+
+User モデル側にもリレーションを定義しておきます。
+
+```php:app/User.php
+    /**
+     * リレーション - IdentityProviders
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function identityProviders()
+    {
+        return $this->hasMany('App\IdentityProvider', 'user_id');
+    }
+```
+
+### OAuth 認可画面 URL 取得 API
+ログイン画面でソーシャルログインボタンを押下した時に呼ばれる API。
+OAuth 処理用のコントローラを用意して作成。
+
+Socialite に認証プロバイダー名を渡すことで、その認証プロバイダー用のドライバーを作成し、機能が使えるようになります。
+`redirect`メソッドで、OAuth 認可画面 URL を持った`RedirectResponse`を生成してくれるので、そこからその URL だけ取得して返すようにしています。
+
+```php:app/Http/Controllers/Auth/OAuthController.php
+    /**
+     * （各認証プロバイダーの）OAuth認可画面URL取得API
+     * @param string $provider 認証プロバイダーとなるサービス名
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function getProviderOAuthURL(string $provider)
+    {
+        $redirectUrl = Socialite::driver($provider)->redirect()->getTargetUrl();
+        return response()->json([
+            'redirect_url' => $redirectUrl,
+        ]);
+    }
+```
+
+API のルートに追加。
+where で制約をかけて、特定の認証プロバイダー名しか受け付けないようにします。
+
+```php:routes/api.php
+Route::get('/login/{provider}', 'Auth\OAuthController@getProviderOAuthURL')
+            ->where('provider', 'github')->name('oauth.request');
+```
+
+※2021/11/27追記
+ちなみにステートレス API として作る場合は、`stateless`メソッドを使えばいいようです。
+```php
+$redirectUrl = Socialite::driver($provider)->stateless()->redirect()->getTargetUrl();
+```
+
+#### OAuth 認可画面へのリダイレクトについて
+SPA と API に分かれておらず、Laravel でビューも担当している場合は`redirect`メソッドで302を返すだけで対応できます。
+
+API の場合は、302を返すと、API リクエストがそのリダイレクト先に対して行われるということになります。
+今回の場合だと GitHub の OAuth 認可画面 URL ということで、**別ドメイン**にリクエストする形です。
+CORS ポリシーに引っ掛かってはじかれるだけなので、URL だけ取得して返し、SPA 側でリダイレクトする形にしています。
+
+#### スコープについて
+スコープは、その認証プロバイダーに対して要求するアクセス権限です。
+Socialite における GitHub の場合のデフォルトスコープは`user:email`となっており、特にスコープに関する記述がなければこのスコープが使われます。
+
+GitHub のスコープ一覧は以下のとおりです。
+<OG url="https://docs.github.com/ja/developers/apps/scopes-for-oauth-apps" />
+
+スコープを追加したい時は`scopes`で、スコープを上書きしたい時は`setScopes`で対応できます。
+必要に応じた権限を設定しましょう。
+
+#### Socialite が生成するリダイレクト URL について
+`redirect`メソッドの中で生成されるリダイレクト URL は以下のような形式になっています。
+ドライバーとなるクラスで保持している URL に、必要なクエリパラメータを足している感じです。
+クライアント ID も使われてますね。
+
+```
+https://github.com/login/oauth/authorize?client_id=XXXXXXXXXXXXXXXXXXXX&redirect_uri=http%3A%2F%2Flocalhost%2Flogin%2Fgithub%2Fcallback&scope=user%3Aemail&response_type=code&state=pp7ndAoGIvcTqxkTSxzBklISPWd1PQ7Vyrw4gUsa
+```
+
+`state`に関しては、推測不能なランダムな文字列となっていて、クロスサイトリクエストフォージェリ対策で使用されるものです。
+後に検証するためセッションにもセットされます。
+この`state`は OAuth 認可処理後、GitHub からコールバックされるときに、一緒にクエリパラメータとして返却されます。
+（※2021/11/25追記...ステートフルの場合のみ`state`のセットおよび検証されるようです）
+
+### ソーシャルログイン API
+GitHub の OAuth 認可処理後にコールバックされたソーシャルログイン処理中画面より呼ばれる API。
+
+#### ソーシャルログイン処理を行うメソッド
+ソーシャルログイン処理は少し複雑になるので、モデルファイルにメソッドを用意しておきます。
+元々ある`find`メソッドなどと同じ感じで使いたかったので、static にしました。
+
+処理の分岐についてはコメントに書いてある通りです。
+複数テーブルの処理になるのでトランザクションブロックを使っています。
+
+```php:app/User.php
+     /**
+     * ソーシャルログイン処理
+     * @param $providerUser プロバイダーユーザ情報
+     * @param $provider プロバイダー名
+     * @return App\User
+     */
+    public static function socialFindOrCreate($providerUser, $provider)
+    {
+        $account = IdentityProvider::whereProviderName($provider)
+                    ->whereProviderUserId($providerUser->getId())
+                    ->first();
+
+        // すでにアカウントがある場合は、そのユーザを返す
+        if ($account) {
+            return $account->user;
+        }
+
+        $existingUser = User::whereEmail($providerUser->getEmail())->first();
+
+        if ($existingUser) {
+            // メールアドレスはユニークの関係上、同一メールアドレスユーザがいる場合は、そのユーザと紐づけて認証プロバイダー情報登録
+            $user = DB::transaction(function () use ($existingUser, $providerUser, $provider) {
+                $existingUser->update(['auth_type' => AuthType::BOTH]);
+                $existingUser->IdentityProviders()->create([
+                    'provider_user_id'   => $providerUser->getId(),
+                    'provider_name' => $provider,
+                ]);
+
+                return $existingUser;
+            });
+        } else {
+            // アカウントがない場合は、ユーザ情報 + 認証プロバイダー情報を登録
+            $user = DB::transaction(function () use ($providerUser, $provider) {
+                // nameがない時もあるので、その時はnicknameを使う
+                $providerUserName = $providerUser->getName() ? $providerUser->getName() : $providerUser->getNickname();
+                $user = User::create([
+                    'name'  => $providerUserName,
+                    'auth_type' => AuthType::SOCIAL,
+                    'email' => $providerUser->getEmail(),
+                ]);
+                $user->IdentityProviders()->create([
+                    'provider_user_id'   => $providerUser->getId(),
+                    'provider_name' => $provider,
+                ]);
+
+                return $user;
+            });
+        }
+
+        return $user;
+    }
+```
+
+#### API
+OAuth 処理用のコントローラに API を追加。
+
+Socialite 経由で GitHub ユーザ情報取得は、内部的に GitHub API を利用しているので、エラー対応として try～catch ブロックを使用しています。
+メッセージを取り出して500で再度例外を投げてるだけなので、あまり意味ない感じになってますが、本来はログ出力などした方がいいと思われます。
+
+```php:app/Http/Controllers/Auth/OAuthController.php
+    /**
+     * ソーシャルログインAPI（各認証プロバイダーからのコールバック後）
+     * @param string $provider 認証プロバイダーとなるサービス名
+     * @return App\User
+     */
+    public function handleProviderCallback(string $provider)
+    {
+        try {
+            $providerUser = Socialite::driver($provider)->user();
+        } catch (\Exception $e) {
+            // TODO ログ出力など
+            abort(500, $e->getMessage());
+        }
+        $authUser = User::socialFindOrCreate($providerUser, $provider);
+        Auth::login($authUser, true);
+
+        // ログインのみ or 既存ユーザに紐づけ + ログイン：200
+        // 紐づけしたうえでユーザ新規登録 + ログイン：201
+        return $authUser;
+    }
+```
+
+API のルートに追加。
+この API も同様に where で制約をかけておきます。
+
+```php:routes/api.php
+Route::post('/login/{provider}/callback', 'Auth\OAuthController@handleProviderCallback')
+            ->where('provider', 'github')->name('oauth.callback');
+```
+
+#### 既存アカウントがあるかどうかの照合のやり方について
+最初に Socialite 実装の記事を調べていたところ、メールアドレスで照合していたものが多い印象を受けました。
+認証プロバイダーとなるサービスより取得したユーザ情報から、メールアドレスを取得し、そのアドレスのユーザアカウントがあるか確認する方法。
+
+ただこれだと一度ソーシャルログインでユーザアカウント作成後に、もし認証プロバイダーとなるサービス側でメールアドレスを変更されてしまうと、そのユーザアカウントで**ログインできなくなります**。
+
+それってどうなんだろうか？と思っていたら、冒頭にも上げたこの記事のコメント欄で、このことに関するやり取りが行われていました。
+<OG url="https://qiita.com/tetsu-upstr/items/d1cccfac362872ed140c" />
+
+認証プロバイダーとなるサービスを示す識別子と、サービスから取得したユーザ識別子といった基本的に**不変**なものを使うとよいとのことだったので、まずはこの2つを使って照合するようにしています。
+そのうえで、なければ同一メールアドレスのユーザがいないか確認。
+いれば紐づける、いなければユーザ情報も含め新規登録する感じです。
+
+#### レスポンスについて
+`response`メソッドを使って200で統一してもよかったのですが、ユーザ登録の部分が201にあたると思ったので、そのままにしています。
+
+- ログインのみ
+- 既存ユーザ紐づけ + ログイン
+- ユーザ登録 + ログイン
+
+の3パターンともに`App\User`を返す形になります。
+ですが、ユーザ登録 + ログインの場合は`wasRecentlyCreated`が true になっているので、Laravel が201レスポンスにしてくれるわけです。
+
+既存ユーザ紐づけ + ログインパターンの、認証プロバイダー情報登録部分も201にあたるのでは？という疑問もあったりしますが、そこは特に対応せず200のままです。
+
+#### Socialite が内部的にやっていることについて
+コード的にはこれだけで、認証プロバイダーとなるサービスから情報が取得できますが、内部的には GitHub API が使われています。
+```php
+$providerUser = Socialite::driver($provider)->user();
+```
+また、この内部処理の中では、`code`と`state`のパラメータが必要になります。
+`code`は10分の期限つきの一時コード。
+`state`は OAuth 認可画面 URL 取得 API のところで書いた通り、クロスサイトリクエストフォージェリ対策の文字列。
+
+これらは OAuth 認可処理後の GitHub からのコールバック時にクエリパラメータで渡されてくるので、それをそのままこの API に渡すようにすれば OK です。
+
+`user`メソッドの実装はここですね。
+<OG url="https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226" />
+
+`state`が（OAuth 認可画面 URL 取得 API の処理の中で）セッションに保持していたものと一致するかの確認が行われています。
+
+GitHub とのやり取りの部分は、まず`code`を使ってアクセストークンを取得。
+そのアクセストークンを使って、GitHub ユーザ情報を取得...といった感じです。
+
+## SPA（React）側
+### アプリ初期化 + ルーティング
+コードの記載は省略。
+
+React Query の初期化と最低限以下のルーティングが定義されていれば OK。
+- ログイン画面
+- ソーシャルログイン処理中画面
+- アプリホーム画面（ログイン後に遷移する画面）
+
+### 定数
+Laravel から返されるステータスコードを定数で定義。
+（当記事の趣旨では使わないもの含む）
+
+```ts:resources/ts/constants/statusCode.ts
+// リソースが見つからないエラー
+export const NOT_FOUND = 404;
+
+// CSRFトークン不一致などのエラー
+export const UNKNOWN_STATUS = 419;
+
+// バリデーションエラー
+export const UNPROCESSABLE_ENTITY = 422;
+
+// サーバエラー
+export const INTERNAL_SERVER_ERROR = 500;
+```
+
+### ソーシャルログイン（GitHub）ボタン
+GitHub でソーシャルログイン用のボタンコンポーネント。
+
+```tsx:resources/ts/components/atoms/GitHubLoginButton.tsx
+import React, { FC } from 'react';
+import Button from '@material-ui/core/Button';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import { Provider } from '../../models/OAuth';
+
+type Props = {
+  handleSocialLoginRequest: (provider: Provider) => void;
+};
+
+const GitHubLoginButton: FC<Props> = ({ handleSocialLoginRequest }) => (
+  <Button
+    variant="contained"
+    startIcon={<GitHubIcon />}
+    fullWidth
+    style={{ color: '#fff', backgroundColor: '#24292e', textTransform: 'none' }}
+    onClick={() => {
+      handleSocialLoginRequest('github');
+    }}
+  >
+    Login with GitHub
+  </Button>
+);
+
+export default GitHubLoginButton;
+
+```
+
+### ソーシャルログインアラート表示
+#### Presentational Component
+ログイン画面において、ソーシャルログイン失敗（OAuth 認可画面 URL 取得失敗）時に表示するアラートのコンポーネント。
+
+通常のログインの方でも作っていたので、ソーシャルログイン版も一応作りました。
+
+```tsx:resources/ts/components/molecules/SocialLoginAlert.tsx
+import React, { FC } from 'react';
+import GeneralAlert from '../atoms/GeneralAlert';
+import {
+  UNKNOWN_STATUS,
+  INTERNAL_SERVER_ERROR,
+} from '../../constants/statusCode';
+
+type Props = {
+  statusCode: number;
+};
+
+const SocialLoginAlert: FC<Props> = ({ statusCode }) => (
+  <>
+    {(statusCode === UNKNOWN_STATUS ||
+      statusCode === INTERNAL_SERVER_ERROR) && (
+      <GeneralAlert
+        type="error"
+        title="サーバエラー"
+        content={`予期しないエラーが発生し、ソーシャルログインに失敗しました。\n恐れ入りますが時間をおいて再度お試しください。`}
+      />
+    )}
+  </>
+);
+
+export default SocialLoginAlert;
+```
+ここで使っている GeneralAlert コンポーネントは、アラートコンポーネントのラッパーで、こんな感じです。
+
+```tsx:resources/ts/components/atoms/GeneralAlert.tsx
+import React, { FC } from 'react';
+import Alert from '@material-ui/lab/Alert';
+import AlertTitle from '@material-ui/lab/AlertTitle';
+
+type Props = {
+  type: 'error' | 'info' | 'success' | 'warning';
+  title: string;
+  content: string;
+  onClose?: VoidFunction;
+};
+
+const GeneralAlert: FC<Props> = ({ type, title, content, onClose }) => (
+  <Alert severity={type} onClose={onClose} style={{ whiteSpace: 'pre-wrap' }}>
+    <AlertTitle>{title}</AlertTitle>
+    {content}
+  </Alert>
+);
+
+export default GeneralAlert;
+```
+
+ちなみにこういうやつです。
+<img src="/screenshots/2021/react-query-socialite/social-login-error.png" width="40%" alt="ログイン画面 - ソーシャルログイン失敗時アラート表示" />
+
+### ログイン画面
+#### Container Component
+通常のログインに関するコードもあるので少し長いですが、こんな感じです。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+`useOAuthUrl`フックは`useMutation`をラップしたカスタムフックです（後述）
+OAuth 認可 URL 取得処理を行う関数を実行するトリガー関数を受け取り、ソーシャルログインボタン押下時の関数の中で実行しています。
+
+{/* <!-- textlint-enable --> */}
+
+ソーシャルログインにおいてもフレンドリーフォワーディングをやりたかったのですが、一旦はやっていません。
+
+```tsx:resources/ts/containers/pages/Login.tsx
+import React, { FC, useState, useCallback } from 'react';
+import { useHistory, useLocation } from 'react-router-dom';
+import Login from '../../components/pages/Login';
+import { useLogin, useOAuthUrl } from '../../hooks/auth';
+import { Provider } from '../../models/OAuth';
+
+const EnhancedLogin: FC = () => {
+  const history = useHistory();
+  const location = useLocation();
+  const { from } = (location.state as { from: string }) || {
+    from: { pathname: '/' },
+  };
+
+  const { error, isLoading: loginIsLoading, mutate: login } = useLogin();
+  const statusCode = error?.response?.status;
+  const {
+    error: socialLoginError,
+    isLoading: socialLoginIsLoading,
+    mutate: redirectOAuth,
+  } = useOAuthUrl();
+  const socialLoginStatusCode = socialLoginError?.response?.status;
+  const isLoading = loginIsLoading || socialLoginIsLoading;
+
+  const [email, setEmail] = useState('');
+  const [password, serPassword] = useState('');
+
+  const handleChangeEmail = useCallback(
+    (ev: React.ChangeEvent<HTMLInputElement>) => {
+      setEmail(ev.target.value);
+    },
+    []
+  );
+
+  const handleChangePassword = useCallback(
+    (ev: React.ChangeEvent<HTMLInputElement>) => {
+      serPassword(ev.target.value);
+    },
+    []
+  );
+
+  const handleLogin = useCallback(
+    (ev: React.FormEvent<HTMLFormElement>) => {
+      ev.preventDefault();
+      if (!email || !password) {
+        return;
+      }
+      login(
+        { email, password },
+        {
+          onSuccess: () => {
+            history.replace(from);
+          },
+        }
+      );
+    },
+    [email, password, history, from, login]
+  );
+
+  const handleSocialLoginRequest = useCallback(
+    (provider: Provider) => {
+      redirectOAuth(provider);
+    },
+    [redirectOAuth]
+  );
+
+  return (
+    <Login
+      email={email}
+      password={password}
+      handleChangeEmail={handleChangeEmail}
+      handleChangePassword={handleChangePassword}
+      statusCode={statusCode}
+      socialLoginStatusCode={socialLoginStatusCode}
+      isLoading={isLoading}
+      handleLogin={handleLogin}
+      handleSocialLoginRequest={handleSocialLoginRequest}
+    />
+  );
+};
+
+export default EnhancedLogin;
+```
+
+#### Presentational Component
+これも通常のログインに関するコードもあるので少し長いですが、こんな感じです。
+
+ログイン、ソーシャルログインいずれか実行中に再度ボタンを押されないようにするため、`isLoading`を使って、実行中は`Backdrop`を表示するようにしています。
+（暗転してスピナークルクル表示の部分）
+
+```tsx:resources/ts/components/pages/Login.tsx
+import React, { FC } from 'react';
+import Backdrop from '@material-ui/core/Backdrop';
+import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Container from '@material-ui/core/Container';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import TextField from '@material-ui/core/TextField';
+import { useTheme, makeStyles } from '@material-ui/core/styles';
+import Header from '../../containers/organisms/Header';
+import LoginAlert from '../molecules/LoginAlert';
+import LegalLink from '../molecules/LegalLink';
+import SocialLoginAlert from '../molecules/SocialLoginAlert';
+import Footer from '../organisms/Footer';
+import GitHubLoginButton from '../atoms/GitHubLoginButton';
+import { Provider } from '../../models/OAuth';
+
+const useStyles = makeStyles(() => ({
+  decorationLine: {
+    borderImage: 'linear-gradient(0.25turn, transparent, #888, transparent)',
+    borderImageSlice: 1,
+  },
+}));
+
+type Props = {
+  email: string;
+  password: string;
+  handleChangeEmail: (ev: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChangePassword: (ev: React.ChangeEvent<HTMLInputElement>) => void;
+  statusCode?: number;
+  socialLoginStatusCode?: number;
+  isLoading: boolean;
+  handleLogin: (ev: React.FormEvent<HTMLFormElement>) => void;
+  handleSocialLoginRequest: (provider: Provider) => void;
+};
+
+const Login: FC<Props> = ({
+  email,
+  password,
+  handleChangeEmail,
+  handleChangePassword,
+  statusCode,
+  socialLoginStatusCode,
+  isLoading,
+  handleLogin,
+  handleSocialLoginRequest,
+}) => {
+  const theme = useTheme();
+  const classes = useStyles();
+  return (
+    <Box display="flex" flexDirection="column" minHeight="100vh">
+      <Header />
+      <main style={{ flex: 1 }}>
+        <Container maxWidth="xs">
+          <Card style={{ margin: `${theme.spacing(6)}px 0` }}>
+            <CardHeader title="login" style={{ textAlign: 'center' }} />
+            <CardContent>
+              <Box p={2} borderBottom={1} className={classes.decorationLine}>
+                {socialLoginStatusCode && (
+                  <SocialLoginAlert statusCode={socialLoginStatusCode} />
+                )}
+                <Box mt={2}>
+                  <GitHubLoginButton
+                    handleSocialLoginRequest={handleSocialLoginRequest}
+                  />
+                </Box>
+              </Box>
+              <form onSubmit={handleLogin}>
+                <Box
+                  p={2}
+                  display="flex"
+                  flexDirection="column"
+                  alignItems="center"
+                >
+                  {statusCode && <LoginAlert statusCode={statusCode} />}
+                  <TextField
+                    label="メールアドレス"
+                    variant="outlined"
+                    fullWidth
+                    value={email}
+                    margin="normal"
+                    required
+                    autoComplete="email"
+                    autoFocus
+                    onChange={handleChangeEmail}
+                  />
+                  <TextField
+                    type="password"
+                    label="パスワード"
+                    variant="outlined"
+                    fullWidth
+                    value={password}
+                    margin="normal"
+                    required
+                    autoComplete="current-password"
+                    onChange={handleChangePassword}
+                  />
+                  <Box my={2}>
+                    <LegalLink />
+                  </Box>
+                  <Box my={2}>
+                    <Button type="submit" color="primary" variant="contained">
+                      ログイン
+                    </Button>
+                  </Box>
+                </Box>
+              </form>
+            </CardContent>
+          </Card>
+        </Container>
+      </main>
+      <Footer />
+      <Backdrop style={{ zIndex: theme.zIndex.drawer + 1 }} open={isLoading}>
+        <CircularProgress color="inherit" />
+      </Backdrop>
+    </Box>
+  );
+};
+
+export default Login;
+```
+
+### ソーシャルログイン処理中画面
+認証プロバイダーとなるサービスの OAuth 認可画面での処理後にコールバックされる画面です。
+OAuth 認可をキャンセルした場合などもコールバックは実行され、この画面にきます。
+
+#### Container Component
+`useSocialLogin`は`useMutation`をラップしたカスタムフック（後述）
+ソーシャルログイン処理を行う関数を実行するトリガー関数を受け取り、レンダリングとともに実行しています。
+成功時はアプリホーム画面へリダイレクト。
+
+なお、GitHub からコールバックされた時のクエリパラメータがソーシャルログイン API で必要になるので、取り出してトリガー関数へ渡すようにしています。
+
+また、OAuth 認可キャンセルなどのエラー発生時は、クエリパラメータに`error`がセットされて返ってくるので分岐をかけています。
+
+```tsx:resources/ts/containers/pages/SocialLoginProgress.tsx
+import React, { FC, useState, useEffect, useMemo } from 'react';
+import { useParams, useHistory, useLocation } from 'react-router-dom';
+import queryString from 'query-string';
+import SocialLoginProgress from '../../components/pages/SocialLoginProgress';
+import { useSocialLogin } from '../../hooks/auth';
+import { Provider, OAuthParams } from '../../models/OAuth';
+
+const EnhancedSocialLoginProgress: FC = () => {
+  const { provider } = useParams<{ provider: Provider }>();
+  const history = useHistory();
+  const location = useLocation();
+  const socialResponse = useMemo(
+    () => queryString.parse(location.search) ?? {},
+    [location.search]
+  );
+  const [oAuthError, setOAuthError] = useState<boolean>(false);
+  const { error, mutate: socialLogin } = useSocialLogin();
+  const statusCode = error?.response?.status;
+
+  useEffect(() => {
+    if (Object.prototype.hasOwnProperty.call(socialResponse, 'error')) {
+      setOAuthError(true);
+      return;
+    }
+    socialLogin(
+      { provider, authParams: socialResponse as OAuthParams },
+      {
+        onSuccess: () => {
+          history.replace('/');
+        },
+      }
+    );
+  }, [history, provider, socialResponse, socialLogin]);
+
+  return (
+    <SocialLoginProgress oAuthError={oAuthError} statusCode={statusCode} />
+  );
+};
+
+export default EnhancedSocialLoginProgress;
+
+```
+#### Presentational Component
+OAuth 認可処理でエラー発生時、自アプリ側のソーシャルログイン処理でエラー発生時とで、それぞれアラート表示をするようにしています。
+エラーがなければ、処理中ということでスピナーを表示。
+
+```tsx:resources/ts/components/pages/SocialLoginProgress.tsx
+import React, { FC } from 'react';
+import { Link } from 'react-router-dom';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Card from '@material-ui/core/Card';
+import CardHeader from '@material-ui/core/CardHeader';
+import CardContent from '@material-ui/core/CardContent';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Typography from '@material-ui/core/Typography';
+import { useTheme } from '@material-ui/core/styles';
+import Header from '../../containers/organisms/Header';
+import GeneralAlert from '../atoms/GeneralAlert';
+
+type Props = {
+  oAuthError: boolean;
+  statusCode?: number;
+};
+
+const Content: FC<Props> = ({ oAuthError, statusCode }) => {
+  if (oAuthError) {
+    return (
+      <>
+        <GeneralAlert
+          type="error"
+          title="認可エラー"
+          content={`ソーシャルサービス側の認可処理でエラーが発生しました。\n恐れ入りますが時間をおいて再度お試しください。`}
+        />
+        <Box py={2} textAlign="center">
+          <Typography variant="caption">
+            <Link to="/login">ログイン画面</Link>
+            に戻る
+          </Typography>
+        </Box>
+      </>
+    );
+  }
+
+  if (statusCode) {
+    return (
+      <>
+        <GeneralAlert
+          type="error"
+          title="サーバエラー"
+          content={`予期しないエラーが発生し、ソーシャルログインに失敗しました。\n恐れ入りますが時間をおいて再度お試しください。`}
+        />
+        <Box py={2} textAlign="center">
+          <Typography variant="caption">
+            <Link to="/login">ログイン画面</Link>
+            に戻る
+          </Typography>
+        </Box>
+      </>
+    );
+  }
+
+  return (
+    <Box textAlign="center">
+      <CircularProgress color="inherit" />
+    </Box>
+  );
+};
+
+const SocialLoginProgress: FC<Props> = ({ oAuthError, statusCode }) => {
+  const theme = useTheme();
+  return (
+    <>
+      <Header />
+      <main>
+        <Container maxWidth="xs">
+          <Card style={{ margin: `${theme.spacing(6)}px 0` }}>
+            <CardHeader
+              title={
+                oAuthError || statusCode
+                  ? 'ソーシャルログイン処理失敗'
+                  : 'ソーシャルログイン処理中...'
+              }
+              style={{ textAlign: 'center' }}
+            />
+            <CardContent>
+              <Content oAuthError={oAuthError} statusCode={statusCode} />
+            </CardContent>
+          </Card>
+        </Container>
+      </main>
+    </>
+  );
+};
+
+export default SocialLoginProgress;
+```
+
+### モデル
+#### User
+Laravel 側の User モデルに合わせて定義。
+
+```ts:resources/ts/models/User.ts
+export type User = {
+  name: string;
+  authType: 'SOCIAL' | 'MAIL' | 'BOTH';
+};
+```
+
+#### OAuth
+ソーシャルログイン機能に関係する型定義をまとめて定義してあります。
+
+OAuthParams については、サービスごとにパラメータが違う可能性を考えて一応わけてます。
+（Socialite のコードを追った感じだと同じっぽい？）
+
+OAuthRedirect については、OAuth 認可画面 URL 取得 API のレスポンスの型です。
+当記事では記載していませんが、axios の interceptors でまとめて、キーのキャメルケース変換をかけているのでこうなっています。
+
+```ts:resources/ts/models/OAuth.ts
+export type Provider = 'github';
+
+export type GitHubOAuthParams = {
+  code: string;
+  state: string;
+};
+
+export type OAuthParams = GitHubOAuthParams;
+
+export type OAuthRedirect = {
+  redirectUrl: string;
+};
+```
+
+### ソーシャルログインに関するカスタムフック
+※作成したカスタムフックは、それぞれ index.ts で名前付きで再エクスポートしています。
+
+#### useOAuthURl
+`useMutation`をラップした、OAuth 認可画面 URL 取得処理を行うためのカスタムフック。
+成功時は、返却された URL にリダイレクト。
+
+```ts:resources/ts/hooks/auth/useOAuthUrl.ts
+import { UseMutationResult, useMutation } from 'react-query';
+import axios, { AxiosError } from 'axios';
+import { Provider, OAuthRedirect } from '../../models/OAuth';
+
+const getOAuthUrl = async (provider: Provider): Promise<OAuthRedirect> => {
+  const { data } = await axios.get(`/api/login/${provider}`);
+  return data;
+};
+
+const useOAuthUrl = (): UseMutationResult<
+  OAuthRedirect,
+  AxiosError,
+  Provider,
+  undefined
+> =>
+  useMutation(getOAuthUrl, {
+    onSuccess: (data) => {
+      window.location.href = data.redirectUrl;
+    },
+  });
+
+export default useOAuthUrl;
+```
+
+#### useSocialLogin
+`useMutation`をラップした、ソーシャルログイン処理を行うためのカスタムフック。
+成功時は、返却されたログインユーザ情報を user キーにセット。
+
+```ts:resources/ts/hooks/auth/useSocialLogin.ts
+import { useQueryClient, UseMutationResult, useMutation } from 'react-query';
+import axios, { AxiosError } from 'axios';
+import { Provider, OAuthParams } from '../../models/OAuth';
+import { User } from '../../models/User';
+
+const socialLogin = async (
+  provider: Provider,
+  authParams: OAuthParams
+): Promise<User> => {
+  const { data } = await axios.post(
+    `/api/login/${provider}/callback`,
+    authParams
+  );
+  return data;
+};
+
+const useSocialLogin = (): UseMutationResult<
+  User,
+  AxiosError,
+  { provider: Provider; authParams: OAuthParams },
+  undefined
+> => {
+  const queryClient = useQueryClient();
+
+  return useMutation(
+    ({ provider, authParams }) => socialLogin(provider, authParams),
+    {
+      onSuccess: (data) => {
+        queryClient.setQueryData('user', data);
+      },
+    }
+  );
+};
+
+export default useSocialLogin;
+
+```
+
+## おまけ - 認可した OAuth アプリの解除について
+自アプリ側でアカウント削除機能があったとして、自アプリ側のユーザに関するデータは削除できますが、自アプリとの OAuth 認可解除はどうするんだろうか？という疑問が浮かびました。
+
+調べた感じだとユーザ自身で解除してもらう感じになるのかなと。
+
+GitHub の場合だと、以下の URL で、このクライアント ID を持つ OAuth アプリの画面にリンクさせることができます。
+```
+https://github.com/settings/connections/applications/:client_id
+```
+（GitHub の 「settings」からだと「Application」「Authorized OAuth Apps」からいけます。）
+
+今回の場合は特に触れてないですが、このリンクがあると親切になりそうですね。
+
+---
+こんな感じでソーシャルログインを実装してみました。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+Socialite の記事は、ビューも Laravel でやっているものがほとんどで、SPA + API 構成でやるための流れがなかなかつかめなくて苦戦しました🙄
+この記事にまとめるのも時間かかってしまいました...。
+とりあえず一旦は形にできてよかったです。
+
+{/* <!-- textlint-enable --> */}
+
+当記事には記載していませんが、参考記事をベースに API 側のテストは一応書いてるので、気になる方はリポジトリからどうぞ。
+
+この実装が何かの参考になれば幸いです。
+
+## 参考リンクまとめ
+- [GitHub Docs - OAuth Appを構築する](https://docs.github.com/ja/developers/apps/building-oauth-apps)
+- [GitHub - laravel/socialite](https://github.com/laravel/socialite)
+- [Laravel 6.x - Socialite](https://readouble.com/laravel/6.x/ja/socialite.html)
+- [React Query](https://tanstack.com/query/v3)
+- [Material UI](https://v4.mui.com)
+- [Laravelログイン機能に複数のSNS認証を追加する（socialite）](https://qiita.com/tetsu-upstr/items/d1cccfac362872ed140c)
+- [Laravel+Socialiteで簡単ソーシャルログイン実装! (テスト付き)](https://qiita.com/KeisukeKudo/items/18dd8a342a4bdd43913c)
+- [Nuxt.jsとLaravelを使ってTwitterログイン機能を実装する](https://qiita.com/hareku/items/ea09602bf40bf0a42040)
+- [Doctrine\DBAL\DBALException : Unknown database type enum requested.](https://yshrfmru.hatenablog.com/entry/2019/01/06/191235)

@@ -1,0 +1,413 @@
+---
+title: "devChallenges - Responsive Web 編を完走したので、さっくり振り返ってみた"
+description: "devChallengesのResponsive Web編の課題内容と使用技術等の振り返り"
+pubDate: "2021-12-24"
+updatedDate: "2022-03-04"
+category: "develop"
+tags: ["devChallenges"]
+---
+
+こんにちは、ここ1年コツコツ勉強してよかったなぁなんて思っている、よしです。
+devChallenges というコミュニティの課題を1コース完走したので、さっくりと振り返ってみました。
+
+import OG from "@/components/OG.astro"
+
+※翻訳は Google 翻訳を使用しています。
+
+
+## devChallenges とは？
+<OG url="https://devchallenges.io" />
+
+> Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices.
+> ↓
+> 訳：
+> 実際のプロジェクトやプラクティスを使用して Web Developer になるのに役立つ Web 開発リソースとコミュニティ。
+
+おおよそ翻訳通りで、Web Developer になるための学習コンテンツや課題を提供しているコミュニティです。
+名称表記としては「devChallenges」だったり「DevChallenges」だったりするものの、個人的には前者を使うことが多く、当記事でもそう書いていきます。
+
+学習コンテンツ部分は準備中になっている項目が多かったりするのですが、課題の方は結構充実していまして。
+課題の大カテゴリとして以下の3つがあり、それぞれで8課題ずつ用意されています。
+- Responsive Web Developer（難易度1～3）
+- Front-end Developer（難易度2～3）
+- Full-stack Developer（難易度3～8）
+
+あらかじめ用意された Figma のデザインデータとユーザストーリーがあり、それに沿って課題作品を作っていくような形です。
+必ずしもデザインデータ通りというわけではなく、ユーザストーリーさえ満たしていれば多少のアレンジは OK。
+実装方法の明確な回答は用意されていませんので、自分で試行錯誤しながら作っていきます。
+作成した作品は自分でどこかしらのホスティングサービスに公開したのち投稿でき、他のユーザからレビューをもらうなんてことも出来たりします。
+逆に他の方の投稿作品を見て参考にしたりも（まだ自分で作成していない課題の他の方の投稿作品を見ることは非推奨となってはいますが）
+
+自分は実務でやった React にハマってからフロントエンド志望になった人間で、それから React 関連の技術を主に勉強してきたのですが...。
+デザインデータの再現実装を実務でやったことがないとか、HTML・CSS の基礎知識に微妙なところがあったり等課題を抱えておりまして。
+それらを克服するために、この devChallenges の課題をはじめました。
+また、実際に何かを作ってみるとして自分でネタが思いつきにくいところもありまして、そういう面でもこういう課題いいなと思ったというのもあります。
+
+最初は Front-end 編を進めていましたが、諸事情あって途中から Responsive Web 編の方を先に。
+この度、その8課題を完走し終えたので、ちょっと振り返ってみようかなと思った次第です。
+
+※2022/03/04追記
+Front-end 編振り返りも投稿しました。
+- [devChallenges - Front-end 編を完走？したので、さっくり振り返ってみた](/posts/2022-03-04-devchallenges-front-end)
+
+ちなみに Discord もありますが、英語が飛び交ってるので自分は参加だけして、あまり見られてないです。
+<OG url="https://discord.com/invite/3R6vFeM" />
+
+## Responsive Web 編の課題を振り返ってみる
+Responsive Web 編では主に Web サイトのページをレスポンシブに作る課題となっています。
+
+最後の課題を除き、素の HTML・CSS・JavaScript を使うことが推奨とされていたので自分もそうしました。
+実際には Sass や TypeScript 等を使うことが多いかなという印象ですが、まずは基礎的な書き方できないとなぁということで。
+とはいえ、PostCSS や npm パッケージはいくつか使っています。
+
+では、8課題をさっくりと振り返っていきます。
+（あまり実装のネタバレにならないような書き方としました）
+
+### 1 - 404 Not Found
+<OG url="https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY" />
+
+ユーザストーリー.
+- I can see a page following the given design
+（訳：与えられたデザインに続くページを見ることができます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/YPhZQTkeMmNiwBx00RsM" />
+
+404ページを作成する課題。最初の課題なので易しめです。
+HTML・CSS 基礎がわかっている人にとっては瞬殺ものやもしれませんね。
+
+自分の場合は、実装部分よりも、今後課題を進めていく上での環境構築やルール決め（クラスの命名規則など）で時間を使った記憶です。
+クラスの命名規則に関しては、BEM のやり方を取り入れてみることにしました。
+
+### 2 - My team page
+<OG url="https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U" />
+
+ユーザストーリー.
+- I can see a page following the given design
+（訳：与えられたデザインに続くページを見ることができます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/o1EB8NhO6xuVPuJWPY2m" />
+
+チームメンバー一覧ページを作成する課題。
+縦書きテキストや交互に余白の違うものをどう実装するか？を考えていきます。
+
+ただ単に要素を同じように並べるのと比較して、一工夫あることでちょっとおしゃれ感ありますね。
+
+### 3 - Interior Consultant
+<OG url="https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb" />
+
+ユーザストーリー.
+- I can see a page following the given design
+（訳：与えられたデザインに続くページを見ることができます）
+- On mobile, I can see a collapsed navigation
+（訳：モバイルでは、折りたたまれたナビゲーションを見ることができます）
+- On mobile, when I select the hamburger menu, I can see a navigation
+（訳：モバイルでハンバーガーメニューを選択すると、ナビゲーションが表示されます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/N7Gs8WCVYAbtkqWxomhL" />
+
+インテリアサービスサイトのトップページ + メニューを作成する課題。
+複数ページがあるサイトのようなデザインをしていますが、課題としてはトップページだけです。
+
+画面幅によって、ヘッダーメニューとメニューボタンを切り替える方法。
+メニューの要素をどうやって実装するか、表示非表示の制御などを考えていきます。
+
+メニューの制御をするにあたっては、意外と考えるところ多いですよね。
+改めて考えるいい機会になりました。
+
+### 4 - Recipe page
+<OG url="https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht" />
+
+ユーザストーリー.
+- I can see a recipe with ingredients and instructions
+（訳：材料と説明書が入ったレシピを見ることができます）
+- I can select a checkbox if I have the ingredients
+（訳：材料があればチェックボックスを選択できます）
+- I can see the number of servings, baking times
+（訳：私はサービングの数、ベーキング時間を見ることができます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/SUwASJDgXBoBuZqxRxk7" />
+
+レシピサイトのレシピページを作成する課題。
+テキスト中の一部分のみスタイルをあてたり、カスタムのリスト番号をどうやって実装するかを考えていきます。
+
+テキストに使える HTML タグって意外といろんな種類ありますよねー。
+それらをちゃんと正しく使い分けられているか？と言われると、なかなか沼りそうな気もしました。
+カスタムのリスト番号は、おおよそのやり方がわかると自分でアレンジもできて、ちょっとおしゃれにできそうです。
+
+### 5 - My Gallery
+<OG url="https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I" />
+
+ユーザストーリー.
+- I can see a page following the given design
+（訳：与えられたデザインに続くページを見ることができます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/Yf7HiQpP7rAXzM1euefq" />
+
+ギャラリーページを作成する課題。
+ギャラリー作品の配置をどうやって実装するか？を考えていきます。
+
+個人的には1つ前の Recipe page の方が難しかったです。
+
+### 6 - Checkout Page
+<OG url="https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO" />
+
+{/* <!-- textlint-disable ja-technical-writing/max-comma --> */}
+
+ユーザストーリー.
+- I can see a page following the given design
+（訳：与えられたデザインに続くページを見ることができます）
+- I can input email, phone, full name, address, city, country, and postal code
+（訳：メールアドレス、電話番号、氏名、住所、都市、国、郵便番号を入力できます）
+- I can input the number of items
+（訳：アイテム数を入力できます）
+- I can select at least 3 countries from the dropdown
+（訳：ドロップダウンから少なくとも3か国を選択できます）
+- When I click submit button or press enter, I can see a warning if validation fails
+（訳：送信ボタンをクリックするか Enter キーを押すと、検証が失敗した場合に警告が表示されます）
+- When I click submit button or press enter, I can see a successful alert if validation succeeds
+（訳：送信ボタンをクリックするか Enter キーを押すと、検証が成功した場合に成功したアラートが表示されます）
+
+{/* <!-- textlint-enable --> */}
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/SFmxGtHXWkESKZbSrg67" />
+
+買い物フォームページを作成する課題。
+input 要素の type や、バリデーションチェックをどうやって実装するか等を考えていきます。
+ちなみにこのバリデーションチェックに関しては、JavaScript を使わなくてもいいよとなっています。
+
+input 要素の type 属性も割といろんな種類ありますよねー。
+type によっては iOS Safari だと数字しか入力できないといった仕様もあるので、ちょっと注意が必要だなとか。
+郵便番号や電話番号のバリデーションは、グローバルに対応する場合、どういう正規表現になるんだろうか...と考えたり。
+（今回の実装では一旦日本仕様にしました）
+
+今回はおおよそデザイン通りにしましたが、入力例を下部に書いておくとか、必須かどうかを赤ラベルで表示しておくとか。
+そういう配慮も本来は必要になってきますよね。
+フォームもなかなか考えるところ多いなーと。
+
+### 7 - Edie homepage
+<OG url="https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0" />
+
+ユーザストーリー.
+- I can see a page following the given design
+（訳：与えられたデザインに続くページを見ることができます）
+- I can see a page on mobile following the given design
+（訳：与えられたデザインに従ってモバイルでページを見ることができます）
+- I can go to certain locations by selecting links in navigation or footer
+（訳：ナビゲーションまたはフッターでリンクを選択すると、特定の場所に移動できます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/EQJ91PQg8nr6B3yfAPf1" />
+
+LP を作成する課題。
+単純に作成する要素が多いので、なかなかやりごたえのある課題です。
+ナビゲーションからの移動やレイアウトのずらし等の実装方法を考えていきます。
+
+今までの課題でやってきたことの集大成 + レイアウトのずらしテクニックを使う感じで、個人的には割と楽しめた課題でした。
+LP を作れるようになると、フロントエンド基礎はおおよそ大丈夫そう？
+
+### 8 - Portfolio
+<OG url="https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt" />
+
+ユーザストーリー.
+- I can see personal details
+（訳：個人情報を見ることができます）
+- I can see skills
+（訳：スキルが見えます）
+- I can see projects
+（訳：プロジェクトを見ることができます）
+- I can filter projects by tag
+（訳：タグでプロジェクトをフィルタリングできます）
+- I can see hobbies or certificates
+（訳：趣味や証明書が見えます）
+- (optional): I can see experiences
+（訳：私は経験を見ることができます）
+- (optional): I can see blogs
+（訳：ブログが見えます）
+- (optional): I can see projects on different pages
+（訳：別のページでプロジェクトを見ることができます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6" />
+
+ポートフォリオページを作成する課題。
+この課題では React や Vue などを使ってもいいよ、とのことだったので、自分は Next.js × emotion で作りました。
+これまでの課題と違って、デザインデータそのままを作るというよりは参考にする程度で、自分のデータをいれてカスタマイズする感じです。
+
+自分は別でポートフォリオサイトを持っているので、そこまで作りこみはしませんでした。
+持っていない人はこの機会に作りこんでおいて、それを活用するのも1つの手ですね。
+
+## 主な使用した技術やライブラリなどの振り返り
+これを書くと若干実装のネタバレになる気もしますが、せっかくなので一緒に振り返ってみます。
+
+### 静的解析 + フォーマッタ
+<OG url="https://stylelint.io" />
+<OG url="https://prettier.io" />
+<OG url="https://eslint.org" />
+
+この辺はフロントエンドをやってるとおなじみですね。
+VSCode 拡張として自動整形を動作させたり、GitHub Actions 上でもチェックするようにしてました。
+
+途中から Pre Commit 設定も導入したいなということで、以下の2つを導入してコミット時フォーマットかけるようにも設定。
+
+<OG url="https://github.com/toplenboren/simple-git-hooks" />
+<OG url="https://github.com/okonet/lint-staged" />
+
+### Vite
+<OG url="https://ja.vitejs.dev" />
+
+次世代フロントエンドツール。
+
+課題を進めるにあたり、最初は VSCode 拡張の Live Server を使ってローカルサーバを立ててやってました。
+そこから JavaScript を使う課題へなった時に Vite のことを思い出し。
+Web 制作でも活用できて爆速環境だよー、ということで使い始めました。
+導入も簡単でしたし、ホットリロードやビルドも爆速で動作するので、すごい快適でしたね。
+
+ただ、Vite のホットリロードと VSCode 拡張として動作させていた Autoprefixer の自動整形がバッティングするという現象に遭遇して、記事を書いたりもしました。
+- [VSCode拡張によるファイル保存時自動整形の影響で、ViteのホットリロードがバグってCSSが空になった話](/posts/2021-10-24-vscode-autoprefixer-vite)
+
+以降、Autoprefixer は PostCSS として Vite 側で動作させるように。
+
+### Material Icons
+<OG url="https://google.github.io/material-design-icons" />
+
+課題のデザインの中で使われている各種アイコンは Material Icons を使っていると案内があったので、それを使うようにしました。
+1～7の課題では CDN で。8の課題では emotion-icons 経由で使用。
+
+<OG url="https://github.com/emotion-icons/emotion-icons" />
+
+### modern-css-reset
+<OG url="https://github.com/hankchizljaw/modern-css-reset" />
+
+リセット CSS はいろいろ種類があるわけですが、個人的にはこれがちょうどいいかなと最近使っています。
+
+### wicg-inert（+ メニューにおける制御）
+<OG url="https://github.com/WICG/inert" />
+
+inert 属性のポリフィル。
+そもそも inert 属性って何？って方は、以下の記事がとても参考になります。
+<OG url="https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute" />
+
+メニューを開いた時、その下にある本コンテンツのことも考慮しないといけないんですよね。
+Tab でフォーカスできないようにするとか、ポインターイベントを無効化するとか。
+ざっくり言うと、そういう管理を楽にできるのが inert 属性です。
+本実装はされていないため、このポリフィルを使用しています。
+
+便利な inert 属性ですが、スクロール抑制には対応していないので、そこは自分で overflow: hidden をつけるなりが必要です。
+
+#### フェードイン/アウト時に display が絡む時の問題
+それとメニューの表示/非表示時にフェードイン/アウトのようなアニメーションをつけたい時。
+display が絡む制御だと、フェードインは問題ないのにフェードアウトはうまく動作しない問題で頭抱えてましたね。
+フェードアウトアニメーションが終わる前に display: none へ切り替わってしまうための現象のようでした。
+
+これについては、ほぼ同じ悩みを抱えていた方がいて、display でなく visibility を使う方向で解決しました。
+visibility だと transition 制御が効くようです。
+<OG url="https://medium.com/eureka-engineering/html-css-%E3%81%9F%E3%81%8B%E3%81%8C%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3-%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6%E3%83%88%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%85%A8%E5%8A%9B%E3%81%A7%E5%8F%96%E3%82%8A%E7%B5%84%E3%82%93%E3%81%A0%E7%B5%90%E6%9E%9C-%E6%9C%80%E5%BC%B7%E3%81%AEcss%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1-%E6%9C%80%E5%BC%B7-881152c4ff13" />
+
+
+#### メニュー開閉時にスクロールバーの幅分ずれる問題
+本コンテンツは縦スクロール出来るぐらい内容があり、スクロールバーが表示されている。
+それに対して、メニューを開いている時は縦スクロール出来るほど内容がないため、スクロールバーが表示されないという場合。
+
+単純にフェードイン/アウトだけだと、スクロールバーの横幅分位置がずれてしまう現象が目立ってしまう問題がありました。
+（GIF をとってないのでどういうことかわかりづらいやもですが、本コンテンツとメニューの左右余白を同じにしてメニュー開閉するとわかるかなと）
+
+
+スクロールバーの有無次第で余白を調整するみたいなことをやろうとしたものの、なんだかイマイチだったので、スライドイン/アウトも兼ねるようにして目立たなくするという回避策をとりました。
+
+#### ページ初回読み込み時に transition が動作してしまう問題
+スライドイン/アウトも兼ねるようにしたわけですが、今度はページ初回読み込み時に transition が動作してしまう問題に遭遇。
+本来はメニューボタンの押下で、はじめてスライドイン/アウトが動作するはずですが、それがページ初回読み込み時にも動作してしまうというものです。
+
+<img src="/gifs/2021/devchallenges-responsive-web/transition-bug.gif" width="100%" alt="ページ初回読み込み時にtransitionが動作する現象のGIF" />
+
+こんな感じで一瞬ちらついてしまいます。
+
+これに関しては、調べたところ Chrome のバグらしいです。
+本来は transition の初期状態が最初の状態になりますよね。
+そこが transition が反映されていない初期状態（メニューが画面内にある状態） → transition の初期状態（メニューが画面外にある状態）という感じで動作してしまっているとのことです。
+あらかじめ transition を無効にするクラスを付与しておき、ページ読み込み後にそのクラスを外すようにして対応しました。
+<OG url="https://css-tricks.com/transitions-only-after-page-load" />
+
+### focus-visible
+<OG url="https://github.com/WICG/focus-visible" />
+
+focus-visible 疑似クラスのポリフィル。
+focus-visible 疑似クラスは Safari の対応がイマイチなので、ポリフィルを使うようにしています。
+
+使うところとしては、ボタン要素の outline 制御です。
+not と組み合わせて、キーボード操作以外の focus 時は outline を表示しないようにする感じ。
+
+こちらのツイートを見てからは、outline-color プロパティで制御するようにしています。
+<blockquote class="twitter-tweet">
+  <p lang="en" dir="ltr">If you have to do this, I&#39;d suggest not using outline: none but rather, something like &#39;outline-color: transparent&#39; so you still have outlines in Windows High Contrast Mode <a href="https://t.co/JfFeZi1mhZ">https://t.co/JfFeZi1mhZ</a>
+  </p>&mdash; nic (@NicMakesStuff) <a href="https://twitter.com/NicMakesStuff/status/1462231545322741762?ref_src=twsrc%5Etfw">November 21, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### TypeScript × Next.js × emotion
+<OG url="https://www.typescriptlang.org" />
+<OG url="https://nextjs.org" />
+<OG url="https://emotion.sh/docs/introduction" />
+
+8の課題の時のみ使用。
+元々、Front-end 編をやってた時に使ってた構成です。
+TypeScript と Next.js はデファクトくらいの印象なので、実際に使いながら勉強したいなということで採用しました。
+
+それと CSS in JS も流行っているので、どれか使えるようになりたいなというので、emotion を使うようになりました。
+個人的には styled-components よりも emotion の方が好みで、CSS Prop を使ってスタイルを書いています。
+
+### csx
+<OG url="https://github.com/typestyle/csx" />
+
+8の課題の時のみ使用。
+CSS に関するユーティリティな関数を提供するライブラリ。
+元々は TypeStyle というライブラリから使用されているもののようです。
+
+RGB 値からでなくカラーコードを基準とした暗い色や明るい色、透明度を反映させた色を作りたいことがあったので、このライブラリを使った関数を作って活用しています。
+Sass だったら元々関数が用意されているんですが、emotion だと使えないっぽかったので。
+
+### rss-parser
+<OG url="https://github.com/rbren/rss-parser" />
+
+8の課題の時のみ使用。
+RSS 情報を取得し、JS オブジェクトとして扱えるようにしてくれるライブラリ。
+
+ブログの最新5記事を表示する、ということをやりたかったので活用しました。
+割とあっさり使えて便利でしたね。
+
+## 完走してどうだった？
+
+{/* <!-- textlint-disable --> */}
+
+元々、自分の業務経験としては、バックエンド寄りの方が多い身でして。
+フロントの業務経験としては、Web の管理システム系を React + UI コンポーネントライブラリで作ったことがある程度だったので、これまであまり素の HTML や CSS を書く機会がそんなになかったんですよね。
+その結果、フロントエンド志望になったのはいいが HTML・CSS 基礎が微妙なところあるってどうなの？という感じで、お恥ずかしい限りでした...。
+
+そんな状態を克服するべく、この8課題を実際に自分で調べたり試行錯誤しながら作っていったことで、なんだか少し自信がついたといいますか。
+自分なりの進め方とか、スタイルのパターンとか、そういうのが定まってきた感覚がありましたね。
+本当に課題に取り組んでよかったなぁと。
+
+Front-end 編が中断したままなので、次はそちらの続きもぼちぼちやろうかなと思います。
+
+---
+さっくりと振り返るつもりが、意外と長くなりましたね🙄
+（長くなるのはもはやお家芸）
+
+devChallenges は、現役の方が腕試しや復習をするのにも、未経験の方が勉強するにもいいコンテンツだと思います。
+興味がある方は、ぜひチャレンジしてみてはいかがでしょうか。
+
+{/* <!-- textlint-enable --> */}
+
+## 参考リンクまとめ
+- [devChallenges](https://devchallenges.io/)
+
+※記事系のみ.
+- [UIにおける見えるけど利用できない非活性な領域の実装とinert属性について](https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute)
+- [【HTML/CSS】たかがフェードイン/フェードアウトするだけの挙動に全力で取り組んだ結果、最強のCSSができてしまった話【最強】](https://medium.com/eureka-engineering/html-css-%E3%81%9F%E3%81%8B%E3%81%8C%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3-%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6%E3%83%88%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%85%A8%E5%8A%9B%E3%81%A7%E5%8F%96%E3%82%8A%E7%B5%84%E3%82%93%E3%81%A0%E7%B5%90%E6%9E%9C-%E6%9C%80%E5%BC%B7%E3%81%AEcss%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1-%E6%9C%80%E5%BC%B7-881152c4ff13)
+- [Transitions Only After Page Load](https://css-tricks.com/transitions-only-after-page-load/)

@@ -1,0 +1,190 @@
+---
+title: "VSCode拡張によるファイル保存時自動整形の影響で、ViteのホットリロードがバグってCSSが空になった話"
+description: "VSCode拡張として動かしていたAutoprefixerの影響で、Viteのホットリロードがバグってしまった話とその対応について"
+pubDate: "2021-10-24"
+updatedDate: "2021-10-24"
+category: "develop"
+tags: ["Autoprefixer", "Vite"]
+---
+
+こんにちは、よしです。
+先日、Vite デビューをしたところ思わぬ現象に遭遇してしまいました...。
+せっかくなので、その対応方法とともに記録を残します。
+
+import OG from "@/components/OG.astro"
+
+## 要約
+さらっと結論だけ知りたい方向けに、先に結論を書いておきます。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+VSCode 拡張の Autoprefixer を導入している + ファイル保存時にこの拡張の自動整形を動作させている
+↓
+Vite のローカルサーバを立ち上げてコードを書いている
+↓
+Vite の（CSS ファイル保存時の）ホットリロードが時折バグって、生成物の CSS の中身が空になってしまうことがある
+↓
+Vite と Autoprefixer を併用する場合は、Autoprefixer を VSCode 拡張として動作させるのでなく、PostCSS として Vite 側で実行してもらうようにしようね！
+
+{/* <!-- textlint-enable --> */}
+
+ちなみに当記事では Vite についての説明は特にしません。
+
+## 遭遇したときの状況とその現象
+海外のとある課題サイトの課題を進めていたところ。
+微量ながら JavaScript も書くので、せっかくなら Vite を導入してみるかーと途中から導入。
+<OG url="https://ja.vitejs.dev" />
+
+導入には公式サイトともに、こちらの記事を参考にさせていただきました。
+<OG url="https://ics.media/entry/210708/#contents-anchor-pitfalls" />
+
+Vite を使ったのはこれが初めて。
+導入の楽さと爆速の環境を体験して、次世代のフロントエンドツールとして注目されているのもわかるなぁという気持ちでした。
+
+そのなか、スタイリングをするために CSS ファイルを編集してホットリロードを何度かさせていると...。
+爆速のホットリロードで、全くスタイルがあたってない状態になってしまいました。
+あまりに不意のことだったので、「急にどうした！？」とテンパる自分。
+
+そこからさらにホットリロードを何度かさせると、元に戻ることもあればそのままの状態が続いたり。
+たまに起こるくらいならまだしも、4、5回に1回くらいの頻度で発生するので、こりゃあ原因調査してみようということに。
+
+## 原因調査
+### JavaScript ファイルが読み込まれてない？実行されていない？
+Vite を使っている場合、CSS ファイルの読み込みに関しては、起点となる JavaScript ファイルからインポートということもできます。
+自分の場合もそうしていました。
+そのため、最初は JavaScript が読み込まれてないとか、実行されていないとかなのかな？と。
+
+試しに JavaScript ファイルへ setInterval を仕込むと普通に動作していたので、この説はなし。
+また、この現象は CSS ファイル保存時のホットリロード時のみ発生していたので、CSS がなんかおかしくなっている説へ。
+
+### 生成される CSS がおかしい？
+正常時と現象発生時の CSS を比較して見てみることに。
+
+#### 起点 JavaScript ファイルから CSS ファイルをインポートした場合
+```js:js/main.js
+import '../css/style.css';
+```
+
+Vite の本来の挙動としては以下のようになっています。
+
+<OG url="https://ja.vitejs.dev/guide/features.html#css" />
+> .css ファイルをインポートすると、HMR をサポートする style タグを介してそのコンテンツがページに挿入されます。
+
+<img src="/screenshots/2021/vscode-autoprefixer-vite/css-import-normal.png" width="80%" alt="起点JavaScriptファイルからCSSファイルをインポートした場合に挿入されるstyleタグ - 正常" />
+本来はこのように head タグ配下に style タグが挿入され、そこに CSS の内容が展開されます。
+
+しかし、現象発生時は head タグ配下に style タグ自体は挿入されているものの、内容が空になっている状態。
+<img src="/screenshots/2021/vscode-autoprefixer-vite/css-import-abnormal.png" width="80%" alt="起点JavaScriptファイルからCSSファイルをインポートした場合に挿入されるstyleタグ - 異常" />
+
+#### link タグから CSS ファイルを読み込んだ場合
+```html: index.html
+<link href="css/style.css" rel="stylesheet" />
+```
+
+正常時は、CSS ファイルにクエリパラメータがついたものを読み込むような感じに変化。
+
+<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-normal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のlinkタグ - 正常" />
+<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-file-normal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のCSSファイル - 正常" />
+
+現象発生時は、CSS ファイルの中身が空になってしまっている状態。
+<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-abnormal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のlinkタグ - 異常" />
+<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-file-abnormal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のCSSファイル - 異常" />
+
+---
+これで、とりあえず CSS がおかしくなっているということは特定。
+あとは、なぜ CSS がおかしくなってしまっているのか？という部分の調査へ。
+
+### Google 先生に頼る・Issue を見てみる
+まずは、同じ現象に遭遇した方がいないかググってみよう！
+↓
+似たような現象が起きてる方すら見つからず...。
+
+じゃあ、Vite のリポジトリの Issue に上がってないか見てみよう！
+↓
+少し似ている現象の Issue は見つかるも、よく読み込んでいくとなんか違う...
+
+これはもしや、レアケースな現象をひいてしまったのか？
+もし原因を特定できたら Vite リポジトリに contribute するチャンスか？
+なんて考えていました。
+
+...が、ここで VSCode 拡張によるファイル保存時の自動整形のことを思い出し。
+あ、これ、自動整形とバッティングしてるんじゃね？ということで、そちらを見ていくことに。
+
+### バッティングしている VSCode 拡張の特定
+この時、VSCode 上でファイル保存時の自動整形を動作させている拡張のうち、CSS ファイルに関するものは以下の3つ。
+
+- StyleLint：CSS の静的解析 + 自動整形
+- Prettier：コードフォーマッタ
+- Autoprefixer：自動でベンダープレフィックス付き CSS プロパティを付与してくれるやつ
+
+設定を調整しながら、1つずつ見ていくと...
+
+- StyleLint：現象発生せず
+- Prettier：現象発生せず
+- Autoprefixer：**現象発生！**
+
+はい、Autoprefixer のファイル保存時の自動整形とバッティングして、おかしな挙動になっていたようです。
+
+## Vite と Autoprefixer の共存
+ただ、Autoprefixer は非常に便利なのでどうにか共存させたい。
+またググってみた結果、Vite 側で実行させるようにすればいいじゃん～という結論に至りました。
+（というか、大多数の方は普通にそうしている気がする...🙄）
+
+VSCode 拡張の自動整形設定は削除（デフォルトがオフなので）
+```diff
+- "autoprefixer.formatOnSave": true
+```
+
+ライブラリとしてインストール.
+```bash
+yarn add -D postcss autoprefixer
+```
+
+PostCSS として Autoprefixer を使用するよう設定.
+```js:postcss.config.js
+module.exports = {
+  plugins: [require('autoprefixer')],
+};
+```
+
+<OG url="https://ja.vitejs.dev/guide/features.html#postcss" />
+> もしプロジェクトに有効な PostCSS が含まれている場合 (postcss-load-config でサポートされている任意の形式、例: postcss.config.js)、インポートされたすべての CSS に自動的に適用されます。
+
+と公式にあるように、これだけで自動的に適用されます。
+Autoprefixer のオプションについてはお好みで。
+Vite の設定ファイルである`vite.config.js`にも、PostCSS の設定を書けるプロパティがあるので、そっちで書いても OK。
+自分の場合は、別ファイルにしたかったので分けてます。
+
+ローカルサーバを立ち上げてみると、展開される CSS にちゃんとベンダープレフィックス付き CSS プロパティが付与されてる！
+本番ビルド生成物でも無事確認できたので、これにて解決🎉
+これで Vite の爆速環境を満喫できるぞーー！
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+ちなみに、これでベンダープレフィックス付き CSS プロパティは自分で書かないようになるので、StyleLint の`property-no-vendor-prefix`というルールを導入しておくとよいです。
+これはベンダープレフィックスを禁止にするルールなので、もし書いてしまっていてもすぐに気付けます。
+
+{/* <!-- textlint-enable --> */}
+
+## 余談
+この調査をしている時に、ちょうど StyleLint の VSCode 拡張のアップデートにも遭遇。
+1系リリースに伴い StyleLint 14系からのサポート + 破壊的変更、とあり、この拡張が動作しなくなったという...。
+
+調査してる時に微妙に関係ある別の対応入るのやめてくれよぉぉぉ
+と内心思っていましたが、公式の移行ガイドを見ながら設定を見直して事なきを得ました(笑)
+
+---
+今回は、大した文字数の記事じゃないこともあり、いつもと少し文体を変えて遊んでみました。
+うざかったらすみません。
+
+これ書いていて、この現象に遭遇したの自分くらいなのでは？という気もしたりしなかったりですが、まぁ何かのお役に立てば幸いです。
+
+## 参考リンクまとめ
+
+{/* <!-- textlint-disable --> */}
+
+- [Vite](https://ja.vitejs.dev/)
+- [jQueryからTypeScript・Reactまで！Viteで始めるモダンで高速な開発環境構築](https://ics.media/entry/210708/#contents-anchor-pitfalls)
+- [Webエンジニア（コーダー）向けVite環境の紹介【初心者向け解説】](https://flex-box.net/vite-for-coder/)
+
+{/* <!-- textlint-enable --> */}

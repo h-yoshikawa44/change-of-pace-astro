@@ -18,9 +18,12 @@ type OGPJson = Record<
   }
 >;
 
+const found = Astro.request.url.match(/posts\/(\d{4})/);
+if (found === null) throw Error('記事URLから年度が抽出できませんでした');
+const postYear = found[1];
 const { url } = Astro.props;
 const generatedFilePath = new URL(
-  '../../generated/ogp.json',
+  `../../generated/ogp/${postYear}.json`,
   // astro は build 時に自身ではなく dist/entry.mjs に向けてしまいエラーになるので指定する
   import.meta.url
 );
@@ -47,23 +50,10 @@ if (ogp[url]) {
     $("meta[name='description']").attr('content') ??
     '';
   image = $("meta[property='og:image']").attr('content') ?? '';
-  favicon =
-    $("link[rel='icon']").attr('href') ??
-    $("link[rel='apple-touch-icon']").attr('href') ??
-    $("link[rel='apple-touch-icon-precomposed']").attr('href') ??
-    $("link[rel='shortcut icon']").attr('href') ??
-    `https://www.google.com/s2/favicons?domain=${origin}`;
+  favicon = `https://www.google.com/s2/favicons?sz=${256}&domain=${origin}`;
 
   if (image && !image.startsWith('http')) {
     image = `${origin}${image}`;
-  }
-
-  if (favicon && favicon.startsWith('//')) {
-    favicon = `https://www.google.com/s2/favicons?domain=${origin}`;
-  } else if (favicon && !favicon.startsWith('http')) {
-    favicon = favicon.startsWith('/')
-      ? `${origin}${favicon}`
-      : `${origin}/${favicon}`;
   }
 
   if (import.meta.env.PROD) {
