@@ -1,0 +1,619 @@
+---
+title: "Windows側になるべく実行環境作りたくなかったやつが、Voltaでバージョン管理できるNode.js環境を作ってみた"
+description: "Node.js関連に特化したバージョン管理を担うVoltaを、Windows側に導入して使ってみたよという記録と紹介"
+pubDate: "2021-11-09"
+updatedDate: "2021-11-09"
+category: "develop"
+tags: ["Windows", "Node.js", "Volta"]
+---
+
+こんにちは、開発環境整備って割と沼だよねと最近思っている、よしです。
+Node.js 環境を改めて考える機会があり、Volta というバージョン管理ツールを使ってみました。
+その記録と紹介です。
+
+※翻訳には Google 翻訳を使用しています。
+
+import OG from "@/components/OG.astro"
+
+## Volta とは？
+<OG url="https://volta.sh" />
+
+ざっくりいうと Node.js 関連に特化したバージョン管理ツールです。
+
+> The Hassle-Free JavaScript Tool Manager
+> （訳：手間のかからない JavaScript ツールマネージャー）
+公式では、このように書かれていました。
+
+Node.js のバージョン管理というと、nodenv とか nvm、n、Nodist とか色々有名なものがありますよね。
+それらに対して、Volta では Node.js だけでなく、パッケージマネージャである npm や yarn、npm パッケージも管理できます。
+公式では Volta の特徴として以下の3つがあげられています。
+
+### Fast
+> Install and run any JS tool quickly and seamlessly! Volta is built in Rust and ships as a snappy static binary.
+> （訳：JS ツールをすばやくシームレスにインストールして実行してください！ Volta は Rust に組み込まれており、きびきびとした静的バイナリとして出荷されます。）
+
+Volta は Rust で作られていることもあり、非常に動作が早いです。
+実際に Volta 経由で新しく Node.js を落としてくるときも、待ち時間はほとんどなかったです。10秒くらい。
+
+### Reliable
+> Ensure everyone in your project has the same tools—without interfering with their workflow.
+> （訳：プロジェクトの全員が同じツールを使用していることを確認します。ワークフローに干渉することはありません。）
+
+Google 翻訳だとなんかよくわからん感じになっていますが、プロジェクトメンバー全員が同じバージョンを使うようにできる、ということなのかなと。
+プロジェクトごとにバージョン固定ができるのは、既存のバージョン管理ツールでもおなじみですね。
+
+### Universal
+> No matter the package manager, Node runtime, or OS, one command is all you need: volta install.
+> （訳：パッケージマネージャー、Node ランタイム、または OS に関係なく、必要なコマンドは1つだけです。volta install です。）
+
+Volta は OS に関係なく動作します。
+これも Rust 製であることの恩恵の1つでしょうか。
+
+既存のバージョン管理ツールの多くは Unix 系のみ対応で、Windows だと WSL 側でしか使えませんでした。
+Windows 向けバージョン管理ツールとして Nodist がありましたが、（2021/11/09現在で）最終リリースが2019年で古くなっていたりと問題を抱えており...。
+Volta は Windows でも動作するので、Nodist から移行したという方も見受けられましたね。
+
+---
+
+自分は個人 PC として Windows を使っていまして。
+これまでは Windows 側になるべく言語や実行環境を入れたくない派だったので、WSL 側や Docker で環境を作るようにして。
+Node.js に関しては、WSL 側で Linuxbrew → anyenv → nodenv を使ってバージョン管理をして環境を作っており、特に困ったことはありませんでした。
+
+そのなか、開発環境について考える機会があり、その時期にこの Volta を知り。
+実際に使ってみて良さそうであれば、今後は Windows 側で Node.js の管理しようかなと思ったわけです。
+
+それでは、基本的な使い方を紹介していきます。
+
+## 動作確認バージョン
+- Windows 10 Pro：20H2（19042.1288）
+- Volta：1.0.5
+
+## インストール
+### Windows
+インストーラが用意されているので、それをダウンロードしてインストール。
+GitHub リポジトリの[リリース](https://github.com/volta-cli/volta/releases)から直接ダウンロードしてもいいですし、winget でも対応しているのでそっちでも。
+```powershell
+winget install --id Volta.Volta
+```
+
+インストーラを使うと、以下のパスを自動で追加してくれます。
+- ユーザ環境変数の Path：`\Users\\{USER}\AppData\Local\Volta\bin`
+- システム環境変数の Path：`\Program Files\Volta\`
+
+システム環境変数の追加もあるので、ターミナルを起動していた場合は、ターミナルごと再起動してコマンドが使えるか確認。
+
+補足として「**Volta の機能はシンボリックリンクの作成に依存するため、次のいずれかを行う必要がある**」とあります。
+- 開発者モードを有効にする（推奨）
+- 昇格された特権で Volta を実行する（非推奨）
+
+#### 開発者モード無効でもいける？
+開発者モードにするのはなんだか少し抵抗があった自分は、まずは無効のままでインストールしてみました。
+
+結論から言うと、Node.js とパッケージマネージャ（npm と yarn）のバージョン管理に関しては、特に問題なく動作した印象です。
+仕組みとして、〇〇env 系でおなじみの shim が使われているそうなので、問題なかったのかも？
+
+しかし、npm パッケージに関してはシンボリックリンクが使われる仕組みのため、Volta 管理下でグローバルインストールするとエラーになりました。
+Windows では、開発者モードでないと管理者権限のユーザでしかシンボリックリンクが作成できないことによるものでしょう。
+```bash
+volta install typescript
+error: Could not create shared environment for package 'typescript'
+
+Please ensure you have correct permissions to the Volta directory.
+```
+
+なので、npm パッケージのグローバルインストールを併用しないのなら、無効のまま Volta を使用しても支障はなさそう？
+ただ、公式では有効にすることが推奨されているので、無効のまま使用するのをおススメはしません。
+
+---
+
+ちなみに、自分が Volta をインストールした時は、ちょっとトラブりまして。
+
+最初、インストール自体は成功しているのに volta コマンドが使えないという問題が生じてしまい...。
+何度かアンインストールとインストールを繰り返してもダメで。
+やっぱり開発者モードにしないとダメかーと思って有効にして、インストールしなおしてもダメで。
+
+「???」という感じでしたが、Volta に関するディレクトリを削除したうえでインストールしなおしたら無事コマンドが使えるようになりました。
+- `\Users\\{USER}\AppData\Local\Volta`
+- `\Program Files\Volta\`
+
+もしかしたら最初にインストールした時、どこかファイルが壊れていて、それが残っていたのかも？
+
+### Unix
+Mac や Linux の方は curl でシェルを落としてきて、実行すれば OK。
+WSL でも同様です。
+```bash
+curl https://get.volta.sh | bash
+```
+
+この方法では、使っているシェルに応じたファイル（`~/.zshrc`とか）にパスを自動で追加してくれるとのこと。
+（内部的に実行している`volta setup`コマンドによるもの）
+```
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+```
+
+ちなみに brew 経由でもインストールできます。
+```bash
+brew install volta
+```
+こちらでは`volta setup`の自動実行は行われないので、手動で実行。
+（もしくは自分で直接パスを追記）
+```bash
+volta setup
+```
+
+## 主な機能
+コマンドの詳細は後述するので、さらっと書きます。
+
+### Node.js やパッケージマネージャ（npm、yarn）のバージョン管理
+基本的には既存のバージョン管理ツールと同じく、指定バージョンのものを取得してきてインストール。
+インストールしたもののなかで、使用するバージョンを指定するという流れ。
+
+以下は Node.js の例ですが、npm と yarn も同様です。
+```bash
+# 最新 LTS バージョンの Node.js を取得 + インストール + デフォルト（グローバル）バージョンに指定
+volta install node
+# v15.14.3の Node.js を取得 + インストール
+volta fetch node@15.14.3
+
+# そのプロジェクトでの（ローカル）バージョン指定
+volta pin node@15.14.3
+```
+
+ローカルバージョンに指定したバージョンは、そのプロジェクトの package.json に記録されます。
+```json:package.json
+{
+  .
+  .
+  .
+  "volta": {
+    "node": "15.14.3",
+    "yarn": "1.22.17"
+  }
+}
+```
+nodenv とかだと`.node-version`に記録されるので、これは独自の方式ですね。
+Netlify といったホスティングサービスでは、`.node-version`でバージョン検知する仕組みがあったりするので、そういう恩恵は得られにくいような気もしました。
+
+Volta 側でインストールしたバージョンを確認するとこんな感じ。
+default がデフォルト（グローバル）バージョン、current がそのプロジェクトでの（ローカル）バージョン。
+（default と current で同バージョンの場合は、current が優先して表示される）
+```
+volta list all
+⚡️ User toolchain:
+
+    Node runtimes:
+        v15.14.0 (current @ C:\Users\{USER}\XXXX\XXXX\package.json)
+        v16.13.0 (default)
+
+    Package managers:
+        Yarn:
+            v1.22.17 (current @ C:\Users\{USER}\XXXX\XXXX\package.json)
+```
+
+インストールできる各種バージョンについては、確認コマンドが見当たらなかったので、自分で Node.js 公式等を見る必要がありそうです。
+デフォルトでは、パブリックソースおよびレジストリ（`https://nodejs.org`、`https://yarnpkg.com`、`https://www.npmjs.com`）から取得するとのこと。
+nodenv でいう`$ nodenv install -l`みたいな、一覧確認できるコマンドが今後追加されたらいいなぁと。
+
+ちなみにパッケージマネージャに関しては、新しいものとして`pnpm`がありますが、一応は使えるかなという感じでした。
+（試しにインストールしてみようとしたところ、パッケージマネージャというよりは、後述する npm パッケージとして認識されたので）
+
+### npm パッケージのバージョン管理
+グローバルインストールしたものとローカルインストールしたものとで、同名の npm パッケージが存在していた場合、ローカルの方を優先して使うよ。
+というやつです。
+
+例えば、普段ちょっとしたスクリプトを実行するのに TypeScript をグローバルインストールしていたとします。
+```bash
+# ※npm や yarn でグローバルインストールしても Volta 管理下になる
+volta install typescript
+# or
+npm install -g typescript
+# or
+yarn global add typescript
+
+tsc --version # 4.4.4
+```
+
+その一方で、とあるプロジェクトでは違うバージョンをローカルでインストールしていた場合。
+そのプロジェクトに移動した際には、ローカルバージョンが自動的に使われます。
+```bash
+cd /path/to/project-using-typescript-3.9.4
+tsc --version # 3.9.4
+```
+
+また、グローバルインストールした npm パッケージは、インストール時のデフォルト（グローバル）バージョンである Node.js と関連付けられます。
+この npm パッケージを、グローバルバージョンとして使用する際は、この関連付けられた Node.js が使われるようになっているそうです。
+```
+volta list all
+⚡️ User toolchain:
+    .
+    .
+    .
+    Packages:
+        typescript@4.4.4 (default)
+            binary tools: tsc, tsserver
+            platform:
+                runtime: node@16.13.0
+```
+
+### その他の機能
+<OG url="https://docs.volta.sh/advanced/hooks" />
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+Node.js・npm・yarn をパブリックソースおよびレジストリ（`https://nodejs.org`、`https://yarnpkg.com`、`https://www.npmjs.com`）以外からダウンロードしたい場合の、ダウンロードプロセスへのフックを提供。
+
+{/* <!-- textlint-enable --> */}
+
+<OG url="https://docs.volta.sh/advanced/workspaces" />
+
+1つのリポジトリに複数のプロジェクトがあり、それら全てで Volta 設定を共有したいワークスペース環境内で Volta を使用する方法を提供。
+（extends を使って、親 package.json の volta プロパティを参照するようなやり方）
+
+## コマンド
+### volta fetch
+> The volta fetch command will allow you to fetch a tool into the local cache, without setting it as a default or making it available, for future offline use.
+> （訳：ツールをデフォルトとして設定したり、将来オフラインで使用できるようにすることなく、ツールをローカルキャッシュにフェッチできます。）
+
+```
+Fetches a tool to the local machine
+
+USAGE:
+    volta fetch [FLAGS] <tool[@version]>...
+
+FLAGS:
+        --verbose    Enables verbose diagnostics
+        --quiet      Prevents unnecessary output
+    -h, --help       Prints help information
+
+ARGS:
+    <tool[@version]>...    Tools to fetch, like `node`, `yarn@latest` or `your-package@^14.4.3`.
+```
+
+最初は、後述する`install`とかぶってるように思えて、この訳もよくわからんって感じでした。
+`install`がツールの取得 + インストール + デフォルト（グローバル）設定であるのに対して、こちらはどうもツールの**取得とインストールのみ**を行うもののようです。
+
+バージョン指定についてはこんな感じ。
+```bash
+# v15.14.0 の Node.js を取得 + インストール
+volta fetch node@15.14.0
+
+# v15 の最新バージョンの Node.js を取得 + インストール
+volta fetch node@15
+
+# 最新 LTS バージョンの Node.js を取得 + インストール
+volta fetch node
+```
+
+### volta install
+> The volta install command will set your default version of a tool. It will also fetch that tool if it isn’t already cached locally
+> （訳：volta install コマンドは、ツールのデフォルトバージョンを設定します。また、まだローカルにキャッシュされていない場合は、そのツールをフェッチします）
+
+```
+Installs a tool in your toolchain
+
+USAGE:
+    volta install [FLAGS] <tool[@version]>...
+
+FLAGS:
+        --verbose    Enables verbose diagnostics
+        --quiet      Prevents unnecessary output
+    -h, --help       Prints help information
+
+ARGS:
+    <tool[@version]>...    Tools to install, like `node`, `yarn@latest` or `your-package@^14.4.3`.
+```
+
+これは訳のとおりです。
+nodenv なんかだと、インストール（`$ nodenv install`）とグローバルバージョン設定（`$ nodenv global バージョン`）が別コマンドだったので、ちょっと不思議な感じですね。
+
+バージョン指定については fetch と同様です。
+
+### volta uninstall
+> The volta uninstall command allows you to remove any global package that has been installed with volta install.
+> （訳：volta uninstall コマンドを使用すると、volta install でインストールされたグローバルパッケージを削除できます。）
+
+```
+Uninstalls a tool from your toolchain
+
+USAGE:
+    volta uninstall [FLAGS] <tool>
+
+FLAGS:
+        --verbose    Enables verbose diagnostics
+        --quiet      Prevents unnecessary output
+    -h, --help       Prints help information
+
+ARGS:
+    <tool>    The tool to uninstall, e.g. `node`, `npm`, `yarn`, or <package>
+```
+
+このコマンドでアンインストールできるらしいのですが、現状対応しているのはグローバルインストールした npm パッケージのみのようでした。
+自分が node と yarn で試してみた時は、エラーになってアンインストールできず。
+```
+> volta uninstall yarn
+error: Uninstalling yarn is not supported yet.
+
+> volta uninstall yarn@1.22.17
+warning:  No package 'yarn@1.22.17' found to uninstall
+
+> volta uninstall node
+error: Uninstalling node is not supported yet.
+
+> volta uninstall node@15.14.0
+warning:  No package 'node@15.14.0' found to uninstall
+```
+
+実体としては以下のディレクトリにいるので、そこから削除してしまえば一応対応できるみたいです。
+- Windows：`%LOCALAPPDATA%\Volta\tools\image`
+- Unix：`~/.volta/tools/image`
+
+ちなみにグローバルインストールした npm パッケージは、従来通り npm、yarn コマンドでもアンインストール可能。
+
+### volta pin
+> The volta pin command will update a project’s package.json file to use the selected version of a tool.
+> （訳：volta pin コマンドは、選択したバージョンのツールを使用するようにプロジェクトの package.json ファイルを更新します。）
+
+```
+Pins your project's runtime or package manager
+
+USAGE:
+    volta pin [FLAGS] <tool[@version]>...
+
+FLAGS:
+        --verbose    Enables verbose diagnostics
+        --quiet      Prevents unnecessary output
+    -h, --help       Prints help information
+
+ARGS:
+    <tool[@version]>...    Tools to pin, like `node@lts` or `yarn@^1.14`.
+```
+
+そのプロジェクトでのツール（Node.js、npm、yarn のみ）のバージョンを固定する時に使用。nodenv でいうローカルバージョン指定。
+package.json がないところで使ってもエラーになります。
+
+固定したバージョンは packge.json へ記録されるようになっています。
+
+### volta list
+> The volta list command allows you to inspect your installed Node runtimes, package managers, and packages with binaries.
+> （訳：volta list コマンドを使用すると、インストールされているノードランタイム、パッケージマネージャー、およびバイナリを含むパッケージを検査できます。）
+
+```
+Displays the current toolchain
+
+USAGE:
+    volta list [FLAGS] [OPTIONS] [tool]
+
+FLAGS:
+    -c, --current
+            Show the currently-active tool(s).
+
+            Equivalent to `volta list` when not specifying a specific tool.
+    -d, --default
+            Show your default tool(s).
+
+        --verbose
+            Enables verbose diagnostics
+
+        --quiet
+            Prevents unnecessary output
+
+    -h, --help
+            Prints help information
+
+
+OPTIONS:
+        --format <format>
+            Specify the output format.
+
+            Defaults to `human` for TTYs, `plain` otherwise. [possible values: human, plain]
+
+ARGS:
+    <tool>
+            The tool to lookup: `all`, `node`, `yarn`, or the name of a package or binary.
+```
+
+Volta 管理下の各種バージョンを確認するのに使用。
+
+### volta completions
+> The volta completions command will generate command completion information for your shell.
+> （訳：volta completions コマンドは、シェルのコマンド補完情報を生成します。）
+
+```
+Generates Volta completions
+
+By default, completions will be generated for the value of your current shell,
+shell, i.e. the value of `SHELL`. If you set the `<shell>` option, completions
+will be generated for that shell instead.
+
+If you specify a directory, the completions will be written to a file there;
+otherwise, they will be written to `stdout`.
+
+
+USAGE:
+    volta completions [FLAGS] [OPTIONS] <shell>
+
+FLAGS:
+    -f, --force
+            Write over an existing file, if any.
+
+        --verbose
+            Enables verbose diagnostics
+
+        --quiet
+            Prevents unnecessary output
+
+    -h, --help
+            Prints help information
+
+
+OPTIONS:
+    -o, --output <out_file>
+            File to write generated completions to
+
+
+ARGS:
+    <shell>
+            Shell to generate completions for [possible values: zsh, bash, fish, powershell,
+            elvish]
+```
+
+コマンド入力補完のスクリプトを生成してくれます。
+使用しているシェルを指定することで、そのシェル用のスクリプトを出力してくれるので、あとはそれを読み込むようにすれば OK。
+
+自分は bash で`~/bash_completion`配下にスクリプトを配置して、`~/.bash_profile`から読み込むようにしました。
+```bash:~/.bash_profile
+then
+  for COMPLETION in "${HOME}/bash_completion/"*
+  do
+    [[ -r "${COMPLETION}" ]] && source "${COMPLETION}"
+  done
+fi
+```
+
+### volta which
+> The volta which command will unwrap Volta’s shims and locate the actual binary that will be launched by Volta.
+> （訳：volta which コマンドは、Volta の shim をアンラップし、Volta によって起動される実際のバイナリを見つけます。）
+
+```
+Locates the actual binary that will be called by Volta
+
+USAGE:
+    volta which [FLAGS] <binary>
+
+FLAGS:
+        --verbose    Enables verbose diagnostics
+        --quiet      Prevents unnecessary output
+    -h, --help       Prints help information
+
+ARGS:
+    <binary>    The binary to find, e.g. `node` or `npm`
+```
+
+これは訳文のとおりです。
+実体のバイナリがあるパスを表示してくれます。
+
+### volta setup
+> The volta setup command will enable Volta by modifying the PATH for the current user (in a platform-dependent way) to include the Volta shim directory
+> （訳：volta setup コマンドは、現在のユーザーの PATH を（プラットフォームに依存する方法で）変更して Volta shim ディレクトリを含めることにより、Volta を有効にします。）
+
+```
+Enables Volta for the current user
+
+USAGE:
+    volta setup [FLAGS]
+
+FLAGS:
+        --verbose    Enables verbose diagnostics
+        --quiet      Prevents unnecessary output
+    -h, --help       Prints help information
+```
+
+Volta のパスを通してくれるもの。
+Volta を brew ではなく、インストーラで入れた場合は自動実行されるので、手動実行することはあまりなさそうです。
+
+### volta run
+> The volta run command will run the command that you give it, using versions of tools that are specified at the command line.
+> （訳：volta run コマンドは、コマンドラインで指定されたバージョンのツールを使用して、指定されたコマンドを実行します。）
+
+```
+Run a command with custom Node, npm, and/or Yarn versions
+
+USAGE:
+    volta run [FLAGS] [OPTIONS] <command> [--] [args]...
+
+FLAGS:
+        --bundled-npm    Forces npm to be the version bundled with Node
+        --no-yarn        Disables Yarn
+        --verbose        Enables verbose diagnostics
+        --quiet          Prevents unnecessary output
+    -h, --help           Prints help information
+
+OPTIONS:
+        --node <version>         Set the custom Node version
+        --npm <version>          Set the custom npm version
+        --yarn <version>         Set the custom Yarn version
+        --env <NAME=value>...    Set an environment variable (can be used multiple times)
+
+ARGS:
+    <command>    The command to run
+    <args>...    Arguments to pass to the command
+```
+
+Volta を通して、各種コマンドを実行。
+オプションでコマンド実行時の使用バージョン指定ができるので、事前にバージョン切り替えをしなくていい。
+オプションとして各ツールのバージョンを指定しなかった場合は、そのプロジェクトの固定バージョンが。
+プロジェクトの固定バージョンもなければ、デフォルト（グローバル）バージョンが使われます。
+
+バージョンごとの検証をする時などによさそうです。
+
+### volta help
+```
+Prints this message or the help of the given subcommand(s)
+
+USAGE:
+    volta help [subcommand]...
+
+ARGS:
+    <subcommand>...    The subcommand whose help message to display
+```
+
+Volta コマンドのヘルプを表示。
+
+## 余談：asdf でのバージョン管理とその速度
+今回、開発環境について考える機会があったことで Volta を使ってみたわけですが、実は元々 asdf を使おうかと思っていました。
+というのも、発端としては Twitter で anyenv から asdf に移行した方を見かけたことでした。
+
+<OG url="https://asdf-vm.com" />
+
+この asdf とは、言語や実行環境だけでなく CLI ツールにも対応しているバージョン管理ツールです。
+基本的な機構を有する asdf 本体がまずあって、そこへ各種言語・ツールに応じたプラグインを追加していくという構造になっています。
+プラグインの作り方は公開されており、有志の方がいろんなプラグインを作っているため、実に膨大な言語・ツールに対応しているなにやらすごいやつです。
+
+これは anyenv の完全上位互換なのでは...！と想い、意気揚々と asdf を導入してみた自分。
+Node.js もちゃんと動作しているし、大丈夫そうかなと思っていた矢先、実行速度の問題に直面しました。
+
+同時期に導入したプロンプトの Starship。
+この Starship はプロジェクトディレクトリに移動すると、そのプロジェクトのファイルなどをスキャンして情報を表示してくれる機能を持っています。
+例えば Node.js だったら、package.json や .node-version、node_modules などの有無で Node.js のプロジェクトだと認識。
+`node -v`でバージョンを取得して表示してくれます。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+ただ、このバージョン取得にやたら時間がかかってしまい、Starship のデフォルトのスキャン時間がタイムアウトしてしまう事態に...。
+じゃあ、一体 asdf 経由での Node.js 実行は、どのくらい時間かかっているのか？
+一旦タイムアウト時間を伸ばしてみて`starship explain`で確認すると、1200ms～1500ms くらいかかっていました。時間かかりすぎでは...。
+anyenv だと 500ms～700ms くらい（シェル起動時のスクリプトとしては、asdf の方が早いらしいです）
+Starship のスキャンタイムアウト時間をこれに合わせて設定すると、当然プロンプトの表示時間が遅いので微妙だなと考えるようになり。
+
+{/* <!-- textlint-enable --> */}
+
+これについて調べていくと、どうも以前から速度面の問題はあったようで、こちらの記事でその Issue についての話があります。
+<OG url="https://tech.buty4649.net/entry/2021/07/29/201613" />
+
+直接バイナリを実行すると早いのに、asdf の shim 経由で実行すると遅くなるという現象。
+direnv を使って対応する手もあるそうですが、プロジェクトごとに設定を書かないといけないのが気になってしまい...。
+また、自分の実行速度ほど遅い方は見かけなかったので asdf だけの問題ではなく、単純に自分の WSL 環境がよろしくない可能性もあるなと。
+そのため、WSL を初期化しなおしてみるとか、WSL2 にするとかを試す手もありました。
+
+しかし、そんな時に Volta を知り。
+もう Windows 側でそこそこ早くて、ちゃんと動作するならそっちの方がよくないか？と思い、今回に至ったというわけです。
+ちなみに Windows 側に Volta と Starship をいれて、`starship explain`で Node.js のスキャン時間を計測すると 70ms～120ms くらいでした。
+WSL 側の anyenv、asdf と比べると、だいぶ早くなりましたね。
+
+---
+
+今回は、紆余曲折あって行きついた Volta を紹介してみました。
+他の方の Volta 記事との差別化や、未来の自分が見ても納得するように書こうとしたら、だいぶ長くなりましたね🙄
+まぁでも、おかげで自分の中の疑問点がおおよそ解消されました。
+
+Volta 導入を検討している方の、何かの参考になれば幸いです。
+
+## 参考リンクまとめ
+- [Volta](https://volta.sh/)
+- [Node.jsのバージョン管理にVoltaを推したい](https://zenn.dev/taichifukumoto/articles/how-to-use-volta)
+- [Node のバージョン管理は Volta でいいかな](https://blog1.mammb.com/entry/2021/11/01/090000)
+
+余談.
+- [asdf](https://asdf-vm.com/)
+- [starship+asdfでプロンプトの表示が遅くなるのを改善する](https://tech.buty4649.net/entry/2021/07/29/201613)
