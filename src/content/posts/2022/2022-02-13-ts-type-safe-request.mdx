@@ -1,0 +1,1105 @@
+---
+title: "TypeScript × Aspida × Zodで型安全なHTTPリクエストについて考えてみた"
+description: "AspidaとZodを使って型安全なHTTPリクエストをやってみようという検証をした記録"
+pubDate: "2022-02-12"
+updatedDate: "2022-02-12"
+category: "develop"
+tags: ["TypeScript", "Aspida", "Zod"]
+---
+
+TypeScrpt の型定義に日々助けられているなぁ、なんて思っている、よしです。
+今回は型安全な HTTP リクエストについて検証してみたことを書いてみました。
+
+import OG from "@/components/OG.astro"
+
+## 検証しようと思った背景
+ざっくりいうと、フロントエンドの実装をしていて、API のレスポンスチェック用に毎回自前の型ガード実装するのだるいなと思ったことがあったからです。
+
+こういうやつ.
+```ts
+export type User = {
+  id: number;
+  name: string;
+};
+
+export type Users = User[]
+
+const isUser = (arg: unknown): arg is User => {
+  const u = arg as User;
+
+  return (
+    typeof u.id === 'number' &&
+    typeof u.name === 'string'
+  );
+};
+
+const isUsers = (args: unknown): args is Users => {
+  const us = args as Users;
+
+  return us.every((u) => isUser(u));
+};
+
+export { isUser, isUsers }
+```
+API のレスポンスボディの中身が少なければ、まぁさっくり実装すればいいんですが...。
+外部 API とかで中身がなんか多いやつだと、一個一個書くの地味につらみがありまして。
+
+そこから、型ガード対応しているバリデーションライブラリ導入してみるかな？
+↓
+せっかくならリクエスト時も型安全にしてみる？
+という流れで導入検証してみようという発想になりました。
+
+## 使用するライブラリ
+当記事ではさらっと紹介だけします。
+ライブラリの詳細は各リポジトリの README 等をご参照ください。
+
+### Aspida
+<OG url="https://github.com/aspida/aspida" />
+
+> ブラウザと node.js のための TypeScript フレンドリーな HTTP クライアントラッパー
+
+HTTP クライアントライブラリ自体と、その HTTP クライアントライブラリのラッパーパッケージを組み合わせるような使い方をします。
+
+作者の方の紹介記事はこちら
+<OG url="https://zenn.dev/solufa/articles/getting-started-with-aspida" />
+
+型安全な HTTP リクエスト、といえば Aspida の名を前からよく聞いて気になっていました。
+記事などでも割と好印象な話を聞いていたイメージ。
+よっしゃ、使ってみようとまず改めて少し調べてみると、ちょっと気になったところが。
+
+#### レスポンスの型チェックについて
+Aspida の特徴の1つとして以下のようなものがあります。
+> パス・URL クエリ・ヘッダー・ボディ・レスポンス全てに型を指定できる
+
+とても頼もしいライブラリであることは確かなのですが、この「レスポンスの型」について。
+紹介記事なんかでも、よくこのことに触れられていて「レスポンスに型がつく！」「型がつくので補完がきく！」なんて書いてあったり。
+でも「そもそもレスポンスがちゃんと想定した形式で返ってきているかのチェック」について書いてあるのは、ほとんど見かけなかったんですよね。
+
+自分は最近では、HTTP リクエストで取得したデータに対して、型ガードでチェックするような実装をすることが多く。
+そのため、このチェックまで Aspida が面倒を見てくれるのか否かが気になってしまったのでした。
+結論を言うと、Aspida はさすがにそこまでは面倒を見てくれません。
+他のライブラリや自前の型ガードと組み合わせるなりする必要があります。
+
+ちなみに v2 でその辺も対応しようと現在検討されていることを、メンテナの方に教えていただきました。
+ただ、どうも難航しているようです。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">現状、レスポンスデータの検証がされていないのは仕様です。aspida v2で対応したいと考えており、開発中ですが、他ライブラリとの兼ね合いなどにより難航しています。
+  </p>&mdash; はす (@83_hasu)
+  <a href="https://twitter.com/83_hasu/status/1489539954904481793?ref_src=twsrc%5Etfw">February 4, 2022</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+なかなか難しい問題ではあるでしょうが、もし対応されたら、ますます強力なものになりますね。
+
+#### @aspida/ky について
+個人的に最近使用している HTTP クライアントライブラリが ky であるため、Aspida は ky に対応しているのかが気になりました。
+紹介記事なんかでは ky に対応しているともあるものの、リポジトリの packages 配下に ky に関するパッケージが存在しない...。
+
+調べてみたところ、どうも v1.1.0 リリース時にサポートを終了されたそうです。
+そんなにダウンロード数少なかったのか...。
+
+作者の方のツイート.
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">aspida v1.1.0 をリリースしました🎉🎉<br /><br />- 1DL/日しかない ky のサポート終了<br />- swr と swrv の型を整理<br />- パス名の@以降に number/string 以外を指定できる隠し機能を削除<br /><br />十分な利用実績が出来たのでv1に上げました<br />隠し機能を使っていなければコード修正なく更新出来ます<a href="https://t.co/bLjiq5P99w">https://t.co/bLjiq5P99w</a>
+  </p>&mdash; Solufa (@m_mitsuhide) <a href="https://twitter.com/m_mitsuhide/status/1338257674043936769?ref_src=twsrc%5Etfw">December 13, 2020</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+ただ、npm パッケージとしては一応残っているようです。
+<OG url="https://www.npmjs.com/package/@aspida/ky" />
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+ky は fetch API を拡張したものなので、色々と便利な機能が追加されていたりします。
+その1つとして、レスポンスがステータスコード 400、500番台で返ってきたときに自動で HTTPError をスローしてくれる、というものがありまして。
+これに関しては、@aspida/fetch（もしくは @aspida/node-fetch）のオプションで、そのような挙動へできることが分かったため、今回は @aspida/fetch を採用することにしました。
+
+{/* <!-- textlint-enable --> */}
+
+### Zod
+<OG url="https://github.com/colinhacks/zod" />
+
+> Zod is a TypeScript-first schema declaration and validation library. I'm using the term "schema" to broadly refer to any data type, from a simple string to a complex nested object.
+
+型ガードに対応しているバリデーションライブラリはどれがいいかなと調べてみると、割と結構いろんなものがありましたね。
+その中で、今回は Blitz.js でも採用されている Zod を採用することにしました。
+
+あらかじめ Zod でスキーマを定義しておいて、そのスキーマに沿ってバリデーションチェックを行うような使い方をします。
+
+#### 型ガードは廃止？
+意気揚々と導入しておいてなんですが、いざ実装する時に、Zod に存在すると思っていた型ガード機能が廃止されていることを知りました。
+> The .check method has been removed in Zod 3. For details see
+
+どうも、以前は`check()`というものがあったものの、v3 リリース時に削除されたそうです。
+
+公式のサンプル.
+```ts
+import * as z from 'zod';
+
+const stringSchema = z.string();
+const blob: any = 'Albuquerque';
+if (stringSchema.check(blob)) {
+  // blob is now of type `string`
+  // within this if statement
+}
+```
+
+じゃあ、チェックはどうする？というところですが、Zod でバリデーションチェックするものとして`parse()`というものがあります。
+これはバリデーションチェック OK であれば通過したものを返し、NG であれば ZodError をスローする、というものです。
+これでもやりたいことはできるので特に問題なし。`check()`が削除されたのも恐らくそのためでしょう。
+ちなみに NG 時に ZodError をスローしない`safeParse()`というものもあります。
+
+公式のサンプル.
+```ts
+import { z } from "zod";
+
+// creating a schema for strings
+const mySchema = z.string();
+
+// parsing
+mySchema.parse("tuna"); // => "tuna"
+mySchema.parse(12); // => throws ZodError
+
+// "safe" parsing (doesn't throw error if validation fails)
+mySchema.safeParse("tuna"); // => { success: true; data: "tuna" }
+mySchema.safeParse(12); // => { success: false; error: ZodError }
+```
+
+これまでの型ガード実装時は、型チェック結果の boolean により if 分岐をかけて、NG 時にエラーをスローするのを自前でやっていました。
+それに対して、この`parse()`を使えば if ブロックを1つ減らせるので、よりスッキリ書けますね。
+
+#### 既存の型定義からスキーマを作成することについて
+Zod で定義したスキーマを元に型定義を生成する方法は、README に記載がありました。
+`infer`と`typeof`の組み合わせでいけるそうです。
+
+公式のサンプル.
+```ts
+const A = z.string();
+type A = z.infer<typeof A>; // string
+
+const u: A = 12; // TypeError
+const u: A = "asdf"; // compiles
+```
+
+では、逆に既存の型定義からスキーマを生成することは出来るのか？というところが気になりました。
+途中から Zod を導入する場合とか、このパターンが欲しいこと割とあると思ったんですよね。
+
+調べていたら、ちょうど試している方がいて、このやり方を使わせていただきました。
+<OG url="https://zenn.dev/uttk/articles/bd264fa884e026#%E5%9E%8B%E5%BC%95%E6%95%B0%E3%81%AE%E6%B8%A1%E3%81%97%E6%96%B9" />
+
+```ts
+import * as z from "zod";
+
+// zodに渡せる型に変換する型
+type toZod<T extends Record<string, any>> = {
+  [K in keyof T]-?: z.ZodType<T[K]>;
+}
+
+interface Hoge {
+  hello: string;
+  world: string;
+}
+
+// Hogeを型引数として渡す
+const HogeSchema = z.object<toZod<IHoge>>({
+  hello: z.string(),
+  world: z.string()
+})
+```
+
+上記の場合。
+HogeSchema では、元の型定義にないプロパティを定義しようとしたり、違う型にしようとするとちゃんとエラーになってくれます。
+プロパティの入力補完も効いてくれるので便利でした。
+
+## 実装例
+では、今回自分がやってみた実装を書いていきます。
+なお、Aspida の README の内容をベースとしました。
+
+今回の使用バージョンは以下の通りです.
+- TypeScript：4.5.5
+- Node.js：16.13.0
+- Next.js：12.0.9
+- @aspida/fetch：1.7.1
+- Zod：3.11.6
+
+ディレクトリ階層（関連する部分のみ抜粋）
+```bash
+（ルート）
+┣ src
+║  ┣ api/  #Adpida 用の API 型定義置き場
+║  ║  ┣ users/
+║  ║  ║  ┣ _userId@number/
+║  ║  ║  ║    ┗ index.ts
+║  ║  ║  ┗ index.ts
+║  ║  ┗ $api.ts
+║  ┣ compnents/  #各種コンポーネント置き場
+║  ┣ domains/  #ドメイン（HTTP リクエストロジック置き場）
+║  ┣ hooks/  #カスタムフック置き場（domains のラッパー）
+║  ┣ lib/  #ライブラリの設定やユーティリティなどの置き場
+║  ┣ mock/  #モックデータ置き場
+║  ┣ models/  #モデル型定義置き場
+║  ┗ pages/
+║      ┣ api
+║      ┣ _app.tsx
+║      ┗ index.tsx
+┣ .gitignore
+┣ aspida.config.js
+┣ package.json
+┣ tsconfig.json
+┗ yarn.lock
+```
+
+コードはこちらのリポジトリにあるので、よろしければどうぞ。
+<OG url="https://github.com/h-yoshikawa44/type-safe-request" />
+
+### API 情報
+API は Next.js の API ルートでモック API を作成。
+
+#### ユーザ情報一覧取得 API
+- パス：`api/users`
+- メソッド：GET
+- クエリパラメータ：
+  - limit?: number
+- レスポンスボディ：
+  - ユーザ情報の配列
+
+#### ユーザ情報取得 API
+- パス：`api/users/{userId}`
+- メソッド：GET
+- パスパラメータ：
+  - userId: number
+- レスポンスボディ：
+  - ユーザ情報
+
+#### ユーザ新規作成 API
+- パス：`api/users`
+- メソッド：POST
+- リクエストボディ：
+  - name: string
+- レスポンスボディ：
+  - ユーザ情報
+
+### 前準備
+#### インストール
+Aspida と Zod のインストール。
+```bash
+yarn add @aspida/fetch zod
+```
+
+直接 Adpida と Zod には関係ありませんが、コマンド並列実行をするためにこちらもいれておきます。
+```bash
+yarn add -D npm-run-all
+```
+
+#### Aspida の設定
+Aspida 用の API 型定義ファイルを置く場所を作る必要があるのですが、自分は`src/api`としました。
+設定ファイルでこのパスを指定しておきます。
+
+```ts:aspida.config.js
+module.exports = {
+  input: 'src/api',
+};
+```
+
+#### Zod の設定
+tsconfig の strict モードを有効化しておく必要があります。
+
+```ts:tsconfig.json
+{
+  // ...
+  "compilerOptions": {
+    // ...
+    "strict": true
+  }
+}
+```
+
+それと、型定義からスキーマ作成する型を使いやすいように定義して、エクスポートしておきます。
+
+```ts:src/lib/zod.ts
+import { z } from 'zod';
+
+export type ToZod<T extends Record<string, any>> = {
+  [K in keyof T]-?: z.ZodType<T[K]>;
+};
+```
+
+#### モデル型定義とスキーマ定義
+Aspida の API 型定義ファイルに直接書いてもいいんですが、個人的な好みとしてモデルの型定義は別ファイルとしました。
+より厳密な型チェックをしたかったので、`strict()`をつけてます。
+また、リクエスト時のパラメータに関するものも一緒に定義しておきました。
+
+```ts:src/models/User.ts
+import { z } from 'zod';
+import { ToZod } from '@/lib/zod';
+
+export type GetListRequestQuery = {
+  limit?: number;
+};
+
+export const getListRequestQuerySchema = z
+  .object<ToZod<GetListRequestQuery>>({
+    limit: z.number().optional(),
+  })
+  .strict();
+
+export type PostRequestBody = Pick<User, 'name'>;
+
+export const postRequestBodySchema = z
+  .object<ToZod<PostRequestBody>>({
+    name: z.string(),
+  })
+  .strict();
+
+export type RequestPathParams = {
+  userId: string;
+};
+
+// パスパラメータとしては全て文字列になるので、文字列で数字のみにする
+export const requestPathParamsSchema = z.object<ToZod<RequestPathParams>>({
+  userId: z.string().regex(/\d+/),
+});
+
+export type User = {
+  id: number;
+  name: string;
+};
+
+export const userSchema = z
+  .object<ToZod<User>>({
+    id: z.number(),
+    name: z.string(),
+  })
+  .strict();
+
+export type Users = User[];
+
+export const usersSchema = z.array(userSchema);
+```
+
+エラーレスポンスの型も簡単に定義しておきました。
+
+```ts:src/models/ErrorResponse.ts
+import { z } from 'zod';
+import { ToZod } from '@/lib/zod';
+
+export type ErrorResponse = {
+  message: string;
+};
+
+export const errorResponseSchema = z.object<ToZod<ErrorResponse>>({
+  message: z.string(),
+});
+```
+
+#### モックデータ
+さっくり User モデル一覧のモックデータを作成しておきました。
+
+```ts:src/mock/user.ts
+import { Users } from '@/models/User';
+
+const users: Users = [
+  {
+    id: 1,
+    name: 'Adam',
+  },
+  {
+    id: 2,
+    name: 'Scott',
+  },
+  {
+    id: 3,
+    name: 'Matt',
+  },
+  {
+    id: 4,
+    name: 'John',
+  },
+  {
+    id: 5,
+    name: 'Frank',
+  },
+  {
+    id: 6,
+    name: 'Nicole',
+  },
+  {
+    id: 7,
+    name: 'Katie',
+  },
+  {
+    id: 8,
+    name: 'Nina',
+  },
+  {
+    id: 9,
+    name: 'Nancy',
+  },
+  {
+    id: 10,
+    name: 'Carol',
+  },
+];
+
+export { users };
+```
+
+#### Aspida での API 型定義
+Aspida では API のエンドポイントに合わせたディレクトリ階層を作って、API の型を定義していきます。
+前述のモデル型定義を活用しながら定義しました。
+
+エンドポイント：`api/users`
+```ts:src/api/users/index.ts
+import {
+  GetListRequestQuery,
+  PostRequestBody,
+  User,
+  Users,
+} from '@/models/User';
+
+export type Methods = {
+  get: {
+    query?: GetListRequestQuery;
+
+    resBody: Users;
+  };
+
+  post: {
+    reqBody: PostRequestBody;
+
+    resBody: User;
+    /**
+     * reqHeaders(?): ...
+     * reqFormat: ...
+     * status: ...
+     * resHeaders(?): ...
+     * polymorph: [...]
+     */
+  };
+};
+```
+
+エンドポイント：`api/users/{userId}`
+```ts:src/api/users/_userId@number/index.ts
+import { User } from '@/models/User';
+
+export type Methods = {
+  get: {
+    resBody: User;
+  };
+};
+```
+パスパラメータが含まれるエンドポイントの場合は、このファイルのように`_パラメータ名@型`というような名称にします。
+
+#### Aspida 監視モード
+前項の API 型定義がある状態で aspida コマンドを実行すると、そのディレクトリに`$api.ts`というファイルが生成されます。
+これが、型が反映されたリクエスト関数となり、これを使うことで型安全なリクエストができるようになるというわけです。
+
+```ts:src/api/$api.ts
+/* eslint-disable */
+// prettier-ignore
+import { AspidaClient, dataToURLString } from 'aspida'
+// prettier-ignore
+import { Methods as Methods0 } from './users'
+// prettier-ignore
+import { Methods as Methods1 } from './users/_userId@number'
+
+// prettier-ignore
+const api = <T>({ baseURL, fetch }: AspidaClient<T>) => {
+  const prefix = (baseURL === undefined ? '' : baseURL).replace(/\/$/, '')
+  const PATH0 = '/users'
+  const GET = 'GET'
+  const POST = 'POST'
+
+  return {
+    users: {
+      _userId: (val1: number) => {
+        const prefix1 = `${PATH0}/${val1}`
+
+        return {
+          get: (option?: { config?: T }) =>
+            fetch<Methods1['get']['resBody']>(prefix, prefix1, GET, option).json(),
+          $get: (option?: { config?: T }) =>
+            fetch<Methods1['get']['resBody']>(prefix, prefix1, GET, option).json().then(r => r.body),
+          $path: () => `${prefix}${prefix1}`
+        }
+      },
+      get: (option?: { query?: Methods0['get']['query'], config?: T }) =>
+        fetch<Methods0['get']['resBody']>(prefix, PATH0, GET, option).json(),
+      $get: (option?: { query?: Methods0['get']['query'], config?: T }) =>
+        fetch<Methods0['get']['resBody']>(prefix, PATH0, GET, option).json().then(r => r.body),
+      post: (option: { body: Methods0['post']['reqBody'], config?: T }) =>
+        fetch<Methods0['post']['resBody']>(prefix, PATH0, POST, option).json(),
+      $post: (option: { body: Methods0['post']['reqBody'], config?: T }) =>
+        fetch<Methods0['post']['resBody']>(prefix, PATH0, POST, option).json().then(r => r.body),
+      $path: (option?: { method?: 'get'; query: Methods0['get']['query'] }) =>
+        `${prefix}${PATH0}${option && option.query ? `?${dataToURLString(option.query)}` : ''}`
+    }
+  }
+}
+
+// prettier-ignore
+export type ApiInstance = ReturnType<typeof api>
+// prettier-ignore
+export default api
+```
+
+ただ、開発中に毎回 aspida コマンドを手動実行するのは手間なので、監視モードにしておくと楽です。
+今回は Next.js 側のローカルサーバ起動と並列実行するようにしました。
+
+```json:package.json
+"scripts": {
+    "dev": "run-p dev:*",
+    "dev:next": "next dev",
+    "dev:aspida": "aspida --watch",
+    "build": "aspida && next build",
+    ...
+  },
+```
+
+それと、`$api.ts`は自動生成分なので、`.gitignore`に追加しておくと良いです。
+```:.gitignore
+## aspida
+$api.ts
+```
+
+#### Aspida でのリクエスト時の設定とクライアント作成
+こちらは既定のファイルではなく、自分で`src/lib`配下に作成。
+@aspida/ky の項でも書いてましたが、リクエストが400・500番台で返ってきたときに自動で HTTPError をスローしてくれるオプションを有効にしました。
+
+```ts:src/lib/aspida.ts
+import aspida, { FetchConfig } from '@aspida/fetch';
+import api from '@/api/$api';
+
+const fetchConfig: FetchConfig = {
+  credentials: 'include',
+  baseURL: '/api',
+  throwHttpErrors: true, // throw an error on 4xx/5xx, default is false
+};
+
+export const client = api(aspida(fetch, fetchConfig));
+```
+Aspida でのリクエストクライアントをエクスポートしておき、ドメインでこのクライアントを使うようにします。
+
+---
+
+これで前準備は終わりです。
+
+### API ルート
+モックの API を作成。
+冒頭に書いた通り、`parse()`でバリデーションチェックを行っています。
+クエリパラメータやリクエストボディのチェックをして、内容がおかしければ ZodError をキャッチから400を返す感じ。
+
+```ts:src/pages/api/users.ts
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { NextApiRequest, NextApiResponse } from 'next';
+import {
+  getListRequestQuerySchema,
+  postRequestBodySchema,
+  User,
+} from '@/models/User';
+import { ErrorResponse } from '@/models/ErrorResponse';
+import { users } from '@/mock/user';
+import { ZodError } from 'zod';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  switch (req.method) {
+    case 'GET':
+      try {
+        const query = getListRequestQuerySchema.parse(req.query);
+        if (query.limit && query.limit < users.length) {
+          res.status(200).json(users.slice(0, query.limit));
+        } else {
+          res.status(200).json(users);
+        }
+      } catch (e) {
+        if (e instanceof ZodError) {
+          const errorResponse: ErrorResponse = {
+            message: '不正なクエリパラメータです。',
+          };
+          console.error(errorResponse, e);
+          res.status(400).json(errorResponse);
+        }
+      }
+      break;
+    case 'POST':
+      try {
+        const body = postRequestBodySchema.parse(req.body);
+        const newUser: User = {
+          id: users.length + 1,
+          name: body.name,
+        };
+        res.status(201).json(newUser);
+      } catch (e) {
+        if (e instanceof ZodError) {
+          const errorResponse: ErrorResponse = {
+            message: '不正なリクエストパラメータです。',
+          };
+          console.error(errorResponse, e);
+          res.status(400).json(errorResponse);
+        }
+      }
+      break;
+    default:
+      const errorResponse: ErrorResponse = {
+        message: 'このエンドポイントで、そのメソッドは定義されていません。',
+      };
+      console.error(errorResponse);
+      res.status(405).json(errorResponse);
+  }
+}
+```
+
+```ts:src/pages/api/users/[userId].ts
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import { NextApiRequest, NextApiResponse } from 'next';
+import { requestPathParamsSchema } from '@/models/User';
+import { ErrorResponse } from '@/models/ErrorResponse';
+import { users } from '@/mock/user';
+import { ZodError } from 'zod';
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  switch (req.method) {
+    case 'GET':
+      try {
+        const query = requestPathParamsSchema.parse(req.query);
+        const user = users.find((user) => user.id === Number(query.userId));
+        if (user) {
+          res.status(200).json(user);
+        } else {
+          const errorResponse: ErrorResponse = {
+            message: '指定のIDを持つユーザは存在しません',
+          };
+          console.error(errorResponse);
+          res.status(404).json(errorResponse);
+        }
+      } catch (e) {
+        if (e instanceof ZodError) {
+          const errorResponse: ErrorResponse = {
+            message: '不正なパスパラメータです。',
+          };
+          console.error(errorResponse, e);
+          res.status(400).json(errorResponse);
+        }
+      }
+      break;
+    default:
+      const errorResponse: ErrorResponse = {
+        message: 'このエンドポイントで、そのメソッドは定義されていません。',
+      };
+      console.error(errorResponse);
+      res.status(405).json(errorResponse);
+  }
+}
+```
+
+### ドメイン
+`src/lib/aspida.ts`でエクスポートしているクライアントを使っていく感じ。
+このクライアントから各 API リクエストの関数（生成した`$api.ts`のやつ）が使えるため、API の型定義が間違ってない限り、おかしなリクエストをする心配がありません。入力補完もばっちり。
+これが型安全に HTTP リクエストができるという Aspida の大きな特徴ですね。
+
+`parse()`でレスポンスの型チェックを実施。
+NG で ZodError がスローされた時は、そのまま再スローにしていて、後述のラッパーのカスタムフック側で処理するようにしました。
+ちなみにメソッド部分を`$`をつけたものにする（例：`get` → `$get`）と、直接レスポンスボディを受け取るようにもできたりします。
+
+※各ドメインは`index.ts`で再エクスポートしてます。
+
+ユーザ情報一覧取得.
+```ts:src/domains/getUsers/getUsers.ts
+import { HTTPError } from '@aspida/fetch';
+import { GetListRequestQuery, usersSchema } from '@/models/User';
+import { errorResponseSchema } from '@/models/ErrorResponse';
+import { client } from '@/lib/aspida';
+
+const getUsers = async (query?: GetListRequestQuery) => {
+  try {
+    const res = await client.users.get({ query });
+    return usersSchema.parse(res.body);
+  } catch (e) {
+    if (e instanceof HTTPError) {
+      errorResponseSchema.parse(await e.response.json());
+    }
+    throw e;
+  }
+};
+
+export default getUsers;
+```
+
+ユーザ情報取得.
+```ts:src/domains/getUser/getUser.ts
+import { HTTPError } from '@aspida/fetch';
+import { userSchema } from '@/models/User';
+import { errorResponseSchema } from '@/models/ErrorResponse';
+import { client } from '@/lib/aspida';
+
+const getUser = async (userId: number) => {
+  try {
+    const res = await client.users._userId(userId).get();
+    return userSchema.parse(res.body);
+  } catch (e) {
+    if (e instanceof HTTPError) {
+      errorResponseSchema.parse(await e.response.json());
+    }
+    throw e;
+  }
+};
+
+export default getUser;
+```
+
+ユーザ新規作成.
+```ts:src/domains/postUser/postUser.ts
+import { HTTPError } from '@aspida/fetch';
+import { PostRequestBody, userSchema } from '@/models/User';
+import { errorResponseSchema } from '@/models/ErrorResponse';
+import { client } from '@/lib/aspida';
+
+const postUser = async (body: PostRequestBody) => {
+  try {
+    const res = await client.users.post({ body });
+    return userSchema.parse(res.body);
+  } catch (e) {
+    if (e instanceof HTTPError) {
+      errorResponseSchema.parse(await e.response.json());
+    }
+    throw e;
+  }
+};
+
+export default postUser;
+```
+
+### カスタムフック
+ドメインのラッパー的なやつで、コンポーネント側からは直接ドメインを呼ばないように。
+リクエスト中のフラグやエラーメッセージの管理ができるようにしてあります。
+リクエストに関係する処理なども併せて定義。
+
+リクエストが正常系・異常系問わず、レスポンスの内容がおかしい場合は ZodError の所に行きつくので、そこは改善の余地がありそう...。
+
+※各カスタムフックは`index.ts`で再エクスポートしてます。
+
+ユーザ情報一覧取得.
+```ts:src/hooks/useUsers/useUsers.ts
+import { useState, useEffect, useCallback } from 'react';
+import { HTTPError } from '@aspida/fetch';
+import { ZodError } from 'zod';
+import { Users } from '@/models/User';
+import getUsers from '@/domains/getUsers';
+
+const useUsers = () => {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>();
+  const [users, setUsers] = useState<Users>();
+
+  useEffect(() => {
+    setIsLoading(true);
+    getUsers()
+      .then((data) => {
+        setErrorMessage('');
+        setUsers(data);
+      })
+      .catch((err) => {
+        if (err instanceof HTTPError) {
+          setErrorMessage('ユーザ一覧情報の取得に失敗しました');
+        } else if (err instanceof ZodError) {
+          setErrorMessage('想定しないデータの取得が行われました');
+        }
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, []);
+
+  return { isLoading, errorMessage, users };
+};
+
+export default useUsers;
+```
+
+ユーザ情報取得.
+```ts:src/hooks/useSearchUser/useSearchUser.ts
+import { ChangeEvent, FormEvent, useState, useCallback } from 'react';
+import { HTTPError } from '@aspida/fetch';
+import { ZodError } from 'zod';
+import { User } from '@/models/User';
+import getUser from '@/domains/getUser';
+
+const useSearchUser = () => {
+  const [userId, setUserId] = useState<number>(1);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>();
+  const [user, setUser] = useState<User>();
+
+  const handleChangeUserId = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setUserId(Number(e.target.value));
+  }, []);
+
+  const handleSearchUser = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      setIsLoading(true);
+      getUser(userId)
+        .then((data) => {
+          setErrorMessage('');
+          setUser(data);
+        })
+        .catch((err) => {
+          if (err instanceof HTTPError) {
+            err.response.status === 404
+              ? setErrorMessage('指定のIDを持つユーザは存在しません')
+              : setErrorMessage('ユーザ情報の取得に失敗しました');
+          } else if (err instanceof ZodError) {
+            setErrorMessage('想定しないデータの取得が行われました');
+          }
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    },
+    [userId]
+  );
+
+  return {
+    userId,
+    isLoading,
+    errorMessage,
+    user,
+    handleChangeUserId,
+    handleSearchUser,
+  };
+};
+
+export default useSearchUser;
+```
+
+ユーザ新規作成.
+```ts:src/hooks/useCreateUser/useCreateUser.ts
+import { ChangeEvent, FormEvent, useState, useCallback } from 'react';
+import { HTTPError } from '@aspida/fetch';
+import { ZodError } from 'zod';
+import postUser from '@/domains/postUser';
+
+type FormData = {
+  name: string;
+};
+
+const useCreateUser = () => {
+  const [values, setValues] = useState<FormData>({
+    name: '',
+  });
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [errorMessage, setErrorMessage] = useState<string>();
+
+  const clearValues = useCallback(() => {
+    setValues({ name: '' });
+  }, []);
+
+  const handleChangeInput = useCallback(
+    (key: keyof FormData) => (e: ChangeEvent<HTMLInputElement>) => {
+      setValues({ ...values, [key]: e.target.value });
+    },
+    [values]
+  );
+
+  const handleCreateUser = useCallback(
+    (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+
+      setIsLoading(true);
+      postUser(values)
+        .then((data) => {
+          setErrorMessage('');
+          alert(
+            `id: ${data.id} name: ${data.name}\nユーザを新規作成しました（モックなので実際には作成されてません）`
+          );
+          clearValues();
+        })
+        .catch((err) => {
+          if (err instanceof HTTPError) {
+            setErrorMessage('ユーザ新規作成に失敗しました');
+          } else if (err instanceof ZodError) {
+            setErrorMessage(
+              'ユーザ新規作成に成功しました（モック）が、想定しないデータが返却されました'
+            );
+          }
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    },
+    [values, clearValues]
+  );
+
+  return {
+    values,
+    isLoading,
+    errorMessage,
+    handleChangeInput,
+    handleCreateUser,
+  };
+};
+
+export default useCreateUser;
+```
+
+これでロジックができました。
+あとはこれをコンポーネント側から使っていきます。
+
+### コンポーネント側
+`pages`配下は、ルーティングと Head の責務だけにしています。
+
+```tsx:src/pages/index.tsx
+import { Fragment } from 'react';
+import Head from 'next/head';
+import HomePage from '@/components/page/Home';
+
+export default function Home() {
+  return (
+    <Fragment>
+      <Head>
+        <title>Type Safe Request</title>
+        <meta name="description" content="型安全なHTTPリクエスト検証" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <HomePage />
+    </Fragment>
+  );
+}
+```
+
+さっくり作ったビューの実体はこちら。
+（`index.ts`で再エクスポートしてます。）
+
+```tsx:src/components/page/Home/Home.tsx
+import { VFC } from 'react';
+import styles from './Home.module.css';
+import useUsers from '@/hooks/useUsers';
+import useSearchUser from '@/hooks/useSearchUser';
+import useCreateUser from '@/hooks/useCreateUser';
+
+const Home: VFC = () => {
+  const { isLoading, errorMessage, users } = useUsers();
+  const {
+    values,
+    isLoading: createIsLoading,
+    errorMessage: createErrMsg,
+    handleChangeInput,
+    handleCreateUser,
+  } = useCreateUser();
+  const {
+    userId,
+    isLoading: searchIsLoading,
+    errorMessage: searchErrMsg,
+    user,
+    handleChangeUserId,
+    handleSearchUser,
+  } = useSearchUser();
+
+  return (
+    <div className={styles.container}>
+      <div className={styles.layout}>
+        <div>
+          <h2>ユーザ一覧</h2>
+          {(isLoading || errorMessage) && (
+            <p className={errorMessage && styles.errorText}>
+              {isLoading ? '読み込み中...' : errorMessage}
+            </p>
+          )}
+          {!(isLoading || errorMessage) &&
+            users?.map((user) => {
+              return (
+                <div key={user.id}>
+                  <p>{`id: ${user.id} name: ${user.name}`}</p>
+                </div>
+              );
+            })}
+        </div>
+        <div className={styles.rightBlock}>
+          <div>
+            <h2>ユーザ検索</h2>
+            <form onSubmit={handleSearchUser}>
+              <label>
+                id:{' '}
+                <input
+                  type="search"
+                  required
+                  pattern="^\d+$"
+                  title="数値で入力してください。"
+                  value={userId}
+                  onChange={handleChangeUserId}
+                />
+              </label>
+              <button type="submit" disabled={searchIsLoading}>
+                検索
+              </button>
+            </form>
+            {!(searchIsLoading || searchErrMsg) && user && (
+              <p>{`id: ${user.id} name: ${user.name}`}</p>
+            )}
+            {!searchIsLoading && searchErrMsg && (
+              <p className={styles.errorText}>{searchErrMsg}</p>
+            )}
+          </div>
+          <div>
+            <h2>ユーザ新規作成</h2>
+            <form onSubmit={handleCreateUser}>
+              <label>
+                name:{' '}
+                <input
+                  type="text"
+                  required
+                  value={values.name}
+                  onChange={handleChangeInput('name')}
+                />
+              </label>
+              <button type="submit" disabled={createIsLoading}>
+                新規作成
+              </button>
+            </form>
+            {createErrMsg && <p className={styles.errorText}>{createErrMsg}</p>}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;
+```
+
+## 検証してみてどうだったか
+型安全な HTTP リクエストにしたいとして、実際に自分のやり方に組み込むにはどうすればいいか？
+というところが、おおよそ解決したのでまぁ満足です。
+自前で型ガード実装するつらみから解放されたのと、より安全な HTTP リクエストができるようになったのとで、検証してみてよかったなぁと。
+
+
+## 余談：tRPC
+<OG url="https://trpc.io" />
+
+Zod の README を見ていたところ、同じ作者の方が作ったこのライブラリに関する記述を見かけました。
+まだあまり詳しくは見られていませんが、Aspida とはまた違ったアプローチの、型安全な HTTP リクエストをするためのライブラリのようです。
+Zod との組み合わせをしているようなサンプルもあったので、気になる方はドキュメントをぜひ読んでみてはいかがでしょうか。
+
+---
+
+今回は Aspida と Zod を使った、型安全な HTTP リクエストについてのお話でした。
+当記事に書いたのは、あくまで自分のやり方ではありますが、導入を検討されている方の何かの参考になれば幸いです。
+
+## 参考リンクまとめ
+
+{/* <!-- textlint-disable ja-technical-writing/no-doubled-joshi --> */}
+
+- [GitHub - Aspida](https://github.com/aspida/aspida)
+- [GitHub - Zod](https://github.com/colinhacks/zod)
+- [npm @aspida/ky](https://www.npmjs.com/package/@aspida/ky)
+- [tRPC](https://trpc.io/)
+- [月間2万DL突破！REST APIを型安全にする最強のTypeScript製HTTPクライアントaspidaを始めよう](https://zenn.dev/solufa/articles/getting-started-with-aspida)
+- [Zodを試す](https://zenn.dev/uttk/scraps/a4da447adc5dcb)
+- [TypeScriptのゾッとする話 ~ Zodの紹介 ~](https://zenn.dev/uttk/articles/bd264fa884e026)
+- [外からやってくる値から TypeScript の型を守るライブラリ・ツールまとめ](https://tech.mobilefactory.jp/entry/2021/12/10/000000)
+
+{/* <!-- textlint-enable --> */}
