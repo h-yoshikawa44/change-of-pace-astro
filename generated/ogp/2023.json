@@ -1,0 +1,350 @@
+{
+  "https://www.jtca.org/certificate_exam/exam_writing_b.html": {
+    "title": "テクニカルコミュニケーター協会　> TC技術検定",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jtca.org"
+  },
+  "https://pub.jmam.co.jp/book/b622627.html": {
+    "title": "エンジニアのためのドキュメントライティング - JMAM 日本能率協会マネジメントセンター 「人・組織・経営の変化」を支援するJMAMの書籍",
+    "description": "",
+    "image": "http://pub.jmam.co.jp/images/book/622627.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://pub.jmam.co.jp"
+  },
+  "https://developers.google.com/tech-writing": {
+    "title": "Technical Writing  |  Google for Developers",
+    "description": "Technical Writing Courses for Engineers",
+    "image": "https://www.gstatic.com/devrel-devsite/prod/v530e2b4758c915c59675435df4424a8b4929cfd382db2f39325a64003950cf58/developers/images/opengraph/white.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
+  },
+  "https://speakerdeck.com/line_developers/my-story-about-taking-the-technical-writing-exam": {
+    "title": "テクニカルライティングの検定を受けてみた話 / \"My Story About Taking the Technical Writing Exam",
+    "description": "堀越 良子 / @mochikoAsTech / LINE株式会社 テクニカルライター。元インフラエンジニア。ねこが好き。\n\nテクニカルライティング技術を改めてしっかり学んでみたい！そんな気持ちで「TC技術検定3級」という、テクニカルライティングの資格試験を受けてみました。テクニカルライティングの試験なんてあるの？どんな試験なの？誰でも受けられるの？いつどこでやってるの？受けてよかった？難易度は？受けてみて得たものはあった？などなど、試験の前に私が知りたかった情報をまとめてお届けします。\n\nイベントページ\nhttps://line.connpass.com/event/255452/",
+    "image": "https://files.speakerdeck.com/presentations/c09e361903bf4ef48de318abd7707a9d/slide_0.jpg?22267411",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/naohiro_nakata/technicalwritingfordeveloper": {
+    "title": "技術をわかりやすく伝えるためテクニカルライティング",
+    "description": "技術をわかりやすく伝えるためのテクニックとしての「テクニカルライティング」を学べます。Developers Summit 2023の登壇資料。開発者・エンジニアの方向け。\nhttps://twitter.com/naoh_nak",
+    "image": "https://files.speakerdeck.com/presentations/d0be189ad7454885ad5c99657ad336a2/slide_0.jpg?24445424",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/naohiro_nakata/technicalwriting": {
+    "title": "テクニカルライティングの基本",
+    "description": "テクニカルライティングの基本を学べます。サイボウズの新入社員向け研修資料です。業務マニュアル、報告書、仕様書、技術解説書などのドキュメントを書く機会がある方向け。\nTwitter：https://twitter.com/naoh_nak\n2023年度のアップデート版もあります：https://speakerdeck.com/naohiro_nakata/technicalwriting2023",
+    "image": "https://files.speakerdeck.com/presentations/faa63b5c68cc450b878e384181e1b7cd/slide_0.jpg?21597936",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/iwashi86/docs-for-developers": {
+    "title": "エンジニアのためのドキュメントライティング / Docs for Developers",
+    "description": "2023年3月17日に開催されたイベント「エンジニアのためのドキュメントライティング - Forkwell Library #19」の登壇資料です。\n\nイベントURL：https://forkwell.connpass.com/event/276576",
+    "image": "https://files.speakerdeck.com/presentations/914d1dd96d804136a1e2ae2dc18f18ad/slide_0.jpg?24920551",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798157191": {
+    "title": "技術者のためのテクニカルライティング入門講座 | 翔泳社",
+    "description": "生産性が向上し、相手に伝わる論理的な技術文書の書き方\n\n日本では、「文書は論理的かつ簡潔に記述する」という、当たり前のテクニックを学ぶ機会があまりありません。\nそこで本書では、忙しい技術者の方でも「テクニカルライティング」を通じて、相手に伝わる技術文書を効率よく\n書けるようになるテクニックを多数紹介していきます。\nユーザーマニュアルや障害報告書、提案書といった実務直結の文例を多数掲載しているので、すぐに業務に役立てることが可能です。\n新人～中堅の技術者の方だけでなく、管理職の方も添削指導のお手本としてご利用いただける内容です。\n\n\n【目次】\n第1章　ロジカルライティング×テクニカルライティング活用の基礎知識\n第2章　わかりやすく、簡潔な文章を書くテクニック\n第3章　読み手に伝わる文章を書くテクニック\n第4章　読みやすさを高める文書フォーマット〜表現・表記のルール〜\n第5章　実践編　ユーザーマニュアル・取扱説明書\n第6章　実践編　提案書\n第7章　実践編　障害報告書\n第8章　実践編　社外メール文",
+    "image": "https://www.shoeisha.co.jp/static/splus/1660/meta/9784798157191.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+  },
+  "https://miholovesq.hatenablog.com/entry/2023/02/10/185204": {
+    "title": "翻訳した2冊がITエンジニア本大賞2023の特別賞をいただきました🎉 #devsumi #よろヒヒーン #ちいとぽ - ナイスビア珍道記",
+    "description": "www.shoeisha.co.jp Developers Summit 2023との連動企画、ITエンジニア本大賞2023の中で、わたしのプレゼンした『エンジニアリングマネージャーのしごと』が、特別ゲストの小城さんから特別賞をいただきました。 ノミネートされたすべての本にとてもていねいな講評をくださって、わたしが特別ゲストをやったときのことを反省するばかりでしたｗ ブログにある「EMがEMとしてより成長するために、何度も繰り返し読んで考えることができる、EMの強い味方になる本」という評価は、訳者冥利に尽きるものです。 ありがとうございます😊 note.com わたしのプレゼンのアピールポイン…",
+    "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/m/miholovesq/20230211/20230211003826.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://miholovesq.hatenablog.com"
+  },
+  "https://www.kzsuzuki.com/entry/devsumi2023": {
+    "title": "#devsumi で「テストを学んでみたい開発者のためのソフトウェアテスト読書マップ」という発表をしてきました。 - ソフトウェアの品質を学びまくる2.0",
+    "description": "Developers Summit (デブサミ) 2023で、「テストを学んでみたい開発者のためのソフトウェアテスト読書マップ」という発表*1をしてきました。 event.shoeisha.jp 資料はこちらです。 speakerdeck.com これまで、ソフトウェアテストとかQAの世界でばかり聴講やら発表やらをしておりまして、その外に出る機会があまりありませんでした。 今回、イベント主催者の翔泳社様から発表の打診をいただき、かなり腰が引けていたのですが、「これを機に、もうちょっと外に目を向けよう」という無理やりな動機付けで場を借りることにしました。 といっても結局発表はテストに関することで…",
+    "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kz_suzuki/20230209/20230209162759.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.kzsuzuki.com"
+  },
+  "https://zenn.dev/mixi/articles/fdf9236f86ea29": {
+    "title": "Developers Summit 2023にてパスキーについて講演しました",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--0Ho5LJm0--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Developers%2520Summit%25202023%25E3%2581%25AB%25E3%2581%25A6%25E3%2583%2591%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25AC%259B%25E6%25BC%2594%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:MIXI%2520DEVELOPERS%2520NOTE%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:ritou%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UzY2IwNWVmMTMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pRX2Zjd3NJUms2TGFsYm5qQ0hXeldmazdCa1l2WDlYQWtaUDhiOFE9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://shinyorke.hatenablog.com/entry/devsumi2023": {
+    "title": "仕事も個人開発も周りがドン引きするまでガチでエンジニアをやっていきましょ - デブサミ2023登壇報告 - Lean Baseball",
+    "description": "昨日（2/10）の話ですが, 2020年以来3年ぶりにデブサミに参加・登壇させていただきました（前回の登壇報告はこちら）. 数あるセッションの中から私のトークにお越し頂き, 誠にありがとうございました！ また, 発表練習の機会を頂き, フィードバック・応援を頂いた所属企業*1のチームメイトおよび #pyhack（Python mini Hack-a-thon）の皆様, そして企画から本番まで伴走して頂いたデブサミの運営・スタッフの方々にもこの場を借りて改めて御礼申し上げます🙏 登壇の備忘録を兼ねて, このエントリーでは以下のラインナップを元に, 発表の振り返りと今後の話なんぞ書きたいと思います…",
+    "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/s/shinyorke/20230211/20230211125620.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shinyorke.hatenablog.com"
+  },
+  "https://www.docswell.com/s/ydnjp/KW1E1D-2023-02-13-111059": {
+    "title": "Kubernetesとカスタムコントローラーを活用したプラットフォーム開発・運用の勘所 | ドクセル",
+    "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+    "image": "https://www.docswell.com/thumbnail/GJWLVK18E2.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+  },
+  "https://event.shoeisha.jp/devsumi/20230209": {
+    "title": "Developers Summit 2023（2023.02.09-10）",
+    "description": "Developers Summit 2023は、2月9-10日にオンライン開催！",
+    "image": "https://event.shoeisha.jp/static/images/event/1408/1200.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+  },
+  "https://www.slideshare.net/YusukeMori2/4rustdevelopers-summit-2023-10d8": {
+    "title": "4年前にRustで新規プロダクトを？！枯れてない技術の採択にまつわるエトセトラ:developers summit 2023 10-d-8",
+    "description": "2023 paild, Inc. Developers Summit 2023 10-D-8 4年前にRustで新規プロダクトを？！ 枯れてない技術の採択にまつわるエトセトラ \f2023 paild, Inc. 誰ですか？ 株式会社ペイルド Chief Technology Oﬃcer @IgnorantCoder ...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit202310-d-8rev1-230210095555-7fb058ec-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://note.com/ozyozyo/n/nc1648061d881": {
+    "title": "ITエンジニア本大賞2023 大賞候補全部読みました｜小城久美子 / ozyozyo",
+    "description": "翔泳社さんが実施しているITエンジニア本大賞 2023の大賞候補に選ばれた6冊を拝読しました。どれも良い本で特別賞をとても迷ったので、すべての本についておすすめさせてください。ちなみに、私の特別賞は『エンジニアリングマネ－ジャ－のしごと』にさせていただきました。  \n\n\nエンジニアリングマネージャーのしごと ―チームが必要とするマネージャーになる方法\n\n\n\n\n\namzn.asia\n\n \n3,740円\n\n(2023年02月08日 12:40時点\n詳しくはこちら)\n\n \n \n \n \n\nAmazon.co.jpで購入する\n\n \n \n \n\n\n\n\n \n 💻 技術書部門  📕『競技プログラミングの",
+    "image": "https://d2l930y2yx77uc.cloudfront.net/production/social_images/22dc61b1e5ce5c4630e495649cac37dbd6c9e6de.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://www.youtube.com/watch?v=sa1ANhHlScs": {
+    "title": "Microsoft のモダンなエンタープライズ Java アプリ開発手法のご紹介 61 [#くらでべ]",
+    "description": "※2023 年 2 月 9 日 ～10 日に開催した株式会社翔泳社 CodeZine 編集部主催の Developers Summit 2023 でマイクロソフトスポンサーセッションにてご紹介したセッション動画です。Microsoft では昨今 Java の開発に対する投資を加速させています。開発環境においては ...",
+    "image": "https://i.ytimg.com/vi/sa1ANhHlScs/maxresdefault.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+  },
+  "https://speakerdeck.com/ritou/pasukihayuzaren-zheng-wo-doubian-erunoka-sonote-zheng-todao-ru-niokeruke-ti-at-devsumi-2023-9-c-1": {
+    "title": "パスキーはユーザー認証を どう変えるのか？その特徴と導入における課題 @ devsumi 2023 9-C-1",
+    "description": "下記講演の資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4146/\n\n下記記事で内容解説を行っていますのでご覧ください。\nhttps://zenn.dev/mixi/articles/fdf9236f86ea29",
+    "image": "https://files.speakerdeck.com/presentations/e5ca8c764c2142c8ac6654cf962c3799/slide_0.jpg?24407138",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/dzeyelid/developers-summit-2023-9-d-1-development-environment": {
+    "title": "developers summit 2023 9-D-1 development environment",
+    "description": "Developers Summit 2023 9-D-1 「もう悩まされない開発環境、プロジェクトで統一した環境をいつでもどこでも」でお話した資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4155/",
+    "image": "https://files.speakerdeck.com/presentations/4491b7c4f1344caaadc65af7ae5404e4/slide_0.jpg?24416282",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://note.com/nemchan_nel/n/n9c69b929973a": {
+    "title": "ねむ、「大賞作家」に！ ITエンジニア本大賞2023 ビジネス書部門大賞【メタバース進化論】｜バーチャル美少女ねむ/Nem⚡メタバース文化エバンジェリスト",
+    "description": "2023年2月9日に行われた「ITエンジニア本大賞2023」のプレゼン大会と決選投票で、拙著『メタバース進化論（技術評論社）』がビジネス書部門で「大賞」を受賞しました！ VTuberがアバターでプレゼンするのも大賞受賞するのも初だそうです。応援・投票してくれたみなさん、本当にありがとうございました！  ※2/15追記：物理トロフィーが届きました！ また、各種メディアでも掲載頂いたので追記しました。 ねむ、「大賞作家」に！ ITエンジニア本大賞 ビジネス書部門大賞受賞【メタバース進化論】 ※『ITエンジニア本大賞』は、翔泳社が主催する全国のITエンジニアがおすすめの技術書・ビジネス書を選",
+    "image": "https://assets.st-note.com/production/uploads/images/97872044/rectangle_large_type_2_5235aaffc49fde48d1f3d0ffb92729b6.jpeg?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://speakerdeck.com/tomoima525/metabasuniokerugurobarunotorendotohuo-yong-nozui-qian-xian": {
+    "title": "Web3/メタバースにおけるグローバルのトレンドと活用の最前線",
+    "description": "Devsummit 2023にて Web3/メタバースで起きつつあることや、その根幹となりうるアイデンティティ技術について話しました。\n近年、頻発する情報漏えいやハッキングを受け、“個人情報をどう所有し、他者へ共有するか”という意識が世界的に高まっています。この流れを受け注目を浴びるのが、ブロックチェーンを基盤とする認証フレームワーク「Self-Sovereign Identity」(自己主権型アイデンティティ、SSI)です。セッションではSSIの技術概要やweb3やメタバースにおける活用について紹介します。",
+    "image": "https://files.speakerdeck.com/presentations/02d0345749594b6496c0c6a8e4ef8c31/slide_0.jpg?24412331",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kjstylepp/purodakutotimu-wan-tonatutelin-musohutoueatesutonokan-suo-number-devsumi-number-devsumie": {
+    "title": "プロダクトチーム一丸となって臨むソフトウェアテストの勘所 #devsumi #devsumiE",
+    "description": "Developers Summit 2023の9-E-2セッションにて発表した資料の公開版です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4165/",
+    "image": "https://files.speakerdeck.com/presentations/44bee2b87621448a85b567b2da7af114/slide_0.jpg?24416894",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://docs.google.com/presentation/d/1CrpdaUslHJ04H6h89MnE6uIknmeinmzup6GvvLNpqAE/edit#slide=id.p": {
+    "title": "DevelopersSummit2023_10-A-6_KohnoFumiya",
+    "description": "有志によって 日本最大級の選挙情報サイトが生まれた物語 Developers Summit 2023 10-A-6 河野 文弥(Kohno Fumiya)",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oEWaJcXDa9nZxGmNDjWzfzt9JrFUyFhVRhT5uC-_HXbCjqD-xswItNuoFhgWxIaym9-DELC80mSYCDsjmZJ6IkxGZd1t-DKsSNCs2f9YyHb=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://drive.google.com/file/d/1ZGe_JeLQ7pgK5XEISZmp-CRi65azdWRi/view": {
+    "title": "楽しい競技プログラミングの世界 (公開版).pdf",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
+  },
+  "https://docs.google.com/presentation/d/1FjF8W8bk9thQYc2_CAfoxY0ECPZYfkxH66gPPpYsFWE/edit#slide=id.gf3aad8cee5_1_1": {
+    "title": "Developers Summit 2023 [9-C-4] 田島将太",
+    "description": "GA4とBigQueryで作る、 データカルチャーを育てるためのデータ分析基盤 Developers Summit [9-C-4] 02/09 13:15 ～ 13:55 ストリーツ株式会社代表取締役CEO 田島将太 https://drive.google.com/drive/u/0/folders/1omaoHenAyuJxXEd38ilXqUWOxEqGTEDZ 1",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oFO_-UbXUrV6-AxpwuGu28vSkbVY7p65_CcivL0OS7Xe8id_suzGIAi97Y5Q8Rmb1p-zNy0Xdmx6b-k7jTLnHAtjPENy-JRIGkFuTMlIM5o=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://speakerdeck.com/kazuyaseki/enzinianiosusumeno-figma-huo-yong": {
+    "title": "エンジニアにオススメの Figma 活用",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/2bc7d3a29e114cc8831a53f88aab05dd/slide_0.jpg?24430173",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/recruitengineers/devsumi2023": {
+    "title": "MY WIFE WENT TO USA  妻のアメリカ出張に伴う育児  サバイバルガイド",
+    "description": "「Developers Summit 2023」で2023年2月10日に発表した、高橋陽太郎の資料です。",
+    "image": "https://files.speakerdeck.com/presentations/1d917f9a91304b2491f3394991fde539/slide_0.jpg?24425106",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/natsuyo/yu-er-xiu-ye-zhong-nosukiruatupudousuru": {
+    "title": "育児休業中のスキルアップどうする？",
+    "description": "https://event.shoeisha.jp/devsumi/20230209/session/4185/\n【子育て×エンジニアによるリレーセッション】“育児”をより楽しむために",
+    "image": "https://files.speakerdeck.com/presentations/151178b200954c55a3367daae0b873a9/slide_0.jpg?24432115",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/inakam/tatuta1ren-karashi-meteshen-ceng-xue-xi-niyoruniyusuyao-yue-wopurodakutonishi-zhuang-sitafang-fa-huasutopengindeyarikiruli": {
+    "title": "たった1人から始めて深層学習によるニュース要約をプロダクトに実装した方法〜ファーストペンギンでやりきる力〜",
+    "description": "Developers Summit 2023\n9-C-6 02/09 15:05 ～ 15:45\nたった1人から始めて深層学習によるニュース要約をプロダクトに実装した方法～ファーストペンギンでやりきる力～",
+    "image": "https://files.speakerdeck.com/presentations/2567677cbfdb4442a77204cb2141f473/slide_0.jpg?24385855",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/estie/man-wochi-siteshi-merurust": {
+    "title": "満を持して始めるRust",
+    "description": "Developers Summit（デブサミ）\n9-B-9 02/09 17:45 ～ 18:25\n「満を持して始めるRust」kenkoooo\n\nRustはC++の代替となることが期待されていることから、低レイヤ向け言語という印象を持っている方も多いかもしれません。しかし、Rust 1.0のリリースから7年ほど経ち、言語そのものだけでなく周辺のライブラリやツールも充実し、普段遣いのプログラミング言語として快適に開発できる環境が整っています。\n\n本セッションでは、今日からRustで開発をスタートすることを目指し、Rustそのものの紹介だけでなく、実際の開発におけるコードの書き方や、estieでの導入事例をご紹介します。\n",
+    "image": "https://files.speakerdeck.com/presentations/be5bd22434104050a6ead3040944bdb0/slide_0.jpg?24417626",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/grapecity_dev/developers-summit-2023": {
+    "title": "プロダクトマーケティングマネージャーのはなし/Developers Summit 2023",
+    "description": "2023年2月9日（木）・10日（金）に開催された翔泳社主催の「Developers Summit 2023（デブサミ2023）」で発表した資料です。\n\n「マーケティングとあるけれど、エンジニアのあなたでないと出来ないかもしれないプロダクトマーケティングマネージャーのはなし」\nグレープシティ株式会社 ツール事業部\n村上 功光",
+    "image": "https://files.speakerdeck.com/presentations/440bb4fd9c15471890b15803f2306c10/slide_0.jpg?24415125",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/i35_267/in-the-end-people-value": {
+    "title": "結局は、人 / In the end, people value ",
+    "description": "2023/2/9 Developers Summit 2023 登壇資料",
+    "image": "https://files.speakerdeck.com/presentations/27dc9feeacdb46da86431eb5e5cc4100/slide_0.jpg?24412960",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kawaguti/how-rsgt-works": {
+    "title": "How RSGT Works",
+    "description": "Developers Summit 2023 : Hybrid Conferece Panel session\nhttps://event.shoeisha.jp/devsumi/20230209/session/4154/",
+    "image": "https://files.speakerdeck.com/presentations/fa16fa9ef007493da83fa6897689384a/slide_0.jpg?24407927",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tahia910/she-nei-dedekiruakusesibiriteinohazimekata": {
+    "title": "社内でできるアクセシビリティのはじめかた",
+    "description": "Developers Summit 2023 - Day 2 (2023/2/10)\nhttps://event.shoeisha.jp/devsumi/20230209/session/4203/\n\n<a href=\"https://speakerdeck.com/tahia910/she-nei-denoakusesibiriteitui-jin\">DroidKaigi 2022</a>と<a href=\"https://event.shoeisha.jp/devsumi/20221102/session/4036/\">Women Developers Summit 2022</a>で話した内容を更にブラッシュアップしたバージョン\n\n読みにくい場合：\nhttps://docs.google.com/presentation/d/1d4tJhHwbLc0-pphj2umsadd4RB9A_lwKu4m3ON7PubM/",
+    "image": "https://files.speakerdeck.com/presentations/70fc051d41b04c03a302fd75d3476ceb/slide_0.jpg?24439639",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tomzoh/hybrid-at-iosdc-japan-and-phperkaigi-76019836-f6e5-421f-b5c2-f250607785f6": {
+    "title": "iOSDC Japan, PHPerKaigi とハイブリッド開催 / Hybrid at iOSDC Japan and PHPerKaigi",
+    "description": "Developers Summit 2023 の発表資料です。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4154/",
+    "image": "https://files.speakerdeck.com/presentations/2d87738848c04383a0bf3bd857969850/slide_0.jpg?24436481",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/storesinc_tech/reasons-why-business-integration-brings-discontinuous-growth-opportunities-for-engineers": {
+    "title": "経営統合がエンジニアに非連続な成長機会をもたらす理由",
+    "description": "デブサミ2023の登壇資料です。\n\nSTORES はいっしょに働くエンジニアを募集しています！\nエンジニア採用情報：https://jobs.st.inc/engineer\nSTORES Product Blog：https://product.st.inc/",
+    "image": "https://files.speakerdeck.com/presentations/623b95f5871f453ea8749844aee308e3/slide_0.jpg?24432770",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kaminashi/what-em-did-for-early-startups-to-welcome-cto-and-what-changed-after-welcoming-cto": {
+    "title": "アーリースタートアップがCTOを迎えるために EMがやったこと、CTOを迎えてから変わったこと / What EM did for early startups to welcome CTO, and what changed after welcoming CTO",
+    "description": "2023/02/10　Developers Summit（デブサミ）2023\nアーリースタートアップがCTOを迎えるために EMがやったこと、CTOを迎えてから変わったこと\nhttps://event.shoeisha.jp/devsumi/20230209/session/4200/\n\nソフトウェアエンジニア\n宮本 大嗣\n\n▼カミナシの採用情報はこちら\nhttps://careers.kaminashi.jp/",
+    "image": "https://files.speakerdeck.com/presentations/6b0396e44c774f698ce0dda8eddc3c18/slide_0.jpg?24432068",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/minodriven/purpose-abstraction-design": {
+    "title": "目的と抽象化の関係性から分かる、システムの設計精度を高める考え方 / purpose abstraction design",
+    "description": "2023/02/10、デブサミ2023の登壇資料です。\n『目的と抽象化の関係性から分かる、システムの設計精度を高める考え方』\nhttps://event.shoeisha.jp/devsumi/20230209/session/4182/",
+    "image": "https://files.speakerdeck.com/presentations/9bc854dd988f491bb8dcc7c7b2dca4cc/slide_0.jpg?24427247",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/bengo4com/in-search-of-what-the-customer-really-wanted-6627cb55-46d9-4958-9546-35820626d321": {
+    "title": "Developers Summit 2023「顧客が本当に必要だったもの」を求めて / In Search of what the customer really wanted.",
+    "description": "Developers Summit 2023 のセッション資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4189/\n\n弁護士ドットコム株式会社\n技術戦略室 室長 兼 クラウドサイン事業本部 プロダクト統括\n市橋 立",
+    "image": "https://files.speakerdeck.com/presentations/7548780ef03c4ce085cc5548bd1fc384/slide_0.jpg?24524656",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/overflowinc/ding-liang-ping-jia-pi-bi-simasenka-well-beingtosheng-chan-xing-zhi-biao-wozu-mihe-waseta-enziniaringumetorikusupuroguramunituite": {
+    "title": "定量評価疲弊しませんか？～Well-beingと生産性指標を組み合わせた エンジニアリングメトリクスプログラムについて～",
+    "description": "Developers Summit 2023 登壇資料\nhttps://event.shoeisha.jp/devsumi/20230209/session/4171/\n\noverflowは、副業・転職サービス「Offers(オファーズ)」の開発、運用を行っています。\nサービスの提供を開始してから3年。サービスの拡大に合わせ、組織も比例して成長してきました。\n\nその中で、組織の成長に伴い、どのように生産性指標を開発に取り入れていったか。\n取り入れていった結果、状態把握から逸脱し何が起きたか。そして、その後どのようにして改善していっているかご紹介します。\n\n私達が行ってきたことを例に(反省として)、数値に踊らされずに正しく運用する方法を考えるきっかけになれば幸いです。\n\n▼関連リンク\nOffers：https://offers.jp/\nOffers MGR（オファーズマネージャー）：https://offers-mgr.com/lp\nOffers Tech Blog: https://zenn.dev/offers\nOffersデジタル人材総研：https://hr-lab.offers.jp/\nOffers事例集：https://offers.jp/cases\nOffersお役立ち資料：https://offers.jp/whitepaper\nOffersMagazine：https://offers.jp/media\nOffersJobs：https://offers.jp/jobs\nPodcast：https://anchor.fm/overflowinc/",
+    "image": "https://files.speakerdeck.com/presentations/1c2a6a2211c543e696311ce862be6622/slide_0.jpg?24418366",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/takanabe/developers-summit-2023-evolution-of-software-testing-by-machine-learning": {
+    "title": "[Developers Summit 2023] ソフトウェアテスト新時代の幕開け: 機械学習とデータサイエンスで実現するテスト運用の高度化",
+    "description": "Developers Summit 2023 の公募セッションで発表した資料です。https://event.shoeisha.jp/devsumi/20230209/session/4142/",
+    "image": "https://files.speakerdeck.com/presentations/2037a09e17cf4398ab0006d4fcfea1f9/slide_0.jpg?24408296",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yoshiq/di-yu-ji-shu-komiyuniteinican-jia-sitegan-zita-komiyuniteinoda-qie-satoxin-tanakiyariamu-biao": {
+    "title": "地域技術コミュニティに参加して感じた コミュニティの大切さと新たなキャリア目標",
+    "description": "2023/02/10 Developer Summit 2023 - Day2\n10-A-9: きっかけをつなげよう！コミュニティへの「恩送り」リレーセッション\n\nコロナ禍をきっかけにリモートワークを導入した企業が増え、実際にリモートワークを働き方として選択して都市部から移住する人も増加しました。特に地方でフルリモートワークを選択する場合、人との繋がりや学びの場をどのように持つかを課題に感じる場合があります。発表者がコロナ禍以前より地方でフルリモートワークを行っている経験を通して「地域技術コミュニティ」の存在に助けられ、コミュニティ参加を通して新たなキャリア目標へ取り組んでいることを紹介します。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/",
+    "image": "https://files.speakerdeck.com/presentations/427e9376df4b45508c7230d0f7617b25/slide_0.jpg?24434033",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tomasagi/korahoresiyonkatesutozi-dong-hua-nocheng-fou-wofen-keru": {
+    "title": "コラボレーションがテスト自動化の成否を分ける",
+    "description": "Developers Summit \n10/02/2023 ",
+    "image": "https://files.speakerdeck.com/presentations/6db4389fd2fb4872b39b451f2f6ec711/slide_0.jpg?24432130",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/masashi/frontend-security": {
+    "title": "フロントエンド開発のためのセキュリティ入門",
+    "description": "Developers Summit 2023 10-A-4 「フロントエンド開発のためのセキュリティ入門」の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4176/\n\n「HTTPS化」「CORS」「XSS」「脆弱なライブラリのチェック」について説明しています。",
+    "image": "https://files.speakerdeck.com/presentations/98ea5595dd704bf2a804082a7544f93d/slide_0.jpg?24447197",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/shinyorke/serverless-data-platform-and-baseball": {
+    "title": "俺のDXを実現するためのサーバレスなデータ基盤開発と運用 / Serverless Data Platform and Baseball",
+    "description": "Developers Summit 2023登壇資料\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4196/",
+    "image": "https://files.speakerdeck.com/presentations/1836dea580734485ac9d05745a07ee9a/slide_0.jpg?24430942",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kakehashi/developers-summit-2023-zhu-shi-hui-she-kakehasi": {
+    "title": "Developers_Summit_2023_株式会社カケハシ.pdf",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/96e9cfef3ca64de4b690f418e2e46d56/slide_0.jpg?24434816",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/myamashii/contributiontokanhuarensudeng-tan-heno-bei-zhong-woya-siteding-itafang-he": {
+    "title": "Contributionとカンファレンス登壇への背中を押して頂いた方々へ",
+    "description": "Developers Summit 2023 の 「きっかけをつなげよう！コミュニティへの「恩送り」リレーセッション」 の登壇資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/",
+    "image": "https://files.speakerdeck.com/presentations/81867d8c73724be4812f526323f9e799/slide_0.jpg?24443472",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/corocn/debusami2023-yu-xiu-nosu-me": {
+    "title": "育休のすゝめ #devsumi 2023",
+    "description": "Developers Summit 2023 で登壇したときの資料です。\n誤解を生む表現を一部補足修正しております。\n\n内容\n- 日本の育休制度について（主にお金の話）\n- 育休から2年経ってみて感じていること（個人の学び）\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4185/\nhttps://event.shoeisha.jp/devsumi",
+    "image": "https://files.speakerdeck.com/presentations/8f65b2b3286d4dd4bf5b9f6762c9573a/slide_0.jpg?24439839",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/ichimichi/community-changes-lives": {
+    "title": "Community changes lives",
+    "description": "Developers Summit 2023 \nきっかけをつなげよう！コミュニティへの「恩送り」リレーセッションでの登壇スライドです\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/\n\nKazushi NAKAMICHI\nTwitter : https://twitter.com/ici_mici",
+    "image": "https://files.speakerdeck.com/presentations/3b499bd2a69142b2b7675ff6537b0ec9/slide_0.jpg?24439787",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/odasho/20230210-jin-kososhi-meyoupin-zhi-enziniaringu-tesutozi-dong-hua-deaziyairukai-fa-nobo-nicheng-ru": {
+    "title": "20230210_今こそ始めよう品質エンジニアリング！ ～テスト自動化でアジャイル開発の波に乗る！～",
+    "description": "2023/2/9-2023/2/10 Developers Summit 2023にて登壇した際に使用したスライドです。",
+    "image": "https://files.speakerdeck.com/presentations/ee7e259a01204ec2b2060739fde3add4/slide_0.jpg?24441793",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/altech/the-architecture-and-technology-for-continuous-services-growth": {
+    "title": "継続的なサービス発展を支えるアーキテクチャと技術 / Developers Summit 2023",
+    "description": "自社サービスにおいてどのようにアーキテクチャと技術を活用するかについて、基本的な考え方をお話ししました。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4133/",
+    "image": "https://files.speakerdeck.com/presentations/42f47fdec814499aa6c3595f75b4baed/slide_0.jpg?24472583",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/juve534/improve-development-efficiency-with-dmm-platform": {
+    "title": "DMMプラットフォームでプルリクエストのマージ時間を250時間から50時間に減らした話 / Developers Summit 2023",
+    "description": "Developers Summit 2023\nhttps://event.shoeisha.jp/devsumi/20230209/session/4187/",
+    "image": "https://files.speakerdeck.com/presentations/b8b156cfaf4543b09286fb247a8aa988/slide_0.jpg?24436307",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tbpgr/engineering-organizational-development": {
+    "title": "組織づくりをエンジニアリングする / Engineering Organizational Development",
+    "description": "2023/02/10 のDevelopers Summit2023の発表\n\nウェブエンジニアから人事・組織領域に転身して3年の私が、エンジニアの手法を組織に転用する方法について紹介します。\n\n# Developers Summit2023イベントページ\nhttps://event.shoeisha.jp/devsumi/20230209/session/4194/",
+    "image": "https://files.speakerdeck.com/presentations/fb63bc68b4e349f0a22c427ca4e82042/slide_0.jpg?24430733",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/nozomiito/tesutozi-dong-hua-deqi-ye-sita10nian-to-tesutozi-dong-hua-pu-ji-noli-shi-wozhen-rifan-ru-0003df5c-5998-411f-b8b4-ee8389d6faf5": {
+    "title": "テスト自動化で起業した10年と\u000bテスト自動化普及の歴史を振り返る",
+    "description": "2023.2.10に開催された「Developers Summit 2023」の資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4208/",
+    "image": "https://files.speakerdeck.com/presentations/d00cfeb369f244d0976426b342bbeeeb/slide_0.jpg?24437783",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://www.attractor.co.jp/presentation/itbookaward-engineering-manager": {
+    "title": "「ITエンジニア本大賞2023」プレゼン大会『エンジニアリングマネージャーのしごと』",
+    "description": "2023年2月9日に行われたITエンジニア本大賞2023での書籍『エンジニアリングマネージャーのしごと』の紹介資料です。",
+    "image": "https://assets.attractor.co.jp/wp-content/uploads/2023/02/engineering-manager-01.webp",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.attractor.co.jp"
+  },
+  "https://www.attractor.co.jp/presentation/itbookaward-teamtopologies": {
+    "title": "「ITエンジニア本大賞2023」プレゼン大会『チームトポロジー』",
+    "description": "2023年2月9日に行われたITエンジニア本大賞2023での書籍『チームトポロジー』の紹介資料です。",
+    "image": "https://assets.attractor.co.jp/wp-content/uploads/2023/02/20230209-teamtopologies.001.webp",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.attractor.co.jp"
+  },
+  "https://www.docswell.com/s/Neri78/5L7765-devsumi-2023-2fa": {
+    "title": "9-B-7 結局どれが一番なの？ あなたのユーザーに最適な二要素認証の方法を考える | ドクセル",
+    "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+    "image": "https://www.docswell.com/thumbnail/V7P95QXPJ8.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+  },
+  "https://fintan.jp/wp-content/uploads/2023/02/developers_summit_20230210_iter.pdf": {
+    "title": "",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fintan.jp"
+  }
+}

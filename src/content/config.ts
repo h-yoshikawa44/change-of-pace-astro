@@ -17,7 +17,6 @@ const posts = defineCollection({
       .transform((str) => (str ? new Date(str) : undefined)),
     category: z.enum(CATEGORY_LIST),
     tags: z.array(z.string()),
-    heroImage: z.string().optional(),
   }),
 });
 
