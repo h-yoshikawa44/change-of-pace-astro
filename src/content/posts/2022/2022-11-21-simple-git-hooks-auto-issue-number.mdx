@@ -1,0 +1,246 @@
+---
+title: "simple-git-hooksでもブランチ名からIssue番号抽出をやりたくて、わちゃわちゃした話"
+description: "simple-git-hooksでもブランチ名からIssue番号自動抽出の仕組みをやりたくて、七転八倒しながら設定した記録"
+pubDate: "2022-11-21"
+updatedDate: "2022-11-21"
+category: "develop"
+tags: ["shell", "Git"]
+---
+
+こんにちは、よしです。
+今回は記事リハビリということで、ちょっとした小ネタ記事を書いてみました。
+
+import OG from "@/components/OG.astro"
+
+## 今回やりたかったこと
+簡潔に言うと
+「simple-git-hooks を使った Git フック設定で、ブランチ名から Issue 番号を抽出してコミットメッセージへ自動付与するようにしたい」
+というやつです。
+
+背景はいいから実際の設定方法見せてくれや、という方は[設定方法の結論](#設定方法の結論)へどうぞ。
+
+### もうちょっと背景を説明してみる
+#### Git フック
+皆さんおなじみの Git に Git フックという機能があります。
+
+<OG url="https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF" />
+
+> 他のバージョンコントロールシステムと同じように、Git にも特定のアクションが発生した時にカスタムスクリプトを叩く方法があります。
+> このようなフックは、クライアントサイドとサーバーサイドの二つのグループに分けられます。
+> クライアントサイドフックはコミットやマージといったクライアントでの操作の際に、サーバーサイドフックはプッシュされたコミットの受け取りといったネットワーク操作の際に、それぞれ実行されます。
+> これらのフックは、さまざまな目的に用いることができます。
+
+公式にも書いてある通り、Git の特定のアクションが発生した時にカスタムスクリプトを叩く仕組みのことです。
+（詳細やフックの種類は当記事では説明しないので、公式ページをご参照ください）
+
+この Git フックを使った設定としてよくあるのが...
+- コミット前に Linter、フォーマッターでコード整形する
+- ブランチ名から Issue 番号を抽出して、コミットメッセージに自動で付与する
+
+など。
+
+前提として、コミットメッセージに Issue 番号を書いておくと、自動的にその Issue と紐づけをしてくれるのもおなじみですね。（PR なんかでもそうですが）
+自分は以前から手動で Issue 番号を書いていたので、これを Git フックで自動化したいなぁと思ったのでした。
+
+#### Git フックに関するパッケージ
+Git フックを設定となると、多くの方はそれを扱いやすくしてくれるパッケージを利用しているのではないでしょうか。
+割と有名なものだと Husky とか。
+<OG url="https://typicode.github.io/husky" />
+
+自分が Git フックを活用するようになった頃、ちょうど Husky はライセンス問題でごたごたしていた時だったので、自分は simple-git-hooks の方を採用したのでした。
+Husky に対して、こちらは Zero dependency かつ軽量版なやつ。
+<OG url="https://github.com/toplenboren/simple-git-hooks" />
+
+---
+
+じゃあ、simple-git-hooks で今回やりたい仕組みを設定しよう！となったわけですが、ググっても Husky の記事ばかりヒットしまして。
+基本的な設定方法はおおよそ同じとは思いつつ、実際にやってみるといろいろハマったので、せっかくなら記事にするかとなった次第です。
+
+## 前提
+- simple-git-hooks を初期設定済み
+
+動作確認環境.
+- Windows：Git Bash × GNU sed
+- Mac：iTerm × BSD sed
+
+## 設定方法の結論
+### 使用する Git フック
+検索でヒットした多くの記事は commit-msg フックを使用して、コミットメッセージの先頭か末尾に番号を付与しているような感じでした。
+ただ、自分の場合はコミットメッセージの**一行目末尾**に Issue 番号をつけたくて。
+
+commit-msg フックだとちょっとめんどくさくね...？
+一行目だけ抽出して末尾に番号付けて、残りの行を結合するとかやらないけなくね...？
+
+ということで、prepare-commit-msg フックを使用する方向に。
+あらかじめコミットメッセージテンプレに置換用の文字を入れておき、コミットメッセージ入力前にブランチ名から抽出した Issue 番号に置換する、ということをやることにしました。
+
+このやり方は、こちらの記事を参考にさせていただきました。
+<OG url="https://tech.mobilefactory.jp/entry/2021/12/06/000000" />
+
+### コミットメッセージテンプレ
+使用するコミットメッセージテンプレの1行目に置換用のテキストを入れておきます。
+
+```bash:.gitmessage
+(#Issue)
+```
+
+### prepare-commit-msg フックのスクリプト
+prepare-commit-msg はコミットメッセージを入力する前に実行されるフックです。
+[後述](#sed-コマンドの違い)しますが、sed コマンドが GNU でも BSD でも動作するように組んでます。
+
+ブランチ名の前部分が`ブランチ種別/Issue番号`という命名だと抽出する仕組み。
+ブランチ種別部分は一旦以下の3つにしました。
+- feature
+- bugfix
+- release
+
+ブランチ名の例.
+- feature/1
+- feature/1-test
+
+```bash:.githooks/prepare-commit-msg
+#!/bin/sh
+
+## sed コマンドが GNU か BSD か確認
+GNU_SED=true
+sed --version 1>/dev/null 2>/dev/null || GNU_SED=false
+echo $GNU_SED
+
+## コミットメッセージ入力前に、ブランチ名から Issue 番号を抽出して置換する
+COMMIT_MSG_FILE=$1
+MESSAGE=$(cat "$COMMIT_MSG_FILE")
+
+ISSUE_NUMBER=$(git rev-parse --abbrev-ref HEAD | grep -Eo "^(feature|bugfix|release)/[0-9]+" | grep -Eo "[0-9]+")
+if [ -n "$ISSUE_NUMBER" ]; then
+  if [ "$GNU_SED" == "true" ]; then
+    sed -i "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
+  else
+    sed -i "" "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
+  fi
+  exit 0
+fi
+
+## Issue 番号が抽出できなかった + そのまま続行する場合は、置換用文字列を除去する
+read -p "Issue 番号がブランチ名にないので置換できませんが、続行しますか？ (y/N): " YM < /dev/tty
+case "$YM" in
+  [yY]*)
+    if [ "$GNU_SED" == "true" ]; then
+      sed -i "s/(#Issue)//" $COMMIT_MSG_FILE
+    else
+      sed -i "" "s/(#Issue)//" $COMMIT_MSG_FILE
+    fi;;
+  *) echo "abort." ; exit 1 ;;
+esac
+```
+
+Mac の場合は、ファイル作成時に実行権限がつかない？ようだったので実行権限を付与しておく必要がありました。
+```bash
+chmod a+x .githooks/prepare-commit-msg
+```
+
+### simple-git-hooks の設定
+前述のカスタムのフックスクリプトを実行するように書けばいいわけですが、`\"$@\"`で引数を渡すのを忘れずに（引数に関しては[後述](#引数が入らない)も参照）
+
+```json:pakcage.json
+// 抜粋
+"simple-git-hooks": {
+  "prepare-commit-msg": "./.githooks/prepare-commit-msg \"$@\""
+},
+```
+
+---
+これらの内容で、simple-git-hooks の設定を反映。
+以降は、コミットしてコミットメッセージ入力前にフックスクリプトが動作して、置換用テキストがブランチ名から抽出した Issue 番号に指し変わっているはずです。
+
+## 躓いたところと補足説明
+たったこれだけの設定をするだけでも、意外といろんなところに躓きました。
+（普段、シェル書き慣れてないのもあるかも😇）
+
+せっかくなので、どのあたりに躓いたのかと、その補足説明も書いておこうかと。
+
+### 引数が入らない？
+最初、いろんな記事を読んでみたところ、フックスクリプトの引数`$1`にコミットメッセージファイルの情報が入ってくることがわかりました。
+なので、`$1`を使うようなシェルを書いていったわけですが、いざ実行するとなぜか値が入ってこない...。
+引数の数が入る`$#`を確認すると0。
+
+どういうこと??? simple-git-hooks だとなんか引数の渡り方が違うんか???と混乱。
+原因としては、simple-git-hooks の設定定義時に引数を渡すような書き方をしていなかったせいでした。
+
+```json
+// 誤
+"prepare-commit-msg": "./.githooks/prepare-commit-msg"
+
+// 正
+"prepare-commit-msg": "./.githooks/prepare-commit-msg \"$@\""
+```
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+simple-git-hooks は設定したフックの種類に応じて、`.git/hooks`配下にフックファイルを作成します。
+（今回だと`.git/hooks/prepare-commit-msg`）
+そのフックファイルの中で、simple-git-hooks 設定で設定したコマンドを実行する、というような仕組みになっているのです。
+
+{/* <!-- textlint-enable --> */}
+
+```bash:.git/hooks/prepare-commit-msg
+#!/bin/sh
+./git-hook/commit-msg "$@"
+```
+そのため、元々のフックファイルへ渡されるようになっている引数をカスタムのフックの方でも使用したい場合は、そのまま引数を渡してあげれば OK。
+
+引数渡してないんだから、そりゃあ引数ないってなるやん。
+
+### read の処理で止まってくれない
+ブランチ名から Issue 番号を抽出するにあたり、もし番号が見つからなかった場合は、そのまま続行してよいか応答処理を入れるようにしました。
+
+<OG url="https://dev.classmethod.jp/articles/waiting-for-your-input-with-read-command" />
+
+こちらの記事を見て、シェルで応答処理を実現するには read を使えばいいらしいぞとわかり、書いてみて動作確認。
+すると、本来はユーザの入力待ち状態になり止まってくれるはずなのですが、止まってくれない...。
+どうもユーザ入力部分が勝手に入力されて、y でも Y でもないので続行しない方の処理に進んでしまっているようでした。
+
+この件を調べてみると、ループ処理の中で read を使っているとそういうことがあるという記事がいくつかヒット。
+今回はループ処理の中ではないんだけどなと思いつつ。
+コンソールからの入力しか受け付けないようにするには`< /dev/tty`をつけるとよいとのことだったので、つけたところ止まってくれるようになりました。
+<OG url="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12125082002" />
+
+### sed コマンドの違い
+Windows（Git Bash）でも Mac でも使用できる sed コマンドですが、どうも2種類あって、微妙に挙動が違うらしいとわかり。
+種類としては以下の2つ。
+- Windows（Git Bash）or Linux：GNU sed
+- Mac：BSD sed
+
+今回使用している、ファイル上書きの`-i`オプションも挙動が違うものの1つでして。
+BSD sed の方では、`-i`オプションの後ろにバックアップファイルの拡張子をつける必要があるとのこと。
+（バックアップファイルを作りたくない場合は、空文字にすると作られません）
+```bash
+# GNU sed
+sed -i "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
+
+# BSD sed
+sed -i "" "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
+```
+
+そのため、できればどちらでも動作するようなスクリプトにしたいなぁと試行錯誤でわちゃわちゃして。
+結果的に、`sed --version`コマンドの実行結果でどちらの sed なのか判断するフラグ変数を作り、それで分岐させるようにしました。
+BSD sed の場合は、`--version`オプションが存在しないのでエラーになることを利用したものです。
+
+それと`sed --version`の実行結果を出力はしたくなかったので、`1>/dev/null 2>/dev/null`で出力しないようにしています。
+<OG url="https://qiita.com/harasakih/items/868a850fcdc99a2c37b0" />
+
+---
+以上、小ネタ記事をお送りしました。
+自分は普段シェルをあまり書いてない人間なので、なかなかうまくいかなくて四苦八苦...😇
+
+とはいえ、前からやりたいと思っていた仕組みを作ることができたので、これからばっちり活用していきたいですね。
+
+採用こそしなかったですが、Git フックってほかの言語でも書けるらしく、へーそうなんだーという発見があったり。
+Git フックの理解が少し深まったので、ほかにも便利そうなスクリプト組んでみるのもよさそうです。
+また、何かあったら記事にするかもしれません。
+
+## 参考リンクまとめ
+- [Git - Git のカスタマイズ - Git フック](https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF)
+- [コミットメッセージにブランチ名を自動挿入する](https://tech.mobilefactory.jp/entry/2021/12/06/000000)
+- [BASHシェルスクリプトで「キー入力待ち」プロンプトを実装する](https://dev.classmethod.jp/articles/waiting-for-your-input-with-read-command/)
+- [知恵袋 - unixコマンドについてご教授下さい](https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12125082002)
+- [bashで標準出力、エラーを捨てるとか、ファイルディスクリプタ](https://qiita.com/harasakih/items/868a850fcdc99a2c37b0)
