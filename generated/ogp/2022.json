@@ -1,0 +1,1262 @@
+{
+  "https://zenn.dev/h_yoshikawa0724": {
+    "title": "よしさんの記事一覧",
+    "description": "Web Developer。頭の情報整理がてら記事書いてます。TypeScript / React / Next.js",
+    "image": "https://lh3.googleusercontent.com/a-/AOh14GiwD5VEHFiHt6l5HHmCq_VAFJtJKmM2kUwebpZx=s250-c",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://astro.build": {
+    "title": "Astro",
+    "description": "Astro is an all-in-one framework for building fast websites faster. Grab content from anywhere, deploy everywhere, and show the web what you've got.",
+    "image": "https://astro.build/og/astro.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
+  },
+  "https://note.com/h_yoshikawa44": {
+    "title": "よし｜note",
+    "description": "Web Developer.",
+    "image": "https://assets.st-note.com/production/uploads/images/71216582/profile_f004d545f63ff97e59edfd7a0428862b.png?fit=bounds&format=jpeg&quality=85&width=330",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://zenn.dev/yumemi_inc/articles/2022-12-25-multi-share-slack-bot": {
+    "title": "1絵文字に対して連携した複数チャンネルに転送投稿ができる、Slack Botを作ったよ",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s---MlMEP8N--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:1%25E7%25B5%25B5%25E6%2596%2587%25E5%25AD%2597%25E3%2581%25AB%25E5%25AF%25BE%25E3%2581%2597%25E3%2581%25A6%25E9%2580%25A3%25E6%2590%25BA%25E3%2581%2597%25E3%2581%259F%25E8%25A4%2587%25E6%2595%25B0%25E3%2583%2581%25E3%2583%25A3%25E3%2583%25B3%25E3%2583%258D%25E3%2583%25AB%25E3%2581%25AB%25E8%25BB%25A2%25E9%2580%2581%25E6%258A%2595%25E7%25A8%25BF%25E3%2581%258C%25E3%2581%25A7%25E3%2581%258D%25E3%2582%258B%25E3%2580%2581Slack%2520Bot%25E3%2582%2592%25E4%25BD%259C%25E3%2581%25A3%25E3%2581%259F%25E3%2582%2588%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:%25E6%25A0%25AA%25E5%25BC%258F%25E4%25BC%259A%25E7%25A4%25BE%25E3%2582%2586%25E3%2582%2581%25E3%2581%25BF%2Cx_220%2Cy_135/g_south_west%2Cl_text:notosansjp-medium.otf_34:%25E3%2582%2588%25E3%2581%2597%2Cx_220%2Cy_84/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2U2MzAxMTgwMzUuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_82/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2l3RDVWRUhGaUh0Nmw1SEhtQ3FfVkFGSnRKS21NMmtVd2VicFp4PXMyNTAtYw==%2Cr_max%2Cw_50%2Cx_139%2Cy_64/og-base.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://crieit.net/users/h-yoshikawa0724": {
+    "title": "よし - Crieit",
+    "description": "Web Developer。",
+    "image": "https://crieit.net/img/card.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
+  },
+  "https://qiita.com/h-yoshikawa44": {
+    "title": "@h-yoshikawa44のマイページ - Qiita",
+    "description": "Web Developer。\n(リンクは個人ブログです)\n※2020/09よりZennをメインにしていく関係上、Qiita記事の更新・投稿は基本的に停止していきます。",
+    "image": "https://cdn.qiita.com/assets/qiita-ogp-3b6fcfdd74755a85107071ffc3155898.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+  },
+  "https://note.com/h_yoshikawa44/n/ne81e89bdca97": {
+    "title": "【入社エントリ】株式会社ゆめみに入社しました｜よし",
+    "description": "こんにちは、よしと申します。 ゆめみに入社して3か月経過したということで、入社エントリを書いてみることにしました。 以前から技術記事は書いていたりするのですが、入社エントリ + note に投稿は初なのでお手柔らかにお願いしますー。  よしはどんな人？  2017/10 にエンジニアになった Web Developer。 前社ではバックエンド寄りの経験が多かったのですが、自分のスキルの中途半端感に悩んだ結果、まずはフロントエンド志望となったようなやつです。 なので、ゆめみではフロントエンドエンジニアとして応募して入社。 現在の業務としてもフロントエンドを担当しています。  それと持病で",
+    "image": "https://assets.st-note.com/production/uploads/images/79003151/rectangle_large_type_2_8808b9b514d2815d35b94031661697f5.png?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://github.com/h-yoshikawa44": {
+    "title": "h-yoshikawa44 - Overview",
+    "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 47 repositories available. Follow their code on GitHub.",
+    "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://ja.wikipedia.org/wiki/%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%83%BB%E3%82%B1%E3%82%A4%E3%83%91%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3": {
+    "title": "ネガティブ・ケイパビリティ - Wikipedia",
+    "description": "",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/John_Keats_by_William_Hilton.jpg/1200px-John_Keats_by_William_Hilton.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.wikipedia.org"
+  },
+  "https://scrapbox.io/hotchemi/%E3%83%9E%E3%83%8D%E3%83%BC%E3%82%B8%E3%83%A3%E3%83%BC%E3%81%A8Negative_Capability": {
+    "title": "マネージャーとNegative Capability - scrapbox - hotchemi",
+    "description": "Negative Capabilityという概念を最近知った。詩人ジョン・キーツが提唱したとされている用語で「事実や理由を性急に求めず、不確実さや不思議さ、懐疑の中にいられる能力」を意味する。対義語はPositive Capabilityで、所謂課題解決能力の事。 我が身に翻ってみると思い当たる事が多く、特にマネージャーをやっているとこの能力の有用性を感じずにはいられない。例えばよく目にするのは以",
+    "image": "https://scrapbox.io/assets/img/content-logo.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://scrapbox.io"
+  },
+  "https://scrapbox.io/niboshi/Wasm%E6%B4%BB%E7%94%A8%E3%81%AB%E3%82%88%E3%82%8B%E3%83%9D%E3%83%BC%E3%82%BF%E3%83%96%E3%83%AB%E3%81%AA%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA%E3%81%AE%E5%AE%9F%E7%8F%BE%E3%81%AB%E5%90%91%E3%81%91%E3%81%9FHelpfeel%E7%A4%BE%E3%81%AE%E5%8F%96%E3%82%8A%E7%B5%84%E3%81%BF": {
+    "title": "Wasm活用によるポータブルなライブラリの実現に向けたHelpfeel社の取り組み - niboshi",
+    "description": "Wasm活用によるポータブルなライブラリの実現に向けたHelpfeel社の取り組み.pdf https://drive.google.com/file/d/1E71U2EiZ63WyzQaG8-ZF0IPD1q-3rh29/view JSConf 2022での発表資料です https://youtu.be/ccysINf4qTE?t=5700 発表の様子",
+    "image": "https://nota.gyazo.com/bb71535452c2cb9530d223bf4a7f2a5d/max_size/1000",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://scrapbox.io"
+  },
+  "https://catnose-jsconf2022.pages.dev/1": {
+    "title": "ブログサービスを開発するときの戦略とTips",
+    "description": "",
+    "image": "https://catnose-jsconf2022.pages.dev/og.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://catnose-jsconf2022.pages.dev"
+  },
+  "https://github.com/nmitrovic-vega/loading-web-performance": {
+    "title": "GitHub - nmitrovic-vega/loading-web-performance",
+    "description": "Contribute to nmitrovic-vega/loading-web-performance development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/8b04b99f7b3d853cdf0449154810ee08baeb735db5239096e5a0632169e86d4f/nmitrovic-vega/loading-web-performance",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://kt3k.github.io/talk_jsconfjp_2022/#1": {
+    "title": "About `npm:` support of Deno",
+    "description": "Deno の復習をしつつ、Deno に新しく入った `npm:` 機能の概要や、開発経緯の話をします。",
+    "image": "https://kt3k.github.io/talk_jsconfjp_2022/assets/og-image.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kt3k.github.io"
+  },
+  "https://note.com/miidas_tech/n/n4633e9409ddb": {
+    "title": "ミイダスのフロントエンドをNext.jsに移行した背景と課題｜miidas_tech",
+    "description": "ミイダスのフロントエンド開発では、これまでReactとReduxを中心に、プロダクトや開発組織フェーズとその変化に対応するため技術選定を進めてきました。 そして2021年からスタートしたNext.jsへの移行計画「ミイダス2.0」プロジェクトの全貌について、フロントエンド開発を担当した後藤と松村、李に話を聞きました。 移行した背景や課題、今後の展望についてご紹介します。  2021年のミイダスのフロントエンド開発環境については以下の記事をご覧ください。 https://note.com/miidas_tech/n/ndabbd910feb5#Xfspo  – 自己紹介をお願いします。 ",
+    "image": "https://assets.st-note.com/production/uploads/images/91637305/rectangle_large_type_2_e51041488af77a48998117342e2cd8c1.jpeg?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://note.com/miidas_tech/n/ncf73d2c048f9": {
+    "title": "コロナ収束後もフルリモート勤務を継続。ミイダス開発チームのリモートに関する取り組みをご紹介します！｜miidas_tech",
+    "description": "ミイダスTech Officeです。 コロナ禍に入りあっという間に時間が経ち、フルリモートで働く人も珍しくない世の中になってきました。ミイダスでは2020年12月にコロナ収束後もフルリモート勤務を継続する組織運営に切り替えました。当時の意思決定や導入の様子、振り返りなどは是非以下の記事をご覧ください。 \n こちらの記事のリリースから半年しか経っていませんが、フルリモートでの働き方に関して現在も様子を見ながら改善を続け、色々なことが変わりました。様々なトライをしてきましたが、やはり未だに予想と違う反響をもらうことも多々あります。ミイダスTechOfficeが実際にやってみて、うまくいきそ",
+    "image": "https://assets.st-note.com/production/uploads/images/84837583/rectangle_large_type_2_d879b9bf7f6ecb08c3b0d3de06022cbb.jpeg?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://web.dev/inp": {
+    "title": "Interaction to Next Paint (INP)",
+    "description": "This post introduces the Interaction to Next Paint (INP) metric and explains how it works, how to measure it, and offers suggestions on how to improve it. ",
+    "image": "https://web-dev.imgix.net/image/FNkVSAX8UDTTQWQkKftSgGe9clO2/uZ3hQS2EPrA9csOgkoXI.png?auto=format&fit=max&w=1200&fm=auto",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://web.dev"
+  },
+  "https://web.dev/optimize-long-tasks": {
+    "title": "Optimize long tasks",
+    "description": "You've been told \"don't block the main thread\" and \"break up your long tasks\", but what does it mean to do those things? ",
+    "image": "https://web-dev.imgix.net/image/jL3OLOhcWUQDnR4XjewLBx4e3PC3/Eup7oLu7L0bglCH4YPGq.jpg?auto=format&fit=max&w=1200&fm=auto",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://web.dev"
+  },
+  "https://www.docswell.com/s/Neri78/KXR6NK-2022-11-26-jsconfjp2022": {
+    "title": "30分で挑戦! Twilioを使ったWebRTCベースのビデオアプリケーション開発者体験とは？ | ドクセル",
+    "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+    "image": "https://www.docswell.com/thumbnail/47QXZXZNJP.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+  },
+  "https://github.com/wantedly/hands-on-native-esm-2022": {
+    "title": "GitHub - wantedly/hands-on-native-esm-2022: Hands-on Native ESM @ JSConf JP 2022",
+    "description": "Hands-on Native ESM @ JSConf JP 2022. Contribute to wantedly/hands-on-native-esm-2022 development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/a35e221edf3eb64c091a3ab0cfc8751fae01c8a5f0a7af702a062ebc8642cbde/wantedly/hands-on-native-esm-2022",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://cybozu.github.io/frontend-monthly/posts/2022-11": {
+    "title": "Cybozu Frontend Monthly #29",
+    "description": "サイボウズのフロントエンドエキスパートチームが月イチでお届けするフロントエンド情報",
+    "image": "https://cybozu.github.io/frontend-monthly/img/header.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cybozu.github.io"
+  },
+  "https://jsconf.jp/2022": {
+    "title": "JSConf JP",
+    "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+    "image": "https://jsconf.jp/2022/static/fec934935a8b84b24adead6e9feaea09/logo.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+  },
+  "https://www.figma.com/proto/KW6xQsibfjF0gqxZAi823L/The-Magic-of-CRDTs?page-id=0:1&node-id=2:3&viewport=190,206,0.05&scaling=contain&starting-point-node-id=2:3": {
+    "title": "Figma",
+    "description": "Created with Figma",
+    "image": "https://www.figma.com/file/KW6xQsibfjF0gqxZAi823L/thumbnail?ver=thumbnails/50a32278-fa9a-4a0e-a55b-cf33b6704b5e",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
+  },
+  "https://speakerdeck.com/yusukebe/hono-ultrafast-web-framework-for-cloudflare-workers-deno-bun-and-node-dot-js": {
+    "title": "Hono - Ultrafast web framework for Cloudflare Workers, Deno, Bun, and Node.js",
+    "description": "Yusuke Wada 2022.11.26 JSConf JP",
+    "image": "https://files.speakerdeck.com/presentations/6c3d3556e3a14417802209b9ff2a4de8/slide_0.jpg?23564160",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/maminami373/jsconf-jp-2022-introduce-react-query": {
+    "title": "JSConf JP 2022 introduce React Query",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/9d73c6e9e1a34369a19bf7ea9c8c5ccc/slide_0.jpg?23562450",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/guvalif/client-side-ddd-in-the-age-of-declarative-ui": {
+    "title": "宣言的 UI 時代のクライアントサイド DDD 大考察 / Client-side DDD in the Age of Declarative UI",
+    "description": "このスライドは、2022/11/26 に開催された「JSConf JP 2022」で発表したものです。\n\ncf. https://jsconf.jp/2022/talk/client-side-ddd-in-the-age-of-declarative-ui-grand-considerations",
+    "image": "https://files.speakerdeck.com/presentations/330660ec457b472d88d246bd8756be74/slide_0.jpg?23562963",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/berlysia/jsconf-jp-2022": {
+    "title": "自然発生した実装パターンに、マイクロフロントエンドと名がつきました / JSConf JP 2022",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/5cda3d8b6ba8464eadd9f041599b913f/slide_0.jpg?23565404",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/okmttdhr/hurontoendoekosisutemudexiao-lu-hua-suruzu-zhi-kai-fa": {
+    "title": "フロントエンドエコシステムで効率化する組織開発",
+    "description": "jsconf 2022",
+    "image": "https://files.speakerdeck.com/presentations/747c5a79ebe04959a1c12a559b67d088/slide_0.jpg?23562352",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/baseballyama/svelte-runtime-101-jsconf-jp-2022": {
+    "title": "Svelte Runtime 101 (JSConf JP 2022)",
+    "description": "これは、仮想DOMを使用しない宣言的UIフレームワークであるSvelteに関するセッションです。 今回は、Svelteコンポーネントがどのようなランタイムになるのかを解説します。このセッションを聞くことで、なぜSvelteランタイムが小さく高速なのかを理解できます。\n\nhttps://jsconf.jp/2022/talk/svelte-runtime-101",
+    "image": "https://files.speakerdeck.com/presentations/3a10413d78a94b289ec8d5026d26d4f7/slide_0.jpg?23563511",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://youtu.be/ccysINf4qTE": {
+    "title": "JSConf.jp Room C",
+    "description": "2022/11/26 Open / Japan Node.js Association / Room C",
+    "image": "https://i.ytimg.com/vi/ccysINf4qTE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLC3v8fCHr2BghJs1idBigLcOncFow",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtu.be"
+  },
+  "https://github.com/togami2864/jsconfjp2022-demo": {
+    "title": "GitHub - togami2864/jsconfjp2022-demo",
+    "description": "Contribute to togami2864/jsconfjp2022-demo development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/1dd351d7469c97b661c40248db7fe0281a7f1c9b9a3d1870416183f9bab104db/togami2864/jsconfjp2022-demo",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://slides.com/atilaio/jsconfjp-2022": {
+    "title": "JSCONF 🇯🇵 - Remixing Usability with Performance",
+    "description": "Remix is a framework revitalises web development by putting progressive enhancement in the front seat. It creates solutions that approximates developers to the platform. It uses Developer Experience as means to enforce web best practices and with that brought the term Optimistic UI back to our daily lives. Let's have a look at what features the Remix offers out-of-the-box to get developers creating high-quality web apps easily and deploying them anywhere that can run JavaScript.",
+    "image": "https://media.slid.es/thumbnails/d61669fe5b0cfeb7677af9e6323ac8ad/thumb.jpg?1669446885",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slides.com"
+  },
+  "https://speakerdeck.com/yoshiaki_togami/javascript-testing-framework-under-the-hood-jsconfjp2022": {
+    "title": "JavaScript Testing Framework: Under the Hood(JSConfJP2022)",
+    "description": "jsconfjp 2022 LT: https://jsconf.jp/2022/talk/javascript-testing-framework-under-the-hood\n\ndemo: https://github.com/togami2864/jsconfjp2022-demo\n\nReferences:\nBuilding a JavaScript Testing Framework: https://cpojer.net/posts/building-a-javascript-testing-framework\n\nvitest: https://github.com/vitest-dev/vitest\nava: https://github.com/avajs/ava\njest: https://github.com/facebook/jest\ndeno_std: https://github.com/denoland/deno_std/tree/main/testing\n",
+    "image": "https://files.speakerdeck.com/presentations/f789da6adf3a4a33bbe16efc5e39315b/slide_0.jpg?23572196",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/cybozuinsideout/jsconf-sponsor-lt": {
+    "title": "フロントエンド刷新活動の紹介",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/c60732b0623d4bc8b61efcbd5c6fdb52/slide_0.jpg?23562438",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/chloe463/wantedlynohurontoendoling-yu-noqu-rizu-mitoke-ti": {
+    "title": "Wantedlyのフロントエンド領域の取り組みと課題",
+    "description": "JSConf JP 2022 のスポンサー LT で発表したスライドです。\nWantedly のフロントエンドが抱える課題について、直近数年間の取り組みと今後に向けた方針などについて話しました。",
+    "image": "https://files.speakerdeck.com/presentations/9279af7f0fc64526b27612c980bd3f48/slide_0.jpg?23565154",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://docs.wantedly.dev": {
+    "title": "Wantedly Engineering Handbook - Wantedly Engineering Handbook",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.wantedly.dev"
+  },
+  "https://www.twilio.com/docs/video/adding-programmable-voice-participants-video-rooms": {
+    "title": "Add Programmable Voice Participants to Video Rooms",
+    "description": "Learn how to add Programmable Voice callers as participants in video rooms using the TwiML <Room> noun within the <Connect> verb. You can connect inbound calls to your Twilio phone number as well as outgoing calls from your Twilio phone number to video rooms.",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.twilio.com"
+  },
+  "https://speakerdeck.com/qnighy/hands-on-native-esm-at-jsconf-jp-2022": {
+    "title": "Hands-on Native ESM @ JSConf JP 2022",
+    "description": "See <a href=\"https://docs.google.com/presentation/d/1Fl45eSQJnzhh_wKy24ahuyl11aggmhPOvsz1796H4lc/edit\">Original version on Google Slides</a> for copy-pasting and links.\n\nSee <a href=\"https://github.com/wantedly/hands-on-native-esm-2022\">Materials</a>",
+    "image": "https://files.speakerdeck.com/presentations/1653dba8155443a58a3fa62d5a74466e/slide_0.jpg?23564369",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/sakito/dezainsisutemunihurontoendonopurakuteisuwojie-meip-ndezai-pei-bu-suru": {
+    "title": "デザインシステムにフロントエンドのプラクティスを詰め込んで再配布する",
+    "description": "JSConf JP 2022\nhttps://jsconf.jp/2022/talk/pack-front-end-practices-into-the-design-system-and-redistribute\n\nTwitter\nhttps://twitter.com/__sakito__",
+    "image": "https://files.speakerdeck.com/presentations/ffbe06a99823444c8d5de86a53e2321e/slide_0.jpg?23565631",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/mganeko/small-tips-to-use-bun-with-websocket-server-and-webassembly-modules": {
+    "title": "Small Tips to use Bun with WebSocket Server and  WebAssembly Modules",
+    "description": "Bun と WebSocket Server とオマケのWebAssembly\nSlide for JSConf.JP 2022 LT\n\n",
+    "image": "https://files.speakerdeck.com/presentations/348457a51c4748eca745d730b1cfbba3/slide_0.jpg?23565834",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/dynamis/web-runtime": {
+    "title": "Web Runtime",
+    "description": "JSConf.jp 2022 の Closing Keynote (typo 等修正版)です\nhttps://jsconf.jp/2022/talk/web-runtime\n\n日本語で33分33秒くらいかけてお話ししました\nhttps://youtu.be/luiNGMM9ZGU?t=31269",
+    "image": "https://files.speakerdeck.com/presentations/0796efa19816403f9f2df44e133987a5/slide_0.jpg?23605852",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://youtu.be/luiNGMM9ZGU": {
+    "title": "JSConf.jp Room A",
+    "description": "2022/11/26 open / Japan Node.js Association",
+    "image": "https://i.ytimg.com/vi/luiNGMM9ZGU/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGC8gZShIMA8=&rs=AOn4CLDN-TsB3YCZUIg6xhus2NU9qLcd3g",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtu.be"
+  },
+  "https://youtu.be/8U-8V05eQ5A": {
+    "title": "JSConf.jp Room B",
+    "description": "2022/11/26 Open / Japan Node.js Association / Room B",
+    "image": "https://i.ytimg.com/vi/8U-8V05eQ5A/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDQXsPEJpu-WfOzMbHpG6GLWyIPPQ",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtu.be"
+  },
+  "https://cpojer.net/posts/building-a-javascript-testing-framework": {
+    "title": "Building a JavaScript Testing Framework",
+    "description": "Learn the basics of building a JavaScript testing framework.",
+    "image": "https://cpojer-og-image.vercel.app/Building%20a%20JavaScript%20Testing%20Framework.png?theme=purple&md=1&fontSize=150px",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cpojer.net"
+  },
+  "https://docs.google.com/presentation/d/1PEvXoQDTLAoZIQmFl_scq84ZnKhLHjeQuOZ45NSruXI/edit": {
+    "title": "オプショナルチェーンができるまで　〜仕様と実装〜",
+    "description": "オプショナルチェーンができるまで 〜仕様と実装〜 Ross Kirsling ロス・カースリング",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oE03_vzY1DXo7_GCu89iCVIBBi2z0YyNxK3XDtOj_6Ht8nV3IB1EFiVTmtDHVq8o1qJBVIpmohjdzBbvNgzW6aOA12GVc8eyg64ghlkbxM=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/1rXzTVLYx1Idh46IGY51RTLBp-6TH43wmzulj3njd_5I/edit": {
+    "title": "実装の引き出しを増やすためのDOM Eventテクニック",
+    "description": "実装の引き出しを増やすためのDOM Eventテクニック 株式会社Helpfeel 1",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oEHO8TnEEVE5QrFLNkAZp1efjs3_09y2lTYF9AtsvWGM3KADOYLAxZLbx_0ayn09I4BXscobZfvt6KEP_JyEao8ZKPAEMkt3X098SMzyRw6=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/1ZxLH48-HVYUNfU--Byeweyu3Tzho3F7caNghGsBFkyw/edit#slide=id.p": {
+    "title": "ECMAScript仕様書を誰でも読めるようにする技術を求めて",
+    "description": "ECMAScript仕様書を 誰でも読めるようにする 技術を求めて yebis0942 JSConf.jp 2022",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oEFSeE3KmpYZTzqCLGtmUW6po8va4WyjVmMFioDpy7OLSTZSxuFptfjJtrd6LNmVyY3o8j1IrFlk0EafVYT9IlnEoANsz6T32f_ZnvyKJFa=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://qiita.com/harasakih/items/868a850fcdc99a2c37b0": {
+    "title": "bashで標準出力、エラーを捨てるとか、ファイルディスクリプタ - Qiita",
+    "description": "\n\n1. bashで標準出力、エラーを捨てるとか、ファイルディスクリプタ\n\n引用元\n\n\nファイルディスクリプタ\n\n0:stdin\n1:stdout\n2:stderr\n\n\n\n標準出力と標準エラー出力をまとめて file に書き出す場合\n...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9YmFzaCVFMyU4MSVBNyVFNiVBOCU5OSVFNiVCQSU5NiVFNSU4NyVCQSVFNSU4QSU5QiVFMyU4MCU4MSVFMyU4MiVBOCVFMyU4MyVBOSVFMyU4MyVCQyVFMyU4MiU5MiVFNiU4RCVBOCVFMyU4MSVBNiVFMyU4MiU4QiVFMyU4MSVBOCVFMyU4MSU4QiVFMyU4MCU4MSVFMyU4MyU5NSVFMyU4MiVBMSVFMyU4MiVBNCVFMyU4MyVBQiVFMyU4MyU4NyVFMyU4MiVBMyVFMyU4MiVCOSVFMyU4MiVBRiVFMyU4MyVBQSVFMyU4MyU5NyVFMyU4MiVCRiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YTIyNzkzMDRmZTQxMTNkOTkxN2UzMmNkNjIyNWMyZjc&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaGFyYXNha2loJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1kYmY5Y2VlM2ViNzVkY2E0MzYyYmJhZTEzMGM1MzM4OA&blend-x=142&blend-y=491&blend-mode=normal&s=8c676252cfb1c3363e039b890b59e3eb",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+  },
+  "https://tech.mobilefactory.jp/entry/2021/12/06/000000": {
+    "title": "コミットメッセージにブランチ名を自動挿入する - Mobile Factory Tech Blog",
+    "description": "こんにちは、新卒エンジニアの id:kaoru-k_0106 です 何をしたか 私のチームでは、コミットメッセージの先頭にチケット番号を入れるルールがあります。 例えば、PROJECTNAME-123 〇〇の処理を変更しただと、PROJECTNAME-123の部分がチケット番号です。 最初はこれを手動で入力していたのですが、時々入力を忘れることがあり自動挿入しようと思いました。 ちょうど、トピックブランチ名がチケット番号だったので、ブランチ名を使う方針で実装をしました。 導入手順 その1 Gitのコミットテンプレートを設定する Gitのコミットテンプレートとは、コミットメッセージエディタを開い…",
+    "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kaoru-k_0106/20211124/20211124171235.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.mobilefactory.jp"
+  },
+  "https://github.com/toplenboren/simple-git-hooks": {
+    "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
+    "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/9d2c71d9d13ea07aa4c96a0c0d47efc7a5a1fc17652fe40c7926970070b7ae93/toplenboren/simple-git-hooks",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://typicode.github.io/husky": {
+    "title": "🐶 husky | 🐶 huskyGitHubGitHub",
+    "description": "Git hooks made easy",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://typicode.github.io"
+  },
+  "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12125082002": {
+    "title": "unixコマンドについてご教授下さい。 - 以下の処理をしたいのですが、どのように記述するのでしょうか。●5秒毎にファイルの... - Yahoo!知恵袋",
+    "description": "unixコマンドについてご教授下さい。 以下の処理をしたいのですが、どのように記述するのでしょうか。●5秒毎にファイルの中身を出力するように、while分を使いシェルスクリプトにしました。これを5秒毎ではなく、一時停止に処理を変更したい。Enterキーを押すと、次の処理へ進むようにしたい。「Sample.txt」というテキストファイルがある。※テキストファイルの中身は下記$catSample.txt1...",
+    "image": "https://s.yimg.jp/images/ks/clap/image/ogp/ogp.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://detail.chiebukuro.yahoo.co.jp"
+  },
+  "https://git-scm.com/book/ja/v2/Git-%E3%81%AE%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA-Git-%E3%83%95%E3%83%83%E3%82%AF": {
+    "title": "Git - Git フック",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://git-scm.com"
+  },
+  "https://dev.classmethod.jp/articles/waiting-for-your-input-with-read-command": {
+    "title": "BASHシェルスクリプトで「キー入力待ち」プロンプトを実装する | DevelopersIO",
+    "description": "BASHシェルスクリプト実行中に、 例えば下記のように表示させたい場面はよくあります。 ここで人間が「y（あるいはYes）」と入力しないと先に進まない、問題があればNと入力して終了したり、CTRL+Cで強制終了させたり。 …",
+    "image": "https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2017/06/eye-catch_read-command.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
+  },
+  "https://aws.amazon.com/jp/certification": {
+    "title": "AWS 認定 – AWS クラウドコンピューティング認定プログラム | AWS",
+    "description": "ロールベースおよび専門知識認定から選択し、業界で広く認知された認定によってクラウドの専門知識を検証します。AWS 認定を詳しく見る",
+    "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+  },
+  "https://book.impress.co.jp/books/1120101067": {
+    "title": "改訂新版 徹底攻略 AWS認定 ソリューションアーキテクト アソシエイト教科書［SAA-C02］対応 - インプレスブックス",
+    "description": "試験対策から実戦的な活用まで学べる",
+    "image": "https://img.ips.co.jp/ij/20/1120101067/1120101067-520x.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://book.impress.co.jp"
+  },
+  "https://aws.amazon.com/jp/architecture/well-architected": {
+    "title": "AWS Well-Architected – 安全で効率的なクラウドアプリケーション",
+    "description": "AWS Well-Architected Framework では、デベロッパーがより迅速に、かつ低リスクでアプリケーションを構築およびデプロイし、AWS のベストプラクティスに従って情報に基づいた決定をするために役立つガイダンスが提供されます。",
+    "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+  },
+  "https://html5exam.jp/measures/column_01.html": {
+    "title": "HTML5はHTML Standardへ呼称変更　～ HTML5プロフェッショナル認定試験は今後も有効 ～\n｜HTML5道場｜Web資格なら「HTML5プロフェッショナル認定試験」公式サイト",
+    "description": "これからHTML5に関わっていく人や、HTML5をまだやり始めた初心者、HTML5プロフェッショナル認定試験合格を目指す方のためのコラムです。",
+    "image": "https://html5exam.jp/images/measures/dojo_ogp.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://html5exam.jp"
+  },
+  "https://html5exam.jp/outline/objectives_lv1.html": {
+    "title": "HTML5プロフェッショナル認定試験 レベル1 出題範囲（Ver2.5）｜試験概要｜Web資格なら「HTML5プロフェッショナル認定試験」公式サイト",
+    "description": "HTML5プロフェッショナル認定試験 レベル1 出題範囲（Ver2.5）を掲載しています。各項目について「重要度」「説明（望まれるスキル）」「主要な知識範囲」「重要な技術要素、タグ、ユーティリティ」といった指標が設けられています。",
+    "image": "https://html5exam.jp/images/common/ogp.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://html5exam.jp"
+  },
+  "https://html5exam.jp/outline/objectives_lv2.html": {
+    "title": "HTML5プロフェッショナル認定試験 レベル2 出題範囲（Ver2.5）｜試験概要｜Web資格なら「HTML5プロフェッショナル認定試験」公式サイト",
+    "description": "HTML5プロフェッショナル認定試験 レベル2 出題範囲（Ver2.5）を掲載しています。各項目について「重要度」「説明（望まれるスキル）」「主要な知識範囲」「重要な技術要素、タグ、ユーティリティ」といった指標が設けられています。",
+    "image": "https://html5exam.jp/images/common/ogp.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://html5exam.jp"
+  },
+  "https://ping-t.com": {
+    "title": "Ping-t",
+    "description": "AWS��CCNA/CCNP��LinuC��LPIC��Linux Essentials��HTML5��OSS-DB��IT�ѥ��ݡ��ȡ����饯��ޥ�������ITIL�λ��ʤ��ܻؤ��ͤ���礹��ؽ������ȡ���Ͽ�桼��25���͡ˤǤ���\n\n�桼����Ͽ�򤹤�ȡ�̵����CCNA WEB���꽸��600��ʾ�ˤ�LPIC Lv1���꽸(500��ʾ�/ǧ�궵��)��Oracle Master Bronze SQL����(��400��)��IT�ѥ��ݡ��Ȳ�����600��ˡ��ؽ������������礤�ե������ʤɤ����ѤǤ���褦�ˤʤ�ޤ���",
+    "image": "http://ping-t.com/themes/Cube/images/logo3.gif",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ping-t.com"
+  },
+  "https://html5exam.jp/outline": {
+    "title": "試験概要｜Web資格なら「HTML5プロフェッショナル認定試験」公式サイト",
+    "description": "HTML5プロフェッショナル認定試験の試験概要を説明しています。この試験はHTML5,CSS3,Javascriptなど最新のマークアップに関する技術力と知識を、公平かつ厳正に、中立的な立場で認定するために実施されています。",
+    "image": "http://html5exam.jp/images/common/ogp.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://html5exam.jp"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798154619": {
+    "title": "HTML教科書 HTML5プロフェッショナル認定試験 レベル1 スピードマスター問題集 Ver2.0対応 | 翔泳社",
+    "description": "HTML5アカデミック認定校・大人気講師陣による、合格する力のつく問題集の決定版！\n\n本書は、今やフロントエンド開発者の実力証明には必須、LPI-Japanが主催する「HTML5プロフェッショナル認定試験 レベル1 Ver2.0」に対応した問題集です。\n解くだけでみるみる合格力がつく良問を多数掲載し、さらに問題に重要度を示しているため、網羅的な学習から資格取得に向けた効率的な学習まで、幅広いニーズに対応可能です。\n「問題」→「解説」の順になっているので、テンポよく学習を進めることが可能です。わからない問題は、その場で解説を読んで確認できます。\n\n【本書の特徴】\n1. 出題範囲を完全網羅し、審査に合格した「HTML5認定教材」\n2. HTML5アカデミック認定校の講師陣による書き下ろし\n3. 充実した練習問題に加え、計2回分の模擬試験を提供※\n※書籍本体掲載1回分＋ダウンロード特典1回分",
+    "image": "https://www.shoeisha.co.jp/static/book/og_image/9784798154619.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+  },
+  "https://www.borndigital.co.jp/book/25999.html": {
+    "title": "HTML解体新書",
+    "description": "HTML解体新書の情報を掲載しています。ボーンデジタルはデジタルクリエイターを支援するサービスカンパニーです。ソフトウェア・ハードウェア・書籍・雑誌・セミナー・トレーニングなど様々なサービスで学びを提供しています。",
+    "image": "https://www.borndigital.co.jp/wp-content/uploads/2022/03/cover_obi.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.borndigital.co.jp"
+  },
+  "https://techfeed.io/events/techfeed-conference-2022": {
+    "title": "TechFeed - エンジニアのための技術情報収集＆共有プラットフォーム",
+    "description": "TechFeed is a technical information collection and sharing platform created by engineers for engineers.",
+    "image": "https://techfeed.io/images/ogp/ogimage.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://techfeed.io"
+  },
+  "https://www.slideshare.net/mlca11y/wcag-22-251780511": {
+    "title": "WCAG 2.2で追加される達成基準",
+    "description": "WCAG 2.2で追加される 達成基準 株式会社ミツエーリンクス 木達 一仁 2022年5月14日 TechFeed Conference 2022 \f•株式会社ミツエーリンクス  取締役（CTO） •主にマークアップやスタイルシートの設計、 関連ガイドラインの策定・運用に従事 •ウェブアクセシビリティ基盤委員会 ...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/20220514techfeedkidachi-220514040145-4f8360ad-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://blog.koba04.com/post/2022/05/14/speaking-about-useevent-at-techfeed-conf": {
+    "title": "TechFeed Conference 2022 で React の useEvent について話した",
+    "description": "",
+    "image": "https://blog.koba04.com/api/og/?title=TechFeed%20Conference%202022%20%E3%81%A7%20React%20%E3%81%AE%20useEvent%20%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%A9%B1%E3%81%97%E3%81%9F",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.koba04.com"
+  },
+  "https://www.youtube.com/watch?v=joHJJSklFic": {
+    "title": "TechFeed Conference 2022",
+    "description": "2022/5/14(土) 13:00-18:00開催！前代未聞、TechFeed公認エキスパート50名による大LT大会、全セッション書き起こし！コロナ禍でもエンジニアコミュニティを元気にすべく、TechFeedが総力を上げて実現する「エンジニアの祭典」、ここに開催！【 イベント当日は特設サイトにGo！】イベント当...",
+    "image": "https://i.ytimg.com/vi/joHJJSklFic/maxresdefault.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+  },
+  "https://kidachi.kazuhi.to/blog/archives/041551.html": {
+    "title": "TechFeed Conference 2022、終了",
+    "description": "2022年5月15日公開の覚え書き@kazuhitoの記事「TechFeed Conference 2022、終了」です。",
+    "image": "https://kidachi.kazuhi.to/cmn/img/ogp.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kidachi.kazuhi.to"
+  },
+  "https://www.slideshare.net/tyoshio2002/javavirtualthreadltpdf": {
+    "title": "Java-Virtual-Thread-LT.pdf",
+    "description": "Microsoft Sr. Cloud Advoacte Yoshio Terada Java 19 の注目新機能 Virtual Thread について \fJava のロードマップについて • 多くの企業は LTS 版が重要 • non-LTS 版は新機能が追加 • Java 21 を見越して新機能を理解 しておく...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/tfcon2022-java-virtual-thread-220514072642-1d583c34-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "http://nmi.jp/2022-05-14-Dynamically-created-WebAssembly": {
+    "title": "WebAssembly を動的生成した場合のパフォーマンスについて",
+    "description": "本日 TechFeed Conference 2022 で発表した「JavaScript による動的 WebAssembly 生成」についての詳解記事です。JavaScript を動的に生成することで高速化を図るテクニックについては以前「JavaScript における VM の高速化手法」でご紹介しましたが、その...",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=http://nmi.jp"
+  },
+  "https://www.youtube.com/watch?v=6vnQDn3AUbo&t=1s": {
+    "title": "A path to a world without passwords",
+    "description": "Developers know that passwords are not the best way to protect users' accounts. But what are the other options available to make them more secure, ideally to...",
+    "image": "https://i.ytimg.com/vi/6vnQDn3AUbo/maxresdefault.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+  },
+  "https://tadsan.fanbox.cc/posts/3831762": {
+    "title": "5分でわかるPHPの型システム #tfcon ｜にゃんだーすわん｜pixivFANBOX",
+    "description": "2022年5月14日に開催されたTechFeed Conference 2022でお声掛けいただき話しました。\n発表したスライドから最低限のミスを修正したバージョンです。\n(追記: TechFeedさんによる書き起こしも公開されています)\nあと自分の前枠はuzullaさんのめちゃくちゃいい話でした。\nスライドのコンセプトとしてはPHPに長年触れてない...",
+    "image": "https://pixiv.pximg.net/c/1200x630_90_a2_g5/fanbox/public/images/post/3831762/cover/OVEJKbXc4qI57TNERKSsS1X4.jpeg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tadsan.fanbox.cc"
+  },
+  "https://speakerdeck.com/clockmaker/css-for-develop-creative-website": {
+    "title": "クリエイティブ系のウェブサイト制作で役立つCSS技法 / CSS for develop creative website",
+    "description": "CSSとWebGLを組み合わせたウェブサイトを題材に、CSSでインパクトを残すための演出実装のアイデアを紹介します。CSSがテーマですが、関連してWeb Animations APIが役立つポイントも解説します。\n\nデモサイトは以下のURLで確認できます。\nhttps://twitter.com/clockmaker/status/1525338778931728386",
+    "image": "https://files.speakerdeck.com/presentations/c9137bcc1364412998532d64d2c51aef/slide_0.jpg?21410758",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/sakito/reactdeapurikesiyonwogou-zhu-suruduo-yang-hua": {
+    "title": "Reactでアプリケーションを構築する多様化",
+    "description": "TechFeed Conference 2022で使用した資料\nhttps://techfeed.io/events/techfeed-conference-2022\n\nTwitter\nhttps://twitter.com/__sakito__",
+    "image": "https://files.speakerdeck.com/presentations/a8a0aee89f04405a964ab14863366a00/slide_0.jpg?21408285",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/koba04/how-useevent-would-change-our-applications": {
+    "title": "How useEvent would change our applications",
+    "description": "Techfeed Conference 2022 #React",
+    "image": "https://files.speakerdeck.com/presentations/d46c10db7dcc4641ad7aca523e5d3b9e/slide_0.jpg?21410525",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://docs.google.com/presentation/d/1TRUbkmTeTUigh8ON1WsEhBNMbdHm9vs2NSMeNNnmNPw/edit": {
+    "title": "Web Standards Interop 2022",
+    "description": "1 Web Standards Interop 2022 TechFeed Conference 2022 Shogo SENSUI (@1000ch)",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oEC9N7psrqhikzW4WS3fztYAHGC0NtcSCvSiRWY2mlK2uBlbhw4yXj9wHBoqEfLClbL30RC1WfYiPCTneyTfh4hb7VMHJai-WZeuLPf1KeH=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://drive.google.com/file/d/1yCJeKpD37-6ZyEXQZFHztBzcY31AF0dx/view": {
+    "title": "tfcon2022-css-kano.pdf",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
+  },
+  "https://speakerdeck.com/rdlabo/javascript-kara-debaisufalseli-wo-100-percent-yin-kichu-sutamefalse-capacitor-to-angular-defalsehazimekata": {
+    "title": "JavaScript から デバイスの力を 100%引き出すための Capacitor と Angular でのはじめかた。",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/c2b47c593fae4b25b3d96dcb6209a179/slide_0.jpg?21410653",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://drive.google.com/file/d/1yiIHrEPqDiZJE30zzlAQ7g7qCB70mr1X/view": {
+    "title": "TechFeed_Conference_2022_Flutter_trend.pdf",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
+  },
+  "https://drive.google.com/file/d/1CM6y6563BmvG1nLXsPoJeS-2zMaJ4mej/view": {
+    "title": "tfcon2022.pdf",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
+  },
+  "https://docs.google.com/presentation/d/1pj1azprtCUM9b1tLWEO82wqHuX9lYOoacROfmbzRTmY/edit": {
+    "title": "アクセシビリティツリーを読む(TechFeed Conference 2022)",
+    "description": "アクセシビリティツリーを読む 小林大輔 @sukoyakarizumu サイボウズ株式会社 デザイン＆リサーチ",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oF-EgV_h83kxfI_b-gokpxWntdZ8kO3gYpOX_au54yzRBA9DLXIs8pgVzPkxCT4qm_QIntrFoZ2ebJFTfz2ExccYsWeveRTLOiy-V3buz8=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://speakerdeck.com/mizchi/bandoruzui-shi-hua-maniakusu-at-tfconf": {
+    "title": "バンドル最適化マニアクス at tfconf",
+    "description": "treeshake, DCE, terser mangling",
+    "image": "https://files.speakerdeck.com/presentations/a58174eb4b61451bbdc70d2f50f90e27/slide_0.jpg?21410468",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/matsu7874/roadmap-to-rust-2024": {
+    "title": "roadmap to rust 2024",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/67f03c67fc674887ac6224f822548510/slide_0.jpg?21412039",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/emadurandal/tfcon2022-web3dhitomekuri": {
+    "title": "tfcon2022_Web3Dひとめぐり.pdf",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/d887a6c6385940e5afc795c6105bdfed/slide_0.jpg?21412915",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/jmatsu/techfeed-conference-2022-kotlin-experimental": {
+    "title": "TechFeed Conference 2022 - Kotlin Experimental",
+    "description": "5/14 Kotlin 2nd part session (5 minutes LT)\n\nKotlin をより使うための知識として、Experimental について触れます。\n\nhttps://techfeed.io/events/techfeed-conference-2022",
+    "image": "https://files.speakerdeck.com/presentations/5f284779171e4379aa05195f39507bf7/slide_0.jpg?21411540",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/koh110/tfcon2022": {
+    "title": "tfcon2022.pdf",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/62e84f8d04d24837bbcee77f24c8ab35/slide_0.jpg?21411795",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/cpp/tfcon-2022-cpp": {
+    "title": "tfcon-2022-cpp",
+    "description": "TechFeed Conference 2022「最近の C++ (2022 年)」\n発表者: https://twitter.com/Reputeless",
+    "image": "https://files.speakerdeck.com/presentations/573003da3c7c4b59a0a8d0c7c5ca3e70/slide_0.jpg?21413542",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kishida/escape-from-object-oriented-programming": {
+    "title": "脱オブジェクト指向講座(5分LT資料)",
+    "description": "2022/5/14に開催されたTechFeed Conference 2022の5分LTでの登壇資料です",
+    "image": "https://files.speakerdeck.com/presentations/dc5a0abc4dae4dccab5dceccd827e2d2/slide_0.jpg?21411533",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/chack411/11": {
+    "title": "New Features in C# 10/11",
+    "description": "2022/5/14\nTechFeed Conference 2022\n\nNew Features in C# 10/11\nC# 10 および C# 11 (Preview) の主な新機能について",
+    "image": "https://files.speakerdeck.com/presentations/4e40129ada324859b3093a754108b522/slide_0.jpg?21411680",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/ntaro/kotlin-zui-xin-dong-xiang-2022": {
+    "title": "Kotlin 最新動向2022 #tfcon #techfeed",
+    "description": "https://techfeed.io/events/techfeed-conference-2022 で発表したスライドです。",
+    "image": "https://files.speakerdeck.com/presentations/4163baa79c27443ca0a5da7bfd9ab5ac/slide_0.jpg?21411372",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tattn/iosapurifalseji-shu-xuan-ze-2022": {
+    "title": "iOSアプリの技術選択2022",
+    "description": "ぜひ5分の発表動画をご覧ください\nhttps://youtu.be/u-5lsv7NoRw\n\nTechFeed Conference 2022 #techfeed #tfcon\nhttps://techfeed.io/events/techfeed-conference-2022\n\nhttps://twitter.com/tanakasan2525/status/1525354036916273152\n\nアバターアプリ:\nhttps://tattn.fanbox.cc/posts/3541601",
+    "image": "https://files.speakerdeck.com/presentations/6770f04a675943049c37d24d10c2afb6/slide_0.jpg?21410771",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/uji/5fen-dewan-quan-li-jie-surugofalseiota": {
+    "title": "5分で完全理解するGoのiota",
+    "description": "Google Slide: https://docs.google.com/presentation/d/19h31cgpGXj4-DCGpfQjBwUgB5WwLtgc4crtsqtXLSnw/edit?usp=sharing",
+    "image": "https://files.speakerdeck.com/presentations/3699ce20dd6b4c9fbd971e2e8c1f27ec/slide_0.jpg?21406147",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/uhyo/typescript-4-dot-7toxing-reberupuroguramingu": {
+    "title": "TypeScript 4.7と型レベルプログラミング",
+    "description": "2022年5月14日のTechFeed Conference 2022の発表スライドです。",
+    "image": "https://files.speakerdeck.com/presentations/3697a26a6f664a66b2c1f524c49a7ca8/slide_0.jpg?21411407",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/quramy/about-type-syntax-proposal": {
+    "title": "About Type Syntax Proposal",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/cd96a873da9c4a3b9d6e9b6c2506b00c/slide_0.jpg?21412621",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yosuke_furukawa/node-dot-js-zui-xin-dong-xiang-tfcon-2022": {
+    "title": "Node.js 最新動向 TFCon 2022",
+    "description": "TFCon で発表する Node.js 最新動向です。",
+    "image": "https://files.speakerdeck.com/presentations/d97bc1bdc3ce498fa2572e9bb5806ca6/slide_0.jpg?21412578",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/okuramasafumi/a-technique-to-implement-dsl-in-ruby": {
+    "title": "A technique to implement DSL in Ruby",
+    "description": "https://techfeed.io/events/techfeed-conference-2022",
+    "image": "https://files.speakerdeck.com/presentations/c52af78c2bd245bcb79e02be8cc3b447/slide_0.jpg?21412013",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/masayaaoyama/techfeed-conference-2022-ebpf-wasm-amsy810": {
+    "title": "ebpfとWASMに思いを馳せる2022 / techfeed-conference-2022-ebpf-wasm-amsy810",
+    "description": "https://techfeed.io/events/techfeed-conference-2022#containers-trend\n\nTechFeed Conference 2022\n「エンジニアの祭典」へようこそ。エキスパート50名による大LT大会、全セッション永久保存版！\n前代未聞、日本を代表するテックエキスパート50名による大LT大会、全セッション書き起こし！\nコロナ禍でもエンジニアコミュニティを元気にすべく、TechFeedが総力を上げて実現する「エンジニアの祭典」、ここに開催！\n\n【BIO】\n『Kubernetes完全ガイド』著者。Cloud Native Days TokyoのCo-chair。Kubernetes Meetup TokyoのOrganizer。CyberAgentのDeveloper ExpertsKubernetes/CloudNative 領域\n\n【セッション概要】\neBPFやWASMも徐々に成熟し、新たなプロダクトも出てきています。このセッションではそれらのプロダクトを紹介し、2022年に思いを馳せたいと思います。",
+    "image": "https://files.speakerdeck.com/presentations/50716233cc104ff980c4dc825a35baad/slide_0.jpg?21396599",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yanzm/catch-up-android-13": {
+    "title": "キャッチアップ Android 13 / Catch up Android 13",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/2de1b6fd9bb5470f84846f7e6dacb750/slide_0.jpg?21429087",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/ahomu/mpa-yi-lun-falsefu-kan-to-xian-dai-niokerushe-ji-falsepointo-techfeed-conference-2022-hurontoendoshe-ji": {
+    "title": "SPA/MPA 議論の俯瞰と 現代における設計のポイント - #tfcon 2022 フロントエンド設計",
+    "description": "PDF 版: https://s.aho.mu/220514-techfeed_conference_2022.pdf\n\nTechFeed Conference 2022  https://techfeed.io/events/techfeed-conference-2022 でフロントエンド設計をテーマとして使用したスライドです。本編5分。\n\n=====\n\n▼ 元データで参考リンクとして張っていた URL たち\n\n<a href=\"https://zenn.dev/sesere/articles/c3917db32777af\">なぜ僕が「SPAはコストが高い」と考えているのか</a>\n\n<a href=\"https://dev.to/jon49/comment/1o35c\">Another hard thing about MPAs is that I haven't been able find documentation ... - DEV Community</a>\n\n<a href=\"https://tech.studyplus.co.jp/entry/2022/02/21/080000\">Rails 7 + Hotwireで実用的なSPAを作ってみた - Studyplus Engineering Blog</a>\n\n<a href=\"https://engineering.mercari.com/blog/entry/20210810-the-new-mercari-web/\">新しいメルカリ Web の話 | メルカリエンジニアリング</a>\n\n<a href=\"https://shopify.engineering/high-performance-hydrogen-powered-storefronts\">Building Blocks of High Performance Hydrogen-powered Storefronts — Development (2022)</a>\n\n<a href=\"https://twitter.com/slightlylate/status/1425131555874291717\"> Alex Russell on Twitter: \"Your shopping website is not an SPA. I repeat: your shopping website is not an SPA. Stop trying to sculpt David with a JS chainsaw and get yourself an HTML/CSS chisel.\" / Twitter</a>\n\n<a href=\"https://offers.jp/\">【AD】Offers「オファーズ」 - エンジニア・デザイナーのための副業・複業・転職の採用サービス</a>",
+    "image": "https://files.speakerdeck.com/presentations/5fdaa529581048cbaacdfd0a695d3955/slide_0.jpg?21410724",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/uzulla/php-in-now-a-days": {
+    "title": "近況PHP / PHP in now a days",
+    "description": "at: TechFeed Conference 2022 \nurl: https://techfeed.io/events/techfeed-conference-2022\ndate: 2022/05/14\nspeaker: uzulla",
+    "image": "https://files.speakerdeck.com/presentations/878df957bcda482c9a19649ba7eef1bf/slide_0.jpg?21412547",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://docs.google.com/presentation/d/10DgkEdZYXDdJ_zmxyAJXq6lyY4F3nUnbWK4XzzBuhi8/edit": {
+    "title": "Flutter上級者を目指そう",
+    "description": "Flutter上級者を目指そう @kikuchy",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oGT4fPFdVJmnwanIeyOiermWC1mmAKeJdprOCWMRn3TAVmd-TKo7jXTK15VCFsuekiSAkpuAD8IKIF5NAivWPg0ywtklnIRgtO4uZwKzg=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/1I6Huj9Zx7GO8Ci8Nw6v7Anj2W9PPQkumM0U2TTcUGUc/edit#slide=id.p1": {
+    "title": "コンテナビルド最新事情 2022年度版 -",
+    "description": "コンテナビルド最新事情 - 2022年度版- @_inductor_ 1",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oFIO-YdHbfZH7_s4GjAIkp9dCD5N56w25wdduRWbppxpsrB6XGswn9K4sVVtZS2ltIMZYoj0N3RjBoflQtmdQ7PTd414lO_yK77n6kpu8I=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://slide.rabbit-shocker.org/authors/unasuke/techfeed-conference-2022": {
+    "title": "Ruby 最新動向 - unasuke - Rabbit Slide Show",
+    "description": "https://techfeed.io/events/techfeed-conference-2022#ruby-trend",
+    "image": "https://slide.rabbit-shocker.org/authors/unasuke/techfeed-conference-2022/0.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slide.rabbit-shocker.org"
+  },
+  "https://docs.google.com/presentation/d/1xYnMfAhOuVgtEKovcFFjrhAu0kHEI7rzAUuMgcBsHwM/edit": {
+    "title": "JavaScript による\u000b動的 WebAssembly 生成",
+    "description": "JavaScript による 動的 WebAssembly 生成 Takuo Kihira (Twitter: @tkihira) 2022-05-14",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oHnnMUlt3IM5M3Jnnfr0f807kB7qahcyOng7YdYs6yrvVUz6cUEcr_Nwt_YgK3TuWOnL7VYIWkam4kU3k2dmMXs6bHXGcyplyjN4tLBXMQ2=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/18Q8nn69Hi8d39k51HduArKkrCx3CY_ZsbPf-F-tb8Pg/edit": {
+    "title": "20220513-<script setup> with ESLint",
+    "description": "eslint-plugin-vue で より質の高い <script setup> を 実装する 1",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oGXhWGdbZsUEacrhli5lP__8h5lGwA2vlC4K2LLMn7VFpjOP_7Ph7MrnbxziIA8KCsPmTDYvsi8HymURECv5GF1fLirn60BL47yQsN0ud0=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/18GuL65ZlXQ587u7hYNxzXnQaGLarEcR2SGG3n0wBbUg/edit": {
+    "title": "TechFeed Conference Python上級",
+    "description": "Pythonに上級テクニックは 要らない そして正しい付き合い方 これを読む皆さんへ：5分枠に30枚超えとクレイジーなことになってしまったので、どこかでちゃんとした発表としてやり直しますね。",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oHABwhGDu2INX02ZhSliwwQTS4sElkycIrVLB9tMtZFMjLX6x2pgfiOKGLzJpv1vBO6CVQm7FMF6I8ZFAGmOUIsmVpa4ak1DQHINyqOsKyz=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/e/2PACX-1vQA-H3OOi6dJSry1N8en-yxNeEQZwoNIc9oPsDvld8NF1RvXhftlVSBuCCmvcRe5rsk1sVrIIjP6ghj/pub?slide=id.p1": {
+    "title": "2022-05-14 Angularの 新しい型安全フォームAPI (tfcon2022)",
+    "description": "Angularの 新しい型安全フォームAPI Introduction of Typed Forms API https://bit.ly/3FIciqa @lacolaco 1",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oHHWAcqMKheukITJDBm5cpy3l2glmCuqrcNysE8-O3ebUPNzTr937Q6jiiEVEvR6SPWujeD9SZa6TvfY2j8l6rNXx7qJpzIMD1UUAKEZF2P=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://keens.github.io/pdf/tfcon.pdf": {
+    "title": "",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://keens.github.io"
+  },
+  "https://devchallenges.io": {
+    "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
+    "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY": {
+    "title": "Button component Challenge | devChallenges.io",
+    "description": "One of the best ways to learn front-end libraries is to create a reusable component. In this challenge, your task is to create a reusable button.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FButtonThumbnail.png?alt=media&token=3ddbedcf-a08b-4144-928f-e551b4bcee80",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp": {
+    "title": "Input component Challenge | devChallenges.io",
+    "description": "One of the best ways to learn front-end libraries is to create reusable component. In this challenge, your task is to create a reusable input.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD": {
+    "title": "Windbnb Challenge | devChallenges.io",
+    "description": "I love airbnb UI, it is so modern and clean. In this challenge, you will work with a similar UI to airbnb - windbnb.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5": {
+    "title": "Todo app Challenge | devChallenges.io",
+    "description": "Todo app is one of the common projects when it comes to practicing coding.  This challenge is another todo list :).",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8": {
+    "title": "Random quote generator Challenge | devChallenges.io",
+    "description": "Famous quotes can be a great source of motivation. This challenge is all about quotes.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8": {
+    "title": "Country quiz Challenge | devChallenges.io",
+    "description": "If you want to learn more about countries, this challenge is perfect for you.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv": {
+    "title": "Weather app Challenge | devChallenges.io",
+    "description": "Weather app is another popular project for practicing coding. In this challenge, you will work an interesting UI for a weather app.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://nextjs.org": {
+    "title": "Next.js by Vercel - The React Framework",
+    "description": "Next.js by Vercel is the full-stack React framework for the web.",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://nextjs.org"
+  },
+  "https://devchallenges.io/solutions/ftLx16ngH2CDg6hFPU76": {
+    "title": "Windbnb by Hitomi Yoshikawa",
+    "description": "TypeScript × Next.js × emotion.  \nA page with a simple search function has been created.\n\nEven though it was only one screen and a drawer menu, there were surpr",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/solutions/ClokxKDirrSdDyCt8D0D": {
+    "title": "Input component by Hitomi Yoshikawa",
+    "description": "I have created an Input component that contains a label.\n\nSince it was created as a component for text input, the type of input element is limited to text forma",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://www.typescriptlang.org": {
+    "title": "JavaScript With Syntax For Types.",
+    "description": "TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.typescriptlang.org"
+  },
+  "https://emotion.sh/docs/introduction": {
+    "title": "Emotion – Introduction",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://emotion.sh"
+  },
+  "https://restcountries.com": {
+    "title": "REST Countries",
+    "description": "Get information about countries via a RESTful API",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://restcountries.com"
+  },
+  "https://stylelint.io": {
+    "title": "Home | Stylelint",
+    "description": "npm version",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
+  },
+  "https://eslint.org": {
+    "title": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
+    "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
+    "image": "https://eslint.org/icon-512.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
+  },
+  "https://prettier.io": {
+    "title": "Prettier · Opinionated Code Formatter",
+    "description": "Opinionated Code Formatter",
+    "image": "https://prettier.io/icon.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
+  },
+  "https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site": {
+    "title": "Deprecation notice: GitHub Jobs site | GitHub Changelog",
+    "description": "Deprecation notice: GitHub Jobs site",
+    "image": "https://github.blog/wp-content/uploads/2022/04/Engineering-Security.png?fit=1200%2C630",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.blog"
+  },
+  "https://github.com/emotion-icons/emotion-icons": {
+    "title": "GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components",
+    "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Mate...",
+    "image": "https://opengraph.githubassets.com/1643cbf00893e38a211b4232e4d0a2c42b68ba4fc9d551bd0981d6066cde0859/emotion-icons/emotion-icons",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/WICG/inert": {
+    "title": "GitHub - WICG/inert: Polyfill for the inert attribute and property.",
+    "description": "Polyfill for the inert attribute and property. Contribute to WICG/inert development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/0179efe7fb5e818ad2ecaa4576038c870a9baf69f534172090786f8064eabad1/WICG/inert",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://google.github.io/material-design-icons": {
+    "title": "Material Icons Guide",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://google.github.io"
+  },
+  "https://github.com/typestyle/csx": {
+    "title": "GitHub - typestyle/csx: Utility functions for TypeStyle",
+    "description": "Utility functions for TypeStyle. Contribute to typestyle/csx development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/c9ec53e0673bbb2dbbbdfcc4fc82a1b148c28d2ed583da583e19548fc3be5fda/typestyle/csx",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/uuidjs/uuid": {
+    "title": "GitHub - uuidjs/uuid: Generate RFC-compliant UUIDs in JavaScript",
+    "description": "Generate RFC-compliant UUIDs in JavaScript. Contribute to uuidjs/uuid development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/1dc70f39b282c2eb7848ec36bb22dc4e5dccd7d4ffaa66bb18711cb9150605c4/uuidjs/uuid",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/sindresorhus/ky-universal": {
+    "title": "GitHub - sindresorhus/ky-universal: Use Ky in both Node.js and browsers",
+    "description": "Use Ky in both Node.js and browsers. Contribute to sindresorhus/ky-universal development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/2096ac6e888ee7c5d7929134363eacab73764e9b6b7c343cd88410282aa91c1b/sindresorhus/ky-universal",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://react-query.tanstack.com": {
+    "title": "TanStack Query | React Query, Solid Query, Svelte Query, Vue Query",
+    "description": "Powerful asynchronous state management, server-state utilities and  data fetching for TS/JS, React, Solid, Svelte and Vue",
+    "image": "https://github.com/tanstack/query/raw/beta/media/repo-header.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://react-query.tanstack.com"
+  },
+  "https://github.com/WICG/focus-visible": {
+    "title": "GitHub - WICG/focus-visible: Polyfill for `:focus-visible`",
+    "description": "Polyfill for `:focus-visible`. Contribute to WICG/focus-visible development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/edb4fa2ad052caea06d1405a2a62b9482a7db637f9ece3880416fd4b690fb444/WICG/focus-visible",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/sindresorhus/ky": {
+    "title": "GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API",
+    "description": "🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API - GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API",
+    "image": "https://opengraph.githubassets.com/0e012c48c159f256430b2f6740ff9edbfff30a4cd6f4525ad9d73d31f9ec7a85/sindresorhus/ky",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/okonet/lint-staged": {
+    "title": "GitHub - okonet/lint-staged: 🚫💩 — Run linters on git staged files",
+    "description": "🚫💩 — Run linters on git staged files. Contribute to okonet/lint-staged development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/0c87854d5e9ecce3908866a948d6b458a563bd4f94f45cc29e7e3bfabbe64378/okonet/lint-staged",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute": {
+    "title": "UIにおける見えるけど利用できない非活性な領域の実装とinert属性について",
+    "description": "モーダルダイアログのようなUIには、それが出現している間はダイアログの外の領域が操作不能になっているという慣習があります。ダイアログが取り扱うタスクだけにユーザーを集中させるために、あえてダイアログ以外の操作ができないようになっています。",
+    "image": "https://standard.shiftbrain.com/assets/blog/unavailable-inert-regions-and-inert-attribute/modal-dialog.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://standard.shiftbrain.com"
+  },
+  "https://github.com/hankchizljaw/modern-css-reset": {
+    "title": "GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
+    "description": "A bare-bones CSS reset for modern web development. - GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
+    "image": "https://opengraph.githubassets.com/75eb85956c5e2c875dd1a1970457baa4bd39b524015035b0a190242d4a221c38/Andy-set-studio/modern-css-reset",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://devchallenges.io/solutions/XYfovlFDBkg4qktnUh8b": {
+    "title": "Button component by Hitomi Yoshikawa",
+    "description": "Mainly Built with Next.js, emotion.\n\nI've been using UI component libraries for the most part.\nThis time, I challenged myself to create a component from scratch",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FButtonThumbnail.png?alt=media&token=3ddbedcf-a08b-4144-928f-e551b4bcee80",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/solutions/1juVePEnnmpjMCzrbvRr": {
+    "title": "Weather app by Hitomi Yoshikawa",
+    "description": "TypeScript × Next.js × emotion.\n\nWhen you access the app, it gets your location and retrieves and displays the weather forecast for that nearest location.\n(If y",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/solutions/BTvVlLhztEQ8Fz8UJ1Rf": {
+    "title": "Todo app by Hitomi Yoshikawa",
+    "description": "TypeScript × Next.js × emotion.  \nI created a simple todo app using LocalStorage.",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/solutions/DgZ6ich7Qg4s9mZo7rnZ": {
+    "title": "Country quiz by Hitomi Yoshikawa",
+    "description": "TypeScript × Next.js × emotion.\n\n※Regarding the REST COUNTRIES API, the assignment guide said it was https://restcountries.eu/, but I heard that it has become a",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://devchallenges.io/solutions/CoYDLZwFt5LqHxsD6xe7": {
+    "title": "Random quote generator by Hitomi Yoshikawa",
+    "description": "TypeScript × Next.js × emotion.  \n\nrandom quote will display the quote data randomly.\n\nauthor quote list displays a list of citation data for the specified auth",
+    "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
+  },
+  "https://www.slideshare.net/techblogyahoo/devsumi-17e2": {
+    "title": "データの価値を最大化させるためのデザイン～データビジュアライゼーションの方法～ #devsumi 17-E-2",
+    "description": "2022年2月17日・18日に開催された「Developers Summit 2022」1日目の登壇スライドです。\n ヤフーのデータソリューション事業やデータサイエンス部門のデザイナーとして、日々の業務においてデータに直接に触れる機会の多いエンジニアの皆さんとデータビジュアライズの観点で共有し実践していることをご紹介...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/upload-220216044520-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://www.slideshare.net/ryuichiueda/160-251192233": {
+    "title": "シェル・ワンライナー160本ノック",
+    "description": "シェル・ワンライナー 160本ノック 上田隆一，山田泰宏，田代勝也，中村壮一， 今泉光之，上杉尚史（著） @eban ，青木裕哉，石井久治，りゅうちてつや （解答陣） 技術評論社, 2021 ITエンジニア本大賞2022技術書部門プレゼンテーション in Developers Summit 2022 \fどんな本？ •...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/20220217it-220217085706-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://www.slideshare.net/ssuserf3aaa0/devsumi-devsumia-251186972": {
+    "title": "オーバーエンジニアリングって何？ #devsumi #devsumiA",
+    "description": "大島 將義 / 黒田 樹（@i2key） オーバーエンジニアリングって何！？ ぶくぶく膨れ上がる仕様、使われない機能、過剰品質、、、突き 詰めたら、その先に真のチームの姿があった。 #devsumi 17-a-6 #devsumiA \f俺のプロダクト開発用語辞典 大島 將義 / 黒田 樹（@i2key） https:...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumidevsumia-220216160812-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://kt3k.github.io/talk_devsumi_2022_deno/#1": {
+    "title": "モダンなJavaScript/TypeScript実行環境「Deno」",
+    "description": "Node.jsに対する反省を生かしながら、2018年より開発が始まった新しいJavaScript/TypeScript実行環境である「Deno」を紹介します。また、スピーカーが、Denoの開発元であるDeno社に勤務することになったきっかけと、Deno社の中での働き方なども紹介します。",
+    "image": "https://kt3k.github.io/talk_devsumi_2022_deno/devsumi_2022_deno.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kt3k.github.io"
+  },
+  "https://www.slideshare.net/kkd/dxit-251192393": {
+    "title": "DX時代のITエンジニアに送る、アジャイル式「いきいき」ヘルスマネジメント",
+    "description": "DX時代のITエンジニアに送る、 「いきいき」ヘルスマネジメント 懸⽥ 剛, 福島 梓 17-E-6 02/17 15:05 ∼ 15:50 アジャイル式 \f私たちはなぜここにいるのか？ • こんなことを伝えに来ました！ • よい仕事には「いきいき」な状態が不可⽋ • 「いきいき」と過ごすためのヒント • 個⼈、チー...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/healthmanagementasagile20220217-220217092246-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://www.slideshare.net/papanda/digitaltransformation-journey": {
+    "title": "Digitaltransformation Journey",
+    "description": "Toshihiro Ichitani All Rights Reserved. Ichitani Toshihiro 市⾕聡啓 デジタルトランスフォーメーション・ジャーニー 組織のデジタル化から、分断を乗り越えて組織変⾰にたどりつくまで \f市⾕ 聡啓 Ichitani Toshihiro DX伴⾛⽀援 (株式会社レッ...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/digitaltransformationjourney-220218021035-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://note.com/maiamea/n/n25e344f16a5a#90dfa599-c363-4856-b5fd-f8b848e39e09": {
+    "title": "【イベント参加メモ】 Developers Summit 2022（1日目）｜まいあ めあ",
+    "description": "2022年2月17日(木) Developers Summit 2022（1日目）がオンラインで開催され、参加したのでメモや感想を書きます。  \n\n\nDevelopers Summit 2022（2022.02.17-18）\n\n\nITエンジニアの祭典「Developers Summit 2022」（デブサミ2022）は、2022年2月17・18日に開\n\n\nevent.shoeisha.jp\n\n\n\n \n    何を期待して参加した？  毎度のことながら、気になるセッションがたくさんあり刺激を受けたくて参加しました。     B-1 世界の一流エンジニアの思考法を日々体験しているのでデブサ",
+    "image": "https://assets.st-note.com/production/uploads/images/72450301/rectangle_large_type_2_c16d7baaaa50032b78104bef001d663f.png?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://newrelic.com/jp/codestream": {
+    "title": "IDEにおける本番環境テレメトリとコラボレーション",
+    "description": "New Relic CodeStreamは、開発者が、本番環境テレメトリやコラボレーションツールに、IDE内で日常的にアクセスできるようにします。",
+    "image": "https://newrelic.com/themes/custom/erno/assets/images/metadata/NROG_Image.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://newrelic.com"
+  },
+  "https://qiita.com/e99h2121/items/1023521c373364f4d17f": {
+    "title": "Developers Summit 2022に登壇したので、その感想🍬 - Qiita",
+    "description": "\n\n\n\nデブサミ2022に登壇の機会をいただきました。\n今回は公募に応募し、枠を頂いたという非常にありがたい経験。いきなり余談ですが\n\n\n監督に「君はアイドル になりたいの? 女優になりたいの?」と訊かれると、すかさず「コッチです!」...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9RGV2ZWxvcGVycyUyMFN1bW1pdCUyMDIwMjIlRTMlODElQUIlRTclOTklQkIlRTUlQTMlODclRTMlODElOTclRTMlODElOUYlRTMlODElQUUlRTMlODElQTclRTMlODAlODElRTMlODElOUQlRTMlODElQUUlRTYlODQlOUYlRTYlODMlQjMlRjAlOUYlOEQlQUMmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWZiN2U1NTIzZDg5MzIwZmRjYzAxZjUwM2MyNmFmYTI2&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwZTk5aDIxMjEmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTQxMDRjZjUyZTZkOGY1MWZjMjE4OTBjYWQ3YTI4MDBk&blend-x=142&blend-y=491&blend-mode=normal&s=7abeb71402cb5ce4615adeaa1499cbdb",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+  },
+  "https://note.com/maiamea/n/n25e344f16a5a#753b12df-a008-4232-a03a-a5f522e3eba7": {
+    "title": "【イベント参加メモ】 Developers Summit 2022（1日目）｜まいあ めあ",
+    "description": "2022年2月17日(木) Developers Summit 2022（1日目）がオンラインで開催され、参加したのでメモや感想を書きます。  \n\n\nDevelopers Summit 2022（2022.02.17-18）\n\n\nITエンジニアの祭典「Developers Summit 2022」（デブサミ2022）は、2022年2月17・18日に開\n\n\nevent.shoeisha.jp\n\n\n\n \n    何を期待して参加した？  毎度のことながら、気になるセッションがたくさんあり刺激を受けたくて参加しました。     B-1 世界の一流エンジニアの思考法を日々体験しているのでデブサ",
+    "image": "https://assets.st-note.com/production/uploads/images/72450301/rectangle_large_type_2_c16d7baaaa50032b78104bef001d663f.png?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://gihyo.jp/book/2021/978-4-297-12267-6": {
+    "title": "1日1問、半年以内に習得 シェル・ワンライナー160本ノック",
+    "description": "シェルのワンライナー（その場かぎりの1行プログラム）は，LinuxやMacのコマンドラインインターフェースを立ち上げたら，すぐにプログラムを書いて即実行できます。ちょっとした作業を手っ取り早く片付けるのに向いています。大量のデータ処理，繰り返し処理ほどその効果は絶大です。本書は，そんなシェル・ワンライナーを身につけるためのトレーニング本です。大量の問題を繰り返し解くことで，実務でワンライナーを活用できるようになることを目指します。\n第1部でシェルによるデータ加工の定石を学び，第2部でとっさの閃きと柔軟な発想力を養い，第3部で実務にありそうな問題に取り組むことで応用力を鍛えます。実務でワンライナーを役立てるには，OS（Linux），シェル，スクリプト言語，正規表現，文字コード，画像データ，日付や時間データ，通信プロトコルなどの幅広い知識が必要となります。本書では，まず［練習問題］でそのような事前知識を解説し理解を含め，［問題］で力試しを行うという構成になっています。",
+    "image": "https://image.gihyo.co.jp/assets/images/ogp/2021/9784297122676.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://gihyo.jp"
+  },
+  "https://gihyo.jp/book/2021/978-4-297-12226-3": {
+    "title": "機械学習を解釈する技術 〜予測力と説明力を両立する実践テクニック",
+    "description": "機械学習の研究開発が急速な勢いで進んでいます。理論研究はもちろん，機械学習手法が実装されたオープンソースのパッケージ開発も進み，それらを実務で利用するためのノウハウも蓄積されてきています。結果として，機械学習をはじめたばかりの入門者でも比較的高い精度の予測モデルを構築できるようになりました。\nDeep Learning, Gradient Boosting Decision Tree, Random Forestなどの機械学習モデルは高い予測精度を誇りますが，モデルの解釈性が低いという欠点があります。これらの複雑なブラックボックスモデルにおいて，モデルがなぜそのような予測を行っているのかを知ることは困難ですが，データ分析者自身がモデルの振る舞いを把握し，説明責任を果たすことを実務においては頻繁に求められます。\n本書では，このような予測精度と解釈性のトレードオフを克服するための手法について，実務において特に有用と考えるものを厳選して紹介します。本書の構成は以下になります。\n\n\n1章: 機械学習の解釈性とは\n2章: 線形回帰モデルを通して「解釈性」を理解する\n3章: 特徴量の重要度を知る〜Permutation Feature Importance〜\n4章: 特徴量と予測値の関係を知る〜Partial Dependence〜\n5章: インスタンスごとの異質性を捉える〜Individual Conditional Expectation〜\n6章: 予測の理由を考える〜SHapley Additive exPlanations〜\n付録A: R による分析例~ tidymodelsとDALEXで機械学習モデルを解釈する~\n付録B: 機械学習の解釈手法で線形回帰モデルを解釈する\n\n2章では極めて高い解釈性を誇る線形回帰モデルを通して，予測モデルに求められる解釈性について説明します。以降の4つの章では，それらの解釈性をブラックボックスモデルに与えるPFI, PD, ICE, SHAPと呼ばれる手法について解説します。\n本書は機械学習の解釈手法を実用して頂くことを目的としています。Pythonでゼロから手法を実装することを通じて解釈手法のアルゴリズムを理解し，実データの分析を通じて解釈手法の勘所を押さえて頂きます。機械学習の解釈手法は強力な反面，使い方を誤ると間違った結論を導いてしまう危険もあります。本書では解釈手法を実用する際の注意点についても丁寧に触れています。",
+    "image": "https://image.gihyo.co.jp/assets/images/ogp/2021/9784297122263.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://gihyo.jp"
+  },
+  "https://qiita.com/kojimadev/items/61fc4da0eaac1a4e6069": {
+    "title": "[デブサミ2022]「グローバル（マルチリンガル）ｘ人事ｘ スクラム x People Analytics」でのエンジニアの挑戦  で学んだ事 - Qiita",
+    "description": "\nはじめに\n以下のデブサミのセッションを視聴して学んだことを書きます。\nセッション名：「グローバル（マルチリンガル）ｘ人事ｘ スクラム x People Analytics」でのエンジニアの挑戦\nスピーカー：村田 隆一[メルカリ]\n概...",
+    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9JTVCJUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMiU1RCVFMyU4MCU4QyVFMyU4MiVCMCVFMyU4MyVBRCVFMyU4MyVCQyVFMyU4MyU5MCVFMyU4MyVBQiVFRiVCQyU4OCVFMyU4MyU5RSVFMyU4MyVBQiVFMyU4MyU4MSVFMyU4MyVBQSVFMyU4MyVCMyVFMyU4MiVBQyVFMyU4MyVBQiVFRiVCQyU4OSVFRiVCRCU5OCVFNCVCQSVCQSVFNCVCQSU4QiVFRiVCRCU5OCUyMCVFMyU4MiVCOSVFMyU4MiVBRiVFMyU4MyVBOSVFMyU4MyVBMCUyMHglMjBQZW9wbGUlMjBBbmFseXRpY3MlRTMlODAlOEQlRTMlODElQTclRTMlODElQUUlRTMlODIlQTglRTMlODMlQjMlRTMlODIlQjglRTMlODMlOEIlRTMlODIlQTIlRTMlODElQUUlRTYlOEMlOTElRTYlODglQTYlMjAlMjAlRTMlODElQTclRTUlQUQlQTYlRTMlODIlOTMlRTIlODAlQTYmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTM1MzE1OTYxYjdlMzA2ZGVlNTQ5YjJmYjJjMjQwYzli&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwa29qaW1hZGV2JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz00YWQyNTA2MDY2ZjVhMmMyNDA3NjA4ZjlhZThkZjY0ZA&blend-x=142&blend-y=491&blend-mode=normal&s=363502f54bf54fc92b0c34ec19b5d53a",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+  },
+  "https://note.com/maiamea/n/n25e344f16a5a#4bcb2229-5898-47b6-b3d5-e7b33a3a79bd": {
+    "title": "【イベント参加メモ】 Developers Summit 2022（1日目）｜まいあ めあ",
+    "description": "2022年2月17日(木) Developers Summit 2022（1日目）がオンラインで開催され、参加したのでメモや感想を書きます。  \n\n\nDevelopers Summit 2022（2022.02.17-18）\n\n\nITエンジニアの祭典「Developers Summit 2022」（デブサミ2022）は、2022年2月17・18日に開\n\n\nevent.shoeisha.jp\n\n\n\n \n    何を期待して参加した？  毎度のことながら、気になるセッションがたくさんあり刺激を受けたくて参加しました。     B-1 世界の一流エンジニアの思考法を日々体験しているのでデブサ",
+    "image": "https://assets.st-note.com/production/uploads/images/72450301/rectangle_large_type_2_c16d7baaaa50032b78104bef001d663f.png?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://event.shoeisha.jp/devsumi/20220217": {
+    "title": "Developers Summit 2022（2022.02.17-18）",
+    "description": "ITエンジニアの祭典「Developers Summit 2022」（デブサミ2022）は、2022年2月17・18日に開催！事前登録受付中！",
+    "image": "https://event.shoeisha.jp/static/images/event/1316/1200-02.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+  },
+  "https://www.slideshare.net/shosuz/developerssummit2022improvingdigitalcustomerexperiencewithenterprisesearchandobservability20220218": {
+    "title": "Developers-Summit-2022_Improving-Digital-Customer-Experience-with-Enterprise_SearchAndObservability-20220218",
+    "description": "デジタルカスタマーエクスペリエンスの向上 - Enterprise Search と Observability 鈴⽊ 章太郎 Elastic テクニカルプロダクトマーケティングマネージャー/エバンジェリスト デジタル庁 省庁業務グループ ソリューションアーキテクト \fElastic Technical Produc...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit2022-enterprisesearchobservability-20220218-220218100523-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://www.slideshare.net/HirokiHachisuka/ss-251198337": {
+    "title": "はち の自分戦略",
+    "description": "はち の自分戦略 2022/02/18  蜂須賀 大貴 (@PassionateHachi) 1 \f蜂須賀 大貴 (はちすか ひろき) a.k.a はち  ・2012/4~2021/3：株式会社IMAGICA (現 IMAGICA Lab.)  ・2021/4~9： 複業でプロダクトマネージャー  ・2...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/random-220218071041-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://speakerdeck.com/flyle/btob-product-management": {
+    "title": "Flyle_開発者視点のBtoBプロダクトマネジメント実践論",
+    "description": "Devloppers Summit 2022でのセッションで使用したセッション資料になります。\nFlyleのサービスページはこちら：https://flyle.io/jp\n\n■セッションタイトル\n「開発者視点のBtoBプロダクトマネジメント実践論 ～エンジニアが高い顧客解像度を持つ事で高まる機能開発のROI～」\n\n■概要\nアジャイル開発の現場では想定と異なり、「顧客に使われない機能を開発してしまう」といったことが多く起きます。\n\nそれが起きがちな背景として、プロダクトバックログへのユーザーニーズの反映の不十分さ、BtoBビジネスならではの開発部門とビジネス部門の分断、プロダクトマネジメント体制の不足、様々なパターンがあります。\n\n自社でPdM向けソフトウェアを開発・提供しながら、50社以上のプロダクトマネジメントを支援してきた立場から、開発者がどのように「顧客に使われる機能を開発するか？」といった課題に立ち向かうべきか、お話しします。",
+    "image": "https://files.speakerdeck.com/presentations/fca285c678604e0f9a72a559002adf7c/slide_0.jpg?20479259",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://note.com/n0bisuke/n/n47107ffc2ec2": {
+    "title": "「飽きっぽい性格の君はエンジニアとしてやっていけない」と言われた当時の自分へ #devsumi ｜菅原のびすけ (n0bisuke)",
+    "description": "こんにちは、のびすけです。デブサミ2022のセッションでLT登壇させて頂きました。振り返り的な投稿になります。  「君は将来エンジニアとしてやっていけない」と当時上司に言われましたが、その辺のことを振り返りつ登壇振り返りもしたいと思います。  共感する点などあればコメント貰えるとめちゃめちゃ嬉しいです！  飽きっぽい性格でエンジニアキャリアに悩んだタイミング  僕は昔から飽きっぽい性格があり、    新しい技術が出たら試す    特定の技術を深く突き詰める前に新しいことに目移りしてしまう    勉強会などのイベント開催、記事執筆などエンジニアリング以外の活動も頻繁に行う    みたいな",
+    "image": "https://assets.st-note.com/production/uploads/images/72700089/rectangle_large_type_2_e4d887cbcfd08027b24afe0b5ccfbe37.png?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://www.slideshare.net/dzeyelid/devsumi-2022-session-18a9-case-of-kazumi-ohira": {
+    "title": "「あの人の自分戦略を聞きたい！2022」～ 大平かづみの場合",
+    "description": "あの人の自分戦略を聞きたい！ 2022 大平かづみの場合 \f大平かづみ / Kazumi OHIRA • Microsoft MVP for Azure • ZEN ARCHITECTS 所属 • Infrastructure as Code や GitHub Actions による自動化が得意 • Code Pol...",
+    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/20220217devsumi18-a-9kazumi-ohira-220218075525-thumbnail.jpg?width=640&height=640&fit=bounds",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798169934": {
+    "title": "ビジネスデザインのための行動経済学ノート  バイアスとナッジでユーザーの心理と行動をデザインする | 翔泳社",
+    "description": "サービスやプロダクトの開発に\n行動経済学の理論を活かすヒント\n\n本書は行動経済学の本ですが、むずかしい専門書ではありません。\n本書のテーマは「行動経済学をビジネスデザインに活用すること」です。\n行動経済学の理論を知るだけでなく、\n新しいサービスやプロダクトの開発に活用することが目的です。\n商品サービスとユーザーとの関係に\n行動経済学の理論を活用するためのアイデアを、\nデザイナー視点でわかりやすく図解していきます。\n\n\n〈本書の特徴〉\n●個別の理論ではなく全体構成で仕組みを理解できる\n●図で多く用いることで理論がパッと見てわかる\n●社会心理学やデザインなどの観点も織り交ぜている\n●商品やサービスなどへの活用方法に言及している\n●実際のビジネスを想像しながら読むことで楽しく学べる",
+    "image": "https://www.shoeisha.co.jp/static/splus/2241/meta/9784798169934.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+  },
+  "https://speakerdeck.com/kamorisan/developer-summit-2022": {
+    "title": "Developer_Summit_2022",
+    "description": "レッドハットのミドルウェアでレガシーアプリケーションを段階的にモダナイズする話",
+    "image": "https://files.speakerdeck.com/presentations/c69e3a7b13904993967eca49704685e5/slide_0.jpg?20476992",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://note.com/llminatoll/n/n84c5b0b3b69c": {
+    "title": "デブサミ2022 『あの人の自分戦略を聞きたい！2022』に登壇したのでレポする｜湊川あい #わかばちゃんと学ぶ 本 発売中",
+    "description": "こんばんは。湊川（みなとがわ）あいです。 わかばちゃんと学ぶシリーズなど、マンガで技術を解説するコンテンツを描いています。  ありがたいことに、前回の2021年に引き続き、2022年にもコンテンツ委員に選んでいただきました。 最終日の最後のコマで、コンテンツ委員が集合して一挙LTをするという時間をいただいたので、その内容を私の感想とともにざっくり振りかえってみたいと思います。  セッション詳細  2/18 17:40～18:45 『あの人の自分戦略を聞きたい！2022』  \n\n\n18-A-9 あの人の自分戦略を聞きたい！2022 | Developers Summit 2022（202",
+    "image": "https://assets.st-note.com/production/uploads/images/72514355/rectangle_large_type_2_3acc96b3db8860f4f7fee7b2188634b9.png?fit=bounds&quality=85&width=1280",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+  },
+  "https://speakerdeck.com/dropout009/devsumi2022": {
+    "title": "『機械学習を解釈する技術』の紹介 / Devsumi2022",
+    "description": "Developers Summit 2022の「ITエンジニア本大賞2022」プレゼン大会での発表資料です。\n\nhttps://event.shoeisha.jp/devsumi/20220217/session/3650/\n\n機械学習解釈する技術はこちらからご購入いただけます\nhttps://gihyo.jp/book/2021/978-4-297-12226-3",
+    "image": "https://files.speakerdeck.com/presentations/870b3d318c3649a9ac81af6fadcb61a6/slide_0.jpg?20480924",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tatsuru/development-of-mackerel-devsumi2022winter": {
+    "title": "Mackerelのプロダクト開発 - エンジニア中心の開発プロセスで大切にしていること",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/8d7f2cd8d65344d893d227e6f316712b/slide_0.jpg?20476556",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kyonmm/the-way-to-a-lively-organization": {
+    "title": "生き生きとした組織への道 #devsumi / The Way to a Lively Organization",
+    "description": "デベロッパーズサミット 2022 「生き生きとした組織への道」でプレゼンしました。\n\nhttps://event.shoeisha.jp/devsumi/20220217/session/3676/\n",
+    "image": "https://files.speakerdeck.com/presentations/908b3c14aa974cba844822951e0131e9/slide_0.jpg?20519547",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/hashitokyo/microservice-data-and-data-mesh": {
+    "title": "Microservice, Data, and Data Mesh",
+    "description": "Developers Summit 2022 登壇資料\n\nアプリの世界観が変わり、分散システムが特別な選択肢では無い事も増えてきました。アプリをより小さな単位で構成する概念は広く認知されましたが、一方、データストアの分割、分割されたデータストア間での整合性の確保にはまだ多くの課題があります。\n\n本セッションでは分散システムにおけるデータ整合性と、それを支えるApache Kafkaの役割についてご説明します。また将来のステップとして、ドメイン駆動化されたデータを\"Data as a Product\"として横断的に活用するData Meshの構想についてご説明します。",
+    "image": "https://files.speakerdeck.com/presentations/42d38b6725da4cb698d55ff68a792938/slide_0.jpg?20479600",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/miz_kushida/jie-wei-kasawatukuhotochao-jin-hua-sitapmbokdi-7ban-nisi-tatihatouqu-rizu-muka": {
+    "title": "「界隈がざわつくほど超進化したPMBOK第7版」に私たちはどう取り組むか",
+    "description": "＊文字かすれ修正しました\n\nDevelopers summit 2022 発表資料です。\n\n元ネタはこちらのnoteです。\n\nhttps://note.com/miz_kushida/n/n103a7da460c5\n\nTwitter\nhttps://twitter.com/miz_kushida",
+    "image": "https://files.speakerdeck.com/presentations/9973dbbc01a842579802157168603e6b/slide_0.jpg?20692550",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kakutani/pragmatic-programmer-2nd-ed": {
+    "title": "『達人プログラマー 第2版』/ Pragmatic Programmer 2nd Ed.",
+    "description": "#devsumi 2022\nhttps://event.shoeisha.jp/devsumi/20220217/session/3650/\n\n「ITエンジニア本大賞2022」に『達人プログラマー 第2版』が選出されたそうで、ご縁があって著者でも翻訳者でも編集者でもないのにプレゼン大会でピッチすることになりました 😇\n\nFurther Reading:\n* goto.bookclub: https://gotopia.tech/bookclub/episodes/pragmatic-programmer-in-2020\n* 『達人プログラマー 第2版』(PDF版)https://tatsu-zine.com/books/the-pragmatic-programmer-2ed\n* 角谷信太郎 × 和田卓人 ピアソン技術書のゼロ年代と俺たち ―\"OO厨\"史観のふりかえりと、技術書翻訳のこれから― - YouTube https://www.youtube.com/watch?v=khNX9-4tpEU",
+    "image": "https://files.speakerdeck.com/presentations/4b56adb07478437081ac13c5a0fbdb3e/slide_0.jpg?20478440",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/i35_267/connecting-business-and-engineering-bef28870-6900-470d-8e8c-e447beaa13cd": {
+    "title": "【20min ver.】事業をスケールさせるエンジニアたち〜技術のコモディティ化にエンジニアは敗北する〜 / Connecting Business and Engineering",
+    "description": "2022/02/17 DevelopersSummit 2022 資料",
+    "image": "https://files.speakerdeck.com/presentations/2150a867c73942ec97d82a7ce3f012d3/slide_0.jpg?20477786",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/whisaiyo/developers-summit-202202": {
+    "title": "多様性を活かす文書化された世界をつくる/Developers Summit_202202",
+    "description": "我々はいかにして多様性を活かす文書化された世界を作るか\nわたしたちがぼちぼち生き延びる、キャリアを見失わないための失敗史\n\n株式会社Works Human Intelligence\n山田展子 YAMADA Nobuko / 佐藤未歩 SATO Miho\n\n2022.02 Developers Summit",
+    "image": "https://files.speakerdeck.com/presentations/cd67a2c0cce949e79995f548bbc3ebef/slide_0.jpg?20542058",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/soudai/database-now-and-in-the-past": {
+    "title": "今まで生き残ってきたRDBMSとこの先10年戦えるデータストア戦略 / Database now and in the past",
+    "description": "Developers Summit 2022の登壇資料です。\n\n# 参考リンク\n- https://eh-career.com/engineerhub/entry/2018/12/11/110000\n- https://soudai.hatenablog.com/entry/2017/12/27/080000\n- https://soudai.hatenablog.com/entry/2021/12/31/114009\n\n\n",
+    "image": "https://files.speakerdeck.com/presentations/473b6a9e61c1456fa837aeac3098932a/slide_0.jpg?20450734",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/ihcomega56/devsecops-with-sbom-for-yourself-10-years-from-now": {
+    "title": "SBOMでソフトウェアを守れ！10年後も自信を持ってリリースするために今始めるDevSecOps / DevSecOps with SBOM for yourself 10 years from now",
+    "description": "Developers Summit 2022",
+    "image": "https://files.speakerdeck.com/presentations/1ca803a2a99f429ebe672f3c259c8971/slide_0.jpg?20489557",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://slides.com/shoki/agile-for-volunteer": {
+    "title": "頑張らないアジャイル(事後資料)",
+    "description": "A presentation created with Slides.",
+    "image": "https://media.slid.es/thumbnails/2d42a17e511cf391962498c929860075/thumb.jpg?1645059505",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slides.com"
+  },
+  "https://speakerdeck.com/snoozer05/ready-player-one-yunikonqi-ye-falsehimitu-nixue-berukoto": {
+    "title": "Ready Player One: 『ユニコーン企業のひみつ』に学べること",
+    "description": "Developers Summit2022 #devsumi2022 での発表資料です \n\nhttps://event.shoeisha.jp/devsumi/20220217/session/3705/\n",
+    "image": "https://files.speakerdeck.com/presentations/b08a8fdf608740de9139615111d2c9bf/slide_0.jpg?20488738",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/recruitengineers/devboost2021-yusukekawauchi": {
+    "title": "制約が多い大きなプロダクトに新卒で飛び込み、バリバリ案件開発に貢献するようになるまでの道のり。 / DevBoost2021_YusukeKawauchi",
+    "description": "2021/12/11_Developers Boost 2021での、河内の講演資料になります",
+    "image": "https://files.speakerdeck.com/presentations/1f0c2b6b51364314af52d70bd175cd82/slide_0.jpg?19775102",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/tark_ann/is-scrum-the-secret-to-growth-how-to-make-ojt-to-learn-enjoy-developers-summit-2022": {
+    "title": "成長の秘訣はスクラム？楽しく学ぶOJTの作り方 - デブサミ2022 - / Is Scrum the secret to growth? How to make OJT to learn enjoy. - Developers Summit 2022",
+    "description": "Developers Summit 2022［17-B-9］成長の秘訣はスクラム？楽しく学ぶOJTの作り方\n\n講演日時:\n2022年2月17日(木) 17:40-18:45\n\n概要:\nここ数年で世の中が大きく変化し、リモート主体の働き方をする現場が増えました。\n新入社員は業務への不安だけではなく、コミュニケーションも今まで以上に不安を覚え、いきいきと働くのが難しい環境になっています。\nそのため、OJTではスキル面の育成だけではなく、メンタルケアなど精神面のフォローも重要となっています。\n本セッションでは、OJTにスクラムを活用し、日々の行動に自信を持って成長してもらうための取り組みについてお話しします。",
+    "image": "https://files.speakerdeck.com/presentations/9beddc044e2f4d91b128db969db3f6fe/slide_0.jpg?20477848",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/atamaplus/devsumi2022": {
+    "title": "「プロダクトの開発速度」と「データの組織的価値」をセットで飛躍的に高める開発戦略/devsumi2022",
+    "description": "Developers summit 2022にて、atama plus・アルゴリズム開発エンジニアの川原（@ganzology）が登壇しました。\n\n新しい教育を創り、社会を変えていく仲間を募集しています。\nご興味をもっていただいた方はぜひご応募ください！\n\n▼開発チームの情報発信リンク集\nhttps://linktr.ee/atama_plus_dev\n\n▼募集職種一覧\nhttps://herp.careers/v1/atamaplus\n\n▼採用サイト\nhttps://recruiting.atama.plus/\n\n#devsumi #atamaplus_dev",
+    "image": "https://files.speakerdeck.com/presentations/37d3091b7d324eefaaf26bc6a8c43827/slide_0.jpg?20540631",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/nwiizo/cloudnativenashi-dai-niqiu-merareru-websabisuji-pan-moderufalsezai-kao": {
+    "title": "CloudNativeな時代に求められるWebサービス基盤モデルの再考",
+    "description": "Developers Summit 2022\nhttps://event.shoeisha.jp/devsumi/20220217\n\nhttps://event.shoeisha.jp/devsumi/20220217/session/3648/\n\n今週、ずっと体調が悪く昨日、PCR検査受けたが陰性\n後ほど、修正して再度、上げます。",
+    "image": "https://files.speakerdeck.com/presentations/ecb353ccb5804f008f0a6c6ec9fdac55/slide_0.jpg?20478986",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/daipresents/agile-development-and-quality-engineering": {
+    "title": "アジャイル開発と品質エンジニアリング - QA時代の終わりとQE時代のはじまり / Agile Development and Quality Engineering",
+    "description": "アジャイルコーチと名乗るようになって10年が経ちました。\n10年前のアジャイル開発は、変化叫ぶ少数のロックスターが中心でした。しかし、現在では、小さなスタートアップだけなく、大企業でも当たり前に語らています。アジャイル開発は、「より」アジャイルになろうとしつつあるようです。\n\nでは、テストや品質保証は「アジャイル」になったのでしょうか？\n\nこのセッションでは、QA（品質保証）からQE（品質エンジニアリング）に変化する時代背景を解説しながら、アジャイル・DevOps時代のアジャイルテスティングを議論します。\n\nデベロッパーズサミット2022 講演資料\n17-C-7 02/17 16:00 ～ 16:45\nhttps://event.shoeisha.jp/devsumi/20220217/session/3666/",
+    "image": "https://files.speakerdeck.com/presentations/d97428ceb612472da51bd3bd30c7eca8/slide_0.jpg?20450841",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/navitimejapan/10nian-hou-moenziniagacheng-chang-sisok-kerutamenidekirukotowo-20nian-sok-kuzu-zhi-falsezhong-karakao-eru": {
+    "title": "10年後もエンジニアが成長し続けるためにできることを、20年続く組織の中から考える",
+    "description": "2022年2月17日(木), 18日(金)開催の Developers Summit 2022 の発表資料です。",
+    "image": "https://files.speakerdeck.com/presentations/197e9b53785446968d0828d5f3b51e1a/slide_0.jpg?22118759",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kakutani/agile-manifesto-decade-resurrections": {
+    "title": "Agile Manifesto Decade Resurrections",
+    "description": "#devsumi 2022\nhttps://event.shoeisha.jp/devsumi/20220217/session/3690/\n",
+    "image": "https://files.speakerdeck.com/presentations/1d2eceea6afc47818e42283ab6dcc8ca/slide_0.jpg?20492238",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kyonmm/road-to-executive-officer-2022": {
+    "title": "才能のない自分が33歳で大企業の執行役員になるまで #devsumi / road to executive officer 2022",
+    "description": "デベロッパーズサミット2022の「あの人の自分戦略を聞きたい！2022」でLTしてきました。\n\nhttps://event.shoeisha.jp/devsumi/20220217/session/3695/",
+    "image": "https://files.speakerdeck.com/presentations/6186956b5e4344af98021d3bd8aa62b3/slide_0.jpg?20515999",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/clown0082/a-story-of-achievements-after-repeating-various-challenges": {
+    "title": "A story of achievements after repeating various challenges",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/c842564e0a1c4624bb1d19dd966d4b3a/slide_0.jpg?20472797",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/nihonbuson/agile-testing-essence-20220218": {
+    "title": "Agile Testingのエッセンス #devsumi / Agile Testing Essence 20220218",
+    "description": "<a href=\"https://event.shoeisha.jp/devsumi/20220217/session/3699/\">Developers Summit 2022</a>で発表した資料です。\n\n\n【参考文献のページに記載したURL】\n◆P153（参考書籍）\n・<a href=\"https://leanpub.com/agiletesting-condensed\">Agile Testing Condensed</a>（日本語版は<a href=\"https://leanpub.com/agiletesting-condensed-japanese-edition\">こちら</a>）\n・<a href=\"http://www.bddbooks.com/\">The BDD Books - Discovery</a>\n\n◆P154（Agile Testing関連の参考文献）\n・ <a href=\"https://www.youtube.com/watch?v=FIJQPHNS5Jc\">Appendix A: What We´ve Learned Since Agile Testing</a>\n・<a href=\"http://www.growingagile.co.za/2015/04/the-testing-manifesto/\">テストマニフェスト</a>（日本語版は<a href=\"https://nihonbuson.hatenadiary.jp/entry/TestingManifesto\">こちら</a>）\n・<a href=\"https://danashby.co.uk/2016/10/19/continuous-testing-in-devops/\">Continuous Testing in DevOps…</a>（日本語版は<a href=\"https://daipresents.com/2020/06/04/continuous-testing-in-devops/\">こちら</a>）\n・<a href=\"https://cucumber.io/blog/bdd/example-mapping-introduction/\">実例マッピング</a>（日本語版は<a href=\"https://nihonbuson.hatenadiary.jp/entry/ExampleMapping\">こちら</a>）\n・<a href=\"https://www.youtube.com/watch?v=PR7WIS8JYyY&t=276s\">Cucumber School - Give Me An Example</a>\n・<a href=\"https://school.cucumber.io/\">Cucumber School</a>\n・<a href=\"https://www.veriserve.co.jp/asset/approach/column/test-automation/test-automation02.html\">ベリサーブが考えるテスト自動化プロジェクトのマネジメントとは</a>\n・<a href=\"https://www.amazon.co.jp/dp/B00I8W50T8/\">Explore It!</a>\n・<a href=\"https://www.slideshare.net/tosikawa/wacate-56868585/27\">探索的テストはじめの一歩 #wacate</a>\n\n◆P155（品質管理関連の参考文献）\n・<a href=\"https://www.juse.or.jp/sqip/archive/file/tresurebox01.pdf\">ソフトウェアの品質管理推進について（ENGINEERS 誌 1981年8月号）</a>\n・<a href=\"https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=8209&item_no=1&page_id=13&block_id=8\">ソフトウェアの検査の考え方（学会誌「情報処理」1972年5月号）</a>\n・<a href=\"https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=6686&item_no=1&page_id=13&block_id=8\">ソフトウェア製品生産管理：ソフトウェア工学における品質管理（QC）と品質保証（QA）\n（学会誌「情報処理」1980年10月号）</a>\n・<a href=\"https://www.amazon.co.jp/dp/4817100109\">日本的品質管理＜増補版＞</a>\n・<a href=\"https://www.researchgate.net/publication/335935834_Quality_Management_Evolution_from_the_Past_to_Present_Challenges_for_Tomorrow\">Quality Management Evolution from the Past to Present: Challenges for Tomorrow</a>\n・<a href=\"https://speakerdeck.com/nihonbuson/history-of-quality-assurance\">品質保証の歴史学 at「リリカルの質問全部答えます」</a>\n\n\n【発表資料中のURL】\n※複数ページで出てくる場合は、初出のページ数に掲載\n\n◆P4 \n・<a href=\"https://www.amazon.co.jp/dp/B001QL5N4K/\">Agile Testing: A Practical Guide for Testers and Agile Teams</a>\n・<a href=\"https://www.amazon.co.jp/dp/4798119970/\">実践アジャイルテスト（Agile Testing: A Practical Guide for Testers and Agile Teamsの日本語翻訳版）</a>\n・<a href=\"https://www.amazon.co.jp/dp/B00O27V8DA\">More Agile Testing</a>\n・<a href=\"https://leanpub.com/agiletesting-condensed\">Agile Testing Condensed</a>\n・<a href=\"https://leanpub.com/agiletesting-condensed-japanese-edition\">Agile Testing Condensed Japanese Edition</a>\n\n◆P6\n社内読書会報告\n・<a href=\"https://note.com/rs_dessin/n/n27838ab7f758\">atama plus 株式会社様</a>\n・<a href=\"https://www.mmj.ne.jp/mmjblog/agile-testing-condesed/\">メディアマックスジャパン株式会社様</a>\n・<a href=\"https://tech.bm-sms.co.jp/entry/2021/08/17/120000\">株式会社エス・エム・エス様</a>\n・<a href=\"https://note.com/azukaritai/\">ユニバ株式会社 Azukaritaiチーム様</a>\n感想ブログ\n・<a href=\"https://note.com/hgsgtk/n/nf8d0ffc8a605\">hgsgtk様</a>\n・<a href=\"https://note.com/ramen_san/n/n7edbddf911d8\">らーめん様</a>\n・<a href=\"https://qiita.com/kyohei-917/items/34808375bdd7ceb1b801\">粕谷様</a>\n\n◆P11\n・<a href=\"http://jstqb.jp/dl/JSTQB-SyllabusFoundation_Version2018V31.J03.pdf\">ISTQBテスト技術者資格制度 Foundation Level シラバス 日本語版Version 2018.J03</a>\n\n◆P12\n・<a href=\"http://www.growingagile.co.za/2015/04/the-testing-manifesto/\">The Testing Manifesto</a>\n・<a href=\"https://nihonbuson.hatenadiary.jp/entry/TestingManifesto\">【翻訳記事】テストに対する考え方「Testing Manifesto」</a>\n\n◆P13\n・<a href=\"https://speakerdeck.com/nihonbuson/scrum-fest-osaka-2021\">テストコードを書き始める前に考えるべきテストの話（2021年版）</a>\n\n◆P17\n・<a href=\"https://speakerdeck.com/tomasagi/sohutoueatesutozi-dong-hua-falsebian-qian-bian-watutakototobian-waranaikoto-tesutozi-dong-hua-falsedao-ru-patan?slide=42\">ソフトウェアテスト自動化の変遷。変わったことと変わらないこと。テスト自動化の導入パターン。</a>\n\n◆P19\n・<a href=\"https://www.veriserve.co.jp/asset/approach/column/test-automation/test-automation02.html\">ベリサーブが考えるテスト自動化プロジェクトのマネジメントとは</a>\n\n◆P21\n・<a href=\"https://www.amazon.co.jp/dp/B00I8W50T8/\">Explore It!</a>\n・<a href=\"https://www.slideshare.net/tosikawa/wacate-56868585/27\">探索的テストはじめの一歩 #wacate</a>\n\n◆P23\n・<a href=\"https://danashby.co.uk/2016/10/19/continuous-testing-in-devops/\">Continuous Testing in DevOps…</a>\n\n◆P34\n・<a href=\"https://cucumber.io/blog/bdd/example-mapping-introduction/\">Introducing Example Mapping</a>\n・<a href=\"https://nihonbuson.hatenadiary.jp/entry/ExampleMapping\">【翻訳記事】受け入れ基準の設定時などに役立つプラクティス「実例マッピング(Example Mapping)」</a>\n\n◆P95\n・<a href=\"http://www.bddbooks.com/\">The BDD Books - Discovery</a>\n\n◆P96\n・<a href=\"https://cucumber.io/blog/bdd/keep-your-scenarios-brief/\">Keep your scenarios BRIEF</a>\n・<a href=\"https://nihonbuson.hatenadiary.jp/entry/keep-your-scenarios-brief\">【翻訳記事】テスト自動化の対象となるテストシナリオの整理に役立つBRIEFの原則</a>\n\n◆P113\n・ <a href=\"https://shop.ohmsha.co.jp/shopdetail/000000001901/\">アジャイルサムライ</a>\n・ <a href=\"https://kawaguti.hateblo.jp/entry/2020/05/08/172925\">アジャイルテストの世界 - Agile Testing Condensed と実例マッピング</a>\n\n◆P114\n・<a href=\"https://twitter.com/m_seki/status/1424503907435225091\">@m_sekiさんのツイート</a>\n\n◆P132\n・<a href=\"https://www.juse.or.jp/sqip/archive/file/tresurebox01.pdf\">ソフトウェアの品質管理推進について（ENGINEERS 誌 1981年8月号）</a>\n\n◆P134\n・<a href=\"https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=8209&item_no=1&page_id=13&block_id=8\">ソフトウェアの検査の考え方（学会誌「情報処理」1972年5月号）</a>\n\n◆P136\n・<a href=\"https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=6686&item_no=1&page_id=13&block_id=8\">ソフトウェア製品生産管理：ソフトウェア工学における品質管理（QC）と品質保証（QA）\n（学会誌「情報処理」1980年10月号）</a>\n\n◆P142\n・<a href=\"https://www.amazon.co.jp/dp/4817100109\">日本的品質管理＜増補版＞</a>\n\n◆P170\n・<a href=\"https://speakerdeck.com/nihonbuson/history-of-quality-assurance\">品質保証の歴史学 at「リリカルの質問全部答えます」</a>\n\n◆P171\n・<a href=\"https://www.researchgate.net/publication/335935834_Quality_Management_Evolution_from_the_Past_to_Present_Challenges_for_Tomorrow\">Quality Management Evolution from the Past to Present: Challenges for Tomorrow</a>",
+    "image": "https://files.speakerdeck.com/presentations/b1a5ee57a8114c4785acfca3407779b2/slide_0.jpg?20487333",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/n0bisuke2/ju-jiu-wu-dian-yuan-ninarumadefalseliu-reto-bao-kitupoipu-falsezi-fen-zhan-lue-wozhen-rifan-ru-number-devsumi": {
+    "title": "居酒屋店員になるまでの流れと 飽きっぽい僕の自分戦略を振り返る #devsumi",
+    "description": "https://event.shoeisha.jp/devsumi/20220217/session/3695/\n\nデブサミ2022 #devsumi \n「あの人の自分戦略を聞きたい！2022」 での発表",
+    "image": "https://files.speakerdeck.com/presentations/b900ac5942f04eb3bacd7a686e9cf4a3/slide_0.jpg?20497811",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/soracom/devsumi2022-soracom": {
+    "title": "IoTエンジニアとして歩んだ6年間から見る「IoTの今と展望」〜今できる事と、これからに向けた準備",
+    "description": "Developers Summit 2022 でソラコム テクノロジー・エバンジェリストの松下が発表した『IoTエンジニアとして歩んだ6年間から見る「IoTの今と展望」〜今できる事と、これからに向けた準備』の資料を公開しました。",
+    "image": "https://files.speakerdeck.com/presentations/18f7ca21268a4ee380d4dfa7523fd5a4/slide_0.jpg?20487273",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yuzutas0/20220218": {
+    "title": "あの人の自分戦略を聞きたい！2022 #devsumi / 20220218",
+    "description": "Developers Summit 2022【18-A-9】の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20220217/\n\n「あの人の自分戦略を聞きたい！2022」\nhttps://event.shoeisha.jp/devsumi/20220217/session/3695/\n\n10年前のデブサミ2012でも大好評だった「あの人の自分戦略を聞きたい！」が帰ってきた！ 今回は、デブサミ2022の企画を一緒に作り上げてきたデブサミコンテンツ委員会のみなさんに、キャリア戦略を語っていただきます。これからの10年の自分戦略を考えるヒントになれば幸いです！\n\n----------------------------------------------------------------------------------------\n【PR】一緒に働きましょう！\nhttps://kazaneya.com/kdec\n----------------------------------------------------------------------------------------",
+    "image": "https://files.speakerdeck.com/presentations/9198848ee3eb470494d3b1494be66abc/slide_0.jpg?20381758",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/medley/required-of-dx-engineers": {
+    "title": "これからのDX時代のエンジニアに求められること ～医療業界へのアプローチを通じて～",
+    "description": "Developers Summit 2022\nhttps://event.shoeisha.jp/devsumi/20220217/session/3729/\n\nこれからのDX時代のエンジニアに求められること ～医療業界へのアプローチを通じて～\n平山 宗介（株式会社メドレー 取締役CTO）",
+    "image": "https://files.speakerdeck.com/presentations/b5af7fa7ae424aed8583fb5b76cfb757/slide_0.jpg?20494539",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/soudai/developers-summit-2022": {
+    "title": "あの人の自分戦略を聞きたい！2022 / developers-summit-2022",
+    "description": "# Event\n https://event.shoeisha.jp/devsumi/20220217/session/3695/\n\n# 参考資料\n- https://soudai.hatenablog.com/entry/2017/06/03/183508\n- https://speakerdeck.com/soudai/soudai-evolution\n- https://soudai.hatenablog.com/entry/2021/12/31/114009\n- https://media.lifull.com/stories/20211101171/\n- https://speakerdeck.com/soudai/engineer-life-hack\n",
+    "image": "https://files.speakerdeck.com/presentations/da57dbbfa9514f418bc87d1ab5984825/slide_0.jpg?20497059",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kjstylepp/gihoz-wohuo-yong-sitaweb-apitesutoshe-ji-falsekan-suo": {
+    "title": "“GIHOZ”を活用したWeb APIテスト設計の勘所 #GIHOZ #devsumi #devsumiB",
+    "description": "Developers Summit 2022の18-B-7セッションにて発表した資料の公開版です。\nhttps://event.shoeisha.jp/devsumi/20220217/session/3702/",
+    "image": "https://files.speakerdeck.com/presentations/2799ec923c2f46939e83d451d1d22503/slide_0.jpg?20618605",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://www.shoeisha.co.jp/book/detail/9784798166391": {
+    "title": "プロダクトマネジメントのすべて  事業戦略・IT開発・UXデザイン・マーケティングからチーム・組織運営まで | 翔泳社",
+    "description": "世界水準のプロダクトマネージャーの叡智は\nこの1冊で完璧に得られる\n\nGoogle、Microsoft、SmartNewsなどのプロダクト、\nBtoCおよびBtoB領域で国内のみならずグローバル展開に\n携わってきた百戦錬磨の著者陣が\n日本とシリコンバレーのあらゆる知見を詰め込み書き上げた、\nプロダクトマネジメントの決定版。\n\nあらゆるモノがIT化する現代では、\nプロダクトの成功を抜きに、ビジネスを語ることはできない。\n\n事業戦略、IT開発、UXデザイン、マーケティング、\nカスタマーサクセス、セキュリティ、知的財産、組織運営……。\n何をどこまでおさえればいいのか？\n本書はその海図となって、ビジネスを成功に導く。\n\nプロダクトマネジメントに欠かせない\n知識、スキル、方法論、マインドセットを網羅しているため\n●新事業・新サービス開発\n●既存事業テコ入れ\n●DX\n●起業\n●スタートアップ\nにかかわるすべてのマネージャー、エンジニア、デザイナーにとっては\n必読の完全保存版である。\n\n\n【目次概要】\nPartⅠ　プロダクトの成功\nPartⅡ　プロダクトを育てる\nPartⅢ　ステークホルダーをまとめ、プロダクトチームを率いる\nPartⅣ　プロダクトの置かれた状況を理解する\nPartⅤ　プロダクトマネージャーと組織の成長\nPartⅥ　プロダクトマネージャーに必要な基礎知識\n",
+    "image": "https://www.shoeisha.co.jp/static/splus/2132/meta/9784798166391.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+  },
+  "https://amanokaze.jp/shinkashikou": {
+    "title": "進化思考 | 海士の風",
+    "description": "2025大阪・関西万博、横浜DeNAベイスターズ、東京防災、クックパッド…各分野で絶大に支持される「生物の進化に学ぶ創造性」、待望の書籍化！",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://amanokaze.jp"
+  },
+  "https://speakerdeck.com/carta_engineering/2022nian-karactojiao-dai-xin-jiu-ctogayu-rukoremadefalse10nian-tokorekarafalseenziniazu-zhi-towen-hua": {
+    "title": "2022年からCTO交代！新旧CTOが語るこれまでの10年とこれからのエンジニア組織と文化 / developers-summit-2022",
+    "description": "VOYAGE GROUPは事業会社として1999年から22年間さまざまな事業・サービスを生み出し、成長させてきました。2022年からはVOYAGE GROUPはCARTA HOLDINGSとして新たな挑戦を始めます。\nこのセッションでは、2010年から10年間CTOを勤めた小賀が2010年代のエンジニア組織と文化をふりかえり、2022年からCTOを務める鈴木が2020年以降の未来を語ります。\n\nDevelopers Summit 2022\nhttps://event.shoeisha.jp/devsumi/20220217/session/3692/",
+    "image": "https://files.speakerdeck.com/presentations/631e9d1b61de4ee8bfe2cb5ea92164cb/slide_0.jpg?20527718",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://learn.gitlab.com/c/gitlab-presentation-developers-summit?x=JBqxmQ": {
+    "title": "GitLabで学んだ最高の働き方 Developers Summit 2022-02-18",
+    "description": "",
+    "image": "https://cdn.pathfactory.com/assets/10519/contents/390016/thumbnails/600x/7913512b-9ce2-44c1-aba2-03203144059c-01.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://learn.gitlab.com"
+  },
+  "https://docs.google.com/presentation/d/1Uf4cHQArt67yVFmY-CBHhh44dpGjDCZA51OQ4JunSRY/edit": {
+    "title": "開発チームみんなで取り組むアクセシビリティ",
+    "description": "開発チームみんなで取り組む アクセシビリティ 2022.02.17 Developers Summit 2022 17-E-4 ymrl",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oHnehDkzVW80KwxeLNnlv2ifP6otl0fEVk-0akzL404VrtiRJuR2vIr3r4ojHbBi3mVL9vAZmleDIoTHFrO0dkbb550iaAdUWjnKo5BgNwj=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://docs.google.com/presentation/d/1mG8ygkT422LrFvt0HfZ2RIL2MhKUFc88I3LmUdMVbiA/edit#slide=id.p": {
+    "title": "アジャイルの価値観を体現した チームへ成長するパタンランゲージづくり",
+    "description": "アジャイルの価値観を体現した チームへ成長するパタンランゲージづくり 渡辺知恵美, 川口一画, 早瀬康裕 筑波大学enPiT Developers Summit 2022 17-B-4",
+    "image": "https://lh3.googleusercontent.com/docs/ADP-6oHjape0s7M1Tax8PLP8UxVFf17xXnv-lC6po13EZ-xM8G_aDH0EjZTHYTbXntivros-sJPSqqXag2xQJL8tnBaw0OhpLXD2yC9Lg1yeLkxq=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://www.ohmsha.co.jp/book/9784274226298": {
+    "title": "達人プログラマー（第2版） 熟達に向けたあなたの旅 | Ohmsha",
+    "description": "本書は、David Thomas and Andrew Hunt, The Pragmatic Programmer 20th Anniversary Edition (Addison Wesley, 2019）の日本語版です。 \n本書は、より効率的、そしてより生産的なプログラマーになりたいと願うソフトウェア開発者に向けて、アジャイルソフトウェア開発手法の先駆者として知られる二人により執筆されました。経験を積み、生産性を高め、ソフトウェア開発の全体をより良く理解するための、実践的なアプローチが解説されています。 \n先見性と普遍性に富んだ本書は、入門者には手引きとなり、ベテランでも読み直すたびに得るものがある、座右の一冊です。\n \n \n \n      原著サポートページ  \n \n\n \n 試し読みをする \n-->\n",
+    "image": "https://www.ohmsha.co.jp/Portals/0/book/large/978-4-274-22629-8.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.ohmsha.co.jp"
+  },
+  "https://shintosei.metro.tokyo.lg.jp/wp-content/uploads/2022/02/usertestgideline01.pdf": {
+    "title": "",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shintosei.metro.tokyo.lg.jp"
+  },
+  "https://zenn.dev/solufa/articles/getting-started-with-aspida": {
+    "title": "月間2万DL突破！REST APIを型安全にする最強のTypeScript製HTTPクライアントaspidaを始めよう",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--GpXCfI_---/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E6%259C%2588%25E9%2596%25932%25E4%25B8%2587DL%25E7%25AA%2581%25E7%25A0%25B4%25EF%25BC%2581REST%2520API%25E3%2582%2592%25E5%259E%258B%25E5%25AE%2589%25E5%2585%25A8%25E3%2581%25AB%25E3%2581%2599%25E3%2582%258B%25E6%259C%2580%25E5%25BC%25B7%25E3%2581%25AETypeScript%25E8%25A3%25BDHTTP%25E3%2582%25AF%25E3%2583%25A9%25E3%2582%25A4%25E3%2582%25A2%25E3%2583%25B3%25E3%2583%2588aspida%25E3%2582%2592%25E5%25A7%258B%25E3%2582%2581%25E3%2582%2588%25E3%2581%2586%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Solufa%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2hSSkFIRjk0YjU5N0ZnQmFCbWxYUFBDWmkxYVlYcWdhVE1RanZHPXM5Ni1j%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://trpc.io": {
+    "title": "tRPC - Move Fast and Break Nothing.\nEnd-to-end typesafe APIs made easy. | tRPC",
+    "description": "End-to-end typesafe APIs made easy. Automatic typesafety & autocompletion inferred from your API-paths, their input data, & outputs 🧙‍♂️",
+    "image": "https://og-image.trpc.io/api/landing?cache-buster=23",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://trpc.io"
+  },
+  "https://zenn.dev/uttk/articles/bd264fa884e026#%E5%9E%8B%E5%BC%95%E6%95%B0%E3%81%AE%E6%B8%A1%E3%81%97%E6%96%B9": {
+    "title": "TypeScriptのゾッとする話 ~ Zodの紹介 ~",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--LAG8qhD_--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:TypeScript%25E3%2581%25AE%25E3%2582%25BE%25E3%2583%2583%25E3%2581%25A8%25E3%2581%2599%25E3%2582%258B%25E8%25A9%25B1%2520%7E%2520Zod%25E3%2581%25AE%25E7%25B4%25B9%25E4%25BB%258B%2520%7E%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:uttk%2Cx_203%2Cy_98/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2M3ZDNkNTUwMTYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_72/og-base.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://github.com/aspida/aspida": {
+    "title": "GitHub - aspida/aspida: TypeScript friendly HTTP client wrapper for the browser and node.js.",
+    "description": "TypeScript friendly HTTP client wrapper for the browser and node.js. - GitHub - aspida/aspida: TypeScript friendly HTTP client wrapper for the browser and node.js.",
+    "image": "https://repository-images.githubusercontent.com/213083762/635fb380-3dc5-11eb-8d3e-2925d8c1ed6b",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/h-yoshikawa44/type-safe-request": {
+    "title": "GitHub - h-yoshikawa44/type-safe-request: 検証：型安全なHTTPリクエスト",
+    "description": "検証：型安全なHTTPリクエスト. Contribute to h-yoshikawa44/type-safe-request development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/2f95a4c2571378a30ef0dec4144bfb05a97d199cb0f68d5d4755b581013a9c1e/h-yoshikawa44/type-safe-request",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://www.npmjs.com/package/@aspida/ky": {
+    "title": "@aspida/ky",
+    "description": "ky client for aspida. Latest version: 0.10.2, last published: 3 years ago. Start using @aspida/ky in your project by running `npm i @aspida/ky`. There are no other projects in the npm registry using @aspida/ky.",
+    "image": "https://static.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
+  },
+  "https://github.com/colinhacks/zod": {
+    "title": "GitHub - colinhacks/zod: TypeScript-first schema validation with static type inference",
+    "description": "TypeScript-first schema validation with static type inference - GitHub - colinhacks/zod: TypeScript-first schema validation with static type inference",
+    "image": "https://opengraph.githubassets.com/245a9f80203102cc1188e910ec801f4cbacf60fde70dce6e18bd100dc67bb870/colinhacks/zod",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  }
+}
