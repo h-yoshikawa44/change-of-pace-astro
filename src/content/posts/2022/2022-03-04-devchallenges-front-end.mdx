@@ -1,0 +1,447 @@
+---
+title: "devChallenges - Front-end 編を完走？したので、さっくり振り返ってみた"
+description: "devChallengesのFront-end編の課題内容と使用技術等の振り返り"
+pubDate: "2022-03-04"
+updatedDate: "2022-03-04"
+category: "develop"
+tags: ["devChallenges"]
+---
+
+こんにちは、先日復職して現在進行形で復活中のよしです。
+devChallenges の課題をさらに1コース完走？したので、また振り返ってみました。
+
+※翻訳は Google 翻訳を使用しています。
+
+import OG from "@/components/OG.astro"
+
+## devChallenges のおさらい
+<OG url="https://devchallenges.io" />
+
+ざっくりいうと、Web Developer になるための学習コンテンツや課題を提供しているコミュニティです。
+こちらで提供されているものに、Figma のデザインデータとユーザストーリーを元に課題作品を作るというものが3コースあり。そのうちの Fron-end 編をやったので振り返るよというのが今回の趣旨です。
+
+この辺りは Responsive Web 編の振り返りをした前回の記事でも書いたので、ちょっと端折ります。
+- [devChallenges - Responsive Web 編を完走したので、さっくり振り返ってみた](/posts/2021-12-24-devchallenges-responsive-web)
+
+## Front-end 編の課題を振り返ってみる
+Responsive Web 編が主に Web サイトのページの制作だったのに対して、Front-end 編ではモックデータや外部 API を利用した Web アプリを作るようなものが主になります。
+
+難易度的には先に Responsive Web 編をやった方がいいかなぁといった感じですが、自分は Front-end 編を先に開始してしまったので、前半の課題はなかなか苦戦しました...。
+（Front-end 編折り返しくらいで Responsive Web 編を先にやってから、続きをやりました）
+
+> Use a Front-end Framework and choose any Frameworks or Libraries
+>
+> 訳：
+> フロントエンドフレームワークを使用し、フレームワークまたはライブラリを選択します
+
+Front-end 編のルールの1つにこうあるので、自分は Next.js を練習がてら採用。
+どの課題も TypeScript × Next.js × emotion で作成しています。
+
+では、8課題をさっくり振り返っていきます。
+（あまり実装のネタバレにならないような書き方としました）
+
+### 完走？
+振り返ると言っておきながら、先に言っておくことがありまして。
+
+当記事のタイトルを`完走？`としている件。
+Front-end 編も8課題用意されてはいるのですが、実は最後の課題だけ進めることができませんでした。
+というのも、この課題で使用案内されていた GitHub Jobs API がすでに廃止されて使えなくなっていたためです。
+<OG url="https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site" />
+
+デザインデータはあるので、適当にモックデータを作ってやる手もあったのですが、そこまでしてやる価値があるかな？というのが気になってしまいまして。
+他に求人情報を提供する API は探せばあるでしょうが、同様にそこまでしてやらなくていいかな、というので今回は進めていません。
+
+そのため、振り返るのは最後の課題以外の7課題になります。
+
+### 1 - Button component
+<OG url="https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY" />
+
+ユーザストーリー.
+- I can see different button types: default, outline and text
+（訳：さまざまなボタンタイプが表示されます：デフォルト、アウトライン、テキスト）
+- I can choose to disable box-shadow
+（訳：ボックスシャドウを無効にすることを選択できます）
+- I can choose to disable the button
+（訳：ボタンを無効にすることを選択できます）
+- I can choose to have an icon on the left or right (Use Google Icon and at least 5 variants)
+（訳：左側または右側にアイコンを表示するように選択できます - Googleアイコンと少なくとも5つのバリエーションを使用）
+- I can have different button sizes
+（訳：ボタンのサイズを変えることができます）
+- I can have different colors
+（訳：色を変えてもいい）
+- When I hover or focus, I can see visual indicators
+（訳：ホバーまたはフォーカスすると、視覚的なインジケーターが表示されます）
+- I can still access all button attributes
+（訳：引き続きすべてのボタン属性にアクセスできます）
+- (optional) Show button in a similar way like the design or use Storybook. Otherwise, showing the button in multiple states is enough
+（訳：デザインと同じようにボタンを表示するか、ストーリーブックを使用します。それ以外の場合は、ボタンを複数の状態で表示するだけで十分です）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/XYfovlFDBkg4qktnUh8b" />
+
+ボタンコンポーネントと、そのカタログページを作る課題。
+ボタンコンポーネントをいかに汎用的に作るか？を考えていきます。
+
+自分が devChallenges の課題で一番最初にやった課題で、当時は HTML・CSS 基礎力もガタガタというひどい状態だったので、なかなか時間がかかりました。
+まだ自分のやり方があまり定まってなかった部分もありましたし。
+慣れてる方だったらポンポンと終わるんじゃないかなぁと。
+
+執筆時点で、オプションの Storybook のやつはやっていません。
+
+### 2 - Input component
+<OG url="https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp" />
+
+ユーザストーリー.
+- I can see error state
+（訳：エラー状態を確認できます）
+- I can choose to disable input
+（訳：入力を無効にすることを選択できます）
+- I can choose to have helper text
+（訳：ヘルパーテキストを選択できます）
+- I can choose to have an icon on the left or right (Use Google Icon and at least 5 variants)
+（訳：左側または右側にアイコンを表示するように選択できます - Googleアイコンと少なくとも5つのバリエーションを使用）
+- I can have different input sizes
+（訳：さまざまな入力サイズを使用できます）
+- I can have different colors
+（訳：色を変えてもいい）
+- I can choose to have input take the width of the parent
+（訳：入力に親の幅を使用させることを選択できます）
+- I can have multiline input like a textarea
+（訳：テキストエリアのように複数行入力できます）
+- When I hover or focus, I can see visual indicators
+（訳：ホバーまたはフォーカスすると、視覚的なインジケーターが表示されます）
+- I can still access all input attributes
+（訳：引き続きすべての入力属性にアクセスできます）
+- (optional) Show input in a similar way like the design or use Storybook. Otherwise, showing the input in multiple states is enough
+（訳：デザインと同様の方法で入力を表示するか、ストーリーブックを使用します。それ以外の場合は、複数の状態で入力を表示するだけで十分です）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/ClokxKDirrSdDyCt8D0D" />
+
+インプットコンポーネントと、そのカタログページを作る課題。
+前回の課題の input 版ですね。
+同様にいかに汎用的なインプットコンポーネントを作るか、アイコンも付与できるようなコンポーネントをどう作るか、などを考えていきます。
+
+input は button と比べて装飾の仕方が変わってくるので、まだそれに慣れてなかった当時の自分はそこそこ苦戦してた気がします。
+アイコン入れるのどうやんのー！？みたいな。
+
+これも執筆時点で、オプションの Storybook のやつはやっていません。
+
+> - I can still access all input attributes
+>（訳：引き続きすべての入力属性にアクセスできます）
+
+ユーザストーリーのこちらに関して。
+解釈の仕方は色々ありそうな気がするのですが、カスタムの Input コンポーネントと input タグとで競合する props を排除してたりするので、満たせてないかな？と思い下記のような補足説明を加えた状態にしています。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+> excluded some props whose settings conflict with custom props.
+Also, Since it was created as a component for text input, the type of input element is limited to text format.
+>
+> 訳：
+> 設定がカスタム props と競合する一部の props を除外しました。
+> また、テキスト入力のコンポーネントとして作成されたため、入力要素のタイプはテキスト形式に制限されます。
+
+{/* <!-- textlint-enable --> */}
+
+### 3 - Windbnb
+<OG url="https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD" />
+
+{/* <!-- textlint-disable ja-technical-writing/no-doubled-joshi --> */}
+
+ユーザストーリー.
+- I can see a list of properties
+（訳：プロパティのリストが表示されます）
+- I can see the property card with a name, rating, apartment type, and super host
+（訳：名前、評価、アパートの種類、スーパーホストが記載されたプロパティカードが表示されます）
+- I can open the filter drawer
+（訳：フィルタードロワーを開けます）
+- I can filter properties by location and number of guests
+（訳：場所とゲストの数でプロパティをフィルタリングできます）
+- I can see the number of filtered items
+（訳：フィルタリングされたアイテムの数を確認できます）
+- I can see pages following given designs
+（訳：与えられたデザインに続くページを見ることができます）
+
+{/* <!-- textlint-enable --> */}
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/ftLx16ngH2CDg6hFPU76" />
+
+簡易的な検索機能を持つ、ミニマムな Airbnb クローンを作る課題。
+データについてはモックデータが用意されているので、それを使用。
+データの表示をどうやるか、ドロワーをどう作るか、などを考えていきます。
+
+自分は最初、無理に React Query を使うようなやり方をしていたので余計に複雑化させてしまっていました😇
+推しているライブラリだからって、何でもかんでも使うの良くない。
+（のちにローカル state を使うようなリファクタリングして除去しました）
+
+それとドロワーの実装はすごい悩みました。
+これもまた当時は慣れてなくて。
+なんかアニメーションがうまくいかない！？（クローズ時のアニメーションが動作しない）とか、ドロワー開いている時のその下にあるコンテンツの操作制御のあたりとか。
+
+Material UI のドロワーコンポーネントのスタイルを参考にしたりしつつ、操作制御に関して悩んだツイートをしていたら、フォロワーの方に inert 属性のことを教えていただきました。
+
+<blockquote class="twitter-tweet">
+  <p lang="ja" dir="ltr">Material UI の実装はわからないですかが、この辺が役に立つかもしれません<a href="https://t.co/mJu19xy3Em">https://t.co/mJu19xy3Em</a><br /><br />ポリフィル<a href="https://t.co/NXV7BWLdaP">https://t.co/NXV7BWLdaP</a>
+  </p>&mdash; ジャングル大帝 (@LEO_i7) <a href="https://twitter.com/LEO_i7/status/1406195146287321089?ref_src=twsrc%5Etfw">June 19, 2021</a>
+</blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+こんな便利な属性があったのかー！と大きな発見でしたね。
+これ以降、ドロワーやメニューを実装する時は inert 属性を活用するようになりました。
+Responsive Web 編でも活用してたやつですね。
+
+### 4 - Todo app
+<OG url="https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5" />
+
+ユーザストーリー.
+- I can add a new task
+（訳：新しいタスクを追加できます）
+- I can complete a task
+（訳：タスクを完了できます）
+- I can toggle between All, Active and Completed
+（訳：All、Active、Completedを切り替えることができます）
+- I can remove one or all tasks under the Completed tab
+（訳：タブで1つまたはすべてのタスクを削除できます）
+- (optional) Store the data in local storage that when I refresh the page I can still see my progress
+（訳：データをローカルストレージに保存します。ページを更新しても、進行状況を確認できます。）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/BTvVlLhztEQ8Fz8UJ1Rf" />
+
+Todo アプリを作る課題。
+Todo のデータや状態をどう管理するかを考えていきます。
+
+自分はローカルストレージによる永続化にもチャレンジしました。
+ローカルストレージを使ったことは何気にこれが初めてだったので、最初はちょっと戸惑いましたね。やや癖がある感じというか。
+慣れてさえしまえば処理の使い回しとかできるんでしょうが。
+他タブでのストレージ変更を検知するイベントの存在なんかも知ることができました。
+
+### 5 - Random quote generator
+<OG url="https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8" />
+
+ユーザストーリー.
+- I can see a random quote
+（訳：私はランダムな引用を見ることができます）
+- I generate a new random quote
+（訳：新しいランダムな引用を生成します）
+- When I select quote author, I can see a list of quotes from them
+（訳：引用著者を選択すると、それらからの引用のリストが表示されます）
+- I can see quote genre under the author
+（訳：著者の下で引用のジャンルを見ることができます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/CoYDLZwFt5LqHxsD6xe7" />
+
+[QuoteGarden API](https://pprathameshmore.github.io/QuoteGarden/) を使用した、名言引用アプリを作る課題。
+この課題から外部 API を使うような形式に。
+外部 API から取得したデータを活用して、どうアプリを作っていくかを考えていきます。
+
+業務で API との連携は経験あったので、この課題はそんなに苦戦しなかった気がします。
+
+### 6 - Country quiz
+<OG url="https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8" />
+
+{/* <!-- textlint-disable ja-technical-writing/no-doubled-joshi --> */}
+
+ユーザストーリー.
+- I can see at least 2 types of questions: a city is the capital of.. or a flag belong to country..
+（訳：私は少なくとも2つのタイプの質問を見ることができます：都市は首都です..または旗は国に属します..）
+- I can see select an answer
+（訳：私は答えを選択するのを見ることができます）
+- I can see if my answer is correct or incorrect
+（訳：答えが正しいか間違っているかがわかります）
+- When I answer correctly, I can move on to the next question
+（訳：正解したら次の質問に移ります）
+- When I answer incorrectly, I can see my results and try again
+（訳：間違って答えると、結果を確認して再試行できます）
+- I can try again
+（訳：もう一度試すことができます）
+
+{/* <!-- textlint-enable --> */}
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/DgZ6ich7Qg4s9mZo7rnZ" />
+
+REST COUNTRIES API を使用した、国情報クイズアプリを作る課題。
+外部 API から取得したデータをそのまま表示するのではなく、クイズ用に加工するのをどうするか、というのを考えていきます。
+
+課題上で案内されていた REST COUNTRIES API は`https://restcountries.eu/`でしたが、こちらは現在サブスクリプション API になったそうで使用できませんでした。
+そのため、この API のオープンソース版を作られた方がいて、今回はそちらを使わせていただきました。
+<OG url="https://restcountries.com" />
+
+最初は、取得したデータをクイズ用に加工するイメージや、どの状態管理が必要であるかといったイメージがなかなかスムーズにいかなくて苦戦しました。
+その中でふと Responsive Web 編を先にやろうかななんて思いついてしまったので、その時点での記録を Issue に残しておいて、この課題をしばらく中断。
+Responsive Web 編を終えて戻ってきた頃には、なんとなく実装のイメージが浮かんで課題を進められました。
+詰まった時に時間を置くのは、やはり有効ですね(笑)
+
+ただ、ユーザストーリーを少し勘違いしていたところがあり。
+本来は連続何問正解できるかな？というクイズ形式のはずが、10問中いくつ正解できるかな？という仕様で実装してしまっていました。
+実はこの記事を書いて振り返りをしている時に気づいて、慌てて修正してたりします😅
+
+これまで何気に使ったことがなかったコンテクストを使った実装にもチャレンジできて、その使い方がおおよそわかってよかったです。
+
+### 7 - Weather app
+<OG url="https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv" />
+
+ユーザストーリー.
+- I can see city weather as default, preferably my current location
+（訳：私はデフォルトとして都市の天気を見ることができます、できれば私の現在の場所）
+- I can search for city
+（訳：都市を検索できます）
+- I can see weather of today and the next 5 days
+（訳：今日と次の5日間の天気を見ることができます）
+- I can see the date and location of the weather
+（訳：天気の日付と場所がわかります）
+- I can see according to image for each type of weather
+（訳：天気の種類ごとに画像で見ることができます）
+- I can see the min and max degree each day
+（訳：毎日最小度と最大度を見ることができます）
+- I can see wind status and wind direction
+（訳：風の状態と風向がわかります）
+- I can see humidity percentage
+（訳：湿度のパーセンテージがわかります）
+- I can see a visibility indicator
+（訳：視界インジケーターが見えます）
+- I can see the air pressure number
+（訳：気圧数がわかります）
+- (optional) I can request my current location weather
+（訳：現在地の天気をリクエストできます）
+- (optional) I can convert temperature in Celcius to Fahrenheit and vice versa
+（訳：摂氏の温度を華氏に、またはその逆に変換できます）
+
+自分の投稿作品
+<OG url="https://devchallenges.io/solutions/1juVePEnnmpjMCzrbvRr" />
+
+[MetaWeather API](https://www.metaweather.com/api/) を使用した、天気予報アプリを作るチャレンジ。
+位置情報をどうやって取得するか、都市検索機能をどう実装するかなどを考えていきます。
+API をフロント側から直接呼ぶと CORS に引っかかるので、その辺りの対応も必要になってきます。
+
+Country quiz のようなデータ加工はあまり必要ないので、人によってはこちらの方が簡単かも？
+少しデザイン性のある課題なので、完成した時に「おー！」ってなったりするかもです。自分はちょっとそうなりました(笑)
+メーターを表現する要素のことを知れたりと、新しい発見もありましたね。
+
+## 主な使用した技術やライブラリなどの振り返り
+これを書くと若干実装のネタバレになる気もしますが、せっかくなので今回も一緒に振り返ってみました。
+Responsive Web 編でも書いたやつは、サラッとだけ書いてます。
+
+### TypeScript × Next.js × emotion
+<OG url="https://www.typescriptlang.org" />
+<OG url="https://nextjs.org" />
+<OG url="https://emotion.sh/docs/introduction" />
+
+はじめの方に書いた通り、Front-end 編では全部この構成でやっています。
+Next.js の勉強というのと、 CSS in JS をどれかひとつはわかるようになりたいというので emotion を採用したという経緯がありました。
+課題を通して理解を深められたので、実案件にも活かしていきたいところです。
+
+### 静的解析 + フォーマッタ
+<OG url="https://eslint.org" />
+<OG url="https://prettier.io" />
+<OG url="https://stylelint.io" />
+
+フロントエンドでお馴染みのやつです。
+VSCode 拡張として自動整形を動作させたり、GitHub Actions 上でもチェック、コミット時に自動整形したりとしてました。
+
+<OG url="https://github.com/toplenboren/simple-git-hooks" />
+<OG url="https://github.com/okonet/lint-staged" />
+
+### Material Icons
+<OG url="https://google.github.io/material-design-icons" />
+
+Front-end 編でも、アイコンはこちらを使うように案内があったので使用しています。
+emotion を使っているので、emotion-icons 経由で使用。
+
+<OG url="https://github.com/emotion-icons/emotion-icons" />
+
+### modern-css-reset
+<OG url="https://github.com/hankchizljaw/modern-css-reset" />
+
+個人的にちょうどいいと思っているリセット CSS なので使ってます。
+
+### wicg-inert
+<OG url="https://github.com/WICG/inert" />
+
+Windbnb のところでも触れた、inert 属性のポリフィル。
+ドロワーやメニュー、モーダル UI での要素の非活性制御をやりやすくするやつ。
+（スクロール抑制には対応してないので、そこは別途対応が必要）
+
+inert 属性の説明に関しては、こちらの記事がやはりとても参考になるのでまた載せておきます。
+<OG url="https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute" />
+
+### focus-visible
+<OG url="https://github.com/WICG/focus-visible" />
+
+focus-visible 疑似クラスのポリフィル。
+focus-visible 疑似クラスは Safari の対応がイマイチなので、ポリフィルを使うようにしています。
+
+主に使用しているのは button 要素の outline 制御のあたり。
+
+### csx
+<OG url="https://github.com/typestyle/csx" />
+
+CSS に関するユーティリティな関数を提供するやつ。
+主に色の制御に使うことが多いです。
+
+RGB 値からでなくカラーコードを基準とした暗い色や明るい色、透明度を反映させた色を作りたいことがあったので、このライブラリを使った関数を作って活用。
+Sass だったら元々関数が用意されているんですが、emotion だと使えないっぽかったので。
+
+### uuid
+<OG url="https://github.com/uuidjs/uuid" />
+
+UUID を生成してくれるやつ。
+Todo app で一意の ID をつけたかったので使用。
+今思えば、別に UUID じゃなくてもよかったかな...。
+
+### ky・ky-universal
+<OG url="https://github.com/sindresorhus/ky" />
+<OG url="https://github.com/sindresorhus/ky-universal" />
+
+fetch ベースの HTTP クライアントライブラリ。
+後者の方は、フロントエンド、サーバーサイド両方で使えるやつ。
+
+外部 API を利用する課題で使用。
+最近は axios からこちらに移行している流れを感じているので、昨年あたりから使うようになりました。
+ただ、型安全な HTTP リクエストでお馴染みの  Aspida が ky をサポートしていないので、今後は使わなくなっていくかも？
+
+### React Query
+<OG url="https://react-query.tanstack.com" />
+
+キャッシュ機構も含んだ状態管理ライブラリ。
+一部の課題で外部 API から取得したデータを保持するのに使用。
+
+同様の機能を持つライブラリはいくつかありますが、個人的には React Query が使いやすい感じに思えたので使用しています。
+コンテクストやローカル state との使い分け、もしくは組み合わせの辺りをもっと追求して、いい感じにしていきたい。
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-successive-word, ja-technical-writing/ja-no-weak-phrase --> */}
+
+## 完走？してどうだった？
+devChallenges を始めたきっかけに関しては、Responsive Web 編の記事でも書いたのでざっくりいうと、自分の HTML・CSS 基礎力弱弱じゃね？と思う出来事があったからです。
+ホント、トラウマになりそうな出来事がありましてね...。
+それを克服するために始めたわけです。
+React 周りを伸ばしていきたかったので、その流れで Next.js や emotion の勉強も兼ねて。
+
+やっぱり実際に何か作ってみるというのは、すごく勉強になりますね！
+自信にも繋がりますし、本当にやってよかったなぁと心から思います。
+
+ちなみに devChallenges を始めた頃は復職活動をしていた時期でして、つい先月に復職したところです。
+この復職先でのコーディング試験では、devChallenges を通して学んだことがすごく活きたと思っているので、そういう意味でもやってよかったなぁと。
+
+ただ、テストコードが全然書けていないので、テストの勉強がてらテストコードを書いてみようかなとも構想中です。
+
+{/* <!-- textlint-enable --> */}
+
+---
+今回は Front-end 編の振り返りをさっくりお送りしました。
+
+残りは Full-stack 編となりましたが、これはバックエンドも含むので1課題作るだけでも時間かかりそうですね。
+仕事との兼ね合いもあるので、やるかどうかは微妙なところではありますが、勉強になることは間違いないので前向きに検討しようかなと。
+
+devChallenges、興味を持たれた方はぜひチャレンジしてみてはいかがでしょうか。
+ではではー。
+
+## 参考リンクまとめ
+- [devChallenges](https://devchallenges.io/)
+
+※記事系のみ.
+- [UIにおける見えるけど利用できない非活性な領域の実装とinert属性について](https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute)
