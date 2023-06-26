@@ -2,6 +2,7 @@ import { defineConfig } from 'astro/config';
 import { rehypeHeadingIds } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import partytown from '@astrojs/partytown';
 import UnoCSS from 'unocss/astro';
 import remarkBreaks from 'remark-breaks';
 import remarkFlexibleCodeTitles from 'remark-flexible-code-titles';
@@ -10,7 +11,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://changeofpace.site',
-  integrations: [mdx(), sitemap(), UnoCSS()],
+  integrations: [mdx(), sitemap(), UnoCSS(), partytown()],
   build: {
     format: 'file',
   },
