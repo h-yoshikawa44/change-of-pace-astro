@@ -11,7 +11,16 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://changeofpace.site',
-  integrations: [mdx(), sitemap(), UnoCSS(), partytown()],
+  integrations: [
+    mdx(),
+    sitemap(),
+    UnoCSS(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
+      },
+    }),
+  ],
   build: {
     format: 'file',
   },
