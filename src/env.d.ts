@@ -4,6 +4,7 @@
 
 interface ImportMetaEnv {
   readonly GOOGLE_ANALYTICS_TAG: string;
+  readonly GOOGLE_SITE_VERIFICATION: string;
 }
 
 interface ImportMeta {

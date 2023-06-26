@@ -20,6 +20,8 @@ const {
 
 const titleWithSiteTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const simpleTitle = title ? title : SITE_TITLE;
+
+const GOOGLE_SITE_VERIFICATION = import.meta.env.GOOGLE_SITE_VERIFICATION;
 ---
 
 <!-- Global Metadata -->
@@ -50,3 +52,6 @@ const simpleTitle = title ? title : SITE_TITLE;
 <meta property="twitter:title" content={simpleTitle} />
 <meta property="twitter:description" content={description} />
 <meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
