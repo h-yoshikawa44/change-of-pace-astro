@@ -25,7 +25,7 @@ const {
 } = Astro.props;
 ---
 
-<BaseLayout title={headTitle} description={headDescription}>
+<BaseLayout title={headTitle} description={headDescription} isAdsense={true}>
   <p class="text-xl font-600">
     {pageTitle}
   </p>
@@ -52,5 +52,7 @@ const {
       ))
     }
   </div>
-  <Paging previousUrl={previousUrl} nextUrl={nextUrl} />
+  <div class="my-4">
+    <Paging previousUrl={previousUrl} nextUrl={nextUrl} />
+  </div>
 </BaseLayout>

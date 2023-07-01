@@ -3,6 +3,9 @@ import { MarkdownHeading } from 'astro';
 import '@unocss/reset/tailwind.css';
 import 'wicg-inert';
 import BaseHead from '@/components/BaseHead.astro';
+import GA from '@/components/GA.astro';
+import GAd from '@/components/GAd.astro';
+import GAdUnit from '@/components/GAdUnit.astro';
 import Header from '@/components/Header.astro';
 import SideBar from '@/components/SideBar.astro';
 import Footer from '@/components/Footer.astro';
@@ -16,10 +19,18 @@ type Props = {
   description?: string;
   noTopHeading?: boolean;
   markdownHeadings?: MarkdownHeading[];
+  isAdsense?: boolean;
 };
 
-const { title, description, noTopHeading, markdownHeadings = [] } = Astro.props;
+const {
+  title,
+  description,
+  noTopHeading,
+  markdownHeadings = [],
+  isAdsense = false,
+} = Astro.props;
 const isMarkdownPage = markdownHeadings?.length !== 0;
+const isShowGAdUnit = import.meta.env.PROD && isAdsense;
 ---
 
 <!DOCTYPE html>
@@ -42,7 +53,9 @@ const isMarkdownPage = markdownHeadings?.length !== 0;
             <div
               class="max-w-full flex-grow-1 overflow-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6"
             >
+              {isShowGAdUnit && <GAdUnit />}
               <slot />
+              {isShowGAdUnit && <GAdUnit />}
             </div>
           </div>
         </div>
@@ -58,5 +71,7 @@ const isMarkdownPage = markdownHeadings?.length !== 0;
     <script>
       import '@/scripts/menu';
     </script>
+    {import.meta.env.PROD && <GA />}
+    {import.meta.env.PROD && <GAd />}
   </body>
 </html>

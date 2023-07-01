@@ -1,0 +1,19 @@
+---
+const GOOGLE_ANALYTICS_TAG = import.meta.env.GOOGLE_ANALYTICS_TAG;
+---
+
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  src=`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_TAG}`
+></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    // eslint-disable-next-line no-undef
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', import.meta.env.GOOGLE_ANALYTICS_TAG, { anonymize_ip: true });
+</script>
