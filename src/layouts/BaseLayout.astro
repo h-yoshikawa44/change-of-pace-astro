@@ -4,6 +4,7 @@ import '@unocss/reset/tailwind.css';
 import 'wicg-inert';
 import BaseHead from '@/components/BaseHead.astro';
 import GA from '@/components/GA.astro';
+import GAd from '@/components/GAd.astro';
 import Header from '@/components/Header.astro';
 import SideBar from '@/components/SideBar.astro';
 import Footer from '@/components/Footer.astro';
@@ -60,5 +61,6 @@ const isMarkdownPage = markdownHeadings?.length !== 0;
       import '@/scripts/menu';
     </script>
     {import.meta.env.PROD && <GA />}
+    {import.meta.env.PROD && <GAd />}
   </body>
 </html>
