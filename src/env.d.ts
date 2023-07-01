@@ -6,6 +6,7 @@ interface ImportMetaEnv {
   readonly GOOGLE_ANALYTICS_TAG: string;
   readonly GOOGLE_SITE_VERIFICATION: string;
   readonly GOOGLE_ADSENSE_PUBLISHER_ID: string;
+  readonly GOOGLE_ADSENSE_SLOT: string;
 }
 
 interface ImportMeta {
