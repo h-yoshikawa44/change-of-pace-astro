@@ -17,13 +17,13 @@ const { noTopHeading = false, isMarkdownPage = false } = Astro.props;
       {
         noTopHeading ? (
           <div>
-            <a href="/" class="font-fatface text-2xl">
+            <a href="/" class="text-2xl font-fatface">
               {SITE_TITLE}
             </a>
           </div>
         ) : (
           // 記事ページはこちら
-          <h1 class="font-fatface text-2xl">
+          <h1 class="text-2xl font-fatface">
             <a href="/">{SITE_TITLE}</a>
           </h1>
         )
