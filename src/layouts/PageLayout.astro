@@ -1,14 +1,21 @@
 ---
+import { MarkdownHeading } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import '@/styles/markdown.scss';
 
-type Props = CollectionEntry<'pages'>['data'];
+type Props = CollectionEntry<'pages'>['data'] & {
+  markdownHeadings?: MarkdownHeading[];
+};
 
-const { title, description } = Astro.props;
+const { title, description, markdownHeadings } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description}>
+<BaseLayout
+  title={title}
+  description={description}
+  markdownHeadings={markdownHeadings}
+>
   <h2 class="mb-8 text-2xl font-600">{title}</h2>
   <div class="markdown-content">
     <slot />
