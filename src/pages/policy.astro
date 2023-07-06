@@ -3,9 +3,9 @@ import { getEntryBySlug } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
 
 const page = await getEntryBySlug('pages', 'policy');
-const { Content } = await page.render();
+const { Content, headings } = await page.render();
 ---
 
-<PageLayout title="プライバシーポリシー">
+<PageLayout title="プライバシーポリシー" markdownHeadings={headings}>
   <Content />
 </PageLayout>
