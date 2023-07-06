@@ -6,8 +6,8 @@ Jekyll より移行したもの。
 ## 技術構成
 - TypeScript：5.0.4
 - Node.js：18.15.0
-- Astro：2.2.1
-- UnoCSS：0.50.0
+- Astro：2.7.4
+- UnoCSS：0.53.4
 
 ## コマンド
 | Command                | Action                                           |
