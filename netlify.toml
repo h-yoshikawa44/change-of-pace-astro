@@ -1,0 +1,447 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[[redirects]]
+from = "/qualification/2022/09/03/aws-saa-update"
+to = "/posts/2022-09-03-aws-saa-update"
+status = 301
+force = true
+
+[[redirects]]
+from = "/qualification/2022/06/11/html-professional-level1"
+to = "/posts/2022-06-11-html-professional-level1"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2022/05/15/techfeed-conference-2022"
+to = "/posts/2022-05-15-techfeed-conference-2022"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2022/03/04/devchallenges-front-end"
+to = "/posts/2022-03-04-devchallenges-front-end"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2022/02/19/developers-summit-2022"
+to = "/posts/2022-02-19-developers-summit-2022"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2022/02/13/ts-type-safe-request"
+to = "/posts/2022-02-13-ts-type-safe-request"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/12/30/looking-back-2021-tech"
+to = "/posts/2021-12-30-looking-back-2021-tech"
+status = 301
+force = true
+
+[[redirects]]
+from = "/free/2021/12/27/looking-back-2021-mental-illness"
+to = "/posts/2021-12-27-looking-back-2021-mental-illness"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/12/24/devchallenges-responsive-web"
+to = "/posts/2021-12-24-devchallenges-responsive-web"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2021/11/28/jsconf-jp-2021"
+to = "/posts/2021-11-28-jsconf-jp-2021"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/11/09/volta"
+to = "/posts/2021-11-09-volta"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/10/24/vscode-autoprefixer-vite"
+to = "/posts/2021-10-24-vscode-autoprefixer-vite"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/09/26/material-ui-v5"
+to = "/posts/2021-09-26-material-ui-v5"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/05/31/buildable-introduction"
+to = "/posts/2021-05-31-buildable-introduction"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/05/19/react-query-socialite"
+to = "/posts/2021-05-19-react-query-socialite"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/04/13/react-query-intersection-observer"
+to = "/posts/2021-04-13-react-query-intersection-observer"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2021/03/21/laravel-react-query-auth"
+to = "/posts/2021-03-21-laravel-react-query-auth"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2021/02/20/developers-summit-2021"
+to = "/posts/2021-02-20-developers-summit-2021"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/12/31/looking-back-2020-tech"
+to = "/posts/2020-12-31-looking-back-2020-tech"
+status = 301
+force = true
+
+[[redirects]]
+from = "/free/2020/12/21/looking-back-2020-mental-illness"
+to = "/posts/2020-12-21-looking-back-2020-mental-illness"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2020/11/27/notion-introduction"
+to = "/posts/2020-11-27-notion-introduction"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2020/11/08/windows-terminal"
+to = "/posts/2020-11-08-windows-terminal"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2020/09/20/web1week-2"
+to = "/posts/2020-09-20-web1week-2"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2020/09/01/developers-summit-2020-kansai"
+to = "/posts/2020-09-01-developers-summit-2020-kansai"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/08/13/migrate-gitlab-to-github"
+to = "/posts/2020-08-13-migrate-gitlab-to-github"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2020/08/08/developers-summit-2020-summer"
+to = "/posts/2020-08-08-developers-summit-2020-summer"
+status = 301
+force = true
+
+[[redirects]]
+from = "/free/2020/06/28/realdgame-silence"
+to = "/posts/2020-06-28-realdgame-silence"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/06/06/react-firebase-deploy"
+to = "/posts/2020-06-06-react-firebase-deploy"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2020/05/28/web1week-like"
+to = "/posts/2020-05-28-web1week-like"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/05/06/react-recompose"
+to = "/posts/2020-05-06-react-recompose"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2020/05/03/docusaurus-ver-2-gtag"
+to = "/posts/2020-05-03-docusaurus-ver-2-gtag"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/04/23/react-material-ui"
+to = "/posts/2020-04-23-react-material-ui"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2020/04/11/domain-transfer"
+to = "/posts/2020-04-11-domain-transfer"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/04/04/react-proptypes"
+to = "/posts/2020-04-04-react-proptypes"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2020/03/14/slack-my-manner"
+to = "/posts/2020-03-14-slack-my-manner"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/03/07/jekyll-pagination-v2"
+to = "/posts/2020-03-07-jekyll-pagination-v2"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/03/01/github-actions-react"
+to = "/posts/2020-03-01-github-actions-react"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2020/02/22/developers-summit-2020"
+to = "/posts/2020-02-22-developers-summit-2020"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/02/08/react-router"
+to = "/posts/2020-02-08-react-router"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/01/19/duty-gacha"
+to = "/posts/2020-01-19-duty-gacha"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/01/13/docusaurus-ver-2"
+to = "/posts/2020-01-13-docusaurus-ver-2"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2020/01/04/jekyll-anthor-heading"
+to = "/posts/2020-01-04-jekyll-anthor-heading"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/12/31/looking-back-2019-git"
+to = "/posts/2019-12-31-looking-back-2019-git"
+status = 301
+force = true
+
+[[redirects]]
+from = "/free/2019/12/28/looking-back-2019-mental-illness"
+to = "/posts/2019-12-28-looking-back-2019-mental-illness"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/12/18/react-basics"
+to = "/posts/2019-12-18-react-basics"
+status = 301
+force = true
+
+[[redirects]]
+from = "/event/2019/12/15/serverless-days-fukuoka-2019"
+to = "/posts/2019-12-15-serverless-days-fukuoka-2019"
+status = 301
+force = true
+
+[[redirects]]
+from = "/free/2019/11/30/hp-repair"
+to = "/posts/2019-11-30-hp-repair"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/11/10/jekyll-toc"
+to = "/posts/2019-11-10-jekyll-toc"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/11/06/eslint-prettier"
+to = "/posts/2019-11-06-eslint-prettier"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/10/24/docker-react-swagger"
+to = "/posts/2019-10-24-docker-react-swagger"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2019/10/13/google-adsence"
+to = "/posts/2019-10-13-google-adsense"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/10/09/wsl-expo-network"
+to = "/posts/2019-10-09-wsl-expo-network"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2019/09/30/google-search-console"
+to = "/posts/2019-09-30-google-search-console"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/09/28/wsl-react-native"
+to = "/posts/2019-09-28-wsl-react-native"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/09/26/wsl-develop"
+to = "/posts/2019-09-26-wsl-develop"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/09/14/docker-react-native"
+to = "/posts/2019-09-14-docker-react-native"
+status = 301
+force = true
+
+[[redirects]]
+from = "/qualification/2019/09/05/aws-saa"
+to = "/posts/2019-09-05-aws-saa"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/08/17/til-150"
+to = "/posts/2019-08-17-til-150"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/08/14/docker-rails"
+to = "/posts/2019-08-14-docker-rails"
+status = 301
+force = true
+
+[[redirects]]
+from = "/tool-and-service/2019/07/09/custom-domain"
+to = "/posts/2019-07-09-custom-domain"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/06/23/qiita-ranking"
+to = "/posts/2019-06-23-qiita-ranking"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/06/03/laravel-laradock"
+to = "/posts/2019-06-03-laravel-laradock"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/05/15/docker-php"
+to = "/posts/2019-05-15-docker-php"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/05/05/gitlab-ci-error"
+to = "/posts/2019-05-05-gitlab-ci-error"
+status = 301
+force = true
+
+[[redirects]]
+from = "/qualification/2019/04/25/aws-qualification"
+to = "/posts/2019-04-25-aws-qualification"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/03/25/til"
+to = "/posts/2019-03-25-til"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2019/02/10/netlify-deploy"
+to = "/posts/2019-02-10-netlify-deploy"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2018/09/17/gitlab-repo-migration"
+to = "/posts/2018-09-17-gitlab-repo-migration"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2018/09/09/cleaning-duty-3"
+to = "/posts/2018-09-09-cleaning-duty-3"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2018/09/09/cleaning-duty-2"
+to = "/posts/2018-09-09-cleaning-duty-2"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2018/09/09/cleaning-duty-1"
+to = "/posts/2018-09-09-cleaning-duty-1"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2018/06/05/php-install"
+to = "/posts/2018-06-05-php-install"
+status = 301
+force = true
+
+[[redirects]]
+from = "/develop/2018/06/02/anyenv"
+to = "/posts/2018-06-02-anyenv"
+status = 301
+force = true
+
+[[redirects]]
+from = "/free/2018/05/27/first"
+to = "/posts/2018-05-27-first"
+status = 301
+force = true
