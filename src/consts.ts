@@ -22,7 +22,7 @@ export const CATEGORY_MAP = {
   [CATEGORY_LIST[4]]: '雑談',
 } as const;
 
-export const PAGE_SIZE = 10;
+export const PAGE_SIZE = 15;
 
 export const RSS_LINKS = {
   all: '/rss.xml',
