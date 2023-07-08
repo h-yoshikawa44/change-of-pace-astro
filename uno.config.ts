@@ -50,6 +50,6 @@ export default defineConfig({
   safelist: TAG_ICON_CLASS_LIST,
   shortcuts: {
     'custom-after-border-b':
-      'after-w-[32px] after-border-b after:content-none after-inline-block after-h-[1px] after-absolute after-left-[calc(50%_-_16px)] after-bottom-0 after-border-gray-4 relative',
+      'after-w-[32px] after-border-b after-content-[""] after-inline-block after-h-[1px] after-absolute after-left-[calc(50%_-_16px)] after-bottom-0 after-border-gray-4 relative',
   },
 });
