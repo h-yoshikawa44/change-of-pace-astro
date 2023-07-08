@@ -11,11 +11,17 @@ const tagsInfo = allTags.reduce((prev, current) => {
   prev[current] = (prev[current] || 0) + 1;
   return prev;
 }, {});
-const tagInfoList = Object.entries(tagsInfo).map(([key, value]) => ({
-  tagName: key,
-  iconClass: getLogoIconClass(key),
-  count: value,
-}));
+const tagInfoList = Object.entries(tagsInfo)
+  .map(([key, value]) => ({
+    tagName: key,
+    iconClass: getLogoIconClass(key),
+    count: value,
+  }))
+  .sort((a, b) => {
+    const aTagName = a.tagName.toUpperCase();
+    const bTagName = b.tagName.toUpperCase();
+    return aTagName < bTagName ? -1 : 1;
+  });
 ---
 
 <BaseLayout title="タグ一覧">
