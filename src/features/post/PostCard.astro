@@ -20,7 +20,7 @@ const { pubDate, updatedDate, slug, title, category, tags } = Astro.props;
     {
       updatedDate && pubDate.toString() !== updatedDate.toString() && (
         <span class="inline-flex items-center">
-          (<span class="i-system-uicons:refresh mr-1">更新日</span>
+          (<span title="更新日" class="i-system-uicons:refresh mr-1" />
           <FormattedDate date={updatedDate} />)
         </span>
       )
@@ -35,11 +35,12 @@ const { pubDate, updatedDate, slug, title, category, tags } = Astro.props;
     </a>
   </h2>
   <p class="mt-2 flex items-center">
-    <span class="i-system-uicons:document mr-0.5 text-lg"> カテゴリー</span>
+    <span title="カテゴリー" class="i-system-uicons:document mr-0.5 text-lg"
+    ></span>
     {`${CATEGORY_MAP[category]}`}
   </p>
   <p class="flex items-center">
-    <span class="i-system-uicons:tags mr-0.5 text-lg">タグ一覧</span>
+    <span title="タグ一覧" class="i-system-uicons:tags mr-0.5 text-lg"></span>
     {tags.join(', ')}
   </p>
 </article>
