@@ -56,11 +56,11 @@
   }
 
   a:not(.link-card a) {
-    @apply text-blue-500;
+    @apply text-blue-600;
   }
 
   a:hover:not(.link-card a) {
-    @apply underline underline-blue-500 decoration-solid underline-offset-2;
+    @apply underline underline-blue-600 decoration-solid underline-offset-2;
   }
 
   a.heading-link:not(.link-card a) {
