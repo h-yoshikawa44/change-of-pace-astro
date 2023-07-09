@@ -17,7 +17,7 @@ export default defineConfig({
     UnoCSS(),
     partytown({
       config: {
-        forward: ['dataLayer.push', 'adsbygoogle'],
+        forward: ['dataLayer.push', 'adsbygoogle.push'],
       },
     }),
   ],
