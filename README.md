@@ -1,7 +1,8 @@
 # Change Of Pace
-気分転換の遊び場（個人ブログ）
+気分転換の遊び場  
+（技術のことから雑談ネタまでいろいろ書いてる個人ブログ）
 
-Jekyll より移行したもの。
+2023/07に Jekyll より移行したもの。
 
 ## 技術構成
 - TypeScript：5.0.4
@@ -9,12 +10,34 @@ Jekyll より移行したもの。
 - Astro：2.7.4
 - UnoCSS：0.53.4
 
-## コマンド
-| Command                | Action                                           |
-| :--------------------- | :----------------------------------------------- |
-| `npm install`          | Installs dependencies                            |
-| `npm run dev`          | Starts local dev server at `localhost:3000`      |
-| `npm run build`        | Build your production site to `./dist/`          |
-| `npm run preview`      | Preview your build locally, before deploying     |
-| `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro --help` | Get help using the Astro CLI                     |
+## 環境構築
+（必要に応じて Git Hooks の権限設定）
+```bash
+chmod a+x .githooks/prepare-commit-msg
+```
+
+ライブラリインストール
+```bash
+npm install
+```
+
+開発サーバ起動
+```bash
+npm run dev
+```
+
+## 静的ファイルとしての確認
+ビルド
+```bash
+npm run build
+```
+
+プレビュー起動
+```bash
+npm run preview
+```
+
+## 開発にあたり特に inspire されたサイト
+- [hiroppy's site](https://hiroppy.me/blog)
+- [Zenn](https://zenn.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
