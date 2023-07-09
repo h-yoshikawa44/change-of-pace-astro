@@ -74,7 +74,7 @@
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
-    "prepare-commit-msg": "./git-hook/prepare-commit-msg \"$@\""
+    "prepare-commit-msg": "./.githooks/prepare-commit-msg \"$@\""
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,astro}": [
