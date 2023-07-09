@@ -457,20 +457,20 @@ No rules that are unnecessary or conflict with Prettier were found.
 
 ```bash
 # JS
-$ yarn run -s prettier --check './{public,src}/**/*.{js,jsx,html,gql,graphql,json}'
+yarn run -s prettier --check './{public,src}/**/*.{js,jsx,html,gql,graphql,json}'
 
 # TS
-$ yarn run -s prettier --check './{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'
+yarn run -s prettier --check './{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}'
 ```
 
 自動整形までやりたい場合は`--write`をつけて実行します。
 
 ```bash
 # JS
-$ yarn run -s prettier --check './{public,src}/**/*.{js,jsx,html,gql,graphql,json}' --write
+yarn run -s prettier --check './{public,src}/**/*.{js,jsx,html,gql,graphql,json}' --write
 
 # TS
-$ yarn run -s prettier --check './{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}' --write
+yarn run -s prettier --check './{public,src}/**/*.{js,jsx,ts,tsx,html,gql,graphql,json}' --write
 ```
 
 このコマンドも ESLint の時と同様に、`package.json`の scripts に追加しておくとよいです。

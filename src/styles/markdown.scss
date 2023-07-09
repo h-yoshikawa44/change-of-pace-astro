@@ -128,7 +128,7 @@
   }
 
   pre > code {
-    @apply bg-transparent text-inherit;
+    @apply bg-transparent text-inherit text-[0.9rem];
   }
 
   // top は動的にしたいので、スクリプト側で設定する
