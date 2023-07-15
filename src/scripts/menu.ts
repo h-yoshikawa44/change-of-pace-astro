@@ -15,21 +15,27 @@ MENU_TYPE_LIST.forEach((type) => {
   const menuBackDrop = document.getElementById(`${type}-menu-backdrop`);
   const closeMenuButton = document.getElementById(`close-${type}-menu-button`);
 
+  const menuClose = () => {
+    menu?.classList.add('hidden');
+    baseContents?.removeAttribute('inert');
+    body.removeAttribute('style');
+  };
+
   openMenuButton?.addEventListener('click', () => {
     menu?.classList.remove('hidden');
     baseContents?.setAttribute('inert', '');
     body?.setAttribute('style', scrollHiddenClass);
   });
 
-  menuBackDrop?.addEventListener('click', () => {
-    menu?.classList.add('hidden');
-    baseContents?.removeAttribute('inert');
-    body.removeAttribute('style');
-  });
+  menuBackDrop?.addEventListener('click', menuClose);
 
-  closeMenuButton?.addEventListener('click', () => {
-    menu?.classList.add('hidden');
-    baseContents?.removeAttribute('inert');
-    body.removeAttribute('style');
+  closeMenuButton?.addEventListener('click', menuClose);
+
+  if (type !== 'anchor') return;
+  const anchorLinkListItem = document.querySelectorAll(
+    'a.anchor-link-list-item'
+  );
+  anchorLinkListItem.forEach((a) => {
+    a.addEventListener('click', menuClose);
   });
 });

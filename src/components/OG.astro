@@ -83,11 +83,11 @@ if (ogp[url]) {
   <a
     href={url}
     target="_blank"
-    class="max-h-[120px] flex p-4 text-initial sm:max-h-[140px]"
+    class="max-h-[120px] flex break-all p-4 text-initial sm:max-h-[140px]"
   >
     <div class="w-full flex items-center justify-between space-x-4">
       <div class="flex flex-1 flex-col">
-        <b class="line-clamp-1 overflow-hidden text-sm sm:line-clamp-2">
+        <b class="line-clamp-2 overflow-hidden text-sm">
           {title}
         </b>
         {
@@ -99,7 +99,9 @@ if (ogp[url]) {
         }
         <div class="mt-2 flex items-center">
           <img src={favicon} alt={`${origin} favicon`} width={16} height={16} />
-          <small class="ml-1 whitespace-nowrap text-xs">{origin}</small>
+          <small class="line-clamp-1 ml-1 whitespace-nowrap text-xs"
+            >{origin}</small
+          >
         </div>
       </div>
       {
