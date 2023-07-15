@@ -11,11 +11,6 @@
 - UnoCSS：0.53.4
 
 ## 環境構築
-（必要に応じて Git Hooks の権限設定）
-```bash
-chmod a+x .githooks/prepare-commit-msg
-```
-
 ライブラリインストール
 ```bash
 npm install
