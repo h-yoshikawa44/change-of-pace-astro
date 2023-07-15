@@ -8,7 +8,7 @@
 
 // モバイルサイズでのアンカーリンクメニューから飛んだ際に、ヘッダー分の高さをずらす
 html {
-  @apply scroll-pt-14 md:scroll-p-inherit;
+  @apply scroll-pt-14 lg:scroll-p-inherit;
 }
 
 button,
