@@ -6,6 +6,11 @@
   font-display: swap;
 }
 
+// モバイルサイズでのアンカーリンクメニューから飛んだ際に、ヘッダー分の高さをずらす
+html {
+  @apply scroll-pt-14 md:scroll-p-inherit;
+}
+
 button,
 a {
   @apply transition;
