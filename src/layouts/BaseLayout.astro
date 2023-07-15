@@ -52,7 +52,7 @@ const isShowGAdUnit = import.meta.env.PROD && isAdsense;
             <div
               class="max-w-full flex-grow-1 overflow-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6"
             >
-              {isShowGAdUnit && <GAdUnitBase />}
+              {isShowGAdUnit && <GAdUnitBase marginY="mb-4" />}
               <slot />
               {isShowGAdUnit && <GAdUnitBase />}
             </div>

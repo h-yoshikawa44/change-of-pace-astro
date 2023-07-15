@@ -1,5 +1,9 @@
 ---
+type Props = {
+  marginY?: `m-${number}` | `mt-${number}` | `mb-${number}`;
+};
+
+const { marginY } = Astro.props;
 ---
 
-<div class:list={['adsense-unit-base', { 'h-[280px]': import.meta.env.PROD }]}>
-</div>
+<div class:list={['adsense-unit-base', 'h-[280px]', marginY]}></div>
