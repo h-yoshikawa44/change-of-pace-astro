@@ -731,7 +731,7 @@
     "image": "https://opengraph.githubassets.com/ae6186a0a2562393075c7a44fb9add58cbfd87e622e37579d003c886d8bc1e91/h-yoshikawa44/buildable-tutorial",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
   },
-  "https://www.event.dev/": {
+  "https://www.event.dev": {
     "title": "Event | Real-time data pipelines. Scale to billions.",
     "description": "Event's elastic infrastructure enables software teams to quickly create resilient streams, queues and workflows. Scale to billions.",
     "image": "https://assets.buildable.dev/catalog/social/unstick-your-data.png",
