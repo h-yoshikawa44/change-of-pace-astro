@@ -1,7 +1,7 @@
 import type { APIRoute } from 'astro';
 
 const GOOGLE_ADSENSE_PUBLISHER_ID =
-  import.meta.env.GOOGLE_ADSENSE_PUBLISHER_ID.replace('ca-', '');
+  import.meta.env.PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID.replace('ca-', '');
 
 export const get: APIRoute = async () => {
   return {
