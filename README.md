@@ -32,7 +32,8 @@ npm run build
 npm run preview
 ```
 
-## 開発にあたり特に inspire されたサイト
-- [hiroppy's site](https://hiroppy.me/blog)
-- [Zenn](https://zenn.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
+## 開発にあたり、特に inspire されたサイト
+- [Zenn](https://zenn.dev/)：全体構成
+- [Tailwind CSS](https://tailwindcss.com/)：メニュー周り
+- [hiroppy's site](https://hiroppy.me/blog)：全体構成、リンクカード
+- [mamenaka](https://mamenaka.jp/)：Google Adsense スクリプトの遅延読み込み
