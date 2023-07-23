@@ -14,20 +14,22 @@ const { noTopHeading = false, isMarkdownPage = false } = Astro.props;
 >
   <div class="mx-auto px-4 color-white container">
     <div class="flex items-baseline">
-      {
-        noTopHeading ? (
-          <div>
-            <a href="/" class="block text-2xl font-fatface">
-              {SITE_TITLE}
-            </a>
-          </div>
-        ) : (
-          // 記事ページはこちら
-          <h1 class="text-2xl font-fatface">
-            <a href="/">{SITE_TITLE}</a>
-          </h1>
-        )
-      }<p class="ml-4 hidden color-white/75 sm:block">
+      <div class="min-w-[172px]">
+        {
+          noTopHeading ? (
+            <div>
+              <a href="/" class="block text-2xl font-fatface">
+                {SITE_TITLE}
+              </a>
+            </div>
+          ) : (
+            // 記事ページはこちら
+            <h1 class="text-2xl font-fatface">
+              <a href="/">{SITE_TITLE}</a>
+            </h1>
+          )
+        }
+      </div><p class="ml-4 hidden color-white/75 sm:block">
         {SITE_DESCRIPTION}
       </p>
       <div class="ml-auto mt-auto flex lg:hidden space-x-1">
