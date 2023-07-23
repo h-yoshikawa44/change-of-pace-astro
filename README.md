@@ -10,6 +10,17 @@
 - Astro：2.7.4
 - UnoCSS：0.53.4
 
+## 環境変数
+テンプレファイルをコピーして、値を入れる
+```
+cp .env.example .env
+```
+
+- PUBLIC_GOOGLE_ANALYTICS_TAG：`G-`から始まる ID
+- GOOGLE_SITE_VERIFICATION
+- PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID：`ca-`から始まる ID
+- PUBLIC_GOOGLE_ADSENSE_SLOT
+
 ## 環境構築
 ライブラリインストール
 ```bash
