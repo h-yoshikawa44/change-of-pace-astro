@@ -1,0 +1,716 @@
+---
+title: "当ブログサイトをAstroでリプレースしたので、リプレース前後を振り返ってみよう！"
+description: "Jekyll -> Astroリプレースにあたり、パフォーマンスや使用技術を比較しながら振り返り"
+pubDate: "2023-07-30"
+updatedDate: "2023-07-30"
+category: "develop"
+tags: ["ブログ", "Jekyll", "Astro", "UnoCSS"]
+---
+
+こんにちは、今年の暑さにヘロヘロ気味のよしです。
+昨年、全然手を付けられていなかったブログリプレースをやり遂げたので、この機に当ブログの履歴の振り返りをしてみました。
+
+import OG from "@/components/OG.astro"
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --> */}
+
+## 当ブログの履歴
+まずはリプレースまでの当ブログの履歴を軽く振り返ってみます。
+
+### 起源
+当ブログサイトを Jekyll で作ったのが2018年5月。
+この頃の自分というと、エンジニア1年目のペーペーの新人時代。
+
+特にブログを作りたい意欲があったわけではなく、Jekyll というものでローカルサーバ立ち上げて何か作れるらしいぞ、という謎の意欲で作っていました。
+Jekyll が SSG の1つということや、そもそも SSG がなんなのかすらよくわかってなかった気がする…。
+（自分で振り返ってもよくわからん起源だ😇）
+
+当時、ブログを作りたい！ってなると WordPress に行きつく人多そうなのに、自分は全然 WordPress に行き当たらなかったなぁ。
+駆け出しエンジニアで Jekyll 使ってた人を観測したことがないので、ちょっと変わったやつだったのかもしれない。
+
+そんな起源ながらも、密かに記事を書いていっていました。
+
+### Web 上に公開
+Web 上に公開したのが2018年の年度末。
+
+当時、親交があった会社の先輩とブログの話をしているうちに「公開しちゃいなよ」的なことを言われて。
+「Netlify で公開すると楽」と教えてもらって、画面共有しながらデプロイした記憶があります。
+確かに楽でした。懐かしいですね。
+
+それから独自ドメイン割り当てたり、各種アクセス解析ツールや広告を導入したり、サイトを運営していくにあたり必要なことを少しずつやっていきました。
+
+### リプレースへ
+
+2020年末の振り返り時には、リプレースしたいなぁって言ってました。
+
+[2020年振り返り ～技術活動、ブログ編～](https://changeofpace.site/posts/2020-12-31-looking-back-2020-tech)
+
+Jekyll によるブログサイトでも特に困ったことはなかったのですが、Ruby 製というのが気になってきて。
+というのも、この頃は自分のキャリアに悩んだ結果、フロントエンドに転向しようかなと思っていた時期でした。
+フロントエンドとなると、TypeScript なり Node.js なりが身近になるなか、ここだけ Ruby というのもどうなのかなぁと。
+自分が関心のある言語に Ruby がなくなったのと、普段扱う技術スタックをある程度狭めたかったこともあり、リプレース構想をするようになりました。
+
+Jekyll の時は公開されているテーマを使用していたので、リプレース時にオリジナルのデザインにしたいなー。モノクロ基調のかっこいいデザインにしたいなーとか。
+ただ、そこから実際に着手ができずで、これはデザインを凝りだすと当分はリプレースできないな…というのでデザインに凝るのはあきらめました。
+
+## リプレースしたもの
+<OG url="https://github.com/h-yoshikawa44/change-of-pace-astro" />
+
+### レイアウト比較
+大まかなレイアウト比較として、トップページと記事ページを載せてみます。
+ちなみに、なんかえらい余白空いているところやぼかしているところは広告の箇所です。
+
+#### デスクトップ
+トップページ.
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/changeofpace-jekyll-desktop.png" width="100%" alt="リプレース前のトップページ - デスクトップ" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-astro-desktop.png"  width="100%" alt="リプレース後のトップページ - デスクトップ" />|
+
+</div>
+
+記事ページ.
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/changeofpace-post-jekyll-desktop.png" width="100%" alt="リプレース前の記事ページ - デスクトップ" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-post-astro-desktop.png"  width="100%" alt="リプレース後の記事ページ - デスクトップ" />|
+
+</div>
+
+#### モバイル
+（リプレース前に撮っていた Jekyll の頃のスクショがバグっていたので、過去の Deploy Preview で撮りなおした結果、広告が表示されていません）
+
+トップページ.
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/changeofpace-jekyll-mobile.png" width="100%" alt="リプレース前のトップページ - モバイル" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-astro-mobile.png"  width="100%" alt="リプレース後のトップページ - モバイル" />|
+
+</div>
+
+記事ページ.
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/changeofpace-post-jekyll-mobile.png" width="100%" alt="リプレース前の記事ページ - モバイル" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-post-astro-mobile.png"  width="100%" alt="リプレース後の記事ページ - モバイル" />|
+
+</div>
+
+## リプレースで採用してみた主な技術
+リプレースにあたり、採用した主な技術を振り返ってみます。
+
+### Astro
+主となるフレームワークに選定したのは Astro。
+<OG url="https://astro.build" />
+
+#### Astro ってどんなもの？
+> **Astro is the all-in-one web framework designed for speed. Pull your content from anywhere and deploy everywhere, all powered by your favorite UI components and libraries.**
+>
+
+> **Astro は、速度を重視して設計されたオールインワン Web フレームワークです。お気に入りの UI コンポーネントとライブラリを利用して、どこからでもコンテンツを取得し、どこにでも展開できます。**
+>
+ざっくり言うと、コンテンツ重視の高速な Web サイトを構築するためのフレームワークです。
+ビルド時に不要な JavaScript を取り除き、プレーンな HTML に近い状態となることもあり、高速に動作してくれます。
+
+元々は SSG に特化していましたが、2系からは特定のページだけ SSR する、なんてこともできるようになりました。
+あらゆる形式のデータを提供するエンドポイントという機能があるので、動的に画像や RSS を生成して返したり、API ルートとして使うこともできたりします。
+
+それと面白い特徴の1つとして、React や Vue、Svelte などのコンポーネントも共存できることがあったりします。
+使い慣れたフレームワークのコンポーネントを作るもよし。
+JSX ライクにも書ける Astro コンポーネントを作るもよし。
+
+#### 採用した背景
+リプレース構想の最初の頃は Next.js でやろうかなーと思っていました。
+移行にあたりライブラリの調査なんかはしていたものの、実作業はなかなか手を付けられないまま2022年後半になり。
+いい加減、どうにか進めたいなと考えていた頃に、Astro を知りました。
+
+Astro は元々 SSG 特化のフレームワークだったこともあってか、すでにブログで使えるような機構が備わっていたんですよね。
+Next.js だと自分で機構を用意する必要があるので、Astro の方が移行楽そうだなと。
+また、Next.js は色々できる分、ブログにはオーバースペックなのでは？
+JavaScript を必要最低限まで減らすアプローチの Astro の方がパフォーマンス良いのでは？
+などと思うようになり、Astro を採用することにしました。
+
+### UnoCSS
+スタイリングには UnoCSS を採用しました。
+（グローバルスタイルや記事コンテンツ部分は Sass も併用）
+
+<OG url="https://unocss.dev" />
+
+#### UnoCSS ってどんなもの？
+
+> **Instant On-demand Atomic CSS Engine**
+> **Customizable · Powerful · Fast · Joyful**
+
+UnoCSS は Vue.js、Nuxt.js、Vite のコアチームメンバーである、Anthony Fu 氏による OSS です。
+Anthony Fu 氏がどのような背景で UnoCSS を開発するに至ったかは、ご本人の以下の記事で語られています。
+<OG url="https://antfu.me/posts/reimagine-atomic-css" />
+
+UnoCSS はフレームワークでなく エンジンとなっており、自分でカスタムルールを定義したり、それをプリセットとして他のユーザと共有したりが可能です。
+一方でいくつかのプリセットが同梱されており、デフォルトのプリセットを使用すると、以下のような代表的なフレームワークのスーパーセットを提供してくれます。
+
+- Tailwind CSS
+- Windi CSS
+- Bootstrap
+
+プリセットの中には、Iconify がベースとなった各種アイコンや Web フォントを気軽に使用できるものもあったりします。便利。
+ちなみにアイコンの一覧はこちら。
+<OG url="https://icones.js.org" />
+
+#### 採用した背景
+
+自分としては独自のカスタムルールを定義したかったわけではなく。
+
+デザインに凝るのをあきらめた関係上、Tailwind CSS を使うと開発速度早くなるかなぁと思ったのですが。
+そのまま使うより UnoCSS を通して使用した方がパフォーマンス良いんじゃないかと考えて採用したのでした。
+（なので、デフォルトプリセットを使用しつつ、Tailwind CSS のクラスをメインで使用しています）
+
+Anthony Fu 氏の記事に記載されていたベンチマークに衝撃を受けたのもありましたね。
+<img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2021-10.png" width="100%" alt="2021/10/21のベンチマーク UnoCSSを1として、windicssが195.36倍、Tailwind CSSが251.28倍" />
+
+（2022/10のものだと、だいぶ縮まっていましたが）
+<img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2022-10.png" width="100%" alt="2022/10/25のベンチマーク UnoCSSを1として、windicssが6.08倍、Tailwind CSSが8.38倍" />
+
+あとはアイコン気軽に使えるのいいなーと思ったのもあります。
+
+## リプレースにあたり、機能の変遷
+Jekyll からリプレースするにあたり、画面一覧や機能を洗い出してリプレース先の技術でどうやって実装できるのか？というのを調査していきました。
+加えて、リプレース時に新しく対応したい機能に関しても調査。
+
+元々、Next.js でリプレース検討していたので、最初は Next.js ベースで調査していました。
+その後、Astro 版も調査して比較すると、やはり Astro の方が組み込み機能や Integration で手軽に実現できるものが多い印象でしたね。
+
+基本部分.
+|  | Jekyll（リプレース前） | Astro（リプレース後） |
+| --- | --- | --- |
+| テンプレートエンジン | Liquid ベース | （JSX ライクな Astro 記法） |
+| テーマ | jekyll-theme-hydeout | 自作 |
+| フォント | Abril Fatface, Sawarabi Mincho, HackGen | Abril Fatface, Sawarabi Mincho, HackGen |
+| ナビゲーションリンク | テーマベース | 自作 |
+| カテゴリー | Jekyll 組み込み | Astro 組み込み機能を使って自作 |
+| タグ | Jekyll 組み込み | Astro 組み込み機能を使って自作 |
+| お問い合わせ | Google Form 埋め込み | Google Form 埋め込み |
+| ページネーション | jekyll-paginate-v2 | Astro 組み込み |
+| 記事のもっと見る | Jekyll  excerpt_separator オプション | 廃止 |
+
+マークダウン周り.
+|  | Jekyll（リプレース前） | Astro（リプレース後） |
+| --- | --- | --- |
+| yaml front matter | Jekyll 組み込み | Astro 組み込み |
+| マークダウン解析〜変換 | kramdown ベース | remark, rehype ベース |
+| MDX | （なし） | @astrojs/mdx |
+| 改行認識 | kramdown の hard_wrap オプション | remark-breaks |
+| 目次 | kramdaown の toc 機能 | （Astro 組み込み機能を使ってメニューにした） |
+| 自動アンカーリンク生成 | jekyll-anchor-headings | rehype-autolink-headings |
+| コードブロックのタイトル | （なし） | remark-flexible-code-titles |
+| コードブロックのコピーボタン | （なし） | 自作 |
+| シンタックスハイライト | Rouge ベース | Shiki ベース |
+
+補助機能.
+|  | Jekyll（リプレース前） | Astro（リプレース後） |
+| --- | --- | --- |
+| リンクカード | （なし） | hiroppyさんのやり方を参考に実装 |
+| RSS | jekyll-feed | @astrojs/rss |
+| サイトマップ | jekyll-sitemap | ＠astrojs/sitemap |
+| SNS シェアボタン | Twitter、はてブ | （一旦、廃止） |
+| 関連記事表示 | （デフォルトの最新記事表示のままにしていた） | （廃止） |
+| Google Analytics | 公式のスニペットコード | 公式のスニペットコード + @astrojs/partytown |
+| Google Search Console | 公式のスニペットコード | 公式のスニペットコード |
+| Google Adsence | 公式のスニペットコード | 公式のスニペットコードベースで遅延読み込み |
+
+### 基本部分
+#### テンプレートエンジン
+<OG url="https://shopify.github.io/liquid" />
+Jekyll では Liquid が採用されていました。
+Shopify でも採用されていたりして割とメジャーなのかなと思っていたら、そもそも Shopify が作った言語じゃん…ということに執筆中に気づいたという〜😇
+自分はあまり馴染みがなかったので、多少カスタムするのに書いていたくらいでした。
+
+Astro では JSX ライクに書ける構文となっているため、普段 React や Next.js のコードを書いている自分にとっては扱いやすく、サイトをカスタムしやすくなりました。
+リプレースにあたり、もしテンプレートエンジンで書くとしていたら、多分リリースまでモチベーションがもってなかったと思います。型定義がある安心感。
+
+逆にテンプレートエンジンが慣れている人にとっては、JSX にとっつきにくさがあるかもしれませんね。
+といっても、Astro では素の HTML をそのまま Astro ファイルにしても割と動いてくれたりするので、React～Next.js よりは敷居が低そうな印象です。
+
+#### テーマ
+<OG url="https://github.com/fongandrew/hydeout" />
+Jekyll の頃は公開されている Hydeout テーマを使用していました。
+全体的にモノクロ基調寄りでカッコいいなーと思って採用。
+
+リプレースにあたっては、モノクロ基調寄りは維持しつつも自作でカッコいいデザインにしたいと構想。
+Web 上にあるモノクロ基調のサイトのデザインを参考にしようかなと思っていた頃もありましたが、1からデザインを学ぶとすればいつまでもリプレースできなさそうな気がしまして…。
+
+あくまでブログサイトなので、見た目に凝ったデザインというより、メインコンテンツである記事が読みやすいことを優先することにしました。
+それにあたり、Zenn のような技術記事のプラットフォームや、Astro で作成された技術ブログの構成を参考にさせていただきながらレイアウトを構築していきました。
+
+自作するとなんだか愛着がわきますね。
+
+#### フォント
+- Abril Fatface：ブログタイトルのみ
+- Sawarabi Mincho：テキスト全般
+- HackGen：インラインコード、コードブロック
+
+Abril Fatface は元々使用していた jekyll-theme-hydeout テーマの中で、ブログタイトル部分に使われていて、なんかカッコよかったので続投。
+Sawarabi Mincho は日本語フォントの中でお気に入りのフォントです。線の強弱があるので可読性に優れていたり、美しい文字のような印象を受けたので採用しています。
+HackGen は VSCode のフォントにも設定しているなど、コードを書くうえでも普段使いしているフォントです。読みやすくて好きです。
+
+前者2つは Web フォントであるため、UnoCSS の Web Fonts preset を使って利用。
+HackGen はリポジトリのリリースからダウンロードして、UnoCSS のテーマに登録したうえで利用。
+<OG url="https://github.com/yuru7/HackGen" />
+
+#### ナビゲーションリンク
+Jekyll の頃はテーマベースで、デスクトップ表示では画面左側に配置、モバイル表示ではページ上部に配置のナビゲーションリンクでした。
+デスクトップ表示はともかく、モバイル表示でナビゲーションリンクを使いたいときに、いちいちページ上部にスクロールしないといけないのが気になってしまい。
+
+リプレースにあたり自作。
+デスクトップ表示では画面左側にサイドバーとして追従配置、モバイル表示では固定ヘッダーからメニューで使用できるようにしました。
+メニューを開いたときに、固定で画面右上に表示だったり、ぼかしをいれるところは Tailwind CSS の公式ドキュメントを参考にしています。
+
+#### カテゴリー
+Jekyll の頃は元からサポートされており、front matter でカテゴリー指定をすれば、割とスッと使えるようになっていました。
+（カテゴリー名の日本語化は別途一工夫したような）
+
+Astro においては、front matter と動的ルーティングの組み合わせで実現しています。
+`getStaticPaths`でルーティング生成時に、全記事取得から front matter に指定したカテゴリーで絞り込みをするイメージ。
+Next.js の動的ルーティングに慣れている人なら、あっさり対応できると思います。
+
+#### タグ
+Jekyll の頃については、カテゴリーと同様で元からサポートされていましたが、タグごとの記事一覧ページは特に使用していませんでした。
+
+Astro においても、カテゴリーと大体やっていることは同じです。
+これからはタグごとの記事一覧ページも活用するようにしました。
+
+それと、タグ一覧ページで新たに技術アイコンを使いたいなーと思いまして、UnoCSS の Icons preset から SVG Logos を使用するようにしました。ちょっとにぎやかにできましたね。
+
+<img src="/screenshots/2023/blog-replace-astro/changeofpace-tags.png" width="80%" alt="当ブログのタグ一覧表示" />
+
+UnoCSS の Icons presets は Iconfy がベースになっており、この presets  と使いたい Iconfy のデータソースをインストール。
+`i-logos:react`のように`i-`のプレフィックスがついたクラスを当てるだけで使用できます。
+
+注意点として、UnoCSS はビルド時にクラスの静的抽出を使用して動作します。
+その関係上、動的に割り当てているクラスを検出できず、そのクラスのスタイルを生成してくれません（そのクラスが静的にどこからも使われていなければ）
+
+各タグに応じたアイコンを動的に割り当てるにあたり、Safelist に登録して、強制的にそのクラスのスタイルを生成してくれるように対応しました。
+<OG url="https://unocss.dev/guide/extracting#safelist" />
+
+#### お問い合わせ
+Google Form 埋め込みを継続にしました。
+リプレースにあたり、Google Form を利用しつつも見た目をカスタムする手もありましたが、今のところ対応していません。
+
+フリーランスの人が仕事探しにも活用するポートフォリオサイトとかなら対応した方がよいかと思いますが、雑多なこと書いてるブログサイトなので別に優先度落としてよいかな…と。
+
+#### ページネーション
+<OG url="https://github.com/jekyll/jekyll-paginate" />
+<OG url="https://github.com/sverrirs/jekyll-paginate-v2" />
+
+Jekyll には元々`Jekyll-paginate` プラグインが導入されていて、ページネーション機能が備わっていたのですが、カテゴリー記事一覧ページには対応していない課題がありました。
+カテゴリー記事一覧ページでも利用したい場合は`jekyll-paginate2`を使うよう、公式からも案内されていたのでこちらを利用。
+
+<OG url="https://docs.astro.build/ja/core-concepts/routing/#ページ分割" />
+Astro では組み込みの`paginate()`関数を使用することで、ページネーションを実現しています。
+
+#### 記事のもっと見る
+記事一覧ページには冒頭文だけ表示して、もっと見るを押すと記事ページに遷移する、というあれです。
+Jekyll の頃は、excerpt_separator オプションを利用することで実現が可能でした。
+自分の記事で冒頭挨拶文があるのは、この機能の影響ですね。
+
+特にこだわりがあったわけではなかったのと、Astro で実現するよさそうな方法がうまく見つけられなかったので、思い切って廃止にしました。
+
+### マークダウン周り
+#### yaml front matter
+記事のメタデータを記述するところです。
+どちらも組み込みで機能が備わっていたので、特に困らなかったですね。
+Astro では、Zod が組み込まれていて front matter の型定義ができたので、より厳密に管理できるようになりました。
+
+#### マークダウン解析〜変換
+<OG url="https://kramdown.gettalong.org" />
+
+Jekyll では kramdown ベースになっており、オプションを設定することでカスタムが可能になっていました。
+
+<OG url="https://github.com/remarkjs/remark" />
+<OG url="https://github.com/rehypejs/rehype" />
+
+Astro では元々組み込まれている `@astrojs/markdown-remark` で処理しているようで、remark と rehype がベースになっています。
+双方のプラグインによる拡張をサポートしているため、豊富なプラグインで割といろんなカスタムができます。ちょっと楽しい。
+
+#### MDX
+Jekyll の頃は特に使用しておらず、普通にマークダウンで記事を書いていました。
+
+<OG url="https://docs.astro.build/ja/guides/integrations-guide/mdx" />
+Astro では `@astrojs/mdx` Integration を使うことでさっくり MDX に対応できました。
+コンポーネントが使えるようになるので、表現の幅が広がりますね。
+最初はマークダウンでいいかなと思っていたのですが、後述のリンクカードのコンポーネントの都合で MDX を使うようにしています。
+
+#### 改行認識
+マークダウンにある改行をそのまま改行として認識するか、というやつです。
+デフォルトでは認識されないので、半角スペース2つ等で改行させる必要があり、これが面倒だったので自分はそのまま認識してくれるようにしています。
+
+Jekyll の頃は、kramdown の hard_wrap オプションでさっくり対応できました。
+
+
+<OG url="https://github.com/remarkjs/remark-breaks" />
+Astro では remark-breaks プラグインを導入して対応しています。
+プラグインの適用さえすれば、特に設定は不要なので楽ちんでした。
+
+#### 目次
+<OG url="https://kramdown.gettalong.org/converter/html.html#toc" />
+Jekyll の頃は kramdown の機能として備わっていたので、そちらを使って記事ページ冒頭文の後に目次として配置していました。
+
+Astro では記事データにある見出しを抽出してくれる機能が備わっているため、それで実現しています。
+ただ、目次というよりは、ナビゲーションリンクのようにどこからでも使えるようにしたいなーと思い。
+デスクトップ表示では、画面左側のサイドバーでナビゲーションリンクと切り替えて利用できるように。
+モバイル表示では、固定ヘッダーからメニューとして利用できるようにしました。
+
+なお、デスクトップ表示において、サイドバーの下部に配置している構成をよく見かけます。
+今回はナビゲーションリンクでそこそこ縦幅をとっている + 追従配置にしている関係で、画面の縦幅によっては扱いずらい感じになりそうだったので、ナビゲーションリンクと切り替えできる形をとりました。
+（あまり見たことがない構成なので、実はアンチパターンだったりするかもしれない？）
+
+#### 自動アンカーリンク生成
+各見出しのところで # とかリンクアイコンで、その見出しのアンカーリンクが取得できるやつです。
+
+<OG url="https://github.com/allejo/jekyll-anchor-headings" />
+Jekyll の頃は jekyll-anchor-headings で対応していました。
+Gem として導入するのではなく、最新の該当 HTML ファイルをダウンロードして導入するようになっていますが、比較的楽ちんです。
+
+<OG url="https://github.com/rehypejs/rehype-autolink-headings" />
+Astro では rehype-autolink-headings で対応しました。
+
+注意点として、Astro は rehype プラグインが実行された後に id 属性を注入するようになっています。
+そのまま使うと rehype-autolink-headings 実行時に id 属性がない状態になり。うまくリンクが生成されないため、`@astrojs/markdown-remark`の`rehypeHeadingIds`と組み合わせて使用するようにしています。
+
+#### コードブロックのタイトル
+Jekyll の頃は対応していませんでしたが、よく対応しているサイトを見かけるのでリプレース時に対応したいなーと思っていました。
+
+<OG url="https://github.com/mottox2/remark-code-titles" />
+<OG url="https://github.com/ipikuka/remark-flexible-code-titles" />
+リプレースにあたり、最初は remark-code-titles で対応していました。
+ただ、タイトルの要素が単純にコードブロックの pre 要素の前に生成されることで、後述のコピーボタンの配置と相性が悪い問題があり。
+
+```html
+<h1>Hello World</h1>
+<div class="remark-code-title">hello.js</div>
+<pre><code class="language-js">console.log('js')
+</code></pre>
+```
+
+remark-flexible-code-titles であれば、コンテナとなる要素でラップした中にタイトルの要素が生成される構造になるため、こちらを採用しました。
+
+```html
+<div class="remark-code-container">
+  <div class="remark-code-title">title.js</div>
+  <pre>
+    <code class="language-javascript">let me = "ipikuka";</code>
+  </pre>
+</div>
+```
+
+#### コードブロックのコピーボタン
+これも同様に Jekyll の頃は対応していませんでしたが、リプレース時に対応したいなーと思っていました。
+remark-flexible-code-titles で生成される構造に合わせて、自作スクリプトで生成するようにしています。
+
+#### シンタックスハイライト
+<OG url="https://github.com/rouge-ruby/rouge" />
+Jekyll の頃は Rouge ベース。
+
+<OG url="https://shiki.matsu.io" />
+<OG url="https://prismjs.com" />
+Astro では Shiki と Prism を組み込みサポートしていますが、Prism を使う場合は別途 CSS を用意する必要があるので注意です。
+自分はデフォルトの Shiki を使用しています。
+
+### 補助機能
+#### リンクカード
+Zenn の記事で URL を書くと OGP カード表示に変えてくれる的なやつです。
+Zenn であの表示を見てからは自分もこれやりたいなーと思うようになりました。
+
+Jekyll の頃は対応しておらず、リンクは普通にマークダウンのリンクで記述していました。
+自分はブログと Zenn にクロス投稿をしている関係で記事内容を転記しているのですが、リンク部分を書き換えるの地味に面倒で…。
+それを解消する意味でもどうにか対応できないかなと調査。
+
+<OG url="https://github.com/zenn-dev/zenn-editor" />
+最初に Zenn の zenn-markdown-html のコードを読んでみて、リンクカード変換の部分を参考にできないかなと思ったのですが、どうにも難しそうであきらめました。
+
+<OG url="https://github.com/gladevise/remark-link-card" />
+remark-link-card でお手軽に対応できそうではあったものの、最終更新が2年前なのと、HTML 構造をカスタムしたかったので見送り。
+
+結果的に、hiroppy さんがやられていた方法がいいなーと思い、参考にさせていただくことにしました。
+（hiroppy さんも Astro でサイトをリプレースされていて、サイト構成から参考にさせていただいていました）
+<OG url="https://hiroppy.me/blog/migrate-blog-from-hatena" />
+具体的にどんなことをやられているかというと、ざっくりこんな感じです。
+
+- リンクカード用のコンポーネントを作成
+  - props で渡された URL の OGP 情報を fetch して、それで要素を構築
+    - 本番ビルド時のみ、取得した OGP 情報を JSON にキャッシュ
+    - キャッシュがある場合はそちらから OGP 情報を表示する
+- MDX でそれを利用してリンクを記述するようにする
+
+OGP 情報をビルド時に取得するので、ビルド後の静的ファイルとして表示時には表示が早くなる。
+キャッシュができるので、ビルドも早くできる。
+というメリットがありつつ、リンクカードの内容が常に最新になるわけではないデメリットもあります。
+そこらへんは定期 JOB などでカバーすればよいかなと思っています。
+（今のところまだ作ってないです）
+
+MDX でリンクカード用コンポーネントを使用することになるので、ブログと Zenn のリンク構文を一致させる目的は達成できていませんが…。
+リンクカード用コンポーネント呼出しを記述するスニペットは作ったので、それでいくらかマシにはなりました。
+
+ファビコン取得部分に関しては、Google の非公開 API を使用するようにしました。
+非公開 API ということは急に使えなくなる可能性があるので、最初は meta 情報からファビコン URL を抽出するようにしていたのですが…。
+割といろんな URL パターンを観測して分岐処理を書くのがつらくなってきたので、あきらめました。
+
+#### RSS
+<OG url="https://github.com/jekyll/jekyll-feed" />
+Jekyll の頃は`jekyll-feed`を利用。使用するプラグインに追加するだけなので楽ちん。
+
+<OG url="https://docs.astro.build/ja/guides/rss" />
+Astro では、エンドポイント機能と`@astrojs/rss`の組み合わせが公式で紹介されていたので、そちらで対応。
+このブログサイトは技術の話だけでなく雑多な話をしているので、カテゴリーごとの RSS も取得できるようにしました。
+
+#### サイトマップ
+<OG url="https://github.com/jekyll/jekyll-sitemap" />
+Jekyll の頃は`jekyll-sitemap`を利用。
+
+<OG url="https://docs.astro.build/ja/guides/integrations-guide/sitemap" />
+Astro では、`@astrojs/sitemap`で対応。本番ビルド時にサイトマップを生成してくれます。
+`sitemap-0.xml`と`sitemap-index.xml`を生成し、後者から前者を参照するような構造になっていたのがちょっと不思議でしたが、特に困ったことはなかったです。
+
+#### SNS シェアボタン
+Jekyll の頃は、Twitter とはてブのシェアボタンを設置していました。
+ただ、使用している人がいなさそうだったのと、最近の Twitter の動向が怪しかったので一旦廃止に。
+
+#### 関連記事表示
+Jekyll では一応この機能が備わってはいたのですが、デフォルトで最新記事を表示するものになっていました。
+
+どうやらプラグインを追加して、起動時に LSI オプションをつけておくと関連記事のインデックスを生成してくれるようになっていたようですが、自分はここまでやっていなかったです…。
+結局は活用していなかった、ということでリプレースでは廃止。
+
+#### Google Analytics
+引き続き公式のスニペットコードを使用して導入しています。
+
+<OG url="https://docs.astro.build/ja/guides/integrations-guide/partytown" />
+ただ、普通に導入すると Lighthouse のスコアに影響が出るということで、Astro では`@astrojs/partytown`を使用して影響が出ないようにしました。
+
+Partytown は遅延読み込みライブラリの一種で、スクリプトをメインスレッドでなく Web ワーカーの方で処理してくれるようです。
+
+#### Google Search Console
+google-site-verification の meta 情報埋め込みを引き続き行っています。
+
+#### Google Adsense
+Jekyll の頃は、公式のスニペットコードをパラメータを少し調整した上で導入していました。
+
+Astro で導入するにあたっては、遅延読み込みで対応しました。
+最初は、これも Partytown が使えるかなと思っていたのですが、うまく動作してくれなかったので断念。
+普通に読み込むと、Adsense が生成する要素で Lighthouse の減点を食らったのでどうにかしたいが、こちらが手を加えられない箇所だしな…となり。
+
+調査をすると、どうも遅延読み込みをしてカバーするテクニックがあるとヒットしたので、遅延読み込みで対応することにしました。
+主にこちらのサイト様のやり方を参考にさせていただいています。
+<OG url="https://mamenaka.jp/blog/pagespeed-insights-100-astro-blog" />
+
+この遅延読み込みの欠点としては、ファーストビューに広告があると明らかに遅延読み込みしているとわかり、あまりよくないことでしょうか。
+（自分がリプレースした）サイトではまさにファーストビューにも広告があったので悩ましかったのですが、まぁ元々オマケ程度につけてるくらいだしな…というので許容としました。
+
+## パフォーマンス比較
+Chrome 拡張の干渉を避けるため、シークレットウィンドウの Lighthouse で検証。
+一部、リプレース前より悪くなったものもありつつ、全体的にはスコア向上になった印象ですね。
+
+Astro はその特徴から、そんなに神経使って頑張らなくても高スコアが狙いやすい気はしました。
+じゃあ Jekyll は良くなかったのかというと、自分がリプレース前にパフォーマンスをあまり意識していなかったので、ちゃんと意識している人は高スコア出せていると思っています。
+
+### トップ（/）
+
+デスクトップ.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-top-desktop.png" width="100%" alt="リプレース前のトップページ・デスクトップスコア - パフォーマンス：98, ユーザー補助：66, おすすめの方法：100, SEO：90" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-top-desktop.png" width="100%" alt="リプレース後のトップページ・デスクトップスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+
+</div>
+
+モバイル.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-top-mobile.png" width="100%" alt="リプレース前のトップページ・モバイルスコア - パフォーマンス：84, ユーザー補助：66, おすすめの方法：92, SEO：89" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-top-mobile.png" width="100%" alt="リプレース後のトップページ・モバイルスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+
+</div>
+
+### about（/about）
+デスクトップ.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-about-desktop.png" width="100%" alt="リプレース前のaboutページ・デスクトップスコア - パフォーマンス：95, ユーザー補助：74, おすすめの方法：92, SEO：82" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-about-desktop.png" width="100%" alt="リプレース後のaboutページ・デスクトップスコア - パフォーマンス：98, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+
+</div>
+
+モバイル.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-about-mobile.png" width="100%" alt="リプレース前のaboutページ・モバイルスコア - パフォーマンス：75, ユーザー補助：74, おすすめの方法：92, SEO：81" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-about-mobile.png" width="100%" alt="リプレース後のaboutページ・モバイルスコア - パフォーマンス：96, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+
+</div>
+
+### リンク多め（/posts/2023-02-11-developers-summit-2023）
+リプレース後は、リンクカード関連でいくつかコンソールエラーがでていたので、パフォーマンスに響いてるっぽい。
+
+デスクトップ.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-link-desktop.png" width="100%" alt="リプレース前のリンク多めページ・デスクトップスコア - パフォーマンス：96, ユーザー補助：66, おすすめの方法：92, SEO：100" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-link-desktop.png" width="100%" alt="リプレース後のリンク多めページ・デスクトップスコア - パフォーマンス：87, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
+
+</div>
+
+モバイル.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-link-mobile.png" width="100%" alt="リプレース前のリンク多めページ・モバイルスコア - パフォーマンス：57, ユーザー補助：66, おすすめの方法：100, SEO：94" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-link-mobile.png" width="100%" alt="リプレース後のリンク多めページ・モバイルスコア - パフォーマンス：64, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
+
+</div>
+
+### 画像多め（/posts/2020-04-23-react-material-ui）
+デスクトップ.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-image-desktop.png" width="100%" alt="リプレース前の画像多めページ・デスクトップスコア - パフォーマンス：57, ユーザー補助：71, おすすめの方法：100, SEO：100" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-image-desktop.png" width="100%" alt="リプレース後の画像多めページ・デスクトップスコア - パフォーマンス：99, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
+
+</div>
+
+モバイル.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-image-mobile.png" width="100%" alt="リプレース前の画像多めページ・モバイルスコア - パフォーマンス：41, ユーザー補助：71, おすすめの方法：100, SEO：94" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-image-mobile.png" width="100%" alt="リプレース後の画像多めページ・モバイルスコア - パフォーマンス：85, ユーザー補助：100, おすすめの方法：92, SEO：99" />|
+
+</div>
+
+### ツイート埋め込み多め（/posts/2020-09-20-web1week-2）
+
+デスクトップ.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-tweet-desktop.png" width="100%" alt="リプレース前のツイート埋め込み多めページ・デスクトップスコア - パフォーマンス：91, ユーザー補助：70, おすすめの方法：100, SEO：100" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-tweet-desktop.png" width="100%" alt="リプレース後のツイート埋め込み多めページ・デスクトップスコア - パフォーマンス：99, ユーザー補助：100, おすすめの方法：83, SEO：100" />|
+
+</div>
+
+モバイル.
+
+<div class="layout-fixed">
+
+| Jekyll（リプレース前）| Astro（リプレース後）|
+|-----|-----|
+|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-tweet-mobile.png" width="100%" alt="リプレース前のツイート埋め込み多めページ・モバイルスコア - パフォーマンス：80, ユーザー補助：70, おすすめの方法：100, SEO：95" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-tweet-mobile.png" width="100%" alt="リプレース後のツイート埋め込み多めページ・モバイルスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：83, SEO：98" />|
+
+</div>
+
+### スコアが伸びなかったところ
+リンクカード周りの取得がうまくいってないところは、その分減点されてましたね。
+
+Google の API でファビコンが取得できなかったときは、フォールバックのアイコンを返すようになるのですが、404へ行きあたる関係上コンソールにエラーが出てしまうんですよね…。
+あとは、OGP 画像として設定されている URL が無効になってしまっているとか。
+
+この辺は、相手のサイト側の問題の気がしているので、今のところ特に対策等はしていません。
+（というか、何か対策できる...？）
+
+一部はこちら側で改善できそうな点もあったので、今後改善していきたいですね。
+
+---
+
+ちなみにパフォーマンス改善で行われることの多い、画像最適化については今のところ対応していません。
+
+現在、Astro で実験的サポートになっていて機能としては一応使えはします。
+3系リリースで正式サポートになるっぽかったので、まぁその時に対応でもいいかなぁとなりました。
+<OG url="https://astro.build/blog/images" />
+
+その代わり、記事移行する際にすべての画像を圧縮かけたうえで移行しています。
+ほぼ7～8割くらいは削減してくれたので、全体としてはだいぶ軽くなっているはず。
+圧縮にはこちらを使わせていただきました。お手軽に圧縮できて良きです。
+<OG url="https://imguma.com" />
+
+## リプレースした感想など
+完全に個人活動なので休日メインで進めていました。
+2023/04に本格開始して2023/07/09にリリース。
+かかった時間としてはざっくり150時間くらいだったので、もし仕事として平日作業していたなら1か月で終えられたようです。
+
+数年なかなか進められていなかったものをようやく終えられたので、すっきりしましたね。
+Lighthouse のスコアも全体的には改善されたので、とりあえず自己満足しています。
+
+気になる技術を使って何かを作るのは、キャッチアップの良い機会になりますし、やはり楽しい。
+個人開発だと割と自由に技術選定できるので、気兼ねせず試しやすいです。
+Astro や UnoCSS と少しだけ仲良くなれた気がしました。
+特に Astro は活発にリリースが行われているので、今後の動向が楽しみです。
+
+ちなみにリプレースで一番大変だったのは、機能実装ではなく記事移行でした。
+元のマークダウンをそのまま MDX にすればよいという話ではなくて、微妙に文章調整をしたりしたので。
+それを約80記事でやったので、それはまぁ大変だよね…と😱
+
+---
+
+どうせ書くならリプレース前後を比較をするような方式にしたいなーというので書いていたら、すっかり長文になってしまいましたね。
+新機能中心にリリースしました記事を書くこともできましたが、同じく移行を考えている方の何かの参考になればいいなと思い、このスタイルにしました。
+リプレースにあたっての技術調査って割と大変だと思いますので…。
+
+少しでも何かの参考になれば幸いです。
+
+{/* <!-- textlint-enable ja-technical-writing/ja-no-weak-phrase --> */}
+
+## 参考リンクまとめ
+
+Astro 周り.
+- [Astro](https://astro.build)
+- [Astro Docs](https://docs.astro.build/ja/getting-started)
+- [Better Images in Astro](https://astro.build/blog/images)
+- [remarkjs/remark](https://github.com/remarkjs/remark)
+- [rehypejs/rehype](https://github.com/rehypejs/rehype)
+- [remarkjs/remark-breaks](https://github.com/remarkjs/remark-breaks)
+- [rehypejs/rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings)
+- [mottox2/remark-code-titles](https://github.com/mottox2/remark-code-titles)
+- [ipikuka/remark-flexible-code-titles](https://github.com/ipikuka/remark-flexible-code-titles)
+- [Shiki](https://shiki.matsu.io)
+- [Prism](https://prismjs.com)
+- [zenn-dev/zenn-editor](https://github.com/zenn-dev/zenn-editor)
+- [gladevise/remark-link-card](https://github.com/gladevise/remark-link-card)
+- [Astroでサイトを作り直し、ブログをはてなから移管しました](https://hiroppy.me/blog/migrate-blog-from-hatena)
+- [PageSpeed Insightsでオール100点を取るためにやったこと【Astroブログ】](https://mamenaka.jp/blog/pagespeed-insights-100-astro-blog)
+
+UnoCSS 周り.
+- [UnoCSS](https://unocss.dev)
+- [Reimagine Atomic CSS](https://antfu.me/posts/reimagine-atomic-css)
+- [Icones](https://icones.js.org)
+
+Jekyll 周り.
+- [Liquid](https://shopify.github.io/liquid)
+- [kramdown](https://kramdown.gettalong.org)
+- [fongandrew/hydeout](https://github.com/fongandrew/hydeout)
+- [jekyll/jekyll-paginate](https://github.com/jekyll/jekyll-paginate)
+- [sverrirs/jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2)
+- [allejo/jekyll-anchor-headings](https://github.com/allejo/jekyll-anchor-headings)
+- [rouge-ruby/rouge](https://github.com/rouge-ruby/rouge)
+- [jekyll/jekyll-feed](https://github.com/jekyll/jekyll-feed)
+- [jekyll/jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+
+その他.
+- [yuru7/HackGen](https://github.com/yuru7/HackGen)
+- [あっしゅくま](https://imguma.com)
