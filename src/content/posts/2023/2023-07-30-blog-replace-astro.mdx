@@ -172,7 +172,7 @@ Anthony Fu 氏の記事に記載されていたベンチマークに衝撃を受
 <img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2021-10.png" width="100%" alt="2021/10/21のベンチマーク UnoCSSを1として、windicssが195.36倍、Tailwind CSSが251.28倍" />
 
 （2022/10のものだと、だいぶ縮まっていましたが）
-<img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2022-10.png" width="100%" alt="2022/10/25のベンチマーク UnoCSSを1として、windicssが6.08倍、Tailwind CSSが8.38倍" />
+<img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2022-10.png" width="100%" alt="2022/10/25のベンチマーク UnoCSSを1として、Tailwind CSSが6.08倍、windiCSSが8.38倍" />
 
 あとはアイコン気軽に使えるのいいなーと思ったのもあります。
 
@@ -225,7 +225,7 @@ Jekyll からリプレースするにあたり、画面一覧や機能を洗い�
 #### テンプレートエンジン
 <OG url="https://shopify.github.io/liquid" />
 Jekyll では Liquid が採用されていました。
-Shopify でも採用されていたりして割とメジャーなのかなと思っていたら、そもそも Shopify が作った言語じゃん…ということに執筆中に気づいたという〜😇
+Shopify でも採用されていたりして割とメジャーなのかなと思っていたら、そもそも Shopify が作った言語じゃん…ということを執筆中に気づいたという〜😇
 自分はあまり馴染みがなかったので、多少カスタムするのに書いていたくらいでした。
 
 Astro では JSX ライクに書ける構文となっているため、普段 React や Next.js のコードを書いている自分にとっては扱いやすく、サイトをカスタムしやすくなりました。
@@ -386,7 +386,7 @@ Jekyll の頃は対応していませんでしたが、よく対応している�
 <OG url="https://github.com/mottox2/remark-code-titles" />
 <OG url="https://github.com/ipikuka/remark-flexible-code-titles" />
 リプレースにあたり、最初は remark-code-titles で対応していました。
-ただ、タイトルの要素が単純にコードブロックの pre 要素の前に生成されることで、後述のコピーボタンの配置と相性が悪い問題があり。
+ただ、タイトルの要素が単純にコードブロックの pre 要素の前に生成されることで、後述のコピーボタンの配置と相性の悪い問題があり。
 
 ```html
 <h1>Hello World</h1>
