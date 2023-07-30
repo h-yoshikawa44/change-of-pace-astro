@@ -8,7 +8,7 @@ sed --version 1>/dev/null 2>/dev/null || GNU_SED=false
 COMMIT_MSG_FILE=$1
 MESSAGE=$(cat "$COMMIT_MSG_FILE")
 
-ISSUE_NUMBER=$(git rev-parse --abbrev-ref HEAD | grep -Eo "^(feature|bugfix|release)/[0-9]+" | grep -Eo "[0-9]+")
+ISSUE_NUMBER=$(git rev-parse --abbrev-ref HEAD | grep -Eo "^(feature|bugfix|post|release)/[0-9]+" | grep -Eo "[0-9]+")
 if [ -n "$ISSUE_NUMBER" ]; then
   if [ "$GNU_SED" == "true" ]; then
     sed -i "s/(#Issue)/(#$ISSUE_NUMBER)/" $COMMIT_MSG_FILE
