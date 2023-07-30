@@ -346,5 +346,221 @@
     "description": "",
     "image": "",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fintan.jp"
+  },
+  "https://unocss.dev": {
+    "title": "UnoCSS: The instant on-demand Atomic CSS engine",
+    "description": "The instant on-demand Atomic CSS engine",
+    "image": "https://unocss.dev/og.png#1",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
+  },
+  "https://unocss.dev/guide/extracting#safelist": {
+    "title": "Extracting",
+    "description": "The instant on-demand Atomic CSS engine",
+    "image": "https://unocss.dev/og.png#1",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
+  },
+  "https://astro.build": {
+    "title": "Astro",
+    "description": "Astro is an all-in-one framework for building fast websites faster. Grab content from anywhere, deploy everywhere, and show the web what you've got.",
+    "image": "https://astro.build/og/astro.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
+  },
+  "https://antfu.me/posts/reimagine-atomic-css": {
+    "title": "Reimagine Atomic CSS",
+    "description": "Let's take a step back and reimagine what's atomic CSS could be in the best.",
+    "image": "https://antfu.me/og/reimagine-atomic-css.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://antfu.me"
+  },
+  "https://docs.astro.build/ja/core-concepts/routing/#ページ分割": {
+    "title": "ルーティング",
+    "description": "Astroのルーティングの紹介",
+    "image": "https://docs.astro.build/open-graph/ja/core-concepts/routing.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
+  },
+  "https://mamenaka.jp/blog/pagespeed-insights-100-astro-blog": {
+    "title": "PageSpeed Insightsでオール100点を取るためにやったこと【Astroブログ】 | mamenaka（マメナカ）",
+    "description": "オール100点を目指す上で特に重要なポイントは、画像周り、CSS、Google Analytics対策など。",
+    "image": "https://mamenaka.jp/images/blog/230430_pagespeed-insights-100-astro-blog/01.webp",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mamenaka.jp"
+  },
+  "https://hiroppy.me/blog/migrate-blog-from-hatena": {
+    "title": "Astroでサイトを作り直し、ブログをはてなから移管しました - hiroppy's site",
+    "description": "AstroとTailwindでサイト・ブログを再構築しました。この記事ではどのようにブログを移管したのかを紹介します。",
+    "image": "https://hiroppy.me/images/me.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hiroppy.me"
+  },
+  "https://icones.js.org": {
+    "title": "Icônes",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://icones.js.org"
+  },
+  "https://shopify.github.io/liquid": {
+    "title": "Liquid template language",
+    "description": "Documentation for the Liquid template language, created by Shopify.",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shopify.github.io"
+  },
+  "https://imguma.com": {
+    "title": "画像圧縮ツール あっしゅくま",
+    "description": "「あっしゅくま」はJPEGやPNGの画像を軽量化するブラウザ上で使えるフリーの画像圧縮ツールです。ローカルで圧縮するためオフラインで通信容量やプライバシーを気にする方にもおすすめ。複数の画像を一括で圧縮・リサイズ。無劣化圧縮、非可逆圧縮などの圧縮の強さの調整も簡単。",
+    "image": "https://storage.googleapis.com/ashkuma.appspot.com/static/images/og_index_ss_simple_440x370.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://imguma.com"
+  },
+  "https://astro.build/blog/images": {
+    "title": "Better Images in Astro | Astro",
+    "description": "A new feature brings built-in image optimization to Astro. Coming in Astro 3.0, you can opt-in to try it yourself in today. Images in Astro have been completely redesigned with more features, faster performance, and a better end-user experience with automatic layout shift prevention.",
+    "image": "https://astro.build/_astro/og-image-image-better.fc74c8c7.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
+  },
+  "https://prismjs.com": {
+    "title": "Prism",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prismjs.com"
+  },
+  "https://shiki.matsu.io": {
+    "title": "Shiki",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shiki.matsu.io"
+  },
+  "https://docs.astro.build/ja/guides/integrations-guide/sitemap": {
+    "title": "@astrojs/sitemap",
+    "description": "Learn how to use the @astrojs/sitemap integration in your Astro project.",
+    "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/sitemap.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
+  },
+  "https://docs.astro.build/ja/guides/integrations-guide/mdx": {
+    "title": "@astrojs/mdx",
+    "description": "Learn how to use the @astrojs/mdx integration in your Astro project.",
+    "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/mdx.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
+  },
+  "https://github.com/h-yoshikawa44/change-of-pace-astro": {
+    "title": "GitHub - h-yoshikawa44/change-of-pace-astro: 個人ブログ（2023/07～）",
+    "description": "個人ブログ（2023/07～）. Contribute to h-yoshikawa44/change-of-pace-astro development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/68e69a40212726070174327d342297683e20bf67b2bfc87c59653072b3236bd7/h-yoshikawa44/change-of-pace-astro",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://docs.astro.build/ja/guides/rss": {
+    "title": "RSS",
+    "description": "AstroのRSS入門",
+    "image": "https://docs.astro.build/open-graph/ja/guides/rss.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
+  },
+  "https://docs.astro.build/ja/guides/integrations-guide/partytown": {
+    "title": "@astrojs/partytown",
+    "description": "Learn how to use the @astrojs/partytown integration in your Astro project.",
+    "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/partytown.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
+  },
+  "https://github.com/jekyll/jekyll-paginate": {
+    "title": "GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
+    "description": "NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll - GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
+    "image": "https://opengraph.githubassets.com/17c2e84e541543b19936019c27f7fca95d9d6f2014e3eb43be60a9ef97057ade/jekyll/jekyll-paginate",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/yuru7/HackGen": {
+    "title": "GitHub - yuru7/HackGen: Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen)",
+    "description": "Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen). Contribute to yuru7/HackGen development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/bebccf36cdaed1dac4fde49e28459b5cd55d8596ae530ba8590a6d9dfa1b8512/yuru7/HackGen",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/sverrirs/jekyll-paginate-v2": {
+    "title": "GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺",
+    "description": "Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺ - GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement f...",
+    "image": "https://opengraph.githubassets.com/b8d8414a39236fa3c6207ca0561693eb2638e69973ab44b1a54aa8a7d7a4fb73/sverrirs/jekyll-paginate-v2",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://kramdown.gettalong.org/converter/html.html#toc": {
+    "title": "HTML Converter | kramdown",
+    "description": "kramdown is a fast, pure-Ruby Markdown-superset converter",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kramdown.gettalong.org"
+  },
+  "https://github.com/fongandrew/hydeout": {
+    "title": "GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
+    "description": "A refreshed version of Hyde for Jekyll 3.x and 4.x - GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
+    "image": "https://opengraph.githubassets.com/68eccff921d88450d114e3fc3773c7b131de4ac41d2904d18406dc437ebea959/fongandrew/hydeout",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://kramdown.gettalong.org": {
+    "title": "Home | kramdown",
+    "description": "kramdown is a fast, pure-Ruby Markdown-superset converter",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kramdown.gettalong.org"
+  },
+  "https://github.com/allejo/jekyll-anchor-headings": {
+    "title": "GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat:",
+    "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors ...",
+    "image": "https://opengraph.githubassets.com/7222c7ed90c8d75a414318a5532a141944ea479b39836b557e4731c6a5252861/allejo/jekyll-anchor-headings",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/mottox2/remark-code-titles": {
+    "title": "GitHub - mottox2/remark-code-titles",
+    "description": "Contribute to mottox2/remark-code-titles development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/93e2374c1ab0dc74c31129719d3adfd867bfcd4a014ee7b158cf9feb2f976ffb/mottox2/remark-code-titles",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/remarkjs/remark-breaks": {
+    "title": "GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
+    "description": "plugin to add break support, without needing spaces - GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
+    "image": "https://opengraph.githubassets.com/0ef6dae33303bd0fc4fff27dcfffecc2b2dccbde916fc79bc2566a8ee2416a15/remarkjs/remark-breaks",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/rehypejs/rehype": {
+    "title": "GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
+    "description": "HTML processor powered by plugins part of the @unifiedjs collective - GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
+    "image": "https://opengraph.githubassets.com/a6eea29a09c48b2458a5b423478f8f5b7def4947980708e0ad913e63a14791e0/rehypejs/rehype",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/remarkjs/remark": {
+    "title": "GitHub - remarkjs/remark: remark is a popular tool that transforms markdown with plugins. These plugins can inspect and change your markup. You can use remark on the server, the client, CLIs, deno, etc.",
+    "description": "remark is a popular tool that transforms markdown with plugins. These plugins can inspect and change your markup. You can use remark on the server, the client, CLIs, deno, etc. - GitHub - remarkjs/...",
+    "image": "https://opengraph.githubassets.com/57aca3b3c5c940f31f2c2bef17b68fe0a1965ae09f77dfff9e5471206163cc3d/remarkjs/remark",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/jekyll/jekyll-sitemap": {
+    "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
+    "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
+    "image": "https://opengraph.githubassets.com/75aeaba652ba171b8f53a78c4d96fba419b936738bcd1a0af8255244d89da159/jekyll/jekyll-sitemap",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/rouge-ruby/rouge": {
+    "title": "GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
+    "description": "A pure Ruby code highlighter that is compatible with Pygments - GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
+    "image": "https://opengraph.githubassets.com/4833c3e298af04aaabdd098c43b2ae1da65728f5e383e81242d5802a2666d145/rouge-ruby/rouge",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/gladevise/remark-link-card": {
+    "title": "GitHub - gladevise/remark-link-card",
+    "description": "Contribute to gladevise/remark-link-card development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/a07a991f48b3c420b598076e3c975630a0ca31174298221f5381e074b7cfe2b9/gladevise/remark-link-card",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/zenn-dev/zenn-editor": {
+    "title": "GitHub - zenn-dev/zenn-editor: Convert markdown to html in Zenn format",
+    "description": "Convert markdown to html in Zenn format. Contribute to zenn-dev/zenn-editor development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/052445ed8e2feed5bfc25162fcfb60a14a0f05f6ed91f6874c4e600bb89dd500/zenn-dev/zenn-editor",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/ipikuka/remark-flexible-code-titles": {
+    "title": "GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the code blocks with customizable properties",
+    "description": "Remark plugin to add titles or/and containers for the code blocks with customizable properties - GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the ...",
+    "image": "https://opengraph.githubassets.com/5b0abb142a367b0d3a7515706c4a2009e1335ec719a86bbe003304a392162f14/ipikuka/remark-flexible-code-titles",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/jekyll/jekyll-feed": {
+    "title": "GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts",
+    "description": ":memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts - GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts",
+    "image": "https://opengraph.githubassets.com/d54975550630b70bfd98988f4c10b767959d0f5de1b7120d9b22a613a8cc6320/jekyll/jekyll-feed",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://github.com/rehypejs/rehype-autolink-headings": {
+    "title": "GitHub - rehypejs/rehype-autolink-headings: plugin to add links to headings in HTML",
+    "description": "plugin to add links to headings in HTML. Contribute to rehypejs/rehype-autolink-headings development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/b3ab978d6f1798cbdd6d3abe614e15c4d50d8d2c8baa0f8eae990f83c10374d4/rehypejs/rehype-autolink-headings",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
   }
 }
