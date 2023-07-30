@@ -83,6 +83,11 @@
     @apply my-4 border border-slate-300 w-full text-sm border-collapse leading-normal overflow-auto;
   }
 
+  // テーブル列を均等にしたいときに、この div の中にマークダウンのテーブルを書く
+  div.layout-fixed > table {
+    @apply table-fixed;
+  }
+
   th,
   td {
     @apply border border-slate-300 px-2 py-1;
