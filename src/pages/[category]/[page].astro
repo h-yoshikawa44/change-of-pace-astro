@@ -20,7 +20,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
       return { ...post, slug: extractPostSlug(post.slug) };
     });
 
-  return CATEGORY_LIST.map((category) => {
+  return CATEGORY_LIST.flatMap((category) => {
     const filteredPosts = allPosts.filter(
       (post) => post.data.category === category
     );
