@@ -14,7 +14,9 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap(),
-    UnoCSS(),
+    UnoCSS({
+      injectReset: true,
+    }),
     partytown({
       config: {
         forward: ['dataLayer.push'],
