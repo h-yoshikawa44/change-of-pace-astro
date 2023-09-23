@@ -1,0 +1,284 @@
+---
+title: "StyleLintアプデ対応とご一緒にpostcss-preset-envはいかが？"
+description: "StyleLintがfixする構文のブラウザサポートが心配な時にも使える、postcss-preset-envの紹介"
+pubDate: "2023-09-23"
+updatedDate: "2023-09-23"
+category: "develop"
+tags: ["CSS", "StyleLint", "PostCSS", "Autoprefixer"]
+---
+
+こんにちは。
+前に作ったアプリのメンテナンスをしていると、いろいろ発見があるねぇとぼんやり思っている、よしです。
+今回は StyleLint 15系アプデ時に発見したプラグインを紹介してみます。
+
+import OG from "@/components/OG.astro"
+
+# 要約
+さらっと結論だけ知りたい方向けに要約を書いておきます。
+
+- StyleLint とその基本ルールセットである stylelint-config-standard をアプデすると、fix される CSS 構文が新しくなっていく（それはそう）
+- おおよそ各種ブラウザ対応はされているが、場合によってもう少し古いバージョンにも対応させたいことがある
+- postcss-preset-env を使用すると、これ1つでほとんどの PostCSS をまとめて適用・管理できて旧構文の CSS を出力してくれるぞ
+  - 書くときは新しい構文で、出力は旧構文というのが実現できまっせ
+  - まだブラウザサポートが不安な新しい構文も書いていけるぞ
+
+# 背景
+過去に作ったアプリのメンテナンスをしていまして。
+StyleLint 15系へのアプデ対応をしている中で、基本ルールセットである stylelint-config-standard もアプデしました。
+それにより、アプリを作った当時は採用を見送った比較的新しめの CSS 構文へ fix されるようになりました。
+そのアプリを作ったのは2年前とかなので、あれから各種ブラウザ対応が進んでいることを考えると、それはそう🙄
+
+ただ、なかには一部のブラウザで少し古いバージョンだとダメそうなものがあったので、書くときは新しい構文で、出力は旧構文ということができたらいいなーと考えていました。
+といいつつ、PostCSS を1つずつ適用するのは少々面倒だな…と思っていたところで見つけたのが postcss-preset-env でした。
+
+※なお、今回の使用バージョンは以下です.
+- StyleLint：15.10.3
+- stylelint-config-standard：34.0.0
+- PostCSS：8.4.29
+- postcss-preset-env：9.1.3
+
+# postcss-preset-env
+<OG url="https://preset-env.cssdb.org" />
+
+コードはこちらのリポジトリの一部として管理されています。
+<OG url="https://github.com/csstools/postcss-plugins" />
+
+※元々は以下のリポジトリでしたが、2022/12/14にアーカイブされました。
+<OG url="https://github.com/csstools/postcss-preset-env" />
+
+> PostCSS Preset Env lets you convert modern CSS into something most browsers can understand, determining the polyfills you need based on your targeted browsers or runtime environments.
+>
+> ※Google 翻訳
+> PostCSS Preset Env を使用すると、最新の CSS をほとんどのブラウザーが理解できるものに変換し、対象のブラウザーまたはランタイム環境に基づいて必要なポリフィルを決定できます。
+>
+
+postcss-preset-env は多くの PostCSS プラグインをまとめて管理できるプラグインパックです。
+Can I Use、MDN から提供される、各機能のブラウザサポート情報を公開している CSS DB というものがあり。
+この CSS DB を参照し、各 PostCSS プラグインを適用するか制御しているとのこと。
+<OG url="https://cssdb.org" />
+
+まさに「書くときは新しい構文で、出力は旧構文」というのが、これ1つでほとんど対応できるわけです。楽ちん。
+
+README で紹介されている変換例.
+```css
+@custom-media --viewport-medium (width <= 50rem);
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+:root {
+  --mainColor: #12345678;
+}
+
+body {
+  color: var(--mainColor);
+  font-family: system-ui;
+  overflow-wrap: break-word;
+}
+
+:--heading {
+  background-image: image-set(url(img/heading.png) 1x, url(img/heading@2x.png) 2x);
+
+  @media (--viewport-medium) {
+    margin-block: 0;
+  }
+}
+
+a {
+  color: rgb(0 0 100% / 90%);
+
+  &:hover {
+    color: rebeccapurple;
+  }
+}
+
+/* becomes */
+
+:root {
+  --mainColor: rgba(18, 52, 86, 0.47059);
+}
+
+body {
+  color: rgba(18, 52, 86, 0.47059);
+  color: var(--mainColor);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Droid Sans, Helvetica Neue;
+  word-wrap: break-word;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  background-image: url(img/heading.png);
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  h1, h2, h3, h4, h5, h6 {
+    background-image: url(img/heading@2x.png)
+  }
+}
+
+@media (max-width: 50rem) {
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+a {
+  color: rgba(0, 0, 255, 0.9)
+}
+
+a:hover {
+  color: #639;
+}
+```
+
+## 導入方法
+
+インストール.
+```bash
+npm i -D postcss postcss-preset-env
+```
+
+あとは PostCSS の設定ファイルで、このプラグインを使用するよう設定。
+基本的にはこれだけで OK。
+
+```jsx:postcss.config.js
+module.exports = {
+  plugins: [require('postcss-preset-env')],
+};
+```
+
+オプションを渡して設定をカスタムすることももちろんできます。
+
+## 対応している PostCSS
+postcss-preset-env 配下の [src/plugins/plugins-data.mjs](https://github.com/csstools/postcss-plugins/blob/main/plugin-packs/postcss-preset-env/src/plugins/plugins-data.mjs) を見てもらえると良さそうです。
+ざっと60個以上ありますね…！すごい。
+（このファイルには記載がないですが、実は autoprefixer も内包されていたりします）
+
+このリポジトリ内で管理している PostCSS プラグインも多数参照しています。
+[リポジトリルートからの plugins 配下](https://github.com/csstools/postcss-plugins/tree/main/plugins)とそれぞれの README も見てもらえると、よりどんなものがあるかわかりますね。
+
+なお、postcss-preset-env には W3C に認められた CSS 標準機能のポリフィルとフォールバックのみが含まれているとのこと。
+そのため、非標準機能や糖衣構文にあたるものは処理できないことに注意です。
+もし非標準機能や糖衣構文の機能を提供する PostCSS と共存したい場合は、PostCSS 設定にて、postcss-preset-env より先に定義する必要があります。
+
+公式の例.
+
+```js:postcss.config.js
+module.exports = {
+	plugins: [
+		"postcss-syntactic-sugar",
+		"postcss-non-standard",
+		// ...
+		[
+			"postcss-preset-env",
+			{
+				// plugin options
+			},
+		],
+		// ...
+		// maybe a minifier?
+	],
+};
+```
+
+また、一部の PostCSS はポリフィルを追加で導入する必要があることも注意です。
+詳細は [README - Plugins list - Plugins that need client library](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#plugins-that-need-client-library) を参照ください。
+
+## オプション
+ここではオプションの一部だけ紹介。
+
+### stage
+各 CSS 機能が Web 標準として実装される過程における安定性を示すもの。
+どの stage の CSS 機能のポリフィルを有効にするかを指定。
+
+```jsx
+postcssPresetEnv({ stage: 2 })
+```
+
+各 stage のざっくり概要.
+
+|stage|概要|説明|
+|---|---|---|
+|0|Aspirational（野心的）|非公式草案または編集者草案。まだまだ下書き段階。|
+|1|Experimental（実験的）|編集者草案または初期作業草案。これから仕様検討が進むくらいの温度感。|
+|2|Allowable（許容可能）|進行中草案。変更される可能性はありつつ、一部のブラウザで実装される。|
+|3|Embraced（受け入れられる）|推奨事項候補。少なくとも2つの一般的なブラウザに実装される。ほとんど変更されることがない。|
+|4|Standardized（標準化）|勧告。一般的なブラウザによって実装される Web 標準。|
+
+
+各 stage の説明や、stage ごとの CSS 機能は CSS DB を見ると一目瞭然です。
+stage 2の機能多いな👀
+<OG url="https://cssdb.org/#the-staging-process" />
+
+デフォルトでは`2`が設定されています。
+大体の方は2のままでも、ほとんどの目新しい機能は試せそうですね。
+
+### minimumVendorImplementations
+最小ベンダー実装数のこと。
+どの実装ステータスに基づいて、CSS 機能のポリフィルを有効にするか指定。
+
+```jsx
+postcssPresetEnv({ minimumVendorImplementations: 0 })
+```
+
+目安.
+- 0：どのベンダーも実装していない
+- 3：すべての主要ベンダーが実装済み
+
+デフォルト値は`0`。
+もし安定している CSS 機能のみにポリフィルを有効にしたい場合は、`2`が推奨されているようです。
+
+### features
+各 PostCSS の id を指定することで、ポリフィルの有効無効を直接決定するもの。
+id は`src/plugins/plugins-data.mjs`を直接参照したり、公式ドキュメントから確認可能です。
+<OG url="https://preset-env.cssdb.org/features" />
+
+例えば以下の設定は`nesting-rules`を有効にして、それ以外は stage 3 としてポリフィル有効化判定が行われます。
+
+```jsx
+postcssPresetEnv({
+  /* use stage 3 features + css nesting rules */
+  stage: 3,
+  features: {
+    'nesting-rules': true
+  }
+})
+```
+
+---
+
+そのほか、毎度おなじみの browserslist に関する設定や、autoprefixer の設定などがあります。
+詳細は [README - Options](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#options) を参照ください。
+
+これらのオプション設定を踏まえて、どの PostCSS のポリフィルを有効化するか一元管理してくれるわけです。便利。
+
+### プレイグラウンド
+PostCSS をまとめて面倒見てくれることは分かったけれど、実際の出力がどうなるか検証したい！
+という方は、公式のプレイグラウンドを活用するとサッと検証できます。
+オプションもある程度カスタムできるので、stage などの設定を変更して比較なんかも簡単です。やったぜ。
+<OG url="https://preset-env.cssdb.org/playground" />
+
+ちなみに StyleLint にも公式のプレイグラウンドがあります。
+<OG url="https://stylelint.io/demo" />
+
+元構文がどう fix されるのか差分を表示してくれるので便利ですね。
+パッケージのバージョンも変更できるため、どのバージョンからこのルール適用されるようになったんだ？みたいな検証も楽にできます。やったぜ。
+
+2つを組み合わせて、StyleLint で fix されるこの構文は PostCSS 対応しているのか？と試していくとよさそうです。
+
+---
+
+これまで新しい CSS 構文が登場しても、ちょっと前のブラウザバージョンで使えなかったりして、積極的に書こうとしてこれなかったんですよね。
+なので新しい構文を情報としては知りつつ、結局書く機会がないから習得できてない状態で。
+とはいえ、普段フロントエンドで仕事している人間として、ちゃんと習得できた方がいいよなーと。
+
+今回知った postcss-preset-env のおかげで、新しい構文を書けるものがわーっと広がりました。
+これからは StyleLint の恩恵も受けながら、積極的に新しい構文を採用していきたいですね。
+
+皆様の良い CSS ライフに繋がりますように～。
+
+# 参考リンクまとめ
+- [postcss-preset-env](https://preset-env.cssdb.org)
+- [GitHub - csstools - postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
+- [GitHub - postcss-preset-env ※アーカイブ](https://github.com/csstools/postcss-preset-env)
+- [CSS DB](https://cssdb.org)
+- [StyleLint Demo](https://stylelint.io/demo)
+- [postcss-preset-envで少し未来のCSSを予習する](https://creators.bengo4.com/entry/postcss-preset-env)
