@@ -23,10 +23,6 @@ export default defineConfig({
     presetIcons(),
   ],
   transformers: [transformerDirectives()],
-  content: {
-    // 開発ビルド時に一部クラスがうまく検知されず、スタイル生成されない事象の対応
-    filesystem: ['src/**/*.astro'],
-  },
   theme: {
     fontFamily: {
       hackGen: [
