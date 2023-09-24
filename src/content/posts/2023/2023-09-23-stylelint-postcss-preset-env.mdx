@@ -8,7 +8,7 @@ tags: ["CSS", "StyleLint", "PostCSS", "Autoprefixer"]
 ---
 
 こんにちは。
-前に作ったアプリのメンテナンスをしていると、いろいろ発見があるねぇとぼんやり思っている、よしです。
+前に作ったもののメンテナンスをしていると、いろいろ発見があるねぇとぼんやり思っている、よしです。
 今回は StyleLint 15系アプデ時に発見したプラグインを紹介してみます。
 
 import OG from "@/components/OG.astro"
@@ -18,15 +18,15 @@ import OG from "@/components/OG.astro"
 
 - StyleLint とその基本ルールセットである stylelint-config-standard をアプデすると、fix される CSS 構文が新しくなっていく（それはそう）
 - おおよそ各種ブラウザ対応はされているが、場合によってもう少し古いバージョンにも対応させたいことがある
-- postcss-preset-env を使用すると、これ1つでほとんどの PostCSS をまとめて適用・管理できて旧構文の CSS を出力してくれるぞ
+- postcss-preset-env を使用すると、これ1つでほとんどの PostCSS をまとめて適用・管理できて旧構文の CSS を出力できるぞ
   - 書くときは新しい構文で、出力は旧構文というのが実現できまっせ
   - まだブラウザサポートが不安な新しい構文も書いていけるぞ
 
 # 背景
-過去に作ったアプリのメンテナンスをしていまして。
+過去に作った静的ページの課題のメンテナンスをしていまして。
 StyleLint 15系へのアプデ対応をしている中で、基本ルールセットである stylelint-config-standard もアプデしました。
-それにより、アプリを作った当時は採用を見送った比較的新しめの CSS 構文へ fix されるようになりました。
-そのアプリを作ったのは2年前とかなので、あれから各種ブラウザ対応が進んでいることを考えると、それはそう🙄
+それにより、課題を作った当時は採用を見送った比較的新しめの CSS 構文へ fix されるようになりました。
+その課題を作ったのは2年前とかなので、あれから各種ブラウザ対応が進んでいることを考えると、それはそう🙄
 
 ただ、なかには一部のブラウザで少し古いバージョンだとダメそうなものがあったので、書くときは新しい構文で、出力は旧構文ということができたらいいなーと考えていました。
 といいつつ、PostCSS を1つずつ適用するのは少々面倒だな…と思っていたところで見つけたのが postcss-preset-env でした。
@@ -156,8 +156,8 @@ postcss-preset-env 配下の [src/plugins/plugins-data.mjs](https://github.com/c
 [リポジトリルートからの plugins 配下](https://github.com/csstools/postcss-plugins/tree/main/plugins)とそれぞれの README も見てもらえると、よりどんなものがあるかわかりますね。
 
 なお、postcss-preset-env には W3C に認められた CSS 標準機能のポリフィルとフォールバックのみが含まれているとのこと。
-そのため、非標準機能や糖衣構文にあたるものは処理できないことに注意です。
-もし非標準機能や糖衣構文の機能を提供する PostCSS と共存したい場合は、PostCSS 設定にて、postcss-preset-env より先に定義する必要があります。
+そのため、非標準機能や糖衣構文にあたるものは対応していないことに注意です。
+もし非標準機能や糖衣構文の機能を提供する PostCSS と共存させたい場合は、PostCSS 設定にて、postcss-preset-env より先に定義する必要があります。
 
 公式の例.
 
@@ -179,7 +179,7 @@ module.exports = {
 };
 ```
 
-また、一部の PostCSS はポリフィルを追加で導入する必要があることも注意です。
+また、一部の PostCSS はポリフィルを追加で導入 + それを読み込む設定を追加する必要があることも注意です。
 詳細は [README - Plugins list - Plugins that need client library](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#plugins-that-need-client-library) を参照ください。
 
 ## オプション
