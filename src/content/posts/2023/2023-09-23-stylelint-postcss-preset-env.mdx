@@ -13,7 +13,7 @@ tags: ["CSS", "StyleLint", "PostCSS", "Autoprefixer"]
 
 import OG from "@/components/OG.astro"
 
-# 要約
+## 要約
 さらっと結論だけ知りたい方向けに要約を書いておきます。
 
 - StyleLint とその基本ルールセットである stylelint-config-standard をアプデすると、fix される CSS 構文が新しくなっていく（それはそう）
@@ -22,7 +22,7 @@ import OG from "@/components/OG.astro"
   - 書くときは新しい構文で、出力は旧構文というのが実現できまっせ
   - まだブラウザサポートが不安な新しい構文も書いていけるぞ
 
-# 背景
+## 背景
 過去に作った静的ページの課題のメンテナンスをしていまして。
 StyleLint 15系へのアプデ対応をしている中で、基本ルールセットである stylelint-config-standard もアプデしました。
 それにより、課題を作った当時は採用を見送った比較的新しめの CSS 構文へ fix されるようになりました。
@@ -37,7 +37,7 @@ StyleLint 15系へのアプデ対応をしている中で、基本ルールセ�
 - PostCSS：8.4.29
 - postcss-preset-env：9.1.3
 
-# postcss-preset-env
+## postcss-preset-env
 <OG url="https://preset-env.cssdb.org" />
 
 コードはこちらのリポジトリの一部として管理されています。
@@ -129,7 +129,7 @@ a:hover {
 }
 ```
 
-## 導入方法
+### 導入方法
 
 インストール.
 ```bash
@@ -147,7 +147,7 @@ module.exports = {
 
 オプションを渡して設定をカスタムすることももちろんできます。
 
-## 対応している PostCSS
+### 対応している PostCSS
 postcss-preset-env 配下の [src/plugins/plugins-data.mjs](https://github.com/csstools/postcss-plugins/blob/main/plugin-packs/postcss-preset-env/src/plugins/plugins-data.mjs) を見てもらえると良さそうです。
 ざっと60個以上ありますね…！すごい。
 （このファイルには記載がないですが、実は autoprefixer も内包されていたりします）
@@ -182,10 +182,10 @@ module.exports = {
 また、一部の PostCSS はポリフィルを追加で導入 + それを読み込む設定を追加する必要があることも注意です。
 詳細は [README - Plugins list - Plugins that need client library](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env#plugins-that-need-client-library) を参照ください。
 
-## オプション
+### オプション
 ここではオプションの一部だけ紹介。
 
-### stage
+#### stage
 各 CSS 機能が Web 標準として実装される過程における安定性を示すもの。
 どの stage の CSS 機能のポリフィルを有効にするかを指定。
 
@@ -211,7 +211,7 @@ stage 2の機能多いな👀
 デフォルトでは`2`が設定されています。
 大体の方は2のままでも、ほとんどの目新しい機能は試せそうですね。
 
-### minimumVendorImplementations
+#### minimumVendorImplementations
 最小ベンダー実装数のこと。
 どの実装ステータスに基づいて、CSS 機能のポリフィルを有効にするか指定。
 
@@ -226,7 +226,7 @@ postcssPresetEnv({ minimumVendorImplementations: 0 })
 デフォルト値は`0`。
 もし安定している CSS 機能のみにポリフィルを有効にしたい場合は、`2`が推奨されているようです。
 
-### features
+#### features
 各 PostCSS の id を指定することで、ポリフィルの有効無効を直接決定するもの。
 id は`src/plugins/plugins-data.mjs`を直接参照したり、公式ドキュメントから確認可能です。
 <OG url="https://preset-env.cssdb.org/features" />
@@ -250,7 +250,7 @@ postcssPresetEnv({
 
 これらのオプション設定を踏まえて、どの PostCSS のポリフィルを有効化するか一元管理してくれるわけです。便利。
 
-### プレイグラウンド
+## プレイグラウンド
 PostCSS をまとめて面倒見てくれることは分かったけれど、実際の出力がどうなるか検証したい！
 という方は、公式のプレイグラウンドを活用するとサッと検証できます。
 オプションもある程度カスタムできるので、stage などの設定を変更して比較なんかも簡単です。やったぜ。
@@ -275,7 +275,7 @@ PostCSS をまとめて面倒見てくれることは分かったけれど、実
 
 皆様の良い CSS ライフに繋がりますように～。
 
-# 参考リンクまとめ
+## 参考リンクまとめ
 - [postcss-preset-env](https://preset-env.cssdb.org)
 - [GitHub - csstools - postcss-preset-env](https://github.com/csstools/postcss-plugins/tree/main/plugin-packs/postcss-preset-env)
 - [GitHub - postcss-preset-env ※アーカイブ](https://github.com/csstools/postcss-preset-env)
