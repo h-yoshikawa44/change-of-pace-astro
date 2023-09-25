@@ -653,49 +653,49 @@
     "image": "",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://keens.github.io"
   },
-  "https://devchallenges.io": {
+  "https://legacy.devchallenges.io": {
     "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
     "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY": {
+  "https://legacy.devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY": {
     "title": "Button component Challenge | devChallenges.io",
     "description": "One of the best ways to learn front-end libraries is to create a reusable component. In this challenge, your task is to create a reusable button.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FButtonThumbnail.png?alt=media&token=3ddbedcf-a08b-4144-928f-e551b4bcee80",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp": {
+  "https://legacy.devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp": {
     "title": "Input component Challenge | devChallenges.io",
     "description": "One of the best ways to learn front-end libraries is to create reusable component. In this challenge, your task is to create a reusable input.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD": {
+  "https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD": {
     "title": "Windbnb Challenge | devChallenges.io",
     "description": "I love airbnb UI, it is so modern and clean. In this challenge, you will work with a similar UI to airbnb - windbnb.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5": {
+  "https://legacy.devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5": {
     "title": "Todo app Challenge | devChallenges.io",
     "description": "Todo app is one of the common projects when it comes to practicing coding.  This challenge is another todo list :).",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8": {
+  "https://legacy.devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8": {
     "title": "Random quote generator Challenge | devChallenges.io",
     "description": "Famous quotes can be a great source of motivation. This challenge is all about quotes.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8": {
+  "https://legacy.devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8": {
     "title": "Country quiz Challenge | devChallenges.io",
     "description": "If you want to learn more about countries, this challenge is perfect for you.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/mM1UIenRhK808W8qmLWv": {
+  "https://legacy.devchallenges.io/challenges/mM1UIenRhK808W8qmLWv": {
     "title": "Weather app Challenge | devChallenges.io",
     "description": "Weather app is another popular project for practicing coding. In this challenge, you will work an interesting UI for a weather app.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431",
@@ -707,13 +707,13 @@
     "image": "",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://nextjs.org"
   },
-  "https://devchallenges.io/solutions/ftLx16ngH2CDg6hFPU76": {
+  "https://legacy.devchallenges.io/solutions/ftLx16ngH2CDg6hFPU76": {
     "title": "Windbnb by Hitomi Yoshikawa",
     "description": "TypeScript × Next.js × emotion.  \nA page with a simple search function has been created.\n\nEven though it was only one screen and a drawer menu, there were surpr",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/ClokxKDirrSdDyCt8D0D": {
+  "https://legacy.devchallenges.io/solutions/ClokxKDirrSdDyCt8D0D": {
     "title": "Input component by Hitomi Yoshikawa",
     "description": "I have created an Input component that contains a label.\n\nSince it was created as a component for text input, the type of input element is limited to text forma",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e",
@@ -833,31 +833,31 @@
     "image": "https://opengraph.githubassets.com/75eb85956c5e2c875dd1a1970457baa4bd39b524015035b0a190242d4a221c38/Andy-set-studio/modern-css-reset",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
   },
-  "https://devchallenges.io/solutions/XYfovlFDBkg4qktnUh8b": {
+  "https://legacy.devchallenges.io/solutions/XYfovlFDBkg4qktnUh8b": {
     "title": "Button component by Hitomi Yoshikawa",
     "description": "Mainly Built with Next.js, emotion.\n\nI've been using UI component libraries for the most part.\nThis time, I challenged myself to create a component from scratch",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FButtonThumbnail.png?alt=media&token=3ddbedcf-a08b-4144-928f-e551b4bcee80",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/1juVePEnnmpjMCzrbvRr": {
+  "https://legacy.devchallenges.io/solutions/1juVePEnnmpjMCzrbvRr": {
     "title": "Weather app by Hitomi Yoshikawa",
     "description": "TypeScript × Next.js × emotion.\n\nWhen you access the app, it gets your location and retrieves and displays the weather forecast for that nearest location.\n(If y",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/BTvVlLhztEQ8Fz8UJ1Rf": {
+  "https://legacy.devchallenges.io/solutions/BTvVlLhztEQ8Fz8UJ1Rf": {
     "title": "Todo app by Hitomi Yoshikawa",
     "description": "TypeScript × Next.js × emotion.  \nI created a simple todo app using LocalStorage.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/DgZ6ich7Qg4s9mZo7rnZ": {
+  "https://legacy.devchallenges.io/solutions/DgZ6ich7Qg4s9mZo7rnZ": {
     "title": "Country quiz by Hitomi Yoshikawa",
     "description": "TypeScript × Next.js × emotion.\n\n※Regarding the REST COUNTRIES API, the assignment guide said it was https://restcountries.eu/, but I heard that it has become a",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/CoYDLZwFt5LqHxsD6xe7": {
+  "https://legacy.devchallenges.io/solutions/CoYDLZwFt5LqHxsD6xe7": {
     "title": "Random quote generator by Hitomi Yoshikawa",
     "description": "TypeScript × Next.js × emotion.  \n\nrandom quote will display the quote data randomly.\n\nauthor quote list displays a list of citation data for the specified auth",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116",
