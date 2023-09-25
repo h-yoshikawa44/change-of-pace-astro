@@ -1,5 +1,5 @@
 {
-  "https://devchallenges.io": {
+  "https://legacy.devchallenges.io": {
     "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
     "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
@@ -59,49 +59,49 @@
     "image": "https://pbs.twimg.com/media/DK4Wb1dUQAEu2mm.jpg:small",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://twicomi.com"
   },
-  "https://devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY": {
+  "https://legacy.devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY": {
     "title": "404 Not Found Challenge | devChallenges.io",
     "description": "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb": {
+  "https://legacy.devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb": {
     "title": "Interior Consultant Challenge | devChallenges.io",
     "description": "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/gcbWLxG6wdennelX7b8I": {
+  "https://legacy.devchallenges.io/challenges/gcbWLxG6wdennelX7b8I": {
     "title": "My Gallery Challenge | devChallenges.io",
     "description": "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U": {
+  "https://legacy.devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U": {
     "title": "My team page Challenge | devChallenges.io",
     "description": "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht": {
+  "https://legacy.devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht": {
     "title": "Recipe page Challenge | devChallenges.io",
     "description": "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0": {
+  "https://legacy.devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0": {
     "title": "Edie  homepage Challenge | devChallenges.io",
     "description": "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. ",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO": {
+  "https://legacy.devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO": {
     "title": "Checkout Page Challenge | devChallenges.io",
     "description": "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. ",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt": {
+  "https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt": {
     "title": "Portfolio Challenge | devChallenges.io",
     "description": "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
@@ -227,49 +227,49 @@
     "image": "",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://medium.com"
   },
-  "https://devchallenges.io/solutions/EQJ91PQg8nr6B3yfAPf1": {
+  "https://legacy.devchallenges.io/solutions/EQJ91PQg8nr6B3yfAPf1": {
     "title": "Edie homepage by Hitomi Yoshikawa",
     "description": "HTML × CSS × JavaScript × Vite.\n\nlearned/improved\n- Better, how to control the button outline during focus except for keyboard operation.\n- Shifting techniques ",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/SUwASJDgXBoBuZqxRxk7": {
+  "https://legacy.devchallenges.io/solutions/SUwASJDgXBoBuZqxRxk7": {
     "title": "Recipe page by Hitomi Yoshikawa",
     "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to layout with grid-row and grid-column\n- How to create a custom list number element using a pseudo-element.\n",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/YPhZQTkeMmNiwBx00RsM": {
+  "https://legacy.devchallenges.io/solutions/YPhZQTkeMmNiwBx00RsM": {
     "title": "404 Not Found by Hitomi Yoshikawa",
     "description": "HTML × CSS.  ",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/SFmxGtHXWkESKZbSrg67": {
+  "https://legacy.devchallenges.io/solutions/SFmxGtHXWkESKZbSrg67": {
     "title": "Checkout Page by Hitomi Yoshikawa",
     "description": "HTML × CSS × JavaScript × Vite.  \n※As for the form validation, it is done using HTML only.  \n※The pattern validation for Phone and Postal code is based on Japan",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/Yf7HiQpP7rAXzM1euefq": {
+  "https://legacy.devchallenges.io/solutions/Yf7HiQpP7rAXzM1euefq": {
     "title": "My Gallery by Hitomi Yoshikawa",
     "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to combine nth-child with grid-row and grid-column.\n",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/o1EB8NhO6xuVPuJWPY2m": {
+  "https://legacy.devchallenges.io/solutions/o1EB8NhO6xuVPuJWPY2m": {
     "title": "My team page by Hitomi Yoshikawa",
     "description": "HTML × CSS  \nThe npm library was only used for syntax checking and formatting.\n\nlearned/improved：\n- Now I know how to use :nth-child.",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/N7Gs8WCVYAbtkqWxomhL": {
+  "https://legacy.devchallenges.io/solutions/N7Gs8WCVYAbtkqWxomhL": {
     "title": "Interior Consultant by Hitomi Yoshikawa",
     "description": "HTML × CSS × JavaScript  \n\nlearned/improved：\n- basic usage of Vite.\n- Using Vite and the VSCode extension Autoprefixer together causes conflicts and hot reloadi",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://devchallenges.io"
   },
-  "https://devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6": {
+  "https://legacy.devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6": {
     "title": "Portfolio by Hitomi Yoshikawa",
     "description": "TypeScript × Next.js × emotion.\n\nlearned/improved\n-  I figured out how to build a card layout with flexbox and negative margins.\n- It turns out that RSS informa",
     "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
