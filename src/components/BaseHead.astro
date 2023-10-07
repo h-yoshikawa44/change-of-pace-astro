@@ -13,9 +13,10 @@ const canonicalURL =
     : new URL(Astro.url.pathname, Astro.site);
 
 const { title, description = SITE_DESCRIPTION } = Astro.props;
-
 const titleWithSiteTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const simpleTitle = title ? title : SITE_TITLE;
+
+const ogpImage = new URL('/ogp.png', Astro.site?.origin!);
 
 const GOOGLE_SITE_VERIFICATION = import.meta.env.GOOGLE_SITE_VERIFICATION;
 ---
@@ -40,14 +41,14 @@ const GOOGLE_SITE_VERIFICATION = import.meta.env.GOOGLE_SITE_VERIFICATION;
 <meta property="og:url" content={Astro.url} />
 <meta property="og:title" content={simpleTitle} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content="/ogp.png" />
+<meta property="og:image" content={ogpImage} />
 
 <!-- Twitter -->
 <meta property="twitter:card" content="summary" />
 <meta property="twitter:url" content={Astro.url} />
 <meta property="twitter:title" content={simpleTitle} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content="/ogp.png" />
+<meta property="twitter:image" content={ogpImage} />
 
 <!-- Google Search Console -->
 <meta name="google-site-verification" content={GOOGLE_SITE_VERIFICATION} />
