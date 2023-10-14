@@ -562,5 +562,53 @@
     "description": "plugin to add links to headings in HTML. Contribute to rehypejs/rehype-autolink-headings development by creating an account on GitHub.",
     "image": "https://opengraph.githubassets.com/b3ab978d6f1798cbdd6d3abe614e15c4d50d8d2c8baa0f8eae990f83c10374d4/rehypejs/rehype-autolink-headings",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://preset-env.cssdb.org": {
+    "title": "PostCSS Preset Env - CSSTools",
+    "description": "PostCSS Preset Env lets you transform modern CSS so most browsers can understand, determining the polyfills you need based on the browsers you want.",
+    "image": "https://cssdb.org/images/cssdb.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
+  },
+  "https://github.com/csstools/postcss-preset-env": {
+    "title": "GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
+    "description": "Convert modern CSS into something browsers understand - GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
+    "image": "https://opengraph.githubassets.com/a396c9a0cbccdfe0d49c029b4cf18a82e0a5ed516174ead124341cb4ea5d2176/csstools/postcss-preset-env",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://cssdb.org/#the-staging-process": {
+    "title": "CSS Database",
+    "description": "A comprehensive list of CSS features and their positions in the process of becoming implemented web standards.",
+    "image": "https://cssdb.org/images/cssdb.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cssdb.org"
+  },
+  "https://github.com/csstools/postcss-plugins": {
+    "title": "GitHub - csstools/postcss-plugins: PostCSS Tools and Plugins",
+    "description": "PostCSS Tools and Plugins. Contribute to csstools/postcss-plugins development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/41048c5267199cb8a4f407ddfa590ffb662eb75310d8778c543f8db44ba5bba8/csstools/postcss-plugins",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://cssdb.org": {
+    "title": "CSS Database",
+    "description": "A comprehensive list of CSS features and their positions in the process of becoming implemented web standards.",
+    "image": "https://cssdb.org/images/cssdb.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cssdb.org"
+  },
+  "https://preset-env.cssdb.org/playground": {
+    "title": "Interactive Playground - PostCSS Preset Env - CSSTools",
+    "description": "Play with PostCSS Preset Env in your browser",
+    "image": "https://cssdb.org/images/cssdb.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
+  },
+  "https://stylelint.io/demo": {
+    "title": "Demo | Stylelint",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
+  },
+  "https://preset-env.cssdb.org/features": {
+    "title": "Features - PostCSS Preset Env - CSSTools",
+    "description": "List of features included in PostCSS Preset Env",
+    "image": "https://cssdb.org/images/cssdb.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
   }
 }
