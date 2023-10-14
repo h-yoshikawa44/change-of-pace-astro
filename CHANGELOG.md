@@ -2,6 +2,11 @@
 Change Of Pace の機能の大まかな変化の記録。
 記事投稿・更新は含まない。
 
+## v5.1.2（2023-10-14）
+### Development Changed
+- 独自ドメインを Google Domains から Cloudflare Registrar に移管(#123)
+- ホスティング環境を Netlify から Cloudflare Pages に移行(#124)
+
 ## v5.1.1（2023-10-07）
 ### Changed
 - Twitter カードの形式を summary に移行(#116)
