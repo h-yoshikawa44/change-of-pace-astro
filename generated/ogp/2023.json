@@ -610,5 +610,113 @@
     "description": "List of features included in PostCSS Preset Env",
     "image": "https://cssdb.org/images/cssdb.jpg",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
+  },
+  "https://www.figma.com/community/widget/1301142159170473003/tag-note": {
+    "title": "Tag Note | Figma Community",
+    "description": "This widget is a simple and easy tool for adding tagged notes.\nBy using this widget, you can intuitively understand the content of the notes.\n\nThe following default tags are provided, available in both English and Japanese, and can be easily selected.\n\n\"Specs\"\"Notes\"\"Update\"\"Review\"\"Confirm\"\n(Mor...",
+    "image": "https://www.figma.com/community/snapshot?resource_id=1301142159170473003&resource_type=widget",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
+  },
+  "https://www.docswell.com/s/araya/51JEY8-fec-okinawa-2023": {
+    "title": "Now and Next Generation of CSS Cascading Model | ドクセル",
+    "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+    "image": "https://img.docswell.com/cover/LE1MPNR47G.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+  },
+  "https://www.figma.com/proto/uSIoSaF1Psg3lBkSHPEARx/2023%E5%B9%B4%E7%89%88-%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-%E6%8A%80%E8%A1%93%E9%81%B8%E5%AE%9A%E3%81%AE%E5%8B%98%E6%89%80---%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E6%B2%96%E7%B8%84?type=design&node-id=1-2&t=atIWRqOeGvEKt6q2-1&scaling=contain&page-id=0%3A1": {
+    "title": "Figma",
+    "description": "Created with Figma",
+    "image": "https://www.figma.com/file/uSIoSaF1Psg3lBkSHPEARx/thumbnail?ver=thumbnails/28a157f9-6e3e-4413-8519-da5bcde5c1fe",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
+  },
+  "https://www.youtube.com/watch?v=EAfjjmxkG9A": {
+    "title": "フロントエンドカンファレンス沖縄2023",
+    "description": "フロントエンドカンファレンス沖縄2023",
+    "image": "https://i.ytimg.com/vi/EAfjjmxkG9A/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBUgYih_MA8=&rs=AOn4CLBIEnKfCqGB3NRuts8EI5Gouq4WBA",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+  },
+  "https://frontend-conf.okinawa.jp": {
+    "title": "フロントエンドカンファレンス沖縄2023",
+    "description": "フロントエンドカンファレンスを沖縄で開催します！ HTML、JavaScript、UI、UX、デザイン、アクセシビリティ、SPAフレームワーク、PWAなど、フロントエンドに関する様々なセッション・企画をご用意。 デザイナーもエンジニアも、職種問わずWebに携わる方が楽しめるカンファレンスです。",
+    "image": "https://storage.googleapis.com/production-os-assets/assets/0feecf9e-8dac-44cb-b5e4-f604c1e8bb34",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://frontend-conf.okinawa.jp"
+  },
+  "https://speakerdeck.com/kgsi/front-end-thinking-in-event-planning": {
+    "title": "イベント企画設計における「フロントエンド」な考え方とその魅力",
+    "description": "フロントエンドカンファレンス沖縄2023で発表に使用したスライドです。 #front_okinawa\nhttps://frontend-conf.okinawa.jp/",
+    "image": "https://files.speakerdeck.com/presentations/6d4fd22a80404ac883244b495912ce6c/slide_0.jpg?27868447",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yahiru/3-debian-warukoto": {
+    "title": "フロントエンドエンジニアも知っておきたい HTTP/3 で変わること",
+    "description": "フロントエンドカンファレンス沖縄 2023 の登壇資料です",
+    "image": "https://files.speakerdeck.com/presentations/8663ea441a8a4ce9904433874e7aabd6/slide_0.jpg?27864037",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/ivanova1991/yuzadeng-lu-toroguinhuomuniautocompleteshu-xing-woshi-imasiyou": {
+    "title": "ユーザー登録とログインフォームにautocomplete属性を使いましょう",
+    "description": "Frontend Conference Okinawa 2023, 2023/11/18\nIvanova Marina, 株式会社ゆめみ",
+    "image": "https://files.speakerdeck.com/presentations/f54b9966d1f144b9b03179c2bba4ba4a/slide_0.jpg?27867761",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/nikkei_engineer_recruiting/frontend-okinawa": {
+    "title": "FRONTEND CONFERENCE OKINAWA 2023 スポンサーセッション発表スライド/frontend-okinawa",
+    "description": "FRONTEND CONFERENCE OKINAWA 2023 #front_okinawa 日本経済新聞社によるスポンサーセッション発表スライド です。\nタイトルは「日経のエンジニア組織とフロントエンド開発」です\nhttps://frontend-conf.okinawa.jp/\n\nhttps://front-okinawa.connpass.com/event/299738/\n",
+    "image": "https://files.speakerdeck.com/presentations/905cd5938c2246d38a7e16a7954145a9/slide_0.jpg?27864944",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/shinyaigeek/managing-side-effect-in-frontend-development": {
+    "title": "Managing \"side effect\" in Frontend Development",
+    "description": "In the web frontend development context, we should care about function's side effect not only for simplicity of the function's responsibility, but also for preventing unnecessary/dangerous code from leaking into client side.\n\nThis slides show why we should care about side effect in frontend development, and introduce treeche, which is the tool to detect side effect in the ESModule",
+    "image": "https://files.speakerdeck.com/presentations/1927f54b59774c08a6f2f0ee719ff03a/slide_0.jpg?27866330",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/rdlabo/private-product-frontend": {
+    "title": "プライベートプロダクト戦略 - フロントエンドカンファレンス沖縄 / private_product_frontend",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/c24d2737a2b240fdb756dfcfa2114e37/slide_0.jpg?27864617",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yuhei_fujita/frontend-conf-2023": {
+    "title": "進化したWeb技術でPWAをネイティブアプリに近づける / frontend-conf-2023",
+    "description": "フロントエンドカンファレンス沖縄2023の登壇資料です。\n\nhttps://frontend-conf.okinawa.jp/\n\n\nPDF出力の関係で一部レイアウトが崩れてるので、アニメーションありは以下のリンクから表示できます。\n\nhttps://yuheifujita.github.io/frontend-conf-2023/",
+    "image": "https://files.speakerdeck.com/presentations/9b315c47b3f349d9b79ebd4fade67cbb/slide_0.jpg?27863301",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/mottox2/nasekohiheteshi-ukonhonentoji-woli-yong-surunoka": {
+    "title": "なぜコピペで使うコンポーネント集を利用するのか？ ",
+    "description": "フロントエンドカンファレンス沖縄2023で発表に使用したスライドです。",
+    "image": "https://files.speakerdeck.com/presentations/d3af3203134e43068406a6fec7257e8c/slide_0.jpg?27867689",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yud0uhu/2023nian-no-zerorantaimucss-in-js-wokao-eru": {
+    "title": "2023年の ゼロランタイムCSS in JS⚡️ を考える",
+    "description": "フロントエンドカンファレンス沖縄2023のLTスライド資料です\nhttps://frontend-conf.okinawa.jp/",
+    "image": "https://files.speakerdeck.com/presentations/c744daa561dd454aa2f75b78aa0a51af/slide_0.jpg?27863809",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/nano72mkn/akusesibiriteiwoli-jie-surutohurontoendonotesutogale-ninaru": {
+    "title": "アクセシビリティを理解するとフロントエンドのテストが楽になる！",
+    "description": "フロントエンドカンファレンス2023 沖縄での登壇資料\nhttps://frontend-conf.okinawa.jp/",
+    "image": "https://files.speakerdeck.com/presentations/5a91d767ff2042959894bd9381297731/slide_0.jpg?27864081",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/seike460/creating-with-supabase-and-sveltekit-backend-less-serverless-websites": {
+    "title": "supabaseとSvelteKitで作るバックエンドレスなサーバーレスWebサイト / Creating with supabase and SvelteKit Backend-less serverless websites",
+    "description": "フロントエンドカンファレンス沖縄2023\nhttps://frontend-conf.okinawa.jp",
+    "image": "https://files.speakerdeck.com/presentations/f624e2c957194142a07d3629837ce22b/slide_0.jpg?27867184",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kazukihayase/graphqlkuraiantonoji-shu-xuan-ding-2023dong": {
+    "title": "GraphQLクライアントの技術選定 2023冬",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/9506e3e4058d4ad09c2ae6251897ed4f/slide_0.jpg?27864828",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/doggy/expo-router-ha-expo-dao-ru-nojue-meshou-tonaruka-hurontoendokanhuarensuchong-nawa-2023-at-kaito-dogi": {
+    "title": "Expo Router は Expo 導入の決め手となるか フロントエンドカンファレンス沖縄2023 @Kaito-Dogi",
+    "description": "2023/11/18 開催のフロントエンドカンファレンス沖縄2023にて、『Expo Router は Expo 導入の決め手となるか』 というテーマで発表しました。",
+    "image": "https://files.speakerdeck.com/presentations/67598150477041fc827a60fcd112b6c9/slide_0.jpg?27867413",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
   }
 }
