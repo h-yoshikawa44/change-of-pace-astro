@@ -623,12 +623,6 @@
     "image": "https://img.docswell.com/cover/LE1MPNR47G.jpg",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
   },
-  "https://www.figma.com/proto/uSIoSaF1Psg3lBkSHPEARx/2023%E5%B9%B4%E7%89%88-%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-%E6%8A%80%E8%A1%93%E9%81%B8%E5%AE%9A%E3%81%AE%E5%8B%98%E6%89%80---%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E6%B2%96%E7%B8%84?type=design&node-id=1-2&t=atIWRqOeGvEKt6q2-1&scaling=contain&page-id=0%3A1": {
-    "title": "Figma",
-    "description": "Created with Figma",
-    "image": "https://www.figma.com/file/uSIoSaF1Psg3lBkSHPEARx/thumbnail?ver=thumbnails/28a157f9-6e3e-4413-8519-da5bcde5c1fe",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
-  },
   "https://www.youtube.com/watch?v=EAfjjmxkG9A": {
     "title": "フロントエンドカンファレンス沖縄2023",
     "description": "フロントエンドカンファレンス沖縄2023",
@@ -717,6 +711,12 @@
     "title": "Expo Router は Expo 導入の決め手となるか フロントエンドカンファレンス沖縄2023 @Kaito-Dogi",
     "description": "2023/11/18 開催のフロントエンドカンファレンス沖縄2023にて、『Expo Router は Expo 導入の決め手となるか』 というテーマで発表しました。",
     "image": "https://files.speakerdeck.com/presentations/67598150477041fc827a60fcd112b6c9/slide_0.jpg?27867413",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/takanorip/2023nian-ban-tesainsisutemuji-shu-xuan-ding-nokan-suo": {
+    "title": "2023年版 デザインシステム 技術選定の勘所 - フロントエンドカンファレンス沖縄",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/a7b580a07aef4799b3526b4b725a6db4/slide_0.jpg?27876565",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
   }
 }
