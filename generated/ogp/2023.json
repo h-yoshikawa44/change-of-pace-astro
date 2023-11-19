@@ -623,12 +623,6 @@
     "image": "https://img.docswell.com/cover/LE1MPNR47G.jpg",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
   },
-  "https://www.figma.com/proto/uSIoSaF1Psg3lBkSHPEARx/2023%E5%B9%B4%E7%89%88-%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0-%E6%8A%80%E8%A1%93%E9%81%B8%E5%AE%9A%E3%81%AE%E5%8B%98%E6%89%80---%E3%83%95%E3%83%AD%E3%83%B3%E3%83%88%E3%82%A8%E3%83%B3%E3%83%89%E3%82%AB%E3%83%B3%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9%E6%B2%96%E7%B8%84?type=design&node-id=1-2&t=atIWRqOeGvEKt6q2-1&scaling=contain&page-id=0%3A1": {
-    "title": "Figma",
-    "description": "Created with Figma",
-    "image": "https://www.figma.com/file/uSIoSaF1Psg3lBkSHPEARx/thumbnail?ver=thumbnails/28a157f9-6e3e-4413-8519-da5bcde5c1fe",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
-  },
   "https://www.youtube.com/watch?v=EAfjjmxkG9A": {
     "title": "フロントエンドカンファレンス沖縄2023",
     "description": "フロントエンドカンファレンス沖縄2023",
@@ -718,5 +712,203 @@
     "description": "2023/11/18 開催のフロントエンドカンファレンス沖縄2023にて、『Expo Router は Expo 導入の決め手となるか』 というテーマで発表しました。",
     "image": "https://files.speakerdeck.com/presentations/67598150477041fc827a60fcd112b6c9/slide_0.jpg?27867413",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/takanorip/2023nian-ban-tesainsisutemuji-shu-xuan-ding-nokan-suo": {
+    "title": "2023年版 デザインシステム 技術選定の勘所 - フロントエンドカンファレンス沖縄",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/a7b580a07aef4799b3526b4b725a6db4/slide_0.jpg?27876565",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://jsconfjp-slide.pages.dev/": {
+    "title": "",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconfjp-slide.pages.dev"
+  },
+  "https://www.youtube.com/@jsconfjp": {
+    "title": "jsconfjp",
+    "description": "作成した動画を友だち、家族、世界中の人たちと共有",
+    "image": "https://yt3.googleusercontent.com/ytc/APkrFKahiexlyDIaTs1uQMJFEJAju2mA_NQfe69hp_Wr=s900-c-k-c0x00ffffff-no-rj",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+  },
+  "https://zenn.dev/akfm/articles/next-app-router-navigation": {
+    "title": "Next.js App Router 遷移の仕組みと実装",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--bBdmeL2Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Next.js%2520App%2520Router%2520%25E9%2581%25B7%25E7%25A7%25BB%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2581%25A8%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akfm_sato%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzllMzg2MWQ3OGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://onedrive.live.com/view.aspx?resid=D699ACCFCBD51CF5%211028670&authkey=!AGe_JV4mJeVFUBA": {
+    "title": "Microsoft",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://onedrive.live.com"
+  },
+  "https://zenn.dev/wakamsha/articles/setup-eslint-plugin-jsdoc": {
+    "title": "ESLint を使って JSDoc / TSDoc の記述を必須化する",
+    "description": "",
+    "image": "https://res.cloudinary.com/zenn/image/upload/s--hEBxj8uN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ESLint%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520JSDoc%2520%252F%2520TSDoc%2520%25E3%2581%25AE%25E8%25A8%2598%25E8%25BF%25B0%25E3%2582%2592%25E5%25BF%2585%25E9%25A0%2588%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:wakamsha%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2psYURiOW50NGN1UTUweE54dmxHcW50Rkxsbkg1VThSWUFZOUtBakE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+  },
+  "https://main--remarkable-figolla-a694f0.netlify.app/1": {
+    "title": "",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://main--remarkable-figolla-a694f0.netlify.app"
+  },
+  "https://canalun-company-2.deno.dev/guest_rooms/brickBlockAnywhere": {
+    "title": "Brick-Block-Anywhere Demo",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://canalun-company-2.deno.dev"
+  },
+  "https://blog.cybozu.io/entry/2023/09/25/080000": {
+    "title": "サイボウズOfficeのフロントエンド刷新（DOGOプロジェクト) をやってます！ - Cybozu Inside Out | サイボウズエンジニアのブログ",
+    "description": "DOGOプロジェクトのマスコット こんにちは。サイボウズOffice開発チームの西谷です。 昨年より、私たちは”DOGO”と銘打ち、サイボウズOfficeのフロントエンド部分をNext.js App Routerを用いて刷新しています。 本ブログではこの刷新プロジェクトの概要やこれまでの取り組みについてご紹介します。 プロジェクト発足の背景 刷新の方針 刷新後のサイボウズOfficeを支える技術 アプリケーションフレームワーク モニタリング テスト インフラ CI・CD これまでの取り組み Next.js側で画面のルーティングを制御する リリースパイプラインの構築 全画面共通部分の実装 今後の…",
+    "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yellow-sabotech/20230920/20230920170941.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.cybozu.io"
+  },
+  "https://www.npmjs.com/package/swc-plugin-power-assert": {
+    "title": "swc-plugin-power-assert",
+    "description": "power-assert SWC plugin. Latest version: 0.1.0, last published: 8 hours ago. Start using swc-plugin-power-assert in your project by running `npm i swc-plugin-power-assert`. There are no other projects in the npm registry using swc-plugin-power-assert.",
+    "image": "https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
+  },
+  "https://jsconf.jp/2023": {
+    "title": "JSConf JP",
+    "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+    "image": "https://jsconf.jp/2023/static/fec934935a8b84b24adead6e9feaea09/logo.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+  },
+  "https://azukiazusa.dev/blog/invokers-to-add-interactions-without-javascript/": {
+    "title": "JavaScript なしでインタラクションを追加する Invokers",
+    "description": "Invokers は JavaScript なしでインタラクションを追加するための提案です。`<button>` 要素に `invoketarget` 属性を指定することで、値として指定した id を持つ `<dialog>` などの要素の開閉状態を切り替えることが可能となります。",
+    "image": "https://azukiazusa.dev/blog/ogp/JavaScript%20%E3%81%AA%E3%81%97%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B%20Invokers/HTML.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://azukiazusa.dev"
+  },
+  "https://github.com/nkzw-tech/remdx": {
+    "title": "GitHub - nkzw-tech/remdx: Beautiful Minimalist React & MDX Presentations",
+    "description": "Beautiful Minimalist React & MDX Presentations. Contribute to nkzw-tech/remdx development by creating an account on GitHub.",
+    "image": "https://opengraph.githubassets.com/62ca01f5e00cb9ba553cad67c5a32832f00e051f1ba69c2457ecb4b2bb89dcf1/nkzw-tech/remdx",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  },
+  "https://speakerdeck.com/nissydev/deep-dive-into-biome-in-jsconf-2023": {
+    "title": "Deep dive into Biome in JSConf 2023",
+    "description": "The video included in the slides can be accessed here\nhttps://web.archive.org/web/20230328125908/https://rome.tools/blog/2022/11/08/rome-10/",
+    "image": "https://files.speakerdeck.com/presentations/95da612c83e54ee7a3a55b01af5033cb/slide_0.jpg?27870267",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://docs.wantedly.dev/": {
+    "title": "Wantedly Engineering Handbook - Wantedly Engineering Handbook",
+    "description": "",
+    "image": "",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.wantedly.dev"
+  },
+  "https://speakerdeck.com/wakamsha/hurontoendoriakitekutiyaringutokai-fa-timunosukirutoransuhuaniokeru9keyue-jian-nofen-dou-ji": {
+    "title": "フロントエンドリアーキテクチャリングと開発チームのスキルトランスファーにおける9ヶ月間の奮闘記",
+    "description": "2023年1月から9月にかけて弊社 BtoB web アプリケーションのリアーキテクチャリングプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。",
+    "image": "https://files.speakerdeck.com/presentations/b2a725f76e7c474799125f6c25b3f1f4/slide_0.jpg?27874647",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/baseballyama/jsconf-jp-2023-llm-da-gui-mo-yan-yu-moderu-quan-sheng-shi-dai-nokai-fa-purakuteisu": {
+    "title": "(JSConf JP 2023) LLM (大規模言語モデル) 全盛時代の開発プラクティス",
+    "description": "このPDFは「LLM全盛時代の開発プラクティス」というタイトルの資料で、baseballyama氏によって作成されました。内容は主に大規模言語モデル（LLM）を活用した開発プラクティスに関するものです。\n\n主な内容は以下の通りです：\n\n1. **GitHub Copilotについて**:\n    - Copilotの利用が増え、コード提案を受け入れてから精査する流れが一般的になった。\n    - インターネット接続がないと利用できないことが難点。\n    - Copilotは開いているファイルを参考にしてコードを提案し、統一されていないコードは提案の精度を低下させる。\n\n2. **AIツールによる効率化**:\n    - AIレビューツールとFigma to Codeツールについて議論。\n    - AIレビューツールは一般的なアドバイスに留まり、具体的な自社ルールに基づいたレビューが求められる。\n    - Figma to Codeでは、自社のデザインシステムに基づいたUIコンポーネントの生成が理想だが、現実では汎用的なコンポーネントが生成される傾向にある。\n\n3. **AIツールの活用法**:\n    - 現実の業務において、AIツールは自社特有のコンテキストを理解する必要があるが、これを達成しているツールは少ない。\n    - AIは新人のように扱うと理解しやすく、プロセスとデータを明確に教える必要がある。\n    - レビューワークフローを言語化し、AIツールに適用して、不足している情報を補う。\n\n4. **LLMの実装と結果**:\n    - コーディングルールに基づき、GitHubのプルリクエスト（PR）に対して指摘や改善案を提案する。\n    - 正しい指摘がある一方で誤った指摘もあり、コーディング規約を日々確認する副次効果がある。\n    - Vue 3コンポーネントの実装では、Figmaとの往復が減り、作業時間が大幅に短縮された。\n\n5. **実装前のプロセス**:\n    - 作業プロセスと必要なデータを言語化し、単純で工数の大きいプロセスを特定する。\n    - 静的検査で自動化できない場合は、GitHub Copilotなどの既存ツールで対処し、必要に応じてLLMを活用する。\n\n6. **サービスの成長と将来的な展望**:\n    - OpenAIを中心としたLLMを使用したサービスの成長が著しい。\n    - 既存製品の活用と、将来的に解決される問題に対しては自作を控えるバランスが必要。\n\n7. **プログラミング実装例**:\n    - Chat GPTに対して具体的な指示と必要なデータを提供し、期待値との差異を確認する。\n    - 指示とデータを修正し、プログラムを実装して運用を開始する。\n    - 具体的なコーディング規約違反の例を挙げ、その理由を詳述する。\n\nこの資料は、AIツールやLLMを活用した開発プラクティスに関する具体的なケーススタディと実装例を提供しており、現代のソフトウェア開発におけるAIの活用方法についての洞察を提供しています。\n\n--- \n\nこのスライド「LLM全盛時代の開発プラクティス」は、特にAIと大規模言語モデル（LLM）を現代のソフトウェア開発プロセスに統合する方法に関心がある方にとって非常に有用です。以下の点でその有用性が特に際立っています：\n\n1. **現実的なAIツールの評価**:\n   - GitHub Copilotや他のAIレビューツール、Figma to Codeのようなツールの実践的な使用例とその限界についての詳細な分析を提供します。これは、これらのツールを日々の開発プロセスに統合しようと考えている開発者にとって役立つ情報です。\n\n2. **実装の具体例と指針**:\n   - AIを効果的に活用するための具体的なステップと考慮事項を提供し、それによってAIの導入を検討する際の実用的なロードマップを提供します。\n\n3. **プロセスの最適化**:\n   - AIツールの適切な使用による作業時間の削減や効率化の具体例を示しており、これは開発時間とリソースの割り当てについて考える際に非常に有用です。\n\n4. **将来の展望と調整**:\n   - AIとLLMの急速な進化に伴う、既存のツールの選択とカスタムツール開発の間のバランスについての洞察を提供します。これは長期的な戦略計画において重要な考慮事項です。\n\n5. **実際のコード例と実装**:\n   - 実際のコーディング規約違反の例とそれを解決するためのAIの使用例を含めており、具体的な事例を通じて理解を深めるのに役立ちます。\n",
+    "image": "https://files.speakerdeck.com/presentations/f82763b7f0bb41989fafc72bdd49c424/slide_0.jpg?27872937",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/mugi_uno/next-dot-js-app-router-deno-mpa-hurontoendoshua-xin": {
+    "title": "Next.js App Router での MPA フロントエンド刷新",
+    "description": "JSConf JP 2023",
+    "image": "https://files.speakerdeck.com/presentations/32e120aa3fa94fa7bc3cc1e2480d8e07/slide_0.jpg?27873698",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://webauthn.me/": {
+    "title": "Web Authentication (WebAuthn) Credential and Login Demo",
+    "description": "Try the Web Authentication demo to register a credential and login with biometrics. WebAuthn spec enables public key-based credentials for securely authenticating users using hardware authenticators.",
+    "image": "https://cdn.auth0.com/blog/webauthn:card.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://webauthn.me"
+  },
+  "https://speakerdeck.com/sosukesuzuki/jsconf-jp-2023-supikanoto-shu-itajavascriptgasonomamaburauzadedong-kuwei-lai-he": {
+    "title": "「書いたJavaScriptがそのままブラウザで動く未来へ」スピーカーノート",
+    "description": "2023年11月19日開催された JSConf JP 2023 で発表した「書いたJavaScriptがそのままブラウザで動く未来へ」のスピーカーノートです（スライドに対した情報がないので、スピーカーノートをそのまま公開します）。",
+    "image": "https://files.speakerdeck.com/presentations/b0c2476ac43e4306a0978e66c1191335/slide_0.jpg?27875357",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/yusukebe/hono-v3-and-v4": {
+    "title": "Hono v3 and v4",
+    "description": "JSConf JP\nNov 19, 2023. Yusuke Wada",
+    "image": "https://files.speakerdeck.com/presentations/b78f584ff4a446af90ab29fbfd4ccbb6/slide_0.jpg?27875122",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://www.wantedly.com/companies/wantedly/post_articles/872375?utm_source=t.co&utm_medium=share&lang=ja": {
+    "title": "【JSConf JP 2023】スポンサートークとしてデザインシステム仕切り直しの話をしました | Wantedly, Inc.",
+    "description": "こんにちは！ウォンテッドリーでエンジニア採用を担当している竹内みずきです。本日はリクルート様の九段下オフィスにてJSConf JP 2023に協賛し、オフライン参加致しました。過去2年間はオンラ...",
+    "image": "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=1200,dh=630,da=s,ds=s,cw=1200,ch=630,cc=FFFFFF)/assets/images/15914864/original/94e4eaa6-5b98-413b-a0ce-2427a4e63502?1700385953",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.wantedly.com"
+  },
+  "https://speakerdeck.com/smt7174/bun-gameziyaririsusaretakedo-ben-dang-nibun-hanode-dot-js-niqu-tutedai-warunoka-woaws-lambda-dejian-zheng-sitemita": {
+    "title": "Bun がメジャーリリースされたけど、本当にBun はNode.js に取って代わるのか？をAWS Lambda で検証してみた",
+    "description": "2023/11/19(日) に開催された、JSConf JP における私のセッション「Bun がメジャーリリースされたけど、本当にBun はNode.js に取って代わるのか？をAWS Lambda で検証してみた」の発表資料になります。 #jsconfjp\n\nhttps://jsconf.jp/2023/",
+    "image": "https://files.speakerdeck.com/presentations/43fc4d96ac744ec0bae21612ec77a905/slide_0.jpg?27872152",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://docs.google.com/presentation/d/1YVdn5yWHv3vI6sY_c-zo8zcDX2z4Ivpkhj7dJOivNMY/edit#slide=id.g29cfbd0e8bc_2_0": {
+    "title": "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
+    "description": "画面遷移のアクセシビリティ課題を 解決しうるNavigation APIへの期待 JSConfJP 2023 | 2023-11-19 1",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyImXjfDf5tWDo1An5MrAtqTfGrIkvACE6aeuepU11kMzghUfgyrJV3fNMdQ-omPbpxvgEkAh_p4i1xcgEFOUmiJRNiQqecTg1XAE_8Bg6vVbg=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://speakerdeck.com/azukiazusa1/javascript-nasidedong-zuo-surumodannakodonoshu-kifang": {
+    "title": "JavaScript なしで動作するモダンなコードの書き方",
+    "description": "Next.js、Remix、SvelteKit といった近年のフレームワークは、JavaScript がなくても動作することを一つの価値として提供しています。\n\n例えばSvelteKit のフォームではプログレッシブエンハンスメントとして、JavaScript が利用できる環境ではリッチなユーザー体験を提供しつつ、JavaScript が使えない環境においては HTML のフォームとして振る舞うことでアプリケーションの機能を変わらず提供できます。 React Server Component はサーバー側で HTML に変換されるため、クライアントに JavaScript のコードが配信されることはありません。React Server Component では useState() を使用できないといった制約がありますので、我々開発者は React Server Component の利点を十分に発揮するために、JavaScript を用いた状態管理を行う範囲を狭めることが求められています。\n\nこのトークでは、CSS の :has() セレクターや、Popover API といった、従来は JavaScript を用いなければ提供できなかった機能を代替する方法を紹介します。",
+    "image": "https://files.speakerdeck.com/presentations/d13020c55c1245628d228a0131af3af7/slide_0.jpg?27864799",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kojiota/privacysandboxapiwoshi-tutaburauzashang-denoguang-gao-okusiyon": {
+    "title": "PrivacySandboxAPIを使ったブラウザ上での広告オークション",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/8791df8d97e349bbbdebfb4c70f7dd40/slide_0.jpg?27874959",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/clown0082/visually-experience-the-beauty-of-mathematics-with-p5-dot-js": {
+    "title": "Visually experience the beauty of mathematics with p5.js",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/df65bc7cb9a245a9be461c2cfa570c24/slide_0.jpg?27876250",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/hokaccha/modular-monolith-graphql-server-with-node-dot-js": {
+    "title": "Kotlin製のGraphQLサーバーをNode.jsでモジュラモノリス化している話",
+    "description": "",
+    "image": "https://files.speakerdeck.com/presentations/c7fcb6b3c15347ddaa32e36acbc7549e/slide_0.jpg?27874729",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/kinocoboy2/jsconfjp2023-storybookqu-dong-kai-fa-nozai-xian-xing-toxiao-lu-hua": {
+    "title": "JSConfjp2023 Storybook駆動開発の再現性と効率化",
+    "description": "#jsconfjp #jsconfjp_d",
+    "image": "https://files.speakerdeck.com/presentations/5a63092f1e4a41f2ae61921dc9512e3f/slide_0.jpg?27875448",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/sajikix/intlnojin-madetokorekara": {
+    "title": "Intlの今までとこれから",
+    "description": "JSConf JP 2023 :  2023/11/19\n- https://jsconf.jp/2023/talk/ryusei-sajiki-1/\n",
+    "image": "https://files.speakerdeck.com/presentations/2b8451dc32d64d6c925025b1dd00390a/slide_0.jpg?27874850",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/chloe463/dezainsisutemushi-qie-rizhi-si": {
+    "title": "デザインシステム仕切り直し",
+    "description": "JSConf JP 2023 のスポンサーセッションで発表した、ウォンテッドリーのデザインシステムについての取り組み・失敗についてのスライドです。",
+    "image": "https://files.speakerdeck.com/presentations/402a82b169044b868ba09bb192a130d1/slide_0.jpg?27875901",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://speakerdeck.com/twada/second-system-syndrome-a-tale-of-power-assert": {
+    "title": "Second-System Syndrome: A tale of power-assert",
+    "description": "Second-System Syndrome: A tale of power-assert\n#jsconfjp\nhttps://jsconf.jp/2023/",
+    "image": "https://files.speakerdeck.com/presentations/99c17148c5ff4cb6803c02426875a3b0/slide_0.jpg?27877024",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+  },
+  "https://www.npmjs.com/package/@power-assert/esm": {
+    "title": "@power-assert/esm",
+    "description": "power-assert esm loader. Latest version: 0.1.0, last published: 8 hours ago. Start using @power-assert/esm in your project by running `npm i @power-assert/esm`. There are no other projects in the npm registry using @power-assert/esm.",
+    "image": "https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
   }
 }
