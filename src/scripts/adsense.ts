@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     firstScript.parentNode?.insertBefore(ad, firstScript);
 
     const gAdUnitBaseList = Array.from(
-      document.getElementsByClassName('adsense-unit-base')
+      document.getElementsByClassName('adsense-unit-base'),
     );
     gAdUnitBaseList.forEach((base) => {
       const { adUnit, adUnitPush } = createGoogleAdsenseUnitElement();

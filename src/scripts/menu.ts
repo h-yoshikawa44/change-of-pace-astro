@@ -33,7 +33,7 @@ MENU_TYPE_LIST.forEach((type) => {
 
   if (type !== 'anchor') return;
   const anchorLinkListItem = document.querySelectorAll(
-    'a.anchor-link-list-item'
+    'a.anchor-link-list-item',
   );
   anchorLinkListItem.forEach((a) => {
     a.addEventListener('click', menuClose);

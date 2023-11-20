@@ -13,7 +13,7 @@ const { markdownHeadings } = Astro.props;
   {
     markdownHeadings.map((heading) => (
       <AnchorLinkListItem href={`#${heading.slug}`}>{`${'#'.repeat(
-        heading.depth
+        heading.depth,
       )} ${heading.text}`}</AnchorLinkListItem>
     ))
   }
