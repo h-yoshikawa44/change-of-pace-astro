@@ -20,7 +20,8 @@
       },
       "ja-no-successive-word": {
         "allow": [
-          "/ほど/i"
+          "/ほど/i",
+          "/では/i"
         ]
       }
     }
