@@ -69,8 +69,7 @@
     "unocss": "^0.56.1"
   },
   "volta": {
-    "node": "18.15.0",
-    "npm": "8.6.0"
+    "node": "20.9.0"
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged",
