@@ -916,5 +916,23 @@
     "description": "power-assert esm loader. Latest version: 0.1.0, last published: 8 hours ago. Start using @power-assert/esm in your project by running `npm i @power-assert/esm`. There are no other projects in the npm registry using @power-assert/esm.",
     "image": "https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
     "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
+  },
+  "https://www.docswell.com/s/hireroo/5987RP-2023-11-19-JSConfJP-confidence-boundaries-of-values": {
+    "title": "TypeScriptで型定義を信頼しすぎず「信頼境界線」を設置した話 | ドクセル",
+    "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+    "image": "https://img.docswell.com/cover/972GLYZR7R.jpg",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+  },
+  "https://docs.google.com/presentation/d/1hjs2J4fScWcs42oJ11F9uv1iuSnb_25TEZxyJo6UlLU/edit": {
+    "title": "JSConf2023_vf_en_public",
+    "description": "TEARING DOWN 'BRICK-BREAK-ANYWHERE' JOURNEY INTO THE UNCHARTED TERRITORIES OF DOM SCRIPTING",
+    "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJTw0G2RqjAJ1tchOWeBtsYMV9YGcmpJ25M882Y3wd4m8kVmHw6pi0M1ROLWGXuHRv4fBOzLSRnlZEPmj38cvuXtnDWS8oeEu9fZk-kPDizM_I=w1200-h630-p",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+  },
+  "https://speakerdeck.com/poteboy/kuma-uinokoremadetokorekara": {
+    "title": "Kuma UIのこれまでとこれから",
+    "description": "Discover the journey of how someone with no prior OSS experience built this zero-runtime UI component library, the story behind its creation, its evolution, and the future vision for Kuma UI.",
+    "image": "https://files.speakerdeck.com/presentations/c93aca578731436597ed59aee7d49090/slide_0.jpg?27880732",
+    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
   }
 }
