@@ -6,7 +6,7 @@ type Props = {
   url: string;
 };
 
-type OGPJson = Record<
+type PostOGP = Record<
   string,
   {
     title: string;
@@ -16,9 +16,17 @@ type OGPJson = Record<
   }
 >;
 
-const found = Astro.request.url.match(/posts\/(\d{4})/);
-if (found === null) throw Error('記事URLから年度が抽出できませんでした');
-const postYear = found[1];
+type OGPJson = Record<string, PostOGP>;
+
+const fileNameFoumd = Astro.request.url.match(/posts\/(.*)/);
+if (fileNameFoumd === null)
+  return Error('記事URLからファイル名の抽出ができませんでした。');
+const postYearFound = Astro.request.url.match(/posts\/(\d{4})/);
+if (postYearFound === null)
+  throw Error('記事URLから年度が抽出できませんでした。');
+
+const fileName = fileNameFoumd[1];
+const postYear = postYearFound[1];
 const { url } = Astro.props;
 const generatedFilePath = new URL(
   `../../generated/ogp/${postYear}.json`,
@@ -33,11 +41,11 @@ let image: string = '';
 let favicon: string = '';
 const origin = new URL(url).origin;
 
-if (ogp[url]) {
-  title = ogp[url].title;
-  description = ogp[url].description;
-  image = ogp[url].image;
-  favicon = ogp[url].favicon;
+if (ogp[fileName] && ogp[fileName][url]) {
+  title = ogp[fileName][url].title;
+  description = ogp[fileName][url].description;
+  image = ogp[fileName][url].image;
+  favicon = ogp[fileName][url].favicon;
 } else {
   const html = await fetch(url).then((res) => res.text());
   const $ = load(html);
@@ -62,11 +70,14 @@ if (ogp[url]) {
       JSON.stringify(
         {
           ...ogp,
-          [url]: {
-            title,
-            description,
-            image,
-            favicon,
+          [fileName]: {
+            ...ogp[fileName],
+            [url]: {
+              title,
+              description,
+              image,
+              favicon,
+            },
           },
         },
         null,

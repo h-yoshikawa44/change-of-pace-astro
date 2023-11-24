@@ -1,602 +1,684 @@
 {
-  "https://docusaurus.io": {
-    "title": "Build optimized websites quickly, focus on your content | Docusaurus",
-    "description": "An optimized site generator in React. Docusaurus helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.",
-    "image": "https://docusaurus.io/img/docusaurus-social-card.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docusaurus.io"
-  },
-  "https://github.com/wojtekmaj/react-lifecycle-methods-diagram": {
-    "title": "GitHub - wojtekmaj/react-lifecycle-methods-diagram: Interactive React Lifecycle Methods diagram.",
-    "description": "Interactive React Lifecycle Methods diagram. Contribute to wojtekmaj/react-lifecycle-methods-diagram development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/f9682cd2dc10c30cf89fdbb7f3f8c4f8551fe00a040db792c1e6ba20dddea91b/wojtekmaj/react-lifecycle-methods-diagram",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://create-react-app.dev": {
-    "title": "Create React App",
-    "description": "Set up a modern web app by running one command.",
-    "image": "https://create-react-app.dev/img/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://create-react-app.dev"
-  },
-  "https://github.com/facebook/prop-types": {
-    "title": "GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
-    "description": "Runtime type checking for React props and similar objects - GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
-    "image": "https://opengraph.githubassets.com/8ea3568bec653e4d717f9dccc5bcfd1dde891bdb0ba73eee7a88919ce68d05f3/facebook/prop-types",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://ja.reactjs.org": {
-    "title": "React – ユーザインターフェース構築のための JavaScript ライブラリ",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://ja.reactjs.org/docs/fragments.html": {
-    "title": "フラグメント – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://ja.reactjs.org/docs/typechecking-with-proptypes.html": {
-    "title": "PropTypes を用いた型チェック – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://ja.reactjs.org/docs/strict-mode.html": {
-    "title": "strict モード – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://ikesyo.hatenablog.com/entry/2020/12/18/141737": {
-    "title": "Reactコンポーネントの定義にFCではなくVFCを使う - いけだや技術ノート",
-    "description": "[RFC] React 18 and types-only breaking changes · Issue #46691 · DefinitelyTyped/DefinitelyTyped [@types/react] add VoidFunctionComponent type which does not accept \"children\" by awmottaz · Pull Request #46643 · DefinitelyTyped/DefinitelyTyped https://react-typescript-cheatsheet.netlify.app/docs/basi…",
-    "image": "https://ogimage.blog.st-hatena.com/12704346814673854626/26006613666808733/1608268784",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ikesyo.hatenablog.com"
-  },
-  "https://qiita.com/tttocklll/items/c78aa33856ded870e843": {
-    "title": "【TypeScript】React.VFCとは何ぞや - Qiita",
-    "description": "\n\nはじめに\n\nReactにHooksが導入され、最近ではFunction Componentを採用することがほとんどになってきたように思います。\n\nFunction Componentを定義するための型としてReact.FCが提供さ...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9JUUzJTgwJTkwVHlwZVNjcmlwdCVFMyU4MCU5MVJlYWN0LlZGQyVFMyU4MSVBOCVFMyU4MSVBRiVFNCVCRCU5NSVFMyU4MSU5RSVFMyU4MiU4NCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YmQ1YWZjNGRmYjZjNzFmN2ZlODMyYzc3ZTkyM2E5MjI&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdHR0b2NrbGxsJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1iZjljNjE1MDI1NTk0YWU1MDM3NjI0N2MyZTIwNzVlMA&blend-x=142&blend-y=491&blend-mode=normal&s=1d8e849cd40c2222b4862ea57c190467",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://codesandbox.io": {
-    "title": "CodeSandbox: Code, Review and Deploy in Record Time",
-    "description": "CodeSandbox is a cloud development platform that empowers developers to code, collaborate and ship projects of any size from any device in record time.",
-    "image": "https://codesandbox.io/new/images/og.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
-  },
-  "https://stackblitz.com": {
-    "title": "StackBlitz | Instant Dev Environments | Click. Code. Done. - StackBlitz",
-    "description": "",
-    "image": "https://c.staticblitz.com/assets/social_general-46c72e351133f2b4d1352d8d870ce851ab16a59b0b2f10e41e11e036a88b7273.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stackblitz.com"
-  },
-  "https://ja.reactjs.org/docs/hooks-intro.html": {
-    "title": "フックの導入 – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://ja.reactjs.org/docs/react-component.html": {
-    "title": "React.Component – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://qiita.com/Julia0709/items/3c3fc8d29fd2e56ed7a9": {
-    "title": "React(v16.4) コンポーネントライフサイクルメソッドまとめ - Qiita",
-    "description": "\n\nはじめに\n\nQiita初投稿です。去年からReact、React Nativeでアプリ制作をしてきた中で学んだことを書き留めていきます。React、いろいろな使い方ができて奥が深いところがとても面白いですね。私自身Reactを勉強...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9UmVhY3QlMjh2MTYuNCUyOSUyMCVFMyU4MiVCMyVFMyU4MyVCMyVFMyU4MyU5RCVFMyU4MyVCQyVFMyU4MyU4RCVFMyU4MyVCMyVFMyU4MyU4OCVFMyU4MyVBOSVFMyU4MiVBNCVFMyU4MyU5NSVFMyU4MiVCNSVFMyU4MiVBNCVFMyU4MiVBRiVFMyU4MyVBQiVFMyU4MyVBMSVFMyU4MiVCRCVFMyU4MyU4MyVFMyU4MyU4OSVFMyU4MSVCRSVFMyU4MSVBOCVFMyU4MiU4MSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NTY0NDdjMTA4YWY0YjAxMDcyODI2MTZhZDA3YzBkNGU&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQweXVyaWEtbiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NzNhZmE1NjY0YTk0OGQ0YTY2ZjFjNzFjYjRkM2NhNDk&blend-x=142&blend-y=491&blend-mode=normal&s=2101b52c47ede8f3a3565a5058b1fb8e",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://ja.reactjs.org/docs/hooks-custom.html": {
-    "title": "独自フックの作成 – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/README.md": {
-    "title": "react/packages/eslint-plugin-react-hooks/README.md at main · facebook/react",
-    "description": "The library for web and native user interfaces. Contribute to facebook/react development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/79fa3eebc7b50cabac771f758203f85862b7bd6b8fd981d3921593412bac670a/facebook/react",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://github.com/gsoft-inc/craco": {
-    "title": "GitHub - dilanx/craco: Create React App Configuration Override, an easy and comprehensible configuration layer for Create React App.",
-    "description": "Create React App Configuration Override, an easy and comprehensible configuration layer for Create React App. - GitHub - dilanx/craco: Create React App Configuration Override, an easy and comprehen...",
-    "image": "https://opengraph.githubassets.com/a45f9f408bbed62766325581bd90de3bfec5d0dd035409787c621b3cbae6def6/dilanx/craco",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://ja.reactjs.org/docs/hooks-reference.html": {
-    "title": "フック API リファレンス – React",
-    "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
-    "image": "https://legacy.reactjs.org/logo-og.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
-  },
-  "http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram": {
-    "title": "React Lifecycle Methods diagram",
-    "description": "Fully interactive and accessible React Lifecycle Methods diagram.",
-    "image": "https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ogimage.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=http://projects.wojtekmaj.pl"
-  },
-  "https://fukuoka.serverlessdays.io": {
-    "title": "ServerlessDays Fukuoka 2019",
-    "description": "A community based conference focusing on Serverless based platforms and technologies. Fukuoka, December, 2019",
-    "image": "https://fukuoka.serverlessdays.io/assets/images/fukuoka-thumbnail-min.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fukuoka.serverlessdays.io"
-  },
-  "https://speakerdeck.com/moririn772/rubyonjets-with-aws-for-research": {
-    "title": "User Not Found - Speaker Deck",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://www.slideshare.net/tsukasakatou9/kubernetes-keda": {
-    "title": "ぼうけんにでかけよう Kubernetes KEDA",
-    "description": "ぼうけんにでかけよう Kubernetes KEDA 2019-12-14 Tsukasa Kato \fProfile • Tsukasa Kato / 加藤 司 • 株式会社オルターブース テクニカルアーキテクト • Microsoft MVP for Microsoft Azure • https://tsuka...",
-    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/serverlessdayes-191214070132-thumbnail.jpg?width=640&height=640&fit=bounds",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
-  },
-  "https://speakerdeck.com/line_developers/state-of-serverless-x-k8s-in-kubecon-2019-na": {
-    "title": "KubeCon 2019 NAから見るServerless × k8sの現状 / State of Serverless x k8s in KubeCon 2019 NA",
-    "description": "2019/12/14に開催されたServerlessDays Fukuoka 2019での萬治による登壇資料です",
-    "image": "https://files.speakerdeck.com/presentations/2dbff096b3804cf783eaf475e1efd3b9/slide_0.jpg?14466525",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/kosukekimura/enziniali-1keyue-dakedosabaresunasabisuwoshi-tuteshi-ye-nigong-xian-dekitahua": {
-    "title": "エンジニア歴1ヶ月だけどサーバレスなサービスを使って事業に貢献できた話",
-    "description": "経理畑から一念発起してキャリアチェンジしてエンジニアになりました。\nAmazonConnectを使用して、社内の問い合わせフローの改善を実施した話。",
-    "image": "https://files.speakerdeck.com/presentations/dc2b9ae52bc24310af38da4c40f8cd15/slide_0.jpg?14472164",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/shimpeiws/talk-about-serverless-other-than-application": {
-    "title": "サーバーレスでAPIを提供する際のアプリケーション\"以外\"の話 / Talk about Serverless Other than Application",
-    "description": "ServerlessDays Fukuoka 2019",
-    "image": "https://files.speakerdeck.com/presentations/1042ae5332b6455d9e6c48a117869bfa/slide_0.jpg?14465094",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/miu_crescent/3ri-jian-deshi-ishe-te-ibentoyong-you-liao-raibupei-xin-sabisufalsegou-zhu": {
-    "title": "3日間で使い捨て！イベント用有料ライブ配信サービスの構築",
-    "description": "『Talk Abstract』\n社内でゴーサインが出てから、サービス公開までわずか１ヶ月。内製でのwebサービスの構築は今回が初めてでした。 「やらない事をいかに増やすか」を念頭に考え、無駄を排除していったら結果的にサーバレス アーキテクチャになっていました。awsのフルマネージドサービスであるMedia Servicesを中心に、フロントエンドはNuxt.jsによるSPAで構築しました。認証はAuth0, 決済はStripe, 動画プレイヤーはTHEO PlayerなどSaaSとの連携をLambdaで実現し、手間を減らしていきました。 初内製案件という事で、技術的な壁より社内政治の壁の方が大変でしたのでその話も。\n\n『Talk Description』\n[アーキテクチャ]\n・NTT東日本のCloudGatewayを用いてDirect conncet\n・MediaLiveのVPC inputから映像入力\n・MediaPackageでNEXTSCAPEさんのMulti DRM Kitで映像を暗号化\n・MediaPackageをCloudFrontを接続して、THEO Playerで再生\n・プレイヤー再生時にLambdaからDRM認証をかけている(widevine/playready/Fairplay Streaming)\n・Nuxt.jsのページにTHEO Playerを埋め込んだものをS3に配置\n・S3 + CloudFront + Route53 + ACM でhttps://ドメインで公開\n\n[SaaS連携]\n・決済サービスはStirpe\n・Elementsを採用。フォームのデザインを合わせたかった\n・認証サービスはAuth0\n・Lockを採用。ログインはSNSの4種類のみ(FB,TW,LINE,Google) -Ruleで作成したuser_metadataにらStripeの購入情報を保持\n・この時の処理もLambdaから各種APIを叩いている\n・購入状態に合わせて画面制御をするためにフロントからAuth0のAPIを叩く。\n・これがsafariでだけ動かなかったので、Lambdaで叩くことに。\n・上限が怖かったのでここだけGCPのCloud Funtionを用意\n\n[結果]\n・無事に開発も終わり、黒字で終了することができました。",
-    "image": "https://files.speakerdeck.com/presentations/6a0b55cdc2be46519d96fb02de15cfa6/slide_0.jpg?14465187",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/ktam1219/iotdebaisufalseyi-si-detasong-xin-sisutemuniokeru-sabaresunaroguchu-li-ji-gou-falseshi-xing-cuo-wu": {
-    "title": "IoTデバイスの疑似データ送信システムにおける サーバーレスなログ処理機構の試行錯誤",
-    "description": "ServerlessDays Fukuoka 2019",
-    "image": "https://files.speakerdeck.com/presentations/c8379d2a4f2c448d87ed6260ec40d62f/slide_0.jpg?14466027",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/takec24/b2bqi-ye-gacloudfunctionsde-c2csabisunitiao-ndahua": {
-    "title": "B2B企業がCloudFunctionsで C2Cサービスに挑んだ話",
-    "description": "B2B企業受託がメインのIT企業が、CloudFunctionsとFirebaseを使って、BtoC、CtoCに挑んだ話です。\n\nこれからサーバーレス、Firebase触ってみたい方向けの資料になります。\n\nFirebaseの開発の詳細は、こちらのアドベントカレンダーをご参照ください。\nhttps://qiita.com/advent-calendar/2019/diffeasy24",
-    "image": "https://files.speakerdeck.com/presentations/d9bd5128ac7742f9b60b52223794cca7/slide_0.jpg?14465666",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/georgeorge/wheres-my-serverless-friend": {
-    "title": "サーバーレス仲間の増やし方\u000b/ Where's my serverless friend?",
-    "description": "Presented at ServerlessDays Fukuoka 2019",
-    "image": "https://files.speakerdeck.com/presentations/6cd505cc2bea4102a7d91b1406309b83/slide_0.jpg?14469443",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/slsops/slsdaysfukuoka2019": {
-    "title": " サーバーレス時代に 共創型受託開発をやることの価値/slsdaysfukuoka2019",
-    "description": "",
-    "image": "https://files.speakerdeck.com/presentations/66281b79dd0841318dc70cd64ffc5892/slide_0.jpg?14467991",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://speakerdeck.com/keisukeyamashita/cloud-rundesisutemuwozuo-rutamefalseakitekutiyafalsetipstokosutofalsehua": {
-    "title": "Cloud Runでシステムを作るためのアーキテクチャのTipsとコストの話",
-    "description": "@ServerlessDays Fukuoka 2019",
-    "image": "https://files.speakerdeck.com/presentations/6857590d848649ababfd290780f6c2d4/slide_0.jpg?14469326",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-  },
-  "https://dev.classmethod.jp/etc/serverlessdaysfukuoka-metsuburikensyoult": {
-    "title": "ServerlessDays福岡で目瞑りを検証したLTをしてきました。  #serverlessdays #serverlessfukuoka | DevelopersIO",
-    "description": "大阪オフィスでインターンをしている、たいがーです。実は、今日インターン最終日でした！ 実際の案件にアサインさせていただきながら、最後の1か月間を過ごしました。もっとしっかり勉強しようと思った2ヶ月間でした。 さて、話は変 …",
-    "image": "https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-  },
-  "https://dev.classmethod.jp/event/serverless-days-fukuoka-2019-session-report/#toc-serverless": {
-    "title": "Serverless Days Fukuoka 2019に行ってきたよ！ #ServerlessDays | DevelopersIO",
-    "description": "ServerlessDays Fukuoka2019 がLINE Fukuokaで開催されたので行ってきました！ どーん！ KubeCon2019 NAから見るk8s × serverlessの現状 Speaker: W …",
-    "image": "https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-  },
-  "https://dev.classmethod.jp/etc/serverlessdays-fukuoka-2019-developersio-cafe": {
-    "title": "ServerlessDays福岡でDevelopers.IO CAFEのバックエンドについて話しました #serverlessdays #serverlessfukuoka | DevelopersIO",
-    "description": "2019/12/14(土)に福岡で開催されたServerlessDaysで「キャッシュレスカフェのバックエンドを支えるサーバーレスアーキテクチャ」の発表をしてきました！",
-    "image": "https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-  },
-  "https://dev.classmethod.jp/cloud/aws/serverlessdays-2019keynote-aws": {
-    "title": "[#ServerlessDays 2019]Keynote: AWS | DevelopersIO",
-    "description": "スライドが投稿され次第､追加と内容の修正を行う予定です｡ セッション概要 登壇者: Keisuke Nishitani (AWS) 内容 AWS Lambdaはイベント・ドリブンのサービスとして登場した 2014年にAW …",
-    "image": "https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/10/tokyo-thumbnail-min.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-  },
-  "https://www.slideshare.net/ssuser084061/1-205114869": {
-    "title": "フルサーバレスで構築した電子書籍ストアを1年運用してみた",
-    "description": "Serverless Days Fukuoka 2019 フルサーバレスで構築した電子書籍ストアを 1年運用してみた Keiichi Nakayama Vice General Manager Cloud Partner Group CHARA-WEB Co., Ltd. \fServerless Days Fukuo...",
-    "image": "https://cdn.slidesharecdn.com/ss_thumbnails/fullserverlessebookstorepub-191212225126-thumbnail.jpg?width=640&height=640&fit=bounds",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
-  },
-  "https://dev.classmethod.jp/server-side/serverless/serverless-testing-using-typescript-and-jest": {
-    "title": "【登壇資料】ServerlessDays Fukuoka 2019 で TypeScriprt と Jest を使ったサーバーレステストの話をしました #serverlessdays #serverlessfukuoka | DevelopersIO",
-    "description": "登壇資料 私を含む、サーバーレスデベロッパーの皆様にテストコードをどんどん書いていってほしくて登壇しました。 ServerlessDays Fukuoka 2019 とは 2019年12月14日（土）LINE 福岡にて、 …",
-    "image": "https://d1tlzifd8jdoy4.cloudfront.net/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-  },
-  "https://support.hp.com/jp-ja/document/c01770720": {
-    "title": "HP Notebook PC 有償修理サービス 概算料金 | HP®カスタマーサポート",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
-  },
-  "https://jp.ext.hp.com/services/business/carepack": {
-    "title": "HP Care Packハードウェアサービス | 日本HP",
-    "description": "HP Care Packハードウェアサービスを紹介します。",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jp.ext.hp.com"
-  },
-  "https://support.hp.com/jp-ja/document/c02703107": {
-    "title": "Notebook PC シリーズ - 修理の申し込み方法 | HP®カスタマーサポート",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
-  },
-  "https://flexlinkjp.flex.com/externalweb/#/repairStatusSearch": {
-    "title": "",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://flexlinkjp.flex.com"
-  },
-  "https://support.hp.com/jp-ja/help/repair": {
-    "title": "HP プリンターとノートブックの修理 | HP®サポート",
-    "description": "お使いのプリンター、ノートブック、その他の HP 製デバイスの修理をお探しですか？HP 修理の手順およびオンラインで修理状況を確認する方法をご説明しています。",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
-  },
-  "https://github.com/toshimaru/jekyll-toc": {
-    "title": "GitHub - toshimaru/jekyll-toc: Jekyll plugin which generates a table of contents.",
-    "description": "Jekyll plugin which generates a table of contents. - GitHub - toshimaru/jekyll-toc: Jekyll plugin which generates a table of contents.",
-    "image": "https://opengraph.githubassets.com/c12732e5eb34b411621b0655fe21883ffb5c95565a6c021cff8cc3ccea03ad5b/toshimaru/jekyll-toc",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://github.com/dafi/jekyll-toc-generator": {
-    "title": "GitHub - dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jekyll pages",
-    "description": "Liquid filter to generate Table of Content into Jekyll pages  - GitHub - dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jekyll pages",
-    "image": "https://opengraph.githubassets.com/10c229241aa073ddbed94d9e21a3e36a1bc7cc37f0e445526d949d7355751305/dafi/jekyll-toc-generator",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint": {
-    "title": "ESLint - Visual Studio Marketplace",
-    "description": "Extension for Visual Studio Code - Integrates ESLint JavaScript into VS Code.",
-    "image": "https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.4.2/1687441427519/Microsoft.VisualStudio.Services.Icons.Default",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
-  },
-  "https://eslint.org": {
-    "title": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
-    "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
-    "image": "https://eslint.org/icon-512.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
-  },
-  "https://prettier.io/docs/en/configuration.html": {
-    "title": "Configuration File · Prettier",
-    "description": "Prettier uses [cosmiconfig](https://github.com/davidtheclark/cosmiconfig) for configuration file support. This means you can configure Prettier via (in order of precedence):",
-    "image": "https://prettier.io/icon.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
-  },
-  "https://prettier.io": {
-    "title": "Prettier · Opinionated Code Formatter",
-    "description": "Opinionated Code Formatter",
-    "image": "https://prettier.io/icon.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
-  },
-  "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode": {
-    "title": "Prettier - Code formatter - Visual Studio Marketplace",
-    "description": "Extension for Visual Studio Code - Code formatter using prettier",
-    "image": "https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/9.16.0/1687434398269/Microsoft.VisualStudio.Services.Icons.Default",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
-  },
-  "https://eslint.org/docs/user-guide/configuring": {
-    "title": "Configure ESLint - ESLint - Pluggable JavaScript Linter",
-    "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
-    "image": "https://eslint.org/icon-512.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
-  },
-  "https://marketplace.visualstudio.com/items?itemName=walter-ribeiro.full-react-snippets": {
-    "title": "Fullstack React/React Native snippets - Visual Studio Marketplace",
-    "description": "Extension for Visual Studio Code - Code snippets for React/React Native and extra libs",
-    "image": "https://walter-ribeiro.gallerycdn.vsassets.io/extensions/walter-ribeiro/full-react-snippets/1.4.2/1594809115183/Microsoft.VisualStudio.Services.Icons.Default",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
-  },
-  "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=ja": {
-    "title": "React Developer Tools",
-    "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision 2468a8735 on 5/19/2023.",
-    "image": "https://lh3.googleusercontent.com/TNijZW_Gp9MZ3eqXkve0YWDEiHV-a2IpSpD6IJzrV3Y76GJcLEyzX2regTLemXzBHbHVqkKuxnnWDT34Cp4sNh-Y=w128-h128-e365-rj-sc0x00ffffff",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
-  },
-  "https://tkkm.tokyo/post-495/": {
-    "title": "【JavaScript】Docker上でのnpm/yarnの操作を10倍早くする方法 | ゆとって生きたい。",
-    "description": "Dockerでnpm install とか yarn install をすると何か遅いなあと感じたことはないでしょうか？ 私はDocker環境上でしかnpmやyarnを使っていなかったので中々気が付かなかったのですが、 先日友人のエンジニアにお前のdocker-comoseいけてないから変えたほうがいいよ、と教えてもらいました。 誇張抜きに10分かかっていた初期のモジュールのインストールが1分未満 …",
-    "image": "https://tkkm.tokyo/wp-content/uploads/2018/09/programming-583923_1280.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tkkm.tokyo"
-  },
-  "https://adsense.google.com/intl/ja_jp/start/": {
-    "title": "Google AdSense - ウェブサイトを収益化",
-    "description": "Google AdSense を使用してウェブサイトを収益化しましょう。広告のサイズは自動的に最適化され、表示とクリックが促進されます。",
-    "image": "https://lh3.googleusercontent.com/ui3nbG7vgTq2sakCuph87K5w-nojUvsGkyR01xb6zoIosG0nzL5LuteUJ70yzil56lUeEmFWVHb1N3TZRgEAjU6j5J4optMGe9iU",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://adsense.google.com"
-  },
-  "https://webtan.impress.co.jp/e/2018/02/08/28001": {
-    "title": "話題の「ads.txt」とは？設置方法やアドセンスの仕組みを解説 | Web担当者Forum",
-    "description": "「ads.txt」とはオンライン広告の不正を減らすための仕組みです。ネット広告でアドフラウド（広告詐欺）が増えた今、ads.txtファイルがなぜ必要なのでしょうか？ ads.txtを設置すべき理由、設置方法、Googleアドセンスでの注意点、よくある間違いなどをイラスト付きで分かりやすく解説します。",
-    "image": "https://webtan.impress.co.jp/sites/default/files/styles/1200x630/public/images/article2018/adstxt/adstxt_teaser.jpg?itok=N-LA7OvD",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://webtan.impress.co.jp"
-  },
-  "https://policies.google.com/technologies/ads?hl=ja": {
-    "title": "広告 – ポリシーと規約 – Google",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://policies.google.com"
-  },
-  "https://policies.google.com/technologies/partner-sites": {
-    "title": "How Google uses information from sites or apps that use our services – Privacy & Terms – Google",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://policies.google.com"
-  },
-  "https://support.google.com/adsense/answer/7532444?hl=ja": {
-    "title": "ads.txt に関するガイド - Google AdSense ヘルプ",
-    "description": "ads.txt による認定デジタル販売者（Authorized Digital Sellers）の宣言は IAB Tech Lab によるイニシアチブで、コンテンツ内のデジタル広告枠が、そのコンテ ",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.google.com"
-  },
-  "https://support.google.com/adsense/answer/1348695?hl=ja": {
-    "title": "必須コンテンツ - Google AdSense ヘルプ",
-    "description": "Google 広告 Cookie\nGoogle は、Google のパートナー ウェブサイト（Google 広告を掲載するウェブサイトや Google の認定広告ネットワークに加盟するウェブサ ",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.google.com"
-  },
-  "https://github.com/microsoft/WSL/issues/2913": {
-    "title": "TCP ephemeral ports exhausted and network broken after lots of early-closed non-blocking connections · Issue #2913 · microsoft/WSL",
-    "description": "At the suggestion of therealkenc, the title and description of the issue have been completely updated. See more progress in #3951. Description After creating and closing (before established) a larg...",
-    "image": "https://opengraph.githubassets.com/74e0d68c6cef55801f3930f44a3b21bcda3d36265000e3575b2864885cffad6e/microsoft/WSL/issues/2913",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://github.com/expo/expo-cli/issues/99": {
-    "title": "Host remains without network after a while · Issue #99 · expo/expo-cli",
-    "description": "Description Okay, so this is a bit of a weird one, but I will try my best to explain what happens Expected Behavior Start expo cli Work without any network issues Observed Behavior Start expo cli W...",
-    "image": "https://opengraph.githubassets.com/8af4bbfb9de2cf4b125dc58f379a36ca254d77761862e3e01f54806f68b66632/expo/expo-cli/issues/99",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://github.com/jekyll/jekyll-sitemap": {
-    "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
-    "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
-    "image": "https://opengraph.githubassets.com/065f288f30f9b3d2cc1439665d71882f61c5ee2e57801a99c7df2ce1ccbd533a/jekyll/jekyll-sitemap",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://www.xml-sitemaps.com": {
-    "title": "Create your Google Sitemap Online - XML Sitemaps Generator",
-    "description": "Free Online Google Sitemap Generator. XML-sitemaps.com provides free online sitemap generator service, creating an XML sitemap that can be submitted to Google, Bing and other search engines to help them crawl your website better. It will also generate an HTML site map to allow your website visitors to navigate easier.",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.xml-sitemaps.com"
-  },
-  "https://search.google.com/search-console/about?hl=ja": {
-    "title": "Google Search Console",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://search.google.com"
-  },
-  "https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja": {
-    "title": "Expo - Google Play のアプリ",
-    "description": "Expoは、JavaScriptとReactを使用してアプリケーションを構築するフリー＆オープンソースのプラットフォームです。",
-    "image": "https://play-lh.googleusercontent.com/algsmuhitlyCU_Yy3IU7-7KYIhCBwx5UJG4Bln-hygBjjlUVCiGo1y8W5JNqYm9WW3s",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://play.google.com"
-  },
-  "https://apps.apple.com/jp/app/expo-client/id982107779": {
-    "title": "Expo Go",
-    "description": "Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
-    "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/2e/74/e9/2e74e978-6614-2007-67cb-127588de735c/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
-  },
-  "https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMhT4FlcbucI9A6orIx6JaS8MGdt-v1Pj7FM3rTiPk6l9J7pSnvrWaBoCf9cQAvD_BwE&gclsrc=aw.ds": {
-    "title": "Download Android Studio & App Tools - Android Developers",
-    "description": "Android Studio provides app builders with an integrated development environment (IDE) optimized for Android apps. Download Android Studio today.",
-    "image": "https://developer.android.com/static/images/social/android-developers.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.android.com"
-  },
-  "https://expo.io": {
-    "title": "Expo",
-    "description": "Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.",
-    "image": "https://static.expo.dev/static/brand/square-512x512.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://expo.io"
-  },
-  "https://brew.sh/index_ja": {
-    "title": "Homebrew",
-    "description": "The Missing Package Manager for macOS (or Linux).",
-    "image": "https://brew.sh/assets/img/homebrew-social-card.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://brew.sh"
-  },
-  "https://forest.watch.impress.co.jp/docs/news/1170221.html": {
-    "title": "WindowsからLinuxファイルへのアクセスが可能に ～「Windows 10 19H1」におけるWSLの改善／「エクスプローラー」でWSL/Linux環境へアクセスし、自由にファイルを操作できる",
-    "description": "　米Microsoftは2月15日（現地時間）、「Windows 10 バージョン 1903」（19H1）の“Windows Subsystem for Linux（WSL）”に導入される予定の機能を発表した。WindowsからLinuxへのファイルアクセスなどが新たにサポートされている。",
-    "image": "https://forest.watch.impress.co.jp/img/wf/list/1170/221/image1.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://forest.watch.impress.co.jp"
-  },
-  "https://github.com/anyenv/anyenv": {
-    "title": "GitHub - anyenv/anyenv: All in one for **env",
-    "description": "All in one for **env. Contribute to anyenv/anyenv development by creating an account on GitHub.",
-    "image": "https://repository-images.githubusercontent.com/10616498/f4c9aa00-cbdd-11eb-9a14-0bfb24e748e5",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://github.com/nodenv/nodenv": {
-    "title": "GitHub - nodenv/nodenv: Manage multiple NodeJS versions.",
-    "description": "Manage multiple NodeJS versions. Contribute to nodenv/nodenv development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/488fbe907e5fa20e2cb96d469918f01ff2eff5a5c3f8b14cc151348b02c24399/nodenv/nodenv",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://github.com/znz/anyenv-update": {
-    "title": "GitHub - znz/anyenv-update: anyenv plugin that provides `anyenv update` command to update all **env and all plugins",
-    "description": "anyenv plugin that provides `anyenv update` command to update all **env and all plugins - GitHub - znz/anyenv-update: anyenv plugin that provides `anyenv update` command to update all **env and all...",
-    "image": "https://opengraph.githubassets.com/278137307135b72ffdabc959ce94b02443714752d61b2f1e58022f831cf71305/znz/anyenv-update",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://ja.wikipedia.org/wiki/Windows_Subsystem_for_Linux": {
-    "title": "Windows Subsystem for Linux - Wikipedia",
-    "description": "",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Screenshot_of_%E2%80%98Bash_on_Ubuntu_on_Windows%E2%80%99.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.wikipedia.org"
-  },
-  "https://qiita.com/h-yoshikawa44/items/ca7e31b4c0836eccbf44": {
-    "title": "AWS ソリューションアーキテクト アソシエイト合格までに勉強したこと - Qiita",
-    "description": "Qiita初投稿です。\n\nもうすぐプログラマー歴２年になる、吉川と申します。\n今年の目標として、AWSのアソシエイト3資格を取得する為に勉強してきましたが、2019/8/30にソリューションアーキテクト アソシエイト試験を受験して合格...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9QVdTJTIwJUUzJTgyJUJEJUUzJTgzJUFBJUUzJTgzJUE1JUUzJTgzJUJDJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJUIzJUUzJTgyJUEyJUUzJTgzJUJDJUUzJTgyJUFEJUUzJTgzJTg2JUUzJTgyJUFGJUUzJTgzJTg4JTIwJUUzJTgyJUEyJUUzJTgyJUJEJUUzJTgyJUI3JUUzJTgyJUE4JUUzJTgyJUE0JUUzJTgzJTg4JUU1JTkwJTg4JUU2JUEwJUJDJUUzJTgxJUJFJUUzJTgxJUE3JUUzJTgxJUFCJUU1JThCJTg5JUU1JUJDJUI3JUUzJTgxJTk3JUUzJTgxJTlGJUUzJTgxJTkzJUUzJTgxJUE4JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0wMzlmMGY4MzdhN2IxYTM5NmVmZDQ3ZTUzMGRkYTY4OQ&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaC15b3NoaWthd2E0NCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MDMwMTNkYWRhMjhlNmRhNjQ3ZmExZDVkYzIwNzAyMjY&blend-x=142&blend-y=491&blend-mode=normal&s=66c70977b106f3edbdf2b36ccd438425",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://www.ric.co.jp/book/qualification3/detail/248": {
-    "title": "AWS認定アソシエイト3資格対策｜リックテレコム",
-    "description": "IT、情報通信を網羅し、発信していく企業です。書籍の刊行だけでなく、セミナーや展示会などのイベントも行っております。",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.ric.co.jp"
-  },
-  "https://aws.amazon.com/jp/whitepapers": {
-    "title": "ホワイトペーパー | AWS",
-    "description": "",
-    "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
-  },
-  "https://aws.amazon.com/jp/aws-jp-introduction": {
-    "title": "AWS クラウドサービス活用資料集 | AWS 公式",
-    "description": "",
-    "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
-  },
-  "https://github.com/h-yoshikawa44/til-engineer": {
-    "title": "GitHub - h-yoshikawa44/til-engineer: TIL 活動（現在はNotionに移行したので停止）",
-    "description": " TIL 活動（現在はNotionに移行したので停止）. Contribute to h-yoshikawa44/til-engineer development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/ff34238d761e4cc15258dc8f8d7637f45ea884e387fb35ef0ee027f5285e85f4/h-yoshikawa44/til-engineer",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://qiita.com/mk-tool/items/1c7e4929055bb3b7aeda": {
-    "title": "docker-composeでADDやCOPYをする際に注意すること - Qiita",
-    "description": "\n\n概要\n\ndocker-composeを利用してADDやCOPYを行いたいときに気をつけることをメモします。\n\nまず、docker-composeでホスト側のファイルをコンテナにマウントする際はDockerfileを利用します。\nし...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9ZG9ja2VyLWNvbXBvc2UlRTMlODElQTdBREQlRTMlODIlODRDT1BZJUUzJTgyJTkyJUUzJTgxJTk5JUUzJTgyJThCJUU5JTlBJTlCJUUzJTgxJUFCJUU2JUIzJUE4JUU2JTg0JThGJUUzJTgxJTk5JUUzJTgyJThCJUUzJTgxJTkzJUUzJTgxJUE4JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0wMWIyMTU0OTZhYTBjNmQwZDg1ODgwMDAwYjdiNDk1MQ&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbWstdG9vbCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9Y2YwNDBlN2JjNjNlNmVjMzM2NGQ5NDJkMjEyN2MwOWI&blend-x=142&blend-y=491&blend-mode=normal&s=65dac5ff4f31a14586f6d094d3418bce",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://qiita.com/nrk_baby/items/d872e8f051a96a313601": {
-    "title": "docker-compose upするとコンテナが一瞬でexited with code 1する話 - Qiita",
-    "description": "WindowsにVagrant(VirtualBox) + Dockerで開発環境を構築していた際に上記の現象に遭遇した。VMのOSはCoreOS。\n\n具体的には、docker-compose run {コンテナ名} bashは通るの...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9ZG9ja2VyLWNvbXBvc2UlMjB1cCVFMyU4MSU5OSVFMyU4MiU4QiVFMyU4MSVBOCVFMyU4MiVCMyVFMyU4MyVCMyVFMyU4MyU4NiVFMyU4MyU4QSVFMyU4MSU4QyVFNCVCOCU4MCVFNyU5RSVBQyVFMyU4MSVBN2V4aXRlZCUyMHdpdGglMjBjb2RlJTIwMSVFMyU4MSU5OSVFMyU4MiU4QiVFOCVBOSVCMSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MGY2YjUwMTczNmVkNDk1YTk0YjcxOTgwYzQyMjBmZTg&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbnJrX2JhYnkmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWUyODI3NjdiNzkxMDZlMjZmMTRkYjNlYWQ2ZmVjOGI3&blend-x=142&blend-y=491&blend-mode=normal&s=00cfd7fb98713524f94a51471da81bcb",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/": {
-    "title": "awesome-compose/official-documentation-samples/rails at master · docker/awesome-compose",
-    "description": "Awesome Docker Compose samples. Contribute to docker/awesome-compose development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/11d68a37e53ce7d7dd1d25f6f872ced1b25c0e084c5796f87ab207f3288b1f29/docker/awesome-compose",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://crieit.net/posts/Windows-Docker-Rails-sprockets": {
-    "title": "Windows+Docker+Railsでsprocketsのエラーが出る時 - Crieit",
-    "description": "Docker for Windowsのコンテナ内でRailsを動かしていると、 Errno::EEXIST in Sessions#new というエラーが出るようになった。バージョンはRails5.1、sprockets3。具体的には...",
-    "image": "https://crieit.now.sh/upload_images/6e2af66c610d88bc766649f72032893a5e45efba2b4d7.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
-  },
-  "https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja": {
-    "title": "Google Analytics オプトアウト アドオン (by Google)",
-    "description": "Google Analytics の JavaScript （ga.js） と連携して Google Analytics に情報が送信されないようにします。",
-    "image": "https://lh3.googleusercontent.com/gQ5NVd7AWUr_GBGW9rmqJ-9LQbyYKi_zSwBnGTdlJkhV7oaAEblBkfJqnVRF_ZwqLpb0BrFETnYopEZtnT4aHfhdSA=w128-h128-e365-rj-sc0x00ffffff",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
-  },
-  "https://qiita.com/zonbitamago/items/1027b532b174e5ee04b3": {
-    "title": "Qiitaいいね数ランキングAPIの作成 - Qiita",
-    "description": "\n\nTL;DR\n\nQiitaAPI、Google Apps Script、Glitch、Firebaseを利用して、Qiitaいいね数ランキングAPIを作成しました。\nご活用ください！\n\nhttps://us-central1-qii...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9UWlpdGElRTMlODElODQlRTMlODElODQlRTMlODElQUQlRTYlOTUlQjAlRTMlODMlQTklRTMlODMlQjMlRTMlODIlQUQlRTMlODMlQjMlRTMlODIlQjBBUEklRTMlODElQUUlRTQlQkQlOUMlRTYlODglOTAmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTliYTI5NTJlYTBhZDJhYjFkZGVlNTA3MTRmMjE2NmU0&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwem9uYml0YW1hZ28mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWQ2ZjQzMTBmZTYzMWFkODg1ZGU4ODgwNDIwNTI1MTkz&blend-x=142&blend-y=491&blend-mode=normal&s=b1e47b0a031eb563c53c3ea8eaaa9d11",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://qiita.com/dev_satsuki/items/e2769925da33bfa77df5": {
-    "title": "LaravelとLaradockを使ったチームでの開発環境を用意する vol.1 ~Laradock設定編~ - Qiita",
-    "description": "\n\nLaravelとLaradockを使ったチームでの開発環境を用意する vol.1\n\n~Laradock設定編~\n\nこんにちは、Dev.Satsukiです。\n\nみなさんはLaravelのプロジェクトをチームで開発するとき、どうしてい...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9TGFyYXZlbCVFMyU4MSVBOExhcmFkb2NrJUUzJTgyJTkyJUU0JUJEJUJGJUUzJTgxJUEzJUUzJTgxJTlGJUUzJTgzJTgxJUUzJTgzJUJDJUUzJTgzJUEwJUUzJTgxJUE3JUUzJTgxJUFFJUU5JTk2JThCJUU3JTk5JUJBJUU3JTkyJUIwJUU1JUEyJTgzJUUzJTgyJTkyJUU3JTk0JUE4JUU2JTg0JThGJUUzJTgxJTk5JUUzJTgyJThCJTIwdm9sLjElMjB-TGFyYWRvY2slRTglQTglQUQlRTUlQUUlOUElRTclQjclQTh-JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1jNTdmODU3ZDlmNTlhNjJhMTdjZWM2NGU1MzNhYjhjYQ&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwZGV2X3NhdHN1a2kmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWJkNTVmNDU4MjZhMzJiODI0YzA0NzkwMGFhOGM5MTc0&blend-x=142&blend-y=491&blend-mode=normal&s=5755401f85edd3fde47562d647ba434e",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://github.com/ucan-lab/docker-laravel": {
-    "title": "GitHub - ucan-lab/docker-laravel: 🐳 Build a simple laravel development environment with docker-compose.",
-    "description": "🐳 Build a simple laravel development environment with docker-compose. - GitHub - ucan-lab/docker-laravel: 🐳 Build a simple laravel development environment with docker-compose.",
-    "image": "https://repository-images.githubusercontent.com/262374167/19a93700-438a-11eb-9de5-d50a874fd362",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-  },
-  "https://qiita.com/ucan-lab/items/5fc1281cd8076c8ac9f4": {
-    "title": "最強のLaravel開発環境をDockerを使って構築する - Qiita",
-    "description": "※Linuxはもちろんですが、Docker for Mac(M1 Mac含む), Docker for Windows で動作します。\n\nDockerの勉強をしたい方向け\nハンズオン形式の記事を書いてるので、DockerでLarave...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9JUU2JTlDJTgwJUU1JUJDJUI3JUUzJTgxJUFFTGFyYXZlbCVFOSU5NiU4QiVFNyU5OSVCQSVFNyU5MiVCMCVFNSVBMiU4MyVFMyU4MiU5MkRvY2tlciVFMyU4MiU5MiVFNCVCRCVCRiVFMyU4MSVBMyVFMyU4MSVBNiVFNiVBNyU4QiVFNyVBRiU4OSVFMyU4MSU5OSVFMyU4MiU4QiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9ODYwNDZkN2IxNWI5YWJiZmQzOWExNGE1NjM3ZTFjNzI&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdWNhbi1sYWImdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTg2MWQxY2QwMzBiYzNmMGUzM2I0NWJjYTlkODljYmJh&blend-x=142&blend-y=491&blend-mode=normal&s=ca8b087906c602c6ca5c3d4e8d1af7b6",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://liginc.co.jp/364089": {
-    "title": "PHPフレームワーク「Laradock」で、手軽にLaravel+Dockerな開発環境を構築する | 株式会社LIG(リグ)｜DX支援・システム開発・Web制作",
-    "description": "こんにちは、エリカです。 今回は、PHP フレームワーク「 Laravel 」を利用するための環境を構築したいと思います。Laravelでは PHP",
-    "image": "https://liginc.co.jp/wp-content/uploads/2017/08/15021806768051400_88.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://liginc.co.jp"
-  },
-  "https://www.udemy.com/course/docker-k": {
-    "title": "Just a moment...",
-    "description": "",
-    "image": "",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.udemy.com"
-  },
-  "https://qiita.com/sitmk/items/f911be7ffa4f29293fd5": {
-    "title": "DockerによるPHP開発環境構築（PHP + MySQL + Nginx） - Qiita",
-    "description": "\n\n背景\n\nDockerを導入したので、早速PHPの開発環境を構築してみようと思い色々調べたことを纏めました。\n\n後半部分はほぼ作業みたいになってしまい、それぞれの意味するところをしっかり理解したら追記したいと思います。\n\n\n環境\n\n...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9RG9ja2VyJUUzJTgxJUFCJUUzJTgyJTg4JUUzJTgyJThCUEhQJUU5JTk2JThCJUU3JTk5JUJBJUU3JTkyJUIwJUU1JUEyJTgzJUU2JUE3JThCJUU3JUFGJTg5JUVGJUJDJTg4UEhQJTIwJTJCJTIwTXlTUUwlMjAlMkIlMjBOZ2lueCVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NGY3ODdlZDBkYTZmNmRkYWZhOTRjY2YwNjJhOTZiZDY&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbmVtdWlfJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zNjczNDdlNDVmZDMyODM1NmZjNWJkNzFjMGRlOTgwYw&blend-x=142&blend-y=491&blend-mode=normal&s=b6080f207d5d074923cda8d3799e3ec4",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://aws.amazon.com/jp/certification": {
-    "title": "AWS 認定 – AWS クラウドコンピューティング認定プログラム | AWS",
-    "description": "ロールベースおよび専門知識認定から選択し、業界で広く認知された認定によってクラウドの専門知識を検証します。AWS 認定を詳しく見る",
-    "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
-  },
-  "https://book.impress.co.jp/books/1118101069": {
-    "title": "徹底攻略 AWS認定ソリューションアーキテクト アソシエイト教科書 - インプレスブックス",
-    "description": "基礎から実戦まで学べる",
-    "image": "https://img.ips.co.jp/ij/18/1118101069/1118101069-520x.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://book.impress.co.jp"
-  },
-  "https://bookplus.nikkei.com/atcl/catalog/16/258900/": {
-    "title": "Amazon Web Services完全ソリューションガイド",
-    "description": "",
-    "image": "https://bookplus.nikkei.com/atcl/catalog/16/258900/258900_common_pc.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://bookplus.nikkei.com"
-  },
-  "https://datumstudio.jp/blog/aws%E8%AA%8D%E5%AE%9A%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%88%E3%82%A2%E3%82%BD%E3%82%B7%E3%82%A8%E3%82%A4%E3%83%88": {
-    "title": "業務経験ゼロから2週間でAWS認定ソリューションアーキテクトアソシエイトを取得した方法 | ブログ一覧 | DATUM STUDIO株式会社",
-    "description": "DATUM STUDIO（データムスタジオ）はデータを活用しようとするすべての企業を、人工知能（AI）を通し支援する会社です。AI構築、データ分析、データサイエンティスト育成支援、イベント登壇、書籍執筆などのサービスを提供しています。",
-    "image": "https://datumstudio.jp/wp-content/uploads/2017/10/aws_art.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://datumstudio.jp"
-  },
-  "https://qiita.com/sitmk/items/239335b4ed0c3c797add": {
-    "title": "Githubのリポジトリ「TIL」を使って小さなアウトプットを習慣化する - Qiita",
-    "description": "\n\nはじめに\n\n正直言って、アウトプットは骨の折れる作業である。\n\n特にプログラミング初学者で、Qiitaのような技術情報共有サービスを使う場合は尚更だと思います。面白いと思えることをやれているので良いものの、適当なこと書けないので、...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9R2l0aHViJUUzJTgxJUFFJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgwJThDVElMJUUzJTgwJThEJUUzJTgyJTkyJUU0JUJEJUJGJUUzJTgxJUEzJUUzJTgxJUE2JUU1JUIwJThGJUUzJTgxJTk1JUUzJTgxJUFBJUUzJTgyJUEyJUUzJTgyJUE2JUUzJTgzJTg4JUUzJTgzJTk3JUUzJTgzJTgzJUUzJTgzJTg4JUUzJTgyJTkyJUU3JUJGJTkyJUU2JTg1JUEzJUU1JThDJTk2JUUzJTgxJTk5JUUzJTgyJThCJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zMzQ2MzkzNjkxNjhhZDE4NWE5ZGQzNzE5NTE3ZDI3Nw&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbmVtdWlfJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zNjczNDdlNDVmZDMyODM1NmZjNWJkNzFjMGRlOTgwYw&blend-x=142&blend-y=491&blend-mode=normal&s=21184aea700f72456d62bf6fd4fc21f9",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://syntaxdb.com": {
-    "title": "SyntaxDB - Programming Syntax Database",
-    "description": "SyntaxDB lets you easily look up syntax for your favourite programming language. Now supporting Java, C, C++, C#, JavaScript, Swift, Python, Ruby, and Go.",
-    "image": "https://syntaxdb.com/images/share.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://syntaxdb.com"
-  },
-  "https://www.netlify.com/": {
-    "title": "Develop and deploy websites and apps in record time | Netlify",
-    "description": "Accelerate the time to deploy your websites and apps. Bring your integrations and APIs together on one powerful serverless platform. Get started for free!",
-    "image": "https://www.netlify.com/v3/static/og-image.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.netlify.com"
-  },
-  "https://docs.netlify.com": {
-    "title": "Welcome to Netlify",
-    "description": "Our all-in-one platform helps you build sites, stores, and apps. Use any frontend framework to build, preview, and deploy to our global network from Git.",
-    "image": "https://docs.netlify.com/og-image.png",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.netlify.com"
+  "2019-12-31-looking-back-2019-git.html": {
+    "https://docusaurus.io": {
+      "title": "Build optimized websites quickly, focus on your content | Docusaurus",
+      "description": "An optimized site generator in React. Docusaurus helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.",
+      "image": "https://docusaurus.io/img/docusaurus-social-card.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docusaurus.io"
+    }
+  },
+  "2019-12-18-react-basics.html": {
+    "https://github.com/facebook/prop-types": {
+      "title": "GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
+      "description": "Runtime type checking for React props and similar objects - GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
+      "image": "https://opengraph.githubassets.com/77d98fac9c050f9407aa54753d827f118bd1ceffb9fcae92b91e132e1f69cab8/facebook/prop-types",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/wojtekmaj/react-lifecycle-methods-diagram": {
+      "title": "GitHub - wojtekmaj/react-lifecycle-methods-diagram: Interactive React Lifecycle Methods diagram.",
+      "description": "Interactive React Lifecycle Methods diagram. Contribute to wojtekmaj/react-lifecycle-methods-diagram development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/70b1a207ad90e4d57d7c02e2191eb4f65ddf2f563525e09658fb5096a5847bca/wojtekmaj/react-lifecycle-methods-diagram",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://create-react-app.dev": {
+      "title": "Create React App",
+      "description": "Set up a modern web app by running one command.",
+      "image": "https://create-react-app.dev/img/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://create-react-app.dev"
+    },
+    "https://github.com/gsoft-inc/craco": {
+      "title": "GitHub - dilanx/craco: Create React App Configuration Override, an easy and comprehensible configuration layer for Create React App.",
+      "description": "Create React App Configuration Override, an easy and comprehensible configuration layer for Create React App. - GitHub - dilanx/craco: Create React App Configuration Override, an easy and comprehen...",
+      "image": "https://opengraph.githubassets.com/e4b25f219e9f94755017984a9ed0c334ff570c0549de7458e7c09fe96c923054/dilanx/craco",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/README.md": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://stackblitz.com": {
+      "title": "StackBlitz | Instant Dev Environments | Click. Code. Done. - StackBlitz",
+      "description": "",
+      "image": "https://c.staticblitz.com/assets/social_general-46c72e351133f2b4d1352d8d870ce851ab16a59b0b2f10e41e11e036a88b7273.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stackblitz.com"
+    },
+    "https://ja.reactjs.org/docs/fragments.html": {
+      "title": "フラグメント – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://ja.reactjs.org": {
+      "title": "React – ユーザインターフェース構築のための JavaScript ライブラリ",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://ikesyo.hatenablog.com/entry/2020/12/18/141737": {
+      "title": "Reactコンポーネントの定義にFCではなくVFCを使う - いけだや技術ノート",
+      "description": "[RFC] React 18 and types-only breaking changes · Issue #46691 · DefinitelyTyped/DefinitelyTyped [@types/react] add VoidFunctionComponent type which does not accept \"children\" by awmottaz · Pull Request #46643 · DefinitelyTyped/DefinitelyTyped https://react-typescript-cheatsheet.netlify.app/docs/basi…",
+      "image": "https://ogimage.blog.st-hatena.com/12704346814673854626/26006613666808733/1608268784",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ikesyo.hatenablog.com"
+    },
+    "https://ja.reactjs.org/docs/hooks-custom.html": {
+      "title": "独自フックの作成 – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://ja.reactjs.org/docs/hooks-intro.html": {
+      "title": "フックの導入 – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://ja.reactjs.org/docs/typechecking-with-proptypes.html": {
+      "title": "PropTypes を用いた型チェック – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://ja.reactjs.org/docs/strict-mode.html": {
+      "title": "strict モード – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://codesandbox.io": {
+      "title": "CodeSandbox: Instant Cloud-Based IDE",
+      "description": "CodeSandbox is a cloud development platform that empowers developers to code, collaborate and ship projects of any size from any device in record time.",
+      "image": "https://codesandbox.io/new/images/og.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
+    },
+    "https://qiita.com/Julia0709/items/3c3fc8d29fd2e56ed7a9": {
+      "title": "React(v16.4) コンポーネントライフサイクルメソッドまとめ - Qiita",
+      "description": "#はじめにQiita初投稿です。去年からReact、React Nativeでアプリ制作をしてきた中で学んだことを書き留めていきます。React、いろいろな使い方ができて奥が深いところがとても面白…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9UmVhY3QlMjh2MTYuNCUyOSUyMCVFMyU4MiVCMyVFMyU4MyVCMyVFMyU4MyU5RCVFMyU4MyVCQyVFMyU4MyU4RCVFMyU4MyVCMyVFMyU4MyU4OCVFMyU4MyVBOSVFMyU4MiVBNCVFMyU4MyU5NSVFMyU4MiVCNSVFMyU4MiVBNCVFMyU4MiVBRiVFMyU4MyVBQiVFMyU4MyVBMSVFMyU4MiVCRCVFMyU4MyU4MyVFMyU4MyU4OSVFMyU4MSVCRSVFMyU4MSVBOCVFMyU4MiU4MSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9ZDM3Y2RiYzVjNTRmMTliOWQzMmZiMDVlZTI3ZDkxNGQ&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQweXVyaWEtbiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NzNhZmE1NjY0YTk0OGQ0YTY2ZjFjNzFjYjRkM2NhNDk&blend-x=142&blend-y=491&blend-mode=normal&s=88188e914fc952a6b8113c092486e279",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://ja.reactjs.org/docs/react-component.html": {
+      "title": "React.Component – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "https://qiita.com/tttocklll/items/c78aa33856ded870e843": {
+      "title": "【TypeScript】React.VFCとは何ぞや - Qiita",
+      "description": "はじめにReactにHooksが導入され、最近ではFunction Componentを採用することがほとんどになってきたように思います。Function Componentを定義するための型と…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgwJTkwVHlwZVNjcmlwdCVFMyU4MCU5MVJlYWN0LlZGQyVFMyU4MSVBOCVFMyU4MSVBRiVFNCVCRCU5NSVFMyU4MSU5RSVFMyU4MiU4NCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YWI2MjQyYWM1YjE1NTRmYTMzMDNjOTk3ZmVlNGY2ZmM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdHR0b2NrbGxsJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1iZjljNjE1MDI1NTk0YWU1MDM3NjI0N2MyZTIwNzVlMA&blend-x=142&blend-y=491&blend-mode=normal&s=29d490f2ccda36e7de977e8ce0febcb6",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://ja.reactjs.org/docs/hooks-reference.html": {
+      "title": "フック API リファレンス – React",
+      "description": "ユーザインターフェース構築のための JavaScript ライブラリ",
+      "image": "https://legacy.reactjs.org/logo-og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
+    },
+    "http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram": {
+      "title": "React Lifecycle Methods diagram",
+      "description": "Fully interactive and accessible React Lifecycle Methods diagram.",
+      "image": "https://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/ogimage.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=http://projects.wojtekmaj.pl"
+    }
+  },
+  "2019-12-15-serverless-days-fukuoka-2019.html": {
+    "https://dev.classmethod.jp/etc/serverlessdays-fukuoka-2019-developersio-cafe": {
+      "title": "404 | DevelopersIO",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
+    },
+    "https://dev.classmethod.jp/cloud/aws/serverlessdays-2019keynote-aws": {
+      "title": "404 | DevelopersIO",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
+    },
+    "https://dev.classmethod.jp/server-side/serverless/serverless-testing-using-typescript-and-jest": {
+      "title": "404 | DevelopersIO",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
+    },
+    "https://dev.classmethod.jp/etc/serverlessdaysfukuoka-metsuburikensyoult": {
+      "title": "404 | DevelopersIO",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
+    },
+    "https://fukuoka.serverlessdays.io": {
+      "title": "ServerlessDays Fukuoka 2019",
+      "description": "A community based conference focusing on Serverless based platforms and technologies. Fukuoka, December, 2019",
+      "image": "https://fukuoka.serverlessdays.io/assets/images/fukuoka-thumbnail-min.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fukuoka.serverlessdays.io"
+    },
+    "https://speakerdeck.com/moririn772/rubyonjets-with-aws-for-research": {
+      "title": "User Not Found - Speaker Deck",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/miu_crescent/3ri-jian-deshi-ishe-te-ibentoyong-you-liao-raibupei-xin-sabisufalsegou-zhu": {
+      "title": "3日間で使い捨て！イベント用有料ライブ配信サービスの構築",
+      "description": "『Talk Abstract』\n社内でゴーサインが出てから、サービス公開までわずか１ヶ月。内製でのwebサービスの構築は今回が初めてでした。 「やらない事をいかに増やすか」を念頭に考え、無駄を排除していったら結果的にサーバレス アーキテクチャになっていました。awsのフルマネージドサービスであるMedia Servicesを中心に、フロントエンドはNuxt.jsによるSPAで構築しました。認証はAuth0, 決済はStripe, 動画プレイヤーはTHEO PlayerなどSaaSとの連携をLambdaで実現し、手間を減らしていきました。 初内製案件という事で、技術的な壁より社内政治の壁の方が大変でしたのでその話も。\n\n『Talk Description』\n[アーキテクチャ]\n・NTT東日本のCloudGatewayを用いてDirect conncet\n・MediaLiveのVPC inputから映像入力\n・MediaPackageでNEXTSCAPEさんのMulti DRM Kitで映像を暗号化\n・MediaPackageをCloudFrontを接続して、THEO Playerで再生\n・プレイヤー再生時にLambdaからDRM認証をかけている(widevine/playready/Fairplay Streaming)\n・Nuxt.jsのページにTHEO Playerを埋め込んだものをS3に配置\n・S3 + CloudFront + Route53 + ACM でhttps://ドメインで公開\n\n[SaaS連携]\n・決済サービスはStirpe\n・Elementsを採用。フォームのデザインを合わせたかった\n・認証サービスはAuth0\n・Lockを採用。ログインはSNSの4種類のみ(FB,TW,LINE,Google) -Ruleで作成したuser_metadataにらStripeの購入情報を保持\n・この時の処理もLambdaから各種APIを叩いている\n・購入状態に合わせて画面制御をするためにフロントからAuth0のAPIを叩く。\n・これがsafariでだけ動かなかったので、Lambdaで叩くことに。\n・上限が怖かったのでここだけGCPのCloud Funtionを用意\n\n[結果]\n・無事に開発も終わり、黒字で終了することができました。",
+      "image": "https://files.speakerdeck.com/presentations/6a0b55cdc2be46519d96fb02de15cfa6/slide_0.jpg?14465187",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/line_developers/state-of-serverless-x-k8s-in-kubecon-2019-na": {
+      "title": "KubeCon 2019 NAから見るServerless × k8sの現状 / State of Serverless x k8s in KubeCon 2019 NA",
+      "description": "2019/12/14に開催されたServerlessDays Fukuoka 2019での萬治による登壇資料です",
+      "image": "https://files.speakerdeck.com/presentations/2dbff096b3804cf783eaf475e1efd3b9/slide_0.jpg?14466525",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.slideshare.net/ssuser084061/1-205114869": {
+      "title": "フルサーバレスで構築した電子書籍ストアを1年運用してみた",
+      "description": "フルサーバレスで構築した電子書籍ストアを1年運用してみた - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/fullserverlessebookstorepub-191212225126-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
+    "https://speakerdeck.com/ktam1219/iotdebaisufalseyi-si-detasong-xin-sisutemuniokeru-sabaresunaroguchu-li-ji-gou-falseshi-xing-cuo-wu": {
+      "title": "IoTデバイスの疑似データ送信システムにおける サーバーレスなログ処理機構の試行錯誤",
+      "description": "ServerlessDays Fukuoka 2019",
+      "image": "https://files.speakerdeck.com/presentations/c8379d2a4f2c448d87ed6260ec40d62f/slide_0.jpg?14466027",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/takec24/b2bqi-ye-gacloudfunctionsde-c2csabisunitiao-ndahua": {
+      "title": "B2B企業がCloudFunctionsで C2Cサービスに挑んだ話",
+      "description": "B2B企業受託がメインのIT企業が、CloudFunctionsとFirebaseを使って、BtoC、CtoCに挑んだ話です。\n\nこれからサーバーレス、Firebase触ってみたい方向けの資料になります。\n\nFirebaseの開発の詳細は、こちらのアドベントカレンダーをご参照ください。\nhttps://qiita.com/advent-calendar/2019/diffeasy24",
+      "image": "https://files.speakerdeck.com/presentations/d9bd5128ac7742f9b60b52223794cca7/slide_0.jpg?14465666",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kosukekimura/enziniali-1keyue-dakedosabaresunasabisuwoshi-tuteshi-ye-nigong-xian-dekitahua": {
+      "title": "エンジニア歴1ヶ月だけどサーバレスなサービスを使って事業に貢献できた話",
+      "description": "経理畑から一念発起してキャリアチェンジしてエンジニアになりました。\nAmazonConnectを使用して、社内の問い合わせフローの改善を実施した話。",
+      "image": "https://files.speakerdeck.com/presentations/dc2b9ae52bc24310af38da4c40f8cd15/slide_0.jpg?14472164",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/georgeorge/wheres-my-serverless-friend": {
+      "title": "サーバーレス仲間の増やし方\u000b/ Where's my serverless friend?",
+      "description": "Presented at ServerlessDays Fukuoka 2019",
+      "image": "https://files.speakerdeck.com/presentations/6cd505cc2bea4102a7d91b1406309b83/slide_0.jpg?14469443",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shimpeiws/talk-about-serverless-other-than-application": {
+      "title": "サーバーレスでAPIを提供する際のアプリケーション\"以外\"の話 / Talk about Serverless Other than Application",
+      "description": "ServerlessDays Fukuoka 2019",
+      "image": "https://files.speakerdeck.com/presentations/1042ae5332b6455d9e6c48a117869bfa/slide_0.jpg?14465094",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/slsops/slsdaysfukuoka2019": {
+      "title": " サーバーレス時代に 共創型受託開発をやることの価値/slsdaysfukuoka2019",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/66281b79dd0841318dc70cd64ffc5892/slide_0.jpg?14467991",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/keisukeyamashita/cloud-rundesisutemuwozuo-rutamefalseakitekutiyafalsetipstokosutofalsehua": {
+      "title": "Cloud Runでシステムを作るためのアーキテクチャのTipsとコストの話",
+      "description": "@ServerlessDays Fukuoka 2019",
+      "image": "https://files.speakerdeck.com/presentations/6857590d848649ababfd290780f6c2d4/slide_0.jpg?14469326",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.slideshare.net/tsukasakatou9/kubernetes-keda": {
+      "title": "ぼうけんにでかけよう Kubernetes KEDA",
+      "description": "ぼうけんにでかけよう Kubernetes KEDA - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/serverlessdayes-191214070132-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
+    "https://dev.classmethod.jp/event/serverless-days-fukuoka-2019-session-report/#toc-serverless": {
+      "title": "Serverless Days Fukuoka 2019に行ってきたよ！ #ServerlessDays | DevelopersIO",
+      "description": "ServerlessDays Fukuoka2019 がLINE Fukuokaで開催されたので行ってきました！ どーん！ KubeCon2019 NAから見るk8s × serverlessの現状 Speaker: W …",
+      "image": "https://devio2023-media.developers.io/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
+    }
+  },
+  "2019-11-30-hp-repair.html": {
+    "https://flexlinkjp.flex.com/externalweb/#/repairStatusSearch": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://flexlinkjp.flex.com"
+    },
+    "https://jp.ext.hp.com/services/business/carepack": {
+      "title": "HP Care Packハードウェアサービス | 日本HP",
+      "description": "HP Care Packハードウェアサービスを紹介します。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jp.ext.hp.com"
+    },
+    "https://support.hp.com/jp-ja/document/c01770720": {
+      "title": "HP PC - 概算修理料金のご案内 | HP®カスタマーサポート",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
+    },
+    "https://support.hp.com/jp-ja/document/c02703107": {
+      "title": "Notebook PC シリーズ - 修理の申し込み方法 | HP®カスタマーサポート",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
+    },
+    "https://support.hp.com/jp-ja/help/repair": {
+      "title": "HP プリンターとノートブックの修理 | HP®サポート",
+      "description": "お使いのプリンター、ノートブック、その他の HP 製デバイスの修理をお探しですか？HP 修理の手順およびオンラインで修理状況を確認する方法をご説明しています。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
+    }
+  },
+  "2019-11-10-jekyll-toc.html": {
+    "https://github.com/toshimaru/jekyll-toc": {
+      "title": "GitHub - toshimaru/jekyll-toc: Jekyll plugin which generates a table of contents.",
+      "description": "Jekyll plugin which generates a table of contents. - GitHub - toshimaru/jekyll-toc: Jekyll plugin which generates a table of contents.",
+      "image": "https://opengraph.githubassets.com/0a6ccaee1bf674cf8a9231aa1d3a854c2a20da0e57b0265e5ddb3d030c19c158/toshimaru/jekyll-toc",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/dafi/jekyll-toc-generator": {
+      "title": "GitHub - dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jekyll pages",
+      "description": "Liquid filter to generate Table of Content into Jekyll pages  - GitHub - dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jekyll pages",
+      "image": "https://opengraph.githubassets.com/2128ab4ba9a55b39f597429648681bba9c04fb1c1e803364d808391a6516c539/dafi/jekyll-toc-generator",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    }
+  },
+  "2019-11-06-eslint-prettier.html": {
+    "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint": {
+      "title": "ESLint - Visual Studio Marketplace",
+      "description": "Extension for Visual Studio Code - Integrates ESLint JavaScript into VS Code.",
+      "image": "https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.4.2/1687441427519/Microsoft.VisualStudio.Services.Icons.Default",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
+    },
+    "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode": {
+      "title": "Prettier - Code formatter - Visual Studio Marketplace",
+      "description": "Extension for Visual Studio Code - Code formatter using prettier",
+      "image": "https://esbenp.gallerycdn.vsassets.io/extensions/esbenp/prettier-vscode/10.1.0/1690819498575/Microsoft.VisualStudio.Services.Icons.Default",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
+    },
+    "https://eslint.org": {
+      "title": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
+      "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
+      "image": "https://eslint.org/icon-512.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
+    },
+    "https://prettier.io": {
+      "title": "Prettier · Opinionated Code Formatter",
+      "description": "Opinionated Code Formatter",
+      "image": "https://prettier.io/icon.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
+    },
+    "https://prettier.io/docs/en/configuration.html": {
+      "title": "Configuration File · Prettier",
+      "description": "Prettier uses [lilconfig](https://github.com/antonk52/lilconfig) for configuration file support. This means you can configure Prettier via (in order of precedence):",
+      "image": "https://prettier.io/icon.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
+    },
+    "https://eslint.org/docs/user-guide/configuring": {
+      "title": "Configure ESLint - ESLint - Pluggable JavaScript Linter",
+      "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
+      "image": "https://eslint.org/og?title=Configure%20ESLint&summary=A%20pluggable%20and%20configurable%20linter%20tool%20for%20identifying%20and%20reporting%20on%20patterns%20in%20JavaScript.%20Maintain%20your%20code%20quality%20with%20ease.%0A&is_rule=false&recommended=&fixable=&suggestions=",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
+    },
+    "https://eslint.org/docs/latest/use/configure/": {
+      "title": "Configure ESLint - ESLint - Pluggable JavaScript Linter",
+      "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
+      "image": "https://eslint.org/og?title=Configure%20ESLint&summary=A%20pluggable%20and%20configurable%20linter%20tool%20for%20identifying%20and%20reporting%20on%20patterns%20in%20JavaScript.%20Maintain%20your%20code%20quality%20with%20ease.%0A&is_rule=false&recommended=&fixable=&suggestions=",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
+    }
+  },
+  "2019-10-24-docker-react-swagger.html": {
+    "https://marketplace.visualstudio.com/items?itemName=walter-ribeiro.full-react-snippets": {
+      "title": "Fullstack React/React Native snippets - Visual Studio Marketplace",
+      "description": "Extension for Visual Studio Code - Code snippets for React/React Native and extra libs",
+      "image": "https://walter-ribeiro.gallerycdn.vsassets.io/extensions/walter-ribeiro/full-react-snippets/1.4.2/1594809115183/Microsoft.VisualStudio.Services.Icons.Default",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
+    },
+    "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=ja": {
+      "title": "React Developer Tools",
+      "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision ef8a840bd on 10/25/2023.",
+      "image": "https://lh3.googleusercontent.com/TNijZW_Gp9MZ3eqXkve0YWDEiHV-a2IpSpD6IJzrV3Y76GJcLEyzX2regTLemXzBHbHVqkKuxnnWDT34Cp4sNh-Y=w128-h128-e365-rj-sc0x00ffffff",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
+    }
+  },
+  "2019-10-13-google-adsense.html": {
+    "https://adsense.google.com/intl/ja_jp/start/": {
+      "title": "Google AdSense - ウェブサイトを収益化",
+      "description": "Google AdSense を使用してウェブサイトを収益化しましょう。広告のサイズは自動的に最適化され、表示とクリックが促進されます。",
+      "image": "https://lh3.googleusercontent.com/ui3nbG7vgTq2sakCuph87K5w-nojUvsGkyR01xb6zoIosG0nzL5LuteUJ70yzil56lUeEmFWVHb1N3TZRgEAjU6j5J4optMGe9iU",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://adsense.google.com"
+    },
+    "https://webtan.impress.co.jp/e/2018/02/08/28001": {
+      "title": "話題の「ads.txt」とは？設置方法やアドセンスの仕組みを解説 | Web担当者Forum",
+      "description": "「ads.txt」とはオンライン広告の不正を減らすための仕組みです。ネット広告でアドフラウド（広告詐欺）が増えた今、ads.txtファイルがなぜ必要なのでしょうか？ ads.txtを設置すべき理由、設置方法、Googleアドセンスでの注意点、よくある間違いなどをイラスト付きで分かりやすく解説します。",
+      "image": "https://webtan.impress.co.jp/sites/default/files/styles/1200x630/public/images/article2018/adstxt/adstxt_teaser.jpg?itok=N-LA7OvD",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://webtan.impress.co.jp"
+    },
+    "https://policies.google.com/technologies/partner-sites": {
+      "title": "How Google uses information from sites or apps that use our services – Privacy & Terms – Google",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://policies.google.com"
+    },
+    "https://policies.google.com/technologies/ads?hl=ja": {
+      "title": "広告 – ポリシーと規約 – Google",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://policies.google.com"
+    },
+    "https://support.google.com/adsense/answer/1348695?hl=ja": {
+      "title": "必須コンテンツ - Google AdSense ヘルプ",
+      "description": "Google 広告 Cookie Google は、Google のパートナー ウェブサイト（Google 広告を掲載するウェブサイトや Google の認定広告ネットワークに加盟するウェブサイトなど）への広告配信に、Cookie を使用しています。エンドユーザーが Google のパートナーのサイトを訪問すると、そのユーザーのブラウザに Cookie が保存されることがあります。 サイトのプ",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.google.com"
+    },
+    "https://support.google.com/adsense/answer/7532444?hl=ja": {
+      "title": "ads.txt に関するガイド - Google AdSense ヘルプ",
+      "description": "ads.txt による認定デジタル販売者（Authorized Digital Sellers）の宣言は IAB Tech Lab によるイニシアチブで、コンテンツ内のデジタル広告枠が、そのコンテンツのパブリッシャーが認定した販売者（AdSense など）を通してのみ販売されるようにするものです。パブリッシャー様は ads.txt を独自に作成することで、自サイトの広告枠の販売者を厳密に管理し、偽",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.google.com"
+    }
+  },
+  "2019-10-09-wsl-expo-network.html": {
+    "https://github.com/microsoft/WSL/issues/2913": {
+      "title": "TCP ephemeral ports exhausted and network broken after lots of early-closed non-blocking connections · Issue #2913 · microsoft/WSL",
+      "description": "At the suggestion of therealkenc, the title and description of the issue have been completely updated. See more progress in #3951. Description After creating and closing (before established) a larg...",
+      "image": "https://opengraph.githubassets.com/74e0d68c6cef55801f3930f44a3b21bcda3d36265000e3575b2864885cffad6e/microsoft/WSL/issues/2913",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/expo/expo-cli/issues/99": {
+      "title": "Host remains without network after a while · Issue #99 · expo/expo-cli",
+      "description": "Description Okay, so this is a bit of a weird one, but I will try my best to explain what happens Expected Behavior Start expo cli Work without any network issues Observed Behavior Start expo cli W...",
+      "image": "https://opengraph.githubassets.com/8af4bbfb9de2cf4b125dc58f379a36ca254d77761862e3e01f54806f68b66632/expo/expo-cli/issues/99",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    }
+  },
+  "2019-09-30-google-search-console.html": {
+    "https://search.google.com/search-console/about?hl=ja": {
+      "title": "Google Search Console",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://search.google.com"
+    },
+    "https://github.com/jekyll/jekyll-sitemap": {
+      "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
+      "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
+      "image": "https://opengraph.githubassets.com/2224cbccf889d9ae50754cc526b134317ffcfbd2ffd4428ca2cae0ee02485292/jekyll/jekyll-sitemap",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://www.xml-sitemaps.com": {
+      "title": "Create your Google Sitemap Online - XML Sitemaps Generator",
+      "description": "Free Online Google Sitemap Generator. XML-sitemaps.com provides free online sitemap generator service, creating an XML sitemap that can be submitted to Google, Bing and other search engines to help them crawl your website better. It will also generate an HTML site map to allow your website visitors to navigate easier.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.xml-sitemaps.com"
+    }
+  },
+  "2019-09-28-wsl-react-native.html": {
+    "https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja": {
+      "title": "Expo - Google Play のアプリ",
+      "description": "Expoは、JavaScriptとReactを使用してアプリケーションを構築するフリー＆オープンソースのプラットフォームです。",
+      "image": "https://play-lh.googleusercontent.com/algsmuhitlyCU_Yy3IU7-7KYIhCBwx5UJG4Bln-hygBjjlUVCiGo1y8W5JNqYm9WW3s",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://play.google.com"
+    },
+    "https://apps.apple.com/jp/app/expo-client/id982107779": {
+      "title": "‎Expo Go",
+      "description": "‎Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/2e/34/d1/2e34d152-0f11-064d-5dc2-a762f8e24b70/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
+    },
+    "https://expo.io": {
+      "title": "Expo",
+      "description": "Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.",
+      "image": "https://static.expo.dev/static/brand/square-512x512.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://expo.io"
+    },
+    "https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMhT4FlcbucI9A6orIx6JaS8MGdt-v1Pj7FM3rTiPk6l9J7pSnvrWaBoCf9cQAvD_BwE&gclsrc=aw.ds": {
+      "title": "Download Android Studio & App Tools - Android Developers",
+      "description": "Android Studio provides app builders with an integrated development environment (IDE) optimized for Android apps. Download Android Studio today.",
+      "image": "https://developer.android.com/static/images/social/android-developers.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.android.com"
+    }
+  },
+  "2019-09-26-wsl-develop.html": {
+    "https://brew.sh/index_ja": {
+      "title": "Page not found · GitHub Pages",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://brew.sh"
+    },
+    "https://forest.watch.impress.co.jp/docs/news/1170221.html": {
+      "title": "WindowsからLinuxファイルへのアクセスが可能に ～「Windows 10 19H1」におけるWSLの改善／「エクスプローラー」でWSL/Linux環境へアクセスし、自由にファイルを操作できる",
+      "description": "　米Microsoftは2月15日（現地時間）、「Windows 10 バージョン 1903」（19H1）の“Windows Subsystem for Linux（WSL）”に導入される予定の機能を発表した。WindowsからLinuxへのファイルアクセスなどが新たにサポートされている。",
+      "image": "https://forest.watch.impress.co.jp/img/wf/list/1170/221/image1.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://forest.watch.impress.co.jp"
+    },
+    "https://github.com/znz/anyenv-update": {
+      "title": "GitHub - znz/anyenv-update: anyenv plugin that provides `anyenv update` command to update all **env and all plugins",
+      "description": "anyenv plugin that provides `anyenv update` command to update all **env and all plugins - GitHub - znz/anyenv-update: anyenv plugin that provides `anyenv update` command to update all **env and all...",
+      "image": "https://opengraph.githubassets.com/7837bf4d291024bd45e2fa14759d3cc0bd15f3d11462b87efcb39135986cc1b6/znz/anyenv-update",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://ja.wikipedia.org/wiki/Windows_Subsystem_for_Linux": {
+      "title": "Windows Subsystem for Linux - Wikipedia",
+      "description": "",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Screenshot_of_%E2%80%98Bash_on_Ubuntu_on_Windows%E2%80%99.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.wikipedia.org"
+    },
+    "https://github.com/anyenv/anyenv": {
+      "title": "GitHub - anyenv/anyenv: All in one for **env",
+      "description": "All in one for **env. Contribute to anyenv/anyenv development by creating an account on GitHub.",
+      "image": "https://repository-images.githubusercontent.com/10616498/f4c9aa00-cbdd-11eb-9a14-0bfb24e748e5",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/nodenv/nodenv": {
+      "title": "GitHub - nodenv/nodenv: Manage multiple NodeJS versions.",
+      "description": "Manage multiple NodeJS versions. Contribute to nodenv/nodenv development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/56c8089746cd3126cdf873ded11e8dd897c24e81c0ee1c944b885071daed562b/nodenv/nodenv",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    }
+  },
+  "2019-09-14-docker-react-native.html": {
+    "https://apps.apple.com/jp/app/expo-client/id982107779": {
+      "title": "‎Expo Go",
+      "description": "‎Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/2e/34/d1/2e34d152-0f11-064d-5dc2-a762f8e24b70/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
+    },
+    "https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja": {
+      "title": "Expo - Google Play のアプリ",
+      "description": "Expoは、JavaScriptとReactを使用してアプリケーションを構築するフリー＆オープンソースのプラットフォームです。",
+      "image": "https://play-lh.googleusercontent.com/algsmuhitlyCU_Yy3IU7-7KYIhCBwx5UJG4Bln-hygBjjlUVCiGo1y8W5JNqYm9WW3s",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://play.google.com"
+    },
+    "https://expo.io": {
+      "title": "Expo",
+      "description": "Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.",
+      "image": "https://static.expo.dev/static/brand/square-512x512.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://expo.io"
+    }
+  },
+  "2019-09-05-aws-saa.html": {
+    "https://qiita.com/h-yoshikawa44/items/ca7e31b4c0836eccbf44": {
+      "title": "AWS ソリューションアーキテクト アソシエイト合格までに勉強したこと - Qiita",
+      "description": "Qiita初投稿です。もうすぐプログラマー歴２年になる、吉川と申します。今年の目標として、AWSのアソシエイト3資格を取得する為に勉強してきましたが、2019/8/30にソリューションアーキテク…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9QVdTJTIwJUUzJTgyJUJEJUUzJTgzJUFBJUUzJTgzJUE1JUUzJTgzJUJDJUUzJTgyJUI3JUUzJTgzJUE3JUUzJTgzJUIzJUUzJTgyJUEyJUUzJTgzJUJDJUUzJTgyJUFEJUUzJTgzJTg2JUUzJTgyJUFGJUUzJTgzJTg4JTIwJUUzJTgyJUEyJUUzJTgyJUJEJUUzJTgyJUI3JUUzJTgyJUE4JUUzJTgyJUE0JUUzJTgzJTg4JUU1JTkwJTg4JUU2JUEwJUJDJUUzJTgxJUJFJUUzJTgxJUE3JUUzJTgxJUFCJUU1JThCJTg5JUU1JUJDJUI3JUUzJTgxJTk3JUUzJTgxJTlGJUUzJTgxJTkzJUUzJTgxJUE4JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zMjAxMGZiM2JhY2Q5ZWNkNDBlNWI5OTA3YTAyMTVhZA&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaC15b3NoaWthd2E0NCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MDMwMTNkYWRhMjhlNmRhNjQ3ZmExZDVkYzIwNzAyMjY&blend-x=142&blend-y=491&blend-mode=normal&s=32178e8a3de22011ee35b467c8f3b93e",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://www.ric.co.jp/book/qualification3/detail/248": {
+      "title": "AWS認定アソシエイト3資格対策｜リックテレコム",
+      "description": "IT、情報通信を網羅し、発信していく企業です。書籍の刊行だけでなく、セミナーや展示会などのイベントも行っております。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.ric.co.jp"
+    },
+    "https://aws.amazon.com/jp/aws-jp-introduction": {
+      "title": "AWS クラウドサービス活用資料集 | AWS 公式",
+      "description": "",
+      "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+    },
+    "https://aws.amazon.com/jp/whitepapers": {
+      "title": "ホワイトペーパー | AWS",
+      "description": "",
+      "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+    }
+  },
+  "2019-08-17-til-150.html": {
+    "https://github.com/h-yoshikawa44/til-engineer": {
+      "title": "GitHub - h-yoshikawa44/til-engineer: TIL 活動（現在はNotionに移行したので停止）",
+      "description": " TIL 活動（現在はNotionに移行したので停止）. Contribute to h-yoshikawa44/til-engineer development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/9f0b6cffbe50f8d51e3e80102f1031eaa67b2c54bb1f4fff2046af0198c01068/h-yoshikawa44/til-engineer",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    }
+  },
+  "2019-08-14-docker-rails.html": {
+    "https://qiita.com/mk-tool/items/1c7e4929055bb3b7aeda": {
+      "title": "docker-composeでADDやCOPYをする際に注意すること - Qiita",
+      "description": "概要docker-composeを利用してADDやCOPYを行いたいときに気をつけることをメモします。まず、docker-composeでホスト側のファイルをコンテナにマウントする際はDocke…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9ZG9ja2VyLWNvbXBvc2UlRTMlODElQTdBREQlRTMlODIlODRDT1BZJUUzJTgyJTkyJUUzJTgxJTk5JUUzJTgyJThCJUU5JTlBJTlCJUUzJTgxJUFCJUU2JUIzJUE4JUU2JTg0JThGJUUzJTgxJTk5JUUzJTgyJThCJUUzJTgxJTkzJUUzJTgxJUE4JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1hYzk4YTEyOTEwZDYwODdmYWU5M2FiYzc5NzEyZmY2Yw&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbWstdG9vbCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9Y2YwNDBlN2JjNjNlNmVjMzM2NGQ5NDJkMjEyN2MwOWI&blend-x=142&blend-y=491&blend-mode=normal&s=4de1377ecc6d02b8d31ec69991dd634d",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://qiita.com/nrk_baby/items/d872e8f051a96a313601": {
+      "title": "docker-compose upするとコンテナが一瞬でexited with code 1する話 - Qiita",
+      "description": "WindowsにVagrant(VirtualBox) + Dockerで開発環境を構築していた際に上記の現象に遭遇した。VMのOSはCoreOS。具体的には、docker-compose run…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9ZG9ja2VyLWNvbXBvc2UlMjB1cCVFMyU4MSU5OSVFMyU4MiU4QiVFMyU4MSVBOCVFMyU4MiVCMyVFMyU4MyVCMyVFMyU4MyU4NiVFMyU4MyU4QSVFMyU4MSU4QyVFNCVCOCU4MCVFNyU5RSVBQyVFMyU4MSVBN2V4aXRlZCUyMHdpdGglMjBjb2RlJTIwMSVFMyU4MSU5OSVFMyU4MiU4QiVFOCVBOSVCMSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NmVlOGE2NjU3MGIwMDBiOWRiOTVhZjBlYzJhZGY2Y2Q&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbnJrX2JhYnkmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWUyODI3NjdiNzkxMDZlMjZmMTRkYjNlYWQ2ZmVjOGI3&blend-x=142&blend-y=491&blend-mode=normal&s=f7f3860b203478831e33682c02409493",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://crieit.net/posts/Windows-Docker-Rails-sprockets": {
+      "title": "Windows+Docker+Railsでsprocketsのエラーが出る時 - Crieit",
+      "description": "Docker for Windowsのコンテナ内でRailsを動かしていると、 Errno::EEXIST in Sessions#new というエラーが出るようになった。バージョンはRails5.1、sprockets3。具体的には...",
+      "image": "https://crieit.now.sh/upload_images/6e2af66c610d88bc766649f72032893a5e45efba2b4d7.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
+    }
+  },
+  "2019-07-06-google-analytics.html": {
+    "https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja": {
+      "title": "Google Analytics オプトアウト アドオン (by Google)",
+      "description": "Google Analytics の JavaScript （ga.js） と連携して Google Analytics に情報が送信されないようにします。",
+      "image": "https://lh3.googleusercontent.com/gQ5NVd7AWUr_GBGW9rmqJ-9LQbyYKi_zSwBnGTdlJkhV7oaAEblBkfJqnVRF_ZwqLpb0BrFETnYopEZtnT4aHfhdSA=w128-h128-e365-rj-sc0x00ffffff",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
+    }
+  },
+  "2019-06-23-qiita-ranking.html": {
+    "https://qiita.com/zonbitamago/items/1027b532b174e5ee04b3": {
+      "title": "Qiitaいいね数ランキングAPIの作成 - Qiita",
+      "description": "TL;DRQiitaAPI、Google Apps Script、Glitch、Firebaseを利用して、Qiitaいいね数ランキングAPIを作成しました。ご活用ください！https://u…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9UWlpdGElRTMlODElODQlRTMlODElODQlRTMlODElQUQlRTYlOTUlQjAlRTMlODMlQTklRTMlODMlQjMlRTMlODIlQUQlRTMlODMlQjMlRTMlODIlQjBBUEklRTMlODElQUUlRTQlQkQlOUMlRTYlODglOTAmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWM5M2U4M2IyYjcyYzNjZDUxOGU1MmMzMzE4MTk2MDZm&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwem9uYml0YW1hZ28mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWQ2ZjQzMTBmZTYzMWFkODg1ZGU4ODgwNDIwNTI1MTkz&blend-x=142&blend-y=491&blend-mode=normal&s=b325af15edbfe28d26eb7037457c997e",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    }
+  },
+  "2019-06-03-laravel-laradock.html": {
+    "https://qiita.com/ucan-lab/items/5fc1281cd8076c8ac9f4": {
+      "title": "最強のLaravel開発環境をDockerを使って構築する - Qiita",
+      "description": "※Linuxはもちろんですが、Docker for Mac(M1 Mac含む), Docker for Windows で動作します。Dockerの勉強をしたい方向けハンズオン形式の記事を書いて…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUU2JTlDJTgwJUU1JUJDJUI3JUUzJTgxJUFFTGFyYXZlbCVFOSU5NiU4QiVFNyU5OSVCQSVFNyU5MiVCMCVFNSVBMiU4MyVFMyU4MiU5MkRvY2tlciVFMyU4MiU5MiVFNCVCRCVCRiVFMyU4MSVBMyVFMyU4MSVBNiVFNiVBNyU4QiVFNyVBRiU4OSVFMyU4MSU5OSVFMyU4MiU4QiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MGI5NDhjNGNiZTQ1NGVhYmY5ZWE2ZGFmZjBjNWE5OGM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdWNhbi1sYWImdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTg2MWQxY2QwMzBiYzNmMGUzM2I0NWJjYTlkODljYmJh&blend-x=142&blend-y=491&blend-mode=normal&s=ff3aa16e4635fa011567f48e04e412b2",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://qiita.com/dev_satsuki/items/e2769925da33bfa77df5": {
+      "title": "LaravelとLaradockを使ったチームでの開発環境を用意する vol.1 ~Laradock設定編~ - Qiita",
+      "description": "LaravelとLaradockを使ったチームでの開発環境を用意する vol.1~Laradock設定編~こんにちは、Dev.Satsukiです。みなさんはLaravelのプロジェクトをチーム…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCVFMyU4MSVBOExhcmFkb2NrJUUzJTgyJTkyJUU0JUJEJUJGJUUzJTgxJUEzJUUzJTgxJTlGJUUzJTgzJTgxJUUzJTgzJUJDJUUzJTgzJUEwJUUzJTgxJUE3JUUzJTgxJUFFJUU5JTk2JThCJUU3JTk5JUJBJUU3JTkyJUIwJUU1JUEyJTgzJUUzJTgyJTkyJUU3JTk0JUE4JUU2JTg0JThGJUUzJTgxJTk5JUUzJTgyJThCJTIwdm9sLjElMjB-TGFyYWRvY2slRTglQTglQUQlRTUlQUUlOUElRTclQjclQTh-JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0xMDlhOGE4YWVhMDM5Y2YwN2QyZjc2ZDM2ZjAyOGIxYw&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwZGV2X3NhdHN1a2kmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWJkNTVmNDU4MjZhMzJiODI0YzA0NzkwMGFhOGM5MTc0&blend-x=142&blend-y=491&blend-mode=normal&s=9b66ec2cb4f0f9110171e9febf23667a",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://github.com/ucan-lab/docker-laravel": {
+      "title": "GitHub - ucan-lab/docker-laravel: 🐳 Build a simple laravel development environment with docker-compose.",
+      "description": "🐳 Build a simple laravel development environment with docker-compose. - GitHub - ucan-lab/docker-laravel: 🐳 Build a simple laravel development environment with docker-compose.",
+      "image": "https://repository-images.githubusercontent.com/262374167/19a93700-438a-11eb-9de5-d50a874fd362",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://liginc.co.jp/364089": {
+      "title": "PHPフレームワーク「Laradock」で、手軽にLaravel+Dockerな開発環境を構築する | 株式会社LIG(リグ)｜DX支援・システム開発・Web制作",
+      "description": "こんにちは、エリカです。 今回は、PHP フレームワーク「 Laravel 」を利用するための環境を構築したいと思います。Laravelでは PHP",
+      "image": "https://liginc.co.jp/wp-content/uploads/2017/08/15021806768051400_88.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://liginc.co.jp"
+    }
+  },
+  "2019-05-15-docker-php.html": {
+    "https://qiita.com/sitmk/items/f911be7ffa4f29293fd5": {
+      "title": "DockerによるPHP開発環境構築（PHP + MySQL + Nginx） - Qiita",
+      "description": "#背景Dockerを導入したので、早速PHPの開発環境を構築してみようと思い色々調べたことを纏めました。後半部分はほぼ作業みたいになってしまい、それぞれの意味するところをしっかり理解したら追記し…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9RG9ja2VyJUUzJTgxJUFCJUUzJTgyJTg4JUUzJTgyJThCUEhQJUU5JTk2JThCJUU3JTk5JUJBJUU3JTkyJUIwJUU1JUEyJTgzJUU2JUE3JThCJUU3JUFGJTg5JUVGJUJDJTg4UEhQJTIwJTJCJTIwTXlTUUwlMjAlMkIlMjBOZ2lueCVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MjNhMmU0N2NjM2UxNjM5NTY2ZjYzOTA3NzRjMDE2NmY&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbmVtdWlfJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zNjczNDdlNDVmZDMyODM1NmZjNWJkNzFjMGRlOTgwYw&blend-x=142&blend-y=491&blend-mode=normal&s=6276313e76d82818d789cd5eb27bb44a",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://www.udemy.com/course/docker-k": {
+      "title": "ゼロからはじめる Dockerによるアプリケーション実行環境構築",
+      "description": "コンテナの実行方法を学び、Ruby on RailsやDjangoといったWebアプリケーションフレームワークを使用した環境構築について学びます。Docker MachineやSwarmといったDocker関連技術についても学びます。",
+      "image": "https://img-c.udemycdn.com/course/480x270/1401310_1c83_3.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.udemy.com"
+    }
+  },
+  "2019-04-25-aws-qualification.html": {
+    "https://bookplus.nikkei.com/atcl/catalog/16/258900/": {
+      "title": "Amazon Web Services完全ソリューションガイド",
+      "description": "",
+      "image": "https://bookplus.nikkei.com/atcl/catalog/16/258900/258900_common_pc.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://bookplus.nikkei.com"
+    },
+    "https://book.impress.co.jp/books/1118101069": {
+      "title": "徹底攻略 AWS認定ソリューションアーキテクト アソシエイト教科書 - インプレスブックス",
+      "description": "基礎から実戦まで学べる",
+      "image": "https://img.ips.co.jp/ij/18/1118101069/1118101069-520x.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://book.impress.co.jp"
+    },
+    "https://aws.amazon.com/jp/whitepapers": {
+      "title": "ホワイトペーパー | AWS",
+      "description": "",
+      "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+    },
+    "https://aws.amazon.com/jp/certification": {
+      "title": "AWS 認定 – AWS クラウドコンピューティング認定プログラム | AWS",
+      "description": "ロールベースおよび専門知識認定から選択し、業界で広く認知された認定によってクラウドの専門知識を検証します。AWS 認定を詳しく見る",
+      "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+    },
+    "https://aws.amazon.com/jp/aws-jp-introduction": {
+      "title": "AWS クラウドサービス活用資料集 | AWS 公式",
+      "description": "",
+      "image": "https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aws.amazon.com"
+    },
+    "https://datumstudio.jp/blog/aws%E8%AA%8D%E5%AE%9A%E3%82%BD%E3%83%AA%E3%83%A5%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%A2%E3%83%BC%E3%82%AD%E3%83%86%E3%82%AF%E3%83%88%E3%82%A2%E3%82%BD%E3%82%B7%E3%82%A8%E3%82%A4%E3%83%88": {
+      "title": "業務経験ゼロから2週間でAWS認定ソリューションアーキテクトアソシエイトを取得した方法 | ブログ一覧 | DATUM STUDIO株式会社",
+      "description": "",
+      "image": "https://datumstudio.jp/wp-content/uploads/2017/10/aws_art.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://datumstudio.jp"
+    }
+  },
+  "2019-03-26-til.html": {
+    "https://github.com/h-yoshikawa44/til-engineer": {
+      "title": "GitHub - h-yoshikawa44/til-engineer: TIL 活動（現在はNotionに移行したので停止）",
+      "description": " TIL 活動（現在はNotionに移行したので停止）. Contribute to h-yoshikawa44/til-engineer development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/9f0b6cffbe50f8d51e3e80102f1031eaa67b2c54bb1f4fff2046af0198c01068/h-yoshikawa44/til-engineer",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://qiita.com/sitmk/items/239335b4ed0c3c797add": {
+      "title": "Githubのリポジトリ「TIL」を使って小さなアウトプットを習慣化する - Qiita",
+      "description": "#はじめに正直言って、アウトプットは骨の折れる作業である。特にプログラミング初学者で、Qiitaのような技術情報共有サービスを使う場合は尚更だと思います。面白いと思えることをやれているので良いも…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9R2l0aHViJUUzJTgxJUFFJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgwJThDVElMJUUzJTgwJThEJUUzJTgyJTkyJUU0JUJEJUJGJUUzJTgxJUEzJUUzJTgxJUE2JUU1JUIwJThGJUUzJTgxJTk1JUUzJTgxJUFBJUUzJTgyJUEyJUUzJTgyJUE2JUUzJTgzJTg4JUUzJTgzJTk3JUUzJTgzJTgzJUUzJTgzJTg4JUUzJTgyJTkyJUU3JUJGJTkyJUU2JTg1JUEzJUU1JThDJTk2JUUzJTgxJTk5JUUzJTgyJThCJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz03ZmEyMzBjN2EwMDEzNWVmMmVhNjNlM2Y5N2Q1MDMzNA&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbmVtdWlfJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zNjczNDdlNDVmZDMyODM1NmZjNWJkNzFjMGRlOTgwYw&blend-x=142&blend-y=491&blend-mode=normal&s=639e6c03e1cd29ef71390a7f39d87a9e",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://syntaxdb.com": {
+      "title": "SyntaxDB - Programming Syntax Database",
+      "description": "SyntaxDB lets you easily look up syntax for your favourite programming language. Now supporting Java, C, C++, C#, JavaScript, Swift, Python, Ruby, and Go.",
+      "image": "https://syntaxdb.com/images/share.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://syntaxdb.com"
+    }
+  },
+  "2019-02-10-netlify-deploy.html": {
+    "https://docs.netlify.com": {
+      "title": "Welcome to Netlify",
+      "description": "Learn how to build fast and reliable web experiences with our enterprise-ready composable platform.",
+      "image": "https://docs.netlify.com/og-image.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.netlify.com"
+    },
+    "https://www.netlify.com/": {
+      "title": "Scale & Ship Faster with a Composable Web Architecture | Netlify",
+      "description": "Realize the speed, agility and performance of a scalable, composable web architecture with Netlify. Explore the composable web platform now!",
+      "image": "https://www.netlify.com/images/og-image-default.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.netlify.com"
+    }
   }
 }

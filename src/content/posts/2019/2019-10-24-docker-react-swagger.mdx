@@ -258,8 +258,6 @@ node の command については一旦コメントアウトしておきます。
 node_modules は volume マウントすることが多いとは思われます。
 コンテナ内のnpm or yarn の速度的にも、volume マウントの方がいいそうです。
 
-<OG url="https://tkkm.tokyo/post-495/" />
-
 ただ、そうするとローカルに node_modules ができなくなり、VSCode の ESLint 拡張を動かす時などに支障が出るので、あえてやっていません。
 （VSCode の`Remote - Containers`拡張を使えばコンテナ内で作業できるので、解決する話ではあるのですが今回はやってません）
 
