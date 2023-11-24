@@ -1,9 +1,9 @@
 {
-  "2018-06-05-php-install.html": {
+  "2018-06-05-php-install": {
     "https://github.com/phpbrew/phpbrew": {
       "title": "GitHub - phpbrew/phpbrew: Brew & manage PHP versions in pure PHP at HOME",
       "description": "Brew & manage PHP versions in pure PHP at HOME. Contribute to phpbrew/phpbrew development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/6516dd0099b48f6d64a22666ee3547672ffca74b71143ec8e2ef4427c4f62062/phpbrew/phpbrew",
+      "image": "https://opengraph.githubassets.com/a0ba8e7b6ee7f35d8c61820c409468715f8c6c8f9ea22955005c3e642c5e4f87/phpbrew/phpbrew",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://php-tips.com/2018/04/13/homebrew-php-is-dead/": {

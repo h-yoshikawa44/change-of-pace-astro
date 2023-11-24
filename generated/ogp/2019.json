@@ -1,5 +1,5 @@
 {
-  "2019-12-31-looking-back-2019-git.html": {
+  "2019-12-31-looking-back-2019-git": {
     "https://docusaurus.io": {
       "title": "Build optimized websites quickly, focus on your content | Docusaurus",
       "description": "An optimized site generator in React. Docusaurus helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.",
@@ -7,7 +7,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docusaurus.io"
     }
   },
-  "2019-12-18-react-basics.html": {
+  "2019-12-18-react-basics": {
     "http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram": {
       "title": "React Lifecycle Methods diagram",
       "description": "Fully interactive and accessible React Lifecycle Methods diagram.",
@@ -123,7 +123,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stackblitz.com"
     }
   },
-  "2019-12-15-serverless-days-fukuoka-2019.html": {
+  "2019-12-15-serverless-days-fukuoka-2019": {
     "https://dev.classmethod.jp/cloud/aws/serverlessdays-2019keynote-aws": {
       "title": "404 | DevelopersIO",
       "description": "",
@@ -233,7 +233,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     }
   },
-  "2019-11-30-hp-repair.html": {
+  "2019-11-30-hp-repair": {
     "https://flexlinkjp.flex.com/externalweb/#/repairStatusSearch": {
       "title": "",
       "description": "",
@@ -265,7 +265,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.hp.com"
     }
   },
-  "2019-11-10-jekyll-toc.html": {
+  "2019-11-10-jekyll-toc": {
     "https://github.com/dafi/jekyll-toc-generator": {
       "title": "GitHub - dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jekyll pages",
       "description": "Liquid filter to generate Table of Content into Jekyll pages  - GitHub - dafi/jekyll-toc-generator: Liquid filter to generate Table of Content into Jekyll pages",
@@ -279,7 +279,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
-  "2019-11-06-eslint-prettier.html": {
+  "2019-11-06-eslint-prettier": {
     "https://eslint.org": {
       "title": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
       "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
@@ -323,7 +323,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
     }
   },
-  "2019-10-24-docker-react-swagger.html": {
+  "2019-10-24-docker-react-swagger": {
     "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=ja": {
       "title": "React Developer Tools",
       "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision ef8a840bd on 10/25/2023.",
@@ -337,7 +337,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
     }
   },
-  "2019-10-13-google-adsense.html": {
+  "2019-10-13-google-adsense": {
     "https://adsense.google.com/intl/ja_jp/start/": {
       "title": "Google AdSense - ウェブサイトを収益化",
       "description": "Google AdSense を使用してウェブサイトを収益化しましょう。広告のサイズは自動的に最適化され、表示とクリックが促進されます。",
@@ -375,7 +375,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://webtan.impress.co.jp"
     }
   },
-  "2019-10-09-wsl-expo-network.html": {
+  "2019-10-09-wsl-expo-network": {
     "https://github.com/expo/expo-cli/issues/99": {
       "title": "Host remains without network after a while · Issue #99 · expo/expo-cli",
       "description": "Description Okay, so this is a bit of a weird one, but I will try my best to explain what happens Expected Behavior Start expo cli Work without any network issues Observed Behavior Start expo cli W...",
@@ -389,7 +389,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
-  "2019-09-30-google-search-console.html": {
+  "2019-09-30-google-search-console": {
     "https://github.com/jekyll/jekyll-sitemap": {
       "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
       "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
@@ -409,10 +409,10 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.xml-sitemaps.com"
     }
   },
-  "2019-09-28-wsl-react-native.html": {
+  "2019-09-28-wsl-react-native": {
     "https://apps.apple.com/jp/app/expo-client/id982107779": {
-      "title": "‎Expo Go",
-      "description": "‎Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
+      "title": "Expo Go",
+      "description": "Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
       "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/2e/34/d1/2e34d152-0f11-064d-5dc2-a762f8e24b70/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
     },
@@ -435,7 +435,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://play.google.com"
     }
   },
-  "2019-09-26-wsl-develop.html": {
+  "2019-09-26-wsl-develop": {
     "https://brew.sh/index_ja": {
       "title": "Page not found · GitHub Pages",
       "description": "",
@@ -473,10 +473,10 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.wikipedia.org"
     }
   },
-  "2019-09-14-docker-react-native.html": {
+  "2019-09-14-docker-react-native": {
     "https://apps.apple.com/jp/app/expo-client/id982107779": {
-      "title": "‎Expo Go",
-      "description": "‎Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
+      "title": "Expo Go",
+      "description": "Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
       "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/2e/34/d1/2e34d152-0f11-064d-5dc2-a762f8e24b70/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
     },
@@ -493,7 +493,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://play.google.com"
     }
   },
-  "2019-09-05-aws-saa.html": {
+  "2019-09-05-aws-saa": {
     "https://aws.amazon.com/jp/aws-jp-introduction": {
       "title": "AWS クラウドサービス活用資料集 | AWS 公式",
       "description": "",
@@ -519,7 +519,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.ric.co.jp"
     }
   },
-  "2019-08-17-til-150.html": {
+  "2019-08-17-til-150": {
     "https://github.com/h-yoshikawa44/til-engineer": {
       "title": "GitHub - h-yoshikawa44/til-engineer: TIL 活動（現在はNotionに移行したので停止）",
       "description": " TIL 活動（現在はNotionに移行したので停止）. Contribute to h-yoshikawa44/til-engineer development by creating an account on GitHub.",
@@ -527,7 +527,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
-  "2019-08-14-docker-rails.html": {
+  "2019-08-14-docker-rails": {
     "https://crieit.net/posts/Windows-Docker-Rails-sprockets": {
       "title": "Windows+Docker+Railsでsprocketsのエラーが出る時 - Crieit",
       "description": "Docker for Windowsのコンテナ内でRailsを動かしていると、 Errno::EEXIST in Sessions#new というエラーが出るようになった。バージョンはRails5.1、sprockets3。具体的には...",
@@ -553,7 +553,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2019-07-06-google-analytics.html": {
+  "2019-07-06-google-analytics": {
     "https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja": {
       "title": "Google Analytics オプトアウト アドオン (by Google)",
       "description": "Google Analytics の JavaScript （ga.js） と連携して Google Analytics に情報が送信されないようにします。",
@@ -561,7 +561,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
     }
   },
-  "2019-06-23-qiita-ranking.html": {
+  "2019-06-23-qiita-ranking": {
     "https://qiita.com/zonbitamago/items/1027b532b174e5ee04b3": {
       "title": "Qiitaいいね数ランキングAPIの作成 - Qiita",
       "description": "TL;DRQiitaAPI、Google Apps Script、Glitch、Firebaseを利用して、Qiitaいいね数ランキングAPIを作成しました。ご活用ください！https://u…",
@@ -569,7 +569,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2019-06-03-laravel-laradock.html": {
+  "2019-06-03-laravel-laradock": {
     "https://github.com/ucan-lab/docker-laravel": {
       "title": "GitHub - ucan-lab/docker-laravel: 🐳 Build a simple laravel development environment with docker-compose.",
       "description": "🐳 Build a simple laravel development environment with docker-compose. - GitHub - ucan-lab/docker-laravel: 🐳 Build a simple laravel development environment with docker-compose.",
@@ -595,7 +595,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2019-05-15-docker-php.html": {
+  "2019-05-15-docker-php": {
     "https://qiita.com/sitmk/items/f911be7ffa4f29293fd5": {
       "title": "DockerによるPHP開発環境構築（PHP + MySQL + Nginx） - Qiita",
       "description": "#背景Dockerを導入したので、早速PHPの開発環境を構築してみようと思い色々調べたことを纏めました。後半部分はほぼ作業みたいになってしまい、それぞれの意味するところをしっかり理解したら追記し…",
@@ -609,7 +609,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.udemy.com"
     }
   },
-  "2019-04-25-aws-qualification.html": {
+  "2019-04-25-aws-qualification": {
     "https://aws.amazon.com/jp/aws-jp-introduction": {
       "title": "AWS クラウドサービス活用資料集 | AWS 公式",
       "description": "",
@@ -647,7 +647,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://datumstudio.jp"
     }
   },
-  "2019-03-26-til.html": {
+  "2019-03-26-til": {
     "https://github.com/h-yoshikawa44/til-engineer": {
       "title": "GitHub - h-yoshikawa44/til-engineer: TIL 活動（現在はNotionに移行したので停止）",
       "description": " TIL 活動（現在はNotionに移行したので停止）. Contribute to h-yoshikawa44/til-engineer development by creating an account on GitHub.",
@@ -667,7 +667,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://syntaxdb.com"
     }
   },
-  "2019-02-10-netlify-deploy.html": {
+  "2019-02-10-netlify-deploy": {
     "https://docs.netlify.com": {
       "title": "Welcome to Netlify",
       "description": "Learn how to build fast and reliable web experiences with our enterprise-ready composable platform.",

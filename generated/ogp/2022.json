@@ -1,5 +1,5 @@
 {
-  "2022-12-31-looking-back-2022-tech.html": {
+  "2022-12-31-looking-back-2022-tech": {
     "https://astro.build": {
       "title": "Astro",
       "description": "Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
@@ -49,7 +49,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
-  "2022-12-30-looking-back-2022-mental-illness.html": {
+  "2022-12-30-looking-back-2022-mental-illness": {
     "https://ja.wikipedia.org/wiki/%E3%83%8D%E3%82%AC%E3%83%86%E3%82%A3%E3%83%96%E3%83%BB%E3%82%B1%E3%82%A4%E3%83%91%E3%83%93%E3%83%AA%E3%83%86%E3%82%A3": {
       "title": "ネガティブ・ケイパビリティ - Wikipedia",
       "description": "",
@@ -63,7 +63,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://scrapbox.io"
     }
   },
-  "2022-11-27-jsconf-jp-2022.html": {
+  "2022-11-27-jsconf-jp-2022": {
     "https://catnose-jsconf2022.pages.dev/1": {
       "title": "ブログサービスを開発するときの戦略とTips",
       "description": "",
@@ -287,7 +287,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtu.be"
     }
   },
-  "2022-11-21-simple-git-hooks-auto-issue-number.html": {
+  "2022-11-21-simple-git-hooks-auto-issue-number": {
     "https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q12125082002": {
       "title": "unixコマンドについてご教授下さい。 - 以下の処理をしたいのですが、どのように記述するのでしょうか。●5秒毎にファイルの... - Yahoo!知恵袋",
       "description": "unixコマンドについてご教授下さい。 以下の処理をしたいのですが、どのように記述するのでしょうか。●5秒毎にファイルの中身を出力するように、while分を使いシェルスクリプトにしました。これを5秒毎ではなく、一時停止に処理を変更したい。Enterキーを押すと、次の処理へ進むようにしたい。「Sample.txt」というテキストファイルがある。※テキストファイルの中身は下記$catSample.txt1...",
@@ -331,7 +331,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://typicode.github.io"
     }
   },
-  "2022-09-03-aws-saa-update.html": {
+  "2022-09-03-aws-saa-update": {
     "https://aws.amazon.com/jp/architecture/well-architected": {
       "title": "AWS Well-Architected – 安全で効率的なクラウドアプリケーション",
       "description": "AWS Well-Architected Framework では、デベロッパーがより迅速に、かつ低リスクでアプリケーションを構築およびデプロイし、AWS のベストプラクティスに従って情報に基づいた決定をするために役立つガイダンスが提供されます。",
@@ -351,7 +351,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://book.impress.co.jp"
     }
   },
-  "2022-06-11-html-professional-level1.html": {
+  "2022-06-11-html-professional-level1": {
     "https://html5exam.jp/measures/column_01.html": {
       "title": "HTML5はHTML Standardへ呼称変更　～ HTML5プロフェッショナル認定試験は今後も有効 ～\n｜HTML5道場｜Web資格なら「HTML5プロフェッショナル認定試験」公式サイト",
       "description": "これからHTML5に関わっていく人や、HTML5をまだやり始めた初心者、HTML5プロフェッショナル認定試験合格を目指す方のためのコラムです。",
@@ -395,7 +395,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
     }
   },
-  "2022-05-15-techfeed-conference-2022.html": {
+  "2022-05-15-techfeed-conference-2022": {
     "http://nmi.jp/2022-05-14-Dynamically-created-WebAssembly": {
       "title": "WebAssembly を動的生成した場合のパフォーマンスについて",
       "description": "本日 TechFeed Conference 2022 で発表した「JavaScript による動的 WebAssembly 生成」についての詳解記事です。JavaScript を動的に生成することで高速化を図るテクニックについては以前「JavaScript における VM の高速化手法」でご紹介しましたが、その...",
@@ -667,7 +667,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
-  "2022-03-04-devchallenges-front-end.html": {
+  "2022-03-04-devchallenges-front-end": {
     "https://emotion.sh/docs/introduction": {
       "title": "Emotion – Introduction",
       "description": "",
@@ -885,7 +885,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.typescriptlang.org"
     }
   },
-  "2022-02-19-developers-summit-2022.html": {
+  "2022-02-19-developers-summit-2022": {
     "https://amanokaze.jp/shinkashikou": {
       "title": "進化思考 | 海士の風",
       "description": "2025大阪・関西万博、横浜DeNAベイスターズ、東京防災、クックパッド…各分野で絶大に支持される「生物の進化に学ぶ創造性」、待望の書籍化！",
@@ -1241,7 +1241,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     }
   },
-  "2022-02-13-ts-type-safe-request.html": {
+  "2022-02-13-ts-type-safe-request": {
     "https://github.com/aspida/aspida": {
       "title": "GitHub - aspida/aspida: TypeScript friendly HTTP client wrapper for the browser and node.js.",
       "description": "TypeScript friendly HTTP client wrapper for the browser and node.js. - GitHub - aspida/aspida: TypeScript friendly HTTP client wrapper for the browser and node.js.",

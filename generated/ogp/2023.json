@@ -1,5 +1,5 @@
 {
-  "2023-11-19-jsconf-jp-2023.html": {
+  "2023-11-19-jsconf-jp-2023": {
     "https://azukiazusa.dev/blog/invokers-to-add-interactions-without-javascript/": {
       "title": "JavaScript なしでインタラクションを追加する Invokers",
       "description": "Invokers は JavaScript なしでインタラクションを追加するための提案です。`<button>` 要素に `invoketarget` 属性を指定することで、値として指定した id を持つ `<dialog>` などの要素の開閉状態を切り替えることが可能となります。",
@@ -211,7 +211,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
-  "2023-11-18-frontend-conf-okinawa-2023.html": {
+  "2023-11-18-frontend-conf-okinawa-2023": {
     "https://frontend-conf.okinawa.jp": {
       "title": "フロントエンドカンファレンス沖縄2023",
       "description": "フロントエンドカンファレンスを沖縄で開催します！ HTML、JavaScript、UI、UX、デザイン、アクセシビリティ、SPAフレームワーク、PWAなど、フロントエンドに関する様々なセッション・企画をご用意。 デザイナーもエンジニアも、職種問わずWebに携わる方が楽しめるカンファレンスです。",
@@ -327,7 +327,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
-  "2023-09-23-stylelint-postcss-preset-env.html": {
+  "2023-09-23-stylelint-postcss-preset-env": {
     "https://cssdb.org": {
       "title": "CSS Database",
       "description": "A comprehensive list of CSS features and their positions in the process of becoming implemented web standards.",
@@ -377,7 +377,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
     }
   },
-  "2023-07-30-blog-replace-astro.html": {
+  "2023-07-30-blog-replace-astro": {
     "https://antfu.me/posts/reimagine-atomic-css": {
       "title": "Reimagine Atomic CSS",
       "description": "Let's take a step back and reimagine what's atomic CSS could be in the best.",
@@ -595,7 +595,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
     }
   },
-  "2023-03-25-book-technical-writing-primer.html": {
+  "2023-03-25-book-technical-writing-primer": {
     "https://developers.google.com/tech-writing": {
       "title": "Technical Writing  |  Google for Developers",
       "description": "Technical Writing Courses for Engineers",
@@ -645,7 +645,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
     }
   },
-  "2023-02-11-developers-summit-2023.html": {
+  "2023-02-11-developers-summit-2023": {
     "https://docs.google.com/presentation/d/1CrpdaUslHJ04H6h89MnE6uIknmeinmzup6GvvLNpqAE/edit#slide=id.p": {
       "title": "DevelopersSummit2023_10-A-6_KohnoFumiya",
       "description": "有志によって 日本最大級の選挙情報サイトが生まれた物語 Developers Summit 2023 10-A-6 河野 文弥(Kohno Fumiya)",

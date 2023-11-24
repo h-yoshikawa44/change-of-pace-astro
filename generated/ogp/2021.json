@@ -1,5 +1,5 @@
 {
-  "2021-12-30-looking-back-2021-tech.html": {
+  "2021-12-30-looking-back-2021-tech": {
     "https://crieit.net/users/h-yoshikawa0724": {
       "title": "よし - Crieit",
       "description": "Web Developer。",
@@ -55,7 +55,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
-  "2021-12-27-looking-back-2021-mental-illness.html": {
+  "2021-12-27-looking-back-2021-mental-illness": {
     "https://twicomi.com/manga/e3_noguchi/913693963118190594": {
       "title": "【漫画】パラダイムシフト①ぼくんち\n\nこんな感じの漫画です、表現とか苦手.. | -EMI- さんのマンガ | ツイコミ(仮)",
       "description": "【漫画】パラダイムシフト①ぼくんち\nhttps://t.co/pJJ3ZVhBYF\nこんな感じの漫画です、表現とか苦手な方はすみません",
@@ -63,7 +63,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://twicomi.com"
     }
   },
-  "2021-12-24-devchallenges-responsive-web.html": {
+  "2021-12-24-devchallenges-responsive-web": {
     "https://css-tricks.com/transitions-only-after-page-load": {
       "title": "Transitions Only After Page Load | CSS-Tricks",
       "description": "If you've ever used CSS transitions on structural elements on your page, you may have noticed a case where you see that transition happen when the page loads",
@@ -287,7 +287,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.typescriptlang.org"
     }
   },
-  "2021-11-28-jsconf-jp-2021.html": {
+  "2021-11-28-jsconf-jp-2021": {
     "https://docs.google.com/presentation/d/1fwqrHrEEcNBeLYkiy49r5qGx83UXpX705E31GbyAy3k/mobilepresent?slide=id.g1047b22436d_2_101": {
       "title": "モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例 / JSConf JP 2021",
       "description": "モバイルブラウザにおける Client-side MLアプリケーションの プロダクション開発事例 2021/11/27 JSConf JP Tomohiro Kato https://jsconf.jp/2021/talk/case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser",
@@ -475,7 +475,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
     }
   },
-  "2021-11-09-volta.html": {
+  "2021-11-09-volta": {
     "https://asdf-vm.com": {
       "title": "asdf | asdfGitHubGitHub",
       "description": "Manage multiple runtime versions with a single CLI tool",
@@ -507,7 +507,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://volta.sh"
     }
   },
-  "2021-10-24-vscode-autoprefixer-vite.html": {
+  "2021-10-24-vscode-autoprefixer-vite": {
     "https://ics.media/entry/210708/#contents-anchor-pitfalls": {
       "title": "jQueryからTypeScript・Reactまで - Viteで始めるモダンで高速な開発環境構築 - ICS MEDIA",
       "description": "Vite（ヴィート＝フランス語で「速い」の意味）は2020年に発表された新しいフロントエンドのビルドツールです。",
@@ -533,7 +533,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
     }
   },
-  "2021-09-26-material-ui-v5.html": {
+  "2021-09-26-material-ui-v5": {
     "https://codesandbox.io/s/7lc1r?file=/demo.tsx": {
       "title": "UseButton Material Demo - CodeSandbox",
       "description": "https://github.com/mui-org/material-ui/blob/v5.0.0-rc.1/docs/src/pages/components/buttons/UseButton.tsx",
@@ -745,7 +745,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
     }
   },
-  "2021-05-31-buildable-introduction.html": {
+  "2021-05-31-buildable-introduction": {
     "https://github.com/h-yoshikawa44/buildable-tutorial": {
       "title": "GitHub - h-yoshikawa44/buildable-tutorial: 個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials)",
       "description": "個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials) - GitHub - h-yoshikawa44/buildable-tutorial: 個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials)",
@@ -777,7 +777,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
-  "2021-05-19-react-query-socialite.html": {
+  "2021-05-19-react-query-socialite": {
     "https://docs.github.com/ja/developers/apps/scopes-for-oauth-apps": {
       "title": "OAuth アプリのスコープ - GitHub Docs",
       "description": "スコープによって、必要なアクセスの種類を正確に指定できます。 スコープによって OAuth トークンへのアクセスが 制限 されます。 ユーザがすでに持っている範囲を超えた権限を許可することはありません。",
@@ -833,7 +833,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://yshrfmru.hatenablog.com"
     }
   },
-  "2021-04-13-react-query-intersection-observer.html": {
+  "2021-04-13-react-query-intersection-observer": {
     "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/load-more-infinite-scroll": {
       "title": "",
       "description": "",
@@ -865,7 +865,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     }
   },
-  "2021-03-21-laravel-react-query-auth.html": {
+  "2021-03-21-laravel-react-query-auth": {
     "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript": {
       "title": "",
       "description": "",
@@ -927,7 +927,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.hypertextcandy.com"
     }
   },
-  "2021-02-20-developers-summit-2021.html": {
+  "2021-02-20-developers-summit-2021": {
     "https://docs.google.com/presentation/d/16GNi1z2PtXHch39MwiKtAF4-p-caedqw6G4PXsNO35A/edit": {
       "title": "アジャイルネイティブな大学生と\u000bコネクトしてみませんか?",
       "description": "アジャイルネイティブな大学生と コネクトしてみませんか? -3時間スプリント白熱教室- 渡辺知恵美, 村上藍加, 日高拓真, 飯塚陸斗, 須田幹大",

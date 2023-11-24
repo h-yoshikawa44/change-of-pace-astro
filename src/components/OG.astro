@@ -25,7 +25,8 @@ const postYearFound = Astro.request.url.match(/posts\/(\d{4})/);
 if (postYearFound === null)
   throw Error('記事URLから年度が抽出できませんでした。');
 
-const fileName = fileNameFoumd[1];
+// ビルド時だけ .html がついてしまうのでなくす
+const fileName = fileNameFoumd[1].replace('.html', '');
 const postYear = postYearFound[1];
 const { url } = Astro.props;
 const generatedFilePath = new URL(

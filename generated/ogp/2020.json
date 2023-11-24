@@ -1,5 +1,5 @@
 {
-  "2020-12-31-looking-back-2020-tech.html": {
+  "2020-12-31-looking-back-2020-tech": {
     "https://crieit.net/users/h-yoshikawa0724": {
       "title": "よし - Crieit",
       "description": "Web Developer。",
@@ -25,10 +25,10 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
-  "2020-11-27-notion-introduction.html": {
+  "2020-11-27-notion-introduction": {
     "https://apps.apple.com/jp/app/fast-notion/id1505194382": {
-      "title": "‎Fast Notion",
-      "description": "‎Fast Notion は Notion に素早く簡単にメモを保存するためのアプリです。\n\nアプリを起動するとすぐに入力画面になるので、アイデアメモや備忘録などに最適です。\n\n===\n利用規約\nhttps://www.notion.so/fastnotion/bd477a79a7644229a09994ced4dcb4ac\n",
+      "title": "Fast Notion",
+      "description": "Fast Notion は Notion に素早く簡単にメモを保存するためのアプリです。\n\nアプリを起動するとすぐに入力画面になるので、アイデアメモや備忘録などに最適です。\n\n===\n利用規約\nhttps://www.notion.so/fastnotion/bd477a79a7644229a09994ced4dcb4ac\n",
       "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/07/57/28/0757285d-f111-ce06-f2b6-285007fbb5b2/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
     },
@@ -87,7 +87,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.notion.so"
     }
   },
-  "2020-11-07-windows-terminal.html": {
+  "2020-11-07-windows-terminal": {
     "https://docs.microsoft.com/ja-jp/windows/terminal": {
       "title": "Windows ターミナルの概要",
       "description": "Windows ターミナルの概要と、それによってコマンド ライン ワークフローを改善する方法について説明します。",
@@ -119,7 +119,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
-  "2020-09-20-web1week-2.html": {
+  "2020-09-20-web1week-2": {
     "https://crieit.net/boards/web1week-202009/Close-to-2": {
       "title": "Close to 2 （9/7～9/13）１週間でWebサービスを作るイベント - お題「2」 - Boards - Crieit",
       "description": "遅刻で失礼します。今回のお題は「２」ということで、「２」に一番近い式をあてるゲームを作りました。作品：Close to 2概要４択の中から、計算結果が「２」に一番近い式をあてるゲームです。初級、中級、上級で遊べて、難易度が高いほど長い...",
@@ -157,7 +157,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2020-09-01-developers-summit-2020-kansai.html": {
+  "2020-09-01-developers-summit-2020-kansai": {
     "https://event.shoeisha.jp/devsumi/20200827": {
       "title": "Developers Summit 2020  KANSAI",
       "description": "ITエンジニアの祭典「Developers Summit 2020 KANSAI」（デブサミ2020関西）は、2020年8月27日にオンライン開催！事前登録開始7月中旬予定！",
@@ -237,7 +237,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     }
   },
-  "2020-08-13-migrate-gitlab-to-github.html": {
+  "2020-08-13-migrate-gitlab-to-github": {
     "https://github.com/piceaTech/node-gitlab-2-github": {
       "title": "GitHub - piceaTech/node-gitlab-2-github: Migrate Issues, milestones etc from gitlab to github",
       "description": "Migrate Issues, milestones etc from gitlab to github - GitHub - piceaTech/node-gitlab-2-github: Migrate Issues, milestones etc from gitlab to github",
@@ -251,7 +251,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2020-08-08-developers-summit-2020-summer.html": {
+  "2020-08-08-developers-summit-2020-summer": {
     "https://docs.google.com/presentation/d/1jy9F0DCMCIxIWO6ayoW5YvjvIiPByetEhvAaXVK2YWg/edit#slide=id.g8c05c15c04_17_379": {
       "title": "【デブサミ】リモートワーク × Employee Experience でつくる～with コロナ時代の「Work fun! Management」とは～",
       "description": "リモートワーク×Employee Experience でつくる with コロナ時代の 「Work fun! Management」 とは Jul 21, 2020 @ Developers Summit 2020 Summer 新村 北斗 リモートワーク×Employee Experience でつくる with コロナ時代の 「Work fun! Management」 とは #devsumiB",
@@ -433,7 +433,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
-  "2020-06-28-realdgame-silence.html": {
+  "2020-06-28-realdgame-silence": {
     "https://www.scrapmagazine.com": {
       "title": "SCRAP",
       "description": "Just another WordPress site",
@@ -447,7 +447,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.scrapmagazine.com"
     }
   },
-  "2020-06-06-react-firebase-deploy.html": {
+  "2020-06-06-react-firebase-deploy": {
     "https://firebase.google.com": {
       "title": "Firebase | Google’s Mobile and Web App Development Platform",
       "description": "Discover Firebase, Google’s mobile and web app development platform that helps developers build apps and games that users will love.",
@@ -461,7 +461,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
-  "2020-05-28-web1week-like.html": {
+  "2020-05-28-web1week-like": {
     "https://blitzgate.co.jp/blog/805": {
       "title": "【1から始めるReact】ストップウォッチを作る | 株式会社ブリッツゲート",
       "description": "こんにちは。なべっちです。 前回はcreate-react-appを使ったReactの環境構築を行いました。 今回はReactでストップウォッチを作っていきます。 環境構築の記事はこちら 【1から始めるReact】概要と環境構築 プロジェクトの準備 新規プロジェクトの作成 まずは、create-react-appでreact",
@@ -511,7 +511,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://konvajs.org"
     }
   },
-  "2020-05-06-react-recompose.html": {
+  "2020-05-06-react-recompose": {
     "https://github.com/acdlite/recompose": {
       "title": "GitHub - acdlite/recompose: A React utility belt for function components and higher-order components.",
       "description": "A React utility belt for function components and higher-order components. - GitHub - acdlite/recompose: A React utility belt for function components and higher-order components.",
@@ -519,7 +519,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
-  "2020-05-03-docusaurus-ver-2-gtag.html": {
+  "2020-05-03-docusaurus-ver-2-gtag": {
     "https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja": {
       "title": "Google Analytics オプトアウト アドオン (by Google)",
       "description": "Google Analytics の JavaScript （ga.js） と連携して Google Analytics に情報が送信されないようにします。",
@@ -563,7 +563,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.irep.co.jp"
     }
   },
-  "2020-04-23-react-material-ui.html": {
+  "2020-04-23-react-material-ui": {
     "https://github.com/cssinjs/jss": {
       "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
       "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
@@ -613,7 +613,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v4.mui.com"
     }
   },
-  "2020-04-11-domain-transfer.html": {
+  "2020-04-11-domain-transfer": {
     "https://domains.google/intl/ja_jp": {
       "title": "ホーム – Google Domains",
       "description": "",
@@ -621,7 +621,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://domains.google"
     }
   },
-  "2020-04-04-react-proptypes.html": {
+  "2020-04-04-react-proptypes": {
     "https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol": {
       "title": "Symbol (シンボル) - JavaScript | MDN",
       "description": "JavaScript では、シンボルはプリミティブ値です。",
@@ -653,7 +653,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2020-03-14-slack-my-manner.html": {
+  "2020-03-14-slack-my-manner": {
     "https://ja.wikipedia.org/wiki/Slack_(%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2)": {
       "title": "Slack (ソフトウェア) - Wikipedia",
       "description": "",
@@ -673,7 +673,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slack.com"
     }
   },
-  "2020-03-07-jekyll-pagination-v2.html": {
+  "2020-03-07-jekyll-pagination-v2": {
     "http://jekyllrb-ja.github.io/docs/pagination": {
       "title": "Pagination（ページ分け）",
       "description": "プレーンテキストを静的サイトやブログに変えましょう",
@@ -681,7 +681,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=http://jekyllrb-ja.github.io"
     }
   },
-  "2020-03-01-github-actions-react.html": {
+  "2020-03-01-github-actions-react": {
     "https://839.hateblo.jp/entry/2019/08/16/104624": {
       "title": "GitHub Actions(beta)向けにslack通知プラグインを作った - 839の日記",
       "description": "github.com 839.hateblo.jp でcircleciからgithub actionsに移行したもののslack通知周りが整ってないので作った。 自分が観測している範囲だと現状 https://github.com/pullreminders/slack-action しかなかったけど、あまりにもpayloadを書くのがきつそうなので敬遠していた。 あとdockerベースだと毎回このプラグインのimageが先頭でbuildされるのも速度的に気になっていた。 元々もっと困っていたのはキャッシュ周りで、それっぽいAPIがあったので調査してみたが結局現状できない、という結論になったの…",
@@ -749,7 +749,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://knowledge.sakura.ad.jp"
     }
   },
-  "2020-02-22-developers-summit-2020.html": {
+  "2020-02-22-developers-summit-2020": {
     "http://iwakiri.hatenablog.com/entry/2020/02/16/195321": {
       "title": "デブサミ2020 14A8「キャリアトランスフォーメーションをみんなで考えよう」を終えて #devsumi  - 江青日誌",
       "description": "「 ITエンジニアが、自分のため＝チームのため＝世のために、わくわくしながら、サービスやシステムをリリースしてくれたら、きっと日本の将来は、ステキなものになっていくに違いない。そのためにはエンジニア同士で、日頃の鍛錬で得たものをシェアし、語り合う場を作るといいのでは？という仮説を立て、2003年に始まったデブサミ。 オーガナイザーを卒業したのに、デブサミ2020でどうしても「開発者からマネジメントってどうよ」と、問いかけたくなりました。一番始めに市谷さんに思いを相談したところ、快諾いただいて、石井さん、黒田さんに声をかけてパネルでいこうと話がまとまり、現オーガナイザーである近藤祐子どのにネタを…",
@@ -1183,7 +1183,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     }
   },
-  "2020-02-08-react-router.html": {
+  "2020-02-08-react-router": {
     "https://github.com/sindresorhus/query-string": {
       "title": "GitHub - sindresorhus/query-string: Parse and stringify URL query strings",
       "description": "Parse and stringify URL query strings. Contribute to sindresorhus/query-string development by creating an account on GitHub.",
@@ -1239,7 +1239,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5.reactrouter.com"
     }
   },
-  "2020-01-19-duty-gacha.html": {
+  "2020-01-19-duty-gacha": {
     "https://myaccount.google.com/permissions": {
       "title": "Sign in - Google Accounts",
       "description": "",
@@ -1253,7 +1253,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
-  "2020-01-13-docusaurus-ver-2.html": {
+  "2020-01-13-docusaurus-ver-2": {
     "https://docusaurus.io": {
       "title": "Build optimized websites quickly, focus on your content | Docusaurus",
       "description": "An optimized site generator in React. Docusaurus helps you to move fast and write content. Build documentation websites, blogs, marketing pages, and more.",
@@ -1285,7 +1285,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v1.docusaurus.io"
     }
   },
-  "2020-01-04-jekyll-anthor-heading.html": {
+  "2020-01-04-jekyll-anthor-heading": {
     "https://github.com/allejo/jekyll-anchor-headings": {
       "title": "GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat:",
       "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors ...",
