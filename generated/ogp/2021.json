@@ -1,16 +1,22 @@
 {
   "2021-12-30-looking-back-2021-tech.html": {
-    "https://zenn.dev/dala/books/nextjs-firebase-service": {
-      "title": "Next.jsとFirebaseで質問箱のようなサービスを作る",
-      "description": "Next.jsとFirebaseを使って質問箱のようなサービスを作ってデプロイするまでを解説します。",
-      "image": "https://res.cloudinary.com/zenn/image/upload/s--vQQsq9FZ--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci84MThiMTdlZWFlLmpwZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    "https://crieit.net/users/h-yoshikawa0724": {
+      "title": "よし - Crieit",
+      "description": "Web Developer。",
+      "image": "https://crieit.net/img/card.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
     },
-    "https://zenn.dev/h_yoshikawa0724": {
-      "title": "よしさんの記事一覧",
-      "description": "Web Developer。頭の情報整理がてら記事書いてます（基本的に個人ブログとZennでクロス投稿しています）TypeScript / React / Next.js",
-      "image": "https://lh3.googleusercontent.com/a-/AOh14GiwD5VEHFiHt6l5HHmCq_VAFJtJKmM2kUwebpZx=s250-c",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    "https://github.com/h-yoshikawa44": {
+      "title": "h-yoshikawa44 - Overview",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 49 repositories available. Follow their code on GitHub.",
+      "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/oukayuka/Riakuto-StartingReact-ja3.1": {
+      "title": "GitHub - oukayuka/Riakuto-StartingReact-ja3.1",
+      "description": "Contribute to oukayuka/Riakuto-StartingReact-ja3.1 development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/70b08dcbf84b1ff1ea473d86701cff3c8dc9006eaef0393a967ab8f4dc5af434/oukayuka/Riakuto-StartingReact-ja3.1",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://legacy.devchallenges.io": {
       "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
@@ -24,35 +30,29 @@
       "image": "https://cdn.qiita.com/assets/qiita-ogp-3b6fcfdd74755a85107071ffc3155898.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
+    "https://recursionist.io": {
+      "title": "Recursion（リカージョン） | コンピュータサイエンスを基礎から学べるプラットフォーム",
+      "description": "Recursionは「一人で何も作れない」を解決することに特化した、アメリカ発のプログラミング学習サービスです。",
+      "image": "https://recursionist.io/img/front/social/share-main.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://recursionist.io"
+    },
     "https://tk-rabbit-house.booth.pm/items/2381995": {
       "title": "実践プロトタイピング 〜Webフロントエンド＆バックエンドでプロトタイピング〜 - 東京ラビットハウス - BOOTH",
       "description": "A5判 160P お試し版（78P） https://rabbit-house.tokyo/proto-book-trial-rev2.pdf 本書はウェブフロントエンドとバックエンドを併用して実践的なプロトタイピングについて解説する本です。 ウェブフロントエンドのみのプロトタイピングに使える資料はそれなりにあります。Firebase のような特定の機能をバックエンドに持った本も多く見られます。 既存のそれらの本はバックエンドにはあまり踏み込みません。NoSQLやファイルストレージ、認証サービスなどを利用することがほとんどです。 この本の特徴は2点あります。 1.",
       "image": "https://booth.pximg.net/c/620x620/2444d047-ff59-44d3-a957-ad391d0d1f69/i/2381995/e0263589-0faa-48db-9ae7-e8280eeea0cd_base_resized.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tk-rabbit-house.booth.pm"
     },
-    "https://github.com/oukayuka/Riakuto-StartingReact-ja3.1": {
-      "title": "GitHub - oukayuka/Riakuto-StartingReact-ja3.1",
-      "description": "Contribute to oukayuka/Riakuto-StartingReact-ja3.1 development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/70b08dcbf84b1ff1ea473d86701cff3c8dc9006eaef0393a967ab8f4dc5af434/oukayuka/Riakuto-StartingReact-ja3.1",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    "https://zenn.dev/dala/books/nextjs-firebase-service": {
+      "title": "Next.jsとFirebaseで質問箱のようなサービスを作る",
+      "description": "Next.jsとFirebaseを使って質問箱のようなサービスを作ってデプロイするまでを解説します。",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--vQQsq9FZ--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci84MThiMTdlZWFlLmpwZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     },
-    "https://crieit.net/users/h-yoshikawa0724": {
-      "title": "よし - Crieit",
-      "description": "Web Developer。",
-      "image": "https://crieit.net/img/card.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
-    },
-    "https://github.com/h-yoshikawa44": {
-      "title": "h-yoshikawa44 - Overview",
-      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 49 repositories available. Follow their code on GitHub.",
-      "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://recursionist.io": {
-      "title": "Recursion（リカージョン） | コンピュータサイエンスを基礎から学べるプラットフォーム",
-      "description": "Recursionは「一人で何も作れない」を解決することに特化した、アメリカ発のプログラミング学習サービスです。",
-      "image": "https://recursionist.io/img/front/social/share-main.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://recursionist.io"
+    "https://zenn.dev/h_yoshikawa0724": {
+      "title": "よしさんの記事一覧",
+      "description": "Web Developer。頭の情報整理がてら記事書いてます（基本的に個人ブログとZennでクロス投稿しています）TypeScript / React / Next.js",
+      "image": "https://lh3.googleusercontent.com/a-/AOh14GiwD5VEHFiHt6l5HHmCq_VAFJtJKmM2kUwebpZx=s250-c",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
   "2021-12-27-looking-back-2021-mental-illness.html": {
@@ -64,83 +64,11 @@
     }
   },
   "2021-12-24-devchallenges-responsive-web.html": {
-    "https://legacy.devchallenges.io": {
-      "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
-      "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY": {
-      "title": "404 Not Found Challenge | devChallenges.io",
-      "description": "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U": {
-      "title": "My team page Challenge | devChallenges.io",
-      "description": "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht": {
-      "title": "Recipe page Challenge | devChallenges.io",
-      "description": "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb": {
-      "title": "Interior Consultant Challenge | devChallenges.io",
-      "description": "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO": {
-      "title": "Checkout Page Challenge | devChallenges.io",
-      "description": "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/gcbWLxG6wdennelX7b8I": {
-      "title": "My Gallery Challenge | devChallenges.io",
-      "description": "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0": {
-      "title": "Edie  homepage Challenge | devChallenges.io",
-      "description": "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt": {
-      "title": "Portfolio Challenge | devChallenges.io",
-      "description": "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute": {
-      "title": "UIにおける見えるけど利用できない非活性な領域の実装とinert属性について",
-      "description": "モーダルダイアログのようなUIには、それが出現している間はダイアログの外の領域が操作不能になっているという慣習があります。ダイアログが取り扱うタスクだけにユーザーを集中させるために、あえてダイアログ以外の操作ができないようになっています。",
-      "image": "https://standard.shiftbrain.com/assets/blog/unavailable-inert-regions-and-inert-attribute/modal-dialog.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://standard.shiftbrain.com"
-    },
-    "https://ja.vitejs.dev": {
-      "title": "Vite",
-      "description": "次世代フロントエンドツール",
-      "image": "https://vitejs.dev/og-image.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
-    },
-    "https://stylelint.io": {
-      "title": "Home | Stylelint",
-      "description": "npm version",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
-    },
-    "https://github.com/toplenboren/simple-git-hooks": {
-      "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
-      "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/6ddff1bad85d69025e9ab273d60c70293ed567e0dd757d882938f7a42b5edba2/toplenboren/simple-git-hooks",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    "https://css-tricks.com/transitions-only-after-page-load": {
+      "title": "Transitions Only After Page Load | CSS-Tricks",
+      "description": "If you've ever used CSS transitions on structural elements on your page, you may have noticed a case where you see that transition happen when the page loads",
+      "image": "https://css-tricks.com/wp-json/social-image-generator/v1/image/16604",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://css-tricks.com"
     },
     "https://discord.com/invite/3R6vFeM": {
       "title": "Join the devchallenges.io Discord Server!",
@@ -148,29 +76,11 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://discord.com"
     },
-    "https://prettier.io": {
-      "title": "Prettier · Opinionated Code Formatter",
-      "description": "Opinionated Code Formatter",
-      "image": "https://prettier.io/icon.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
-    },
-    "https://google.github.io/material-design-icons": {
-      "title": "Material Icons Guide",
+    "https://emotion.sh/docs/introduction": {
+      "title": "Emotion – Introduction",
       "description": "",
       "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://google.github.io"
-    },
-    "https://nextjs.org": {
-      "title": "Next.js by Vercel - The React Framework",
-      "description": "Next.js by Vercel is the full-stack React framework for the web.",
-      "image": "https://assets.vercel.com/image/upload/front/nextjs/twitter-card.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://nextjs.org"
-    },
-    "https://github.com/emotion-icons/emotion-icons": {
-      "title": "GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components",
-      "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Mate...",
-      "image": "https://opengraph.githubassets.com/59382d127c7906ae3131b957156c874ce531ce4f95889c1fb4ea2b221fdf4889/emotion-icons/emotion-icons",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://emotion.sh"
     },
     "https://eslint.org": {
       "title": "Find and fix problems in your JavaScript code - ESLint - Pluggable JavaScript Linter",
@@ -178,23 +88,11 @@
       "image": "https://eslint.org/icon-512.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
     },
-    "https://legacy.devchallenges.io/solutions/YPhZQTkeMmNiwBx00RsM": {
-      "title": "404 Not Found by Hitomi Yoshikawa",
-      "description": "HTML × CSS.  ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/SUwASJDgXBoBuZqxRxk7": {
-      "title": "Recipe page by Hitomi Yoshikawa",
-      "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to layout with grid-row and grid-column\n- How to create a custom list number element using a pseudo-element.\n",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://emotion.sh/docs/introduction": {
-      "title": "Emotion – Introduction",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://emotion.sh"
+    "https://github.com/WICG/focus-visible": {
+      "title": "GitHub - WICG/focus-visible: Polyfill for `:focus-visible`",
+      "description": "Polyfill for `:focus-visible`. Contribute to WICG/focus-visible development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/06edb4a7aadbc8e5380ce104d04c725ddda28561628dd0648a236c6e9494d8d5/WICG/focus-visible",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/WICG/inert": {
       "title": "GitHub - WICG/inert: Polyfill for the inert attribute and property.",
@@ -202,28 +100,10 @@
       "image": "https://opengraph.githubassets.com/588cb08881c539d451da50b47890ec3b1b52b11e3e202eadf28dc155ac5c07f1/WICG/inert",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://www.typescriptlang.org": {
-      "title": "JavaScript With Syntax For Types.",
-      "description": "TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.typescriptlang.org"
-    },
-    "https://github.com/WICG/focus-visible": {
-      "title": "GitHub - WICG/focus-visible: Polyfill for `:focus-visible`",
-      "description": "Polyfill for `:focus-visible`. Contribute to WICG/focus-visible development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/06edb4a7aadbc8e5380ce104d04c725ddda28561628dd0648a236c6e9494d8d5/WICG/focus-visible",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://legacy.devchallenges.io/solutions/o1EB8NhO6xuVPuJWPY2m": {
-      "title": "My team page by Hitomi Yoshikawa",
-      "description": "HTML × CSS  \nThe npm library was only used for syntax checking and formatting.\n\nlearned/improved：\n- Now I know how to use :nth-child.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://github.com/typestyle/csx": {
-      "title": "GitHub - typestyle/csx: Utility functions for TypeStyle",
-      "description": "Utility functions for TypeStyle. Contribute to typestyle/csx development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/8ba1e093af54ba4a37fcdd28e7329edc472ad7bbaae0caf79233dbacf6780bea/typestyle/csx",
+    "https://github.com/emotion-icons/emotion-icons": {
+      "title": "GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components",
+      "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Mate...",
+      "image": "https://opengraph.githubassets.com/59382d127c7906ae3131b957156c874ce531ce4f95889c1fb4ea2b221fdf4889/emotion-icons/emotion-icons",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/hankchizljaw/modern-css-reset": {
@@ -232,10 +112,100 @@
       "image": "https://opengraph.githubassets.com/aa486a8d5de7bca2927e51f05964d32eb9eb78b874e0eaf1fd787234ad00ea71/Andy-set-studio/modern-css-reset",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://legacy.devchallenges.io/solutions/N7Gs8WCVYAbtkqWxomhL": {
-      "title": "Interior Consultant by Hitomi Yoshikawa",
-      "description": "HTML × CSS × JavaScript  \n\nlearned/improved：\n- basic usage of Vite.\n- Using Vite and the VSCode extension Autoprefixer together causes conflicts and hot reloadi",
+    "https://github.com/okonet/lint-staged": {
+      "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run linters on git staged files",
+      "description": "🚫💩 — Run linters on git staged files. Contribute to lint-staged/lint-staged development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/06bfd82fa49008f69a2518a08b2076c663578e84ac9d056241f741f5475c3985/lint-staged/lint-staged",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/rbren/rss-parser": {
+      "title": "GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
+      "description": "A lightweight RSS parser, for Node and the browser - GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
+      "image": "https://opengraph.githubassets.com/eb87b40950537bab09eca661318a7f9729f6ba8e3b2fab0c24ed0e61c3fb3dc7/rbren/rss-parser",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/toplenboren/simple-git-hooks": {
+      "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
+      "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/6ddff1bad85d69025e9ab273d60c70293ed567e0dd757d882938f7a42b5edba2/toplenboren/simple-git-hooks",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/typestyle/csx": {
+      "title": "GitHub - typestyle/csx: Utility functions for TypeStyle",
+      "description": "Utility functions for TypeStyle. Contribute to typestyle/csx development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/8ba1e093af54ba4a37fcdd28e7329edc472ad7bbaae0caf79233dbacf6780bea/typestyle/csx",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://google.github.io/material-design-icons": {
+      "title": "Material Icons Guide",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://google.github.io"
+    },
+    "https://ja.vitejs.dev": {
+      "title": "Vite",
+      "description": "次世代フロントエンドツール",
+      "image": "https://vitejs.dev/og-image.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
+    },
+    "https://legacy.devchallenges.io": {
+      "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
+      "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO": {
+      "title": "Checkout Page Challenge | devChallenges.io",
+      "description": "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt": {
+      "title": "Portfolio Challenge | devChallenges.io",
+      "description": "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb": {
+      "title": "Interior Consultant Challenge | devChallenges.io",
+      "description": "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning.",
       "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht": {
+      "title": "Recipe page Challenge | devChallenges.io",
+      "description": "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/gcbWLxG6wdennelX7b8I": {
+      "title": "My Gallery Challenge | devChallenges.io",
+      "description": "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U": {
+      "title": "My team page Challenge | devChallenges.io",
+      "description": "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY": {
+      "title": "404 Not Found Challenge | devChallenges.io",
+      "description": "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0": {
+      "title": "Edie  homepage Challenge | devChallenges.io",
+      "description": "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/solutions/EQJ91PQg8nr6B3yfAPf1": {
+      "title": "Edie homepage by Hitomi Yoshikawa",
+      "description": "HTML × CSS × JavaScript × Vite.\n\nlearned/improved\n- Better, how to control the button outline during focus except for keyboard operation.\n- Shifting techniques ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
     },
     "https://legacy.devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6": {
@@ -244,40 +214,10 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
     },
-    "https://github.com/rbren/rss-parser": {
-      "title": "GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
-      "description": "A lightweight RSS parser, for Node and the browser - GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
-      "image": "https://opengraph.githubassets.com/eb87b40950537bab09eca661318a7f9729f6ba8e3b2fab0c24ed0e61c3fb3dc7/rbren/rss-parser",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/okonet/lint-staged": {
-      "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run linters on git staged files",
-      "description": "🚫💩 — Run linters on git staged files. Contribute to lint-staged/lint-staged development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/06bfd82fa49008f69a2518a08b2076c663578e84ac9d056241f741f5475c3985/lint-staged/lint-staged",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://medium.com/eureka-engineering/html-css-%E3%81%9F%E3%81%8B%E3%81%8C%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3-%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6%E3%83%88%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%85%A8%E5%8A%9B%E3%81%A7%E5%8F%96%E3%82%8A%E7%B5%84%E3%82%93%E3%81%A0%E7%B5%90%E6%9E%9C-%E6%9C%80%E5%BC%B7%E3%81%AEcss%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1-%E6%9C%80%E5%BC%B7-881152c4ff13": {
-      "title": "【HTML/CSS】たかがフェードイン/フェードアウトするだけの挙動に全力で取り組んだ結果、最強のCSSができてしまった話【最強】",
-      "description": "エウレカのPairsグローバル事業部エンジニアの山内です。\nこの記事は、eureka Advent Calendar 2017 13日目の記事です。\n\n\n昨日は新卒エンジニア鈴木康文さんの「Goのフレームワーク“Revel”を触ってみた」でした。\nこれからGoをはじめてみようという方にはとても入っていきやすい内容です。是非。 最近、HTML要素をフェードイン/フェードアウトする実装をしました。…",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://medium.com"
-    },
-    "https://legacy.devchallenges.io/solutions/EQJ91PQg8nr6B3yfAPf1": {
-      "title": "Edie homepage by Hitomi Yoshikawa",
-      "description": "HTML × CSS × JavaScript × Vite.\n\nlearned/improved\n- Better, how to control the button outline during focus except for keyboard operation.\n- Shifting techniques ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://css-tricks.com/transitions-only-after-page-load": {
-      "title": "Transitions Only After Page Load | CSS-Tricks",
-      "description": "If you've ever used CSS transitions on structural elements on your page, you may have noticed a case where you see that transition happen when the page loads",
-      "image": "https://css-tricks.com/wp-json/social-image-generator/v1/image/16604",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://css-tricks.com"
-    },
-    "https://legacy.devchallenges.io/solutions/Yf7HiQpP7rAXzM1euefq": {
-      "title": "My Gallery by Hitomi Yoshikawa",
-      "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to combine nth-child with grid-row and grid-column.\n",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
+    "https://legacy.devchallenges.io/solutions/N7Gs8WCVYAbtkqWxomhL": {
+      "title": "Interior Consultant by Hitomi Yoshikawa",
+      "description": "HTML × CSS × JavaScript  \n\nlearned/improved：\n- basic usage of Vite.\n- Using Vite and the VSCode extension Autoprefixer together causes conflicts and hot reloadi",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
     },
     "https://legacy.devchallenges.io/solutions/SFmxGtHXWkESKZbSrg67": {
@@ -285,38 +225,74 @@
       "description": "HTML × CSS × JavaScript × Vite.  \n※As for the form validation, it is done using HTML only.  \n※The pattern validation for Phone and Postal code is based on Japan",
       "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/solutions/SUwASJDgXBoBuZqxRxk7": {
+      "title": "Recipe page by Hitomi Yoshikawa",
+      "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to layout with grid-row and grid-column\n- How to create a custom list number element using a pseudo-element.\n",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/solutions/YPhZQTkeMmNiwBx00RsM": {
+      "title": "404 Not Found by Hitomi Yoshikawa",
+      "description": "HTML × CSS.  ",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/solutions/Yf7HiQpP7rAXzM1euefq": {
+      "title": "My Gallery by Hitomi Yoshikawa",
+      "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to combine nth-child with grid-row and grid-column.\n",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://legacy.devchallenges.io/solutions/o1EB8NhO6xuVPuJWPY2m": {
+      "title": "My team page by Hitomi Yoshikawa",
+      "description": "HTML × CSS  \nThe npm library was only used for syntax checking and formatting.\n\nlearned/improved：\n- Now I know how to use :nth-child.",
+      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
+    },
+    "https://medium.com/eureka-engineering/html-css-%E3%81%9F%E3%81%8B%E3%81%8C%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3-%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6%E3%83%88%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%85%A8%E5%8A%9B%E3%81%A7%E5%8F%96%E3%82%8A%E7%B5%84%E3%82%93%E3%81%A0%E7%B5%90%E6%9E%9C-%E6%9C%80%E5%BC%B7%E3%81%AEcss%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1-%E6%9C%80%E5%BC%B7-881152c4ff13": {
+      "title": "【HTML/CSS】たかがフェードイン/フェードアウトするだけの挙動に全力で取り組んだ結果、最強のCSSができてしまった話【最強】",
+      "description": "エウレカのPairsグローバル事業部エンジニアの山内です。\nこの記事は、eureka Advent Calendar 2017 13日目の記事です。\n\n\n昨日は新卒エンジニア鈴木康文さんの「Goのフレームワーク“Revel”を触ってみた」でした。\nこれからGoをはじめてみようという方にはとても入っていきやすい内容です。是非。 最近、HTML要素をフェードイン/フェードアウトする実装をしました。…",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://medium.com"
+    },
+    "https://nextjs.org": {
+      "title": "Next.js by Vercel - The React Framework",
+      "description": "Next.js by Vercel is the full-stack React framework for the web.",
+      "image": "https://assets.vercel.com/image/upload/front/nextjs/twitter-card.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://nextjs.org"
+    },
+    "https://prettier.io": {
+      "title": "Prettier · Opinionated Code Formatter",
+      "description": "Opinionated Code Formatter",
+      "image": "https://prettier.io/icon.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
+    },
+    "https://standard.shiftbrain.com/blog/unavailable-inert-regions-and-inert-attribute": {
+      "title": "UIにおける見えるけど利用できない非活性な領域の実装とinert属性について",
+      "description": "モーダルダイアログのようなUIには、それが出現している間はダイアログの外の領域が操作不能になっているという慣習があります。ダイアログが取り扱うタスクだけにユーザーを集中させるために、あえてダイアログ以外の操作ができないようになっています。",
+      "image": "https://standard.shiftbrain.com/assets/blog/unavailable-inert-regions-and-inert-attribute/modal-dialog.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://standard.shiftbrain.com"
+    },
+    "https://stylelint.io": {
+      "title": "Home | Stylelint",
+      "description": "npm version",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
+    },
+    "https://www.typescriptlang.org": {
+      "title": "JavaScript With Syntax For Types.",
+      "description": "TypeScript extends JavaScript by adding types to the language. TypeScript speeds up your development experience by catching errors and providing fixes before you even run your code.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.typescriptlang.org"
     }
   },
   "2021-11-28-jsconf-jp-2021.html": {
-    "https://kt3k.github.io/talk_jsconfjp2021/#1": {
-      "title": "Deno のこれまでとこれから JSConf JP 2021",
-      "description": "Deno のこれまでの歩みと、これからについて。",
-      "image": "https://kt3k.github.io/talk_jsconfjp2021/talk_jsconfjp2021.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kt3k.github.io"
-    },
-    "https://www.youtube.com/watch?v=5H3Sswp5qYg": {
-      "title": "JSConf.jp Track B",
-      "description": "JSConf JP Track B #jsconfjp #jsconfjp_b",
-      "image": "https://i.ytimg.com/vi/5H3Sswp5qYg/hqdefault.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    },
-    "https://www.youtube.com/watch?v=fC4oZJmvfI0": {
-      "title": "JSConf.jp Track A",
-      "description": "JSConf.jp 2021 Track A room",
-      "image": "https://i.ytimg.com/vi/fC4oZJmvfI0/hqdefault.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    },
-    "https://www.docswell.com/s/Neri78/5QM1RK-twilio-openapi-mock?utm_source=twitter&utm_medium=social&utm_campaign=singlepage": {
-      "title": "OpenAPI Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 | ドクセル",
-      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/KYE6LPNQ7V.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
-    },
-    "https://www.youtube.com/watch?v=Rmvt9Gt0VMk": {
-      "title": "JSConf.jp Track C",
-      "description": "",
-      "image": "https://i.ytimg.com/vi/Rmvt9Gt0VMk/hqdefault.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    "https://docs.google.com/presentation/d/1fwqrHrEEcNBeLYkiy49r5qGx83UXpX705E31GbyAy3k/mobilepresent?slide=id.g1047b22436d_2_101": {
+      "title": "モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例 / JSConf JP 2021",
+      "description": "モバイルブラウザにおける Client-side MLアプリケーションの プロダクション開発事例 2021/11/27 JSConf JP Tomohiro Kato https://jsconf.jp/2021/talk/case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJJYhISH3B2ykl5jvyT12SchRw9t4pL39-ODnTjX6CD7Cea1H5Y8IUByMczIsXAXHZ3nlJC65NxJYNz-wCUdTOY8bUvO5Djtc56NSSOZYk8nbk=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://jsconf.jp/2021": {
       "title": "JSConf JP",
@@ -324,46 +300,22 @@
       "image": "https://jsconf.jp/2021/static/fec934935a8b84b24adead6e9feaea09/logo.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
     },
-    "https://www.slideshare.net/100005930379759/ss-250735852": {
-      "title": "関数型プログラミングのデザインパターンひとめぐり",
-      "description": "関数型プログラミングのデザインパターンひとめぐり - Download as a PDF or view online for free",
-      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/atouroffunctionalprogrammingdesignpatterns-211127041116-thumbnail.jpg?width=640&height=640&fit=bounds",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    "https://kt3k.github.io/talk_jsconfjp2021/#1": {
+      "title": "Deno のこれまでとこれから JSConf JP 2021",
+      "description": "Deno のこれまでの歩みと、これからについて。",
+      "image": "https://kt3k.github.io/talk_jsconfjp2021/talk_jsconfjp2021.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kt3k.github.io"
     },
-    "https://speakerdeck.com/sosukesuzuki/javascript-ekosisutemuwowei-chi-suru-oss-falsenu-li-toke-ti": {
-      "title": "JavaScript エコシステムを維持する OSS の努力と課題",
-      "description": "JSConf JP 2021 の基調講演として発表したスライドです。\nhttps://jsconf.jp/2021/talk/javascript-maintaining-ecosystem-oss-struggles-and-challenges",
-      "image": "https://files.speakerdeck.com/presentations/e4d5a861e2c347c39ca9360d88508a65/slide_0.jpg?19659228",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://youtube.com/playlist?list=PL42hYWKFRfN7cg6c3uM4_tAxbybVzG3ao": {
-      "title": "JSConf JP 2021 Track A",
+    "https://speakerdeck.com/akiroom/helpfeelxiao-duo-2xuan-web-workertomutationobserver": {
+      "title": "Helpfeel小咄2選 Web WorkerとMutationObserver",
       "description": "",
-      "image": "https://i.ytimg.com/vi/yhieejm0we4/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCwIoRff8V5zYmKPBneofNaPBOGBg&days_since_epoch=19685",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
+      "image": "https://files.speakerdeck.com/presentations/81e4b0e6243549a8830a9480aaac7605/slide_0.jpg?19661572",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/berlysia/jsconf-jp-2021": {
       "title": "Webフロントエンドのリプレースを支えるテストの考え方 / JSConf JP 2021",
       "description": "<a href=\"https://jsconf.jp/2021/\">JSConf JP 2021</a> でトークしたスライドです。\n\nこのスライドの内容を文字にしているブログ記事はこちら\nhttps://blog.nnn.dev/entry/2021/12/03/123000\n\nトークのアーカイブはこちら\nhttps://www.youtube.com/watch?v=5H3Sswp5qYg&t=1155s\n\nhttps://jsconf.jp/2021/talk/testing-approach-to-support-web-front-end-replacement",
       "image": "https://files.speakerdeck.com/presentations/1265fdd7e3a94f13b431508ddecd69b0/slide_0.jpg?27870830",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/cola119/universal-devtools-for-all-environments": {
-      "title": "Universal DevTools  for all environments",
-      "description": "Universal DevTools enables use to debug WebViews with Chrome DevTools.\n\nDEMO: https://youtu.be/5H3Sswp5qYg?t=5100\n\nhttps://github.com/cola119/universal-devtools-poc",
-      "image": "https://files.speakerdeck.com/presentations/f47a7881441f46ed9fa0f76d65c899bf/slide_0.jpg?19659761",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://youtube.com/playlist?list=PL42hYWKFRfN7XWswj9wcC0j4191KNJuO3": {
-      "title": "JSConf JP 2021 Track B",
-      "description": "",
-      "image": "https://i.ytimg.com/vi/16ux8nTqJ7k/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCUttyONUhlptNvaGydPUmrk1m_Uw&days_since_epoch=19685",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
-    },
-    "https://speakerdeck.com/tak_iwamoto/storesyu-yue-wozhi-eruhurontoendoji-shu": {
-      "title": " STORES予約を支えるフロントエンド技術",
-      "description": "JSConf 2021登壇資料",
-      "image": "https://files.speakerdeck.com/presentations/88efc25e742f4eb986a95fd67dfa3db7/slide_0.jpg?19671617",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/chloe463/5fen-dedekirusheng-chan-xing-gai-shan-eslint-custom-rule-wozuo-rou": {
@@ -372,10 +324,10 @@
       "image": "https://files.speakerdeck.com/presentations/f1aa8dbd4a664bae9eb998e9a0d586da/slide_0.jpg?19660102",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/yukukotani/bundle-side-optimization-in-future-javascript-jsconf-jp-2021": {
-      "title": "Bundle Side Optimization in Future JavaScript - JSConf JP 2021",
-      "description": "JSConf JP 2021",
-      "image": "https://files.speakerdeck.com/presentations/22bb7599c61a44f3b49abd70b8ef72bc/slide_0.jpg?19661643",
+    "https://speakerdeck.com/cola119/universal-devtools-for-all-environments": {
+      "title": "Universal DevTools  for all environments",
+      "description": "Universal DevTools enables use to debug WebViews with Chrome DevTools.\n\nDEMO: https://youtu.be/5H3Sswp5qYg?t=5100\n\nhttps://github.com/cola119/universal-devtools-poc",
+      "image": "https://files.speakerdeck.com/presentations/f47a7881441f46ed9fa0f76d65c899bf/slide_0.jpg?19659761",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/empitsu/20211127-jsconf-jp-ubie-discovery": {
@@ -384,28 +336,10 @@
       "image": "https://files.speakerdeck.com/presentations/cedff17674194fb093c10eed81d7e929/slide_0.jpg?19659585",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/yagipy/building-markdown-editor-using-rusts-parser": {
-      "title": "Building markdown editor using Rust’s parser",
+    "https://speakerdeck.com/hideokamoto/jsconf-jp-2021": {
+      "title": "JavaScript(TypeScript)で メディアサイトを インフラから構築する方法 / jsconf-jp-2021",
       "description": "",
-      "image": "https://files.speakerdeck.com/presentations/113eea984b904594b629097c58eaa6b9/slide_0.jpg?19662028",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/shibe23/zu-zhi-huesuwojian-ju-etawebhurontoentofalseakitekutiyatobian-qian": {
-      "title": "組織フェーズを見据えたWebフロントエンドのアーキテクチャと変遷",
-      "description": "10年間で約15万行のコードを抱え、jQuery -> React + DDD -> React + Redux とアーキテクチャの変遷を辿ってきたChatworkを事例として、 組織フェーズの変化によって発生する課題と、それらをアーキテクチャの観点からどのように乗り越えるか紐解きたいと思います。",
-      "image": "https://files.speakerdeck.com/presentations/cea37c857d464e5eaf81e1d9f2d5c5d1/slide_0.jpg?19662148",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/ka2jun8/how-to-implement-a-system-that-goes-beyond-amp-caching-on-your-domain": {
-      "title": "AMP キャッシュを超えるシステムを自社ドメインで実現する方法 / How to implement a system that goes beyond amp-caching on your domain",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/3223926bc6014bbca947f32e9b8b4193/slide_0.jpg?19660481",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/shinyaigeek/jia-su-suruedge-computing": {
-      "title": "加速するEdge Computing",
-      "description": "JSConf JP 2021でLTさせていただいた時の資料です.",
-      "image": "https://files.speakerdeck.com/presentations/557f1c609c98473fa0afd5e21655b199/slide_0.jpg?19661841",
+      "image": "https://files.speakerdeck.com/presentations/38070e17fef843c1b7b3e349ebae0e7b/slide_0.jpg?19660043",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/indigolain/jsconf-jp-2021": {
@@ -414,46 +348,16 @@
       "image": "https://files.speakerdeck.com/presentations/fb3ab9a484b44222be3756d21282e807/slide_0.jpg?19662121",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development": {
-      "title": "アクセシブルなフロントエンド開発のこれまでとこれから / the past and future of accessible front-end development",
-      "description": "<a href=\"https://jsconf.jp/2021/\" target=\"_blank\">JSConfJP 2021</a> 発表資料\n\n昨今アクセシビリティに関する興味関心が増えてきた中で、SPAといったWebアプリケーションにおけるアクセシビリティを考慮した実装についてはまだ認識が広まっていないように感じます。 フロントエンドフレームワークを使ってより良いアクセシビリティ実装をするにはどうすればいいかの方法、その結果どういう形で伝わっているかを紹介しようと思います。 またWebアプリケーションでHTMLを使ってUI実装することに限界を感じており、それを解消するためのReactGUIやHeadless UIといった新たなアプローチにおける期待についても紹介したいと思っております。",
-      "image": "https://files.speakerdeck.com/presentations/f14d34b703b24088917451478c73fc2f/slide_0.jpg?19658219",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/hideokamoto/jsconf-jp-2021": {
-      "title": "JavaScript(TypeScript)で メディアサイトを インフラから構築する方法 / jsconf-jp-2021",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/38070e17fef843c1b7b3e349ebae0e7b/slide_0.jpg?19660043",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/akiroom/helpfeelxiao-duo-2xuan-web-workertomutationobserver": {
-      "title": "Helpfeel小咄2選 Web WorkerとMutationObserver",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/81e4b0e6243549a8830a9480aaac7605/slide_0.jpg?19661572",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
     "https://speakerdeck.com/izumin5210/jsconf-jp-2021": {
       "title": "GraphQL 導入の反省と再挑戦 / jsconf jp 2021",
       "description": "",
       "image": "https://files.speakerdeck.com/presentations/b825a4086b7b41a3b1cb70fe159f1d92/slide_0.jpg?19661960",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://www.slideshare.net/t-kihira/web-block-pong": {
-      "title": "Web ベースのカジュアルゲーム「block pong」の実装とビジネス",
-      "description": "Web ベースのカジュアルゲーム「block pong」の実装とビジネス - Download as a PDF or view online for free",
-      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/webblockpong-211127040720-thumbnail.jpg?width=640&height=640&fit=bounds",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
-    },
-    "https://speakerdeck.com/sadnessojisan/ssg-is-a-compiler": {
-      "title": "SSG is a compiler",
+    "https://speakerdeck.com/ka2jun8/how-to-implement-a-system-that-goes-beyond-amp-caching-on-your-domain": {
+      "title": "AMP キャッシュを超えるシステムを自社ドメインで実現する方法 / How to implement a system that goes beyond amp-caching on your domain",
       "description": "",
-      "image": "https://files.speakerdeck.com/presentations/a098fcd04ea94eaca743cd1779b60087/slide_0.jpg?19660360",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/takefumiyoshii/story-of-re-architect-with-nextjs": {
-      "title": "Next.js でリアーキテクトした話 / story-of-re-architect-with-nextjs",
-      "description": "https://jsconf.jp/2021/",
-      "image": "https://files.speakerdeck.com/presentations/8c05d8cfb9024a8ea779ea8d91fd9f72/slide_0.jpg?19654559",
+      "image": "https://files.speakerdeck.com/presentations/3223926bc6014bbca947f32e9b8b4193/slide_0.jpg?19660481",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/qsona/architecture-decision-for-the-next-n-years-at-studysapuri": {
@@ -462,20 +366,122 @@
       "image": "https://files.speakerdeck.com/presentations/80effab591774e19aef91fedfcb7f2b9/slide_0.jpg?19673293",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/sadnessojisan/ssg-is-a-compiler": {
+      "title": "SSG is a compiler",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/a098fcd04ea94eaca743cd1779b60087/slide_0.jpg?19660360",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shibe23/zu-zhi-huesuwojian-ju-etawebhurontoentofalseakitekutiyatobian-qian": {
+      "title": "組織フェーズを見据えたWebフロントエンドのアーキテクチャと変遷",
+      "description": "10年間で約15万行のコードを抱え、jQuery -> React + DDD -> React + Redux とアーキテクチャの変遷を辿ってきたChatworkを事例として、 組織フェーズの変化によって発生する課題と、それらをアーキテクチャの観点からどのように乗り越えるか紐解きたいと思います。",
+      "image": "https://files.speakerdeck.com/presentations/cea37c857d464e5eaf81e1d9f2d5c5d1/slide_0.jpg?19662148",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shinyaigeek/jia-su-suruedge-computing": {
+      "title": "加速するEdge Computing",
+      "description": "JSConf JP 2021でLTさせていただいた時の資料です.",
+      "image": "https://files.speakerdeck.com/presentations/557f1c609c98473fa0afd5e21655b199/slide_0.jpg?19661841",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sosukesuzuki/javascript-ekosisutemuwowei-chi-suru-oss-falsenu-li-toke-ti": {
+      "title": "JavaScript エコシステムを維持する OSS の努力と課題",
+      "description": "JSConf JP 2021 の基調講演として発表したスライドです。\nhttps://jsconf.jp/2021/talk/javascript-maintaining-ecosystem-oss-struggles-and-challenges",
+      "image": "https://files.speakerdeck.com/presentations/e4d5a861e2c347c39ca9360d88508a65/slide_0.jpg?19659228",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/tak_iwamoto/storesyu-yue-wozhi-eruhurontoendoji-shu": {
+      "title": " STORES予約を支えるフロントエンド技術",
+      "description": "JSConf 2021登壇資料",
+      "image": "https://files.speakerdeck.com/presentations/88efc25e742f4eb986a95fd67dfa3db7/slide_0.jpg?19671617",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/takefumiyoshii/story-of-re-architect-with-nextjs": {
+      "title": "Next.js でリアーキテクトした話 / story-of-re-architect-with-nextjs",
+      "description": "https://jsconf.jp/2021/",
+      "image": "https://files.speakerdeck.com/presentations/8c05d8cfb9024a8ea779ea8d91fd9f72/slide_0.jpg?19654559",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yagipy/building-markdown-editor-using-rusts-parser": {
+      "title": "Building markdown editor using Rust’s parser",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/113eea984b904594b629097c58eaa6b9/slide_0.jpg?19662028",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development": {
+      "title": "アクセシブルなフロントエンド開発のこれまでとこれから / the past and future of accessible front-end development",
+      "description": "<a href=\"https://jsconf.jp/2021/\" target=\"_blank\">JSConfJP 2021</a> 発表資料\n\n昨今アクセシビリティに関する興味関心が増えてきた中で、SPAといったWebアプリケーションにおけるアクセシビリティを考慮した実装についてはまだ認識が広まっていないように感じます。 フロントエンドフレームワークを使ってより良いアクセシビリティ実装をするにはどうすればいいかの方法、その結果どういう形で伝わっているかを紹介しようと思います。 またWebアプリケーションでHTMLを使ってUI実装することに限界を感じており、それを解消するためのReactGUIやHeadless UIといった新たなアプローチにおける期待についても紹介したいと思っております。",
+      "image": "https://files.speakerdeck.com/presentations/f14d34b703b24088917451478c73fc2f/slide_0.jpg?19658219",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yukukotani/bundle-side-optimization-in-future-javascript-jsconf-jp-2021": {
+      "title": "Bundle Side Optimization in Future JavaScript - JSConf JP 2021",
+      "description": "JSConf JP 2021",
+      "image": "https://files.speakerdeck.com/presentations/22bb7599c61a44f3b49abd70b8ef72bc/slide_0.jpg?19661643",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.docswell.com/s/Neri78/5QM1RK-twilio-openapi-mock?utm_source=twitter&utm_medium=social&utm_campaign=singlepage": {
+      "title": "OpenAPI Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://img.docswell.com/cover/KYE6LPNQ7V.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+    },
+    "https://www.slideshare.net/100005930379759/ss-250735852": {
+      "title": "関数型プログラミングのデザインパターンひとめぐり",
+      "description": "関数型プログラミングのデザインパターンひとめぐり - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/atouroffunctionalprogrammingdesignpatterns-211127041116-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
+    "https://www.slideshare.net/t-kihira/web-block-pong": {
+      "title": "Web ベースのカジュアルゲーム「block pong」の実装とビジネス",
+      "description": "Web ベースのカジュアルゲーム「block pong」の実装とビジネス - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/webblockpong-211127040720-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
+    "https://www.youtube.com/watch?v=5H3Sswp5qYg": {
+      "title": "JSConf.jp Track B",
+      "description": "JSConf JP Track B #jsconfjp #jsconfjp_b",
+      "image": "https://i.ytimg.com/vi/5H3Sswp5qYg/hqdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=Rmvt9Gt0VMk": {
+      "title": "JSConf.jp Track C",
+      "description": "",
+      "image": "https://i.ytimg.com/vi/Rmvt9Gt0VMk/hqdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=fC4oZJmvfI0": {
+      "title": "JSConf.jp Track A",
+      "description": "JSConf.jp 2021 Track A room",
+      "image": "https://i.ytimg.com/vi/fC4oZJmvfI0/hqdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
     "https://youtube.com/playlist?list=PL42hYWKFRfN4l-KXE-2xzy95dRKPtCg0V": {
       "title": "JSConf JP 2021 Track C",
       "description": "",
       "image": "https://i.ytimg.com/vi/cxF-n75gIPo/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLANOjF3MfeGsB5GV0AZSPWQk8_LVw&days_since_epoch=19685",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
     },
-    "https://docs.google.com/presentation/d/1fwqrHrEEcNBeLYkiy49r5qGx83UXpX705E31GbyAy3k/mobilepresent?slide=id.g1047b22436d_2_101": {
-      "title": "モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例 / JSConf JP 2021",
-      "description": "モバイルブラウザにおける Client-side MLアプリケーションの プロダクション開発事例 2021/11/27 JSConf JP Tomohiro Kato https://jsconf.jp/2021/talk/case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJJYhISH3B2ykl5jvyT12SchRw9t4pL39-ODnTjX6CD7Cea1H5Y8IUByMczIsXAXHZ3nlJC65NxJYNz-wCUdTOY8bUvO5Djtc56NSSOZYk8nbk=w1200-h630-p",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    "https://youtube.com/playlist?list=PL42hYWKFRfN7XWswj9wcC0j4191KNJuO3": {
+      "title": "JSConf JP 2021 Track B",
+      "description": "",
+      "image": "https://i.ytimg.com/vi/16ux8nTqJ7k/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCUttyONUhlptNvaGydPUmrk1m_Uw&days_since_epoch=19685",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
+    },
+    "https://youtube.com/playlist?list=PL42hYWKFRfN7cg6c3uM4_tAxbybVzG3ao": {
+      "title": "JSConf JP 2021 Track A",
+      "description": "",
+      "image": "https://i.ytimg.com/vi/yhieejm0we4/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCwIoRff8V5zYmKPBneofNaPBOGBg&days_since_epoch=19685",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
     }
   },
   "2021-11-09-volta.html": {
+    "https://asdf-vm.com": {
+      "title": "asdf | asdfGitHubGitHub",
+      "description": "Manage multiple runtime versions with a single CLI tool",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://asdf-vm.com"
+    },
     "https://docs.volta.sh/advanced/hooks": {
       "title": "Hooks | Volta",
       "description": "Hooks",
@@ -488,26 +494,26 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.volta.sh"
     },
-    "https://asdf-vm.com": {
-      "title": "asdf | asdfGitHubGitHub",
-      "description": "Manage multiple runtime versions with a single CLI tool",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://asdf-vm.com"
+    "https://tech.buty4649.net/entry/2021/07/29/201613": {
+      "title": "starship+asdfでプロンプトの表示が遅くなるのを改善する - ぶていのログでぶログ",
+      "description": "2023/02/05追記:rtxを使ってstarship+asdfのプロンプトの表示が遅くなる問題を解決する タイトルの通り。 promptのカスタマイズにはstarshipを使っていて*1、バージョン管理にはasdfを使うようにここ最近変更した。 それぞれ特に不満なく使っていたのだが、あるときからリポジトリ内でのプロンプトの表示が遅いというのに気がついてしまった。 starshipがWARNINGを吐いていたこともあり、被疑はstarshipにあるとわかっていた。 ↓WARNING例 [WARN] - (starship::utils): Executing command \"ruby\" t…",
+      "image": "https://cdn.blog.st-hatena.com/images/theme/og-image-1500.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.buty4649.net"
     },
     "https://volta.sh": {
       "title": "Volta - The Hassle-Free JavaScript Tool Manager",
       "description": "Volta: Start your engines.",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://volta.sh"
-    },
-    "https://tech.buty4649.net/entry/2021/07/29/201613": {
-      "title": "starship+asdfでプロンプトの表示が遅くなるのを改善する - ぶていのログでぶログ",
-      "description": "2023/02/05追記:rtxを使ってstarship+asdfのプロンプトの表示が遅くなる問題を解決する タイトルの通り。 promptのカスタマイズにはstarshipを使っていて*1、バージョン管理にはasdfを使うようにここ最近変更した。 それぞれ特に不満なく使っていたのだが、あるときからリポジトリ内でのプロンプトの表示が遅いというのに気がついてしまった。 starshipがWARNINGを吐いていたこともあり、被疑はstarshipにあるとわかっていた。 ↓WARNING例 [WARN] - (starship::utils): Executing command \"ruby\" t…",
-      "image": "https://cdn.blog.st-hatena.com/images/theme/og-image-1500.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.buty4649.net"
     }
   },
   "2021-10-24-vscode-autoprefixer-vite.html": {
+    "https://ics.media/entry/210708/#contents-anchor-pitfalls": {
+      "title": "jQueryからTypeScript・Reactまで - Viteで始めるモダンで高速な開発環境構築 - ICS MEDIA",
+      "description": "Vite（ヴィート＝フランス語で「速い」の意味）は2020年に発表された新しいフロントエンドのビルドツールです。",
+      "image": "https://ics.media/entry/210708/images/eyecatch.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ics.media"
+    },
     "https://ja.vitejs.dev": {
       "title": "Vite",
       "description": "次世代フロントエンドツール",
@@ -525,32 +531,20 @@
       "description": "次世代フロントエンドツール",
       "image": "https://vitejs.dev/og-image.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
-    },
-    "https://ics.media/entry/210708/#contents-anchor-pitfalls": {
-      "title": "jQueryからTypeScript・Reactまで - Viteで始めるモダンで高速な開発環境構築 - ICS MEDIA",
-      "description": "Vite（ヴィート＝フランス語で「速い」の意味）は2020年に発表された新しいフロントエンドのビルドツールです。",
-      "image": "https://ics.media/entry/210708/images/eyecatch.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ics.media"
     }
   },
   "2021-09-26-material-ui-v5.html": {
-    "https://codesandbox.io/s/zealous-dawn-0yr4g?file=/src/App.tsx": {
-      "title": "zealous-dawn-0yr4g - CodeSandbox",
-      "description": "zealous-dawn-0yr4g by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
-      "image": "https://codesandbox.io/api/v1/sandboxes/0yr4g/screenshot.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
-    },
     "https://codesandbox.io/s/7lc1r?file=/demo.tsx": {
       "title": "UseButton Material Demo - CodeSandbox",
       "description": "https://github.com/mui-org/material-ui/blob/v5.0.0-rc.1/docs/src/pages/components/buttons/UseButton.tsx",
       "image": "https://codesandbox.io/api/v1/sandboxes/7lc1r/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
-    "https://github.com/styled-components/styled-components": {
-      "title": "GitHub - styled-components/styled-components: Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅",
-      "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 - GitHub - styled-components/styled-components: Visual primitives for the component age...",
-      "image": "https://repository-images.githubusercontent.com/65794292/bdacfa80-6132-11e9-90b9-33e6eee04d1f",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    "https://codesandbox.io/s/sharp-sky-xwz3d?file=/src/App.tsx:0-746": {
+      "title": "sharp-sky-xwz3d - CodeSandbox",
+      "description": "sharp-sky-xwz3d by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
+      "image": "https://codesandbox.io/api/v1/sandboxes/xwz3d/screenshot.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/stupefied-mclaren-ho4zs?file=/src/App.tsx": {
       "title": "stupefied-mclaren-ho4zs - CodeSandbox",
@@ -558,113 +552,11 @@
       "image": "https://codesandbox.io/api/v1/sandboxes/ho4zs/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
-    "https://v5-0-6.mui.com/customization/theme-components/#adding-new-component-variants": {
-      "title": "Components - MUI",
-      "description": "The theme's `components` key allows you to customize a component without wrapping it in another component. You can change the styles, the default props, and more.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://github.com/cssinjs/jss": {
-      "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "image": "https://opengraph.githubassets.com/dd72d2e7687f161670e151c7e8921fa3d7fe5f815a1ef22a2f6c506c67cfe5ad/cssinjs/jss",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://v5-0-6.mui.com/customization/palette/#adding-new-colors": {
-      "title": "Palette - MUI",
-      "description": "The palette enables you to modify the color of the components to suit your brand.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://github.com/emotion-js/emotion": {
-      "title": "GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
-      "description": "👩‍🎤 CSS-in-JS library designed for high performance style composition - GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
-      "image": "https://opengraph.githubassets.com/5954dcdbb2f2e860af7c1ff0cded6b5ec2f5d6d137a8eae38c1624cc7fc0b4c6/emotion-js/emotion",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://v5-0-6.mui.com/system/basics/#performance-tradeoff": {
-      "title": "MUI System - MUI",
-      "description": "CSS utilities for rapidly laying out custom designs.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://v5-0-6.mui.com/components/buttons/#loading-buttons": {
-      "title": "React Button component - MUI",
-      "description": "Buttons allow users to take actions, and make choices, with a single tap.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://v5-0-6.mui.com/system/basics/#api-tradeoff": {
-      "title": "MUI System - MUI",
-      "description": "CSS utilities for rapidly laying out custom designs.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://mui.com/guides/migration-v4": {
-      "title": "Migrating to v5: getting started - Material UI",
-      "description": "This guide explains how and why to migrate from Material UI v4 to v5.",
-      "image": "https://mui.com/static/logo.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
-    },
-    "https://v5-0-6.mui.com/components/trap-focus/": {
-      "title": "Trap Focus React component - MUI",
-      "description": "Trap focus within a DOM node.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://github.com/mui-org/material-ui-x/projects/1": {
-      "title": "MUI X public roadmap · mui/mui-x",
-      "description": "MUI X: Build data-rich applications using a growing list of advanced React components. - MUI X public roadmap · mui/mui-x",
-      "image": "https://repository-images.githubusercontent.com/260240241/c87a696f-ee21-4b3f-80ec-9024a077cb63",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://mui.com/x": {
-      "title": "MUI X: Performant advanced components",
-      "description": "Build data-rich applications using a growing list of advanced React components. We're kicking it off with the most powerful Data Grid on the market.",
-      "image": "https://mui.com/static/social-previews/x-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
-    },
-    "https://github.com/mui-org/material-ui-x": {
-      "title": "GitHub - mui/mui-x: MUI X: Build data-rich applications using a growing list of advanced React components.",
-      "description": "MUI X: Build data-rich applications using a growing list of advanced React components. - GitHub - mui/mui-x: MUI X: Build data-rich applications using a growing list of advanced React components.",
-      "image": "https://repository-images.githubusercontent.com/260240241/c87a696f-ee21-4b3f-80ec-9024a077cb63",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://v5-0-6.mui.com/components/masonry": {
-      "title": "React Masonry component - MUI",
-      "description": "Masonry lays out contents of different sizes as blocks of the same width and variable height with configurable gaps.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://github.com/mui-org/material-ui": {
-      "title": "GitHub - mui/material-ui: MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design.",
-      "description": "MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google&#39;s Material Design. - GitHub - mui/material-ui: MUI Core: Ready-to-use founda...",
-      "image": "https://repository-images.githubusercontent.com/23083156/79a1d61e-2309-4313-82bc-e5aa96ad0969",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://v5-0-6.mui.com/components/autocomplete": {
-      "title": "React Autocomplete component - MUI",
-      "description": "The autocomplete is a normal text input enhanced by a panel of suggested options.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://v5-0-6.mui.com/system/properties": {
-      "title": "Properties - MUI",
-      "description": "This page lists all of the custom system properties, how are they linked with the theme, and which CSS properties they compute. All other regular CSS properties and selectors are supported too.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://mui.com/blog/material-ui-is-now-mui": {
-      "title": "Material-UI, the organization, is now MUI! - MUI",
-      "description": "Starting today, we are evolving our brand identity. We are clarifying the difference between our company and our products.",
-      "image": "https://mui.com/static/blog/material-ui-is-now-mui/card.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
-    },
-    "https://v5-0-6.mui.com/system/the-sx-prop": {
-      "title": "The sx prop - MUI",
-      "description": "The `sx` prop is a shortcut for defining custom style that has access to the theme.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    "https://codesandbox.io/s/zealous-dawn-0yr4g?file=/src/App.tsx": {
+      "title": "zealous-dawn-0yr4g - CodeSandbox",
+      "description": "zealous-dawn-0yr4g by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
+      "image": "https://codesandbox.io/api/v1/sandboxes/0yr4g/screenshot.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/zlh5w?file=/src/App.js": {
       "title": "Box v5 is faster than v4 - CodeSandbox",
@@ -672,59 +564,35 @@
       "image": "https://codesandbox.io/api/v1/sandboxes/zlh5w/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
-    "https://v5-0-6.mui.com/components/toggle-button": {
-      "title": "Toggle Button React component - MUI",
-      "description": "Toggle buttons can be used to group related options.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    "https://github.com/cssinjs/jss": {
+      "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
+      "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
+      "image": "https://opengraph.githubassets.com/dd72d2e7687f161670e151c7e8921fa3d7fe5f815a1ef22a2f6c506c67cfe5ad/cssinjs/jss",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://v5-0-6.mui.com/components/skeleton": {
-      "title": "React Skeleton component - MUI",
-      "description": "Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    "https://github.com/emotion-js/emotion": {
+      "title": "GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
+      "description": "👩‍🎤 CSS-in-JS library designed for high performance style composition - GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
+      "image": "https://opengraph.githubassets.com/5954dcdbb2f2e860af7c1ff0cded6b5ec2f5d6d137a8eae38c1624cc7fc0b4c6/emotion-js/emotion",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://mui.com/blog/mui-core-v5": {
-      "title": "Introducing MUI Core v5 - MUI",
-      "description": "After over 400 days of development and over 40 canary releases, we are excited to introduce MUI Core v5.0.0!",
-      "image": "https://mui.com/static/blog/mui-core-v5/card.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
+    "https://github.com/mui-org/material-ui": {
+      "title": "GitHub - mui/material-ui: MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design.",
+      "description": "MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google&#39;s Material Design. - GitHub - mui/material-ui: MUI Core: Ready-to-use founda...",
+      "image": "https://repository-images.githubusercontent.com/23083156/79a1d61e-2309-4313-82bc-e5aa96ad0969",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://v5-0-6.mui.com/components/stack": {
-      "title": "React Stack component - MUI",
-      "description": "The Stack component manages layout of immediate children along the vertical or horizontal axis with optional spacing and/or dividers between each child.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    "https://github.com/mui-org/material-ui-x": {
+      "title": "GitHub - mui/mui-x: MUI X: Build data-rich applications using a growing list of advanced React components.",
+      "description": "MUI X: Build data-rich applications using a growing list of advanced React components. - GitHub - mui/mui-x: MUI X: Build data-rich applications using a growing list of advanced React components.",
+      "image": "https://repository-images.githubusercontent.com/260240241/c87a696f-ee21-4b3f-80ec-9024a077cb63",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://v5-0-6.mui.com/components/speed-dial": {
-      "title": "React Speed Dial component - MUI",
-      "description": "When pressed, a floating action button can display three to six related actions in the form of a speed dial.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://v5-0-6.mui.com/components/rating": {
-      "title": "React Rating component - MUI",
-      "description": "Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://v5-0-6.mui.com/components/pagination": {
-      "title": "React Pagination component - MUI",
-      "description": "The Pagination component enables the user to select a specific page from a range of pages.",
-      "image": "https://mui.com/static/social-previews/default-preview.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
-    },
-    "https://material-ui-pickers.dev": {
-      "title": "Attention Required! | Cloudflare",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://material-ui-pickers.dev"
-    },
-    "https://codesandbox.io/s/sharp-sky-xwz3d?file=/src/App.tsx:0-746": {
-      "title": "sharp-sky-xwz3d - CodeSandbox",
-      "description": "sharp-sky-xwz3d by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
-      "image": "https://codesandbox.io/api/v1/sandboxes/xwz3d/screenshot.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
+    "https://github.com/mui-org/material-ui-x/projects/1": {
+      "title": "MUI X public roadmap · mui/mui-x",
+      "description": "MUI X: Build data-rich applications using a growing list of advanced React components. - MUI X public roadmap · mui/mui-x",
+      "image": "https://repository-images.githubusercontent.com/260240241/c87a696f-ee21-4b3f-80ec-9024a077cb63",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui-org/material-ui/issues/27170": {
       "title": "Unstyled components progress · Issue #27170 · mui/material-ui",
@@ -738,31 +606,151 @@
       "image": "https://opengraph.githubassets.com/be9e39782968414398d65b80770966744eaeda2fe708e2a8d0defccdcebdb5ca/mui/material-ui/issues/6218",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
+    "https://github.com/styled-components/styled-components": {
+      "title": "GitHub - styled-components/styled-components: Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅",
+      "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 - GitHub - styled-components/styled-components: Visual primitives for the component age...",
+      "image": "https://repository-images.githubusercontent.com/65794292/bdacfa80-6132-11e9-90b9-33e6eee04d1f",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://material-ui-pickers.dev": {
+      "title": "Attention Required! | Cloudflare",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://material-ui-pickers.dev"
+    },
+    "https://mui.com/blog/material-ui-is-now-mui": {
+      "title": "Material-UI, the organization, is now MUI! - MUI",
+      "description": "Starting today, we are evolving our brand identity. We are clarifying the difference between our company and our products.",
+      "image": "https://mui.com/static/blog/material-ui-is-now-mui/card.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
+    },
+    "https://mui.com/blog/mui-core-v5": {
+      "title": "Introducing MUI Core v5 - MUI",
+      "description": "After over 400 days of development and over 40 canary releases, we are excited to introduce MUI Core v5.0.0!",
+      "image": "https://mui.com/static/blog/mui-core-v5/card.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
+    },
+    "https://mui.com/guides/migration-v4": {
+      "title": "Migrating to v5: getting started - Material UI",
+      "description": "This guide explains how and why to migrate from Material UI v4 to v5.",
+      "image": "https://mui.com/static/logo.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
+    },
+    "https://mui.com/x": {
+      "title": "MUI X: Performant advanced components",
+      "description": "Build data-rich applications using a growing list of advanced React components. We're kicking it off with the most powerful Data Grid on the market.",
+      "image": "https://mui.com/static/social-previews/x-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
+    },
+    "https://v5-0-6.mui.com/components/autocomplete": {
+      "title": "React Autocomplete component - MUI",
+      "description": "The autocomplete is a normal text input enhanced by a panel of suggested options.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/buttons/#loading-buttons": {
+      "title": "React Button component - MUI",
+      "description": "Buttons allow users to take actions, and make choices, with a single tap.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/masonry": {
+      "title": "React Masonry component - MUI",
+      "description": "Masonry lays out contents of different sizes as blocks of the same width and variable height with configurable gaps.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
     "https://v5-0-6.mui.com/components/material-icons": {
       "title": "Material icons - MUI",
       "description": "1,700+ React Material icons ready-to-use from the official website.",
       "image": "https://mui.com/static/social-previews/default-preview.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/pagination": {
+      "title": "React Pagination component - MUI",
+      "description": "The Pagination component enables the user to select a specific page from a range of pages.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/rating": {
+      "title": "React Rating component - MUI",
+      "description": "Ratings provide insight regarding others' opinions and experiences, and can allow the user to submit a rating of their own.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/skeleton": {
+      "title": "React Skeleton component - MUI",
+      "description": "Display a placeholder preview of your content before the data gets loaded to reduce load-time frustration.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/speed-dial": {
+      "title": "React Speed Dial component - MUI",
+      "description": "When pressed, a floating action button can display three to six related actions in the form of a speed dial.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/stack": {
+      "title": "React Stack component - MUI",
+      "description": "The Stack component manages layout of immediate children along the vertical or horizontal axis with optional spacing and/or dividers between each child.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/toggle-button": {
+      "title": "Toggle Button React component - MUI",
+      "description": "Toggle buttons can be used to group related options.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/components/trap-focus/": {
+      "title": "Trap Focus React component - MUI",
+      "description": "Trap focus within a DOM node.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/customization/palette/#adding-new-colors": {
+      "title": "Palette - MUI",
+      "description": "The palette enables you to modify the color of the components to suit your brand.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/customization/theme-components/#adding-new-component-variants": {
+      "title": "Components - MUI",
+      "description": "The theme's `components` key allows you to customize a component without wrapping it in another component. You can change the styles, the default props, and more.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/system/basics/#api-tradeoff": {
+      "title": "MUI System - MUI",
+      "description": "CSS utilities for rapidly laying out custom designs.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/system/basics/#performance-tradeoff": {
+      "title": "MUI System - MUI",
+      "description": "CSS utilities for rapidly laying out custom designs.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/system/properties": {
+      "title": "Properties - MUI",
+      "description": "This page lists all of the custom system properties, how are they linked with the theme, and which CSS properties they compute. All other regular CSS properties and selectors are supported too.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
+    },
+    "https://v5-0-6.mui.com/system/the-sx-prop": {
+      "title": "The sx prop - MUI",
+      "description": "The `sx` prop is a shortcut for defining custom style that has access to the theme.",
+      "image": "https://mui.com/static/social-previews/default-preview.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
     }
   },
   "2021-05-31-buildable-introduction.html": {
-    "https://www.event.dev": {
-      "title": "Event: The #1 Rated iPaaS | Integration Software & Tools",
-      "description": "Use Event to rapidly launch new integrations, remove costly data silos and build connected apps that perform at the scale your customers demand.",
-      "image": "https://buildable-assets.s3.ca-central-1.amazonaws.com/catalog/social/Home+Open+Graph.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.event.dev"
-    },
     "https://github.com/h-yoshikawa44/buildable-tutorial": {
       "title": "GitHub - h-yoshikawa44/buildable-tutorial: 個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials)",
       "description": "個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials) - GitHub - h-yoshikawa44/buildable-tutorial: 個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials)",
       "image": "https://opengraph.githubassets.com/ae6186a0a2562393075c7a44fb9add58cbfd87e622e37579d003c886d8bc1e91/h-yoshikawa44/buildable-tutorial",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://www.youtube.com/playlist?list=PL5xN9Zn1k9D2qsMsfERWjIsSIVrFq5tYT": {
-      "title": "Your first steps into using buildable.dev",
-      "description": "Hi there! In this short video series, we'll be exploring your first steps into using Buildable.dev to create your very first recipes and a basic Todo App wit...",
-      "image": "https://i.ytimg.com/vi/CHrTVjbnwCA/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCU_Yka9TyhnjMj6JVSWrHsC6CLHA&days_since_epoch=19685",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     },
     "https://www.buildable.dev": {
       "title": "404 - Page not found",
@@ -770,19 +758,31 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.buildable.dev"
     },
+    "https://www.event.dev": {
+      "title": "Event: The #1 Rated iPaaS | Integration Software & Tools",
+      "description": "Use Event to rapidly launch new integrations, remove costly data silos and build connected apps that perform at the scale your customers demand.",
+      "image": "https://buildable-assets.s3.ca-central-1.amazonaws.com/catalog/social/Home+Open+Graph.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.event.dev"
+    },
     "https://www.linkedin.com/company/buildable-dev": {
       "title": "Event | LinkedIn",
       "description": "Event | 902 followers on LinkedIn. The IntegrationOS™ for software teams | Use Event&#39;s Unified API to rapidly launch new integrations, remove costly data silos and build connected apps that perform at the scale your customers demand. All at a price your CFO will love.",
       "image": "https://media.licdn.com/dms/image/C4E0BAQFv4_spB9HaWA/company-logo_200_200/0/1677093364595/buildable_dev_logo?e=2147483647&v=beta&t=3ZNfFlyPatMmMvT5gUvemAtoQz_Z_JaH9MJChgbJHqY",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.linkedin.com"
+    },
+    "https://www.youtube.com/playlist?list=PL5xN9Zn1k9D2qsMsfERWjIsSIVrFq5tYT": {
+      "title": "Your first steps into using buildable.dev",
+      "description": "Hi there! In this short video series, we'll be exploring your first steps into using Buildable.dev to create your very first recipes and a basic Todo App wit...",
+      "image": "https://i.ytimg.com/vi/CHrTVjbnwCA/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCU_Yka9TyhnjMj6JVSWrHsC6CLHA&days_since_epoch=19685",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
   "2021-05-19-react-query-socialite.html": {
-    "https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226": {
-      "title": "",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    "https://docs.github.com/ja/developers/apps/scopes-for-oauth-apps": {
+      "title": "OAuth アプリのスコープ - GitHub Docs",
+      "description": "スコープによって、必要なアクセスの種類を正確に指定できます。 スコープによって OAuth トークンへのアクセスが 制限 されます。 ユーザがすでに持っている範囲を超えた権限を許可することはありません。",
+      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
     },
     "https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Freact-query-socialite": {
       "title": "Release post/react-query-socialite: 「React × LaravelでSocialiteを使ったGitHubソーシャルログインを実装してみた」 · h-yoshikawa44/ooui-memo",
@@ -796,16 +796,28 @@
       "image": "https://opengraph.githubassets.com/dbe7823f76d148a50de16db6a49287b72b4b36bb31c7445cc332ff160c786120/laravel/socialite",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://yshrfmru.hatenablog.com/entry/2019/01/06/191235": {
-      "title": "Doctrine\\DBAL\\DBALException  : Unknown database type enum requested. - Fumiro Yoshihara’s Blog",
-      "description": "概要 参考 エラーの内容 回避の方法 概要 Doctrine\\DBALを インストールしてカラムに変更を加えるマイグレーションを実行しようとすると発生するエラーとその回避の方法についてです。 参考 https://stackoverflow.com/questions/33140860/laravel-5-1-unknown-database-type-enum-requested https://laravel.com/docs/5.1/migrations#modifying-columns https://github.com/laravel/framework/issues/1186#…",
-      "image": "https://ogimage.blog.st-hatena.com/10257846132601496440/10257846132699071402/1546769626",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://yshrfmru.hatenablog.com"
+    "https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://qiita.com/KeisukeKudo/items/18dd8a342a4bdd43913c": {
+      "title": "Laravel+Socialiteで簡単ソーシャルログイン実装! (テスト付き) - Qiita",
+      "description": "Socialiteを使ってLaravelで簡単にソーシャルログインを実装する方法をテスト付きで紹介したいと思います｡ソースはこちら※ 上記ソースを clone する場合は php artisan…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCUyQlNvY2lhbGl0ZSVFMyU4MSVBNyVFNyVCMCVBMSVFNSU4RCU5OCVFMyU4MiVCRCVFMyU4MyVCQyVFMyU4MiVCNyVFMyU4MyVBMyVFMyU4MyVBQiVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNSVBRSU5RiVFOCVBMyU4NSUyMSUyMCUyOCVFMyU4MyU4NiVFMyU4MiVCOSVFMyU4MyU4OCVFNCVCQiU5OCVFMyU4MSU4RCUyOSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NzFjMGQyYzE4YjhhY2Q2OTMwNGYyZjNjZWM5NTZhYjE&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwS2Vpc3VrZUt1ZG8mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWEwMWE0NjUyMDRiMzY1MWE0YWYyZTIzNDYzNDRiN2Y2&blend-x=142&blend-y=491&blend-mode=normal&s=fd561fce7738b9100b2396d973101f53",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/hareku/items/ea09602bf40bf0a42040": {
       "title": "Nuxt.jsとLaravelを使ってTwitterログイン機能を実装する - Qiita",
       "description": "Nuxt.jsとLaravelを使用して、Twitterでログインする機能の実装方法を紹介します。今回はLaravel公式パッケージのLaravel PassportとLaravel Social…",
       "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TnV4dC5qcyVFMyU4MSVBOExhcmF2ZWwlRTMlODIlOTIlRTQlQkQlQkYlRTMlODElQTMlRTMlODElQTZUd2l0dGVyJUUzJTgzJUFEJUUzJTgyJUIwJUUzJTgyJUE0JUUzJTgzJUIzJUU2JUE5JTlGJUU4JTgzJUJEJUUzJTgyJTkyJUU1JUFFJTlGJUU4JUEzJTg1JUUzJTgxJTk5JUUzJTgyJThCJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz04ZTNhNmI4OTkwNTcyZTNlM2E3ZGM1YzcxYTU4NjM5Yw&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaGFyZWt1JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0yODdkYjAyN2I1OTk4Mjg4MzAwY2ZhYzc5ZTg1NjU0Mg&blend-x=142&blend-y=491&blend-mode=normal&s=87ab99e8fe86db196a4226a05d758004",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://qiita.com/tetsu-upstr/items/d1cccfac362872ed140c": {
+      "title": "Laravelログイン機能に複数のSNS認証を追加する（socialite） - Qiita",
+      "description": "socialiteでSNSログインを実装Laravelで、SNSのアカウントを使ったログインの実装をした時のメモです。socialiteとはsoscialiteとは、Laravelで簡単にOA…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNiVBOSU5RiVFOCU4MyVCRCVFMyU4MSVBQiVFOCVBNCU4NyVFNiU5NSVCMCVFMyU4MSVBRVNOUyVFOCVBQSU4RCVFOCVBOCVCQyVFMyU4MiU5MiVFOCVCRiVCRCVFNSU4QSVBMCVFMyU4MSU5OSVFMyU4MiU4QiVFRiVCQyU4OHNvY2lhbGl0ZSVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MDkzM2UyMzY4MjBjYWMwNmZkYjUwZDRhMjUxYWY2ZTE&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdGUtayZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YmY5NjM3N2U3MmU2YTMyMDY3NjhmMjM0ZDIzZWNhZjk&blend-x=142&blend-y=491&blend-mode=normal&s=8fa884f42cb7f06b4ee5bb9f32284994",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://socialiteproviders.com": {
@@ -814,23 +826,11 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://socialiteproviders.com"
     },
-    "https://docs.github.com/ja/developers/apps/scopes-for-oauth-apps": {
-      "title": "OAuth アプリのスコープ - GitHub Docs",
-      "description": "スコープによって、必要なアクセスの種類を正確に指定できます。 スコープによって OAuth トークンへのアクセスが 制限 されます。 ユーザがすでに持っている範囲を超えた権限を許可することはありません。",
-      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
-    },
-    "https://qiita.com/KeisukeKudo/items/18dd8a342a4bdd43913c": {
-      "title": "Laravel+Socialiteで簡単ソーシャルログイン実装! (テスト付き) - Qiita",
-      "description": "Socialiteを使ってLaravelで簡単にソーシャルログインを実装する方法をテスト付きで紹介したいと思います｡ソースはこちら※ 上記ソースを clone する場合は php artisan…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCUyQlNvY2lhbGl0ZSVFMyU4MSVBNyVFNyVCMCVBMSVFNSU4RCU5OCVFMyU4MiVCRCVFMyU4MyVCQyVFMyU4MiVCNyVFMyU4MyVBMyVFMyU4MyVBQiVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNSVBRSU5RiVFOCVBMyU4NSUyMSUyMCUyOCVFMyU4MyU4NiVFMyU4MiVCOSVFMyU4MyU4OCVFNCVCQiU5OCVFMyU4MSU4RCUyOSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NzFjMGQyYzE4YjhhY2Q2OTMwNGYyZjNjZWM5NTZhYjE&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwS2Vpc3VrZUt1ZG8mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWEwMWE0NjUyMDRiMzY1MWE0YWYyZTIzNDYzNDRiN2Y2&blend-x=142&blend-y=491&blend-mode=normal&s=fd561fce7738b9100b2396d973101f53",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-    },
-    "https://qiita.com/tetsu-upstr/items/d1cccfac362872ed140c": {
-      "title": "Laravelログイン機能に複数のSNS認証を追加する（socialite） - Qiita",
-      "description": "socialiteでSNSログインを実装Laravelで、SNSのアカウントを使ったログインの実装をした時のメモです。socialiteとはsoscialiteとは、Laravelで簡単にOA…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNiVBOSU5RiVFOCU4MyVCRCVFMyU4MSVBQiVFOCVBNCU4NyVFNiU5NSVCMCVFMyU4MSVBRVNOUyVFOCVBQSU4RCVFOCVBOCVCQyVFMyU4MiU5MiVFOCVCRiVCRCVFNSU4QSVBMCVFMyU4MSU5OSVFMyU4MiU4QiVFRiVCQyU4OHNvY2lhbGl0ZSVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MDkzM2UyMzY4MjBjYWMwNmZkYjUwZDRhMjUxYWY2ZTE&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdGUtayZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YmY5NjM3N2U3MmU2YTMyMDY3NjhmMjM0ZDIzZWNhZjk&blend-x=142&blend-y=491&blend-mode=normal&s=8fa884f42cb7f06b4ee5bb9f32284994",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    "https://yshrfmru.hatenablog.com/entry/2019/01/06/191235": {
+      "title": "Doctrine\\DBAL\\DBALException  : Unknown database type enum requested. - Fumiro Yoshihara’s Blog",
+      "description": "概要 参考 エラーの内容 回避の方法 概要 Doctrine\\DBALを インストールしてカラムに変更を加えるマイグレーションを実行しようとすると発生するエラーとその回避の方法についてです。 参考 https://stackoverflow.com/questions/33140860/laravel-5-1-unknown-database-type-enum-requested https://laravel.com/docs/5.1/migrations#modifying-columns https://github.com/laravel/framework/issues/1186#…",
+      "image": "https://ogimage.blog.st-hatena.com/10257846132601496440/10257846132699071402/1546769626",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://yshrfmru.hatenablog.com"
     }
   },
   "2021-04-13-react-query-intersection-observer.html": {
@@ -839,6 +839,12 @@
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
+    },
+    "https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API": {
+      "title": "交差オブザーバー API - Web API | MDN",
+      "description": "交差オブザーバー API (Intersection Observer API) は、ターゲットとなる要素が、祖先要素または文書の最上位のビューポートと交差する変化を非同期的に監視する方法を提供します。",
+      "image": "https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.mozilla.org"
     },
     "https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Freact-query-intersection-observer": {
       "title": "Release post/react-query-intersection-observer: 「React QueryとIntersection Observer APIで無限スクロールを作ってみた」 · h-yoshikawa44/ooui-memo",
@@ -857,26 +863,20 @@
       "description": "\nconst {\n  fetchNextPage,",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
-    },
-    "https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API": {
-      "title": "交差オブザーバー API - Web API | MDN",
-      "description": "交差オブザーバー API (Intersection Observer API) は、ターゲットとなる要素が、祖先要素または文書の最上位のビューポートと交差する変化を非同期的に監視する方法を提供します。",
-      "image": "https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.mozilla.org"
     }
   },
   "2021-03-21-laravel-react-query-auth.html": {
-    "https://tanstack.com/query/v3": {
-      "title": "TanStack Query | React Query, Solid Query, Svelte Query, Vue QueryTanStack LogoQuery.gg - The Official React Query Course",
-      "description": "Powerful asynchronous state management, server-state utilities and  data fetching for TS/JS, React, Solid, Svelte and Vue",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
-    },
-    "https://readouble.com/laravel/6.x/ja/csrf.html": {
-      "title": "CSRF保護 6.x Laravel",
+    "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript": {
+      "title": "",
       "description": "",
       "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://readouble.com"
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
+    },
+    "https://codesandbox.io/s/github/tanstack/query/tree/v3/examples/simple": {
+      "title": "TanStack/query: simple - CodeSandbox",
+      "description": "TanStack/query: simple using axios, react, react-dom, react-query, react-scripts, stop-runaway-react-effects, styled-components",
+      "image": "https://codesandbox.io/api/v1/sandboxes/ezbzi2/screenshot.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Flaravel-react-query-auth": {
       "title": "Release post/laravel-react-query-auth: 「React × LaravelでReact Queryの練習がてら、ログイン機能を作ってみた」 · h-yoshikawa44/ooui-memo",
@@ -884,23 +884,23 @@
       "image": "https://opengraph.githubassets.com/110d9e713af70ce18c8691ffb7839fde06e3de602a524cb99c02350b694a9fb1/h-yoshikawa44/ooui-memo",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://v5.reactrouter.com/web/example/auth-workflow": {
-      "title": "React Router: Declarative Routing for React",
-      "description": "Learn once, Route Anywhere",
-      "image": "https://reactrouter.com/react-square.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5.reactrouter.com"
-    },
     "https://github.com/oukayuka/Riakuto-StartingReact-ja3.1": {
       "title": "GitHub - oukayuka/Riakuto-StartingReact-ja3.1",
       "description": "Contribute to oukayuka/Riakuto-StartingReact-ja3.1 development by creating an account on GitHub.",
       "image": "https://opengraph.githubassets.com/70b08dcbf84b1ff1ea473d86701cff3c8dc9006eaef0393a967ab8f4dc5af434/oukayuka/Riakuto-StartingReact-ja3.1",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript": {
-      "title": "",
+    "https://readouble.com/laravel/6.x/ja/csrf.html": {
+      "title": "CSRF保護 6.x Laravel",
       "description": "",
       "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://readouble.com"
+    },
+    "https://tanstack.com/query/v3": {
+      "title": "TanStack Query | React Query, Solid Query, Svelte Query, Vue QueryTanStack LogoQuery.gg - The Official React Query Course",
+      "description": "Powerful asynchronous state management, server-state utilities and  data fetching for TS/JS, React, Solid, Svelte and Vue",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     },
     "https://tanstack.com/query/v3/docs/react/reference/useMutation": {
       "title": "useMutation | TanStack Query DocsQuery.gg - The Official React Query CourseQuery.gg - The Official React Query Course",
@@ -914,25 +914,43 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     },
+    "https://v5.reactrouter.com/web/example/auth-workflow": {
+      "title": "React Router: Declarative Routing for React",
+      "description": "Learn once, Route Anywhere",
+      "image": "https://reactrouter.com/react-square.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5.reactrouter.com"
+    },
     "https://www.hypertextcandy.com/vue-laravel-tutorial-introduction": {
       "title": "Vue + Vue Router + Vuex + Laravelで写真共有アプリを作ろう (1) イントロダクション | Hypertext Candy",
       "description": "   UPDATED：2020.01.05   PHP 7.4 および Laravel 6 に対応しました 🎉  この連載記事では、フロントエンドに Vue.js + Vue Router + Vue",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.hypertextcandy.com"
-    },
-    "https://codesandbox.io/s/github/tanstack/query/tree/v3/examples/simple": {
-      "title": "TanStack/query: simple - CodeSandbox",
-      "description": "TanStack/query: simple using axios, react, react-dom, react-query, react-scripts, stop-runaway-react-effects, styled-components",
-      "image": "https://codesandbox.io/api/v1/sandboxes/ezbzi2/screenshot.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     }
   },
   "2021-02-20-developers-summit-2021.html": {
+    "https://docs.google.com/presentation/d/16GNi1z2PtXHch39MwiKtAF4-p-caedqw6G4PXsNO35A/edit": {
+      "title": "アジャイルネイティブな大学生と\u000bコネクトしてみませんか?",
+      "description": "アジャイルネイティブな大学生と コネクトしてみませんか? -3時間スプリント白熱教室- 渡辺知恵美, 村上藍加, 日高拓真, 飯塚陸斗, 須田幹大",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyL9noSDUNiiWrjmm_NdCi2Ynjc8PmP3AwHfqAsltlXcHlUuVXB87zKgZA2jKepjbt_tYVRJ6HQlyKpDnqW0ijtD98jptVmLT32tPN37kXL11g=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
     "https://event.shoeisha.jp/devsumi/20210218": {
       "title": "Developers Summit 2021（2021.02.18-19）",
       "description": "ITエンジニアの祭典「Developers Summit 2021」（デブサミ2021）は、2021年2月18日・19日に開催！事前登録受付中！",
       "image": "https://event.shoeisha.jp/static/images/event/1203/1200.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+    },
+    "https://note.com/ku__ma59/n/nadaa8225b257": {
+      "title": "登壇後記：エンジニアチームで実践する組織エンゲージメント活用～3,000万件のデータから分かったこと～｜くーま",
+      "description": "本記事は2021年2月18日(木)にデブサミ2021で発表した内容についてのまとめです。当日コメントいただいたご質問にも回答します。     \n\n\nDevelopers Summit 2021（2021.02.18-19）\n\n\nITエンジニアの祭典「Developers Summit 2021」（デブサミ2021）は、2021年2月18日・19日に\n\n\nevent.shoeisha.jp\n\n\n\n \n       \n\n\n18-D-8 エンジニアチームで実践する組織エンゲージメント活用 ～ 3,000万件のデータから分かったこと ～ | Developers Summit 2021（202",
+      "image": "https://assets.st-note.com/production/uploads/images/45869047/rectangle_large_type_2_17f056cf6f24eff01a4f604ebc623688.jpeg?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://note.com/raykataoka/n/n99d703d43a48": {
+      "title": "Atomic Scrum〜個人の生産性を最大化する方法とNotion活用術〜｜Ray Kataoka",
+      "description": "本記事は２０２１年２月１９日にデブサミ２０２１冬で発表した内容について、事後で資料が閲覧可能にしております。             当日発表したNotionのデモ動画だけでなく、Notion活用術として動画も閲覧可能になっています（※一定期間経過後、閲覧不可にする可能性があります）      デモ動画・Notion活用術     \n\n\nNotion – The all-in-one workspace for your notes, tasks, wikis, and databases.\n\n\nA new tool that blends your everyday work app",
+      "image": "https://assets.st-note.com/production/uploads/images/45915542/rectangle_large_type_2_363f536163ac3314351591781fd90edd.png?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://note.com/sfujii/n/n6684a731ef26": {
       "title": "旅館運営企業で実現した現場出身者の力を活かしたアジャイル開発｜s-fujii",
@@ -940,40 +958,10 @@
       "image": "https://assets.st-note.com/production/uploads/images/45955928/rectangle_large_type_2_ed24efba7bde79d66855629816c03f05.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
-    "https://www.shoeisha.co.jp/campaign/award/2021/result": {
-      "title": "ITエンジニア本大賞2021",
-      "description": "「ITエンジニア本大賞 2021」今年も開催！大賞は、2月18日のプレゼン大会で決定します。",
-      "image": "http://www.shoeisha.co.jp/static/campaign/award/2021/images/1200.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
-    },
-    "https://qiita.com/viva_tweet_x/items/5b17bd5ad8316a34347b": {
-      "title": "デブサミ2021 参加レポート「19-E-6 三越伊勢丹が目指すNew Normalの購買スタイル」 - Qiita",
-      "description": "Developers Summit 2021この記事は、2021/02/18-19に開催されたDevelopers Summit 2021のレポートです。チーム参加してきましたaslead A…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMSUyMCVFNSU4RiU4MiVFNSU4QSVBMCVFMyU4MyVBQyVFMyU4MyU5RCVFMyU4MyVCQyVFMyU4MyU4OCVFMyU4MCU4QzE5LUUtNiUyMCVFNCVCOCU4OSVFOCVCNiU4QSVFNCVCQyU4QSVFNSU4QiVBMiVFNCVCOCVCOSVFMyU4MSU4QyVFNyU5QiVBRSVFNiU4QyU4NyVFMyU4MSU5OU5ldyUyME5vcm1hbCVFMyU4MSVBRSVFOCVCMyVCQyVFOCVCMiVCNyVFMyU4MiVCOSVFMyU4MiVCRiVFMyU4MiVBNCVFMyU4MyVBQiVFMyU4MCU4RCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YjJkOTY0MzgwYTlmN2JlYmIwNzJiMWM4NjU4ZjIzNzY&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdml2YV90d2VldF94JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1hODI3YjcyYjllNjk4ZTJiOWU4ZDdlMTFmNGJkNTQ5MQ&blend-x=142&blend-y=491&blend-mode=normal&s=59d4d3074f2f2f1949aed6145059e719",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-    },
     "https://note.com/tably/n/na148a5bcdeab": {
       "title": "エンジニアに伝えたい！プロダクトマネージャーの頭の中 - プロダクトをもう一段階成長させる仮説の立て方｜Tably",
       "description": "Tablyの小城久美子(@ozyozyo)です。 デブサミでは多くの方にチャットやTwitterで盛り上げて頂けたので大変お話しやすかったですし、何よりとても楽しかったです。ありがとうございます！ 資料のダウンロードはアンケートに回答された方への特典とのことなので、登壇内容の一部を抜粋してまとめます。ご参考頂けますと幸いです😊     \n\n\n19-E-1 エンジニアに伝えたい！プロダクトマネージャーの頭の中 - プロダクトをもう一段階成長させる仮説の立て方 | Developers Summit 2021（2021.02.18-19）\n\n\n\n\n\nevent.shoeisha.jp\n\n\n",
       "image": "https://assets.st-note.com/production/uploads/images/46046520/rectangle_large_type_2_549063efc7c4134ed0a2b258a87b1179.png?fit=bounds&quality=85&width=1280",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
-    },
-    "https://www.pythonic-exam.com/archives/news/%E3%83%87%E3%83%96%E3%82%B5%E3%83%9F%E7%99%BB%E5%A3%87%E8%B3%87%E6%96%99%E3%80%8Cpytrhon%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%AA%8D%E5%AE%9A%E5%9F%BA%E7%A4%8E%E8%A9%A6%E9%A8%93%E3%81%A8pyth": {
-      "title": "デブサミ登壇資料「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」 | Python試験・資格、データ分析試験・資格を運営する一般社団法人Pythonエンジニア育成推進協会のページです。",
-      "description": "本日ご聴講いただいた皆様、ありがとうございました。本日のDevelopers Summitで講演した「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」の資料を公開します。",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.pythonic-exam.com"
-    },
-    "https://speakerdeck.com/zak3/a-simple-strategy-management-in-a-data-team": {
-      "title": "Deck Not Found - Speaker Deck",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://note.com/raykataoka/n/n99d703d43a48": {
-      "title": "Atomic Scrum〜個人の生産性を最大化する方法とNotion活用術〜｜Ray Kataoka",
-      "description": "本記事は２０２１年２月１９日にデブサミ２０２１冬で発表した内容について、事後で資料が閲覧可能にしております。             当日発表したNotionのデモ動画だけでなく、Notion活用術として動画も閲覧可能になっています（※一定期間経過後、閲覧不可にする可能性があります）      デモ動画・Notion活用術     \n\n\nNotion – The all-in-one workspace for your notes, tasks, wikis, and databases.\n\n\nA new tool that blends your everyday work app",
-      "image": "https://assets.st-note.com/production/uploads/images/45915542/rectangle_large_type_2_363f536163ac3314351591781fd90edd.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://note.com/takuroenami/n/n648cbb865b8b": {
@@ -982,58 +970,16 @@
       "image": "https://assets.st-note.com/production/uploads/images/45938761/rectangle_large_type_2_1de07c8053427e017ca16bc821bb9060.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
-    "https://note.com/ku__ma59/n/nadaa8225b257": {
-      "title": "登壇後記：エンジニアチームで実践する組織エンゲージメント活用～3,000万件のデータから分かったこと～｜くーま",
-      "description": "本記事は2021年2月18日(木)にデブサミ2021で発表した内容についてのまとめです。当日コメントいただいたご質問にも回答します。     \n\n\nDevelopers Summit 2021（2021.02.18-19）\n\n\nITエンジニアの祭典「Developers Summit 2021」（デブサミ2021）は、2021年2月18日・19日に\n\n\nevent.shoeisha.jp\n\n\n\n \n       \n\n\n18-D-8 エンジニアチームで実践する組織エンゲージメント活用 ～ 3,000万件のデータから分かったこと ～ | Developers Summit 2021（202",
-      "image": "https://assets.st-note.com/production/uploads/images/45869047/rectangle_large_type_2_17f056cf6f24eff01a4f604ebc623688.jpeg?fit=bounds&quality=85&width=1280",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
-    },
-    "https://www.youtube.com/watch?v=DTpGfpLybr0": {
-      "title": "Zenn個人開発の限界に挑んだ話 - devsumi 2021",
-      "description": "Zennはこちらhttps://zenn.dev発表者のTwitterはこちらhttps://twitter.com/catnose99",
-      "image": "https://i.ytimg.com/vi/DTpGfpLybr0/maxresdefault.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    },
-    "https://www.slideshare.net/papanda/ss-243047076": {
-      "title": "アジャイルブリゲード 〜対立する二項を組織の構造と仕組みによって繋ぐ〜",
-      "description": "アジャイルブリゲード 〜対立する二項を組織の構造と仕組みによって繋ぐ〜 - Download as a PDF or view online for free",
-      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/agilebrigade-210219124434-thumbnail.jpg?width=640&height=640&fit=bounds",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
-    },
-    "https://speakerdeck.com/yuichielectric/how-to-implement-innersource": {
-      "title": "オープンソースのベストプラクティスを企業内で実践/How to implement InnerSource",
-      "description": "Developers Summit 2021の「オープンソースのベストプラクティスを企業内で実践 ～インナーソースのすすめ」というセッションの発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3044/",
-      "image": "https://files.speakerdeck.com/presentations/1e6ad3fd4d4442f39224f33cfe05611c/slide_0.jpg?17404560",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/uzabasetech/18-e-5-uzabase-gao-shan-wen-debusamideng-tan-zi-liao": {
-      "title": "18-E-5_Uzabase_高山温_デブサミ登壇資料",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/b4cde5e9df144fdd9e50688698d91160/slide_0.jpg?17473118",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/twada/engineers-in-voyage": {
-      "title": "Engineers in VOYAGE",
-      "description": "2012/02/18（木）\nDevelopers Summit 2021 「ITエンジニア本大賞 2021」プレゼン大会\n\n",
-      "image": "https://files.speakerdeck.com/presentations/e14e62cb33164c68a1dc020e7301f217/slide_0.jpg?17404104",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://qiita.com/viva_tweet_x/items/5b17bd5ad8316a34347b": {
+      "title": "デブサミ2021 参加レポート「19-E-6 三越伊勢丹が目指すNew Normalの購買スタイル」 - Qiita",
+      "description": "Developers Summit 2021この記事は、2021/02/18-19に開催されたDevelopers Summit 2021のレポートです。チーム参加してきましたaslead A…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMSUyMCVFNSU4RiU4MiVFNSU4QSVBMCVFMyU4MyVBQyVFMyU4MyU5RCVFMyU4MyVCQyVFMyU4MyU4OCVFMyU4MCU4QzE5LUUtNiUyMCVFNCVCOCU4OSVFOCVCNiU4QSVFNCVCQyU4QSVFNSU4QiVBMiVFNCVCOCVCOSVFMyU4MSU4QyVFNyU5QiVBRSVFNiU4QyU4NyVFMyU4MSU5OU5ldyUyME5vcm1hbCVFMyU4MSVBRSVFOCVCMyVCQyVFOCVCMiVCNyVFMyU4MiVCOSVFMyU4MiVCRiVFMyU4MiVBNCVFMyU4MyVBQiVFMyU4MCU4RCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YjJkOTY0MzgwYTlmN2JlYmIwNzJiMWM4NjU4ZjIzNzY&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdml2YV90d2VldF94JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1hODI3YjcyYjllNjk4ZTJiOWU4ZDdlMTFmNGJkNTQ5MQ&blend-x=142&blend-y=491&blend-mode=normal&s=59d4d3074f2f2f1949aed6145059e719",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://speakerdeck.com/1ftseabass/developers-summit-2021": {
       "title": "Developers Summit 2021",
       "description": "20210218_Developers Summit 2021「1歳息子の寝姿をこっそり見る仕組みを作って得られた知見を話す」の登壇資料です。\n\n◆スライド内の素材は以下を使用させて頂いております。ありがとうございます！\n\n・シルエットデザイン http://kage-design.com/\n・human pictogram 2.0 http://pictogram2.com\n・ICOOON MONO http://icooon-mono.com/",
       "image": "https://files.speakerdeck.com/presentations/f7cf5b8eb6be46cb9ea7c670ae32e8cb/slide_0.jpg?17404447",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/carta_engineering/ripureisu": {
-      "title": "エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス",
-      "description": "2012/02/19（金）\nDevelopers Summit 2021 「エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス\n」\n\"書籍「Engineers in VOYAGEー事業をエンジニアリングする技術者たち」に出てきた事業の特性や背景を踏まえたリファクタリング/リアーキテクティング/リプレイスについて、なぜその手法を選択したのか、どのように実践したかを、実体験や具体例を交えて深掘っていきます。\n\n書籍でインタビュアーを務めた和田(@t_wada) さんをモデレータに迎え、VOYAGE GROUPからはそれぞれの事業会社で事業をエンジニアリングしてきたインタビュイーたちが出演します。広告プラットフォームを10年支えてきたあじよし(@ajiyoshi) 、20年もののシステムを改善してきた福田 、外注したシステムをリプレイスしたねこや(@nekoya) が赤裸々に語ります。\"\nhttps://event.shoeisha.jp/devsumi/20210218/session/3052/",
-      "image": "https://files.speakerdeck.com/presentations/bc2ead9e7c6c4b44b6e41a98e7625ff2/slide_0.jpg?17454772",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/oliva/da-qi-ye-demodekiru-duan-qi-jian-depurodakutorontisurutamefalsekan-suo-d81484b8-8c85-4c96-8031-2f0d19b8a34c": {
-      "title": "大企業でもできる！短期間でプロダクトローンチするための勘所",
-      "description": "Developer Summit 2021 での発表スライド",
-      "image": "https://files.speakerdeck.com/presentations/0956e59599214e04870452976f6dfa2b/slide_0.jpg?17401834",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/ayanaru512/onraindemodekiru-enziniafalseyan-xiu-ibentokomiyuniteiyu-cheng": {
@@ -1042,46 +988,10 @@
       "image": "https://files.speakerdeck.com/presentations/e2c5089fc6ad4547b7e4b6027f7d93dc/slide_0.jpg?17407057",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/ihcomega56/what-you-can-do-for-devops-in-the-new-normal": {
-      "title": "やったもんがち！ニューノーマル時代を生き抜くために、組織の1メンバーであるあなたがDevOpsを促進する方法 / what you can do for DevOps in the new normal",
-      "description": "Developers Summit 2021",
-      "image": "https://files.speakerdeck.com/presentations/a389e27eed8d4f8ea94a8693a8f6926b/slide_0.jpg?17413880",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/tmizuma/hurontoentoensiniafalsetamefalseawsakitekutiya?slide=51": {
-      "title": "フロントエンドエンジニアのためのAWSアーキテクチャ",
-      "description": "Talked at \"AWS Dev Day Online Japan\" 2020.",
-      "image": "https://files.speakerdeck.com/presentations/3c4c0e5d90d74e548fdc3c7d39941487/slide_50.jpg?16529602",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/futo23/debusami2021-bu-que-ding-yao-su-gaqiang-ishi-dai-falsesheng-cun-zhan-lue-u30ga-hao-kinakoto-detu-kiba-kerutameniha": {
-      "title": "デブサミ2021 - 不確定要素が強い時代の生存戦略 ― U30が「好きなコト」で突き抜けるためには!?",
-      "description": "2021/02/18(木) 17:15～18:20\nデブサミ2021での登壇資料です。\n\n若手エンジニアの登竜門「Developers Boost 2020」優秀セッション再演！\n～U30エンジニアのための生存戦略とは？～\n\nイベントページ :\nhttps://event.shoeisha.jp/devsumi/20210218/session/3024/",
-      "image": "https://files.speakerdeck.com/presentations/3c45b0d34ef249edb4ace22d97cbeb09/slide_0.jpg?17404732",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/lancers_pr/developers-summit-2021": {
-      "title": "NewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～ #devsumi /Developers Summit 2021",
-      "description": "Developers Summit 2021 「We are New Normal」\n#devsumi\nNewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～\n\n2021/02/18 17:15 ～ 17:55 の資料です。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3033/\n---\n多様な人材が活躍する「NewNormalな開発組織」について紹介します。\n\nランサーズの開発組織はテレワークをきっかけに「新しい働き方」を模索し、3ヶ月で100人体制（以前の倍）へ成長しました。卒業生・副業・フリーランス人材が活躍できるように、Hiring・Onboarding・Engagementプロセスを整えました。\n\n従来は低優先だった「軽微なUI改善」も、NewNormalな組織では「イシューハント案件」として外部人材が速やかに解消しています。\n\nぜひ本セッションを開発組織の強化にお役立てください。",
-      "image": "https://files.speakerdeck.com/presentations/83d9b061f7c046a7b0a810841a3c1d73/slide_0.jpg?17389676",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/kimh/enziniagaqi-ye-suruyi-wei-qi-ye-jing-yan-zerokaradian-dong-kitukubodo-shi-ye-wochuang-ruhua": {
-      "title": "エンジニアが起業する意味: 起業経験ゼロから電動キックボード 事業を創る話",
-      "description": "デブサミ2021登壇資料",
-      "image": "https://files.speakerdeck.com/presentations/4e4b451d11fb4fd19fa7c6d91f2d5f17/slide_0.jpg?17427399",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/yuzutas0/20210218c1": {
-      "title": "「スピード」と「品質」のスイッチング ～事業成長を支える生存戦略～ #devsumi / 20210218C1",
-      "description": "Developers Summit 2021【C-1】の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218\n\n----------------------------------------------------------------------------------------------------\n\nメルペイでは「ベンチャーとしてのスピード」と「FinTech領域としての品\n質」の両立が求められています。\n\n目の前のビジネスチャンスに対して、システム開発が追いつかない。この悩みと向き合い、私たちが辿り着いたのは「スピード」と「品質」のスイッチングです。\n\n「1.ツール活用によるスピード優先」と「2.システム開発による品質重視」をフェーズごとに使い分けることで、事業成長を支えてきました。\n\n本セッションでは、ビジネスとエンジニアリングの両立に挑戦し続ける人たちに向けて、その事例と学びを紹介します。\n\n----------------------------------------------------------------------------------------------------\n\n【補足1】\n共同発表者が同じスライドをアップロードしたときは、URLを掲載します。\nxxxxx\n\n【補足2】\n登壇時のスライドとテイストを一部変更しています。\n・Google slides と SpeakerDeck の相性が悪いためフォントを調整しました。\n・個人的な好みでカラーリングに手を加えました。",
-      "image": "https://files.speakerdeck.com/presentations/db1d15d8c3df4ce09729300bab9e1e45/slide_0.jpg?17387267",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/ichimichi/new-normal-shi-dai-falsekomiyuniteihashui-mogatiyansuniman-tiyi-reteiru": {
-      "title": "New Normal 時代のコミュニティは誰もがチャンスに満ち溢れている。",
-      "description": "Developers Summit 2021 19-B-6\nセッションにてお話したスライドです。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3066/\n\nカンファレンスで登壇するのは輝かしい実績をもつ人々だと思っていませんか？カンファレンスを主催するのは特別なコネクションを持つ首都圏の人々だと思っていませんか？\nニューノーマルな時代の中では場所という優位性は消え、一歩踏み出す勇気さえあれば、どこの誰でも新たなヒーローになる機会に溢れています。\nBacklog World 2021運営委員長として、地方都市広島からフルリモートで大規模カンファレンスを開催するために何をしてきたかをお話しします。本セッションに参加して下さった方々に知恵と勇気をお渡しします。\n\n\n",
-      "image": "https://files.speakerdeck.com/presentations/feed61bb368340acb51dd2f58b5d46ff/slide_0.jpg?17413667",
+    "https://speakerdeck.com/carta_engineering/ripureisu": {
+      "title": "エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス",
+      "description": "2012/02/19（金）\nDevelopers Summit 2021 「エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス\n」\n\"書籍「Engineers in VOYAGEー事業をエンジニアリングする技術者たち」に出てきた事業の特性や背景を踏まえたリファクタリング/リアーキテクティング/リプレイスについて、なぜその手法を選択したのか、どのように実践したかを、実体験や具体例を交えて深掘っていきます。\n\n書籍でインタビュアーを務めた和田(@t_wada) さんをモデレータに迎え、VOYAGE GROUPからはそれぞれの事業会社で事業をエンジニアリングしてきたインタビュイーたちが出演します。広告プラットフォームを10年支えてきたあじよし(@ajiyoshi) 、20年もののシステムを改善してきた福田 、外注したシステムをリプレイスしたねこや(@nekoya) が赤裸々に語ります。\"\nhttps://event.shoeisha.jp/devsumi/20210218/session/3052/",
+      "image": "https://files.speakerdeck.com/presentations/bc2ead9e7c6c4b44b6e41a98e7625ff2/slide_0.jpg?17454772",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/chaspy/how-we-overcame-the-covid-19-crisis": {
@@ -1090,10 +1000,52 @@
       "image": "https://files.speakerdeck.com/presentations/e4dea3add46b4021a0478c913ccbfdcf/slide_0.jpg?17416131",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/futo23/debusami2021-bu-que-ding-yao-su-gaqiang-ishi-dai-falsesheng-cun-zhan-lue-u30ga-hao-kinakoto-detu-kiba-kerutameniha": {
+      "title": "デブサミ2021 - 不確定要素が強い時代の生存戦略 ― U30が「好きなコト」で突き抜けるためには!?",
+      "description": "2021/02/18(木) 17:15～18:20\nデブサミ2021での登壇資料です。\n\n若手エンジニアの登竜門「Developers Boost 2020」優秀セッション再演！\n～U30エンジニアのための生存戦略とは？～\n\nイベントページ :\nhttps://event.shoeisha.jp/devsumi/20210218/session/3024/",
+      "image": "https://files.speakerdeck.com/presentations/3c45b0d34ef249edb4ace22d97cbeb09/slide_0.jpg?17404732",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ichimichi/new-normal-shi-dai-falsekomiyuniteihashui-mogatiyansuniman-tiyi-reteiru": {
+      "title": "New Normal 時代のコミュニティは誰もがチャンスに満ち溢れている。",
+      "description": "Developers Summit 2021 19-B-6\nセッションにてお話したスライドです。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3066/\n\nカンファレンスで登壇するのは輝かしい実績をもつ人々だと思っていませんか？カンファレンスを主催するのは特別なコネクションを持つ首都圏の人々だと思っていませんか？\nニューノーマルな時代の中では場所という優位性は消え、一歩踏み出す勇気さえあれば、どこの誰でも新たなヒーローになる機会に溢れています。\nBacklog World 2021運営委員長として、地方都市広島からフルリモートで大規模カンファレンスを開催するために何をしてきたかをお話しします。本セッションに参加して下さった方々に知恵と勇気をお渡しします。\n\n\n",
+      "image": "https://files.speakerdeck.com/presentations/feed61bb368340acb51dd2f58b5d46ff/slide_0.jpg?17413667",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ihcomega56/what-you-can-do-for-devops-in-the-new-normal": {
+      "title": "やったもんがち！ニューノーマル時代を生き抜くために、組織の1メンバーであるあなたがDevOpsを促進する方法 / what you can do for DevOps in the new normal",
+      "description": "Developers Summit 2021",
+      "image": "https://files.speakerdeck.com/presentations/a389e27eed8d4f8ea94a8693a8f6926b/slide_0.jpg?17413880",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
     "https://speakerdeck.com/iwashi86/effective-remote-working-f8421bbb-a932-4ac6-a1c3-4b54ff2cf920": {
       "title": "Effective Remote Working",
       "description": "Developers Summit 2021 18-E-1 での発表資料です。 \nhttps://event.shoeisha.jp/devsumi/20210218/session/3043/",
       "image": "https://files.speakerdeck.com/presentations/c342766130794979930ffa955f9fe32d/slide_0.jpg?17401600",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kimh/enziniagaqi-ye-suruyi-wei-qi-ye-jing-yan-zerokaradian-dong-kitukubodo-shi-ye-wochuang-ruhua": {
+      "title": "エンジニアが起業する意味: 起業経験ゼロから電動キックボード 事業を創る話",
+      "description": "デブサミ2021登壇資料",
+      "image": "https://files.speakerdeck.com/presentations/4e4b451d11fb4fd19fa7c6d91f2d5f17/slide_0.jpg?17427399",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/lancers_pr/developers-summit-2021": {
+      "title": "NewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～ #devsumi /Developers Summit 2021",
+      "description": "Developers Summit 2021 「We are New Normal」\n#devsumi\nNewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～\n\n2021/02/18 17:15 ～ 17:55 の資料です。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3033/\n---\n多様な人材が活躍する「NewNormalな開発組織」について紹介します。\n\nランサーズの開発組織はテレワークをきっかけに「新しい働き方」を模索し、3ヶ月で100人体制（以前の倍）へ成長しました。卒業生・副業・フリーランス人材が活躍できるように、Hiring・Onboarding・Engagementプロセスを整えました。\n\n従来は低優先だった「軽微なUI改善」も、NewNormalな組織では「イシューハント案件」として外部人材が速やかに解消しています。\n\nぜひ本セッションを開発組織の強化にお役立てください。",
+      "image": "https://files.speakerdeck.com/presentations/83d9b061f7c046a7b0a810841a3c1d73/slide_0.jpg?17389676",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/lmi/debusami2021deng-tan-zi-liao-number-devsumi2021-link-and-motivation-presentation-83102e59-494f-4009-94b2-c4033e2a9dd4": {
+      "title": "ARR20億円を3年で達成したエンジニア組織が実現したDeveloper eXperience～3つの訪れる壁と突破方法～",
+      "description": "デブサミ2021登壇資料\n#devsumi\n#devsumiB\n#devsumi2021",
+      "image": "https://files.speakerdeck.com/presentations/7065e03e60b34e83b75bf28a6cdd9023/slide_0.jpg?17413415",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/oliva/da-qi-ye-demodekiru-duan-qi-jian-depurodakutorontisurutamefalsekan-suo-d81484b8-8c85-4c96-8031-2f0d19b8a34c": {
+      "title": "大企業でもできる！短期間でプロダクトローンチするための勘所",
+      "description": "Developer Summit 2021 での発表スライド",
+      "image": "https://files.speakerdeck.com/presentations/0956e59599214e04870452976f6dfa2b/slide_0.jpg?17401834",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/takaichi00/developers-boost-2020-fan-ren-enziniafalsesheng-cun-zhan-lue": {
@@ -1102,10 +1054,22 @@
       "image": "https://files.speakerdeck.com/presentations/adf07e1d39a64afbb958b55eeecbd7b5/slide_0.jpg?17426238",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/whisaiyo/developers-summit-2021": {
-      "title": "楽しく学び続ける/Developers Summit 2021",
-      "description": "※ご覧いただきありがとうございます！\n閉じる前に、ぜひ2分で終わる簡単なアンケートにお答えください。※\nhttps://forms.gle/AkGsuvwAKqSU3dNq9\n\n◆DevelopersSummit2021◆2021/2/18\nWHI_18-C-8\n楽しく学び続けるコミュニティをリモートワークの世界で0から作って育ててきた話\nPresenter：Works Human Intelligence 山本 隼也/上村 太郎\n",
-      "image": "https://files.speakerdeck.com/presentations/07bcb34186d845b0a474779eb5c7a052/slide_0.jpg?17403163",
+    "https://speakerdeck.com/tmizuma/hurontoentoensiniafalsetamefalseawsakitekutiya?slide=51": {
+      "title": "フロントエンドエンジニアのためのAWSアーキテクチャ",
+      "description": "Talked at \"AWS Dev Day Online Japan\" 2020.",
+      "image": "https://files.speakerdeck.com/presentations/3c4c0e5d90d74e548fdc3c7d39941487/slide_50.jpg?16529602",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/twada/engineers-in-voyage": {
+      "title": "Engineers in VOYAGE",
+      "description": "2012/02/18（木）\nDevelopers Summit 2021 「ITエンジニア本大賞 2021」プレゼン大会\n\n",
+      "image": "https://files.speakerdeck.com/presentations/e14e62cb33164c68a1dc020e7301f217/slide_0.jpg?17404104",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/uzabasetech/18-e-5-uzabase-gao-shan-wen-debusamideng-tan-zi-liao": {
+      "title": "18-E-5_Uzabase_高山温_デブサミ登壇資料",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/b4cde5e9df144fdd9e50688698d91160/slide_0.jpg?17473118",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/viva_tweet_x/a-retrospective-guide": {
@@ -1114,10 +1078,64 @@
       "image": "https://files.speakerdeck.com/presentations/d98a6ffa5197409aad5cb52aad3cc4f0/slide_0.jpg?17416351",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/whisaiyo/developers-summit-2021": {
+      "title": "楽しく学び続ける/Developers Summit 2021",
+      "description": "※ご覧いただきありがとうございます！\n閉じる前に、ぜひ2分で終わる簡単なアンケートにお答えください。※\nhttps://forms.gle/AkGsuvwAKqSU3dNq9\n\n◆DevelopersSummit2021◆2021/2/18\nWHI_18-C-8\n楽しく学び続けるコミュニティをリモートワークの世界で0から作って育ててきた話\nPresenter：Works Human Intelligence 山本 隼也/上村 太郎\n",
+      "image": "https://files.speakerdeck.com/presentations/07bcb34186d845b0a474779eb5c7a052/slide_0.jpg?17403163",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yuichielectric/how-to-implement-innersource": {
+      "title": "オープンソースのベストプラクティスを企業内で実践/How to implement InnerSource",
+      "description": "Developers Summit 2021の「オープンソースのベストプラクティスを企業内で実践 ～インナーソースのすすめ」というセッションの発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3044/",
+      "image": "https://files.speakerdeck.com/presentations/1e6ad3fd4d4442f39224f33cfe05611c/slide_0.jpg?17404560",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yuzutas0/20210218c1": {
+      "title": "「スピード」と「品質」のスイッチング ～事業成長を支える生存戦略～ #devsumi / 20210218C1",
+      "description": "Developers Summit 2021【C-1】の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218\n\n----------------------------------------------------------------------------------------------------\n\nメルペイでは「ベンチャーとしてのスピード」と「FinTech領域としての品\n質」の両立が求められています。\n\n目の前のビジネスチャンスに対して、システム開発が追いつかない。この悩みと向き合い、私たちが辿り着いたのは「スピード」と「品質」のスイッチングです。\n\n「1.ツール活用によるスピード優先」と「2.システム開発による品質重視」をフェーズごとに使い分けることで、事業成長を支えてきました。\n\n本セッションでは、ビジネスとエンジニアリングの両立に挑戦し続ける人たちに向けて、その事例と学びを紹介します。\n\n----------------------------------------------------------------------------------------------------\n\n【補足1】\n共同発表者が同じスライドをアップロードしたときは、URLを掲載します。\nxxxxx\n\n【補足2】\n登壇時のスライドとテイストを一部変更しています。\n・Google slides と SpeakerDeck の相性が悪いためフォントを調整しました。\n・個人的な好みでカラーリングに手を加えました。",
+      "image": "https://files.speakerdeck.com/presentations/db1d15d8c3df4ce09729300bab9e1e45/slide_0.jpg?17387267",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/zak3/a-simple-strategy-management-in-a-data-team": {
+      "title": "Deck Not Found - Speaker Deck",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://takaking22.com/2021/continuous-teaming": {
+      "title": "Continuous Teaming -2つのチーム移籍の物語- #devsumi",
+      "description": "Developers Summit 2021で講演をしてきました。 今回も kyon_mm と「きょんおよ」でチーム移籍 ...",
+      "image": "https://agile-monster.com/wp-content/uploads/2021/02/Screen-Shot-2021-02-20-at-7.08.42-scaled-1.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://takaking22.com"
+    },
+    "https://www.pythonic-exam.com/archives/news/%E3%83%87%E3%83%96%E3%82%B5%E3%83%9F%E7%99%BB%E5%A3%87%E8%B3%87%E6%96%99%E3%80%8Cpytrhon%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%AA%8D%E5%AE%9A%E5%9F%BA%E7%A4%8E%E8%A9%A6%E9%A8%93%E3%81%A8pyth": {
+      "title": "デブサミ登壇資料「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」 | Python試験・資格、データ分析試験・資格を運営する一般社団法人Pythonエンジニア育成推進協会のページです。",
+      "description": "本日ご聴講いただいた皆様、ありがとうございました。本日のDevelopers Summitで講演した「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」の資料を公開します。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.pythonic-exam.com"
+    },
+    "https://www.shoeisha.co.jp/campaign/award/2021/result": {
+      "title": "ITエンジニア本大賞2021",
+      "description": "「ITエンジニア本大賞 2021」今年も開催！大賞は、2月18日のプレゼン大会で決定します。",
+      "image": "http://www.shoeisha.co.jp/static/campaign/award/2021/images/1200.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+    },
+    "https://www.slideshare.net/hironoriwashizaki/qa-to-aq-quality-assuranceagile-quality": {
+      "title": "パターン QA to AQ: 伝統的品質保証（Quality Assurance）からアジャイル品質（Agile Quality）へ",
+      "description": "パターン QA to AQ: 伝統的品質保証（Quality Assurance）からアジャイル品質（Agile Quality）へ - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/qa2aq-developerssummit-20210219-210219144715-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
     "https://www.slideshare.net/norisukehirai/dxdx-242997785": {
       "title": "エンジニアから都庁へ～中の人が語る街のDX、都庁のDX～",
       "description": "エンジニアから都庁へ～中の人が語る街のDX、都庁のDX～ - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumi2021-18a1-engtmg-210218214458-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
+    "https://www.slideshare.net/papanda/ss-243047076": {
+      "title": "アジャイルブリゲード 〜対立する二項を組織の構造と仕組みによって繋ぐ〜",
+      "description": "アジャイルブリゲード 〜対立する二項を組織の構造と仕組みによって繋ぐ〜 - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/agilebrigade-210219124434-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/tetsuoajima/developers-summit-2021-19d5": {
@@ -1126,29 +1144,11 @@
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit20211-210220035628-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
-    "https://www.slideshare.net/hironoriwashizaki/qa-to-aq-quality-assuranceagile-quality": {
-      "title": "パターン QA to AQ: 伝統的品質保証（Quality Assurance）からアジャイル品質（Agile Quality）へ",
-      "description": "パターン QA to AQ: 伝統的品質保証（Quality Assurance）からアジャイル品質（Agile Quality）へ - Download as a PDF or view online for free",
-      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/qa2aq-developerssummit-20210219-210219144715-thumbnail.jpg?width=640&height=640&fit=bounds",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
-    },
-    "https://docs.google.com/presentation/d/16GNi1z2PtXHch39MwiKtAF4-p-caedqw6G4PXsNO35A/edit": {
-      "title": "アジャイルネイティブな大学生と\u000bコネクトしてみませんか?",
-      "description": "アジャイルネイティブな大学生と コネクトしてみませんか? -3時間スプリント白熱教室- 渡辺知恵美, 村上藍加, 日高拓真, 飯塚陸斗, 須田幹大",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyL9noSDUNiiWrjmm_NdCi2Ynjc8PmP3AwHfqAsltlXcHlUuVXB87zKgZA2jKepjbt_tYVRJ6HQlyKpDnqW0ijtD98jptVmLT32tPN37kXL11g=w1200-h630-p",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
-    },
-    "https://speakerdeck.com/lmi/debusami2021deng-tan-zi-liao-number-devsumi2021-link-and-motivation-presentation-83102e59-494f-4009-94b2-c4033e2a9dd4": {
-      "title": "ARR20億円を3年で達成したエンジニア組織が実現したDeveloper eXperience～3つの訪れる壁と突破方法～",
-      "description": "デブサミ2021登壇資料\n#devsumi\n#devsumiB\n#devsumi2021",
-      "image": "https://files.speakerdeck.com/presentations/7065e03e60b34e83b75bf28a6cdd9023/slide_0.jpg?17413415",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://takaking22.com/2021/continuous-teaming": {
-      "title": "Continuous Teaming -2つのチーム移籍の物語- #devsumi",
-      "description": "Developers Summit 2021で講演をしてきました。 今回も kyon_mm と「きょんおよ」でチーム移籍 ...",
-      "image": "https://agile-monster.com/wp-content/uploads/2021/02/Screen-Shot-2021-02-20-at-7.08.42-scaled-1.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://takaking22.com"
+    "https://www.youtube.com/watch?v=DTpGfpLybr0": {
+      "title": "Zenn個人開発の限界に挑んだ話 - devsumi 2021",
+      "description": "Zennはこちらhttps://zenn.dev発表者のTwitterはこちらhttps://twitter.com/catnose99",
+      "image": "https://i.ytimg.com/vi/DTpGfpLybr0/maxresdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   }
 }

@@ -1,64 +1,10 @@
 {
   "2023-11-19-jsconf-jp-2023.html": {
-    "https://jsconfjp-slide.pages.dev/": {
-      "title": "",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconfjp-slide.pages.dev"
-    },
-    "https://zenn.dev/akfm/articles/next-app-router-navigation": {
-      "title": "Next.js App Router 遷移の仕組みと実装",
-      "description": "",
-      "image": "https://res.cloudinary.com/zenn/image/upload/s--bBdmeL2Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Next.js%2520App%2520Router%2520%25E9%2581%25B7%25E7%25A7%25BB%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2581%25A8%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akfm_sato%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzllMzg2MWQ3OGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
-    },
-    "https://zenn.dev/wakamsha/articles/setup-eslint-plugin-jsdoc": {
-      "title": "ESLint を使って JSDoc / TSDoc の記述を必須化する",
-      "description": "",
-      "image": "https://res.cloudinary.com/zenn/image/upload/s--hEBxj8uN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ESLint%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520JSDoc%2520%252F%2520TSDoc%2520%25E3%2581%25AE%25E8%25A8%2598%25E8%25BF%25B0%25E3%2582%2592%25E5%25BF%2585%25E9%25A0%2588%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:wakamsha%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2psYURiOW50NGN1UTUweE54dmxHcW50Rkxsbkg1VThSWUFZOUtBakE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
-    },
-    "https://www.youtube.com/@jsconfjp": {
-      "title": "jsconfjp",
-      "description": "作成した動画を友だち、家族、世界中の人たちと共有",
-      "image": "https://yt3.googleusercontent.com/ytc/APkrFKahiexlyDIaTs1uQMJFEJAju2mA_NQfe69hp_Wr=s900-c-k-c0x00ffffff-no-rj",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    },
-    "https://github.com/nkzw-tech/remdx": {
-      "title": "GitHub - nkzw-tech/remdx: Beautiful Minimalist React & MDX Presentations",
-      "description": "Beautiful Minimalist React & MDX Presentations. Contribute to nkzw-tech/remdx development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/1e00c3bbb6bf64785f2fa07e55a0dd4e4a7d9f9e9868ab9e69358435556e676e/nkzw-tech/remdx",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://onedrive.live.com/view.aspx?resid=D699ACCFCBD51CF5%211028670&authkey=!AGe_JV4mJeVFUBA": {
-      "title": "Microsoft",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://onedrive.live.com"
-    },
-    "https://canalun-company-2.deno.dev/guest_rooms/brickBlockAnywhere": {
-      "title": "Brick-Block-Anywhere Demo",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://canalun-company-2.deno.dev"
-    },
-    "https://speakerdeck.com/nissydev/deep-dive-into-biome-in-jsconf-2023": {
-      "title": "Deep dive into Biome in JSConf 2023",
-      "description": "The video included in the slides can be accessed here\nhttps://web.archive.org/web/20230328125908/https://rome.tools/blog/2022/11/08/rome-10/",
-      "image": "https://files.speakerdeck.com/presentations/95da612c83e54ee7a3a55b01af5033cb/slide_0.jpg?27870267",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://www.docswell.com/s/hireroo/5987RP-2023-11-19-JSConfJP-confidence-boundaries-of-values": {
-      "title": "TypeScriptで型定義を信頼しすぎず「信頼境界線」を設置した話 | ドクセル",
-      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/972GLYZR7R.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
-    },
-    "https://main--remarkable-figolla-a694f0.netlify.app/1": {
-      "title": "",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://main--remarkable-figolla-a694f0.netlify.app"
+    "https://azukiazusa.dev/blog/invokers-to-add-interactions-without-javascript/": {
+      "title": "JavaScript なしでインタラクションを追加する Invokers",
+      "description": "Invokers は JavaScript なしでインタラクションを追加するための提案です。`<button>` 要素に `invoketarget` 属性を指定することで、値として指定した id を持つ `<dialog>` などの要素の開閉状態を切り替えることが可能となります。",
+      "image": "https://azukiazusa.dev/blog/ogp/JavaScript%20%E3%81%AA%E3%81%97%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B%20Invokers/HTML.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://azukiazusa.dev"
     },
     "https://blog.cybozu.io/entry/2023/09/25/080000": {
       "title": "サイボウズOfficeのフロントエンド刷新（DOGOプロジェクト) をやってます！ - Cybozu Inside Out | サイボウズエンジニアのブログ",
@@ -66,35 +12,23 @@
       "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yellow-sabotech/20230920/20230920170941.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.cybozu.io"
     },
-    "https://speakerdeck.com/baseballyama/jsconf-jp-2023-llm-da-gui-mo-yan-yu-moderu-quan-sheng-shi-dai-nokai-fa-purakuteisu": {
-      "title": "(JSConf JP 2023) LLM (大規模言語モデル) 全盛時代の開発プラクティス",
-      "description": "このPDFは「LLM全盛時代の開発プラクティス」というタイトルの資料で、baseballyama氏によって作成されました。内容は主に大規模言語モデル（LLM）を活用した開発プラクティスに関するものです。\n\n主な内容は以下の通りです：\n\n1. **GitHub Copilotについて**:\n    - Copilotの利用が増え、コード提案を受け入れてから精査する流れが一般的になった。\n    - インターネット接続がないと利用できないことが難点。\n    - Copilotは開いているファイルを参考にしてコードを提案し、統一されていないコードは提案の精度を低下させる。\n\n2. **AIツールによる効率化**:\n    - AIレビューツールとFigma to Codeツールについて議論。\n    - AIレビューツールは一般的なアドバイスに留まり、具体的な自社ルールに基づいたレビューが求められる。\n    - Figma to Codeでは、自社のデザインシステムに基づいたUIコンポーネントの生成が理想だが、現実では汎用的なコンポーネントが生成される傾向にある。\n\n3. **AIツールの活用法**:\n    - 現実の業務において、AIツールは自社特有のコンテキストを理解する必要があるが、これを達成しているツールは少ない。\n    - AIは新人のように扱うと理解しやすく、プロセスとデータを明確に教える必要がある。\n    - レビューワークフローを言語化し、AIツールに適用して、不足している情報を補う。\n\n4. **LLMの実装と結果**:\n    - コーディングルールに基づき、GitHubのプルリクエスト（PR）に対して指摘や改善案を提案する。\n    - 正しい指摘がある一方で誤った指摘もあり、コーディング規約を日々確認する副次効果がある。\n    - Vue 3コンポーネントの実装では、Figmaとの往復が減り、作業時間が大幅に短縮された。\n\n5. **実装前のプロセス**:\n    - 作業プロセスと必要なデータを言語化し、単純で工数の大きいプロセスを特定する。\n    - 静的検査で自動化できない場合は、GitHub Copilotなどの既存ツールで対処し、必要に応じてLLMを活用する。\n\n6. **サービスの成長と将来的な展望**:\n    - OpenAIを中心としたLLMを使用したサービスの成長が著しい。\n    - 既存製品の活用と、将来的に解決される問題に対しては自作を控えるバランスが必要。\n\n7. **プログラミング実装例**:\n    - Chat GPTに対して具体的な指示と必要なデータを提供し、期待値との差異を確認する。\n    - 指示とデータを修正し、プログラムを実装して運用を開始する。\n    - 具体的なコーディング規約違反の例を挙げ、その理由を詳述する。\n\nこの資料は、AIツールやLLMを活用した開発プラクティスに関する具体的なケーススタディと実装例を提供しており、現代のソフトウェア開発におけるAIの活用方法についての洞察を提供しています。\n\n--- \n\nこのスライド「LLM全盛時代の開発プラクティス」は、特にAIと大規模言語モデル（LLM）を現代のソフトウェア開発プロセスに統合する方法に関心がある方にとって非常に有用です。以下の点でその有用性が特に際立っています：\n\n1. **現実的なAIツールの評価**:\n   - GitHub Copilotや他のAIレビューツール、Figma to Codeのようなツールの実践的な使用例とその限界についての詳細な分析を提供します。これは、これらのツールを日々の開発プロセスに統合しようと考えている開発者にとって役立つ情報です。\n\n2. **実装の具体例と指針**:\n   - AIを効果的に活用するための具体的なステップと考慮事項を提供し、それによってAIの導入を検討する際の実用的なロードマップを提供します。\n\n3. **プロセスの最適化**:\n   - AIツールの適切な使用による作業時間の削減や効率化の具体例を示しており、これは開発時間とリソースの割り当てについて考える際に非常に有用です。\n\n4. **将来の展望と調整**:\n   - AIとLLMの急速な進化に伴う、既存のツールの選択とカスタムツール開発の間のバランスについての洞察を提供します。これは長期的な戦略計画において重要な考慮事項です。\n\n5. **実際のコード例と実装**:\n   - 実際のコーディング規約違反の例とそれを解決するためのAIの使用例を含めており、具体的な事例を通じて理解を深めるのに役立ちます。\n",
-      "image": "https://files.speakerdeck.com/presentations/f82763b7f0bb41989fafc72bdd49c424/slide_0.jpg?27872937",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://canalun-company-2.deno.dev/guest_rooms/brickBlockAnywhere": {
+      "title": "Brick-Block-Anywhere Demo",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://canalun-company-2.deno.dev"
     },
-    "https://speakerdeck.com/wakamsha/hurontoendoriakitekutiyaringutokai-fa-timunosukirutoransuhuaniokeru9keyue-jian-nofen-dou-ji": {
-      "title": "フロントエンドリアーキテクチャリングと開発チームのスキルトランスファーにおける9ヶ月間の奮闘記",
-      "description": "2023年1月から9月にかけて弊社 BtoB web アプリケーションのリアーキテクチャリングプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。",
-      "image": "https://files.speakerdeck.com/presentations/b2a725f76e7c474799125f6c25b3f1f4/slide_0.jpg?27874647",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://docs.google.com/presentation/d/1YVdn5yWHv3vI6sY_c-zo8zcDX2z4Ivpkhj7dJOivNMY/edit#slide=id.g29cfbd0e8bc_2_0": {
+      "title": "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
+      "description": "画面遷移のアクセシビリティ課題を 解決しうるNavigation APIへの期待 JSConfJP 2023 | 2023-11-19 1",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJg9xM9mBUefWCT6tZjc0jz6jttldSW9Ak-iti3ztA5XnfBUhQ9NO8YppYmae072ugFJZMLhRuZW6GgNtprmAuURz7VBAvgXYKUk78It4gNJQ=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
-    "https://azukiazusa.dev/blog/invokers-to-add-interactions-without-javascript/": {
-      "title": "JavaScript なしでインタラクションを追加する Invokers",
-      "description": "Invokers は JavaScript なしでインタラクションを追加するための提案です。`<button>` 要素に `invoketarget` 属性を指定することで、値として指定した id を持つ `<dialog>` などの要素の開閉状態を切り替えることが可能となります。",
-      "image": "https://azukiazusa.dev/blog/ogp/JavaScript%20%E3%81%AA%E3%81%97%E3%81%A7%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E8%BF%BD%E5%8A%A0%E3%81%99%E3%82%8B%20Invokers/HTML.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://azukiazusa.dev"
-    },
-    "https://speakerdeck.com/mugi_uno/next-dot-js-app-router-deno-mpa-hurontoendoshua-xin": {
-      "title": "Next.js App Router での MPA フロントエンド刷新",
-      "description": "JSConf JP 2023",
-      "image": "https://files.speakerdeck.com/presentations/32e120aa3fa94fa7bc3cc1e2480d8e07/slide_0.jpg?27873698",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://jsconf.jp/2023": {
-      "title": "JSConf JP",
-      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
-      "image": "https://jsconf.jp/2023/static/fec934935a8b84b24adead6e9feaea09/logo.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    "https://docs.google.com/presentation/d/1hjs2J4fScWcs42oJ11F9uv1iuSnb_25TEZxyJo6UlLU/edit": {
+      "title": "JSConf2023_vf_en_public",
+      "description": "TEARING DOWN 'BRICK-BREAK-ANYWHERE' JOURNEY INTO THE UNCHARTED TERRITORIES OF DOM SCRIPTING",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJAxpErom9IvhI1gxdBXt1jiYyg9mzf15_UlGVa8wPMM7m8jjJ19MLMvYfFWx3LhRrUwAV8Rz67Tqj0Q5iKHFJAi3ETOAc0oDYWYn3xAX_3DJ8=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.wantedly.dev/": {
       "title": "Wantedly Engineering Handbook - Wantedly Engineering Handbook",
@@ -102,34 +36,46 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.wantedly.dev"
     },
-    "https://speakerdeck.com/kojiota/privacysandboxapiwoshi-tutaburauzashang-denoguang-gao-okusiyon": {
-      "title": "PrivacySandboxAPIを使ったブラウザ上での広告オークション",
-      "description": "多くのブラウザで廃止されつつある3rd party cookieが担っていたユースケースを実現するためにPrivacySandboxというAPI群が実装されています。中でもweb広告のユースケースを実現するために、webブラウザ上で広告オーディションを実行するProtectedAudienceAPIという仕様があります。ブラウザ上での広告オークションの実行はユーザーのPrivacy情報を漏らさないようにauction workletという特殊な環境で実行されますが、auction workletの制約に加えてユーザーのWeb閲覧を妨げない高速なオークションロジックの実行も求められます。\n\n本発表ではauction workletが持つ制約のポイントや、auction worklet環境下で開発/テストを行い、高速にオークションを実行するための方法について説明いたします。\n\n筆者は2022年から株式会社サイバーエージェント(CyberAgent)にてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech blogにてPrivacySandboxの記事を執筆したりしています。",
-      "image": "https://files.speakerdeck.com/presentations/8791df8d97e349bbbdebfb4c70f7dd40/slide_0.jpg?27874959",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://github.com/nkzw-tech/remdx": {
+      "title": "GitHub - nkzw-tech/remdx: Beautiful Minimalist React & MDX Presentations",
+      "description": "Beautiful Minimalist React & MDX Presentations. Contribute to nkzw-tech/remdx development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/1e00c3bbb6bf64785f2fa07e55a0dd4e4a7d9f9e9868ab9e69358435556e676e/nkzw-tech/remdx",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://speakerdeck.com/clown0082/visually-experience-the-beauty-of-mathematics-with-p5-dot-js": {
-      "title": "Visually experience the beauty of mathematics with p5.js",
+    "https://jsconf.jp/2023": {
+      "title": "JSConf JP",
+      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "image": "https://jsconf.jp/2023/static/fec934935a8b84b24adead6e9feaea09/logo.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    },
+    "https://jsconfjp-slide.pages.dev/": {
+      "title": "",
       "description": "",
-      "image": "https://files.speakerdeck.com/presentations/df65bc7cb9a245a9be461c2cfa570c24/slide_0.jpg?27876250",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconfjp-slide.pages.dev"
     },
-    "https://speakerdeck.com/sosukesuzuki/jsconf-jp-2023-supikanoto-shu-itajavascriptgasonomamaburauzadedong-kuwei-lai-he": {
-      "title": "「書いたJavaScriptがそのままブラウザで動く未来へ」スピーカーノート",
-      "description": "2023年11月19日開催された JSConf JP 2023 で発表した「書いたJavaScriptがそのままブラウザで動く未来へ」のスピーカーノートです（スライドに対した情報がないので、スピーカーノートをそのまま公開します）。",
-      "image": "https://files.speakerdeck.com/presentations/b0c2476ac43e4306a0978e66c1191335/slide_0.jpg?27875357",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/hokaccha/modular-monolith-graphql-server-with-node-dot-js": {
-      "title": "Kotlin製のGraphQLサーバーをNode.jsでモジュラモノリス化している話",
+    "https://main--remarkable-figolla-a694f0.netlify.app/1": {
+      "title": "",
       "description": "",
-      "image": "https://files.speakerdeck.com/presentations/c7fcb6b3c15347ddaa32e36acbc7549e/slide_0.jpg?27874729",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://main--remarkable-figolla-a694f0.netlify.app"
+    },
+    "https://onedrive.live.com/view.aspx?resid=D699ACCFCBD51CF5%211028670&authkey=!AGe_JV4mJeVFUBA": {
+      "title": "Microsoft",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://onedrive.live.com"
+    },
+    "https://speakerdeck.com/azukiazusa1/javascript-nasidedong-zuo-surumodannakodonoshu-kifang": {
+      "title": "JavaScript なしで動作するモダンなコードの書き方",
+      "description": "Next.js、Remix、SvelteKit といった近年のフレームワークは、JavaScript がなくても動作することを一つの価値として提供しています。\n\n例えばSvelteKit のフォームではプログレッシブエンハンスメントとして、JavaScript が利用できる環境ではリッチなユーザー体験を提供しつつ、JavaScript が使えない環境においては HTML のフォームとして振る舞うことでアプリケーションの機能を変わらず提供できます。 React Server Component はサーバー側で HTML に変換されるため、クライアントに JavaScript のコードが配信されることはありません。React Server Component では useState() を使用できないといった制約がありますので、我々開発者は React Server Component の利点を十分に発揮するために、JavaScript を用いた状態管理を行う範囲を狭めることが求められています。\n\nこのトークでは、CSS の :has() セレクターや、Popover API といった、従来は JavaScript を用いなければ提供できなかった機能を代替する方法を紹介します。",
+      "image": "https://files.speakerdeck.com/presentations/d13020c55c1245628d228a0131af3af7/slide_0.jpg?27864799",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/smt7174/bun-gameziyaririsusaretakedo-ben-dang-nibun-hanode-dot-js-niqu-tutedai-warunoka-woaws-lambda-dejian-zheng-sitemita": {
-      "title": "Bun がメジャーリリースされたけど、本当にBun はNode.js に取って代わるのか？をAWS Lambda で検証してみた",
-      "description": "2023/11/19(日) に開催された、JSConf JP における私のセッション「Bun がメジャーリリースされたけど、本当にBun はNode.js に取って代わるのか？をAWS Lambda で検証してみた」の発表資料になります。 #jsconfjp\n\nhttps://jsconf.jp/2023/",
-      "image": "https://files.speakerdeck.com/presentations/43fc4d96ac744ec0bae21612ec77a905/slide_0.jpg?27872152",
+    "https://speakerdeck.com/baseballyama/jsconf-jp-2023-llm-da-gui-mo-yan-yu-moderu-quan-sheng-shi-dai-nokai-fa-purakuteisu": {
+      "title": "(JSConf JP 2023) LLM (大規模言語モデル) 全盛時代の開発プラクティス",
+      "description": "このPDFは「LLM全盛時代の開発プラクティス」というタイトルの資料で、baseballyama氏によって作成されました。内容は主に大規模言語モデル（LLM）を活用した開発プラクティスに関するものです。\n\n主な内容は以下の通りです：\n\n1. **GitHub Copilotについて**:\n    - Copilotの利用が増え、コード提案を受け入れてから精査する流れが一般的になった。\n    - インターネット接続がないと利用できないことが難点。\n    - Copilotは開いているファイルを参考にしてコードを提案し、統一されていないコードは提案の精度を低下させる。\n\n2. **AIツールによる効率化**:\n    - AIレビューツールとFigma to Codeツールについて議論。\n    - AIレビューツールは一般的なアドバイスに留まり、具体的な自社ルールに基づいたレビューが求められる。\n    - Figma to Codeでは、自社のデザインシステムに基づいたUIコンポーネントの生成が理想だが、現実では汎用的なコンポーネントが生成される傾向にある。\n\n3. **AIツールの活用法**:\n    - 現実の業務において、AIツールは自社特有のコンテキストを理解する必要があるが、これを達成しているツールは少ない。\n    - AIは新人のように扱うと理解しやすく、プロセスとデータを明確に教える必要がある。\n    - レビューワークフローを言語化し、AIツールに適用して、不足している情報を補う。\n\n4. **LLMの実装と結果**:\n    - コーディングルールに基づき、GitHubのプルリクエスト（PR）に対して指摘や改善案を提案する。\n    - 正しい指摘がある一方で誤った指摘もあり、コーディング規約を日々確認する副次効果がある。\n    - Vue 3コンポーネントの実装では、Figmaとの往復が減り、作業時間が大幅に短縮された。\n\n5. **実装前のプロセス**:\n    - 作業プロセスと必要なデータを言語化し、単純で工数の大きいプロセスを特定する。\n    - 静的検査で自動化できない場合は、GitHub Copilotなどの既存ツールで対処し、必要に応じてLLMを活用する。\n\n6. **サービスの成長と将来的な展望**:\n    - OpenAIを中心としたLLMを使用したサービスの成長が著しい。\n    - 既存製品の活用と、将来的に解決される問題に対しては自作を控えるバランスが必要。\n\n7. **プログラミング実装例**:\n    - Chat GPTに対して具体的な指示と必要なデータを提供し、期待値との差異を確認する。\n    - 指示とデータを修正し、プログラムを実装して運用を開始する。\n    - 具体的なコーディング規約違反の例を挙げ、その理由を詳述する。\n\nこの資料は、AIツールやLLMを活用した開発プラクティスに関する具体的なケーススタディと実装例を提供しており、現代のソフトウェア開発におけるAIの活用方法についての洞察を提供しています。\n\n--- \n\nこのスライド「LLM全盛時代の開発プラクティス」は、特にAIと大規模言語モデル（LLM）を現代のソフトウェア開発プロセスに統合する方法に関心がある方にとって非常に有用です。以下の点でその有用性が特に際立っています：\n\n1. **現実的なAIツールの評価**:\n   - GitHub Copilotや他のAIレビューツール、Figma to Codeのようなツールの実践的な使用例とその限界についての詳細な分析を提供します。これは、これらのツールを日々の開発プロセスに統合しようと考えている開発者にとって役立つ情報です。\n\n2. **実装の具体例と指針**:\n   - AIを効果的に活用するための具体的なステップと考慮事項を提供し、それによってAIの導入を検討する際の実用的なロードマップを提供します。\n\n3. **プロセスの最適化**:\n   - AIツールの適切な使用による作業時間の削減や効率化の具体例を示しており、これは開発時間とリソースの割り当てについて考える際に非常に有用です。\n\n4. **将来の展望と調整**:\n   - AIとLLMの急速な進化に伴う、既存のツールの選択とカスタムツール開発の間のバランスについての洞察を提供します。これは長期的な戦略計画において重要な考慮事項です。\n\n5. **実際のコード例と実装**:\n   - 実際のコーディング規約違反の例とそれを解決するためのAIの使用例を含めており、具体的な事例を通じて理解を深めるのに役立ちます。\n",
+      "image": "https://files.speakerdeck.com/presentations/f82763b7f0bb41989fafc72bdd49c424/slide_0.jpg?27872937",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/chloe463/dezainsisutemushi-qie-rizhi-si": {
@@ -138,10 +84,46 @@
       "image": "https://files.speakerdeck.com/presentations/402a82b169044b868ba09bb192a130d1/slide_0.jpg?27875901",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/clown0082/visually-experience-the-beauty-of-mathematics-with-p5-dot-js": {
+      "title": "Visually experience the beauty of mathematics with p5.js",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/df65bc7cb9a245a9be461c2cfa570c24/slide_0.jpg?27876250",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/hokaccha/modular-monolith-graphql-server-with-node-dot-js": {
+      "title": "Kotlin製のGraphQLサーバーをNode.jsでモジュラモノリス化している話",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/c7fcb6b3c15347ddaa32e36acbc7549e/slide_0.jpg?27874729",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
     "https://speakerdeck.com/kinocoboy2/jsconfjp2023-storybookqu-dong-kai-fa-nozai-xian-xing-toxiao-lu-hua": {
       "title": "JSConfjp2023 Storybook駆動開発の再現性と効率化",
       "description": "#jsconfjp #jsconfjp_d",
       "image": "https://files.speakerdeck.com/presentations/5a63092f1e4a41f2ae61921dc9512e3f/slide_0.jpg?27875448",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kojiota/privacysandboxapiwoshi-tutaburauzashang-denoguang-gao-okusiyon": {
+      "title": "PrivacySandboxAPIを使ったブラウザ上での広告オークション",
+      "description": "多くのブラウザで廃止されつつある3rd party cookieが担っていたユースケースを実現するためにPrivacySandboxというAPI群が実装されています。中でもweb広告のユースケースを実現するために、webブラウザ上で広告オーディションを実行するProtectedAudienceAPIという仕様があります。ブラウザ上での広告オークションの実行はユーザーのPrivacy情報を漏らさないようにauction workletという特殊な環境で実行されますが、auction workletの制約に加えてユーザーのWeb閲覧を妨げない高速なオークションロジックの実行も求められます。\n\n本発表ではauction workletが持つ制約のポイントや、auction worklet環境下で開発/テストを行い、高速にオークションを実行するための方法について説明いたします。\n\n筆者は2022年から株式会社サイバーエージェント(CyberAgent)にてProtectedAudienceAPIを含めたPrivacySandboxの検証を行なっており、PrivacySandboxAPIの議論を行なっているWICGへフィードバックやIssueを提出したり、tech blogにてPrivacySandboxの記事を執筆したりしています。",
+      "image": "https://files.speakerdeck.com/presentations/8791df8d97e349bbbdebfb4c70f7dd40/slide_0.jpg?27874959",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/mugi_uno/next-dot-js-app-router-deno-mpa-hurontoendoshua-xin": {
+      "title": "Next.js App Router での MPA フロントエンド刷新",
+      "description": "JSConf JP 2023",
+      "image": "https://files.speakerdeck.com/presentations/32e120aa3fa94fa7bc3cc1e2480d8e07/slide_0.jpg?27873698",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nissydev/deep-dive-into-biome-in-jsconf-2023": {
+      "title": "Deep dive into Biome in JSConf 2023",
+      "description": "The video included in the slides can be accessed here\nhttps://web.archive.org/web/20230328125908/https://rome.tools/blog/2022/11/08/rome-10/",
+      "image": "https://files.speakerdeck.com/presentations/95da612c83e54ee7a3a55b01af5033cb/slide_0.jpg?27870267",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/poteboy/kuma-uinokoremadetokorekara": {
+      "title": "Kuma UIのこれまでとこれから",
+      "description": "Discover the journey of how someone with no prior OSS experience built this zero-runtime UI component library, the story behind its creation, its evolution, and the future vision for Kuma UI.",
+      "image": "https://files.speakerdeck.com/presentations/c93aca578731436597ed59aee7d49090/slide_0.jpg?27880732",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/sajikix/intlnojin-madetokorekara": {
@@ -150,23 +132,29 @@
       "image": "https://files.speakerdeck.com/presentations/2b8451dc32d64d6c925025b1dd00390a/slide_0.jpg?27874850",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://docs.google.com/presentation/d/1YVdn5yWHv3vI6sY_c-zo8zcDX2z4Ivpkhj7dJOivNMY/edit#slide=id.g29cfbd0e8bc_2_0": {
-      "title": "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
-      "description": "画面遷移のアクセシビリティ課題を 解決しうるNavigation APIへの期待 JSConfJP 2023 | 2023-11-19 1",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJg9xM9mBUefWCT6tZjc0jz6jttldSW9Ak-iti3ztA5XnfBUhQ9NO8YppYmae072ugFJZMLhRuZW6GgNtprmAuURz7VBAvgXYKUk78It4gNJQ=w1200-h630-p",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
-    },
-    "https://speakerdeck.com/azukiazusa1/javascript-nasidedong-zuo-surumodannakodonoshu-kifang": {
-      "title": "JavaScript なしで動作するモダンなコードの書き方",
-      "description": "Next.js、Remix、SvelteKit といった近年のフレームワークは、JavaScript がなくても動作することを一つの価値として提供しています。\n\n例えばSvelteKit のフォームではプログレッシブエンハンスメントとして、JavaScript が利用できる環境ではリッチなユーザー体験を提供しつつ、JavaScript が使えない環境においては HTML のフォームとして振る舞うことでアプリケーションの機能を変わらず提供できます。 React Server Component はサーバー側で HTML に変換されるため、クライアントに JavaScript のコードが配信されることはありません。React Server Component では useState() を使用できないといった制約がありますので、我々開発者は React Server Component の利点を十分に発揮するために、JavaScript を用いた状態管理を行う範囲を狭めることが求められています。\n\nこのトークでは、CSS の :has() セレクターや、Popover API といった、従来は JavaScript を用いなければ提供できなかった機能を代替する方法を紹介します。",
-      "image": "https://files.speakerdeck.com/presentations/d13020c55c1245628d228a0131af3af7/slide_0.jpg?27864799",
+    "https://speakerdeck.com/smt7174/bun-gameziyaririsusaretakedo-ben-dang-nibun-hanode-dot-js-niqu-tutedai-warunoka-woaws-lambda-dejian-zheng-sitemita": {
+      "title": "Bun がメジャーリリースされたけど、本当にBun はNode.js に取って代わるのか？をAWS Lambda で検証してみた",
+      "description": "2023/11/19(日) に開催された、JSConf JP における私のセッション「Bun がメジャーリリースされたけど、本当にBun はNode.js に取って代わるのか？をAWS Lambda で検証してみた」の発表資料になります。 #jsconfjp\n\nhttps://jsconf.jp/2023/",
+      "image": "https://files.speakerdeck.com/presentations/43fc4d96ac744ec0bae21612ec77a905/slide_0.jpg?27872152",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://docs.google.com/presentation/d/1hjs2J4fScWcs42oJ11F9uv1iuSnb_25TEZxyJo6UlLU/edit": {
-      "title": "JSConf2023_vf_en_public",
-      "description": "TEARING DOWN 'BRICK-BREAK-ANYWHERE' JOURNEY INTO THE UNCHARTED TERRITORIES OF DOM SCRIPTING",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJAxpErom9IvhI1gxdBXt1jiYyg9mzf15_UlGVa8wPMM7m8jjJ19MLMvYfFWx3LhRrUwAV8Rz67Tqj0Q5iKHFJAi3ETOAc0oDYWYn3xAX_3DJ8=w1200-h630-p",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    "https://speakerdeck.com/sosukesuzuki/jsconf-jp-2023-supikanoto-shu-itajavascriptgasonomamaburauzadedong-kuwei-lai-he": {
+      "title": "「書いたJavaScriptがそのままブラウザで動く未来へ」スピーカーノート",
+      "description": "2023年11月19日開催された JSConf JP 2023 で発表した「書いたJavaScriptがそのままブラウザで動く未来へ」のスピーカーノートです（スライドに対した情報がないので、スピーカーノートをそのまま公開します）。",
+      "image": "https://files.speakerdeck.com/presentations/b0c2476ac43e4306a0978e66c1191335/slide_0.jpg?27875357",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/twada/second-system-syndrome-a-tale-of-power-assert": {
+      "title": "Second-System Syndrome: A tale of power-assert",
+      "description": "Second-System Syndrome: A tale of power-assert\n#jsconfjp\nhttps://jsconf.jp/2023/",
+      "image": "https://files.speakerdeck.com/presentations/99c17148c5ff4cb6803c02426875a3b0/slide_0.jpg?27877024",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/wakamsha/hurontoendoriakitekutiyaringutokai-fa-timunosukirutoransuhuaniokeru9keyue-jian-nofen-dou-ji": {
+      "title": "フロントエンドリアーキテクチャリングと開発チームのスキルトランスファーにおける9ヶ月間の奮闘記",
+      "description": "2023年1月から9月にかけて弊社 BtoB web アプリケーションのリアーキテクチャリングプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。",
+      "image": "https://files.speakerdeck.com/presentations/b2a725f76e7c474799125f6c25b3f1f4/slide_0.jpg?27874647",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/yusukebe/hono-v3-and-v4": {
       "title": "Hono v3 and v4",
@@ -180,23 +168,11 @@
       "image": "https://cdn.auth0.com/blog/webauthn:card.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://webauthn.me"
     },
-    "https://speakerdeck.com/twada/second-system-syndrome-a-tale-of-power-assert": {
-      "title": "Second-System Syndrome: A tale of power-assert",
-      "description": "Second-System Syndrome: A tale of power-assert\n#jsconfjp\nhttps://jsconf.jp/2023/",
-      "image": "https://files.speakerdeck.com/presentations/99c17148c5ff4cb6803c02426875a3b0/slide_0.jpg?27877024",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/poteboy/kuma-uinokoremadetokorekara": {
-      "title": "Kuma UIのこれまでとこれから",
-      "description": "Discover the journey of how someone with no prior OSS experience built this zero-runtime UI component library, the story behind its creation, its evolution, and the future vision for Kuma UI.",
-      "image": "https://files.speakerdeck.com/presentations/c93aca578731436597ed59aee7d49090/slide_0.jpg?27880732",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://www.wantedly.com/companies/wantedly/post_articles/872375?utm_source=t.co&utm_medium=share&lang=ja": {
-      "title": "【JSConf JP 2023】スポンサートークとしてデザインシステム仕切り直しの話をしました | Wantedly, Inc.",
-      "description": "こんにちは！ウォンテッドリーでエンジニア採用を担当している竹内みずきです。本日はリクルート様の九段下オフィスにてJSConf JP 2023に協賛し、オフライン参加致しました。過去2年間はオンラ...",
-      "image": "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=1200,dh=630,da=s,ds=s,cw=1200,ch=630,cc=FFFFFF)/assets/images/15914864/original/94e4eaa6-5b98-413b-a0ce-2427a4e63502?1700385953",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.wantedly.com"
+    "https://www.docswell.com/s/hireroo/5987RP-2023-11-19-JSConfJP-confidence-boundaries-of-values": {
+      "title": "TypeScriptで型定義を信頼しすぎず「信頼境界線」を設置した話 | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://img.docswell.com/cover/972GLYZR7R.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
     },
     "https://www.npmjs.com/package/@power-assert/esm": {
       "title": "@power-assert/esm",
@@ -209,6 +185,30 @@
       "description": "power-assert SWC plugin. Latest version: 0.1.1, last published: 2 days ago. Start using swc-plugin-power-assert in your project by running `npm i swc-plugin-power-assert`. There are no other projects in the npm registry using swc-plugin-power-assert.",
       "image": "https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
+    },
+    "https://www.wantedly.com/companies/wantedly/post_articles/872375?utm_source=t.co&utm_medium=share&lang=ja": {
+      "title": "【JSConf JP 2023】スポンサートークとしてデザインシステム仕切り直しの話をしました | Wantedly, Inc.",
+      "description": "こんにちは！ウォンテッドリーでエンジニア採用を担当している竹内みずきです。本日はリクルート様の九段下オフィスにてJSConf JP 2023に協賛し、オフライン参加致しました。過去2年間はオンラ...",
+      "image": "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=1200,dh=630,da=s,ds=s,cw=1200,ch=630,cc=FFFFFF)/assets/images/15914864/original/94e4eaa6-5b98-413b-a0ce-2427a4e63502?1700385953",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.wantedly.com"
+    },
+    "https://www.youtube.com/@jsconfjp": {
+      "title": "jsconfjp",
+      "description": "作成した動画を友だち、家族、世界中の人たちと共有",
+      "image": "https://yt3.googleusercontent.com/ytc/APkrFKahiexlyDIaTs1uQMJFEJAju2mA_NQfe69hp_Wr=s900-c-k-c0x00ffffff-no-rj",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://zenn.dev/akfm/articles/next-app-router-navigation": {
+      "title": "Next.js App Router 遷移の仕組みと実装",
+      "description": "",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--bBdmeL2Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Next.js%2520App%2520Router%2520%25E9%2581%25B7%25E7%25A7%25BB%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2581%25A8%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akfm_sato%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzllMzg2MWQ3OGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    },
+    "https://zenn.dev/wakamsha/articles/setup-eslint-plugin-jsdoc": {
+      "title": "ESLint を使って JSDoc / TSDoc の記述を必須化する",
+      "description": "",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--hEBxj8uN--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:ESLint%2520%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6%2520JSDoc%2520%252F%2520TSDoc%2520%25E3%2581%25AE%25E8%25A8%2598%25E8%25BF%25B0%25E3%2582%2592%25E5%25BF%2585%25E9%25A0%2588%25E5%258C%2596%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:wakamsha%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2psYURiOW50NGN1UTUweE54dmxHcW50Rkxsbkg1VThSWUFZOUtBakE9czk2LWM=%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   },
   "2023-11-18-frontend-conf-okinawa-2023.html": {
@@ -218,40 +218,16 @@
       "image": "https://storage.googleapis.com/production-os-assets/assets/0feecf9e-8dac-44cb-b5e4-f604c1e8bb34",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://frontend-conf.okinawa.jp"
     },
-    "https://www.youtube.com/watch?v=EAfjjmxkG9A": {
-      "title": "フロントエンドカンファレンス沖縄2023",
-      "description": "フロントエンドカンファレンス沖縄2023とは？HTML、JavaScript、UI、UX、デザイン、アクセシビリティ、SPAフレームワーク、PWAなどすべてフロントエンドです。 デザイナーもエンジニアも、職種を問わずWebに携わる方が楽しめるイベントとして、さまざまなセッションを見ることができます",
-      "image": "https://i.ytimg.com/vi/EAfjjmxkG9A/maxresdefault.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    },
-    "https://www.docswell.com/s/araya/51JEY8-fec-okinawa-2023": {
-      "title": "Now and Next Generation of CSS Cascading Model | ドクセル",
-      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/LE1MPNR47G.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
-    },
-    "https://www.figma.com/community/widget/1301142159170473003/tag-note": {
-      "title": "Tag Note | Figma Community",
-      "description": "This widget is a simple and easy tool for adding tagged notes.\nBy using this widget, you can intuitively understand the content of the notes.\n\nThe following default tags are provided, available in both English and Japanese, and can be easily selected.\n\n\"Specs\"\"Notes\"\"Update\"\"Review\"\"Confirm\"\n(Mor...",
-      "image": "https://www.figma.com/community/snapshot?resource_id=1301142159170473003&resource_type=widget",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
-    },
-    "https://speakerdeck.com/yahiru/3-debian-warukoto": {
-      "title": "フロントエンドエンジニアも知っておきたい HTTP/3 で変わること",
-      "description": "フロントエンドカンファレンス沖縄 2023 の登壇資料です",
-      "image": "https://files.speakerdeck.com/presentations/8663ea441a8a4ce9904433874e7aabd6/slide_0.jpg?27864037",
+    "https://speakerdeck.com/doggy/expo-router-ha-expo-dao-ru-nojue-meshou-tonaruka-hurontoendokanhuarensuchong-nawa-2023-at-kaito-dogi": {
+      "title": "Expo Router は Expo 導入の決め手となるか フロントエンドカンファレンス沖縄2023 @Kaito-Dogi",
+      "description": "2023/11/18 開催のフロントエンドカンファレンス沖縄2023にて、『Expo Router は Expo 導入の決め手となるか』 というテーマで発表しました。",
+      "image": "https://files.speakerdeck.com/presentations/67598150477041fc827a60fcd112b6c9/slide_0.jpg?27867413",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/yuhei_fujita/frontend-conf-2023": {
-      "title": "進化したWeb技術でPWAをネイティブアプリに近づける / frontend-conf-2023",
-      "description": "フロントエンドカンファレンス沖縄2023の登壇資料です。\n\nhttps://frontend-conf.okinawa.jp/\n\n\nPDF出力の関係で一部レイアウトが崩れてるので、アニメーションありは以下のリンクから表示できます。\n\nhttps://yuheifujita.github.io/frontend-conf-2023/",
-      "image": "https://files.speakerdeck.com/presentations/9b315c47b3f349d9b79ebd4fade67cbb/slide_0.jpg?27863301",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/yud0uhu/2023nian-no-zerorantaimucss-in-js-wokao-eru": {
-      "title": "2023年の ゼロランタイムCSS in JS⚡️ を考える",
-      "description": "フロントエンドカンファレンス沖縄2023のLTスライド資料です\nhttps://frontend-conf.okinawa.jp/",
-      "image": "https://files.speakerdeck.com/presentations/c744daa561dd454aa2f75b78aa0a51af/slide_0.jpg?27863809",
+    "https://speakerdeck.com/iuchimasatoshi/reactmeinnotimuninext-dot-jswodao-ru-sitadao-nori": {
+      "title": "ReactメインのチームにNext.jsを導入した道のり",
+      "description": "2023年11月18日(土) に登壇したフロントエンドカンファレンスの登壇資料となります。\n\nhttps://frontend-conf.okinawa.jp/",
+      "image": "https://files.speakerdeck.com/presentations/4f3047546898480187697f7e2a4d39fc/slide_0.jpg?27864384",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/ivanova1991/yuzadeng-lu-toroguinhuomuniautocompleteshu-xing-woshi-imasiyou": {
@@ -260,10 +236,46 @@
       "image": "https://files.speakerdeck.com/presentations/f54b9966d1f144b9b03179c2bba4ba4a/slide_0.jpg?27867761",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/iuchimasatoshi/reactmeinnotimuninext-dot-jswodao-ru-sitadao-nori": {
-      "title": "ReactメインのチームにNext.jsを導入した道のり",
-      "description": "2023年11月18日(土) に登壇したフロントエンドカンファレンスの登壇資料となります。\n\nhttps://frontend-conf.okinawa.jp/",
-      "image": "https://files.speakerdeck.com/presentations/4f3047546898480187697f7e2a4d39fc/slide_0.jpg?27864384",
+    "https://speakerdeck.com/kazukihayase/graphqlkuraiantonoji-shu-xuan-ding-2023dong": {
+      "title": "GraphQLクライアントの技術選定 2023冬",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/9506e3e4058d4ad09c2ae6251897ed4f/slide_0.jpg?27864828",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kgsi/front-end-thinking-in-event-planning": {
+      "title": "イベント企画設計における「フロントエンド」な考え方とその魅力",
+      "description": "フロントエンドカンファレンス沖縄2023で発表に使用したスライドです。 #front_okinawa\nhttps://frontend-conf.okinawa.jp/",
+      "image": "https://files.speakerdeck.com/presentations/6d4fd22a80404ac883244b495912ce6c/slide_0.jpg?27868447",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/mottox2/nasekohiheteshi-ukonhonentoji-woli-yong-surunoka": {
+      "title": "なぜコピペで使うコンポーネント集を利用するのか？ ",
+      "description": "フロントエンドカンファレンス沖縄2023で発表に使用したスライドです。",
+      "image": "https://files.speakerdeck.com/presentations/d3af3203134e43068406a6fec7257e8c/slide_0.jpg?27867689",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nano72mkn/akusesibiriteiwoli-jie-surutohurontoendonotesutogale-ninaru": {
+      "title": "アクセシビリティを理解するとフロントエンドのテストが楽になる！",
+      "description": "フロントエンドカンファレンス2023 沖縄での登壇資料\nhttps://frontend-conf.okinawa.jp/",
+      "image": "https://files.speakerdeck.com/presentations/5a91d767ff2042959894bd9381297731/slide_0.jpg?27864081",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nikkei_engineer_recruiting/frontend-okinawa": {
+      "title": "FRONTEND CONFERENCE OKINAWA 2023 スポンサーセッション発表スライド/frontend-okinawa",
+      "description": "FRONTEND CONFERENCE OKINAWA 2023 #front_okinawa 日本経済新聞社によるスポンサーセッション発表スライド です。\nタイトルは「日経のエンジニア組織とフロントエンド開発」です\nhttps://frontend-conf.okinawa.jp/\n\nhttps://front-okinawa.connpass.com/event/299738/\n",
+      "image": "https://files.speakerdeck.com/presentations/905cd5938c2246d38a7e16a7954145a9/slide_0.jpg?27864944",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/rdlabo/private-product-frontend": {
+      "title": "プライベートプロダクト戦略 - フロントエンドカンファレンス沖縄 / private_product_frontend",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/c24d2737a2b240fdb756dfcfa2114e37/slide_0.jpg?27864617",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/seike460/creating-with-supabase-and-sveltekit-backend-less-serverless-websites": {
+      "title": "supabaseとSvelteKitで作るバックエンドレスなサーバーレスWebサイト / Creating with supabase and SvelteKit Backend-less serverless websites",
+      "description": "フロントエンドカンファレンス沖縄2023\nhttps://frontend-conf.okinawa.jp",
+      "image": "https://files.speakerdeck.com/presentations/f624e2c957194142a07d3629837ce22b/slide_0.jpg?27867184",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/shinyaigeek/managing-side-effect-in-frontend-development": {
@@ -278,79 +290,49 @@
       "image": "https://files.speakerdeck.com/presentations/a7b580a07aef4799b3526b4b725a6db4/slide_0.jpg?27876565",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/mottox2/nasekohiheteshi-ukonhonentoji-woli-yong-surunoka": {
-      "title": "なぜコピペで使うコンポーネント集を利用するのか？ ",
-      "description": "フロントエンドカンファレンス沖縄2023で発表に使用したスライドです。",
-      "image": "https://files.speakerdeck.com/presentations/d3af3203134e43068406a6fec7257e8c/slide_0.jpg?27867689",
+    "https://speakerdeck.com/yahiru/3-debian-warukoto": {
+      "title": "フロントエンドエンジニアも知っておきたい HTTP/3 で変わること",
+      "description": "フロントエンドカンファレンス沖縄 2023 の登壇資料です",
+      "image": "https://files.speakerdeck.com/presentations/8663ea441a8a4ce9904433874e7aabd6/slide_0.jpg?27864037",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/rdlabo/private-product-frontend": {
-      "title": "プライベートプロダクト戦略 - フロントエンドカンファレンス沖縄 / private_product_frontend",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/c24d2737a2b240fdb756dfcfa2114e37/slide_0.jpg?27864617",
+    "https://speakerdeck.com/yud0uhu/2023nian-no-zerorantaimucss-in-js-wokao-eru": {
+      "title": "2023年の ゼロランタイムCSS in JS⚡️ を考える",
+      "description": "フロントエンドカンファレンス沖縄2023のLTスライド資料です\nhttps://frontend-conf.okinawa.jp/",
+      "image": "https://files.speakerdeck.com/presentations/c744daa561dd454aa2f75b78aa0a51af/slide_0.jpg?27863809",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/nikkei_engineer_recruiting/frontend-okinawa": {
-      "title": "FRONTEND CONFERENCE OKINAWA 2023 スポンサーセッション発表スライド/frontend-okinawa",
-      "description": "FRONTEND CONFERENCE OKINAWA 2023 #front_okinawa 日本経済新聞社によるスポンサーセッション発表スライド です。\nタイトルは「日経のエンジニア組織とフロントエンド開発」です\nhttps://frontend-conf.okinawa.jp/\n\nhttps://front-okinawa.connpass.com/event/299738/\n",
-      "image": "https://files.speakerdeck.com/presentations/905cd5938c2246d38a7e16a7954145a9/slide_0.jpg?27864944",
+    "https://speakerdeck.com/yuhei_fujita/frontend-conf-2023": {
+      "title": "進化したWeb技術でPWAをネイティブアプリに近づける / frontend-conf-2023",
+      "description": "フロントエンドカンファレンス沖縄2023の登壇資料です。\n\nhttps://frontend-conf.okinawa.jp/\n\n\nPDF出力の関係で一部レイアウトが崩れてるので、アニメーションありは以下のリンクから表示できます。\n\nhttps://yuheifujita.github.io/frontend-conf-2023/",
+      "image": "https://files.speakerdeck.com/presentations/9b315c47b3f349d9b79ebd4fade67cbb/slide_0.jpg?27863301",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/kgsi/front-end-thinking-in-event-planning": {
-      "title": "イベント企画設計における「フロントエンド」な考え方とその魅力",
-      "description": "フロントエンドカンファレンス沖縄2023で発表に使用したスライドです。 #front_okinawa\nhttps://frontend-conf.okinawa.jp/",
-      "image": "https://files.speakerdeck.com/presentations/6d4fd22a80404ac883244b495912ce6c/slide_0.jpg?27868447",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://www.docswell.com/s/araya/51JEY8-fec-okinawa-2023": {
+      "title": "Now and Next Generation of CSS Cascading Model | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://img.docswell.com/cover/LE1MPNR47G.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
     },
-    "https://speakerdeck.com/seike460/creating-with-supabase-and-sveltekit-backend-less-serverless-websites": {
-      "title": "supabaseとSvelteKitで作るバックエンドレスなサーバーレスWebサイト / Creating with supabase and SvelteKit Backend-less serverless websites",
-      "description": "フロントエンドカンファレンス沖縄2023\nhttps://frontend-conf.okinawa.jp",
-      "image": "https://files.speakerdeck.com/presentations/f624e2c957194142a07d3629837ce22b/slide_0.jpg?27867184",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://www.figma.com/community/widget/1301142159170473003/tag-note": {
+      "title": "Tag Note | Figma Community",
+      "description": "This widget is a simple and easy tool for adding tagged notes.\nBy using this widget, you can intuitively understand the content of the notes.\n\nThe following default tags are provided, available in both English and Japanese, and can be easily selected.\n\n\"Specs\"\"Notes\"\"Update\"\"Review\"\"Confirm\"\n(Mor...",
+      "image": "https://www.figma.com/community/snapshot?resource_id=1301142159170473003&resource_type=widget",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
     },
-    "https://speakerdeck.com/nano72mkn/akusesibiriteiwoli-jie-surutohurontoendonotesutogale-ninaru": {
-      "title": "アクセシビリティを理解するとフロントエンドのテストが楽になる！",
-      "description": "フロントエンドカンファレンス2023 沖縄での登壇資料\nhttps://frontend-conf.okinawa.jp/",
-      "image": "https://files.speakerdeck.com/presentations/5a91d767ff2042959894bd9381297731/slide_0.jpg?27864081",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/doggy/expo-router-ha-expo-dao-ru-nojue-meshou-tonaruka-hurontoendokanhuarensuchong-nawa-2023-at-kaito-dogi": {
-      "title": "Expo Router は Expo 導入の決め手となるか フロントエンドカンファレンス沖縄2023 @Kaito-Dogi",
-      "description": "2023/11/18 開催のフロントエンドカンファレンス沖縄2023にて、『Expo Router は Expo 導入の決め手となるか』 というテーマで発表しました。",
-      "image": "https://files.speakerdeck.com/presentations/67598150477041fc827a60fcd112b6c9/slide_0.jpg?27867413",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/kazukihayase/graphqlkuraiantonoji-shu-xuan-ding-2023dong": {
-      "title": "GraphQLクライアントの技術選定 2023冬",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/9506e3e4058d4ad09c2ae6251897ed4f/slide_0.jpg?27864828",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://www.youtube.com/watch?v=EAfjjmxkG9A": {
+      "title": "フロントエンドカンファレンス沖縄2023",
+      "description": "フロントエンドカンファレンス沖縄2023とは？HTML、JavaScript、UI、UX、デザイン、アクセシビリティ、SPAフレームワーク、PWAなどすべてフロントエンドです。 デザイナーもエンジニアも、職種を問わずWebに携わる方が楽しめるイベントとして、さまざまなセッションを見ることができます",
+      "image": "https://i.ytimg.com/vi/EAfjjmxkG9A/maxresdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
   "2023-09-23-stylelint-postcss-preset-env.html": {
-    "https://github.com/csstools/postcss-preset-env": {
-      "title": "GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
-      "description": "Convert modern CSS into something browsers understand - GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
-      "image": "https://opengraph.githubassets.com/fb6ad1e955c996ab1c2d3012998f49c7f0ae7c2695961f1485519cd2c94475f5/csstools/postcss-preset-env",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/csstools/postcss-plugins": {
-      "title": "GitHub - csstools/postcss-plugins: PostCSS Tools and Plugins",
-      "description": "PostCSS Tools and Plugins. Contribute to csstools/postcss-plugins development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/cb1a2ca584ee1587d38d0e241f0225dca55a187c51ecd3b8082bd677a15210e9/csstools/postcss-plugins",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
     "https://cssdb.org": {
       "title": "CSS Database",
       "description": "A comprehensive list of CSS features and their positions in the process of becoming implemented web standards.",
       "image": "https://cssdb.org/images/cssdb.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cssdb.org"
-    },
-    "https://preset-env.cssdb.org": {
-      "title": "PostCSS Preset Env - CSSTools",
-      "description": "PostCSS Preset Env lets you transform modern CSS so most browsers can understand, determining the polyfills you need based on the browsers you want.",
-      "image": "https://cssdb.org/images/cssdb.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
     },
     "https://cssdb.org/#the-staging-process": {
       "title": "CSS Database",
@@ -358,11 +340,23 @@
       "image": "https://cssdb.org/images/cssdb.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cssdb.org"
     },
-    "https://stylelint.io/demo": {
-      "title": "Demo | Stylelint",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
+    "https://github.com/csstools/postcss-plugins": {
+      "title": "GitHub - csstools/postcss-plugins: PostCSS Tools and Plugins",
+      "description": "PostCSS Tools and Plugins. Contribute to csstools/postcss-plugins development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/cb1a2ca584ee1587d38d0e241f0225dca55a187c51ecd3b8082bd677a15210e9/csstools/postcss-plugins",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/csstools/postcss-preset-env": {
+      "title": "GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
+      "description": "Convert modern CSS into something browsers understand - GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
+      "image": "https://opengraph.githubassets.com/fb6ad1e955c996ab1c2d3012998f49c7f0ae7c2695961f1485519cd2c94475f5/csstools/postcss-preset-env",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://preset-env.cssdb.org": {
+      "title": "PostCSS Preset Env - CSSTools",
+      "description": "PostCSS Preset Env lets you transform modern CSS so most browsers can understand, determining the polyfills you need based on the browsers you want.",
+      "image": "https://cssdb.org/images/cssdb.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
     },
     "https://preset-env.cssdb.org/features": {
       "title": "Features - PostCSS Preset Env - CSSTools",
@@ -375,116 +369,26 @@
       "description": "Play with PostCSS Preset Env in your browser",
       "image": "https://cssdb.org/images/cssdb.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://preset-env.cssdb.org"
+    },
+    "https://stylelint.io/demo": {
+      "title": "Demo | Stylelint",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stylelint.io"
     }
   },
   "2023-07-30-blog-replace-astro.html": {
-    "https://astro.build": {
-      "title": "Astro",
-      "description": "Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
-      "image": "https://astro.build/og/astro.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
-    },
-    "https://github.com/h-yoshikawa44/change-of-pace-astro": {
-      "title": "GitHub - h-yoshikawa44/change-of-pace-astro: 個人ブログ（2023/07～）",
-      "description": "個人ブログ（2023/07～）. Contribute to h-yoshikawa44/change-of-pace-astro development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/5a8e446b44b30596de2f1e07718c083d71312243221d00510bca0483de6d16bd/h-yoshikawa44/change-of-pace-astro",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/fongandrew/hydeout": {
-      "title": "GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
-      "description": "A refreshed version of Hyde for Jekyll 3.x and 4.x - GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
-      "image": "https://opengraph.githubassets.com/27021fdedb2679280f61087af8a50a4610f18261ccef81f7a08559e67eac975b/fongandrew/hydeout",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://unocss.dev": {
-      "title": "UnoCSS: The instant on-demand Atomic CSS engineGitHubDiscordGitHubDiscordGitHubMastodonDiscordYouTubeTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubMastodonTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitter",
-      "description": "The instant on-demand Atomic CSS engine",
-      "image": "https://unocss.dev/og.png#1",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
-    },
     "https://antfu.me/posts/reimagine-atomic-css": {
       "title": "Reimagine Atomic CSS",
       "description": "Let's take a step back and reimagine what's atomic CSS could be in the best.",
       "image": "https://antfu.me/og/reimagine-atomic-css.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://antfu.me"
     },
-    "https://icones.js.org": {
-      "title": "Icônes",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://icones.js.org"
-    },
-    "https://docs.astro.build/ja/core-concepts/routing/#ページ分割": {
-      "title": "ルーティング",
-      "description": "Astroのルーティングの紹介",
-      "image": "https://docs.astro.build/open-graph/ja/core-concepts/routing.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
-    },
-    "https://unocss.dev/guide/extracting#safelist": {
-      "title": "ExtractingGitHubDiscordGitHubDiscord",
-      "description": "The instant on-demand Atomic CSS engine",
-      "image": "https://unocss.dev/og.png#1",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
-    },
-    "https://github.com/yuru7/HackGen": {
-      "title": "GitHub - yuru7/HackGen: Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen)",
-      "description": "Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen). Contribute to yuru7/HackGen development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/a550276210498ecc9a87b05e95e4bfa76583d5e9d57dd72f4b7177a7bb9d7c43/yuru7/HackGen",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/jekyll/jekyll-paginate": {
-      "title": "GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
-      "description": "NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll - GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
-      "image": "https://opengraph.githubassets.com/a7bab2d4ead97e823e651ffc54057b925488efe2089d1e6abaf4337142301cf6/jekyll/jekyll-paginate",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/sverrirs/jekyll-paginate-v2": {
-      "title": "GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺",
-      "description": "Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺ - GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement f...",
-      "image": "https://opengraph.githubassets.com/f590a8ca88e0fbcad061a2eddbc29f8cad94f25424218d96c18476d0a04fecc5/sverrirs/jekyll-paginate-v2",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/remarkjs/remark-breaks": {
-      "title": "GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
-      "description": "plugin to add break support, without needing spaces - GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
-      "image": "https://opengraph.githubassets.com/fe97d295b8bbce59e988b98dfd3cc64e2ec1414fdb948c0348a627fea392b17a/remarkjs/remark-breaks",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/rehypejs/rehype": {
-      "title": "GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
-      "description": "HTML processor powered by plugins part of the @unifiedjs collective - GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
-      "image": "https://opengraph.githubassets.com/af679721d0eb5bdf41b64b373ca282e0ef98d7b139c191148d351ec844216eed/rehypejs/rehype",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/remarkjs/remark": {
-      "title": "GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
-      "description": "markdown processor powered by plugins part of the @unifiedjs collective - GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
-      "image": "https://opengraph.githubassets.com/d27e58a6d7756ecb97ee358c5c62aab0d6bb89d4697597bb753350e411717f9a/remarkjs/remark",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://shiki.matsu.io": {
-      "title": "Shiki",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shiki.matsu.io"
-    },
-    "https://github.com/rouge-ruby/rouge": {
-      "title": "GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
-      "description": "A pure Ruby code highlighter that is compatible with Pygments - GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
-      "image": "https://opengraph.githubassets.com/accfda5267a21359e478a97d89e54b735ec8f4e5329d62e71a2914e65b0a0135/rouge-ruby/rouge",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://prismjs.com": {
-      "title": "Prism",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prismjs.com"
-    },
-    "https://github.com/mottox2/remark-code-titles": {
-      "title": "GitHub - mottox2/remark-code-titles",
-      "description": "Contribute to mottox2/remark-code-titles development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/fedf80613f39e4ea8c2bdc96ef30d46f168f7c6c7b10547ca86bddca8fd0e2cd/mottox2/remark-code-titles",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    "https://astro.build": {
+      "title": "Astro",
+      "description": "Astro builds fast content sites, powerful web applications, dynamic server APIs, and everything in-between.",
+      "image": "https://astro.build/og/astro.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
     },
     "https://astro.build/blog/images": {
       "title": "Better Images in Astro | Astro",
@@ -492,11 +396,11 @@
       "image": "https://astro.build/_astro/og-image-image-better.fc74c8c7.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
     },
-    "https://hiroppy.me/blog/migrate-blog-from-hatena": {
-      "title": "Astroでサイトを作り直し、ブログをはてなから移管しました - hiroppy's site",
-      "description": "AstroとTailwindでサイト・ブログを再構築しました。この記事ではどのようにブログを移管したのかを紹介します。",
-      "image": "https://hiroppy.me/_astro/me.1abec78a.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hiroppy.me"
+    "https://docs.astro.build/ja/core-concepts/routing/#ページ分割": {
+      "title": "ルーティング",
+      "description": "Astroのルーティングの紹介",
+      "image": "https://docs.astro.build/open-graph/ja/core-concepts/routing.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
     },
     "https://docs.astro.build/ja/guides/integrations-guide/mdx": {
       "title": "@astrojs/mdx",
@@ -504,40 +408,22 @@
       "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/mdx.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
     },
-    "https://shopify.github.io/liquid": {
-      "title": "Liquid template language",
-      "description": "Documentation for the Liquid template language, created by Shopify.",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shopify.github.io"
+    "https://docs.astro.build/ja/guides/integrations-guide/partytown": {
+      "title": "@astrojs/partytown",
+      "description": "Learn how to use the @astrojs/partytown integration in your Astro project.",
+      "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/partytown.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
+    },
+    "https://docs.astro.build/ja/guides/integrations-guide/sitemap": {
+      "title": "@astrojs/sitemap",
+      "description": "Learn how to use the @astrojs/sitemap integration in your Astro project.",
+      "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/sitemap.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
     },
     "https://docs.astro.build/ja/guides/rss": {
       "title": "RSSフィードの追加",
       "description": "AstroサイトにRSSフィードを追加して、ユーザーがコンテンツを購読できるようにします。",
       "image": "https://docs.astro.build/open-graph/ja/guides/rss.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
-    },
-    "https://imguma.com": {
-      "title": "画像圧縮ツール あっしゅくま",
-      "description": "「あっしゅくま」はJPEGやPNGの画像を軽量化するブラウザ上で使えるフリーの画像圧縮ツールです。ローカルで圧縮するためオフラインで通信容量やプライバシーを気にする方にもおすすめ。複数の画像を一括で圧縮・リサイズ。無劣化圧縮、非可逆圧縮などの圧縮の強さの調整も簡単。",
-      "image": "https://storage.googleapis.com/ashkuma.appspot.com/static/images/og_index_ss_simple_440x370.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://imguma.com"
-    },
-    "https://mamenaka.jp/blog/pagespeed-insights-100-astro-blog": {
-      "title": "PageSpeed Insightsでオール100点を取るためにやったこと【Astroブログ】 | mamenaka（マメナカ）",
-      "description": "オール100点を目指す上で特に重要なポイントは、画像周り、CSS、Google Analytics対策など。",
-      "image": "https://mamenaka.jp/images/blog/230430_pagespeed-insights-100-astro-blog/01.webp",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mamenaka.jp"
-    },
-    "https://github.com/ipikuka/remark-flexible-code-titles": {
-      "title": "GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the code blocks with customizable properties",
-      "description": "Remark plugin to add titles or/and containers for the code blocks with customizable properties - GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the ...",
-      "image": "https://opengraph.githubassets.com/1fa519af6ff30861bde7940f81e69239fce0bace3d8a2a52cc904cebfaab8c28/ipikuka/remark-flexible-code-titles",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://docs.astro.build/ja/guides/integrations-guide/partytown": {
-      "title": "@astrojs/partytown",
-      "description": "Learn how to use the @astrojs/partytown integration in your Astro project.",
-      "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/partytown.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
     },
     "https://github.com/allejo/jekyll-anchor-headings": {
@@ -546,22 +432,10 @@
       "image": "https://opengraph.githubassets.com/c26f4cf9ad8cd9a3eb7fb3cd061dd2d22718c0fbfef35d00f873ac2c68e512ac/allejo/jekyll-anchor-headings",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://github.com/zenn-dev/zenn-editor": {
-      "title": "GitHub - zenn-dev/zenn-editor: Convert markdown to html in Zenn format",
-      "description": "Convert markdown to html in Zenn format. Contribute to zenn-dev/zenn-editor development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/bf82018018474ed8fdc0ae85df1d35bc3720cbe536caf5f72cb9f3efe96a5c24/zenn-dev/zenn-editor",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://docs.astro.build/ja/guides/integrations-guide/sitemap": {
-      "title": "@astrojs/sitemap",
-      "description": "Learn how to use the @astrojs/sitemap integration in your Astro project.",
-      "image": "https://docs.astro.build/open-graph/en/guides/integrations-guide/sitemap.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
-    },
-    "https://github.com/rehypejs/rehype-autolink-headings": {
-      "title": "GitHub - rehypejs/rehype-autolink-headings: plugin to add links to headings in HTML",
-      "description": "plugin to add links to headings in HTML. Contribute to rehypejs/rehype-autolink-headings development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/e48f2eb07813ba0e8da45b34eb711b0b1e98d03d70202aa6dc81d3f804b358bc/rehypejs/rehype-autolink-headings",
+    "https://github.com/fongandrew/hydeout": {
+      "title": "GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
+      "description": "A refreshed version of Hyde for Jekyll 3.x and 4.x - GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
+      "image": "https://opengraph.githubassets.com/27021fdedb2679280f61087af8a50a4610f18261ccef81f7a08559e67eac975b/fongandrew/hydeout",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/gladevise/remark-link-card": {
@@ -570,11 +444,107 @@
       "image": "https://opengraph.githubassets.com/6719ac52e57e7167b069b78de00c5ce23d931807a75ebd6e63ace39d2627a623/gladevise/remark-link-card",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
+    "https://github.com/h-yoshikawa44/change-of-pace-astro": {
+      "title": "GitHub - h-yoshikawa44/change-of-pace-astro: 個人ブログ（2023/07～）",
+      "description": "個人ブログ（2023/07～）. Contribute to h-yoshikawa44/change-of-pace-astro development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/5a8e446b44b30596de2f1e07718c083d71312243221d00510bca0483de6d16bd/h-yoshikawa44/change-of-pace-astro",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/ipikuka/remark-flexible-code-titles": {
+      "title": "GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the code blocks with customizable properties",
+      "description": "Remark plugin to add titles or/and containers for the code blocks with customizable properties - GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the ...",
+      "image": "https://opengraph.githubassets.com/1fa519af6ff30861bde7940f81e69239fce0bace3d8a2a52cc904cebfaab8c28/ipikuka/remark-flexible-code-titles",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
     "https://github.com/jekyll/jekyll-feed": {
       "title": "GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts",
       "description": ":memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts - GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts",
       "image": "https://opengraph.githubassets.com/3c8d8799629d17a7837c7d095489e5f9eef521cb98d50fa0f3c6f6f570916038/jekyll/jekyll-feed",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/jekyll/jekyll-paginate": {
+      "title": "GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
+      "description": "NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll - GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
+      "image": "https://opengraph.githubassets.com/a7bab2d4ead97e823e651ffc54057b925488efe2089d1e6abaf4337142301cf6/jekyll/jekyll-paginate",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/jekyll/jekyll-sitemap": {
+      "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
+      "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
+      "image": "https://opengraph.githubassets.com/2224cbccf889d9ae50754cc526b134317ffcfbd2ffd4428ca2cae0ee02485292/jekyll/jekyll-sitemap",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/mottox2/remark-code-titles": {
+      "title": "GitHub - mottox2/remark-code-titles",
+      "description": "Contribute to mottox2/remark-code-titles development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/fedf80613f39e4ea8c2bdc96ef30d46f168f7c6c7b10547ca86bddca8fd0e2cd/mottox2/remark-code-titles",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/rehypejs/rehype": {
+      "title": "GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
+      "description": "HTML processor powered by plugins part of the @unifiedjs collective - GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
+      "image": "https://opengraph.githubassets.com/af679721d0eb5bdf41b64b373ca282e0ef98d7b139c191148d351ec844216eed/rehypejs/rehype",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/rehypejs/rehype-autolink-headings": {
+      "title": "GitHub - rehypejs/rehype-autolink-headings: plugin to add links to headings in HTML",
+      "description": "plugin to add links to headings in HTML. Contribute to rehypejs/rehype-autolink-headings development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/e48f2eb07813ba0e8da45b34eb711b0b1e98d03d70202aa6dc81d3f804b358bc/rehypejs/rehype-autolink-headings",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/remarkjs/remark": {
+      "title": "GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
+      "description": "markdown processor powered by plugins part of the @unifiedjs collective - GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
+      "image": "https://opengraph.githubassets.com/d27e58a6d7756ecb97ee358c5c62aab0d6bb89d4697597bb753350e411717f9a/remarkjs/remark",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/remarkjs/remark-breaks": {
+      "title": "GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
+      "description": "plugin to add break support, without needing spaces - GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
+      "image": "https://opengraph.githubassets.com/fe97d295b8bbce59e988b98dfd3cc64e2ec1414fdb948c0348a627fea392b17a/remarkjs/remark-breaks",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/rouge-ruby/rouge": {
+      "title": "GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
+      "description": "A pure Ruby code highlighter that is compatible with Pygments - GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
+      "image": "https://opengraph.githubassets.com/accfda5267a21359e478a97d89e54b735ec8f4e5329d62e71a2914e65b0a0135/rouge-ruby/rouge",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/sverrirs/jekyll-paginate-v2": {
+      "title": "GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺",
+      "description": "Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺ - GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement f...",
+      "image": "https://opengraph.githubassets.com/f590a8ca88e0fbcad061a2eddbc29f8cad94f25424218d96c18476d0a04fecc5/sverrirs/jekyll-paginate-v2",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/yuru7/HackGen": {
+      "title": "GitHub - yuru7/HackGen: Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen)",
+      "description": "Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen). Contribute to yuru7/HackGen development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/a550276210498ecc9a87b05e95e4bfa76583d5e9d57dd72f4b7177a7bb9d7c43/yuru7/HackGen",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/zenn-dev/zenn-editor": {
+      "title": "GitHub - zenn-dev/zenn-editor: Convert markdown to html in Zenn format",
+      "description": "Convert markdown to html in Zenn format. Contribute to zenn-dev/zenn-editor development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/bf82018018474ed8fdc0ae85df1d35bc3720cbe536caf5f72cb9f3efe96a5c24/zenn-dev/zenn-editor",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://hiroppy.me/blog/migrate-blog-from-hatena": {
+      "title": "Astroでサイトを作り直し、ブログをはてなから移管しました - hiroppy's site",
+      "description": "AstroとTailwindでサイト・ブログを再構築しました。この記事ではどのようにブログを移管したのかを紹介します。",
+      "image": "https://hiroppy.me/_astro/me.1abec78a.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hiroppy.me"
+    },
+    "https://icones.js.org": {
+      "title": "Icônes",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://icones.js.org"
+    },
+    "https://imguma.com": {
+      "title": "画像圧縮ツール あっしゅくま",
+      "description": "「あっしゅくま」はJPEGやPNGの画像を軽量化するブラウザ上で使えるフリーの画像圧縮ツールです。ローカルで圧縮するためオフラインで通信容量やプライバシーを気にする方にもおすすめ。複数の画像を一括で圧縮・リサイズ。無劣化圧縮、非可逆圧縮などの圧縮の強さの調整も簡単。",
+      "image": "https://storage.googleapis.com/ashkuma.appspot.com/static/images/og_index_ss_simple_440x370.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://imguma.com"
     },
     "https://kramdown.gettalong.org": {
       "title": "Home | kramdown",
@@ -588,48 +558,66 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kramdown.gettalong.org"
     },
-    "https://github.com/jekyll/jekyll-sitemap": {
-      "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
-      "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
-      "image": "https://opengraph.githubassets.com/2224cbccf889d9ae50754cc526b134317ffcfbd2ffd4428ca2cae0ee02485292/jekyll/jekyll-sitemap",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    "https://mamenaka.jp/blog/pagespeed-insights-100-astro-blog": {
+      "title": "PageSpeed Insightsでオール100点を取るためにやったこと【Astroブログ】 | mamenaka（マメナカ）",
+      "description": "オール100点を目指す上で特に重要なポイントは、画像周り、CSS、Google Analytics対策など。",
+      "image": "https://mamenaka.jp/images/blog/230430_pagespeed-insights-100-astro-blog/01.webp",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mamenaka.jp"
+    },
+    "https://prismjs.com": {
+      "title": "Prism",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prismjs.com"
+    },
+    "https://shiki.matsu.io": {
+      "title": "Shiki",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shiki.matsu.io"
+    },
+    "https://shopify.github.io/liquid": {
+      "title": "Liquid template language",
+      "description": "Documentation for the Liquid template language, created by Shopify.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shopify.github.io"
+    },
+    "https://unocss.dev": {
+      "title": "UnoCSS: The instant on-demand Atomic CSS engineGitHubDiscordGitHubDiscordGitHubMastodonDiscordYouTubeTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubMastodonTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitter",
+      "description": "The instant on-demand Atomic CSS engine",
+      "image": "https://unocss.dev/og.png#1",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
+    },
+    "https://unocss.dev/guide/extracting#safelist": {
+      "title": "ExtractingGitHubDiscordGitHubDiscord",
+      "description": "The instant on-demand Atomic CSS engine",
+      "image": "https://unocss.dev/og.png#1",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
     }
   },
   "2023-03-25-book-technical-writing-primer.html": {
-    "https://pub.jmam.co.jp/book/b622627.html": {
-      "title": "エンジニアのためのドキュメントライティング - JMAM 日本能率協会マネジメントセンター 「人・組織・経営の変化」を支援するJMAMの書籍",
-      "description": "",
-      "image": "http://pub.jmam.co.jp/images/book/622627.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://pub.jmam.co.jp"
-    },
     "https://developers.google.com/tech-writing": {
       "title": "Technical Writing  |  Google for Developers",
       "description": "Technical Writing Courses for Engineers",
       "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/white.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
-    "https://www.shoeisha.co.jp/book/detail/9784798157191": {
-      "title": "技術者のためのテクニカルライティング入門講座 | 翔泳社",
-      "description": "生産性が向上し、相手に伝わる論理的な技術文書の書き方\n\n日本では、「文書は論理的かつ簡潔に記述する」という、当たり前のテクニックを学ぶ機会があまりありません。\nそこで本書では、忙しい技術者の方でも「テクニカルライティング」を通じて、相手に伝わる技術文書を効率よく\n書けるようになるテクニックを多数紹介していきます。\nユーザーマニュアルや障害報告書、提案書といった実務直結の文例を多数掲載しているので、すぐに業務に役立てることが可能です。\n新人～中堅の技術者の方だけでなく、管理職の方も添削指導のお手本としてご利用いただける内容です。\n\n\n【目次】\n第1章　ロジカルライティング×テクニカルライティング活用の基礎知識\n第2章　わかりやすく、簡潔な文章を書くテクニック\n第3章　読み手に伝わる文章を書くテクニック\n第4章　読みやすさを高める文書フォーマット〜表現・表記のルール〜\n第5章　実践編　ユーザーマニュアル・取扱説明書\n第6章　実践編　提案書\n第7章　実践編　障害報告書\n第8章　実践編　社外メール文",
-      "image": "https://www.shoeisha.co.jp/static/splus/1660/meta/9784798157191.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+    "https://pub.jmam.co.jp/book/b622627.html": {
+      "title": "エンジニアのためのドキュメントライティング - JMAM 日本能率協会マネジメントセンター 「人・組織・経営の変化」を支援するJMAMの書籍",
+      "description": "",
+      "image": "http://pub.jmam.co.jp/images/book/622627.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://pub.jmam.co.jp"
+    },
+    "https://speakerdeck.com/iwashi86/docs-for-developers": {
+      "title": "エンジニアのためのドキュメントライティング / Docs for Developers",
+      "description": "2023年3月17日に開催されたイベント「エンジニアのためのドキュメントライティング - Forkwell Library #19」の登壇資料です。\n\nイベントURL：https://forkwell.connpass.com/event/276576",
+      "image": "https://files.speakerdeck.com/presentations/914d1dd96d804136a1e2ae2dc18f18ad/slide_0.jpg?24920551",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/line_developers/my-story-about-taking-the-technical-writing-exam": {
       "title": "テクニカルライティングの検定を受けてみた話 / \"My Story About Taking the Technical Writing Exam",
       "description": "堀越 良子 / @mochikoAsTech / LINE株式会社 テクニカルライター。元インフラエンジニア。ねこが好き。\n\nテクニカルライティング技術を改めてしっかり学んでみたい！そんな気持ちで「TC技術検定3級」という、テクニカルライティングの資格試験を受けてみました。テクニカルライティングの試験なんてあるの？どんな試験なの？誰でも受けられるの？いつどこでやってるの？受けてよかった？難易度は？受けてみて得たものはあった？などなど、試験の前に私が知りたかった情報をまとめてお届けします。\n\nイベントページ\nhttps://line.connpass.com/event/255452/",
       "image": "https://files.speakerdeck.com/presentations/c09e361903bf4ef48de318abd7707a9d/slide_0.jpg?22267411",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://www.jtca.org/certificate_exam/exam_writing_b.html": {
-      "title": "見つかりません | TC協会　公式サイト",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jtca.org"
-    },
-    "https://speakerdeck.com/naohiro_nakata/technicalwritingfordeveloper": {
-      "title": "技術をわかりやすく伝えるためテクニカルライティング",
-      "description": "技術をわかりやすく伝えるためのテクニックとしての「テクニカルライティング」を学べます。Developers Summit 2023の登壇資料。開発者・エンジニアの方向け。\nhttps://twitter.com/naoh_nak",
-      "image": "https://files.speakerdeck.com/presentations/d0be189ad7454885ad5c99657ad336a2/slide_0.jpg?24445424",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/naohiro_nakata/technicalwriting": {
@@ -638,25 +626,43 @@
       "image": "https://files.speakerdeck.com/presentations/faa63b5c68cc450b878e384181e1b7cd/slide_0.jpg?21597936",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/iwashi86/docs-for-developers": {
-      "title": "エンジニアのためのドキュメントライティング / Docs for Developers",
-      "description": "2023年3月17日に開催されたイベント「エンジニアのためのドキュメントライティング - Forkwell Library #19」の登壇資料です。\n\nイベントURL：https://forkwell.connpass.com/event/276576",
-      "image": "https://files.speakerdeck.com/presentations/914d1dd96d804136a1e2ae2dc18f18ad/slide_0.jpg?24920551",
+    "https://speakerdeck.com/naohiro_nakata/technicalwritingfordeveloper": {
+      "title": "技術をわかりやすく伝えるためテクニカルライティング",
+      "description": "技術をわかりやすく伝えるためのテクニックとしての「テクニカルライティング」を学べます。Developers Summit 2023の登壇資料。開発者・エンジニアの方向け。\nhttps://twitter.com/naoh_nak",
+      "image": "https://files.speakerdeck.com/presentations/d0be189ad7454885ad5c99657ad336a2/slide_0.jpg?24445424",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.jtca.org/certificate_exam/exam_writing_b.html": {
+      "title": "見つかりません | TC協会　公式サイト",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jtca.org"
+    },
+    "https://www.shoeisha.co.jp/book/detail/9784798157191": {
+      "title": "技術者のためのテクニカルライティング入門講座 | 翔泳社",
+      "description": "生産性が向上し、相手に伝わる論理的な技術文書の書き方\n\n日本では、「文書は論理的かつ簡潔に記述する」という、当たり前のテクニックを学ぶ機会があまりありません。\nそこで本書では、忙しい技術者の方でも「テクニカルライティング」を通じて、相手に伝わる技術文書を効率よく\n書けるようになるテクニックを多数紹介していきます。\nユーザーマニュアルや障害報告書、提案書といった実務直結の文例を多数掲載しているので、すぐに業務に役立てることが可能です。\n新人～中堅の技術者の方だけでなく、管理職の方も添削指導のお手本としてご利用いただける内容です。\n\n\n【目次】\n第1章　ロジカルライティング×テクニカルライティング活用の基礎知識\n第2章　わかりやすく、簡潔な文章を書くテクニック\n第3章　読み手に伝わる文章を書くテクニック\n第4章　読みやすさを高める文書フォーマット〜表現・表記のルール〜\n第5章　実践編　ユーザーマニュアル・取扱説明書\n第6章　実践編　提案書\n第7章　実践編　障害報告書\n第8章　実践編　社外メール文",
+      "image": "https://www.shoeisha.co.jp/static/splus/1660/meta/9784798157191.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
     }
   },
   "2023-02-11-developers-summit-2023.html": {
-    "https://miholovesq.hatenablog.com/entry/2023/02/10/185204": {
-      "title": "翻訳した2冊がITエンジニア本大賞2023の特別賞をいただきました🎉 #devsumi #よろヒヒーン #ちいとぽ - ナイスビア珍道記",
-      "description": "www.shoeisha.co.jp Developers Summit 2023との連動企画、ITエンジニア本大賞2023の中で、わたしのプレゼンした『エンジニアリングマネージャーのしごと』が、特別ゲストの小城さんから特別賞をいただきました。 ノミネートされたすべての本にとてもていねいな講評をくださって、わたしが特別ゲストをやったときのことを反省するばかりでしたｗ ブログにある「EMがEMとしてより成長するために、何度も繰り返し読んで考えることができる、EMの強い味方になる本」という評価は、訳者冥利に尽きるものです。 ありがとうございます😊 note.com わたしのプレゼンのアピールポイン…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/m/miholovesq/20230211/20230211003826.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://miholovesq.hatenablog.com"
+    "https://docs.google.com/presentation/d/1CrpdaUslHJ04H6h89MnE6uIknmeinmzup6GvvLNpqAE/edit#slide=id.p": {
+      "title": "DevelopersSummit2023_10-A-6_KohnoFumiya",
+      "description": "有志によって 日本最大級の選挙情報サイトが生まれた物語 Developers Summit 2023 10-A-6 河野 文弥(Kohno Fumiya)",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyI2YM3EiTlvKqb0XmuEGLTs4j3yyuFW7RCAEP8c3vpmgxKjzc4vGosygD2yxmArN2SPwaFKjg5WBz5FH2g6r07VAfRbxM2w84_wrAG1X1Sk-co=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
-    "https://zenn.dev/mixi/articles/fdf9236f86ea29": {
-      "title": "Developers Summit 2023にてパスキーについて講演しました",
+    "https://docs.google.com/presentation/d/1FjF8W8bk9thQYc2_CAfoxY0ECPZYfkxH66gPPpYsFWE/edit#slide=id.gf3aad8cee5_1_1": {
+      "title": "Developers Summit 2023 [9-C-4] 田島将太",
+      "description": "GA4とBigQueryで作る、 データカルチャーを育てるためのデータ分析基盤 Developers Summit [9-C-4] 02/09 13:15 ～ 13:55 ストリーツ株式会社代表取締役CEO 田島将太 https://drive.google.com/drive/u/0/folders/1omaoHenAyuJxXEd38ilXqUWOxEqGTEDZ 1",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLoz_U415qkg3HzgC4qBLofyMyusgOTr0D5vIK2ggMVsDJhxE03ABLKUoAoAOhFRJMrjwGlC0-RBjaLO0vNK4H2s5ItGctyF48V9aC8IOEJdis=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://drive.google.com/file/d/1ZGe_JeLQ7pgK5XEISZmp-CRi65azdWRi/view": {
+      "title": "楽しい競技プログラミングの世界 (公開版).pdf",
       "description": "",
-      "image": "https://res.cloudinary.com/zenn/image/upload/s--dliWWhOx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Developers%2520Summit%25202023%25E3%2581%25AB%25E3%2581%25A6%25E3%2583%2591%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25AC%259B%25E6%25BC%2594%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:MIXI%2520DEVELOPERS%2520NOTE%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:ritou%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UzY2IwNWVmMTMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pRX2Zjd3NJUms2TGFsYm5qQ0hXeldmazdCa1l2WDlYQWtaUDhiOFE9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
     },
     "https://event.shoeisha.jp/devsumi/20230209": {
       "title": "Developers Summit 2023（2023.02.09-10）",
@@ -664,137 +670,17 @@
       "image": "https://event.shoeisha.jp/static/images/event/1408/1200.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
     },
-    "https://www.kzsuzuki.com/entry/devsumi2023": {
-      "title": "#devsumi で「テストを学んでみたい開発者のためのソフトウェアテスト読書マップ」という発表をしてきました。 - ソフトウェアの品質を学びまくる",
-      "description": "Developers Summit (デブサミ) 2023で、「テストを学んでみたい開発者のためのソフトウェアテスト読書マップ」という発表*1をしてきました。 event.shoeisha.jp 資料はこちらです。 speakerdeck.com これまで、ソフトウェアテストとかQAの世界でばかり聴講やら発表やらをしておりまして、その外に出る機会があまりありませんでした。 今回、イベント主催者の翔泳社様から発表の打診をいただき、かなり腰が引けていたのですが、「これを機に、もうちょっと外に目を向けよう」という無理やりな動機付けで場を借りることにしました。 といっても結局発表はテストに関することで…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kz_suzuki/20230209/20230209162759.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.kzsuzuki.com"
-    },
-    "https://speakerdeck.com/grapecity_dev/developers-summit-2023": {
-      "title": "User Not Found - Speaker Deck",
+    "https://fintan.jp/wp-content/uploads/2023/02/developers_summit_20230210_iter.pdf": {
+      "title": "",
       "description": "",
       "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fintan.jp"
     },
-    "https://www.youtube.com/watch?v=sa1ANhHlScs": {
-      "title": "Microsoft のモダンなエンタープライズ Java アプリ開発手法のご紹介 61 [#くらでべ]",
-      "description": "※2023 年 2 月 9 日 ～10 日に開催した株式会社翔泳社 CodeZine 編集部主催の Developers Summit 2023 でマイクロソフトスポンサーセッションにてご紹介したセッション動画です。Microsoft では昨今 Java の開発に対する投資を加速させています。開発環境においては ...",
-      "image": "https://i.ytimg.com/vi/sa1ANhHlScs/maxresdefault.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    },
-    "https://speakerdeck.com/dzeyelid/developers-summit-2023-9-d-1-development-environment": {
-      "title": "developers summit 2023 9-D-1 development environment",
-      "description": "Developers Summit 2023 9-D-1 「もう悩まされない開発環境、プロジェクトで統一した環境をいつでもどこでも」でお話した資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4155/",
-      "image": "https://files.speakerdeck.com/presentations/4491b7c4f1344caaadc65af7ae5404e4/slide_0.jpg?24416282",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://shinyorke.hatenablog.com/entry/devsumi2023": {
-      "title": "仕事も個人開発も周りがドン引きするまでガチでエンジニアをやっていきましょ - デブサミ2023登壇報告 - Lean Baseball",
-      "description": "昨日（2/10）の話ですが, 2020年以来3年ぶりにデブサミに参加・登壇させていただきました（前回の登壇報告はこちら）. 数あるセッションの中から私のトークにお越し頂き, 誠にありがとうございました！ また, 発表練習の機会を頂き, フィードバック・応援を頂いた所属企業*1のチームメイトおよび #pyhack（Python mini Hack-a-thon）の皆様, そして企画から本番まで伴走して頂いたデブサミの運営・スタッフの方々にもこの場を借りて改めて御礼申し上げます🙏 登壇の備忘録を兼ねて, このエントリーでは以下のラインナップを元に, 発表の振り返りと今後の話なんぞ書きたいと思います…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/s/shinyorke/20230211/20230211125620.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shinyorke.hatenablog.com"
-    },
-    "https://speakerdeck.com/tomoima525/metabasuniokerugurobarunotorendotohuo-yong-nozui-qian-xian": {
-      "title": "Web3/メタバースにおけるグローバルのトレンドと活用の最前線",
-      "description": "Devsummit 2023にて Web3/メタバースで起きつつあることや、その根幹となりうるアイデンティティ技術について話しました。\n近年、頻発する情報漏えいやハッキングを受け、“個人情報をどう所有し、他者へ共有するか”という意識が世界的に高まっています。この流れを受け注目を浴びるのが、ブロックチェーンを基盤とする認証フレームワーク「Self-Sovereign Identity」(自己主権型アイデンティティ、SSI)です。セッションではSSIの技術概要やweb3やメタバースにおける活用について紹介します。",
-      "image": "https://files.speakerdeck.com/presentations/02d0345749594b6496c0c6a8e4ef8c31/slide_0.jpg?24412331",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://www.docswell.com/s/Neri78/5L7765-devsumi-2023-2fa": {
-      "title": "9-B-7 結局どれが一番なの？ あなたのユーザーに最適な二要素認証の方法を考える | ドクセル",
-      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/V7P95QXPJ8.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
-    },
-    "https://www.docswell.com/s/ydnjp/KW1E1D-2023-02-13-111059": {
-      "title": "Kubernetesとカスタムコントローラーを活用したプラットフォーム開発・運用の勘所 | ドクセル",
-      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/GJWLVK18E2.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
-    },
-    "https://speakerdeck.com/ritou/pasukihayuzaren-zheng-wo-doubian-erunoka-sonote-zheng-todao-ru-niokeruke-ti-at-devsumi-2023-9-c-1": {
-      "title": "パスキーはユーザー認証を どう変えるのか？その特徴と導入における課題 @ devsumi 2023 9-C-1",
-      "description": "下記講演の資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4146/\n\n下記記事で内容解説を行っていますのでご覧ください。\nhttps://zenn.dev/mixi/articles/fdf9236f86ea29",
-      "image": "https://files.speakerdeck.com/presentations/e5ca8c764c2142c8ac6654cf962c3799/slide_0.jpg?24407138",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/kjstylepp/purodakutotimu-wan-tonatutelin-musohutoueatesutonokan-suo-number-devsumi-number-devsumie": {
-      "title": "プロダクトチーム一丸となって臨むソフトウェアテストの勘所 #devsumi #devsumiE",
-      "description": "Developers Summit 2023の9-E-2セッションにて発表した資料の公開版です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4165/",
-      "image": "https://files.speakerdeck.com/presentations/44bee2b87621448a85b567b2da7af114/slide_0.jpg?24416894",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/i35_267/in-the-end-people-value": {
-      "title": "結局は、人 / In the end, people value ",
-      "description": "2023/2/9 Developers Summit 2023 登壇資料",
-      "image": "https://files.speakerdeck.com/presentations/27dc9feeacdb46da86431eb5e5cc4100/slide_0.jpg?24412960",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/altech/the-architecture-and-technology-for-continuous-services-growth": {
-      "title": "継続的なサービス発展を支えるアーキテクチャと技術 / Developers Summit 2023",
-      "description": "自社サービスにおいてどのようにアーキテクチャと技術を活用するかについて、基本的な考え方をお話ししました。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4133/",
-      "image": "https://files.speakerdeck.com/presentations/42f47fdec814499aa6c3595f75b4baed/slide_0.jpg?26965488",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/overflowinc/ding-liang-ping-jia-pi-bi-simasenka-well-beingtosheng-chan-xing-zhi-biao-wozu-mihe-waseta-enziniaringumetorikusupuroguramunituite": {
-      "title": "定量評価疲弊しませんか？～Well-beingと生産性指標を組み合わせた エンジニアリングメトリクスプログラムについて～",
-      "description": "Developers Summit 2023 登壇資料\nhttps://event.shoeisha.jp/devsumi/20230209/session/4171/\n\noverflowは、副業・転職サービス「Offers(オファーズ)」の開発、運用を行っています。\nサービスの提供を開始してから3年。サービスの拡大に合わせ、組織も比例して成長してきました。\n\nその中で、組織の成長に伴い、どのように生産性指標を開発に取り入れていったか。\n取り入れていった結果、状態把握から逸脱し何が起きたか。そして、その後どのようにして改善していっているかご紹介します。\n\n私達が行ってきたことを例に(反省として)、数値に踊らされずに正しく運用する方法を考えるきっかけになれば幸いです。\n\n▼関連リンク\nOffers：https://offers.jp/\nOffers MGR（オファーズマネージャー）：https://offers-mgr.com/lp\nOffers Tech Blog: https://zenn.dev/offers\nOffersデジタル人材総研：https://hr-lab.offers.jp/\nOffers事例集：https://offers.jp/cases\nOffersお役立ち資料：https://offers.jp/whitepaper\nOffersMagazine：https://offers.jp/media\nOffersJobs：https://offers.jp/jobs\nPodcast：https://anchor.fm/overflowinc/",
-      "image": "https://files.speakerdeck.com/presentations/1c2a6a2211c543e696311ce862be6622/slide_0.jpg?24418366",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/inakam/tatuta1ren-karashi-meteshen-ceng-xue-xi-niyoruniyusuyao-yue-wopurodakutonishi-zhuang-sitafang-fa-huasutopengindeyarikiruli": {
-      "title": "たった1人から始めて深層学習によるニュース要約をプロダクトに実装した方法〜ファーストペンギンでやりきる力〜",
-      "description": "Developers Summit 2023\n9-C-6 02/09 15:05 ～ 15:45\nたった1人から始めて深層学習によるニュース要約をプロダクトに実装した方法～ファーストペンギンでやりきる力～",
-      "image": "https://files.speakerdeck.com/presentations/2567677cbfdb4442a77204cb2141f473/slide_0.jpg?24385855",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/takanabe/developers-summit-2023-evolution-of-software-testing-by-machine-learning": {
-      "title": "[Developers Summit 2023] ソフトウェアテスト新時代の幕開け: 機械学習とデータサイエンスで実現するテスト運用の高度化",
-      "description": "Developers Summit 2023 の公募セッションで発表した資料です。https://event.shoeisha.jp/devsumi/20230209/session/4142/",
-      "image": "https://files.speakerdeck.com/presentations/2037a09e17cf4398ab0006d4fcfea1f9/slide_0.jpg?24408296",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/kazuyaseki/enzinianiosusumeno-figma-huo-yong": {
-      "title": "エンジニアにオススメの Figma 活用",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/2bc7d3a29e114cc8831a53f88aab05dd/slide_0.jpg?24430173",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/natsuyo/yu-er-xiu-ye-zhong-nosukiruatupudousuru": {
-      "title": "育児休業中のスキルアップどうする？",
-      "description": "https://event.shoeisha.jp/devsumi/20230209/session/4185/\n【子育て×エンジニアによるリレーセッション】“育児”をより楽しむために",
-      "image": "https://files.speakerdeck.com/presentations/151178b200954c55a3367daae0b873a9/slide_0.jpg?24432115",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://note.com/ozyozyo/n/nc1648061d881": {
-      "title": "ITエンジニア本大賞2023 大賞候補全部読みました｜小城久美子 / ozyozyo",
-      "description": "翔泳社さんが実施しているITエンジニア本大賞 2023の大賞候補に選ばれた6冊を拝読しました。どれも良い本で特別賞をとても迷ったので、すべての本についておすすめさせてください。ちなみに、私の特別賞は『エンジニアリングマネ－ジャ－のしごと』にさせていただきました。  \n\n\nエンジニアリングマネージャーのしごと ―チームが必要とするマネージャーになる方法\n\n\n\n\n\namzn.asia\n\n \n3,740円\n\n(2023年02月08日 12:40時点\n詳しくはこちら)\n\n \n \n \n \n\nAmazon.co.jpで購入する\n\n \n \n \n\n\n\n\n \n 💻 技術書部門  📕『競技プログラミングの",
-      "image": "https://d2l930y2yx77uc.cloudfront.net/production/social_images/22dc61b1e5ce5c4630e495649cac37dbd6c9e6de.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
-    },
-    "https://speakerdeck.com/tahia910/she-nei-dedekiruakusesibiriteinohazimekata": {
-      "title": "社内でできるアクセシビリティのはじめかた",
-      "description": "Developers Summit 2023 - Day 2 (2023/2/10)\nhttps://event.shoeisha.jp/devsumi/20230209/session/4203/\n\n<a href=\"https://speakerdeck.com/tahia910/she-nei-denoakusesibiriteitui-jin\">DroidKaigi 2022</a>と<a href=\"https://event.shoeisha.jp/devsumi/20221102/session/4036/\">Women Developers Summit 2022</a>で話した内容を更にブラッシュアップしたバージョン\n\n読みにくい場合：\nhttps://docs.google.com/presentation/d/1d4tJhHwbLc0-pphj2umsadd4RB9A_lwKu4m3ON7PubM/",
-      "image": "https://files.speakerdeck.com/presentations/70fc051d41b04c03a302fd75d3476ceb/slide_0.jpg?24439639",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/tomasagi/korahoresiyonkatesutozi-dong-hua-nocheng-fou-wofen-keru": {
-      "title": "コラボレーションがテスト自動化の成否を分ける",
-      "description": "Developers Summit \n10/02/2023 ",
-      "image": "https://files.speakerdeck.com/presentations/6db4389fd2fb4872b39b451f2f6ec711/slide_0.jpg?24432130",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/corocn/debusami2023-yu-xiu-nosu-me": {
-      "title": "育休のすゝめ #devsumi 2023",
-      "description": "Developers Summit 2023 で登壇したときの資料です。\n誤解を生む表現を一部補足修正しております。\n\n内容\n- 日本の育休制度について（主にお金の話）\n- 育休から2年経ってみて感じていること（個人の学び）\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4185/\nhttps://event.shoeisha.jp/devsumi",
-      "image": "https://files.speakerdeck.com/presentations/8f65b2b3286d4dd4bf5b9f6762c9573a/slide_0.jpg?24439839",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/masashi/frontend-security": {
-      "title": "フロントエンド開発のためのセキュリティ入門",
-      "description": "Developers Summit 2023 10-A-4 「フロントエンド開発のためのセキュリティ入門」の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4176/\n\n「HTTPS化」「CORS」「XSS」「脆弱なライブラリのチェック」について説明しています。",
-      "image": "https://files.speakerdeck.com/presentations/98ea5595dd704bf2a804082a7544f93d/slide_0.jpg?24447197",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://miholovesq.hatenablog.com/entry/2023/02/10/185204": {
+      "title": "翻訳した2冊がITエンジニア本大賞2023の特別賞をいただきました🎉 #devsumi #よろヒヒーン #ちいとぽ - ナイスビア珍道記",
+      "description": "www.shoeisha.co.jp Developers Summit 2023との連動企画、ITエンジニア本大賞2023の中で、わたしのプレゼンした『エンジニアリングマネージャーのしごと』が、特別ゲストの小城さんから特別賞をいただきました。 ノミネートされたすべての本にとてもていねいな講評をくださって、わたしが特別ゲストをやったときのことを反省するばかりでしたｗ ブログにある「EMがEMとしてより成長するために、何度も繰り返し読んで考えることができる、EMの強い味方になる本」という評価は、訳者冥利に尽きるものです。 ありがとうございます😊 note.com わたしのプレゼンのアピールポイン…",
+      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/m/miholovesq/20230211/20230211003826.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://miholovesq.hatenablog.com"
     },
     "https://note.com/nemchan_nel/n/n9c69b929973a": {
       "title": "ねむ、「大賞作家」に！ ITエンジニア本大賞2023 ビジネス書部門大賞【メタバース進化論】｜バーチャル美少女ねむ/Nem⚡メタバース文化エバンジェリスト",
@@ -802,64 +688,22 @@
       "image": "https://assets.st-note.com/production/uploads/images/97872044/rectangle_large_type_2_5235aaffc49fde48d1f3d0ffb92729b6.jpeg?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
-    "https://speakerdeck.com/estie/man-wochi-siteshi-merurust": {
-      "title": "満を持して始めるRust",
-      "description": "Developers Summit（デブサミ）\n9-B-9 02/09 17:45 ～ 18:25\n「満を持して始めるRust」kenkoooo\n\nRustはC++の代替となることが期待されていることから、低レイヤ向け言語という印象を持っている方も多いかもしれません。しかし、Rust 1.0のリリースから7年ほど経ち、言語そのものだけでなく周辺のライブラリやツールも充実し、普段遣いのプログラミング言語として快適に開発できる環境が整っています。\n\n本セッションでは、今日からRustで開発をスタートすることを目指し、Rustそのものの紹介だけでなく、実際の開発におけるコードの書き方や、estieでの導入事例をご紹介します。\n",
-      "image": "https://files.speakerdeck.com/presentations/be5bd22434104050a6ead3040944bdb0/slide_0.jpg?24417626",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://note.com/ozyozyo/n/nc1648061d881": {
+      "title": "ITエンジニア本大賞2023 大賞候補全部読みました｜小城久美子 / ozyozyo",
+      "description": "翔泳社さんが実施しているITエンジニア本大賞 2023の大賞候補に選ばれた6冊を拝読しました。どれも良い本で特別賞をとても迷ったので、すべての本についておすすめさせてください。ちなみに、私の特別賞は『エンジニアリングマネ－ジャ－のしごと』にさせていただきました。  \n\n\nエンジニアリングマネージャーのしごと ―チームが必要とするマネージャーになる方法\n\n\n\n\n\namzn.asia\n\n \n3,740円\n\n(2023年02月08日 12:40時点\n詳しくはこちら)\n\n \n \n \n \n\nAmazon.co.jpで購入する\n\n \n \n \n\n\n\n\n \n 💻 技術書部門  📕『競技プログラミングの",
+      "image": "https://d2l930y2yx77uc.cloudfront.net/production/social_images/22dc61b1e5ce5c4630e495649cac37dbd6c9e6de.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
-    "https://speakerdeck.com/minodriven/purpose-abstraction-design": {
-      "title": "目的と抽象化の関係性から分かる、システムの設計精度を高める考え方 / purpose abstraction design",
-      "description": "2023/02/10、デブサミ2023の登壇資料です。\n『目的と抽象化の関係性から分かる、システムの設計精度を高める考え方』\nhttps://event.shoeisha.jp/devsumi/20230209/session/4182/",
-      "image": "https://files.speakerdeck.com/presentations/9bc854dd988f491bb8dcc7c7b2dca4cc/slide_0.jpg?24427247",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://shinyorke.hatenablog.com/entry/devsumi2023": {
+      "title": "仕事も個人開発も周りがドン引きするまでガチでエンジニアをやっていきましょ - デブサミ2023登壇報告 - Lean Baseball",
+      "description": "昨日（2/10）の話ですが, 2020年以来3年ぶりにデブサミに参加・登壇させていただきました（前回の登壇報告はこちら）. 数あるセッションの中から私のトークにお越し頂き, 誠にありがとうございました！ また, 発表練習の機会を頂き, フィードバック・応援を頂いた所属企業*1のチームメイトおよび #pyhack（Python mini Hack-a-thon）の皆様, そして企画から本番まで伴走して頂いたデブサミの運営・スタッフの方々にもこの場を借りて改めて御礼申し上げます🙏 登壇の備忘録を兼ねて, このエントリーでは以下のラインナップを元に, 発表の振り返りと今後の話なんぞ書きたいと思います…",
+      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/s/shinyorke/20230211/20230211125620.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shinyorke.hatenablog.com"
     },
-    "https://speakerdeck.com/recruitengineers/devsumi2023": {
-      "title": "MY WIFE WENT TO USA  妻のアメリカ出張に伴う育児  サバイバルガイド",
-      "description": "「Developers Summit 2023」で2023年2月10日に発表した、高橋陽太郎の資料です。",
-      "image": "https://files.speakerdeck.com/presentations/1d917f9a91304b2491f3394991fde539/slide_0.jpg?24425106",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/storesinc_tech/reasons-why-business-integration-brings-discontinuous-growth-opportunities-for-engineers": {
-      "title": "経営統合がエンジニアに非連続な成長機会をもたらす理由",
-      "description": "デブサミ2023の登壇資料です。\n\nSTORES はいっしょに働くエンジニアを募集しています！\nエンジニア採用情報：https://jobs.st.inc/engineer\nSTORES Product Blog：https://product.st.inc/",
-      "image": "https://files.speakerdeck.com/presentations/623b95f5871f453ea8749844aee308e3/slide_0.jpg?24432770",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/juve534/improve-development-efficiency-with-dmm-platform": {
-      "title": "DMMプラットフォームでプルリクエストのマージ時間を250時間から50時間に減らした話 / Developers Summit 2023",
-      "description": "Developers Summit 2023\nhttps://event.shoeisha.jp/devsumi/20230209/session/4187/",
-      "image": "https://files.speakerdeck.com/presentations/b8b156cfaf4543b09286fb247a8aa988/slide_0.jpg?24436307",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/kaminashi/what-em-did-for-early-startups-to-welcome-cto-and-what-changed-after-welcoming-cto": {
-      "title": "アーリースタートアップがCTOを迎えるために EMがやったこと、CTOを迎えてから変わったこと / What EM did for early startups to welcome CTO, and what changed after welcoming CTO",
-      "description": "2023/02/10　Developers Summit（デブサミ）2023\nアーリースタートアップがCTOを迎えるために EMがやったこと、CTOを迎えてから変わったこと\nhttps://event.shoeisha.jp/devsumi/20230209/session/4200/\n\nソフトウェアエンジニア\n宮本 大嗣\n\n▼カミナシの採用情報はこちら\nhttps://careers.kaminashi.jp/",
-      "image": "https://files.speakerdeck.com/presentations/6b0396e44c774f698ce0dda8eddc3c18/slide_0.jpg?24432068",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/yoshiq/di-yu-ji-shu-komiyuniteinican-jia-sitegan-zita-komiyuniteinoda-qie-satoxin-tanakiyariamu-biao": {
-      "title": "地域技術コミュニティに参加して感じた コミュニティの大切さと新たなキャリア目標",
-      "description": "2023/02/10 Developer Summit 2023 - Day2\n10-A-9: きっかけをつなげよう！コミュニティへの「恩送り」リレーセッション\n\nコロナ禍をきっかけにリモートワークを導入した企業が増え、実際にリモートワークを働き方として選択して都市部から移住する人も増加しました。特に地方でフルリモートワークを選択する場合、人との繋がりや学びの場をどのように持つかを課題に感じる場合があります。発表者がコロナ禍以前より地方でフルリモートワークを行っている経験を通して「地域技術コミュニティ」の存在に助けられ、コミュニティ参加を通して新たなキャリア目標へ取り組んでいることを紹介します。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/",
-      "image": "https://files.speakerdeck.com/presentations/427e9376df4b45508c7230d0f7617b25/slide_0.jpg?24434033",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/naohiro_nakata/technicalwritingfordeveloper": {
-      "title": "技術をわかりやすく伝えるためテクニカルライティング",
-      "description": "技術をわかりやすく伝えるためのテクニックとしての「テクニカルライティング」を学べます。Developers Summit 2023の登壇資料。開発者・エンジニアの方向け。\nhttps://twitter.com/naoh_nak",
-      "image": "https://files.speakerdeck.com/presentations/d0be189ad7454885ad5c99657ad336a2/slide_0.jpg?24445424",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/kakehashi/developers-summit-2023-zhu-shi-hui-she-kakehasi": {
-      "title": "Developers_Summit_2023_株式会社カケハシ.pdf",
-      "description": "",
-      "image": "https://files.speakerdeck.com/presentations/96e9cfef3ca64de4b690f418e2e46d56/slide_0.jpg?24434816",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/shinyorke/serverless-data-platform-and-baseball": {
-      "title": "俺のDXを実現するためのサーバレスなデータ基盤開発と運用 / Serverless Data Platform and Baseball",
-      "description": "Developers Summit 2023登壇資料\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4196/",
-      "image": "https://files.speakerdeck.com/presentations/1836dea580734485ac9d05745a07ee9a/slide_0.jpg?24430942",
+    "https://speakerdeck.com/altech/the-architecture-and-technology-for-continuous-services-growth": {
+      "title": "継続的なサービス発展を支えるアーキテクチャと技術 / Developers Summit 2023",
+      "description": "自社サービスにおいてどのようにアーキテクチャと技術を活用するかについて、基本的な考え方をお話ししました。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4133/",
+      "image": "https://files.speakerdeck.com/presentations/42f47fdec814499aa6c3595f75b4baed/slide_0.jpg?26965488",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/bengo4com/in-search-of-what-the-customer-really-wanted-6627cb55-46d9-4958-9546-35820626d321": {
@@ -868,11 +712,65 @@
       "image": "https://files.speakerdeck.com/presentations/7548780ef03c4ce085cc5548bd1fc384/slide_0.jpg?24524656",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://drive.google.com/file/d/1ZGe_JeLQ7pgK5XEISZmp-CRi65azdWRi/view": {
-      "title": "楽しい競技プログラミングの世界 (公開版).pdf",
+    "https://speakerdeck.com/corocn/debusami2023-yu-xiu-nosu-me": {
+      "title": "育休のすゝめ #devsumi 2023",
+      "description": "Developers Summit 2023 で登壇したときの資料です。\n誤解を生む表現を一部補足修正しております。\n\n内容\n- 日本の育休制度について（主にお金の話）\n- 育休から2年経ってみて感じていること（個人の学び）\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4185/\nhttps://event.shoeisha.jp/devsumi",
+      "image": "https://files.speakerdeck.com/presentations/8f65b2b3286d4dd4bf5b9f6762c9573a/slide_0.jpg?24439839",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/dzeyelid/developers-summit-2023-9-d-1-development-environment": {
+      "title": "developers summit 2023 9-D-1 development environment",
+      "description": "Developers Summit 2023 9-D-1 「もう悩まされない開発環境、プロジェクトで統一した環境をいつでもどこでも」でお話した資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4155/",
+      "image": "https://files.speakerdeck.com/presentations/4491b7c4f1344caaadc65af7ae5404e4/slide_0.jpg?24416282",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/estie/man-wochi-siteshi-merurust": {
+      "title": "満を持して始めるRust",
+      "description": "Developers Summit（デブサミ）\n9-B-9 02/09 17:45 ～ 18:25\n「満を持して始めるRust」kenkoooo\n\nRustはC++の代替となることが期待されていることから、低レイヤ向け言語という印象を持っている方も多いかもしれません。しかし、Rust 1.0のリリースから7年ほど経ち、言語そのものだけでなく周辺のライブラリやツールも充実し、普段遣いのプログラミング言語として快適に開発できる環境が整っています。\n\n本セッションでは、今日からRustで開発をスタートすることを目指し、Rustそのものの紹介だけでなく、実際の開発におけるコードの書き方や、estieでの導入事例をご紹介します。\n",
+      "image": "https://files.speakerdeck.com/presentations/be5bd22434104050a6ead3040944bdb0/slide_0.jpg?24417626",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/grapecity_dev/developers-summit-2023": {
+      "title": "User Not Found - Speaker Deck",
       "description": "",
       "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/i35_267/in-the-end-people-value": {
+      "title": "結局は、人 / In the end, people value ",
+      "description": "2023/2/9 Developers Summit 2023 登壇資料",
+      "image": "https://files.speakerdeck.com/presentations/27dc9feeacdb46da86431eb5e5cc4100/slide_0.jpg?24412960",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ichimichi/community-changes-lives": {
+      "title": "Community changes lives",
+      "description": "Developers Summit 2023 \nきっかけをつなげよう！コミュニティへの「恩送り」リレーセッションでの登壇スライドです\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/\n\nKazushi NAKAMICHI\nTwitter : https://twitter.com/ici_mici",
+      "image": "https://files.speakerdeck.com/presentations/3b499bd2a69142b2b7675ff6537b0ec9/slide_0.jpg?24439787",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/inakam/tatuta1ren-karashi-meteshen-ceng-xue-xi-niyoruniyusuyao-yue-wopurodakutonishi-zhuang-sitafang-fa-huasutopengindeyarikiruli": {
+      "title": "たった1人から始めて深層学習によるニュース要約をプロダクトに実装した方法〜ファーストペンギンでやりきる力〜",
+      "description": "Developers Summit 2023\n9-C-6 02/09 15:05 ～ 15:45\nたった1人から始めて深層学習によるニュース要約をプロダクトに実装した方法～ファーストペンギンでやりきる力～",
+      "image": "https://files.speakerdeck.com/presentations/2567677cbfdb4442a77204cb2141f473/slide_0.jpg?24385855",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/juve534/improve-development-efficiency-with-dmm-platform": {
+      "title": "DMMプラットフォームでプルリクエストのマージ時間を250時間から50時間に減らした話 / Developers Summit 2023",
+      "description": "Developers Summit 2023\nhttps://event.shoeisha.jp/devsumi/20230209/session/4187/",
+      "image": "https://files.speakerdeck.com/presentations/b8b156cfaf4543b09286fb247a8aa988/slide_0.jpg?24436307",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kakehashi/developers-summit-2023-zhu-shi-hui-she-kakehasi": {
+      "title": "Developers_Summit_2023_株式会社カケハシ.pdf",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/96e9cfef3ca64de4b690f418e2e46d56/slide_0.jpg?24434816",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kaminashi/what-em-did-for-early-startups-to-welcome-cto-and-what-changed-after-welcoming-cto": {
+      "title": "アーリースタートアップがCTOを迎えるために EMがやったこと、CTOを迎えてから変わったこと / What EM did for early startups to welcome CTO, and what changed after welcoming CTO",
+      "description": "2023/02/10　Developers Summit（デブサミ）2023\nアーリースタートアップがCTOを迎えるために EMがやったこと、CTOを迎えてから変わったこと\nhttps://event.shoeisha.jp/devsumi/20230209/session/4200/\n\nソフトウェアエンジニア\n宮本 大嗣\n\n▼カミナシの採用情報はこちら\nhttps://careers.kaminashi.jp/",
+      "image": "https://files.speakerdeck.com/presentations/6b0396e44c774f698ce0dda8eddc3c18/slide_0.jpg?24432068",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/kawaguti/how-rsgt-works": {
       "title": "How RSGT Works",
@@ -880,10 +778,130 @@
       "image": "https://files.speakerdeck.com/presentations/fa16fa9ef007493da83fa6897689384a/slide_0.jpg?24407927",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/kazuyaseki/enzinianiosusumeno-figma-huo-yong": {
+      "title": "エンジニアにオススメの Figma 活用",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/2bc7d3a29e114cc8831a53f88aab05dd/slide_0.jpg?24430173",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kjstylepp/purodakutotimu-wan-tonatutelin-musohutoueatesutonokan-suo-number-devsumi-number-devsumie": {
+      "title": "プロダクトチーム一丸となって臨むソフトウェアテストの勘所 #devsumi #devsumiE",
+      "description": "Developers Summit 2023の9-E-2セッションにて発表した資料の公開版です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4165/",
+      "image": "https://files.speakerdeck.com/presentations/44bee2b87621448a85b567b2da7af114/slide_0.jpg?24416894",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/masashi/frontend-security": {
+      "title": "フロントエンド開発のためのセキュリティ入門",
+      "description": "Developers Summit 2023 10-A-4 「フロントエンド開発のためのセキュリティ入門」の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4176/\n\n「HTTPS化」「CORS」「XSS」「脆弱なライブラリのチェック」について説明しています。",
+      "image": "https://files.speakerdeck.com/presentations/98ea5595dd704bf2a804082a7544f93d/slide_0.jpg?24447197",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/minodriven/purpose-abstraction-design": {
+      "title": "目的と抽象化の関係性から分かる、システムの設計精度を高める考え方 / purpose abstraction design",
+      "description": "2023/02/10、デブサミ2023の登壇資料です。\n『目的と抽象化の関係性から分かる、システムの設計精度を高める考え方』\nhttps://event.shoeisha.jp/devsumi/20230209/session/4182/",
+      "image": "https://files.speakerdeck.com/presentations/9bc854dd988f491bb8dcc7c7b2dca4cc/slide_0.jpg?24427247",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/myamashii/contributiontokanhuarensudeng-tan-heno-bei-zhong-woya-siteding-itafang-he": {
+      "title": "Contributionとカンファレンス登壇への背中を押して頂いた方々へ",
+      "description": "Developers Summit 2023 の 「きっかけをつなげよう！コミュニティへの「恩送り」リレーセッション」 の登壇資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/",
+      "image": "https://files.speakerdeck.com/presentations/81867d8c73724be4812f526323f9e799/slide_0.jpg?24443472",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/naohiro_nakata/technicalwritingfordeveloper": {
+      "title": "技術をわかりやすく伝えるためテクニカルライティング",
+      "description": "技術をわかりやすく伝えるためのテクニックとしての「テクニカルライティング」を学べます。Developers Summit 2023の登壇資料。開発者・エンジニアの方向け。\nhttps://twitter.com/naoh_nak",
+      "image": "https://files.speakerdeck.com/presentations/d0be189ad7454885ad5c99657ad336a2/slide_0.jpg?24445424",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/natsuyo/yu-er-xiu-ye-zhong-nosukiruatupudousuru": {
+      "title": "育児休業中のスキルアップどうする？",
+      "description": "https://event.shoeisha.jp/devsumi/20230209/session/4185/\n【子育て×エンジニアによるリレーセッション】“育児”をより楽しむために",
+      "image": "https://files.speakerdeck.com/presentations/151178b200954c55a3367daae0b873a9/slide_0.jpg?24432115",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nozomiito/tesutozi-dong-hua-deqi-ye-sita10nian-to-tesutozi-dong-hua-pu-ji-noli-shi-wozhen-rifan-ru-0003df5c-5998-411f-b8b4-ee8389d6faf5": {
+      "title": "テスト自動化で起業した10年と\u000bテスト自動化普及の歴史を振り返る",
+      "description": "2023.2.10に開催された「Developers Summit 2023」の資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4208/",
+      "image": "https://files.speakerdeck.com/presentations/d00cfeb369f244d0976426b342bbeeeb/slide_0.jpg?24437783",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/odasho/20230210-jin-kososhi-meyoupin-zhi-enziniaringu-tesutozi-dong-hua-deaziyairukai-fa-nobo-nicheng-ru": {
+      "title": "20230210_今こそ始めよう品質エンジニアリング！ ～テスト自動化でアジャイル開発の波に乗る！～",
+      "description": "2023/2/9-2023/2/10 Developers Summit 2023にて登壇した際に使用したスライドです。",
+      "image": "https://files.speakerdeck.com/presentations/ee7e259a01204ec2b2060739fde3add4/slide_0.jpg?24441793",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/overflowinc/ding-liang-ping-jia-pi-bi-simasenka-well-beingtosheng-chan-xing-zhi-biao-wozu-mihe-waseta-enziniaringumetorikusupuroguramunituite": {
+      "title": "定量評価疲弊しませんか？～Well-beingと生産性指標を組み合わせた エンジニアリングメトリクスプログラムについて～",
+      "description": "Developers Summit 2023 登壇資料\nhttps://event.shoeisha.jp/devsumi/20230209/session/4171/\n\noverflowは、副業・転職サービス「Offers(オファーズ)」の開発、運用を行っています。\nサービスの提供を開始してから3年。サービスの拡大に合わせ、組織も比例して成長してきました。\n\nその中で、組織の成長に伴い、どのように生産性指標を開発に取り入れていったか。\n取り入れていった結果、状態把握から逸脱し何が起きたか。そして、その後どのようにして改善していっているかご紹介します。\n\n私達が行ってきたことを例に(反省として)、数値に踊らされずに正しく運用する方法を考えるきっかけになれば幸いです。\n\n▼関連リンク\nOffers：https://offers.jp/\nOffers MGR（オファーズマネージャー）：https://offers-mgr.com/lp\nOffers Tech Blog: https://zenn.dev/offers\nOffersデジタル人材総研：https://hr-lab.offers.jp/\nOffers事例集：https://offers.jp/cases\nOffersお役立ち資料：https://offers.jp/whitepaper\nOffersMagazine：https://offers.jp/media\nOffersJobs：https://offers.jp/jobs\nPodcast：https://anchor.fm/overflowinc/",
+      "image": "https://files.speakerdeck.com/presentations/1c2a6a2211c543e696311ce862be6622/slide_0.jpg?24418366",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/recruitengineers/devsumi2023": {
+      "title": "MY WIFE WENT TO USA  妻のアメリカ出張に伴う育児  サバイバルガイド",
+      "description": "「Developers Summit 2023」で2023年2月10日に発表した、高橋陽太郎の資料です。",
+      "image": "https://files.speakerdeck.com/presentations/1d917f9a91304b2491f3394991fde539/slide_0.jpg?24425106",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ritou/pasukihayuzaren-zheng-wo-doubian-erunoka-sonote-zheng-todao-ru-niokeruke-ti-at-devsumi-2023-9-c-1": {
+      "title": "パスキーはユーザー認証を どう変えるのか？その特徴と導入における課題 @ devsumi 2023 9-C-1",
+      "description": "下記講演の資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4146/\n\n下記記事で内容解説を行っていますのでご覧ください。\nhttps://zenn.dev/mixi/articles/fdf9236f86ea29",
+      "image": "https://files.speakerdeck.com/presentations/e5ca8c764c2142c8ac6654cf962c3799/slide_0.jpg?24407138",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shinyorke/serverless-data-platform-and-baseball": {
+      "title": "俺のDXを実現するためのサーバレスなデータ基盤開発と運用 / Serverless Data Platform and Baseball",
+      "description": "Developers Summit 2023登壇資料\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4196/",
+      "image": "https://files.speakerdeck.com/presentations/1836dea580734485ac9d05745a07ee9a/slide_0.jpg?24430942",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/storesinc_tech/reasons-why-business-integration-brings-discontinuous-growth-opportunities-for-engineers": {
+      "title": "経営統合がエンジニアに非連続な成長機会をもたらす理由",
+      "description": "デブサミ2023の登壇資料です。\n\nSTORES はいっしょに働くエンジニアを募集しています！\nエンジニア採用情報：https://jobs.st.inc/engineer\nSTORES Product Blog：https://product.st.inc/",
+      "image": "https://files.speakerdeck.com/presentations/623b95f5871f453ea8749844aee308e3/slide_0.jpg?24432770",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/tahia910/she-nei-dedekiruakusesibiriteinohazimekata": {
+      "title": "社内でできるアクセシビリティのはじめかた",
+      "description": "Developers Summit 2023 - Day 2 (2023/2/10)\nhttps://event.shoeisha.jp/devsumi/20230209/session/4203/\n\n<a href=\"https://speakerdeck.com/tahia910/she-nei-denoakusesibiriteitui-jin\">DroidKaigi 2022</a>と<a href=\"https://event.shoeisha.jp/devsumi/20221102/session/4036/\">Women Developers Summit 2022</a>で話した内容を更にブラッシュアップしたバージョン\n\n読みにくい場合：\nhttps://docs.google.com/presentation/d/1d4tJhHwbLc0-pphj2umsadd4RB9A_lwKu4m3ON7PubM/",
+      "image": "https://files.speakerdeck.com/presentations/70fc051d41b04c03a302fd75d3476ceb/slide_0.jpg?24439639",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/takanabe/developers-summit-2023-evolution-of-software-testing-by-machine-learning": {
+      "title": "[Developers Summit 2023] ソフトウェアテスト新時代の幕開け: 機械学習とデータサイエンスで実現するテスト運用の高度化",
+      "description": "Developers Summit 2023 の公募セッションで発表した資料です。https://event.shoeisha.jp/devsumi/20230209/session/4142/",
+      "image": "https://files.speakerdeck.com/presentations/2037a09e17cf4398ab0006d4fcfea1f9/slide_0.jpg?24408296",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/tbpgr/engineering-organizational-development": {
+      "title": "組織づくりをエンジニアリングする / Engineering Organizational Development",
+      "description": "2023/02/10 のDevelopers Summit2023の発表\n\nウェブエンジニアから人事・組織領域に転身して3年の私が、エンジニアの手法を組織に転用する方法について紹介します。\n\n# Developers Summit2023イベントページ\nhttps://event.shoeisha.jp/devsumi/20230209/session/4194/",
+      "image": "https://files.speakerdeck.com/presentations/fb63bc68b4e349f0a22c427ca4e82042/slide_0.jpg?24430733",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/tomasagi/korahoresiyonkatesutozi-dong-hua-nocheng-fou-wofen-keru": {
+      "title": "コラボレーションがテスト自動化の成否を分ける",
+      "description": "Developers Summit \n10/02/2023 ",
+      "image": "https://files.speakerdeck.com/presentations/6db4389fd2fb4872b39b451f2f6ec711/slide_0.jpg?24432130",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/tomoima525/metabasuniokerugurobarunotorendotohuo-yong-nozui-qian-xian": {
+      "title": "Web3/メタバースにおけるグローバルのトレンドと活用の最前線",
+      "description": "Devsummit 2023にて Web3/メタバースで起きつつあることや、その根幹となりうるアイデンティティ技術について話しました。\n近年、頻発する情報漏えいやハッキングを受け、“個人情報をどう所有し、他者へ共有するか”という意識が世界的に高まっています。この流れを受け注目を浴びるのが、ブロックチェーンを基盤とする認証フレームワーク「Self-Sovereign Identity」(自己主権型アイデンティティ、SSI)です。セッションではSSIの技術概要やweb3やメタバースにおける活用について紹介します。",
+      "image": "https://files.speakerdeck.com/presentations/02d0345749594b6496c0c6a8e4ef8c31/slide_0.jpg?24412331",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
     "https://speakerdeck.com/tomzoh/hybrid-at-iosdc-japan-and-phperkaigi-76019836-f6e5-421f-b5c2-f250607785f6": {
       "title": "iOSDC Japan, PHPerKaigi とハイブリッド開催 / Hybrid at iOSDC Japan and PHPerKaigi",
       "description": "Developers Summit 2023 の発表資料です。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4154/",
       "image": "https://files.speakerdeck.com/presentations/2d87738848c04383a0bf3bd857969850/slide_0.jpg?24436481",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yoshiq/di-yu-ji-shu-komiyuniteinican-jia-sitegan-zita-komiyuniteinoda-qie-satoxin-tanakiyariamu-biao": {
+      "title": "地域技術コミュニティに参加して感じた コミュニティの大切さと新たなキャリア目標",
+      "description": "2023/02/10 Developer Summit 2023 - Day2\n10-A-9: きっかけをつなげよう！コミュニティへの「恩送り」リレーセッション\n\nコロナ禍をきっかけにリモートワークを導入した企業が増え、実際にリモートワークを働き方として選択して都市部から移住する人も増加しました。特に地方でフルリモートワークを選択する場合、人との繋がりや学びの場をどのように持つかを課題に感じる場合があります。発表者がコロナ禍以前より地方でフルリモートワークを行っている経験を通して「地域技術コミュニティ」の存在に助けられ、コミュニティ参加を通して新たなキャリア目標へ取り組んでいることを紹介します。\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/",
+      "image": "https://files.speakerdeck.com/presentations/427e9376df4b45508c7230d0f7617b25/slide_0.jpg?24434033",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://www.attractor.co.jp/presentation/itbookaward-engineering-manager": {
@@ -898,35 +916,23 @@
       "image": "https://assets.attractor.co.jp/wp-content/uploads/2023/02/20230209-teamtopologies.001.webp",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.attractor.co.jp"
     },
-    "https://speakerdeck.com/myamashii/contributiontokanhuarensudeng-tan-heno-bei-zhong-woya-siteding-itafang-he": {
-      "title": "Contributionとカンファレンス登壇への 背中を押して頂いた方々へ",
-      "description": "Developers Summit 2023 の 「きっかけをつなげよう！コミュニティへの「恩送り」リレーセッション」 の登壇資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/",
-      "image": "https://files.speakerdeck.com/presentations/81867d8c73724be4812f526323f9e799/slide_0.jpg?24443472",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://www.docswell.com/s/Neri78/5L7765-devsumi-2023-2fa": {
+      "title": "9-B-7 結局どれが一番なの？ あなたのユーザーに最適な二要素認証の方法を考える | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://img.docswell.com/cover/V7P95QXPJ8.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
     },
-    "https://speakerdeck.com/ichimichi/community-changes-lives": {
-      "title": "Community changes lives",
-      "description": "Developers Summit 2023 \nきっかけをつなげよう！コミュニティへの「恩送り」リレーセッションでの登壇スライドです\n\nhttps://event.shoeisha.jp/devsumi/20230209/session/4181/\n\nKazushi NAKAMICHI\nTwitter : https://twitter.com/ici_mici",
-      "image": "https://files.speakerdeck.com/presentations/3b499bd2a69142b2b7675ff6537b0ec9/slide_0.jpg?24439787",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://www.docswell.com/s/ydnjp/KW1E1D-2023-02-13-111059": {
+      "title": "Kubernetesとカスタムコントローラーを活用したプラットフォーム開発・運用の勘所 | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://img.docswell.com/cover/GJWLVK18E2.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
     },
-    "https://speakerdeck.com/tbpgr/engineering-organizational-development": {
-      "title": "組織づくりをエンジニアリングする / Engineering Organizational Development",
-      "description": "2023/02/10 のDevelopers Summit2023の発表\n\nウェブエンジニアから人事・組織領域に転身して3年の私が、エンジニアの手法を組織に転用する方法について紹介します。\n\n# Developers Summit2023イベントページ\nhttps://event.shoeisha.jp/devsumi/20230209/session/4194/",
-      "image": "https://files.speakerdeck.com/presentations/fb63bc68b4e349f0a22c427ca4e82042/slide_0.jpg?24430733",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/odasho/20230210-jin-kososhi-meyoupin-zhi-enziniaringu-tesutozi-dong-hua-deaziyairukai-fa-nobo-nicheng-ru": {
-      "title": "20230210_今こそ始めよう品質エンジニアリング！ ～テスト自動化でアジャイル開発の波に乗る！～",
-      "description": "2023/2/9-2023/2/10 Developers Summit 2023にて登壇した際に使用したスライドです。",
-      "image": "https://files.speakerdeck.com/presentations/ee7e259a01204ec2b2060739fde3add4/slide_0.jpg?24441793",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/nozomiito/tesutozi-dong-hua-deqi-ye-sita10nian-to-tesutozi-dong-hua-pu-ji-noli-shi-wozhen-rifan-ru-0003df5c-5998-411f-b8b4-ee8389d6faf5": {
-      "title": "テスト自動化で起業した10年と\u000bテスト自動化普及の歴史を振り返る",
-      "description": "2023.2.10に開催された「Developers Summit 2023」の資料です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4208/",
-      "image": "https://files.speakerdeck.com/presentations/d00cfeb369f244d0976426b342bbeeeb/slide_0.jpg?24437783",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    "https://www.kzsuzuki.com/entry/devsumi2023": {
+      "title": "#devsumi で「テストを学んでみたい開発者のためのソフトウェアテスト読書マップ」という発表をしてきました。 - ソフトウェアの品質を学びまくる",
+      "description": "Developers Summit (デブサミ) 2023で、「テストを学んでみたい開発者のためのソフトウェアテスト読書マップ」という発表*1をしてきました。 event.shoeisha.jp 資料はこちらです。 speakerdeck.com これまで、ソフトウェアテストとかQAの世界でばかり聴講やら発表やらをしておりまして、その外に出る機会があまりありませんでした。 今回、イベント主催者の翔泳社様から発表の打診をいただき、かなり腰が引けていたのですが、「これを機に、もうちょっと外に目を向けよう」という無理やりな動機付けで場を借りることにしました。 といっても結局発表はテストに関することで…",
+      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/k/kz_suzuki/20230209/20230209162759.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.kzsuzuki.com"
     },
     "https://www.slideshare.net/YusukeMori2/4rustdevelopers-summit-2023-10d8": {
       "title": "4年前にRustで新規プロダクトを？！枯れてない技術の採択にまつわるエトセトラ:developers summit 2023 10-d-8",
@@ -934,23 +940,17 @@
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit202310-d-8rev1-230210095555-7fb058ec-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
-    "https://docs.google.com/presentation/d/1CrpdaUslHJ04H6h89MnE6uIknmeinmzup6GvvLNpqAE/edit#slide=id.p": {
-      "title": "DevelopersSummit2023_10-A-6_KohnoFumiya",
-      "description": "有志によって 日本最大級の選挙情報サイトが生まれた物語 Developers Summit 2023 10-A-6 河野 文弥(Kohno Fumiya)",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyI2YM3EiTlvKqb0XmuEGLTs4j3yyuFW7RCAEP8c3vpmgxKjzc4vGosygD2yxmArN2SPwaFKjg5WBz5FH2g6r07VAfRbxM2w84_wrAG1X1Sk-co=w1200-h630-p",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    "https://www.youtube.com/watch?v=sa1ANhHlScs": {
+      "title": "Microsoft のモダンなエンタープライズ Java アプリ開発手法のご紹介 61 [#くらでべ]",
+      "description": "※2023 年 2 月 9 日 ～10 日に開催した株式会社翔泳社 CodeZine 編集部主催の Developers Summit 2023 でマイクロソフトスポンサーセッションにてご紹介したセッション動画です。Microsoft では昨今 Java の開発に対する投資を加速させています。開発環境においては ...",
+      "image": "https://i.ytimg.com/vi/sa1ANhHlScs/maxresdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     },
-    "https://docs.google.com/presentation/d/1FjF8W8bk9thQYc2_CAfoxY0ECPZYfkxH66gPPpYsFWE/edit#slide=id.gf3aad8cee5_1_1": {
-      "title": "Developers Summit 2023 [9-C-4] 田島将太",
-      "description": "GA4とBigQueryで作る、 データカルチャーを育てるためのデータ分析基盤 Developers Summit [9-C-4] 02/09 13:15 ～ 13:55 ストリーツ株式会社代表取締役CEO 田島将太 https://drive.google.com/drive/u/0/folders/1omaoHenAyuJxXEd38ilXqUWOxEqGTEDZ 1",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLoz_U415qkg3HzgC4qBLofyMyusgOTr0D5vIK2ggMVsDJhxE03ABLKUoAoAOhFRJMrjwGlC0-RBjaLO0vNK4H2s5ItGctyF48V9aC8IOEJdis=w1200-h630-p",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
-    },
-    "https://fintan.jp/wp-content/uploads/2023/02/developers_summit_20230210_iter.pdf": {
-      "title": "",
+    "https://zenn.dev/mixi/articles/fdf9236f86ea29": {
+      "title": "Developers Summit 2023にてパスキーについて講演しました",
       "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fintan.jp"
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--dliWWhOx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Developers%2520Summit%25202023%25E3%2581%25AB%25E3%2581%25A6%25E3%2583%2591%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25AC%259B%25E6%25BC%2594%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:MIXI%2520DEVELOPERS%2520NOTE%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:ritou%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UzY2IwNWVmMTMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pRX2Zjd3NJUms2TGFsYm5qQ0hXeldmazdCa1l2WDlYQWtaUDhiOFE9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   }
 }
