@@ -50,7 +50,8 @@ if (ogp[fileName] && ogp[fileName][url]) {
   const html = await fetch(url).then((res) => res.text());
   const $ = load(html);
 
-  title = $("meta[property='og:title']").attr('content') ?? $('title').text();
+  title =
+    $("meta[property='og:title']").attr('content') ?? $('title').text() ?? url;
   description =
     $("meta[property='og:description']").attr('content') ??
     $("meta[name='description']").attr('content') ??
