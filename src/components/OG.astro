@@ -23,7 +23,7 @@ const { url } = Astro.props;
 const generatedFilePath = new URL(
   `../../generated/ogp/${postYear}.json`,
   // astro は build 時に自身ではなく dist/entry.mjs に向けてしまいエラーになるので指定する
-  import.meta.url
+  import.meta.url,
 );
 
 const ogp: OGPJson = JSON.parse(readFileSync(generatedFilePath, 'utf8'));
@@ -70,8 +70,8 @@ if (ogp[url]) {
           },
         },
         null,
-        2
-      )
+        2,
+      ),
     );
   }
 }

@@ -22,7 +22,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 
   return CATEGORY_LIST.flatMap((category) => {
     const filteredPosts = allPosts.filter(
-      (post) => post.data.category === category
+      (post) => post.data.category === category,
     );
     return paginate(filteredPosts, {
       params: { category },

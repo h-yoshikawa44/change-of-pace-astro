@@ -6,6 +6,6 @@ const GOOGLE_ADSENSE_PUBLISHER_ID =
 
 export const GET: APIRoute = async () => {
   return new Response(
-    `google.com, ${GOOGLE_ADSENSE_PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`
+    `google.com, ${GOOGLE_ADSENSE_PUBLISHER_ID}, DIRECT, f08c47fec0942fa0`,
   );
 };
