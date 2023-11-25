@@ -113,7 +113,9 @@ import {
   QueryClientProvider,
 } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
+
 const queryClient = new QueryClient()
+
 export default function App() {
   return (
     <QueryClientProvider client={queryClient}>
@@ -121,6 +123,7 @@ export default function App() {
     </QueryClientProvider>
   )
 }
+
 function Example() {
   const queryClient = useQueryClient()
   const [text, setText] = React.useState('')
@@ -128,7 +131,8 @@ function Example() {
     const res = await axios.get('/api/data')
     return res.data
   })
-  const addTodoMutation = useMutation(
+
+const addTodoMutation = useMutation(
     text => axios.post('/api/data', { text }),
     {
       // Optimistically update the cache value on mutate, but store
@@ -153,6 +157,7 @@ function Example() {
       },
     }
   )
+
   return (
     <div>
       <p>
@@ -197,6 +202,7 @@ function Example() {
   )
 }
 ```
+
 `useMutation`に対して、以下を渡しています。
 - 第1引数：データ更新の関数
 - 第2引数：オプションのオブジェクト
