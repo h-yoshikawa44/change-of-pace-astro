@@ -1,20 +1,22 @@
 {
-  "https://qiita.com/yamatmoo/items/b9e8035c55032de88084": {
-    "title": "UbuntuにPHP7の環境をつくる - Qiita",
-    "description": "お仕事でLaravelを使いそうなので、しれっとPHPの環境を整備したときの作業メモ。\n\n\nリポジトリ追加\n\n$ sudo add-apt-repository ppa:ondrej/php\n$ sudo apt update\n\n\n\n...",
-    "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZ0eHQ9VWJ1bnR1JUUzJTgxJUFCUEhQNyVFMyU4MSVBRSVFNyU5MiVCMCVFNSVBMiU4MyVFMyU4MiU5MiVFMyU4MSVBNCVFMyU4MSU4RiVFMyU4MiU4QiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YTg5NTQwOWRiMjUzMmUxNzBhMzljNTE1ZjgyOWNhMjM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQweWFtYXRtb28mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTEwODM0ZjUyNTVhOTM5MzUwN2FkNjNhYzBhY2MyZjg5&blend-x=142&blend-y=491&blend-mode=normal&s=a501a53a581be6d60698d57ce453d96e",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
-  },
-  "https://php-tips.com/2018/04/13/homebrew-php-is-dead/": {
-    "title": "homebrew/php が死んでた",
-    "description": "Homebrew/homebrew-php: ? Homebrew/php (deprecated&…",
-    "image": "https://s0.wp.com/i/blank.jpg",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://php-tips.com"
-  },
-  "https://github.com/phpbrew/phpbrew/blob/master/README.ja.md": {
-    "title": "phpbrew/README.ja.md at master · phpbrew/phpbrew",
-    "description": "Brew & manage PHP versions in pure PHP at HOME. Contribute to phpbrew/phpbrew development by creating an account on GitHub.",
-    "image": "https://opengraph.githubassets.com/7f477dfd87ce34ef33ec95b5db7e3d4dbca60170e0a26311baa756835219d462/phpbrew/phpbrew",
-    "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+  "2018-06-05-php-install": {
+    "https://github.com/phpbrew/phpbrew": {
+      "title": "GitHub - phpbrew/phpbrew: Brew & manage PHP versions in pure PHP at HOME",
+      "description": "Brew & manage PHP versions in pure PHP at HOME. Contribute to phpbrew/phpbrew development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/a0ba8e7b6ee7f35d8c61820c409468715f8c6c8f9ea22955005c3e642c5e4f87/phpbrew/phpbrew",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://php-tips.com/2018/04/13/homebrew-php-is-dead/": {
+      "title": "homebrew/php が死んでた",
+      "description": "Homebrew/homebrew-php: ? Homebrew/php (deprecated&…",
+      "image": "https://s0.wp.com/i/blank.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://php-tips.com"
+    },
+    "https://qiita.com/yamatmoo/items/b9e8035c55032de88084": {
+      "title": "UbuntuにPHP7の環境をつくる - Qiita",
+      "description": "お仕事でLaravelを使いそうなので、しれっとPHPの環境を整備したときの作業メモ。リポジトリ追加 sudo…",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9VWJ1bnR1JUUzJTgxJUFCUEhQNyVFMyU4MSVBRSVFNyU5MiVCMCVFNSVBMiU4MyVFMyU4MiU5MiVFMyU4MSVBNCVFMyU4MSU4RiVFMyU4MiU4QiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MDkzMjlhMDc2Y2FiZjAzZDk3Y2Y1NmNkYmM4YTI5NjQ&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQweWFtYXRtb28mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTEwODM0ZjUyNTVhOTM5MzUwN2FkNjNhYzBhY2MyZjg5&blend-x=142&blend-y=491&blend-mode=normal&s=cdd20eef66c76ed369bada0cbbeb62bd",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    }
   }
 }

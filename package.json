@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && npm run ogp-sort",
     "preview": "astro preview",
     "astro": "astro",
+    "ogp-sort": "node generated/ogp/ogp-sort.mjs",
     "lint-check": "npm run lint:eslint && npm run lint:stylelint && npm run check:prettier",
     "lint:eslint": "eslint \"./src/**/*.{js,jsx,ts,tsx,astro}\"",
     "lint:stylelint": "stylelint \"./src/**/*.scss\"",
