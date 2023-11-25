@@ -2,6 +2,17 @@
 Change Of Pace の機能の大まかな変化の記録。
 記事投稿・更新は含まない。
 
+## v5.2.0（2023-11-23）
+### Updated
+- 各種アプデ(#134)
+  - TypeScript: 5.0.4 -> 5.2.2
+  - Node.js: 18.15.0 -> 20.9.0
+  - Astro: 3.0.7 -> 3.5.5
+  - UnoCSS: 0.56.1 -> 0.57.6
+
+### Development Changed
+- OGP キャッシュの仕組みを改善して差分がわかりやすいようにした(#136)
+
 ## v5.1.2（2023-10-14）
 ### Development Changed
 - 独自ドメインを Google Domains から Cloudflare Registrar に移管(#123)
