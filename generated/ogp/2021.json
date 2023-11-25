@@ -72,7 +72,7 @@
     },
     "https://discord.com/invite/3R6vFeM": {
       "title": "Join the devchallenges.io Discord Server!",
-      "description": "Discuss devChallenges, help with challenges, showcase your solutions, or hang out and have fun. | 6984 members",
+      "description": "Discuss devChallenges, help with challenges, showcase your solutions, or hang out and have fun. | 6986 members",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://discord.com"
     },
@@ -115,7 +115,7 @@
     "https://github.com/okonet/lint-staged": {
       "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run linters on git staged files",
       "description": "🚫💩 — Run linters on git staged files. Contribute to lint-staged/lint-staged development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/06bfd82fa49008f69a2518a08b2076c663578e84ac9d056241f741f5475c3985/lint-staged/lint-staged",
+      "image": "https://opengraph.githubassets.com/799e620e9ed5927d806e5f78fcb249ea79cd7e752baa7a3a9d426ec12cfd84f8/lint-staged/lint-staged",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/rbren/rss-parser": {
@@ -127,7 +127,7 @@
     "https://github.com/toplenboren/simple-git-hooks": {
       "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
       "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/6ddff1bad85d69025e9ab273d60c70293ed567e0dd757d882938f7a42b5edba2/toplenboren/simple-git-hooks",
+      "image": "https://opengraph.githubassets.com/5e438b6c9ff493b74046eaef6ccdf9916ef90ddf99617368e2a0f0970466a919/toplenboren/simple-git-hooks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/typestyle/csx": {
@@ -477,7 +477,7 @@
   },
   "2021-11-09-volta": {
     "https://asdf-vm.com": {
-      "title": "asdf | asdfGitHubGitHub",
+      "title": "asdf | GitHub",
       "description": "Manage multiple runtime versions with a single CLI tool",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://asdf-vm.com"
@@ -567,13 +567,13 @@
     "https://github.com/cssinjs/jss": {
       "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
       "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "image": "https://opengraph.githubassets.com/dd72d2e7687f161670e151c7e8921fa3d7fe5f815a1ef22a2f6c506c67cfe5ad/cssinjs/jss",
+      "image": "https://opengraph.githubassets.com/0ff889e4d008b9f6684858c9e6b91fe118f5b233603255d9bbdaa07589485119/cssinjs/jss",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/emotion-js/emotion": {
       "title": "GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
       "description": "👩‍🎤 CSS-in-JS library designed for high performance style composition - GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
-      "image": "https://opengraph.githubassets.com/5954dcdbb2f2e860af7c1ff0cded6b5ec2f5d6d137a8eae38c1624cc7fc0b4c6/emotion-js/emotion",
+      "image": "https://opengraph.githubassets.com/e740168f9cfc952742f3736fd2884a530ca97b198d8b8a5ca55a3e473dc578c1/emotion-js/emotion",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui-org/material-ui": {
@@ -606,17 +606,17 @@
       "image": "https://opengraph.githubassets.com/be9e39782968414398d65b80770966744eaeda2fe708e2a8d0defccdcebdb5ca/mui/material-ui/issues/6218",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
+    "https://github.com/mui/material-ui-pickers": {
+      "title": "GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
+      "description": "Date & Time pickers for Material UI (support from v1 to v4) - GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
+      "image": "https://repository-images.githubusercontent.com/106125229/81d0cb00-7036-11e9-90b1-1128202ec858",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
     "https://github.com/styled-components/styled-components": {
       "title": "GitHub - styled-components/styled-components: Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅",
       "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 - GitHub - styled-components/styled-components: Visual primitives for the component age...",
       "image": "https://repository-images.githubusercontent.com/65794292/bdacfa80-6132-11e9-90b9-33e6eee04d1f",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://material-ui-pickers.dev": {
-      "title": "Attention Required! | Cloudflare",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://material-ui-pickers.dev"
     },
     "https://mui.com/blog/material-ui-is-now-mui": {
       "title": "Material-UI, the organization, is now MUI! - MUI",
@@ -793,11 +793,11 @@
     "https://github.com/laravel/socialite": {
       "title": "GitHub - laravel/socialite: Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
       "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries. - GitHub - laravel/socialite: Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
-      "image": "https://opengraph.githubassets.com/dbe7823f76d148a50de16db6a49287b72b4b36bb31c7445cc332ff160c786120/laravel/socialite",
+      "image": "https://opengraph.githubassets.com/d19a9b23ddcc005dd9d097a3f702e971644b90e2c97630092ed8ea1a9838b6a9/laravel/socialite",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226": {
-      "title": "",
+      "title": "https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
@@ -835,7 +835,7 @@
   },
   "2021-04-13-react-query-intersection-observer": {
     "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/load-more-infinite-scroll": {
-      "title": "",
+      "title": "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/load-more-infinite-scroll",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
@@ -867,7 +867,7 @@
   },
   "2021-03-21-laravel-react-query-auth": {
     "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript": {
-      "title": "",
+      "title": "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
@@ -1094,12 +1094,6 @@
       "title": "「スピード」と「品質」のスイッチング ～事業成長を支える生存戦略～ #devsumi / 20210218C1",
       "description": "Developers Summit 2021【C-1】の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218\n\n----------------------------------------------------------------------------------------------------\n\nメルペイでは「ベンチャーとしてのスピード」と「FinTech領域としての品\n質」の両立が求められています。\n\n目の前のビジネスチャンスに対して、システム開発が追いつかない。この悩みと向き合い、私たちが辿り着いたのは「スピード」と「品質」のスイッチングです。\n\n「1.ツール活用によるスピード優先」と「2.システム開発による品質重視」をフェーズごとに使い分けることで、事業成長を支えてきました。\n\n本セッションでは、ビジネスとエンジニアリングの両立に挑戦し続ける人たちに向けて、その事例と学びを紹介します。\n\n----------------------------------------------------------------------------------------------------\n\n【補足1】\n共同発表者が同じスライドをアップロードしたときは、URLを掲載します。\nxxxxx\n\n【補足2】\n登壇時のスライドとテイストを一部変更しています。\n・Google slides と SpeakerDeck の相性が悪いためフォントを調整しました。\n・個人的な好みでカラーリングに手を加えました。",
       "image": "https://files.speakerdeck.com/presentations/db1d15d8c3df4ce09729300bab9e1e45/slide_0.jpg?17387267",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/zak3/a-simple-strategy-management-in-a-data-team": {
-      "title": "Deck Not Found - Speaker Deck",
-      "description": "",
-      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://takaking22.com/2021/continuous-teaming": {

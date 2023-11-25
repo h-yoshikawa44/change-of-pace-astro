@@ -85,13 +85,13 @@
     "https://docs.google.com/presentation/d/1PEvXoQDTLAoZIQmFl_scq84ZnKhLHjeQuOZ45NSruXI/edit": {
       "title": "オプショナルチェーンができるまで　〜仕様と実装〜",
       "description": "オプショナルチェーンができるまで 〜仕様と実装〜 Ross Kirsling ロス・カースリング",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKMf-eE-eussidb0KAFYpeUzzM2jvodPP2Fgo9Re_jGeR9Pyi3OeC1AnIHVzzTYKNXrBj1XyfuhFImRMCXXMrRSQM-69vQudTAt-rfmQjygMw=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKfTIr8b7jNWM0BfTi1NWir6qm2tJzh_MTNeN-hZCpf9Kitn2Jo1AeU4oJIchArEPRHoJzFJnMF3njQtM9iCnLD6gyBFWO0QrXYsQFdn5T2kg=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/1ZxLH48-HVYUNfU--Byeweyu3Tzho3F7caNghGsBFkyw/edit#slide=id.p": {
       "title": "ECMAScript仕様書を誰でも読めるようにする技術を求めて",
       "description": "ECMAScript仕様書を 誰でも読めるようにする 技術を求めて yebis0942 JSConf.jp 2022",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyI2SEXldvsXGLrw6GTKFzUR_0jpf_jX_qGaVO8XcnHxt55ivBmBAOEsW0sNwRF1s7tw6ENWvfM1ssLjUgKqOJVNgzo2PsDiLwHy5v5epx7dfJA=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKihaVkX5JgjFHBTZueBUxM8Y8zKbTvuzIdjUD_-GsrxRzdYTg0QvMfTEp7kADvUomAJrHeVPuozJmpBi5xYShJM0lKRCfkbo8mblZNK0agnFA=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/1rXzTVLYx1Idh46IGY51RTLBp-6TH43wmzulj3njd_5I/edit": {
@@ -309,7 +309,7 @@
     "https://github.com/toplenboren/simple-git-hooks": {
       "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
       "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/6ddff1bad85d69025e9ab273d60c70293ed567e0dd757d882938f7a42b5edba2/toplenboren/simple-git-hooks",
+      "image": "https://opengraph.githubassets.com/5e438b6c9ff493b74046eaef6ccdf9916ef90ddf99617368e2a0f0970466a919/toplenboren/simple-git-hooks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://qiita.com/harasakih/items/868a850fcdc99a2c37b0": {
@@ -325,7 +325,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.mobilefactory.jp"
     },
     "https://typicode.github.io/husky": {
-      "title": "🐶 husky | 🐶 huskyGitHubGitHub",
+      "title": "🐶 husky | GitHub",
       "description": "Git hooks made easy",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://typicode.github.io"
@@ -376,11 +376,11 @@
       "image": "https://html5exam.jp/images/common/ogp.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://html5exam.jp"
     },
-    "https://ping-t.com": {
+    "https://mondai.ping-t.com/g": {
       "title": "Ping-t",
-      "description": "AWS��CCNA/CCNP��LinuC��LPIC��Linux Essentials��HTML5��OSS-DB��IT�ѥ��ݡ��ȡ����饯��ޥ�������ITIL�λ��ʤ��ܻؤ��ͤ���礹��ؽ������ȡ���Ͽ�桼��25���͡ˤǤ���\n\n�桼����Ͽ�򤹤�ȡ�̵����CCNA WEB���꽸��600��ʾ�ˤ�LPIC Lv1���꽸(500��ʾ�/ǧ�궵��)��Oracle Master Bronze SQL����(��400��)��IT�ѥ��ݡ��Ȳ�����600��ˡ��ؽ������������礤�ե������ʤɤ����ѤǤ���褦�ˤʤ�ޤ���",
-      "image": "http://ping-t.com/themes/Cube/images/logo3.gif",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ping-t.com"
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mondai.ping-t.com/g"
     },
     "https://www.borndigital.co.jp/book/25999.html": {
       "title": "HTML解体新書",
@@ -411,7 +411,7 @@
     "https://docs.google.com/presentation/d/10DgkEdZYXDdJ_zmxyAJXq6lyY4F3nUnbWK4XzzBuhi8/edit": {
       "title": "Flutter上級者を目指そう",
       "description": "Flutter上級者を目指そう @kikuchy",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKbfCjTM4np-k57WfmWsGKDRA98qmx1g9ngbrR5Oz--5FJI96wIlFqttZj4WYzK5E87NvrhMKNaHtRJZXiLs_r4j0m5xop0SvRweMGFb0XE=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLx3125hK2Usr-fE446RDeY0MWM6juxtAHiQjXS5lqAWOk5xNXnyKNBbCztJqYPhiTFzznk3E6SC5IZDkaU_6_RlC4tJ0VPzbhYhvzlCp0s=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/18GuL65ZlXQ587u7hYNxzXnQaGLarEcR2SGG3n0wBbUg/edit": {
@@ -475,7 +475,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://drive.google.com"
     },
     "https://keens.github.io/pdf/tfcon.pdf": {
-      "title": "",
+      "title": "https://keens.github.io/pdf/tfcon.pdf",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://keens.github.io"
@@ -713,13 +713,13 @@
     "https://github.com/okonet/lint-staged": {
       "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run linters on git staged files",
       "description": "🚫💩 — Run linters on git staged files. Contribute to lint-staged/lint-staged development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/06bfd82fa49008f69a2518a08b2076c663578e84ac9d056241f741f5475c3985/lint-staged/lint-staged",
+      "image": "https://opengraph.githubassets.com/799e620e9ed5927d806e5f78fcb249ea79cd7e752baa7a3a9d426ec12cfd84f8/lint-staged/lint-staged",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/sindresorhus/ky": {
       "title": "GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API",
       "description": "🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API - GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API",
-      "image": "https://opengraph.githubassets.com/200e749fe6b355088836960d1a967f19c7a804ecd2246d5dc5979b6aad467a4a/sindresorhus/ky",
+      "image": "https://opengraph.githubassets.com/54b701dd2c26cd0b6c9368eff023cff5cf0d44a269a42f2bd6913dacd9a0dfd2/sindresorhus/ky",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/sindresorhus/ky-universal": {
@@ -731,7 +731,7 @@
     "https://github.com/toplenboren/simple-git-hooks": {
       "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
       "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/6ddff1bad85d69025e9ab273d60c70293ed567e0dd757d882938f7a42b5edba2/toplenboren/simple-git-hooks",
+      "image": "https://opengraph.githubassets.com/5e438b6c9ff493b74046eaef6ccdf9916ef90ddf99617368e2a0f0970466a919/toplenboren/simple-git-hooks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/typestyle/csx": {
@@ -895,7 +895,7 @@
     "https://docs.google.com/presentation/d/1Uf4cHQArt67yVFmY-CBHhh44dpGjDCZA51OQ4JunSRY/edit": {
       "title": "開発チームみんなで取り組むアクセシビリティ",
       "description": "開発チームみんなで取り組む アクセシビリティ 2022.02.17 Developers Summit 2022 17-E-4 ymrl",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyImeskHdF-_XslhTSEFCPcZGW4W7rryPx6ZlvTf-UpmpW0jSqrJuzunIwCTVfcQ8XBaWPS6CFlZAeB1Wesm-Z1YExgpKOJhLjYc6Es09j7AfvE=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJ2LOUlKKHE10i1R12RDYzDuQUBrbkUmASAu_sH0Bx29vxlLN2tS4O8KRER_b_Eb3SPu0rA1hYmESMu9FIQy-31VjwpVDYfZYcqCVTwcGtsChw=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/1mG8ygkT422LrFvt0HfZ2RIL2MhKUFc88I3LmUdMVbiA/edit#slide=id.p": {
@@ -983,7 +983,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://shintosei.metro.tokyo.lg.jp/wp-content/uploads/2022/02/usertestgideline01.pdf": {
-      "title": "",
+      "title": "https://shintosei.metro.tokyo.lg.jp/wp-content/uploads/2022/02/usertestgideline01.pdf",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shintosei.metro.tokyo.lg.jp"
@@ -1251,7 +1251,7 @@
     "https://github.com/colinhacks/zod": {
       "title": "GitHub - colinhacks/zod: TypeScript-first schema validation with static type inference",
       "description": "TypeScript-first schema validation with static type inference - GitHub - colinhacks/zod: TypeScript-first schema validation with static type inference",
-      "image": "https://opengraph.githubassets.com/259764beb3fbe2ae66638fc6f8711de13876d5bf94962495409f9cd0923c92ee/colinhacks/zod",
+      "image": "https://opengraph.githubassets.com/eb0af7b4c01e5af43775aca93b9f11d73e6d043ce0f391ed66bdd574d22bb3a1/colinhacks/zod",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/type-safe-request": {

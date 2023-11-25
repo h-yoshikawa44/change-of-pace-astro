@@ -33,7 +33,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/README.md": {
-      "title": "",
+      "title": "https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/README.md",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
@@ -124,34 +124,22 @@
     }
   },
   "2019-12-15-serverless-days-fukuoka-2019": {
-    "https://dev.classmethod.jp/cloud/aws/serverlessdays-2019keynote-aws": {
-      "title": "404 | DevelopersIO",
-      "description": "",
-      "image": "",
+    "https://dev.classmethod.jp/articles/serverless-testing-using-typescript-and-jest/": {
+      "title": "【登壇資料】ServerlessDays Fukuoka 2019 で TypeScriprt と Jest を使ったサーバーレステストの話をしました #serverlessdays #serverlessfukuoka | DevelopersIO",
+      "description": "登壇資料 私を含む、サーバーレスデベロッパーの皆様にテストコードをどんどん書いていってほしくて登壇しました。 ServerlessDays Fukuoka 2019 とは 2019年12月14日（土）LINE 福岡にて、 …",
+      "image": "https://devio2023-media.developers.io/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
     },
-    "https://dev.classmethod.jp/etc/serverlessdays-fukuoka-2019-developersio-cafe": {
-      "title": "404 | DevelopersIO",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-    },
-    "https://dev.classmethod.jp/etc/serverlessdaysfukuoka-metsuburikensyoult": {
-      "title": "404 | DevelopersIO",
-      "description": "",
-      "image": "",
+    "https://dev.classmethod.jp/articles/serverlessdaysfukuoka-metsuburikensyoult/": {
+      "title": "ServerlessDays福岡で目瞑りを検証したLTをしてきました。  #serverlessdays #serverlessfukuoka | DevelopersIO",
+      "description": "大阪オフィスでインターンをしている、たいがーです。実は、今日インターン最終日でした！ 実際の案件にアサインさせていただきながら、最後の1か月間を過ごしました。もっとしっかり勉強しようと思った2ヶ月間でした。 さて、話は変 …",
+      "image": "https://devio2023-media.developers.io/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
     },
     "https://dev.classmethod.jp/event/serverless-days-fukuoka-2019-session-report/#toc-serverless": {
       "title": "Serverless Days Fukuoka 2019に行ってきたよ！ #ServerlessDays | DevelopersIO",
       "description": "ServerlessDays Fukuoka2019 がLINE Fukuokaで開催されたので行ってきました！ どーん！ KubeCon2019 NAから見るk8s × serverlessの現状 Speaker: W …",
       "image": "https://devio2023-media.developers.io/wp-content/uploads/2019/12/serverlessdays_fukuoka_logo.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
-    },
-    "https://dev.classmethod.jp/server-side/serverless/serverless-testing-using-typescript-and-jest": {
-      "title": "404 | DevelopersIO",
-      "description": "",
-      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://dev.classmethod.jp"
     },
     "https://fukuoka.serverlessdays.io": {
@@ -196,12 +184,6 @@
       "image": "https://files.speakerdeck.com/presentations/6a0b55cdc2be46519d96fb02de15cfa6/slide_0.jpg?14465187",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/moririn772/rubyonjets-with-aws-for-research": {
-      "title": "User Not Found - Speaker Deck",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
     "https://speakerdeck.com/shimpeiws/talk-about-serverless-other-than-application": {
       "title": "サーバーレスでAPIを提供する際のアプリケーション\"以外\"の話 / Talk about Serverless Other than Application",
       "description": "ServerlessDays Fukuoka 2019",
@@ -235,7 +217,7 @@
   },
   "2019-11-30-hp-repair": {
     "https://flexlinkjp.flex.com/externalweb/#/repairStatusSearch": {
-      "title": "",
+      "title": "https://flexlinkjp.flex.com/externalweb/#/repairStatusSearch",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://flexlinkjp.flex.com"
@@ -287,12 +269,6 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
     },
     "https://eslint.org/docs/latest/use/configure/": {
-      "title": "Configure ESLint - ESLint - Pluggable JavaScript Linter",
-      "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
-      "image": "https://eslint.org/og?title=Configure%20ESLint&summary=A%20pluggable%20and%20configurable%20linter%20tool%20for%20identifying%20and%20reporting%20on%20patterns%20in%20JavaScript.%20Maintain%20your%20code%20quality%20with%20ease.%0A&is_rule=false&recommended=&fixable=&suggestions=",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
-    },
-    "https://eslint.org/docs/user-guide/configuring": {
       "title": "Configure ESLint - ESLint - Pluggable JavaScript Linter",
       "description": "A pluggable and configurable linter tool for identifying and reporting on patterns in JavaScript. Maintain your code quality with ease.\n",
       "image": "https://eslint.org/og?title=Configure%20ESLint&summary=A%20pluggable%20and%20configurable%20linter%20tool%20for%20identifying%20and%20reporting%20on%20patterns%20in%20JavaScript.%20Maintain%20your%20code%20quality%20with%20ease.%0A&is_rule=false&recommended=&fixable=&suggestions=",
@@ -364,7 +340,7 @@
     },
     "https://support.google.com/adsense/answer/7532444?hl=ja": {
       "title": "ads.txt に関するガイド - Google AdSense ヘルプ",
-      "description": "ads.txt による認定デジタル販売者（Authorized Digital Sellers）の宣言は IAB Tech Lab によるイニシアチブで、コンテンツ内のデジタル広告枠が、そのコンテンツのパブリッシャーが認定した販売者（AdSense など）を通してのみ販売されるようにするものです。パブリッシャー様は ads.txt を独自に作成することで、自サイトの広告枠の販売者を厳密に管理し、偽",
+      "description": "ads.txt による認定デジタル販売者（Authorized Digital Sellers）の宣言は IAB Tech Lab によるイニシアチブで、コンテンツ内のデジタル広告枠が、そのコンテ ",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.google.com"
     },
@@ -436,10 +412,10 @@
     }
   },
   "2019-09-26-wsl-develop": {
-    "https://brew.sh/index_ja": {
-      "title": "Page not found · GitHub Pages",
-      "description": "",
-      "image": "",
+    "https://brew.sh/ja/": {
+      "title": "Homebrew",
+      "description": "The Missing Package Manager for macOS (or Linux).",
+      "image": "https://brew.sh/assets/img/homebrew-social-card.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://brew.sh"
     },
     "https://forest.watch.impress.co.jp/docs/news/1170221.html": {
@@ -535,7 +511,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
     },
     "https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/": {
-      "title": "",
+      "title": "https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
@@ -605,7 +581,7 @@
     "https://www.udemy.com/course/docker-k": {
       "title": "ゼロからはじめる Dockerによるアプリケーション実行環境構築",
       "description": "コンテナの実行方法を学び、Ruby on RailsやDjangoといったWebアプリケーションフレームワークを使用した環境構築について学びます。Docker MachineやSwarmといったDocker関連技術についても学びます。",
-      "image": "https://img-c.udemycdn.com/course/480x270/1401310_1c83_3.jpg",
+      "image": "https://img-b.udemycdn.com/course/480x270/1401310_1c83_3.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.udemy.com"
     }
   },

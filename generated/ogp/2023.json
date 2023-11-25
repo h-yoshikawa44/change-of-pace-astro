@@ -49,13 +49,13 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
     },
     "https://jsconfjp-slide.pages.dev/": {
-      "title": "",
+      "title": "https://jsconfjp-slide.pages.dev/",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconfjp-slide.pages.dev"
     },
     "https://main--remarkable-figolla-a694f0.netlify.app/1": {
-      "title": "",
+      "title": "https://main--remarkable-figolla-a694f0.netlify.app/1",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://main--remarkable-figolla-a694f0.netlify.app"
@@ -483,7 +483,7 @@
     "https://github.com/rehypejs/rehype": {
       "title": "GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
       "description": "HTML processor powered by plugins part of the @unifiedjs collective - GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
-      "image": "https://opengraph.githubassets.com/af679721d0eb5bdf41b64b373ca282e0ef98d7b139c191148d351ec844216eed/rehypejs/rehype",
+      "image": "https://opengraph.githubassets.com/6113dc61b938a331768ee4d61a27535569dd7709c5ec0aa85fc5966be4d19831/rehypejs/rehype",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/rehypejs/rehype-autolink-headings": {
@@ -495,7 +495,7 @@
     "https://github.com/remarkjs/remark": {
       "title": "GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
       "description": "markdown processor powered by plugins part of the @unifiedjs collective - GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
-      "image": "https://opengraph.githubassets.com/d27e58a6d7756ecb97ee358c5c62aab0d6bb89d4697597bb753350e411717f9a/remarkjs/remark",
+      "image": "https://opengraph.githubassets.com/f001d298febafacf21aa20b713b1c5e809271981fe19df27ea2018c7fab88a94/remarkjs/remark",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/remarkjs/remark-breaks": {
@@ -519,7 +519,7 @@
     "https://github.com/yuru7/HackGen": {
       "title": "GitHub - yuru7/HackGen: Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen)",
       "description": "Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen). Contribute to yuru7/HackGen development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/a550276210498ecc9a87b05e95e4bfa76583d5e9d57dd72f4b7177a7bb9d7c43/yuru7/HackGen",
+      "image": "https://opengraph.githubassets.com/5e54657473c1f43ceb3639971fff57a20075fe887275e588bf1f9693a5fdcc6c/yuru7/HackGen",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/zenn-dev/zenn-editor": {
@@ -602,6 +602,12 @@
       "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/white.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
+    "https://jtca.org/learn-tc/certificate-exam/": {
+      "title": "TC技術検定とは - TC協会 公式サイト",
+      "description": "TC技術検定とは TC協会では、テクニカルコミュニケーション技術の到達度を全国規模の統一的な基準で検定し、技術",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jtca.org"
+    },
     "https://pub.jmam.co.jp/book/b622627.html": {
       "title": "エンジニアのためのドキュメントライティング - JMAM 日本能率協会マネジメントセンター 「人・組織・経営の変化」を支援するJMAMの書籍",
       "description": "",
@@ -632,12 +638,6 @@
       "image": "https://files.speakerdeck.com/presentations/d0be189ad7454885ad5c99657ad336a2/slide_0.jpg?24445424",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://www.jtca.org/certificate_exam/exam_writing_b.html": {
-      "title": "見つかりません | TC協会　公式サイト",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jtca.org"
-    },
     "https://www.shoeisha.co.jp/book/detail/9784798157191": {
       "title": "技術者のためのテクニカルライティング入門講座 | 翔泳社",
       "description": "生産性が向上し、相手に伝わる論理的な技術文書の書き方\n\n日本では、「文書は論理的かつ簡潔に記述する」という、当たり前のテクニックを学ぶ機会があまりありません。\nそこで本書では、忙しい技術者の方でも「テクニカルライティング」を通じて、相手に伝わる技術文書を効率よく\n書けるようになるテクニックを多数紹介していきます。\nユーザーマニュアルや障害報告書、提案書といった実務直結の文例を多数掲載しているので、すぐに業務に役立てることが可能です。\n新人～中堅の技術者の方だけでなく、管理職の方も添削指導のお手本としてご利用いただける内容です。\n\n\n【目次】\n第1章　ロジカルライティング×テクニカルライティング活用の基礎知識\n第2章　わかりやすく、簡潔な文章を書くテクニック\n第3章　読み手に伝わる文章を書くテクニック\n第4章　読みやすさを高める文書フォーマット〜表現・表記のルール〜\n第5章　実践編　ユーザーマニュアル・取扱説明書\n第6章　実践編　提案書\n第7章　実践編　障害報告書\n第8章　実践編　社外メール文",
@@ -649,7 +649,7 @@
     "https://docs.google.com/presentation/d/1CrpdaUslHJ04H6h89MnE6uIknmeinmzup6GvvLNpqAE/edit#slide=id.p": {
       "title": "DevelopersSummit2023_10-A-6_KohnoFumiya",
       "description": "有志によって 日本最大級の選挙情報サイトが生まれた物語 Developers Summit 2023 10-A-6 河野 文弥(Kohno Fumiya)",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyI2YM3EiTlvKqb0XmuEGLTs4j3yyuFW7RCAEP8c3vpmgxKjzc4vGosygD2yxmArN2SPwaFKjg5WBz5FH2g6r07VAfRbxM2w84_wrAG1X1Sk-co=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKBqOFy24fy5HBTjKYC_ppk-orAmViedDOJ1fd1kl6SvETUPwMffWXRLIlzxctM15-QkjBIon1o_LvJrwYBSuoPD8MxI7pDfrfC2-cnBvOsKGY=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/1FjF8W8bk9thQYc2_CAfoxY0ECPZYfkxH66gPPpYsFWE/edit#slide=id.gf3aad8cee5_1_1": {
@@ -671,7 +671,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
     },
     "https://fintan.jp/wp-content/uploads/2023/02/developers_summit_20230210_iter.pdf": {
-      "title": "",
+      "title": "https://fintan.jp/wp-content/uploads/2023/02/developers_summit_20230210_iter.pdf",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fintan.jp"
@@ -728,12 +728,6 @@
       "title": "満を持して始めるRust",
       "description": "Developers Summit（デブサミ）\n9-B-9 02/09 17:45 ～ 18:25\n「満を持して始めるRust」kenkoooo\n\nRustはC++の代替となることが期待されていることから、低レイヤ向け言語という印象を持っている方も多いかもしれません。しかし、Rust 1.0のリリースから7年ほど経ち、言語そのものだけでなく周辺のライブラリやツールも充実し、普段遣いのプログラミング言語として快適に開発できる環境が整っています。\n\n本セッションでは、今日からRustで開発をスタートすることを目指し、Rustそのものの紹介だけでなく、実際の開発におけるコードの書き方や、estieでの導入事例をご紹介します。\n",
       "image": "https://files.speakerdeck.com/presentations/be5bd22434104050a6ead3040944bdb0/slide_0.jpg?24417626",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
-    "https://speakerdeck.com/grapecity_dev/developers-summit-2023": {
-      "title": "User Not Found - Speaker Deck",
-      "description": "",
-      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/i35_267/in-the-end-people-value": {

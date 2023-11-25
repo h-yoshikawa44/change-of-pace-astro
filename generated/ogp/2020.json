@@ -397,7 +397,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://www.brighttalk.com/webcast/18289/430677/android": {
-      "title": "",
+      "title": "https://www.brighttalk.com/webcast/18289/430677/android",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.brighttalk.com"
@@ -407,12 +407,6 @@
       "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
       "image": "https://img.docswell.com/cover/9E2NZZKR7R.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
-    },
-    "https://www.slideshare.net/papanda/ss-237095559?ref=https://note.com/dora_e_m/n/n4e16f183ad58": {
-      "title": "Private Presentation",
-      "description": "undefined - Download as a PDF or view online for free",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.youtube.com/watch?v=DBjUcAvOsmU&feature=youtu.be": {
       "title": "スクラムフェス大阪 : 大阪のフェスが全国のオンラインフェスになるまでに二か月間で学んだこと",
@@ -527,20 +521,20 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
     },
     "https://developers.google.com/analytics/devguides/collection/analyticsjs": {
-      "title": "サイトに analytics.js を追加する  |  ウェブ向けアナリティクス（analytics.js）  |  Google for Developers",
-      "description": "ウェブサイト上でのユーザーの操作を測定できる JavaScript ライブラリです。\n",
-      "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/orange.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
-    },
-    "https://developers.google.com/analytics/devguides/collection/gtagjs": {
-      "title": "将 gtag.js 添加到您的网站  |  适用于网站的 Universal Analytics (gtag.js)  |  Google for Developers",
-      "description": "一种 JavaScript 标记框架兼 API，您可以通过它来配置网站，以将事件数据发送至 Google Analytics（分析）、Google Ads 和 Google Marketing Platform。",
+      "title": "Add analytics.js to Your Site  |  Analytics for Web (analytics.js)  |  Google for Developers",
+      "description": "A JavaScript library that lets you measure how users interact with your website.\n",
       "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/orange.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
     "https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=ja": {
       "title": "analytics.js から gtag.js に移行する  |  ウェブ向けユニバーサル アナリティクス（gtag.js）  |  Google for Developers",
       "description": "",
+      "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/orange.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
+    },
+    "https://developers.google.com/analytics/devguides/collection/gtagjs?hl=ja": {
+      "title": "サイトに gtag.js を追加する  |  ウェブ向けユニバーサル アナリティクス（gtag.js）  |  Google for Developers",
+      "description": "Google アナリティクス、Google 広告、Google マーケティング プラットフォームにイベントデータを送信するようサイトを設定するための、JavaScript のタグ設定フレームワークおよび API です。",
       "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/orange.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
@@ -567,14 +561,14 @@
     "https://github.com/cssinjs/jss": {
       "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
       "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "image": "https://opengraph.githubassets.com/dd72d2e7687f161670e151c7e8921fa3d7fe5f815a1ef22a2f6c506c67cfe5ad/cssinjs/jss",
+      "image": "https://opengraph.githubassets.com/0ff889e4d008b9f6684858c9e6b91fe118f5b233603255d9bbdaa07589485119/cssinjs/jss",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://material-ui-pickers.dev": {
-      "title": "Attention Required! | Cloudflare",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://material-ui-pickers.dev"
+    "https://github.com/mui/material-ui-pickers": {
+      "title": "GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
+      "description": "Date & Time pickers for Material UI (support from v1 to v4) - GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
+      "image": "https://repository-images.githubusercontent.com/106125229/81d0cb00-7036-11e9-90b1-1128202ec858",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://mui.com": {
       "title": "MUI: The React component library you always wanted",
@@ -635,7 +629,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/facebook/react/blob/main/packages/shared/isValidElementType.js": {
-      "title": "",
+      "title": "https://github.com/facebook/react/blob/main/packages/shared/isValidElementType.js",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
@@ -799,9 +793,9 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shinyorke.hatenablog.com"
     },
     "https://slide.meguro.ryuzee.com/slides/98": {
-      "title": "We're sorry, but something went wrong (500)",
-      "description": "",
-      "image": "",
+      "title": "レガシーコードからの脱却",
+      "description": "2019年10月4日のAWS DevDay / 2019年10月31日のEOF2019 / 2020年2月14日のDevelopers Summitで登壇した際のスライドです。",
+      "image": "https://slidehub.azureedge.net/images/9ea9deae4ac4f5e9bee0a1d821b205fb/thumbnail-middle.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slide.meguro.ryuzee.com"
     },
     "https://speakerdeck.com/ayatokura/devsumi-14d8": {
@@ -1033,7 +1027,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://web.giji.io"
     },
     "https://www.prime-strategy.co.jp/resource/pdf/DevelopersSummit2020.pdf": {
-      "title": "",
+      "title": "https://www.prime-strategy.co.jp/resource/pdf/DevelopersSummit2020.pdf",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.prime-strategy.co.jp"
@@ -1074,10 +1068,10 @@
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developers-summit-2020-14e4-agile-offshore-200214053753-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
-    "https://www.slideshare.net/codeforjapan/code-for-japan-227910934/codeforjapan/code-for-japan-227910934": {
-      "title": "404 error. Page Not Found.",
-      "description": "",
-      "image": "",
+    "https://www.slideshare.net/codeforjapan/code-for-japan-227910934": {
+      "title": "エンジニアよ、今こそ社会課題に立ち向かおう！- Code for Japan",
+      "description": "エンジニアよ、今こそ社会課題に立ち向かおう！- Code for Japan - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/presentation1-200214070524-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/devsumi/13b6honda": {
@@ -1128,10 +1122,10 @@
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/keiei-200214133940-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
-    "https://www.slideshare.net/ssuser91c7c7/105-227849243/ssuser91c7c7/105-227849243": {
-      "title": "404 error. Page Not Found.",
-      "description": "",
-      "image": "",
+    "https://www.slideshare.net/ssuser91c7c7/105-227849243": {
+      "title": "創業105年の旅館運営企業が実現した 毎週リリースするチームの作り方",
+      "description": "創業105年の旅館運営企業が実現した 毎週リリースするチームの作り方 - Download as a PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/13-d-4developerssummit2020-200213114946-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/techblogyahoo/2-devboost-202137441": {
