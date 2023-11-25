@@ -1,7 +1,7 @@
 {
   "name": "change-of-pace",
   "type": "module",
-  "version": "5.1.2",
+  "version": "5.2.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
