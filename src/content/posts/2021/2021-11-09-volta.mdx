@@ -178,7 +178,7 @@ Netlify といったホスティングサービスでは、`.node-version`でバ
 Volta 側でインストールしたバージョンを確認するとこんな感じ。
 default がデフォルト（グローバル）バージョン、current がそのプロジェクトでの（ローカル）バージョン。
 （default と current で同バージョンの場合は、current が優先して表示される）
-```
+```bash
 volta list all
 ⚡️ User toolchain:
 
@@ -223,7 +223,7 @@ tsc --version # 3.9.4
 
 また、グローバルインストールした npm パッケージは、インストール時のデフォルト（グローバル）バージョンである Node.js と関連付けられます。
 この npm パッケージを、グローバルバージョンとして使用する際は、この関連付けられた Node.js が使われるようになっているそうです。
-```
+```bash
 volta list all
 ⚡️ User toolchain:
     .
@@ -255,7 +255,7 @@ Node.js・npm・yarn をパブリックソースおよびレジストリ（`http
 > The volta fetch command will allow you to fetch a tool into the local cache, without setting it as a default or making it available, for future offline use.
 > （訳：ツールをデフォルトとして設定したり、将来オフラインで使用できるようにすることなく、ツールをローカルキャッシュにフェッチできます。）
 
-```
+```bash
 Fetches a tool to the local machine
 
 USAGE:
@@ -289,7 +289,7 @@ volta fetch node
 > The volta install command will set your default version of a tool. It will also fetch that tool if it isn’t already cached locally
 > （訳：volta install コマンドは、ツールのデフォルトバージョンを設定します。また、まだローカルにキャッシュされていない場合は、そのツールをフェッチします）
 
-```
+```bash
 Installs a tool in your toolchain
 
 USAGE:
@@ -313,7 +313,7 @@ nodenv なんかだと、インストール（`nodenv install`）とグローバ
 > The volta uninstall command allows you to remove any global package that has been installed with volta install.
 > （訳：volta uninstall コマンドを使用すると、volta install でインストールされたグローバルパッケージを削除できます。）
 
-```
+```bash
 Uninstalls a tool from your toolchain
 
 USAGE:
@@ -330,7 +330,7 @@ ARGS:
 
 このコマンドでアンインストールできるらしいのですが、現状対応しているのはグローバルインストールした npm パッケージのみのようでした。
 自分が node と yarn で試してみた時は、エラーになってアンインストールできず。
-```
+```bash
 > volta uninstall yarn
 error: Uninstalling yarn is not supported yet.
 
@@ -378,7 +378,7 @@ package.json がないところで使ってもエラーになります。
 > The volta list command allows you to inspect your installed Node runtimes, package managers, and packages with binaries.
 > （訳：volta list コマンドを使用すると、インストールされているノードランタイム、パッケージマネージャー、およびバイナリを含むパッケージを検査できます。）
 
-```
+```bash
 Displays the current toolchain
 
 USAGE:
@@ -419,7 +419,7 @@ Volta 管理下の各種バージョンを確認するのに使用。
 > The volta completions command will generate command completion information for your shell.
 > （訳：volta completions コマンドは、シェルのコマンド補完情報を生成します。）
 
-```
+```bash
 Generates Volta completions
 
 By default, completions will be generated for the value of your current shell,
@@ -475,7 +475,7 @@ fi
 > The volta which command will unwrap Volta’s shims and locate the actual binary that will be launched by Volta.
 > （訳：volta which コマンドは、Volta の shim をアンラップし、Volta によって起動される実際のバイナリを見つけます。）
 
-```
+```bash
 Locates the actual binary that will be called by Volta
 
 USAGE:
@@ -497,7 +497,7 @@ ARGS:
 > The volta setup command will enable Volta by modifying the PATH for the current user (in a platform-dependent way) to include the Volta shim directory
 > （訳：volta setup コマンドは、現在のユーザーの PATH を（プラットフォームに依存する方法で）変更して Volta shim ディレクトリを含めることにより、Volta を有効にします。）
 
-```
+```bash
 Enables Volta for the current user
 
 USAGE:
@@ -516,7 +516,7 @@ Volta を brew ではなく、インストーラで入れた場合は自動実�
 > The volta run command will run the command that you give it, using versions of tools that are specified at the command line.
 > （訳：volta run コマンドは、コマンドラインで指定されたバージョンのツールを使用して、指定されたコマンドを実行します。）
 
-```
+```bash
 Run a command with custom Node, npm, and/or Yarn versions
 
 USAGE:
@@ -548,7 +548,7 @@ Volta を通して、各種コマンドを実行。
 バージョンごとの検証をする時などによさそうです。
 
 ### volta help
-```
+```bash
 Prints this message or the help of the given subcommand(s)
 
 USAGE:

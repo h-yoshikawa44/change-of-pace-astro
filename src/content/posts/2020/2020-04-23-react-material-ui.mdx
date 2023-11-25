@@ -109,7 +109,7 @@ import Button from '@material-ui/core/Button';
 
 const App: VFC = () => {
   return (
-    <Button variant="contained" color="primary"/>
+    <Button variant="contained" color="primary">
       Test
     </Button>
   );
@@ -265,7 +265,7 @@ type Props = {
 }
 
 const StyledButton: VFC<Props> = ({ children }) => {
-  return <CustomButton variant="contained"/>{children}</CustomButton>;
+  return <CustomButton variant="contained">{children}</CustomButton>;
 };
 
 export default StyledButton;
@@ -300,7 +300,7 @@ type Props = {
 
 const StyledExButton: VFC<Props> = ({ children }) => {
   return (
-    <CustomButton variant="contained" color="red"/>
+    <CustomButton variant="contained" color="red">
       {children}
     </CustomButton>
   );
@@ -392,7 +392,7 @@ export default withStyles(styles)(HOCButton);
 ```
 ```tsx
 // コンポーネント呼び出し側
-<HOCButton bgColor="orange" textColor="white"/>
+<HOCButton bgColor="orange" textColor="white">
   HOC
 </HOCButton>
 ```
@@ -448,7 +448,7 @@ import { Box, Button } from '@material-ui/core';
 const App: VFC = () => {
   return (
     <Box m={2}>
-      <Button variant="contained"/>Test</Button>
+      <Button variant="contained">Test</Button>
     </Box>
   );
 }
@@ -558,8 +558,8 @@ import Button from '@material-ui/core/Button';
 const App: VFC = () => {
   return (
     <div>
-      <Button variant="contained" color="primary"/>primary</Button>
-      <Button variant="contained" color="secondary"/>secondary</Button>
+      <Button variant="contained" color="primary">primary</Button>
+      <Button variant="contained" color="secondary">secondary</Button>
     </div>
   );
 }
@@ -850,7 +850,7 @@ Alert と組み合わせて、API リクエストエラー時のアラート表�
 Snackbar の例
 <img src="/gifs/2020/react-material-ui/snack-bar.gif" width="50%" alt="SnackbarコンポーネントのプレビューGIF"/>
 
-#### Backdrop(Core)
+#### Backdrop(core)
 アプリ上の状態変化を表現できる、背景のコンポーネント。
 
 Backdrop の例（CircularProgress との組み合わせ）
@@ -885,7 +885,8 @@ Divider の例（線の部分）
 <img src="/screenshots/2020/react-material-ui/divider.png" width="40%" alt="Dividerコンポーネントのプレビュー画像"/>
 
 #### Material Icons(icons)
-アイコンのコンポーネント集。アイコンの種類は [Material UI - Material Icons](https://v4.mui.com/components/material-icons/) を参照。
+アイコンのコンポーネント集。
+アイコンの種類は [Material UI - Material Icons](https://v4.mui.com/components/material-icons/) を参照。
 
 #### Listr(core)
 リスト表示を表現できるコンポーネント群。
