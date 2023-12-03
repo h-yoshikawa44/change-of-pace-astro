@@ -204,6 +204,12 @@
       "image": "https://res.cloudinary.com/zenn/image/upload/s--bBdmeL2Y--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Next.js%2520App%2520Router%2520%25E9%2581%25B7%25E7%25A7%25BB%25E3%2581%25AE%25E4%25BB%2595%25E7%25B5%2584%25E3%2581%25BF%25E3%2581%25A8%25E5%25AE%259F%25E8%25A3%2585%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:akfm_sato%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzllMzg2MWQ3OGYuanBlZw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     },
+    "https://zenn.dev/sosukesuzuki/articles/ab5377c8a99cb7": {
+      "title": "JSConf JP 2023「書いたJavaScriptがそのままブラウザで動く未来へ」スピーカーノート",
+      "description": "",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--m-u1-8du--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:JSConf%2520JP%25202023%25E3%2580%258C%25E6%259B%25B8%25E3%2581%2584%25E3%2581%259FJavaScript%25E3%2581%258C%25E3%2581%259D%25E3%2581%25AE%25E3%2581%25BE%25E3%2581%25BE%25E3%2583%2596%25E3%2583%25A9%25E3%2582%25A6%25E3%2582%25B6%25E3%2581%25A7%25E5%258B%2595%25E3%2581%258F%25E6%259C%25AA%25E6%259D%25A5%25E3%2581%25B8%25E3%2580%258D%25E3%2582%25B9%25E3%2583%2594%25E3%2583%25BC%25E3%2582%25AB%25E3%2583%25BC%25E3%2583%258E%25E3%2583%25BC%25E3%2583%2588%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:Sosuke%2520Suzuki%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2kzVm5WZHo2MC1CT3lMTS1VVnZaNmdNSDJlTlp1T0lTa1owT3lyNnc9czI1MC1j%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    },
     "https://zenn.dev/wakamsha/articles/setup-eslint-plugin-jsdoc": {
       "title": "ESLint を使って JSDoc / TSDoc の記述を必須化する",
       "description": "",
@@ -217,6 +223,12 @@
       "description": "フロントエンドカンファレンスを沖縄で開催します！ HTML、JavaScript、UI、UX、デザイン、アクセシビリティ、SPAフレームワーク、PWAなど、フロントエンドに関する様々なセッション・企画をご用意。 デザイナーもエンジニアも、職種問わずWebに携わる方が楽しめるカンファレンスです。",
       "image": "https://storage.googleapis.com/production-os-assets/assets/0feecf9e-8dac-44cb-b5e4-f604c1e8bb34",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://frontend-conf.okinawa.jp"
+    },
+    "https://necco.inc/note/29790": {
+      "title": "『フロントエンドカンファレンス沖縄 2023』で中川・田口が登壇しました。スライド資料と沖縄の思い出ダイジェスト - necco note | necco inc.",
+      "description": "2023年11月に沖縄で開催された『フロントエンドカンファレンス沖縄 2023』にて、デザイナーの中川・田口が登壇しました。セッションのダイジェストと沖縄での思い出をまとめています。",
+      "image": "https://wordpress.necco.inc/wp-content/uploads/2023/11/front_okinawa_ogp.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://necco.inc"
     },
     "https://speakerdeck.com/doggy/expo-router-ha-expo-dao-ru-nojue-meshou-tonaruka-hurontoendokanhuarensuchong-nawa-2023-at-kaito-dogi": {
       "title": "Expo Router は Expo 導入の決め手となるか フロントエンドカンファレンス沖縄2023 @Kaito-Dogi",
@@ -782,6 +794,12 @@
       "title": "プロダクトチーム一丸となって臨むソフトウェアテストの勘所 #devsumi #devsumiE",
       "description": "Developers Summit 2023の9-E-2セッションにて発表した資料の公開版です。\nhttps://event.shoeisha.jp/devsumi/20230209/session/4165/",
       "image": "https://files.speakerdeck.com/presentations/44bee2b87621448a85b567b2da7af114/slide_0.jpg?24416894",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kzsuzuki/software-testing-reading-map-for-developers": {
+      "title": "デブサミ2023 / テストを学びたい開発者のためのソフトウェアテスト読書マップ / Software Testing Reading Map for Developers",
+      "description": "Developers Summit 2023での発表資料です。\nソフトウェアテストを専門としない人が、どんな本で、どんな順番にソフトウェアテストを勉強すればいいのかについて、主観のみで語っています。",
+      "image": "https://files.speakerdeck.com/presentations/eaa67c21cdaf4f168c66ad7a2899e3ef/slide_0.jpg?24524504",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/masashi/frontend-security": {
