@@ -53,7 +53,7 @@ const isShowGAdUnit = import.meta.env.PROD && isAdsense;
             >
               {isShowGAdUnit && <GAdUnitBase marginY="mb-4" />}
               <slot />
-              {isShowGAdUnit && <GAdUnitBase />}
+              {isShowGAdUnit && <GAdUnitBase marginY="mt-4" />}
             </div>
           </div>
         </div>
