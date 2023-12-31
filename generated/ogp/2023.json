@@ -1,4 +1,96 @@
 {
+  "2023-12-31-looking-back-2023-tech": {
+    "https://crieit.net/users/h-yoshikawa0724": {
+      "title": "よし - Crieit",
+      "description": "Web Developer。",
+      "image": "https://crieit.net/img/card.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
+    },
+    "https://cssnite.doorkeeper.jp/events/163736": {
+      "title": "#朝までマークアップ",
+      "description": "2023-11-02（木）21:00 - 2023-11-03（金）05:00 好評いただいた3セッションをロングバージョンでお届けするフォローアップ特番を12月12日[火]に開催します。\n\nnoteにてアーカイブ（スライド・動画）を販売しています。「アーカイブを見たい方」「申し込みそびれてしまった方」はご利用ください。https://note.com/cssnite/n/nb2b1208e4a29\n\n「#朝まで」シリーズをCSS Niteで開催。マークアップ（HTMLやCSSなど）について、25名の猛者が持ち時間10分、合計8時間のボリュームでお届けします。\n\n\n当日参加できない方には...",
+      "image": "https://doorkeeper.jp/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBL1hGQlE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--927df2d62efaa21c8ed68fdc9a5a8529559718a4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMb0F6QT0iLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--91839951a073aea8822f6907dc8d81559a890706/logo-asmd-markup.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://cssnite.doorkeeper.jp"
+    },
+    "https://event.shoeisha.jp/devsumi/20230209": {
+      "title": "Developers Summit 2023（2023.02.09-10）",
+      "description": "Developers Summit 2023は、2月9-10日にオンライン開催！",
+      "image": "https://event.shoeisha.jp/static/images/event/1408/1200.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+    },
+    "https://findy.connpass.com/event/302508/": {
+      "title": "ドキュメント管理を制する 陳腐化を防ぐための実践事例 Lunch LT (2023/12/06 12:00〜)",
+      "description": "# 🎥 アーカイブ動画  アーカイブ動画はこちらから    # ✍️概要  開発を進める中で仕様書や説明書に設計思想を残す、社内のノウハウや記録を集約する等、ドキュメントを適切に管理していつでも利用可能にしておくことは重要です。しかし、実際には長い間メンテナンスがされなくなってしまったドキュメントや似たような内容の資料が乱立するといった状況が見受けられます。   今回はドキュメントの管理方法を確立、整備されてこられた方々にお話を伺い、工夫点や考え方、テクニック等を広く共有していただくことで、明日から使える技術やノウハウの参考になる場を目指します。  ## 🎁参加方法とプレゼント企画  U...",
+      "image": "https://media.connpass.com/thumbs/14/3a/143a38927d3b57e48dbdcb3da0202eef.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://findy.connpass.com"
+    },
+    "https://frontend-conf.okinawa.jp/": {
+      "title": "フロントエンドカンファレンス沖縄2023",
+      "description": "フロントエンドカンファレンスを沖縄で開催します！ HTML、JavaScript、UI、UX、デザイン、アクセシビリティ、SPAフレームワーク、PWAなど、フロントエンドに関する様々なセッション・企画をご用意。 デザイナーもエンジニアも、職種問わずWebに携わる方が楽しめるカンファレンスです。",
+      "image": "https://storage.googleapis.com/production-os-assets/assets/0feecf9e-8dac-44cb-b5e4-f604c1e8bb34",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://frontend-conf.okinawa.jp"
+    },
+    "https://github.com/h-yoshikawa44": {
+      "title": "h-yoshikawa44 - Overview",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 54 repositories available. Follow their code on GitHub.",
+      "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://hono.dev/": {
+      "title": "Hono - Ultrafast web framework for the Edges",
+      "description": "Hono is a small, simple, and ultrafast web framework for the Edges. It works on Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, Lagon, AWS Lambda, Lambda@Edge, and Node.js. Fast, but not only fast.",
+      "image": "https://hono.dev/images/hono-title.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hono.dev"
+    },
+    "https://jsconf.jp/2023/": {
+      "title": "JSConf JP",
+      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the first event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "image": "https://jsconf.jp/2023/static/fec934935a8b84b24adead6e9feaea09/logo.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    },
+    "https://note.com/h_yoshikawa44": {
+      "title": "よし｜note",
+      "description": "Web Developer.",
+      "image": "https://assets.st-note.com/production/uploads/images/71216582/profile_f004d545f63ff97e59edfd7a0428862b.png?fit=bounds&format=jpeg&quality=85&width=330",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://obsidian.md/": {
+      "title": "Obsidian - Sharpen your thinking",
+      "description": "Obsidian is the private and flexible note‑taking app that adapts to the way you think.",
+      "image": "https://obsidian.md/images/banner.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://obsidian.md"
+    },
+    "https://offers.connpass.com/event/298939/": {
+      "title": "LT&ディスカッション5ラウンド！うひょさん・よしこさんと改めて考えるReactコンポーネント設計 (2023/11/06 19:00〜)",
+      "description": "# 📢イベント概要  フロントエンド開発において、コンポーネント設計における考え方は日々進化し続けています。ライブラリのバージョンアップや新しい方法論が登場し、最適な設計手法もそれに応じて目まぐるしく変わっています。しかし、常に最新のコンポーネント設計手法をキャッチアップし取り入れていくことは難しくどこまで追いつけば良いのか、と感じたり、現在の設計方法が最適なのか不安に感じている方も多いのではないでしょうか。  そこで本イベントでは、フロントエンドの第一線で活躍するよしこ氏（@yoshiko_pg）、うひょ氏（@uhyo_）をお招きし、お二人が考える今のReactコンポーネント設計につい...",
+      "image": "https://media.connpass.com/thumbs/a1/b5/a1b57b81c0f8130872403f7bf13989b9.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://offers.connpass.com"
+    },
+    "https://offers.connpass.com/event/302376/": {
+      "title": "決済フロー全体像から学ぶ　決済サービス活用実践LT (2023/12/05 19:00〜)",
+      "description": "# 📢イベント概要  外部決済サービスは、現代のtoC向けサービスにとって不可欠な要素であり、最近ではtoBサービスにおいても活用する事例が増えています。  しかし、これらのサービスを実際に組み込む際には、セキュリティ、カスタマイズ、エラーハンドリング、パフォーマンスなど多くの要素を考慮する必要があり、そのユースケースを知る機会が多くないのが実情です。  そこで本イベントでは、外部決済サービスを取り入れようと考えている方々、すでに取り組んでいる方々、またtoBサービスでクレジットカード決済の導入を検討している方々に向けて、実際の全体設計と外部サービスの統合、活用に関する事例を共有する場を...",
+      "image": "https://media.connpass.com/thumbs/5c/17/5c1786f6fde74e5e40e3f19e066ce16a.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://offers.connpass.com"
+    },
+    "https://qiita.com/h-yoshikawa44": {
+      "title": "@h-yoshikawa44のマイページ - Qiita",
+      "description": "Web Developer。\n(リンクは個人ブログです)\n※2020/09よりZennをメインにしていく関係上、Qiita記事の更新・投稿は基本的に停止していきます。",
+      "image": "https://cdn.qiita.com/assets/qiita-ogp-3b6fcfdd74755a85107071ffc3155898.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://www.frontendmentor.io/": {
+      "title": "Frontend Mentor | Front-end coding challenges using a real-life workflow",
+      "description": "Improve your front-end skills by building real projects. Solve real-world HTML, CSS and JavaScript challenges whilst working to professional designs.",
+      "image": "https://res.cloudinary.com/dz209s6jk/image/upload/v1585172856/Meta/meta-homepage.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.frontendmentor.io"
+    },
+    "https://zenn.dev/h_yoshikawa0724": {
+      "title": "よしさんの記事一覧",
+      "description": "Web Developer。頭の情報整理がてら記事書いてます（基本的に個人ブログとZennでクロス投稿しています）TypeScript / React / Next.js",
+      "image": "https://lh3.googleusercontent.com/a-/AOh14GiwD5VEHFiHt6l5HHmCq_VAFJtJKmM2kUwebpZx=s250-c",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    }
+  },
   "2023-11-19-jsconf-jp-2023": {
     "https://azukiazusa.dev/blog/invokers-to-add-interactions-without-javascript/": {
       "title": "JavaScript なしでインタラクションを追加する Invokers",
