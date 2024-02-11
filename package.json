@@ -61,9 +61,9 @@
     "stylelint-config-recess-order": "^4.6.0",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
-    "textlint": "^13.4.0",
+    "textlint": "^14.0.1",
     "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-preset-ja-technical-writing": "^8.0.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
     "unocss": "^0.58.5"
   },
   "volta": {
