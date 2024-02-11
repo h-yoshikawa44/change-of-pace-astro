@@ -2,7 +2,7 @@
 title: "UbuntuにPHPインストールで格闘した話"
 description: "UbuntuにPHPをいれるにあたって、phpenv、brew、phpbrewと挑戦してエラーと格闘した記録"
 pubDate: "2018-06-05"
-updatedDate: "2018-06-05"
+updatedDate: "2024-02-11"
 category: "develop"
 tags: ["開発環境", "PHP"]
 ---
@@ -84,8 +84,7 @@ brew search php@
 
 ※2018/03/31まではPHPのフォーミュラとして`homebrew/php`があり。
 `php56`と`php56-*`(バージョンに応じた拡張) のような形式だったのですが、`homebrew/core`に統合された関係で上記のような形式になった模様。(拡張は組み込み式に変更)
-
-<OG url="https://php-tips.com/2018/04/13/homebrew-php-is-dead/"/>
+※2024/02/11にはこの情報を参照していた記事が見られなくなっていました。
 
 2. 指定したバージョンのPHPをインストール
 ```bash
@@ -236,6 +235,5 @@ Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
 Ubuntu に慣れている方だったらこんなことしないんだろうなぁと思いつつ、まぁ無事に PHP 使えるようになって良かったです。
 
 ## 参考リンクまとめ
-- [homebrew/php が死んでた](https://php-tips.com/2018/04/13/homebrew-php-is-dead/)
 - [phpbrew - GitHub](https://github.com/phpbrew/phpbrew/blob/master/README.ja.md)
 - [UbuntuにPHP7の環境をつくる](https://qiita.com/yamatmoo/items/b9e8035c55032de88084)
