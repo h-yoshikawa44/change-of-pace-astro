@@ -52,7 +52,7 @@
     "eslint": "^8.56.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-jsx-a11y": "^6.8.0",
-    "lint-staged": "^15.1.0",
+    "nano-staged": "^0.8.0",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
     "simple-git-hooks": "^2.9.0",
@@ -70,10 +70,10 @@
     "node": "20.9.0"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged",
+    "pre-commit": "npx nano-staged",
     "prepare-commit-msg": "./.githooks/prepare-commit-msg \"$@\""
   },
-  "lint-staged": {
+  "nano-staged": {
     "src/**/*.{js,jsx,ts,tsx,astro}": [
       "prettier --write --loglevel=error",
       "eslint --fix --quiet"
