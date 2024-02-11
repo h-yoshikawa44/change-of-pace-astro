@@ -3,14 +3,8 @@
     "https://github.com/phpbrew/phpbrew": {
       "title": "GitHub - phpbrew/phpbrew: Brew & manage PHP versions in pure PHP at HOME",
       "description": "Brew & manage PHP versions in pure PHP at HOME. Contribute to phpbrew/phpbrew development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/a0ba8e7b6ee7f35d8c61820c409468715f8c6c8f9ea22955005c3e642c5e4f87/phpbrew/phpbrew",
+      "image": "https://opengraph.githubassets.com/51d1aa604a7d3a7de2d8cedff02016d5c4f936d43ed6a6cc18b6d5b5ba5682a3/phpbrew/phpbrew",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://php-tips.com/2018/04/13/homebrew-php-is-dead/": {
-      "title": "homebrew/php が死んでた",
-      "description": "Homebrew/homebrew-php: ? Homebrew/php (deprecated&…",
-      "image": "https://s0.wp.com/i/blank.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://php-tips.com"
     },
     "https://qiita.com/yamatmoo/items/b9e8035c55032de88084": {
       "title": "UbuntuにPHP7の環境をつくる - Qiita",

@@ -32,13 +32,13 @@
     },
     "https://github.com/h-yoshikawa44": {
       "title": "h-yoshikawa44 - Overview",
-      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 54 repositories available. Follow their code on GitHub.",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 55 repositories available. Follow their code on GitHub.",
       "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://hono.dev/": {
       "title": "Hono - Ultrafast web framework for the Edges",
-      "description": "Hono is a small, simple, and ultrafast web framework for the Edges. It works on Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, Lagon, AWS Lambda, Lambda@Edge, and Node.js. Fast, but not only fast.",
+      "description": "Hono is a small, simple, and ultrafast web framework for the Edges. It works on Cloudflare Workers, Fastly Compute, Deno, Bun, Vercel, Netlify, AWS Lambda, Lambda@Edge, and Node.js. Fast, but not only fast.",
       "image": "https://hono.dev/images/hono-title.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hono.dev"
     },
@@ -113,13 +113,13 @@
     "https://docs.google.com/presentation/d/1YVdn5yWHv3vI6sY_c-zo8zcDX2z4Ivpkhj7dJOivNMY/edit#slide=id.g29cfbd0e8bc_2_0": {
       "title": "画面遷移のアクセシビリティ課題を解決しうる Navigation API への期待",
       "description": "画面遷移のアクセシビリティ課題を 解決しうるNavigation APIへの期待 JSConfJP 2023 | 2023-11-19 1",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJg9xM9mBUefWCT6tZjc0jz6jttldSW9Ak-iti3ztA5XnfBUhQ9NO8YppYmae072ugFJZMLhRuZW6GgNtprmAuURz7VBAvgXYKUk78It4gNJQ=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJ-IKJDrXjzXCslInYhJs8NG2cEf0kdJo-uZWZWExfVapEYfZmkYKMzbQUx65CK__1CwOWfLBPdvptjSSMBbdtRx1NLc7tNYbSP6bXvyiOr8A=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/1hjs2J4fScWcs42oJ11F9uv1iuSnb_25TEZxyJo6UlLU/edit": {
       "title": "JSConf2023_vf_en_public",
       "description": "TEARING DOWN 'BRICK-BREAK-ANYWHERE' JOURNEY INTO THE UNCHARTED TERRITORIES OF DOM SCRIPTING",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJAxpErom9IvhI1gxdBXt1jiYyg9mzf15_UlGVa8wPMM7m8jjJ19MLMvYfFWx3LhRrUwAV8Rz67Tqj0Q5iKHFJAi3ETOAc0oDYWYn3xAX_3DJ8=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLqe75CE6vZ0seSbxCfQKF5IXsbC4Xkha-_eHsOOVYdyq09DZmV4Tgr43xmgGDfGpTLg8L5N2iqImwqV7e7zFtedyaHwF1eAp0wx0DqOD_RfiI=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.wantedly.dev/": {
@@ -131,7 +131,7 @@
     "https://github.com/nkzw-tech/remdx": {
       "title": "GitHub - nkzw-tech/remdx: Beautiful Minimalist React & MDX Presentations",
       "description": "Beautiful Minimalist React & MDX Presentations. Contribute to nkzw-tech/remdx development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/1e00c3bbb6bf64785f2fa07e55a0dd4e4a7d9f9e9868ab9e69358435556e676e/nkzw-tech/remdx",
+      "image": "https://opengraph.githubassets.com/e11207c5f2114066194b2a3ec4a8576183fdc75600f9c009dce726059c6bc1e5/nkzw-tech/remdx",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://jsconf.jp/2023": {
@@ -244,7 +244,7 @@
     },
     "https://speakerdeck.com/wakamsha/hurontoendoriakitekutiyaringutokai-fa-timunosukirutoransuhuaniokeru9keyue-jian-nofen-dou-ji": {
       "title": "フロントエンドリアーキテクチャリングと開発チームのスキルトランスファーにおける9ヶ月間の奮闘記",
-      "description": "2023年1月から9月にかけて弊社 BtoB web アプリケーションのリアーキテクチャリングプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。",
+      "description": "https://jsconf.jp/2023/talk/wakamsha-1/\nhttps://www.youtube.com/live/N1lhkH33fwY?si=Ytihy_yTzuAdbd5L&t=8774\n\n2023年1月から9月にかけて弊社 BtoB web アプリケーションのリアーキテクチャリングプロジェクトにフロントエンドのシステムアーキテクトとして参画し、技術選定から開発メンバーのスキルトランスファー（育成）、果ては包括的な開発プロセスの改善までと幅広く支援してきました（2023年11月現在も進行中）。そこでの奮闘で得た学びと新たに浮き彫りとなった課題についてご紹介します。",
       "image": "https://files.speakerdeck.com/presentations/b2a725f76e7c474799125f6c25b3f1f4/slide_0.jpg?27874647",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -268,26 +268,26 @@
     },
     "https://www.npmjs.com/package/@power-assert/esm": {
       "title": "@power-assert/esm",
-      "description": "power-assert esm loader. Latest version: 0.1.0, last published: 5 days ago. Start using @power-assert/esm in your project by running `npm i @power-assert/esm`. There are no other projects in the npm registry using @power-assert/esm.",
+      "description": "power-assert esm loader. Latest version: 0.1.0, last published: 3 months ago. Start using @power-assert/esm in your project by running `npm i @power-assert/esm`. There are no other projects in the npm registry using @power-assert/esm.",
       "image": "https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
     },
     "https://www.npmjs.com/package/swc-plugin-power-assert": {
       "title": "swc-plugin-power-assert",
-      "description": "power-assert SWC plugin. Latest version: 0.1.1, last published: 2 days ago. Start using swc-plugin-power-assert in your project by running `npm i swc-plugin-power-assert`. There are no other projects in the npm registry using swc-plugin-power-assert.",
+      "description": "power-assert SWC plugin. Latest version: 0.2.0, last published: 7 days ago. Start using swc-plugin-power-assert in your project by running `npm i swc-plugin-power-assert`. There are no other projects in the npm registry using swc-plugin-power-assert.",
       "image": "https://static-production.npmjs.com/338e4905a2684ca96e08c7780fc68412.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.npmjs.com"
     },
     "https://www.wantedly.com/companies/wantedly/post_articles/872375?utm_source=t.co&utm_medium=share&lang=ja": {
-      "title": "【JSConf JP 2023】スポンサートークとしてデザインシステム仕切り直しの話をしました | Wantedly, Inc.",
+      "title": "【JSConf JP 2023】スポンサートークとしてデザインシステム仕切り直しの話をしました | Wantedly Engineer Blog",
       "description": "こんにちは！ウォンテッドリーでエンジニア採用を担当している竹内みずきです。本日はリクルート様の九段下オフィスにてJSConf JP 2023に協賛し、オフライン参加致しました。過去2年間はオンラ...",
-      "image": "https://d2v9k5u4v94ulw.cloudfront.net/small_light(dw=1200,dh=630,da=s,ds=s,cw=1200,ch=630,cc=FFFFFF)/assets/images/15914864/original/94e4eaa6-5b98-413b-a0ce-2427a4e63502?1700385953",
+      "image": "https://images.wantedly.com/i/bCwvz8y?w=1200&h=630&style=cover",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.wantedly.com"
     },
     "https://www.youtube.com/@jsconfjp": {
       "title": "jsconfjp",
       "description": "作成した動画を友だち、家族、世界中の人たちと共有",
-      "image": "https://yt3.googleusercontent.com/ytc/APkrFKahiexlyDIaTs1uQMJFEJAju2mA_NQfe69hp_Wr=s900-c-k-c0x00ffffff-no-rj",
+      "image": "https://yt3.googleusercontent.com/ytc/AIf8zZSTklmmCs66Zgcy_UcPKPtT8-p7E3QNd4a5tOR1=s900-c-k-c0x00ffffff-no-rj",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     },
     "https://zenn.dev/akfm/articles/next-app-router-navigation": {
@@ -447,13 +447,13 @@
     "https://github.com/csstools/postcss-plugins": {
       "title": "GitHub - csstools/postcss-plugins: PostCSS Tools and Plugins",
       "description": "PostCSS Tools and Plugins. Contribute to csstools/postcss-plugins development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/cb1a2ca584ee1587d38d0e241f0225dca55a187c51ecd3b8082bd677a15210e9/csstools/postcss-plugins",
+      "image": "https://opengraph.githubassets.com/1e4377ec9f391d85d3e1d799665e2380a075bd8c0845f6a22e51d3eaef138bf1/csstools/postcss-plugins",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/csstools/postcss-preset-env": {
       "title": "GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
       "description": "Convert modern CSS into something browsers understand - GitHub - csstools/postcss-preset-env: Convert modern CSS into something browsers understand",
-      "image": "https://opengraph.githubassets.com/fb6ad1e955c996ab1c2d3012998f49c7f0ae7c2695961f1485519cd2c94475f5/csstools/postcss-preset-env",
+      "image": "https://opengraph.githubassets.com/4bf6c90dbc92c619c324ba70bc26957309f4a005daf5e1e359542e89cdc59cc6/csstools/postcss-preset-env",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://preset-env.cssdb.org": {
@@ -497,13 +497,13 @@
     "https://astro.build/blog/images": {
       "title": "Better Images in Astro | Astro",
       "description": "A new feature brings built-in image optimization to Astro. Coming in Astro 3.0, you can opt-in to try it yourself in today. Images in Astro have been completely redesigned with more features, faster performance, and a better end-user experience with automatic layout shift prevention.",
-      "image": "https://astro.build/_astro/og-image-image-better.fc74c8c7.jpg",
+      "image": "https://astro.build/_astro/og-image-image-better.fK-jyr9j.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://astro.build"
     },
     "https://docs.astro.build/ja/core-concepts/routing/#ページ分割": {
       "title": "ルーティング",
       "description": "Astroのルーティングの紹介",
-      "image": "https://docs.astro.build/open-graph/ja/core-concepts/routing.png",
+      "image": "https://docs.astro.build/open-graph/ja/guides/routing.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.astro.build"
     },
     "https://docs.astro.build/ja/guides/integrations-guide/mdx": {
@@ -533,49 +533,49 @@
     "https://github.com/allejo/jekyll-anchor-headings": {
       "title": "GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat:",
       "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors ...",
-      "image": "https://opengraph.githubassets.com/c26f4cf9ad8cd9a3eb7fb3cd061dd2d22718c0fbfef35d00f873ac2c68e512ac/allejo/jekyll-anchor-headings",
+      "image": "https://opengraph.githubassets.com/ad941f8000e7429b7ebd35db01f94a0281bd0d30f44cbe2bff08ae4bd56dae69/allejo/jekyll-anchor-headings",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/fongandrew/hydeout": {
       "title": "GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
       "description": "A refreshed version of Hyde for Jekyll 3.x and 4.x - GitHub - fongandrew/hydeout: A refreshed version of Hyde for Jekyll 3.x and 4.x",
-      "image": "https://opengraph.githubassets.com/27021fdedb2679280f61087af8a50a4610f18261ccef81f7a08559e67eac975b/fongandrew/hydeout",
+      "image": "https://opengraph.githubassets.com/2b30df1a706e547c5b85434a29e0af23aa9378a8bd76ef582ff17597d97ef3d5/fongandrew/hydeout",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/gladevise/remark-link-card": {
       "title": "GitHub - gladevise/remark-link-card",
       "description": "Contribute to gladevise/remark-link-card development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/6719ac52e57e7167b069b78de00c5ce23d931807a75ebd6e63ace39d2627a623/gladevise/remark-link-card",
+      "image": "https://opengraph.githubassets.com/930a274122ac44fb5bb4689425515a4260b641b26a6c383292957c8d36b2013e/gladevise/remark-link-card",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/change-of-pace-astro": {
       "title": "GitHub - h-yoshikawa44/change-of-pace-astro: 個人ブログ（2023/07～）",
       "description": "個人ブログ（2023/07～）. Contribute to h-yoshikawa44/change-of-pace-astro development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/5a8e446b44b30596de2f1e07718c083d71312243221d00510bca0483de6d16bd/h-yoshikawa44/change-of-pace-astro",
+      "image": "https://opengraph.githubassets.com/137c631c7b4cb55987ecff6a6653a0b2c933f63082e32c6b85803d676366c724/h-yoshikawa44/change-of-pace-astro",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/ipikuka/remark-flexible-code-titles": {
       "title": "GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the code blocks with customizable properties",
       "description": "Remark plugin to add titles or/and containers for the code blocks with customizable properties - GitHub - ipikuka/remark-flexible-code-titles: Remark plugin to add titles or/and containers for the ...",
-      "image": "https://opengraph.githubassets.com/1fa519af6ff30861bde7940f81e69239fce0bace3d8a2a52cc904cebfaab8c28/ipikuka/remark-flexible-code-titles",
+      "image": "https://opengraph.githubassets.com/e7c4a4030376ad07821be07cb884ed4a69cda28b130f85be9e4d161b343bfb61/ipikuka/remark-flexible-code-titles",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/jekyll/jekyll-feed": {
       "title": "GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts",
       "description": ":memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts - GitHub - jekyll/jekyll-feed: :memo: A Jekyll plugin to generate an Atom (RSS-like) feed of your Jekyll posts",
-      "image": "https://opengraph.githubassets.com/3c8d8799629d17a7837c7d095489e5f9eef521cb98d50fa0f3c6f6f570916038/jekyll/jekyll-feed",
+      "image": "https://opengraph.githubassets.com/12c08f85bef400bc605d1e8e7dc4c4bad0d77e407e4feb7427db86e79b10cd24/jekyll/jekyll-feed",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/jekyll/jekyll-paginate": {
       "title": "GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
       "description": "NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll - GitHub - jekyll/jekyll-paginate: NO LONGER UNDER ACTIVE DEVELOPMENT as of Jekyll 3: Pagination Generator for Jekyll",
-      "image": "https://opengraph.githubassets.com/a7bab2d4ead97e823e651ffc54057b925488efe2089d1e6abaf4337142301cf6/jekyll/jekyll-paginate",
+      "image": "https://opengraph.githubassets.com/a3fd874c08edc55bc0751020e1261436a93aff83344224b166654ef8405dee94/jekyll/jekyll-paginate",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/jekyll/jekyll-sitemap": {
       "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
       "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
-      "image": "https://opengraph.githubassets.com/2224cbccf889d9ae50754cc526b134317ffcfbd2ffd4428ca2cae0ee02485292/jekyll/jekyll-sitemap",
+      "image": "https://opengraph.githubassets.com/48a481dc2f749492f45b6557e01b619c2a17a525250b9e7e64bfcd05002e6a9c/jekyll/jekyll-sitemap",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mottox2/remark-code-titles": {
@@ -587,55 +587,55 @@
     "https://github.com/rehypejs/rehype": {
       "title": "GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
       "description": "HTML processor powered by plugins part of the @unifiedjs collective - GitHub - rehypejs/rehype: HTML processor powered by plugins part of the @unifiedjs collective",
-      "image": "https://opengraph.githubassets.com/6113dc61b938a331768ee4d61a27535569dd7709c5ec0aa85fc5966be4d19831/rehypejs/rehype",
+      "image": "https://opengraph.githubassets.com/045af3cdd51d54b77b007950b559e2f42afc14836ac60b4b422a45e51f132e04/rehypejs/rehype",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/rehypejs/rehype-autolink-headings": {
       "title": "GitHub - rehypejs/rehype-autolink-headings: plugin to add links to headings in HTML",
       "description": "plugin to add links to headings in HTML. Contribute to rehypejs/rehype-autolink-headings development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/e48f2eb07813ba0e8da45b34eb711b0b1e98d03d70202aa6dc81d3f804b358bc/rehypejs/rehype-autolink-headings",
+      "image": "https://opengraph.githubassets.com/e650431efcdd2286dd721d7ef300e0d35da69ae3e4a9a48be40ab25e9c2d4ff7/rehypejs/rehype-autolink-headings",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/remarkjs/remark": {
       "title": "GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
       "description": "markdown processor powered by plugins part of the @unifiedjs collective - GitHub - remarkjs/remark: markdown processor powered by plugins part of the @unifiedjs collective",
-      "image": "https://opengraph.githubassets.com/f001d298febafacf21aa20b713b1c5e809271981fe19df27ea2018c7fab88a94/remarkjs/remark",
+      "image": "https://opengraph.githubassets.com/adcd462a5edead9ce085b85e2ed71788800e960086099d249477757e06147036/remarkjs/remark",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/remarkjs/remark-breaks": {
       "title": "GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
       "description": "plugin to add break support, without needing spaces - GitHub - remarkjs/remark-breaks: plugin to add break support, without needing spaces",
-      "image": "https://opengraph.githubassets.com/fe97d295b8bbce59e988b98dfd3cc64e2ec1414fdb948c0348a627fea392b17a/remarkjs/remark-breaks",
+      "image": "https://opengraph.githubassets.com/bff42b0ac67e020fdc53f1ff310c4bb12674c4c31380ece8c062e7d30618fba4/remarkjs/remark-breaks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/rouge-ruby/rouge": {
       "title": "GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
       "description": "A pure Ruby code highlighter that is compatible with Pygments - GitHub - rouge-ruby/rouge: A pure Ruby code highlighter that is compatible with Pygments",
-      "image": "https://opengraph.githubassets.com/accfda5267a21359e478a97d89e54b735ec8f4e5329d62e71a2914e65b0a0135/rouge-ruby/rouge",
+      "image": "https://opengraph.githubassets.com/17af0edabddf535236f73b45c4837eca3f98e8b7fe61f1e0ec41a77328a56766/rouge-ruby/rouge",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/sverrirs/jekyll-paginate-v2": {
       "title": "GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺",
       "description": "Pagination Generator for Jekyll 3 (enhanced replacement for the old built-in jekyll-paginate gem) ⛺ - GitHub - sverrirs/jekyll-paginate-v2: Pagination Generator for Jekyll 3 (enhanced replacement f...",
-      "image": "https://opengraph.githubassets.com/f590a8ca88e0fbcad061a2eddbc29f8cad94f25424218d96c18476d0a04fecc5/sverrirs/jekyll-paginate-v2",
+      "image": "https://opengraph.githubassets.com/4506bb2bb1ccb9c2d34aa858eb678fdeaba019fdf968dea5edeeb94d767758f8/sverrirs/jekyll-paginate-v2",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/yuru7/HackGen": {
       "title": "GitHub - yuru7/HackGen: Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen)",
       "description": "Hack と源柔ゴシックを合成したプログラミングフォント 白源 (はくげん／HackGen). Contribute to yuru7/HackGen development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/5e54657473c1f43ceb3639971fff57a20075fe887275e588bf1f9693a5fdcc6c/yuru7/HackGen",
+      "image": "https://opengraph.githubassets.com/81d60e3d3a0183aa535491241b3b435e954b1da3f75d67ee6fc601d94c43abf2/yuru7/HackGen",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/zenn-dev/zenn-editor": {
       "title": "GitHub - zenn-dev/zenn-editor: Convert markdown to html in Zenn format",
       "description": "Convert markdown to html in Zenn format. Contribute to zenn-dev/zenn-editor development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/bf82018018474ed8fdc0ae85df1d35bc3720cbe536caf5f72cb9f3efe96a5c24/zenn-dev/zenn-editor",
+      "image": "https://opengraph.githubassets.com/674bd9d7d7c2f3d76d7e28f5dfd26b196bf45a896ce89978c13ae5bf4f9abc4f/zenn-dev/zenn-editor",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://hiroppy.me/blog/migrate-blog-from-hatena": {
       "title": "Astroでサイトを作り直し、ブログをはてなから移管しました - hiroppy's site",
       "description": "AstroとTailwindでサイト・ブログを再構築しました。この記事ではどのようにブログを移管したのかを紹介します。",
-      "image": "https://hiroppy.me/_astro/me.1abec78a.png",
+      "image": "https://hiroppy.me/ogp/blog/migrate-blog-from-hatena/og-417374726fe381a7e382b5e382a4e38388e38292e4bd9ce3828ae79bb4e38197e38081e38396e383ade382b0e38292e381afe381a6e381aae3818be38289e7a7bbe7aea1e38197e381bee38197e3819f736974652c6a617661736372697074.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hiroppy.me"
     },
     "https://icones.js.org": {
@@ -676,8 +676,8 @@
     },
     "https://shiki.matsu.io": {
       "title": "Shiki",
-      "description": "",
-      "image": "",
+      "description": "A beautiful yet powerful syntax highlighter",
+      "image": "https://shiki.style/og.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shiki.matsu.io"
     },
     "https://shopify.github.io/liquid": {
@@ -687,7 +687,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shopify.github.io"
     },
     "https://unocss.dev": {
-      "title": "UnoCSS: The instant on-demand Atomic CSS engineGitHubDiscordGitHubDiscordGitHubMastodonDiscordYouTubeTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubMastodonTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitterGitHubTwitter",
+      "title": "UnoCSS: The instant on-demand Atomic CSS engine",
       "description": "The instant on-demand Atomic CSS engine",
       "image": "https://unocss.dev/og.png#1",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://unocss.dev"
@@ -703,14 +703,14 @@
     "https://developers.google.com/tech-writing": {
       "title": "Technical Writing  |  Google for Developers",
       "description": "Technical Writing Courses for Engineers",
-      "image": "https://www.gstatic.com/devrel-devsite/prod/va65162e8ce9aacc75e4d3c0cd6d166fc6ceaaf184fea0ff0eac1d9b62c0480be/developers/images/opengraph/white.png",
+      "image": "https://www.gstatic.com/devrel-devsite/prod/v4697989523565db7bb6b13b31211edb8055f1ea80a18aa91f0fb410e4e163769/developers/images/opengraph/white.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
     "https://jtca.org/learn-tc/certificate-exam/": {
-      "title": "TC技術検定とは - TC協会 公式サイト",
-      "description": "TC技術検定とは TC協会では、テクニカルコミュニケーション技術の到達度を全国規模の統一的な基準で検定し、技術",
+      "title": "テクニカルコミュニケーション技術検定試験 - TC協会 公式サイト",
+      "description": "テクニカルコミュニケーション技術検定 TC協会では、テクニカルコミュニケーション技術の到達度を全国規模の統一的",
       "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jtca.org"
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jtca.org"
     },
     "https://pub.jmam.co.jp/book/b622627.html": {
       "title": "エンジニアのためのドキュメントライティング - JMAM 日本能率協会マネジメントセンター 「人・組織・経営の変化」を支援するJMAMの書籍",
@@ -753,13 +753,13 @@
     "https://docs.google.com/presentation/d/1CrpdaUslHJ04H6h89MnE6uIknmeinmzup6GvvLNpqAE/edit#slide=id.p": {
       "title": "DevelopersSummit2023_10-A-6_KohnoFumiya",
       "description": "有志によって 日本最大級の選挙情報サイトが生まれた物語 Developers Summit 2023 10-A-6 河野 文弥(Kohno Fumiya)",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKBqOFy24fy5HBTjKYC_ppk-orAmViedDOJ1fd1kl6SvETUPwMffWXRLIlzxctM15-QkjBIon1o_LvJrwYBSuoPD8MxI7pDfrfC2-cnBvOsKGY=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyIEBhxYNLNAZvEPCOxW3xhCd3UIBo1OKiioG2YiVm_j-apHbI1AqK-W8CEQgnrX2fWziyyLxbBD2aXwctYYIYae-arICEjFsYd5chHgU_g9zqc=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://docs.google.com/presentation/d/1FjF8W8bk9thQYc2_CAfoxY0ECPZYfkxH66gPPpYsFWE/edit#slide=id.gf3aad8cee5_1_1": {
       "title": "Developers Summit 2023 [9-C-4] 田島将太",
       "description": "GA4とBigQueryで作る、 データカルチャーを育てるためのデータ分析基盤 Developers Summit [9-C-4] 02/09 13:15 ～ 13:55 ストリーツ株式会社代表取締役CEO 田島将太 https://drive.google.com/drive/u/0/folders/1omaoHenAyuJxXEd38ilXqUWOxEqGTEDZ 1",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLoz_U415qkg3HzgC4qBLofyMyusgOTr0D5vIK2ggMVsDJhxE03ABLKUoAoAOhFRJMrjwGlC0-RBjaLO0vNK4H2s5ItGctyF48V9aC8IOEJdis=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyIGUq5WE1fWOGcI23vDWkvec0E5yPW-sMkgBElRxqgL86w_7EPrk1j2qpRdRQumpzcI0v9uMkfwt-3NF5Xg3G1ayG1c5QPVF_zsjYklk_vP7j4=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://drive.google.com/file/d/1ZGe_JeLQ7pgK5XEISZmp-CRi65azdWRi/view": {
@@ -1053,7 +1053,7 @@
     "https://zenn.dev/mixi/articles/fdf9236f86ea29": {
       "title": "Developers Summit 2023にてパスキーについて講演しました",
       "description": "",
-      "image": "https://res.cloudinary.com/zenn/image/upload/s--dliWWhOx--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Developers%2520Summit%25202023%25E3%2581%25AB%25E3%2581%25A6%25E3%2583%2591%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25AC%259B%25E6%25BC%2594%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:MIXI%2520DEVELOPERS%2520NOTE%2Cx_220%2Cy_160/g_south_west%2Cl_text:notosansjp-medium.otf_34:ritou%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UzY2IwNWVmMTMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pRX2Zjd3NJUms2TGFsYm5qQ0hXeldmazdCa1l2WDlYQWtaUDhiOFE9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--Rq2FE9pc--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Developers%2520Summit%25202023%25E3%2581%25AB%25E3%2581%25A6%25E3%2583%2591%25E3%2582%25B9%25E3%2582%25AD%25E3%2583%25BC%25E3%2581%25AB%25E3%2581%25A4%25E3%2581%2584%25E3%2581%25A6%25E8%25AC%259B%25E6%25BC%2594%25E3%2581%2597%25E3%2581%25BE%25E3%2581%2597%25E3%2581%259F%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:ritou%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyL2UzY2IwNWVmMTMuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:MIXI%2520DEVELOPERS%2520NOTE%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EtL0FPaDE0R2pRX2Zjd3NJUms2TGFsYm5qQ0hXeldmazdCa1l2WDlYQWtaUDhiOFE9czI1MC1j%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
     }
   }

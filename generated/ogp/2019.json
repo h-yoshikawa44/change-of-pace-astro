@@ -15,7 +15,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=http://projects.wojtekmaj.pl"
     },
     "https://codesandbox.io": {
-      "title": "CodeSandbox: Instant Cloud-Based IDE",
+      "title": "CodeSandbox: Instant Cloud Development Environments",
       "description": "CodeSandbox is a cloud development platform that empowers developers to code, collaborate and ship projects of any size from any device in record time.",
       "image": "https://codesandbox.io/new/images/og.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
@@ -29,7 +29,7 @@
     "https://github.com/facebook/prop-types": {
       "title": "GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
       "description": "Runtime type checking for React props and similar objects - GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
-      "image": "https://opengraph.githubassets.com/77d98fac9c050f9407aa54753d827f118bd1ceffb9fcae92b91e132e1f69cab8/facebook/prop-types",
+      "image": "https://opengraph.githubassets.com/056958c4ad100a4526d5d8b47fcd784d1c1184ff3ba869dd4da5171a161bb22e/facebook/prop-types",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/facebook/react/blob/main/packages/eslint-plugin-react-hooks/README.md": {
@@ -41,13 +41,13 @@
     "https://github.com/gsoft-inc/craco": {
       "title": "GitHub - dilanx/craco: Create React App Configuration Override, an easy and comprehensible configuration layer for Create React App.",
       "description": "Create React App Configuration Override, an easy and comprehensible configuration layer for Create React App. - GitHub - dilanx/craco: Create React App Configuration Override, an easy and comprehen...",
-      "image": "https://opengraph.githubassets.com/e4b25f219e9f94755017984a9ed0c334ff570c0549de7458e7c09fe96c923054/dilanx/craco",
+      "image": "https://opengraph.githubassets.com/8d6f12d032f59c2b44fbdcb684e04896db57b8516d142fba5fc9ad7eeee5dd4d/dilanx/craco",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/wojtekmaj/react-lifecycle-methods-diagram": {
       "title": "GitHub - wojtekmaj/react-lifecycle-methods-diagram: Interactive React Lifecycle Methods diagram.",
       "description": "Interactive React Lifecycle Methods diagram. Contribute to wojtekmaj/react-lifecycle-methods-diagram development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/70b1a207ad90e4d57d7c02e2191eb4f65ddf2f563525e09658fb5096a5847bca/wojtekmaj/react-lifecycle-methods-diagram",
+      "image": "https://opengraph.githubassets.com/1658529592c6b7d3946e28c5c17349e3f805753e21aae2b24efa8c4581004b2f/wojtekmaj/react-lifecycle-methods-diagram",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://ikesyo.hatenablog.com/entry/2020/12/18/141737": {
@@ -119,7 +119,7 @@
     "https://stackblitz.com": {
       "title": "StackBlitz | Instant Dev Environments | Click. Code. Done. - StackBlitz",
       "description": "",
-      "image": "https://c.staticblitz.com/assets/social_general-46c72e351133f2b4d1352d8d870ce851ab16a59b0b2f10e41e11e036a88b7273.jpg",
+      "image": "https://c.staticblitz.com/assets/social_general-7010bd1a6c30b52e72ddaf60ea7c233dce627140e735b17f61787647f1d1738f.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://stackblitz.com"
     }
   },
@@ -257,7 +257,7 @@
     "https://github.com/toshimaru/jekyll-toc": {
       "title": "GitHub - toshimaru/jekyll-toc: Jekyll plugin which generates a table of contents.",
       "description": "Jekyll plugin which generates a table of contents. - GitHub - toshimaru/jekyll-toc: Jekyll plugin which generates a table of contents.",
-      "image": "https://opengraph.githubassets.com/0a6ccaee1bf674cf8a9231aa1d3a854c2a20da0e57b0265e5ddb3d030c19c158/toshimaru/jekyll-toc",
+      "image": "https://opengraph.githubassets.com/c638e58701323fdd35fe299d5fd6c6b58b271262ef352fd3f57b907143126a7d/toshimaru/jekyll-toc",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
@@ -277,7 +277,7 @@
     "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint": {
       "title": "ESLint - Visual Studio Marketplace",
       "description": "Extension for Visual Studio Code - Integrates ESLint JavaScript into VS Code.",
-      "image": "https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.4.2/1687441427519/Microsoft.VisualStudio.Services.Icons.Default",
+      "image": "https://dbaeumer.gallerycdn.vsassets.io/extensions/dbaeumer/vscode-eslint/2.4.4/1705910560908/Microsoft.VisualStudio.Services.Icons.Default",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://marketplace.visualstudio.com"
     },
     "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode": {
@@ -294,7 +294,7 @@
     },
     "https://prettier.io/docs/en/configuration.html": {
       "title": "Configuration File · Prettier",
-      "description": "Prettier uses [lilconfig](https://github.com/antonk52/lilconfig) for configuration file support. This means you can configure Prettier via (in order of precedence):",
+      "description": "You can configure Prettier via (in order of precedence):",
       "image": "https://prettier.io/icon.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
     }
@@ -302,7 +302,7 @@
   "2019-10-24-docker-react-swagger": {
     "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi/related?hl=ja": {
       "title": "React Developer Tools",
-      "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision ef8a840bd on 10/25/2023.",
+      "description": "Adds React debugging tools to the Chrome Developer Tools.\n\nCreated from revision 993c4d003 on 12/5/2023.",
       "image": "https://lh3.googleusercontent.com/TNijZW_Gp9MZ3eqXkve0YWDEiHV-a2IpSpD6IJzrV3Y76GJcLEyzX2regTLemXzBHbHVqkKuxnnWDT34Cp4sNh-Y=w128-h128-e365-rj-sc0x00ffffff",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
     },
@@ -340,7 +340,7 @@
     },
     "https://support.google.com/adsense/answer/7532444?hl=ja": {
       "title": "ads.txt に関するガイド - Google AdSense ヘルプ",
-      "description": "ads.txt による認定デジタル販売者（Authorized Digital Sellers）の宣言は IAB Tech Lab によるイニシアチブで、コンテンツ内のデジタル広告枠が、そのコンテ ",
+      "description": "ads.txt による認定デジタル販売者（Authorized Digital Sellers）の宣言は IAB Tech Lab によるイニシアチブで、コンテンツ内のデジタル広告枠が、そのコンテンツのパブリッシャーが認定した販売者（AdSense など）を通してのみ販売されるようにするものです。パブリッシャー様は ads.txt を独自に作成することで、自サイトの広告枠の販売者を厳密に管理し、偽",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://support.google.com"
     },
@@ -369,7 +369,7 @@
     "https://github.com/jekyll/jekyll-sitemap": {
       "title": "GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site",
       "description": "Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site - GitHub - jekyll/jekyll-sitemap: Jekyll plugin to silently generate a sitemaps.org compliant sitemap for yo...",
-      "image": "https://opengraph.githubassets.com/2224cbccf889d9ae50754cc526b134317ffcfbd2ffd4428ca2cae0ee02485292/jekyll/jekyll-sitemap",
+      "image": "https://opengraph.githubassets.com/48a481dc2f749492f45b6557e01b619c2a17a525250b9e7e64bfcd05002e6a9c/jekyll/jekyll-sitemap",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://search.google.com/search-console/about?hl=ja": {
@@ -389,7 +389,7 @@
     "https://apps.apple.com/jp/app/expo-client/id982107779": {
       "title": "Expo Go",
       "description": "Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/2e/34/d1/2e34d152-0f11-064d-5dc2-a762f8e24b70/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/72/7c/91/727c9141-888d-3ba7-fea0-687917c9e406/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
     },
     "https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMhT4FlcbucI9A6orIx6JaS8MGdt-v1Pj7FM3rTiPk6l9J7pSnvrWaBoCf9cQAvD_BwE&gclsrc=aw.ds": {
@@ -401,7 +401,7 @@
     "https://expo.io": {
       "title": "Expo",
       "description": "Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.",
-      "image": "https://static.expo.dev/static/brand/square-512x512.png",
+      "image": "https://static.expo.dev/static/share/generic.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://expo.io"
     },
     "https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja": {
@@ -433,13 +433,13 @@
     "https://github.com/nodenv/nodenv": {
       "title": "GitHub - nodenv/nodenv: Manage multiple NodeJS versions.",
       "description": "Manage multiple NodeJS versions. Contribute to nodenv/nodenv development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/56c8089746cd3126cdf873ded11e8dd897c24e81c0ee1c944b885071daed562b/nodenv/nodenv",
+      "image": "https://opengraph.githubassets.com/6a597de1a94a4f44590a70e73cb6fb870f916148919f455f9e397a7fe6406ac5/nodenv/nodenv",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/znz/anyenv-update": {
       "title": "GitHub - znz/anyenv-update: anyenv plugin that provides `anyenv update` command to update all **env and all plugins",
       "description": "anyenv plugin that provides `anyenv update` command to update all **env and all plugins - GitHub - znz/anyenv-update: anyenv plugin that provides `anyenv update` command to update all **env and all...",
-      "image": "https://opengraph.githubassets.com/7837bf4d291024bd45e2fa14759d3cc0bd15f3d11462b87efcb39135986cc1b6/znz/anyenv-update",
+      "image": "https://opengraph.githubassets.com/64a477d647444dc7a8316f2a7c41858236fab0dab3a4a680f05ecf58e03db0d9/znz/anyenv-update",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://ja.wikipedia.org/wiki/Windows_Subsystem_for_Linux": {
@@ -453,13 +453,13 @@
     "https://apps.apple.com/jp/app/expo-client/id982107779": {
       "title": "Expo Go",
       "description": "Start building projects using web technologies with just your iOS device and your computer. Expo is a developer tool for creating experiences with interactive gestures and graphics using JavaScript and React.\n\nNote: some programming experience is recommended.\nTechnical specs: this version of Expo us…",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/2e/34/d1/2e34d152-0f11-064d-5dc2-a762f8e24b70/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/72/7c/91/727c9141-888d-3ba7-fea0-687917c9e406/AppIcon-0-0-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
     },
     "https://expo.io": {
       "title": "Expo",
       "description": "Expo is an open-source platform for making universal native apps for Android, iOS, and the web with JavaScript and React.",
-      "image": "https://static.expo.dev/static/brand/square-512x512.png",
+      "image": "https://static.expo.dev/static/share/generic.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://expo.io"
     },
     "https://play.google.com/store/apps/details?id=host.exp.exponent&hl=ja": {
@@ -653,7 +653,7 @@
     "https://www.netlify.com/": {
       "title": "Scale & Ship Faster with a Composable Web Architecture | Netlify",
       "description": "Realize the speed, agility and performance of a scalable, composable web architecture with Netlify. Explore the composable web platform now!",
-      "image": "https://www.netlify.com/images/og-image-default.png",
+      "image": "https://cdn.sanity.io/images/o0o2tn5x/marketing/19d95d00d7f79b8b4340dc6ca183ac5456f1a095-1200x630.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.netlify.com"
     }
   }
