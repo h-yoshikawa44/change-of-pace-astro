@@ -44,7 +44,7 @@
   "devDependencies": {
     "@types/markdown-it": "^13.0.7",
     "@types/mdast": "^4.0.3",
-    "@types/sanitize-html": "^2.9.4",
+    "@types/sanitize-html": "^2.11.0",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
     "@unocss/astro": "^0.58.5",
