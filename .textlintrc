@@ -11,7 +11,6 @@
   },
   "rules": {
     "preset-ja-technical-writing": {
-      "no-exclamation-question-mark": false,
       "ja-no-mixed-period": {
         "allowPeriodMarks": [
           "."
@@ -23,6 +22,13 @@
           "/ほど/i",
           "/では/i"
         ]
+      },
+      "no-exclamation-question-mark": false,
+      "no-mix-dearu-desumasu": {
+        "preferInHeader": "",
+        "preferInBody": "ですます",
+        "preferInList": "",
+        "strict": false
       }
     }
   }

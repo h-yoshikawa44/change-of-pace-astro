@@ -7,8 +7,8 @@
 ## 技術構成
 - TypeScript：5.2.2
 - Node.js：20.9.0
-- Astro：3.5.5
-- UnoCSS：0.57.6
+- Astro：4.3.5
+- UnoCSS：0.58.5
 
 ## 環境変数
 テンプレファイルをコピーして、値を入れる
@@ -16,7 +16,7 @@
 cp .env.example .env
 ```
 
-- PUBLIC_GOOGLE_ANALYTICS_TAG：`G-`から始まる ID
+- GOOGLE_ANALYTICS_TAG：`G-`から始まる ID
 - GOOGLE_SITE_VERIFICATION
 - PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID：`ca-`から始まる ID
 - PUBLIC_GOOGLE_ADSENSE_SLOT
