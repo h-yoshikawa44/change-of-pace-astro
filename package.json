@@ -30,7 +30,7 @@
     "@iconify-json/logos": "^1.1.38",
     "@iconify-json/system-uicons": "^1.1.9",
     "@iconify-json/teenyicons": "^1.1.6",
-    "@unocss/reset": "^0.57.6",
+    "@unocss/reset": "^0.58.5",
     "astro": "^4.3.5",
     "cheerio": "^1.0.0-rc.12",
     "markdown-it": "^13.0.2",
@@ -38,7 +38,7 @@
     "remark-breaks": "^4.0.0",
     "remark-flexible-code-titles": "^1.1.4",
     "sanitize-html": "^2.11.0",
-    "sass": "^1.69.5",
+    "sass": "^1.70.0",
     "wicg-inert": "^3.1.2"
   },
   "devDependencies": {
@@ -47,9 +47,9 @@
     "@types/sanitize-html": "^2.9.4",
     "@typescript-eslint/eslint-plugin": "^6.11.0",
     "@typescript-eslint/parser": "^6.11.0",
-    "@unocss/astro": "^0.57.6",
-    "@unocss/autocomplete": "^0.57.6",
-    "@unocss/eslint-config": "^0.57.6",
+    "@unocss/astro": "^0.58.5",
+    "@unocss/autocomplete": "^0.58.5",
+    "@unocss/eslint-config": "^0.58.5",
     "eslint": "^8.54.0",
     "eslint-plugin-astro": "^0.29.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
@@ -67,7 +67,7 @@
     "textlint-rule-preset-ja-technical-writing": "^8.0.0",
     "unified": "^11.0.4",
     "unist-util-visit": "^5.0.0",
-    "unocss": "^0.57.6"
+    "unocss": "^0.58.5"
   },
   "volta": {
     "node": "20.9.0"
