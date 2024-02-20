@@ -3,7 +3,7 @@
 
 import { writeFileSync, readFileSync } from 'node:fs';
 
-const postYearList = ['2018', '2019', '2020', '2021', '2022', '2023'];
+const postYearList = ['2018', '2019', '2020', '2021', '2022', '2023', '2024'];
 
 /**
  * オブジェクトの中身をキーをもとに並び替えしたものを返す
