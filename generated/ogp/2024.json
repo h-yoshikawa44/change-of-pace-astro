@@ -6,6 +6,12 @@
       "image": "https://media.connpass.com/thumbs/7f/d6/7fd6b69909e887863434963587c414bc.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://autifyjapan.connpass.com"
     },
+    "https://blog.zoe.tools/entry/2024/02/25/213000": {
+      "title": "Developers Summit 2024にて『良いプロダクト作りのための組織育成』について話してきました #devsumi - 暇を持て余せないzoeのblog",
+      "description": "2024/02/16にベルサール羽田でデブサミに登壇してきました！ とても緊張しましたが、登壇もカンファレンス自体もとても楽しかったです。 この記事では、今回のこの登壇について掘り下げて書きます。（登壇セッションは「良いプロダクト作りのための組織育成（理論＆実践編） 健全なコードは健全な組織、健全なチームから」） 登壇してるzoe Developers Summit とは 登壇の経緯 登壇内容について 登壇後や懇親会 登壇後の振り返り おわりに Developers Summit とは 翔泳社さんが主催する国内でも最大級のカンファレンスで、幅広いエンジニアが集まるイベントになっています。 De…",
+      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/z/zoe302/20240225/20240225200438.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.zoe.tools"
+    },
     "https://book.alc.co.jp/book/b10030714.html": {
       "title": "チームを動かすIT英語実践マニュアル - アルク出版サイト 英語学習・語学教育の総合カンパニー",
       "description": "チームを動かすIT英語実践マニュアル詳細をご覧いただけます。",
@@ -17,6 +23,12 @@
       "description": "質の高いテストを行い、ソフトウェアに価値をもたらそう！",
       "image": "https://book.mynavi.jp//files/topics/134252_ext_06_0.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://book.mynavi.jp"
+    },
+    "https://codezine.jp/article/detail/19069": {
+      "title": "ITエンジニア本大賞 2024、技術書部門とビジネス書部門の大賞が決定！　プレゼン大会をレポート",
+      "description": "　ITエンジニアにおすすめしたい本を選ぶイベント「ITエンジニア本大賞 2024」（主催：翔泳社）の最終プレゼン大会が2月15日（木）に開催され、技術書部門の大賞にManaさんの『1冊ですべて身につくJavaScript入門講座』（SBクリエイティブ）、ビジネス書部門にラファエル・ヴィアナさんの『チームを動かすIT英語実践マニュアル』（アルク）が選ばれました。",
+      "image": "https://codezine.jp/static/images/article/19069/19069_share.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codezine.jp"
     },
     "https://developers.prtimes.jp/2024/02/20/devsumi2024/": {
       "title": "Developers Summit 2024に登壇してレガシー改善について話しました #devsumi | PR TIMES 開発者ブログ",
@@ -52,6 +64,18 @@
       "title": "デブサミ2024で喋ってきました！｜ariaki",
       "description": "Developers Summit 2024で発表する機会をいただき、#技書博 とコミュニティ参加にまつわる話をしました。  \n\n\n16-E-9 オフラインカンファレンス復活！イベント現地参加の魅力を語りつくすリレーセッション | Developers Summit 2024（2024.02.15-16）\n\n\n\n\n\nevent.shoeisha.jp\n\n\n\n \n リレーセッションということで5つのコミュニティがそれぞれ10分ずつ”オフラインイベント”の魅力を語るというテーマで喋りました。いろんな視点での話があり、コミュニティを運営されている方が普段どんなことを考えたり気をつけているのか",
       "image": "https://assets.st-note.com/production/uploads/images/131401815/rectangle_large_type_2_fb9a28ca6aa069f861ba0127f3ec725e.jpeg?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://note.com/masuipeo/n/n311e395f86b7": {
+      "title": "『「技術書」の読書術』がITエンジニア本大賞2024で特別賞をいただきました｜masuipeo",
+      "description": "先週2/15に開催されたDevelopers Summitにて「ITエンジニア本大賞」のプレゼン大会が実施されました。 『「技術書」の読書術』が技術書部門の上位3冊に選出されたこともあり、共著者のIPUSIRONさんとプレゼン大会で発表してきましたのでご報告です。 \n プレゼン大会前の会場  今回のDevelopers Summitはベルサール羽田空港で開催されました。 羽田空港は何度も利用しているものの、このベルサール羽田空港がある羽田エアポートガーデンは初めての訪問でワクワク。 テーマは「人と技術のターミナル」 そして、このプレゼン大会前に、新刊『実務で使える メール技術の教科書』",
+      "image": "https://assets.st-note.com/production/uploads/images/131470588/rectangle_large_type_2_271c1e6078ea56c26f9ca0601dc64a97.jpeg?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://note.com/papanda0806/n/n94738932a366": {
+      "title": "その帰り道で、一人何を思うか？｜市谷 聡啓 (papanda)",
+      "description": "　デブサミに登壇した。  \n\n\nDevelopers Summit 2024（2024.02.15-16）\n\n\nDevelopers Summit 2024は、2月15-16日にベルサール羽田空港で開催！Developers Summ\n\n\nevent.shoeisha.jp\n\n\n\n \n 　2020年以来のリアル開催ということで、久々の場だった。今回はいつもの雅叙園ではなく、羽田空港。その場の違いがかえって20年前の初回、デブサミ2003を思い起こさせてくれた。  \n\n\nDevelopers Summit 2003\n\n\n\n\n\ncodezine.jp\n\n\n\n \n 　デブサミには他のカンファ",
+      "image": "https://assets.st-note.com/production/uploads/images/131121302/rectangle_large_type_2_39ea6ad7d5c9fb1b10cf8e5f1ccc5826.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://speakerdeck.com/10xinc/shift-left-and-shift-right": {
@@ -214,6 +238,18 @@
       "title": "開発者こそ幸せたれ!クラウドネイティブ時代の開発を支えるPlatform Engineeringのススメ / Developers Summit Platform Engineering Practice",
       "description": "Developers Summit.mov",
       "image": "https://files.speakerdeck.com/presentations/43a36e2f378b434b8f013c5e8aff098a/slide_0.jpg?28974601",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/takaakiouchi/developers-summit-2024-16-b-9-necda-nei-xiao-ming-zu-zhi-toren-todetatosheng-cheng-aidepurosesubian-ge-wo": {
+      "title": "【Developers Summit 2024】16-B-9_NEC大内孝明_組織と人とデータと生成AIでプロセス変革を！",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/6ceb816837c2463f97a05c43a188d324/slide_0.jpg?29033638",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/takayasu/enzinianocheng-chang-tosorewozhi-eruzu-zhi-nokao-efang": {
+      "title": "エンジニアの成長とそれを支える組織の考え方",
+      "description": "Developers Summit（デブサミ）2024 にて講演させていただいた資料です。\nhttps://event.shoeisha.jp/devsumi/20240215/session/4774\n",
+      "image": "https://files.speakerdeck.com/presentations/d58bb0409e7b45ae9462b7714ba7e2c4/slide_0.jpg?29032489",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/terapyon/pycon-apacnogui-ji": {
