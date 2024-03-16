@@ -10,11 +10,13 @@ tags: ["サーバレス", "Slack", "Google Apps Script"]
 前回、テスト投稿ができました。
 次はスプレッドシートからメンバー情報を読み取り、そのメンバーの中からランダムで掃除当番を決めて通知するようにしていきますー。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
+
 ## 事前準備
 ### スプレッドシート側
 こんな感じで簡易的にメンバー表を作成してみました。
 今後、複数グループで当番決めをしたいので、一旦 A グループとしています。
-<img src="/screenshots/2018/cleaning-duty/group-list.png" width="100%" alt="グループ表" />
+<ImageWrapper src="screenshots/2018/cleaning-duty/group-list.png" alt="グループ表" />
 
 ## 実装
 ### GAS 側
@@ -103,7 +105,7 @@ function random(length) {
 
 さすがに3回連続はキレられますね(笑)
 
-<img src="/screenshots/2018/cleaning-duty/notification-1.png" width="70%" alt="Slack投稿結果" />
+<ImageWrapper class="w-[70%]" src="screenshots/2018/cleaning-duty/notification-1.png" alt="Slack投稿結果" />
 
 
 ## リファクタ

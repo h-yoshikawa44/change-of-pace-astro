@@ -10,11 +10,13 @@ tags: ["サーバレス", "Slack", "Google Apps Script"]
 前回までで、1つのグループ内でランダムに当番決め + 通知 ができました。
 今回は、これを複数グループ対応にしていきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
+
 ## 事前準備
 ### スプレッドシート側
 こんな感じで5グループにしてみました。
 人数も増やしています。
-<img src="/screenshots/2018/cleaning-duty/five-group-list.png" width="100%" alt="グループ表" />
+<ImageWrapper src="screenshots/2018/cleaning-duty/five-group-list.png" alt="グループ表" />
 
 ## 実装
 ※2019/12/29 再代入しない変数の宣言を const に修正しました。
@@ -150,15 +152,14 @@ const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('グループ
 エラーメッセージがあることで、修正もしやすいです。
 
 ### 実行結果
-<img src="/screenshots/2018/cleaning-duty/notification-2.png" width="70%" alt="Slack投稿結果" />
+<ImageWrapper class="w-[70%]" src="screenshots/2018/cleaning-duty/notification-2.png" alt="Slack投稿結果" />
 
 こんな感じになりましたー。
 複数グループでの当番決めも、なんとかできました。
 （前回と違い、メンバー名のところが敬称略形式になっていますが、そこは突っ込まないでください...）
 
 ちなみに bot の名称とアイコンが変わっていますが、これは`Incoming Webhook`の設定から変更可能です。
-<img src="/screenshots/2018/cleaning-duty/icon-name-setting.png" width="80%" alt="webhook設定画面" />
-
+<ImageWrapper class="w-[80%]" src="screenshots/2018/cleaning-duty/icon-name-setting.png" alt="webhook設定画面" />
 
 ※ちなみに JSON ペイロードに渡すパラメータとして、以下のように指定して、設定を上書きもできるそうです。
 ```javascript
