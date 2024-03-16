@@ -1,0 +1,31 @@
+---
+import type { ImageMetadata } from 'astro';
+import { Image } from 'astro:assets';
+import type { ComponentProps } from 'astro/types';
+
+type Props = ComponentProps<typeof Image>;
+
+const { src, ...props } = Astro.props;
+
+const isLocalImg = typeof src === 'string' && !src.startsWith('http');
+const localImages = import.meta.glob<{ default: ImageMetadata }>(
+  '/src/assets/**/*.{jpeg,jpg,png,gif}',
+);
+
+const optimalSrc = (() => {
+  if (!isLocalImg) return src;
+
+  const localImagePath = `/src/assets/${src}`;
+  if (!localImages[localImagePath]) {
+    throw new Error(
+      `"${src}" does not exist in glob: "src/assets/**/*.{jpeg,jpg,png,gif}"`,
+    );
+  }
+  return localImages[localImagePath]();
+})();
+---
+
+{
+  /* ComponentProps を使っているのに、どうしても型が合わないと言われるので苦肉の any */
+}
+<Image {...props as any} src={optimalSrc} />
