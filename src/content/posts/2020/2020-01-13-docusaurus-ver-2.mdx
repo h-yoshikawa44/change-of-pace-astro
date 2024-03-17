@@ -11,10 +11,11 @@ tags: ["TIL", "JavaScript", "Docusaurus"]
 勉強したことは何かしらメモしたり、記録を残したりすることが多いでしょうが、どうせ後から見直すなら見やすい方がいいですよね。
 ドキュメント化して整理するべく Docusaurus を使ってみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Docusaurus とは？
-<img src="/screenshots/2020/docusaurus-ver-2/docusaurus.png" width="100%" alt="Docusaurus 公式ドキュメント トップ画面" />
+<ImageWrapper src="screenshots/2020/docusaurus-ver-2/docusaurus.png" alt="Docusaurus 公式ドキュメント トップ画面" />
 
 <OG url="https://v1.docusaurus.io" />
 <OG url="https://docusaurus.io" />
@@ -152,7 +153,7 @@ yarn start
 サーバを起動すると、自動でブラウザが立ち上がり、`localhost:3000`が開きます。
 
 以下のような画面が表示されればOKです。
-<img src="/screenshots/2020/docusaurus-ver-2/docusaurus-init-top.png" width="100%" alt="Docusaurus 2系の雛形ドキュメントのトップ画面" />
+<ImageWrapper src="screenshots/2020/docusaurus-ver-2/docusaurus-init-top.png" alt="Docusaurus 2系の雛形ドキュメントのトップ画面" />
 
 ちなみにホットリロードに対応しているので、基本的には変更が即座に反映されます（一部設定はサーバを再起動しないといけないときもありました）
 
@@ -311,7 +312,7 @@ navbar: {
 ```
 
 画面側
-<img src="/screenshots/2020/docusaurus-ver-2/navbar.png" width="100%" alt="ナビゲーションバー" />
+<ImageWrapper src="screenshots/2020/docusaurus-ver-2/navbar.png" alt="ナビゲーションバー" />
 
 ### サイドバー
 sidebars.js に設定があります。
@@ -351,7 +352,7 @@ title: Create a Blog Post
 ```
 
 画面側
-<img src="/screenshots/2020/docusaurus-ver-2/sidebar.png" width="60%" alt="サイドバー" />
+<ImageWrapper class="w-[60%]" src="screenshots/2020/docusaurus-ver-2/sidebar.png" alt="サイドバー" />
 
 階層構造にしたい場合は、以下のように書けば OK。
 
@@ -372,7 +373,7 @@ module.exports = {
 ```
 
 画面側
-<img src="/screenshots/2020/docusaurus-ver-2/sidebar-subcategory.png" width="50%" alt="階層構造にしたサイドバー" />
+<ImageWrapper class="w-[50%]" src="screenshots/2020/docusaurus-ver-2/sidebar-subcategory.png" alt="階層構造にしたサイドバー" />
 
 ### フッター
 docusaurus.config.js の themeConfig のなかに設定があります。
@@ -427,7 +428,7 @@ footer: {
 ```
 
 画面側
-<img src="/screenshots/2020/docusaurus-ver-2/footer.png" width="100%" alt="フッター" />
+<ImageWrapper src="screenshots/2020/docusaurus-ver-2/footer.png" alt="フッター" />
 
 ### URL
 
@@ -496,7 +497,7 @@ docs
 - [Netlifyでブログをデプロイ](develop/2019/02/10/netlify-deploy)
 
 ビルド・デプロイの設定例
-<img src="/screenshots/2020/docusaurus-ver-2/docusaurus-netlify.png" width="80%" alt="Netlifyのビルド設定" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/docusaurus-ver-2/docusaurus-netlify.png" alt="Netlifyのビルド設定" />
 
 これでうまくいっていればデプロイされて、サイトとして閲覧できるようになれるはずです。
 
@@ -570,7 +571,7 @@ yarn run -s textlint --fix (ファイルパス)
 - Textlint: Run（入力時にチェックするか、保存時にチェックするか）
 
 こんな感じで動いてくれるようになります。
-<img src="/screenshots/2020/docusaurus-ver-2/textlint.png" width="100%" alt="VSCode上で動作するTextlint" />
+<ImageWrapper src="screenshots/2020/docusaurus-ver-2/textlint.png" alt="VSCode上で動作するTextlint" />
 
 ### 設定のカスタマイズ
 今回使用している`textlint-rule-preset-ja-technical-writing`は複数のルールから構成されており、ルールそれぞれのカスタマイズが可能です。
