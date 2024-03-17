@@ -114,7 +114,7 @@ const App: VFC = () => {
 export default App;
 ```
 
-<ImageWrapper class="w-[80%]" src="gifs/2020/react-router/router-standard.gif" alt="React Routerの基本動作GIF" />
+<ImageWrapper className="w-[80%]" src="gifs/2020/react-router/router-standard.gif" alt="React Routerの基本動作GIF" />
 
 ### ルーティングに必要なものを import
 使用するコンポーネントを import します。
@@ -299,7 +299,7 @@ const Home: VFC = () => {
 export default Home;
 ```
 history オブジェクトの中身（history.push で /about に遷移した後の例）
-<ImageWrapper class="w-[70%]" src="screenshots/2020/react-router/history.png" alt="コンソールに出力したhistoryオブジェクトの内容" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/react-router/history.png" alt="コンソールに出力したhistoryオブジェクトの内容" />
 
 あくまで処理の中でブラウザ履歴の操作をしているので、場合によっては、ユーザから見てクリックするまで挙動がわからない。遷移なのに別タブで開くことができない。となってしまう可能性があります。
 特定の要素をクリックで遷移させたい時は、`Link`コンポーネントの使用も検討してみましょう。
@@ -365,10 +365,10 @@ const Users: VFC = () => {
 export default Users
 ```
 location オブジェクトの中身
-<ImageWrapper class="w-[70%]" src="screenshots/2020/react-router/location.png" alt="コンソールに出力したlocationオブジェクトの内容" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/react-router/location.png" alt="コンソールに出力したlocationオブジェクトの内容" />
 
 動作
-<ImageWrapper class="w-[80%]" src="gifs/2020/react-router/router-uselocation.gif" alt="useLocationを使用した場合の動作GIF" />
+<ImageWrapper className="w-[80%]" src="gifs/2020/react-router/router-uselocation.gif" alt="useLocationを使用した場合の動作GIF" />
 
 ちなみにクエリパラメータを取り出して扱いたい場合は、`query-string`というライブラリを使うと便利です。
 
@@ -422,7 +422,7 @@ const About: VFC = () => {
 }
 ```
 動作
-<ImageWrapper class="w-[80%]" src="gifs/2020/react-router/router-useparam.gif" alt="usePamramを使用した場合の動作GIF" />
+<ImageWrapper className="w-[80%]" src="gifs/2020/react-router/router-useparam.gif" alt="usePamramを使用した場合の動作GIF" />
 
 ちなみにパスパラメータ定義に`?`をつけると任意パラメータにもできたりします。
 ```tsx
@@ -523,10 +523,10 @@ const App: VFC = () => {
 export default App;
 ```
 match オブジェクトの中身
-<ImageWrapper class="w-[70%]" src="screenshots/2020/react-router/match.png" alt="コンソールに出力したmatchオブジェクトの内容" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/react-router/match.png" alt="コンソールに出力したmatchオブジェクトの内容" />
 
 動作
-<ImageWrapper class="w-[80%]" src="gifs/2020/react-router/router-nest.gif" alt="ネストしたルーティングの動作GIF" />
+<ImageWrapper className="w-[80%]" src="gifs/2020/react-router/router-nest.gif" alt="ネストしたルーティングの動作GIF" />
 
 ## その他の使い方
 ### ルート定義方法の種類

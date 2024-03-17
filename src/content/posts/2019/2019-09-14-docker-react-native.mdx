@@ -37,14 +37,14 @@ React Native で開発をしていく上で Expo を使うと便利です。
 環境構築も比較的楽に行え、アプリの内容を QR コードで発行して簡単に実機確認ができます。
 
 <OG url="https://expo.io" />
-<ImageWrapper class="w-[80%]" src="screenshots/2019/docker-react-native/expo.png" alt="Expoの公式サイト" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/docker-react-native/expo.png" alt="Expoの公式サイト" />
 
 #### Expo アカウントを作成
 1. [expo.io](https://expo.io/)にいき、「Create an account」を選択
 2. e-mail、ユーザ名、パスワードを入力して「Create your account」を選択
 
 #### Expo Client をインストール
-<ImageWrapper class="w-[40%]" src="screenshots/2019/docker-react-native/expo-client.png" alt="Expo ClientのApp Store画面" />
+<ImageWrapper className="w-[40%]" src="screenshots/2019/docker-react-native/expo-client.png" alt="Expo ClientのApp Store画面" />
 
 1. 使用する iOS/Android 端末に App Store / Google Play からインストール
 <OG url="https://apps.apple.com/jp/app/expo-client/id982107779" />
@@ -176,19 +176,19 @@ yarn を使ってパッケージをインストールするか聞かれます。
 ### 起動
 `expo start`もしくは`yarn start`で Expo サーバとして起動。
 しばらくするとQRコードが表示されます。
-<ImageWrapper class="w-[80%]" src="screenshots/2019/docker-react-native/expo-start.png" alt="expo startの画面" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/docker-react-native/expo-start.png" alt="expo startの画面" />
 
 ### Expo Client で実機確認
 表示された QR コードを iOS/Android 端末から読み込むと、Expo Client 起動。ビルド開始。
 なお、注意点として、Expo サーバになる PC と iOS/Android 端末は同じネットワークにつないでいる必要があります。
 しばらくしてビルドが終わると初期ガイドが表示されます。
-<ImageWrapper class="w-[40%]" src="screenshots/2019/docker-react-native/app-guide.png" alt="Expoアプリのガイド" />
+<ImageWrapper className="w-[40%]" src="screenshots/2019/docker-react-native/app-guide.png" alt="Expoアプリのガイド" />
 
 ガイドを消すと、Expo アプリの画面が表示されます。これが実行結果です。
 blank テンプレートを選択したのでシンプルな画面ですね。
 一連の手順で比較的楽に実機確認できました。
 **ただ、ホットリロードがうまく動作していないのか、コードの変更が即座に反映されませんでした。なぜ...。**
-<ImageWrapper class="w-[40%]" src="screenshots/2019/docker-react-native/app-preview.png" alt="Expoアプリの実行画面" />
+<ImageWrapper className="w-[40%]" src="screenshots/2019/docker-react-native/app-preview.png" alt="Expoアプリの実行画面" />
 
 ## 補足
 ### http://localhost:19002

@@ -152,14 +152,14 @@ const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('グループ
 エラーメッセージがあることで、修正もしやすいです。
 
 ### 実行結果
-<ImageWrapper class="w-[70%]" src="screenshots/2018/cleaning-duty/notification-2.png" alt="Slack投稿結果" />
+<ImageWrapper className="w-[70%]" src="screenshots/2018/cleaning-duty/notification-2.png" alt="Slack投稿結果" />
 
 こんな感じになりましたー。
 複数グループでの当番決めも、なんとかできました。
 （前回と違い、メンバー名のところが敬称略形式になっていますが、そこは突っ込まないでください...）
 
 ちなみに bot の名称とアイコンが変わっていますが、これは`Incoming Webhook`の設定から変更可能です。
-<ImageWrapper class="w-[80%]" src="screenshots/2018/cleaning-duty/icon-name-setting.png" alt="webhook設定画面" />
+<ImageWrapper className="w-[80%]" src="screenshots/2018/cleaning-duty/icon-name-setting.png" alt="webhook設定画面" />
 
 ※ちなみに JSON ペイロードに渡すパラメータとして、以下のように指定して、設定を上書きもできるそうです。
 ```javascript
