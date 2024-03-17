@@ -24,6 +24,7 @@ iOS、Android 両方に対応するアプリを作成できる React Native。
 WSL で環境作り直しました。
 → [WSLでReact Native + Expo環境を作ろう](/posts/2019-09-28-wsl-react-native)
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## 前提
@@ -36,14 +37,14 @@ React Native で開発をしていく上で Expo を使うと便利です。
 環境構築も比較的楽に行え、アプリの内容を QR コードで発行して簡単に実機確認ができます。
 
 <OG url="https://expo.io" />
-<img src="/screenshots/2019/docker-react-native/expo.png" width="80%" alt="Expoの公式サイト" />
+<ImageWrapper class="w-[80%]" src="screenshots/2019/docker-react-native/expo.png" alt="Expoの公式サイト" />
 
 #### Expo アカウントを作成
 1. [expo.io](https://expo.io/)にいき、「Create an account」を選択
 2. e-mail、ユーザ名、パスワードを入力して「Create your account」を選択
 
 #### Expo Client をインストール
-<img src="/screenshots/2019/docker-react-native/expo-client.png" width="40%" alt="Expo ClientのApp Store画面" />
+<ImageWrapper class="w-[40%]" src="screenshots/2019/docker-react-native/expo-client.png" alt="Expo ClientのApp Store画面" />
 
 1. 使用する iOS/Android 端末に App Store / Google Play からインストール
 <OG url="https://apps.apple.com/jp/app/expo-client/id982107779" />
@@ -175,19 +176,19 @@ yarn を使ってパッケージをインストールするか聞かれます。
 ### 起動
 `expo start`もしくは`yarn start`で Expo サーバとして起動。
 しばらくするとQRコードが表示されます。
-<img src="/screenshots/2019/docker-react-native/expo-start.png" width="80%" alt="expo startの画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2019/docker-react-native/expo-start.png" alt="expo startの画面" />
 
 ### Expo Client で実機確認
 表示された QR コードを iOS/Android 端末から読み込むと、Expo Client 起動。ビルド開始。
 なお、注意点として、Expo サーバになる PC と iOS/Android 端末は同じネットワークにつないでいる必要があります。
 しばらくしてビルドが終わると初期ガイドが表示されます。
-<img src="/screenshots/2019/docker-react-native/app-guide.png" width="40%" alt="Expoアプリのガイド" />
+<ImageWrapper class="w-[40%]" src="screenshots/2019/docker-react-native/app-guide.png" alt="Expoアプリのガイド" />
 
 ガイドを消すと、Expo アプリの画面が表示されます。これが実行結果です。
 blank テンプレートを選択したのでシンプルな画面ですね。
 一連の手順で比較的楽に実機確認できました。
 **ただ、ホットリロードがうまく動作していないのか、コードの変更が即座に反映されませんでした。なぜ...。**
-<img src="/screenshots/2019/docker-react-native/app-preview.png" width="40%" alt="Expoアプリの実行画面" />
+<ImageWrapper class="w-[40%]" src="screenshots/2019/docker-react-native/app-preview.png" alt="Expoアプリの実行画面" />
 
 ## 補足
 ### http://localhost:19002
@@ -195,16 +196,16 @@ blank テンプレートを選択したのでシンプルな画面ですね。
 ここからシミュレータを起動したりできるみたいです。
 （X Code、Android Studio のインストールや設定が別途必要になるようです）
 末尾にも書いていますが、自分はうまくいきませんでした...。
-<img src="/screenshots/2019/docker-react-native/expo-devtool.png" width="100%" alt="Expo DevTool画面" />
+<ImageWrapper src="screenshots/2019/docker-react-native/expo-devtool.png" alt="Expo DevTool画面" />
 
 ### http://localhost:19001
 HTML が表示されます。
 `expo start`時の表示で Metro Bundler だと書いてありましたが、なんなのかはよくわかってません。
-<img src="/screenshots/2019/docker-react-native/metro-bundler.png" width="100%" alt="metro bundler画面" />
+<ImageWrapper src="screenshots/2019/docker-react-native/metro-bundler.png" alt="metro bundler画面" />
 
 ### http://localhost:19000
 Expo プロジェクトの情報？が表示されます。
-<img src="/screenshots/2019/docker-react-native/expo-server.png" width="100%" alt="Expoサーバの情報" />
+<ImageWrapper src="screenshots/2019/docker-react-native/expo-server.png" alt="Expoサーバの情報" />
 
 ### エミュレータについて(2019/9/18追記)
 自分の環境は Windows なので、Docker 環境の中に Android のエミュレータ環境を作ろうとしましたがうまくいきませんでした...。
