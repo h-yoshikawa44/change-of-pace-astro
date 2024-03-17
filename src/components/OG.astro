@@ -1,4 +1,5 @@
 ---
+import ImageWrapper from '@/components/ImageWrapper.astro';
 import { load } from 'cheerio';
 import { writeFileSync, readFileSync } from 'node:fs';
 
@@ -40,6 +41,7 @@ let title: string = '';
 let description: string = '';
 let image: string = '';
 let favicon: string = '';
+const faviconSize = 256;
 const origin = new URL(url).origin;
 
 if (ogp[fileName] && ogp[fileName][url]) {
@@ -58,7 +60,7 @@ if (ogp[fileName] && ogp[fileName][url]) {
     $("meta[name='description']").attr('content') ??
     '';
   image = $("meta[property='og:image']").attr('content') ?? '';
-  favicon = `https://www.google.com/s2/favicons?sz=${256}&domain=${origin}`;
+  favicon = `https://www.google.com/s2/favicons?sz=${faviconSize}&domain=${origin}`;
 
   if (image && !image.startsWith('http')) {
     image = `${origin}${image}`;
@@ -109,7 +111,13 @@ if (ogp[fileName] && ogp[fileName][url]) {
           )
         }
         <div class="mt-2 flex items-center">
-          <img src={favicon} alt={`${origin} favicon`} width={16} height={16} />
+          <ImageWrapper
+            className="h-[16px] w-[16px]"
+            src={favicon}
+            alt={`${origin} favicon`}
+            width={faviconSize}
+            height={faviconSize}
+          />
           <small class="line-clamp-1 ml-1 whitespace-nowrap text-xs"
             >{origin}</small
           >
@@ -118,10 +126,12 @@ if (ogp[fileName] && ogp[fileName][url]) {
       {
         image && (
           <div class="h-full max-w-[220px] w-[120px] sm:w-inherit">
-            <img
+            <ImageWrapper
+              className="ml-auto mr-auto h-full object-contain"
               src={image}
               alt={`${origin} OGP image`}
-              class="ml-auto mr-auto h-full object-contain"
+              width={1320}
+              height={648}
             />
           </div>
         )
