@@ -11,6 +11,7 @@ Laravel を勉強するために Laradock を使用してみました。
 いろんなサービスの Dockerfile が用意されていますが、まずは最低限の構成でチャレンジ。
 Laradock 便利ー。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## 注意書き（※2021/02/24 追記）
@@ -153,7 +154,7 @@ composer create-project --prefer-dist laravel/laravel ./
 3. 動作確認
 [http://localhost](http://localhost/)にアクセス
 以下の Laravel のトップページが表示されれば OK
-<img src="/screenshots/2019/laravel-laradock/laravel.png" width="50%" alt="Laravelトップ画面" />
+<ImageWrapper class="w-[50%]" src="screenshots/2019/laravel-laradock/laravel.png" alt="Laravelトップ画面" />
 
 ### MySQL の接続設定
 1. Laravel プロジェクトの`.env`を修正
