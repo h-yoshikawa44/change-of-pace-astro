@@ -10,6 +10,7 @@ tags: ["ブログ", "Ruby", "Jekyll"]
 
 以前、当ブログのカテゴリーページにページネーションを導入したのですが、記事化していなかったので、当時の記録を掘り起こしながら導入手順を書いてみます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## 元々あるページネーション
@@ -241,7 +242,7 @@ layout: page
 するとカテゴリーページのページネーションを有効にしたことで、サイドバーのリンクが以下のようになってしまいました。
 ページネーションの各ページまでリンクに出てしまっています。
 
-<img src="/screenshots/2020/jekyll-pagination-v2/category-link.png" width="50%" alt="サイドバーのカテゴリーページへのリンク" />
+<ImageWrapper class="w-[50%]" src="screenshots/2020/jekyll-pagination-v2/category-link.png" alt="サイドバーのカテゴリーページへのリンク" />
 
 なので、_includes/category-links.html ファイルを新たに作成して、以下のような内容で上書きするようにしました。
 これでページネーションの各ページが出なくなります。
