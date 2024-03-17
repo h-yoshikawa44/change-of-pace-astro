@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import ImageWrapper from '@/components/ImageWrapper.astro';
 import { ACCOUNT_LINKS } from '@/consts';
 import '@/styles/markdown.scss';
 ---
@@ -7,7 +8,11 @@ import '@/styles/markdown.scss';
 <BaseLayout title="About" description="h-yoshikawa44の簡易的なプロフィール">
   <h2 class="mb-8 text-2xl font-600">About</h2>
   <div class="flex items-center">
-    <img src="/my-icon.png" alt="h-yoshikawa44のアイコン" width="30%" />
+    <ImageWrapper
+      className="w-[30%]"
+      src="my-icon.png"
+      alt="h-yoshikawa44のアイコン"
+    />
     <div class="ml-8 flex flex-col space-y-3">
       <h3 class="text-xl">よし（h-yoshikawa44）</h3>
       <div class="flex items-center space-x-4">
