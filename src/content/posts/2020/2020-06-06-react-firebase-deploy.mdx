@@ -13,6 +13,7 @@ tags: ["GitHub Actions", "Firebase", "React"]
 ※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/441da9ac75eaeea00537) からの転載です。
   現在は Qiita でなく [Zenn](https://zenn.dev/h_yoshikawa0724/articles/2020-10-06-react-firebase-deploy) の方で更新しています。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## 前提
@@ -26,31 +27,31 @@ import OG from "@/components/OG.astro"
 1. Firebase へアクセス
 
 2. 「使ってみる」「プロジェクトを作成」を選択
-<img src="/screenshots/2020/react-firebase-deploy/firebase.png" width="80%" alt="Firebase トップ画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase.png" alt="Firebase トップ画面" />
 
 3. プロジェクトの作成
     - プロジェクト名を入力 + 利用規約にチェック して「続行」
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-project-name.png" width="80%" alt="Firebaseプロジェクト プロジェクト名入力画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-project-name.png" alt="Firebaseプロジェクト プロジェクト名入力画面" />
     - Google Analytics を有効にして「続行」（※今回は有効にしていますが任意）
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-ga.png" width="80%" alt="Firebaseプロジェクト Google Analytics設定画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-ga.png" alt="Firebaseプロジェクト Google Analytics設定画面" />
     - 連携する Google Analytics アカウントを選択（もしくは新規作成）して「プロジェクトを作成」
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-ga-account.png" width="80%" alt="Firebaseプロジェクト Google Analytics連携設定画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-ga-account.png" alt="Firebaseプロジェクト Google Analytics連携設定画面" />
 
 少し時間がかかりますが、これでプロジェクトが作成されます。
 
 ### アプリを追加
 1. プロジェクトトップから、追加するアプリのプラットフォームの中から「ウェブ」を選択
-<img src="/screenshots/2020/react-firebase-deploy/firebase-project-top.png" width="80%" alt="Firebaseプロジェクト トップ画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-project-top.png" alt="Firebaseプロジェクト トップ画面" />
 
 2. ウェブアプリに Firebase を追加
     - アプリのニックネームを入力 + Firebase Hosting 設定を有効化 して「アプリを登録」
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-add.png" width="80%" alt="Firebaseアプリ追加 基本設定画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-app-add.png" alt="Firebaseアプリ追加 基本設定画面" />
     - Firebase SDK を予約済み URL から使用する場合は、スクリプトを控えておき「次へ」（※予約済み URL については[こちら](#firebase-sdk-の導入)も参照）
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-sdk.png" width="80%" alt="Firebaseアプリ追加 SDKスクリプト案内画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-app-sdk.png" alt="Firebaseアプリ追加 SDKスクリプト案内画面" />
     - Firebase CLI のインストール方法を確認して「次へ」
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-cli-install.png" width="80%" alt="Firebaseアプリ追加 CLIインストール案内画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-app-cli-install.png" alt="Firebaseアプリ追加 CLIインストール案内画面" />
     - Firebase Hosting へのデプロイ方法を確認して「コンソールに進む」
-    <img src="/screenshots/2020/react-firebase-deploy/firebase-app-hosting-deploy.png" width="80%" alt="Firebaseアプリ追加 デプロイ案内画面" />
+    <ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-app-hosting-deploy.png" alt="Firebaseアプリ追加 デプロイ案内画面" />
 
 これで Firebase プロジェクトにウェブアプリが追加されました。
 
@@ -88,7 +89,7 @@ yarn add firebase
 
 #### `.env`を作成
 設定値は Firebase SDK Snippet の「構成」から確認できます。
-<img src="/screenshots/2020/react-firebase-deploy/firebase-sdk.png" width="80%" alt="Firebase SDK Snippet 構成情報画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/react-firebase-deploy/firebase-sdk.png" alt="Firebase SDK Snippet 構成情報画面" />
 
 `.env`の例.
 
@@ -188,14 +189,14 @@ Waiting for authentication...
 認証のための URL が表示されるので、ブラウザでアクセス（Docker を使用しない場合は、恐らく自動でブラウザが開きます）
 
 内容を確認して「許可」
-<img src="/screenshots/2020/react-firebase-deploy/firebase-oauth.png" width="60%" alt="Firebase Googleアカウント認証確認画面" />
+<ImageWrapper class="w-[60%]" src="screenshots/2020/react-firebase-deploy/firebase-oauth.png" alt="Firebase Googleアカウント認証確認画面" />
 
 ```
 ✔  Success! Logged in as XXX@gmail.com
 ```
 無事に認証できると CLI 側はこの表示が出ます。
 また、ブラウザ側では以下のような表示が出ます。
-<img src="/screenshots/2020/react-firebase-deploy/firebase-oauth-complete.png" width="60%" alt="Firebase認証完了画面" />
+<ImageWrapper class="w-[60%]" src="screenshots/2020/react-firebase-deploy/firebase-oauth-complete.png" alt="Firebase認証完了画面" />
 
 #### 連携・初期化処理
 ```bash
