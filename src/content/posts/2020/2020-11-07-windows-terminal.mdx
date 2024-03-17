@@ -10,6 +10,7 @@ tags: ["Windows", "Windows Terminal"]
 Windows で複数のターミナルを立ち上げていると、散らかったり、切り替えが手間だったりしますよね。
 これらを統合するべく、Windows Terminal を使ってみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Windows Terminal とは？
@@ -21,7 +22,7 @@ Microsoft が提供している Windows 向けのターミナルアプリケー�
 つまり、これまではターミナルごとに別々で立ち上げていたのが、Windows Terminal で一元管理できるようになります。
 それぞれのターミナルウィンドウを探す手間も省けて楽です。
 
-<img src="/screenshots/2020/windows-terminal/windows-terminal.png" width="80%" alt="Windows Terminalのウィンドウ" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/windows-terminal/windows-terminal.png" alt="Windows Terminalのウィンドウ" />
 
 ターミナルそれぞれでテーマや配色、フォント、背景などの設定が可能です。
 そのほか、タブの中でさらにウィンドウ分割したり、ショートカットのキーバインディング設定も行うことができるようになっています。
@@ -42,13 +43,13 @@ Microsft Store で `Windows Terminal` で検索。
 （プレビュー版でしか使えない設定もありますが、プレビュー版はあくまで開発中のものであるため、予期しない動作をする可能性があることに注意です）
 
 「入手」でダウンロード。
-<img src="/screenshots/2020/windows-terminal/ms-shop-windows-terminal.png" width="80%" alt="Microsoft StoreのWindows Terminal画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/windows-terminal/ms-shop-windows-terminal.png" alt="Microsoft StoreのWindows Terminal画面" />
 
 ### 起動
 起動すると Windows PowerShell タブがデフォルトとして立ち上がります。
 
 他の各種ターミナルを立ち上げるには、タブ右の ∨ から選択します。
-<img src="/screenshots/2020/windows-terminal/windows-terminal-tab.png" width="80%" alt="Windows Terminalのターミナル（プロファイル）一覧を表示した状態の画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/windows-terminal/windows-terminal-tab.png" alt="Windows Terminalのターミナル（プロファイル）一覧を表示した状態の画面" />
 
 ## Git Bash の追加
 Windows Terminal の初期設定では、以下のものしかありません。
@@ -197,7 +198,7 @@ guid は先ほど取得したものに置き換えてください。
 
 これでターミナルの一覧に Git Bash が追加されていれば OK です。
 
-<img src="/screenshots/2020/windows-terminal/windows-terminal-tab-add.png" width="80%" alt="Windows Terminalのターミナル（プロファイル）一覧にGit Bashが追加された画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2020/windows-terminal/windows-terminal-tab-add.png" alt="Windows Terminalのターミナル（プロファイル）一覧にGit Bashが追加された画面" />
 
 ### 日本語化
 
@@ -457,7 +458,7 @@ source ~/.bash_profile
       </tr>
       <tr>
         <td>tabTitle</td>
-        <td>>カスタムタブのタイトル<br />起動時にシェルに渡すタイトルとして<code>name</code>が置き換えられる</td>
+        <td>カスタムタブのタイトル<br />起動時にシェルに渡すタイトルとして<code>name</code>が置き換えられる</td>
         <td>オプション</td>
         <td>文字列</td>
         <td></td>
