@@ -10,6 +10,7 @@ tags: ["devChallenges"]
 こんにちは、ここ1年コツコツ勉強してよかったなぁなんて思っている、よしです。
 devChallenges というコミュニティの課題を1コース完走したので、さっくりと振り返ってみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ※翻訳は Google 翻訳を使用しています。
@@ -324,7 +325,7 @@ visibility だと transition 制御が効くようです。
 スライドイン/アウトも兼ねるようにしたわけですが、今度はページ初回読み込み時に transition が動作してしまう問題に遭遇。
 本来はメニューボタンの押下で、はじめてスライドイン/アウトが動作するはずですが、それがページ初回読み込み時にも動作してしまうというものです。
 
-<img src="/gifs/2021/devchallenges-responsive-web/transition-bug.gif" width="100%" alt="ページ初回読み込み時にtransitionが動作する現象のGIF" />
+<ImageWrapper src="gifs/2021/devchallenges-responsive-web/transition-bug.gif" alt="ページ初回読み込み時にtransitionが動作する現象のGIF" />
 
 こんな感じで一瞬ちらついてしまいます。
 
