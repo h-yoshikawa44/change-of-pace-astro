@@ -10,6 +10,7 @@ tags: ["開発環境", "Docker", "Ruby", "Rails"]
 Rails チュートリアルを勉強したかったので、Docker 公式を参考に Docker 環境を作成しました。
 その際に少しやり方を変えたのと、いくつかエラーに遭遇したので、そのメモを書いておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## 前提
@@ -158,7 +159,7 @@ Created database 'myapp_test'
 localhost:3000
 ```
 以下のような画面が表示されればOKです。
-<img src="/screenshots/2019/docker-rails/rails.png" width="70%" alt="Railsトップ画面" />
+<ImageWrapper class="w-[70%]" src="screenshots/2019/docker-rails/rails.png" alt="Railsトップ画面" />
 
 ## 遭遇したエラー
 ### ビルドコンテキスト外のファイルを COPY しようとしてエラー
