@@ -11,6 +11,7 @@ tags: ["開発環境", "Docker", "PHP"]
 というか、勉強しないといいかげんヤバい...。
 先日、少々詰まりながらも、なんとか PHP の環境を作ってみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## 自分の Docker 経験
@@ -239,12 +240,12 @@ phpmyadmin のこちらは、環境変数で MySQL へのアクセス情報を�
 
 ### PHP + Nginx
 `localhost:8080`で PHP のインフォメーション画面が表示されればOKです。
-<img src="/screenshots/2019/docker-php/php-info.png" width="100%" alt="PHPインフォメーション画面" />
+<ImageWrapper src="screenshots/2019/docker-php/php-info.png" alt="PHPインフォメーション画面" />
 
 ### PHPMyAdmin
 `localhost:8888`で次のような画面が表示されればOKです。
 docker-compose.yml で記載した環境変数が正しければ、ログインしている状態になるはず。
-<img src="/screenshots/2019/docker-php/php-my-admin.png" width="100%" alt="PHPMyAdmin画面" />
+<ImageWrapper src="screenshots/2019/docker-php/php-my-admin.png" alt="PHPMyAdmin画面" />
 
 ### PDO
 PDO を使用して、データベースにアクセスできるかも確認していきます。
@@ -267,7 +268,7 @@ try {
 ```
 
 `localhost:8080`にアクセスして、以下のようにデータベースから情報が取得できていればOKです。無事 DB にアクセスできています。
-<img src="/screenshots/2019/docker-php/pdo-test.png" width="100%" alt="DBからのデータ表示画面" />
+<ImageWrapper src="screenshots/2019/docker-php/pdo-test.png" alt="DBからのデータ表示画面" />
 
 ---
 たくさんの記事を参考にさせていただきましたが、なんとか PHP 環境を作ることができました。
