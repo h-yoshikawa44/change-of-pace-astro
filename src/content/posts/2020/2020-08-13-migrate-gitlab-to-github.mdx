@@ -10,6 +10,7 @@ tags: ["GitLab", "GitHub"]
 当ブログのソースコードは GitLab で管理していたのですが、普段 GitHub の方を使用することがほとんどなので、先日 GitHub へ移行しました。
 ソースコードのほかに、Issue やマジリクなどの移行できたので、その手順を残しておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## 移行にあたって
@@ -57,7 +58,7 @@ GitHub のデフォルトのラベルに、移行したラベルが追加され�
 ※すみません、移行元のスクショは撮り忘れました...。
 
 移行先
-<img src="/screenshots/2020/migrate-gitlab-to-github/convert-issue.png" width="100%" alt="移行先のGitHub Issue詳細画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/convert-issue.png" alt="移行先のGitHub Issue詳細画面" />
 
 {/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
 
@@ -76,7 +77,7 @@ GitHub のデフォルトのラベルに、移行したラベルが追加され�
 
 この設定が有効になっていると、以下のような代替 Issue が作成されます。
 移行元の Issue の説明が失われてしまいますが、その他の情報は引き継がれるようです。
-<img src="/screenshots/2020/migrate-gitlab-to-github/convert-replacement-issue.png" width="100%" alt="移行先のGitHub （代替）Issue詳細画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/convert-replacement-issue.png" alt="移行先のGitHub （代替）Issue詳細画面" />
 
 #### マジリク
 そのマジリクの状態に応じて、挙動が変わります。
@@ -96,12 +97,12 @@ GitHub のデフォルトのラベルに、移行したラベルが追加され�
 3については以下のような感じです。
 
 移行元
-<img src="/screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-before.png" width="100%" alt="移行元のGitLab マージ済みマジリク一覧画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-before.png" alt="移行元のGitLab マージ済みマジリク一覧画面" />
 
 移行先
-<img src="/screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-after.png" width="100%" alt="移行先のGitHub 変換されたクローズ済みIssue一覧画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-after.png" alt="移行先のGitHub 変換されたクローズ済みIssue一覧画面" />
 
-<img src="/screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-info.png" width="100%" alt="移行先のGitHub 変換されたクローズ済みIssue詳細画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/convert-merge-request-to-issue-info.png" alt="移行先のGitHub 変換されたクローズ済みIssue詳細画面" />
 
 4については、マージ元のブランチはあるが、マージ先との差分がないためにエラーとなってしまうようです。
 何も移行されない問題がありますが、移行スクリプトの設定（`useIssuesForAllMergeRequests`）により、強制的に3と同じ挙動にすることで対応可能です。
@@ -155,14 +156,14 @@ config  description  HEAD  hooks/  info/  objects/  packed-refs  refs/
 プロフィールアイコンのSettings → Access Tokens. から。
 `api`と`read_repository`の scope を持ったトークンを生成し、その値を控えておきます。
 
-<img src="/screenshots/2020/migrate-gitlab-to-github/access-token-gitlab.png" width="100%" alt="GitLabでのアクセストークン設定画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/access-token-gitlab.png" alt="GitLabでのアクセストークン設定画面" />
 
 #### GitHub
 プロフィールアイコンのSettings → Developer settings → Personal access tokens. から。
 「Generate new token」を押すと、アカウントのパスワード入力を求められるので入力。
 `repo`の scope を持ったトークンを生成し、その値を控えておきます。
 
-<img src="/screenshots/2020/migrate-gitlab-to-github/access-token-github.png" width="100%" alt="GitHubでのアクセストークン設定画面" />
+<ImageWrapper src="screenshots/2020/migrate-gitlab-to-github/access-token-github.png" alt="GitHubでのアクセストークン設定画面" />
 
 ### 移行スクリプトの用意
 1. 移行スクリプトのダウンロード
