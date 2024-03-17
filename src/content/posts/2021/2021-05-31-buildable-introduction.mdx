@@ -18,6 +18,7 @@ tags: ["ローコード", "Buildable"]
 **※2024/02/11追記**
 **さらに IntegrationOS というサービス名に変わったっぽい？（[後述追記](#追記20240211時点のサービス)も参照）**
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Buildable とは？
@@ -104,7 +105,7 @@ Clubhouse なんかと同じ感じでしょうか。
 
 ### 料金プラン
 スクショ撮ると大きくなってしまいましたが、執筆時点でこんな感じになっていました。
-<img src="/screenshots/2021/buildable-introduction/pricing.png" width="70%" alt="Buildable - 料金プラン画像" />
+<ImageWrapper class="w-[70%]" src="screenshots/2021/buildable-introduction/pricing.png" alt="Buildable - 料金プラン画像" />
 
 ## Buildable における概念
 ※これ以降、記述する仕様は執筆時点の仕様であることに注意です。
@@ -114,7 +115,7 @@ Clubhouse なんかと同じ感じでしょうか。
 という記述がありますが、要はレシピを作る → API の中身を作る みたいなことです。
 
 作成画面は以下のようになっています（公式チュートリアルで作成するレシピ）
-<img src="/screenshots/2021/buildable-introduction/recipe.png" width="100%" alt="Buildable - レシピ作成画面画像" />
+<ImageWrapper src="screenshots/2021/buildable-introduction/recipe.png" alt="Buildable - レシピ作成画面画像" />
 
 新しくレシピを作成すると、Workstation という環境（テスト環境的なやつ）にエンドポイントが自動で作成されます。
 その中身の処理フローを左側の GUI エディタで操作して作り、処理の詳細を右側のエディタで設定していく感じです。
@@ -208,7 +209,7 @@ Production 環境に関しては、内容確認はできるのですが変更は
 ```
 https://app.buildable.dev/catalog
 ```
-<img src="/screenshots/2021/buildable-introduction/catalog.png" width="100%" alt="Buildable - カタログ画面画像" />
+<ImageWrapper src="screenshots/2021/buildable-introduction/catalog.png" alt="Buildable - カタログ画面画像" />
 
 これが今の仕様なのか謎ですが、一応フィードバックは送っておきました。
 
@@ -222,7 +223,7 @@ https://app.buildable.dev/catalog
 サービスというと外部サービスを連想しそうですが、Buildable においてはデータリソースのことです。
 
 ダッシュボード画面はこんな感じ。
-<img src="/screenshots/2021/buildable-introduction/services.png" width="100%" alt="Buildable - サービス画面画像" />
+<ImageWrapper src="screenshots/2021/buildable-introduction/services.png" alt="Buildable - サービス画面画像" />
 
 デフォルトでは、MongoDB が割り当てられています。
 プロバイダーが Google Cloud とあるので、内部的には GCP が使われてるみたいですね。
@@ -247,7 +248,7 @@ https://app.buildable.dev/catalog
 - WordPress
 
 デフォルトデータベース画面
-<img src="/screenshots/2021/buildable-introduction/services-database.png" width="100%" alt="Buildable - デフォルトデータベース画面画像" />
+<ImageWrapper src="screenshots/2021/buildable-introduction/services-database.png" alt="Buildable - デフォルトデータベース画面画像" />
 
 key を追加するとそのアクションが自動作成され、レシピから利用できるようになります。
 
@@ -268,7 +269,7 @@ key とアクションを作っておくことで、レシピから利用でき�
 試しにデータを作成する API を実行して、デフォルトデータベースを見てみると、一応分けてはくれるみたいでした。
 
 デフォルトデータベースの leads キー のデータ画面
-<img src="/screenshots/2021/buildable-introduction/services-database-data.png" width="100%" alt="Buildable - デフォルトデータベース・key のデータ画面画像" />
+<ImageWrapper src="screenshots/2021/buildable-introduction/services-database-data.png" alt="Buildable - デフォルトデータベース・key のデータ画面画像" />
 
 右上の「Viewing test data」というところを切り替えることで、環境ごとのデータが参照できました。
 ちょっと不思議な感じですね。
@@ -278,7 +279,7 @@ key とアクションを作っておくことで、レシピから利用でき�
 （公式ドキュメントの更新が追いついてないのかも？）
 
 コミュニティ画面
-<img src="/screenshots/2021/buildable-introduction/community.png" width="100%" alt="Buildable - コミュニティ画面画像" />
+<ImageWrapper src="screenshots/2021/buildable-introduction/community.png" alt="Buildable - コミュニティ画面画像" />
 
 コミュニティに公開された、他のユーザのレシピを見ることができます。
 これらのレシピは Fork して、自分のレシピに加えることも出来たりします。
