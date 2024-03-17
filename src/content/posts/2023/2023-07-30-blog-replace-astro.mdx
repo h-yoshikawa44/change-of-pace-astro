@@ -10,6 +10,7 @@ tags: ["ブログ", "Jekyll", "Astro", "UnoCSS"]
 こんにちは、今年の暑さにヘロヘロ気味のよしです。
 昨年、全然手を付けられていなかったブログリプレースをやり遂げたので、この機に当ブログの履歴の振り返りをしてみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 {/* <!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --> */}
@@ -66,7 +67,7 @@ Jekyll の時は公開されているテーマを使用していたので、リ�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/changeofpace-jekyll-desktop.png" width="100%" alt="リプレース前のトップページ - デスクトップ" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-astro-desktop.png"  width="100%" alt="リプレース後のトップページ - デスクトップ" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-jekyll-desktop.png" alt="リプレース前のトップページ - デスクトップ" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-astro-desktop.png" alt="リプレース後のトップページ - デスクトップ" />|
 
 </div>
 
@@ -75,7 +76,7 @@ Jekyll の時は公開されているテーマを使用していたので、リ�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/changeofpace-post-jekyll-desktop.png" width="100%" alt="リプレース前の記事ページ - デスクトップ" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-post-astro-desktop.png"  width="100%" alt="リプレース後の記事ページ - デスクトップ" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-post-jekyll-desktop.png" alt="リプレース前の記事ページ - デスクトップ" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-post-astro-desktop.png" alt="リプレース後の記事ページ - デスクトップ" />|
 
 </div>
 
@@ -87,16 +88,18 @@ Jekyll の時は公開されているテーマを使用していたので、リ�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/changeofpace-jekyll-mobile.png" width="100%" alt="リプレース前のトップページ - モバイル" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-astro-mobile.png"  width="100%" alt="リプレース後のトップページ - モバイル" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-jekyll-mobile.png" alt="リプレース前のトップページ - モバイル" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-astro-mobile.png" alt="リプレース後のトップページ - モバイル" />|
 
 </div>
 
 記事ページ.
 <div class="layout-fixed">
 
+{/* <!-- リプレース前の画像は大きすぎて最適化表示できなかったので、通常の img タグにしてる --> */}
+
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/changeofpace-post-jekyll-mobile.png" width="100%" alt="リプレース前の記事ページ - モバイル" /> | <img src="/screenshots/2023/blog-replace-astro/changeofpace-post-astro-mobile.png"  width="100%" alt="リプレース後の記事ページ - モバイル" />|
+|<img src="/screenshots/2023/blog-replace-astro/changeofpace-post-jekyll-mobile.png" alt="リプレース前の記事ページ - モバイル" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/changeofpace-post-astro-mobile.png" alt="リプレース後の記事ページ - モバイル" />|
 
 </div>
 
@@ -169,10 +172,10 @@ UnoCSS はフレームワークでなく エンジンとなっており、自分
 （なので、デフォルトプリセットを使用しつつ、Tailwind CSS のクラスをメインで使用しています）
 
 Anthony Fu 氏の記事に記載されていたベンチマークに衝撃を受けたのもありましたね。
-<img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2021-10.png" width="100%" alt="2021/10/21のベンチマーク UnoCSSを1として、windicssが195.36倍、Tailwind CSSが251.28倍" />
+<ImageWrapper src="screenshots/2023/blog-replace-astro/unocss-benchmark-2021-10.png" alt="2021/10/21のベンチマーク UnoCSSを1として、windicssが195.36倍、Tailwind CSSが251.28倍" />
 
 （2022/10のものだと、だいぶ縮まっていましたが）
-<img src="/screenshots/2023/blog-replace-astro/unocss-benchmark-2022-10.png" width="100%" alt="2022/10/25のベンチマーク UnoCSSを1として、Tailwind CSSが6.08倍、windiCSSが8.38倍" />
+<ImageWrapper src="screenshots/2023/blog-replace-astro/unocss-benchmark-2022-10.png" alt="2022/10/25のベンチマーク UnoCSSを1として、Tailwind CSSが6.08倍、windiCSSが8.38倍" />
 
 あとはアイコン気軽に使えるのいいなーと思ったのもあります。
 
@@ -284,7 +287,7 @@ Astro においても、カテゴリーと大体やっていることは同じ�
 
 それと、タグ一覧ページで新たに技術アイコンを使いたいなーと思いまして、UnoCSS の Icons preset から SVG Logos を使用するようにしました。ちょっとにぎやかにできましたね。
 
-<img src="/screenshots/2023/blog-replace-astro/changeofpace-tags.png" width="80%" alt="当ブログのタグ一覧表示" />
+<ImageWrapper class="w-[80%]" src="screenshots/2023/blog-replace-astro/changeofpace-tags.png" alt="当ブログのタグ一覧表示" />
 
 UnoCSS の Icons presets は Iconfy がベースになっており、この presets  と使いたい Iconfy のデータソースをインストール。
 `i-logos:react`のように`i-`のプレフィックスがついたクラスを当てるだけで使用できます。
@@ -524,7 +527,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-top-desktop.png" width="100%" alt="リプレース前のトップページ・デスクトップスコア - パフォーマンス：98, ユーザー補助：66, おすすめの方法：100, SEO：90" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-top-desktop.png" width="100%" alt="リプレース後のトップページ・デスクトップスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-top-desktop.png" alt="リプレース前のトップページ・デスクトップスコア - パフォーマンス：98, ユーザー補助：66, おすすめの方法：100, SEO：90" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-top-desktop.png" alt="リプレース後のトップページ・デスクトップスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
 
 </div>
 
@@ -534,7 +537,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-top-mobile.png" width="100%" alt="リプレース前のトップページ・モバイルスコア - パフォーマンス：84, ユーザー補助：66, おすすめの方法：92, SEO：89" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-top-mobile.png" width="100%" alt="リプレース後のトップページ・モバイルスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-top-mobile.png" alt="リプレース前のトップページ・モバイルスコア - パフォーマンス：84, ユーザー補助：66, おすすめの方法：92, SEO：89" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-top-mobile.png" alt="リプレース後のトップページ・モバイルスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
 
 </div>
 
@@ -545,7 +548,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-about-desktop.png" width="100%" alt="リプレース前のaboutページ・デスクトップスコア - パフォーマンス：95, ユーザー補助：74, おすすめの方法：92, SEO：82" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-about-desktop.png" width="100%" alt="リプレース後のaboutページ・デスクトップスコア - パフォーマンス：98, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-about-desktop.png" alt="リプレース前のaboutページ・デスクトップスコア - パフォーマンス：95, ユーザー補助：74, おすすめの方法：92, SEO：82" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-about-desktop.png" alt="リプレース後のaboutページ・デスクトップスコア - パフォーマンス：98, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
 
 </div>
 
@@ -555,7 +558,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-about-mobile.png" width="100%" alt="リプレース前のaboutページ・モバイルスコア - パフォーマンス：75, ユーザー補助：74, おすすめの方法：92, SEO：81" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-about-mobile.png" width="100%" alt="リプレース後のaboutページ・モバイルスコア - パフォーマンス：96, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-about-mobile.png" alt="リプレース前のaboutページ・モバイルスコア - パフォーマンス：75, ユーザー補助：74, おすすめの方法：92, SEO：81" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-about-mobile.png" alt="リプレース後のaboutページ・モバイルスコア - パフォーマンス：96, ユーザー補助：100, おすすめの方法：100, SEO：100" />|
 
 </div>
 
@@ -568,7 +571,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-link-desktop.png" width="100%" alt="リプレース前のリンク多めページ・デスクトップスコア - パフォーマンス：96, ユーザー補助：66, おすすめの方法：92, SEO：100" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-link-desktop.png" width="100%" alt="リプレース後のリンク多めページ・デスクトップスコア - パフォーマンス：87, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-link-desktop.png" alt="リプレース前のリンク多めページ・デスクトップスコア - パフォーマンス：96, ユーザー補助：66, おすすめの方法：92, SEO：100" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-link-desktop.png" alt="リプレース後のリンク多めページ・デスクトップスコア - パフォーマンス：87, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
 
 </div>
 
@@ -578,7 +581,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-link-mobile.png" width="100%" alt="リプレース前のリンク多めページ・モバイルスコア - パフォーマンス：57, ユーザー補助：66, おすすめの方法：100, SEO：94" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-link-mobile.png" width="100%" alt="リプレース後のリンク多めページ・モバイルスコア - パフォーマンス：64, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-link-mobile.png" alt="リプレース前のリンク多めページ・モバイルスコア - パフォーマンス：57, ユーザー補助：66, おすすめの方法：100, SEO：94" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-link-mobile.png" alt="リプレース後のリンク多めページ・モバイルスコア - パフォーマンス：64, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
 
 </div>
 
@@ -589,7 +592,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-image-desktop.png" width="100%" alt="リプレース前の画像多めページ・デスクトップスコア - パフォーマンス：57, ユーザー補助：71, おすすめの方法：100, SEO：100" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-image-desktop.png" width="100%" alt="リプレース後の画像多めページ・デスクトップスコア - パフォーマンス：99, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-image-desktop.png" alt="リプレース前の画像多めページ・デスクトップスコア - パフォーマンス：57, ユーザー補助：71, おすすめの方法：100, SEO：100" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-image-desktop.png" alt="リプレース後の画像多めページ・デスクトップスコア - パフォーマンス：99, ユーザー補助：100, おすすめの方法：92, SEO：100" />|
 
 </div>
 
@@ -599,7 +602,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-image-mobile.png" width="100%" alt="リプレース前の画像多めページ・モバイルスコア - パフォーマンス：41, ユーザー補助：71, おすすめの方法：100, SEO：94" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-image-mobile.png" width="100%" alt="リプレース後の画像多めページ・モバイルスコア - パフォーマンス：85, ユーザー補助：100, おすすめの方法：92, SEO：99" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-image-mobile.png" alt="リプレース前の画像多めページ・モバイルスコア - パフォーマンス：41, ユーザー補助：71, おすすめの方法：100, SEO：94" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-image-mobile.png" alt="リプレース後の画像多めページ・モバイルスコア - パフォーマンス：85, ユーザー補助：100, おすすめの方法：92, SEO：99" />|
 
 </div>
 
@@ -611,7 +614,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-tweet-desktop.png" width="100%" alt="リプレース前のツイート埋め込み多めページ・デスクトップスコア - パフォーマンス：91, ユーザー補助：70, おすすめの方法：100, SEO：100" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-tweet-desktop.png" width="100%" alt="リプレース後のツイート埋め込み多めページ・デスクトップスコア - パフォーマンス：99, ユーザー補助：100, おすすめの方法：83, SEO：100" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-tweet-desktop.png" alt="リプレース前のツイート埋め込み多めページ・デスクトップスコア - パフォーマンス：91, ユーザー補助：70, おすすめの方法：100, SEO：100" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-tweet-desktop.png" alt="リプレース後のツイート埋め込み多めページ・デスクトップスコア - パフォーマンス：99, ユーザー補助：100, おすすめの方法：83, SEO：100" />|
 
 </div>
 
@@ -621,7 +624,7 @@ Astro はその特徴から、そんなに神経使って頑張らなくても�
 
 | Jekyll（リプレース前）| Astro（リプレース後）|
 |-----|-----|
-|<img src="/screenshots/2023/blog-replace-astro/lighthouse-jekyll-tweet-mobile.png" width="100%" alt="リプレース前のツイート埋め込み多めページ・モバイルスコア - パフォーマンス：80, ユーザー補助：70, おすすめの方法：100, SEO：95" /> | <img src="/screenshots/2023/blog-replace-astro/lighthouse-astro-tweet-mobile.png" width="100%" alt="リプレース後のツイート埋め込み多めページ・モバイルスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：83, SEO：98" />|
+|<ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-jekyll-tweet-mobile.png" alt="リプレース前のツイート埋め込み多めページ・モバイルスコア - パフォーマンス：80, ユーザー補助：70, おすすめの方法：100, SEO：95" /> | <ImageWrapper src="screenshots/2023/blog-replace-astro/lighthouse-astro-tweet-mobile.png" alt="リプレース後のツイート埋め込み多めページ・モバイルスコア - パフォーマンス：100, ユーザー補助：100, おすすめの方法：83, SEO：98" />|
 
 </div>
 
