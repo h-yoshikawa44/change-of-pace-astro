@@ -9,6 +9,7 @@ tags: ["ブログ", "Jekyll"]
 
 先日、当ブログに Google Analytics を導入したので、その流れをメモしておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## Google Analytics とは
@@ -30,7 +31,7 @@ Google が提供するアクセス解析ツール。
 
 管理 → トラッキング情報 → トラッキングコードに移動すると、Google Analytics を利用するために必要なトラッキングコードが確認できます。
 ブログ側で埋め込みに使用するのでコピーしておきます。
-<img src="/screenshots/2019/google-analytics/analytics.png" width="100%" alt="トラッキングコード表示画面" />
+<ImageWrapper src="screenshots/2019/google-analytics/analytics.png" alt="トラッキングコード表示画面" />
 ※黒で塗りつぶしている箇所は、トラッキング ID が記載してあります。
 
 ### ブログ側
@@ -64,7 +65,7 @@ Google が提供するアクセス解析ツール。
 自分の場合、ホスティングには Netlify を使用しているため、こちらで設定しました。
 `netlify.toml`というファイルを使用しても設定できるそうなのですが、今回は手動で設定。
 Setting → Build&Deploy → Environment から設定画面に行けます。
-<img src="/screenshots/2019/google-analytics/netlify-environment.png" width="70%" alt="Netlify環境変数設定画面" />
+<ImageWrapper class="w-[70%]" src="screenshots/2019/google-analytics/netlify-environment.png" alt="Netlify環境変数設定画面" />
 
 #### プライバシーポリシー
 Google Analytics を利用する際は、プライバシーポリシーを記載したページの用意が必要になります。
