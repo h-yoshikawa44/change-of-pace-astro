@@ -15,6 +15,7 @@ v4 からどう変わったのか自分でも試すなど、さらっと見て�
 
 ※2023/07/09 MUI の更新に伴い、MUI v5.0系のドキュメント参照したほうが良い部分はリンクを差し替えました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Material UI とは？
@@ -90,7 +91,7 @@ Material Design の枠だけにとらわれない、新たな試みを行って�
 ### ロゴ
 微妙に変わりました。
 
-<img src="/screenshots/2021/material-ui-v5/material-ui-new-logo.png" width="70%" alt="Material UI - ロゴの比較画像" />
+<ImageWrapper class="w-[70%]" src="screenshots/2021/material-ui-v5/material-ui-new-logo.png" alt="Material UI - ロゴの比較画像" />
 （画像は公式ブログ記事より）
 
 > It's basically the same, to keep it familiar – we're keeping the geometrical shape, to resonate with the building blocks idea of the components – however, we're reducing the emphasis on the 3D perspective, stepping away from the notion of elevation that Material Design coined.
@@ -477,7 +478,7 @@ export default BoxSx;
 <OG url="https://v5-0-6.mui.com/system/basics/#performance-tradeoff" />
 
 公式に比較表がありました。
-<img src="/screenshots/2021/material-ui-v5/sx-props-performance.png" width="90%" alt="MUI - sx props のパフォーマンス比較画像" />
+<ImageWrapper class="w-[90%]" src="screenshots/2021/material-ui-v5/sx-props-performance.png" alt="MUI - sx props のパフォーマンス比較画像" />
 
 `sx props`を使用すると、やや速度が落ちるようです。
 それでもほとんどの用途では十分高速であるとされていますが、あまりの多用は控えた方がいいやもしれませんね。
@@ -739,10 +740,10 @@ const CustomizedTextField2 = styled(TextField)({
 実際に適用される CSS を比較するとこんな感じ。
 
 v4 の後者のやり方で適用される CSS
-<img src="/screenshots/2021/material-ui-v5/global-class-v4.png" width="100%" alt="v4でのグローバルクラスカスタマイズで適用されるCSS（Dev Tools）画像" />
+<ImageWrapper src="screenshots/2021/material-ui-v5/global-class-v4.png" alt="v4でのグローバルクラスカスタマイズで適用されるCSS（Dev Tools）画像" />
 
 v5 のやり方で適用される CSS
-<img src="/screenshots/2021/material-ui-v5/global-class-v5.png" width="100%" alt="v5でのグローバルクラスカスタマイズで適用されるCSS（Dev Tools）画像" />
+<ImageWrapper src="screenshots/2021/material-ui-v5/global-class-v5.png" alt="v5でのグローバルクラスカスタマイズで適用されるCSS（Dev Tools）画像" />
 
 {/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
 
@@ -982,7 +983,7 @@ Figma の auto layout に似ている。
 通常の Button コンポーネントを拡張したもので、読み込み中・二度押し防止などの表現もできるようにしたもの。
 
 LoadingButton の例（CircularProgress との組み合わせ）
-<img src="/gifs/2021/material-ui-v5/loading-button.gif" width="70%" alt="LoadingButtonコンポーネントのプレビューGIF" />
+<ImageWrapper class="w-[70%]" src="gifs/2021/material-ui-v5/loading-button.gif" alt="LoadingButtonコンポーネントのプレビューGIF" />
 
 #### Trap Focus(lab)
 <OG url="https://v5-0-6.mui.com/components/trap-focus/" />
@@ -997,7 +998,7 @@ LoadingButton の例（CircularProgress との組み合わせ）
 グリッドではスペースが無駄になってしまうときに活用できる。
 
 Masonry、MasonryItem の例
-<img src="/screenshots/2021/material-ui-v5/masonry.png" width="80%" alt="Masonry、MasonryItemコンポーネントのプレビュー画像" />
+<ImageWrapper class="w-[80%]" src="screenshots/2021/material-ui-v5/masonry.png" alt="Masonry、MasonryItemコンポーネントのプレビュー画像" />
 
 ## MUI X
 <OG url="https://mui.com/x" />
