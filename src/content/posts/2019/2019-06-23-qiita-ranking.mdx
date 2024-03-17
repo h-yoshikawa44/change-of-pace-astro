@@ -12,6 +12,7 @@ Qiitaのアカウントがあると、定期的にいいねランキングがメ
 
 **※追記 現在、当記事で使用していた API は使用できなくなったため、当記事のやり方はできなくなりました。**
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## どうやって投稿する？
@@ -34,7 +35,7 @@ Qiita API をスクレイピングしてランキングデータを構築して�
 ### Webhook
 まずは、Slack に投稿するための Webhook の設定をしていきます。
 下記の`App管理`から設定画面へ。
-<img src="/screenshots/2019/qiita-ranking/slack.png" width="100%" alt="SlackでApp管理に行くまで" />
+<ImageWrapper src="screenshots/2019/qiita-ranking/slack.png" alt="SlackでApp管理に行くまで" />
 
 **Webhookが追加されていない場合**
 ヘッダの`検索`から`webhook`で検索して、`Incoming Webhook`を選択。
@@ -132,7 +133,7 @@ Qiita いいねランキングAPIを使用する際に、実行日当日の日�
 ## 投稿
 上記 GAS スクリプトを実行することで、以下のような投稿になります。
 ちゃんと、タイトルが記事リンクとして作成されています。
-<img src="/screenshots/2019/qiita-ranking/ranking.png" width="70%" alt="Slackにランキング投稿結果" />
+<ImageWrapper class="w-[70%]" src="screenshots/2019/qiita-ranking/ranking.png" alt="Slackにランキング投稿結果" />
 
 GAS は定期実行するようにトリガーの設定ができるので、週に1回投稿するなどもできますよー。
 
