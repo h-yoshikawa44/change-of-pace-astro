@@ -15,6 +15,7 @@ tags: ["開発環境", "WSL", "Android Studio", "JavaScript", "React Native", "E
 
 基本的な作成手順は一緒なので内容が重複するところもありますが、エミュレータに関する記述も少しあわせて書いておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## 前提
@@ -27,13 +28,13 @@ Expo に関する説明は前回も書いたので省略します。
 
 ### Expo アカウントを作成
 <OG url="https://expo.io" />
-<img src="/screenshots/2019/wsl-react-native/expo.png" width="80%" alt="Expoの公式サイト トップ画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2019/wsl-react-native/expo.png" alt="Expoの公式サイト トップ画面" />
 
 1. [expo.io](https://expo.io/)にいき、「Create an account」を選択。
 2. e-mail、ユーザ名、パスワードを入力して「Create your account」を選択。
 
 ### Expo Client をインストール
-<img src="/screenshots/2019/wsl-react-native/expo-client.png" width="40%" alt="Expo ClientのApp Store画面" />
+<ImageWrapper class="w-[40%]" src="screenshots/2019/wsl-react-native/expo-client.png" alt="Expo ClientのApp Store画面" />
 
 1. 使用する iOS/Android 端末に App Store / Google Play からインストール
 <OG url="https://apps.apple.com/jp/app/expo-client/id982107779" />
@@ -140,7 +141,7 @@ npm start
 yarn start
 ```
 しばらくするとQRコードが表示されるとともに、Expo DevTools（localhost:19002）がブラウザで自動的に立ち上がります。
-<img src="/screenshots/2019/wsl-react-native/expo-start.png" width="80%" alt="expo start時のQR表示画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2019/wsl-react-native/expo-start.png" alt="expo start時のQR表示画面" />
 
 ## 動作確認
 ### 実機確認
@@ -148,10 +149,10 @@ Expo サーバ起動時に表示された QR を、iOS/Android 端末で読み�
 
 なお、注意点として、**Expo サーバになる PC と iOS/Android 端末は同じネットワークにつないでいる必要があります。**
 しばらくしてビルドが終わると初期ガイドが表示されます。
-<img src="/screenshots/2019/wsl-react-native/app-guide.png" width="40%" alt="Expoアプリのガイド画面" />
+<ImageWrapper class="w-[40%]" src="screenshots/2019/wsl-react-native/app-guide.png" alt="Expoアプリのガイド画面" />
 
 ガイドを消すと、Expo アプリの画面が表示されます。これが実行結果になります。
-<img src="/screenshots/2019/wsl-react-native/app-preview.png" width="40%" alt="Expoアプリの実行結果画面" />
+<ImageWrapper class="w-[40%]" src="screenshots/2019/wsl-react-native/app-preview.png" alt="Expoアプリの実行結果画面" />
 
 なお、この状態でコードを変更すると、即座に再読み込みが走り画面に反映されます。
 ライブリロードが走っているそうです（ホットリロードとの違いがよくわかってません）
@@ -161,7 +162,7 @@ Windows なので、Android のエミュレータのみを書いておきます�
 
 #### Android Studio のインストール
 <OG url="https://developer.android.com/studio?gclid=CjwKCAjwvpCkBhB4EiwAujULMhT4FlcbucI9A6orIx6JaS8MGdt-v1Pj7FM3rTiPk6l9J7pSnvrWaBoCf9cQAvD_BwE&gclsrc=aw.ds" />
-<img src="/screenshots/2019/wsl-react-native/android-studio.png" width="80%" alt="Android Studioの公式サイト トップ画面" />
+<ImageWrapper class="w-[80%]" src="screenshots/2019/wsl-react-native/android-studio.png" alt="Android Studioの公式サイト トップ画面" />
 
 {/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
 
