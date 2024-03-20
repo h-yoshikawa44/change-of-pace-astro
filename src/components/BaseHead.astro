@@ -10,7 +10,7 @@ export interface Props {
 const canonicalURL =
   Astro.url.pathname === '/'
     ? Astro.site?.origin
-    : new URL(Astro.url.pathname, Astro.site);
+    : new URL(Astro.url.pathname.replace('.html', ''), Astro.site);
 
 const { title, description = SITE_DESCRIPTION } = Astro.props;
 const titleWithSiteTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
