@@ -13,6 +13,7 @@ tags: ["開発環境", "WSL", "HomeBrew", "anyenv"]
 ※この記事は [Qiita](https://qiita.com/h-yoshikawa44/items/15653d08f917ad6e39f8) からの転載です。
 ※2021/04/22追記 またセットアップする機会があったので全体的に少し内容を更新しました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## WSL
@@ -35,7 +36,7 @@ WSL2 の良さはあるでしょうが、どうも WSL2 → Windows のファイ
 2. 下部の方にある関連設定の「プログラムと機能」を選択
 3. 左メニューの「Windows の機能の有効化または無効化」を選択
 4. 機能一覧の中から「Linux 用 Windows サブシステム」にチェックをつけて「OK」
-<img src="/screenshots/2019/wsl-develop/enable-wsl.png" width="60%" alt="Windowsの機能一覧" />
+<ImageWrapper className="w-[60%]" src="screenshots/2019/wsl-develop/enable-wsl.png" alt="Windowsの機能一覧" />
 
 5. 設定の変更が行われた後、Windows を再起動するよう促されるので、再起動する
 

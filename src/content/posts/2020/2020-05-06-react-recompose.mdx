@@ -15,6 +15,7 @@ tags: ["JavaScript", "React"]
 
 ※2022/01/24追記 あくまでライブラリの記事であるとわかりやすくするために、記事タイトルを変更しました（旧：React入門 ～Recompose編～）
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Recompose とは？
@@ -78,7 +79,7 @@ const Component = enhance(({ counter, setCounter }) => {
 export default Component;
 ```
 
-<img src="/gifs/2020/react-recompose/state-counter.gif" width="60%" alt="withStateを使用したカウンターのGIF" />
+<ImageWrapper className="w-[60%]" src="gifs/2020/react-recompose/state-counter.gif" alt="withStateを使用したカウンターのGIF" />
 
 上記では state を扱えるようにする`withState`で、ビュー側であるコンポーネントをラップするようになっています。`withState`で定義した state と state を更新する関数は props に渡されるので、そこから使用できます。
 
@@ -256,7 +257,7 @@ const Component = enhance(({ num1, num2, sum }) => {
 export default Component;
 ```
 
-<img src="/screenshots/2020/react-recompose/map-props.png" width="60%" alt="mapPropsを使ったサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/map-props.png" alt="mapPropsを使ったサンプル画像" />
 
 #### props を追加する：withProps
 現在の props に関数が返すものを追加します。
@@ -285,7 +286,7 @@ const Component = enhance(({ num1, num2, sum }) => {
 export default Component;
 ```
 
-<img src="/screenshots/2020/react-recompose/with-props.png" width="60%" alt="withPropsを使ったサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/with-props.png" alt="withPropsを使ったサンプル画像" />
 
 #### 指定した props が変更された時のみ、props を追加する：withPropsOnChange
 基本的には`withProps`と同じであるものの、こちらは指定した props が変更された場合のみ props の追加が行われます。
@@ -313,10 +314,10 @@ const Component = enhance(({ num, sum }) => {
 export default Component;
 ```
 props に`num`を指定しなかった場合
-<img src="/screenshots/2020/react-recompose/with-props-on-change-no-props.png" width="60%" alt="withPropsOnChangeを使って、propsを指定しなかった場合のサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/with-props-on-change-no-props.png" alt="withPropsOnChangeを使って、propsを指定しなかった場合のサンプル画像" />
 
 props に`num`を指定した場合
-<img src="/screenshots/2020/react-recompose/with-props-on-change.png" width="60%" alt="withPropsOnChangeを使って、propsを指定した場合のサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/with-props-on-change.png" alt="withPropsOnChangeを使って、propsを指定した場合のサンプル画像" />
 
 #### props のデフォルト値を指定する：defaultProps
 React 本体で使用できる`defaultProps`プロパティとほぼ同じことができるものの、厳密には違う模様。
@@ -342,7 +343,7 @@ const Component = enhance(({ text }) => {
 
 export default Component;
 ```
-<img src="/screenshots/2020/react-recompose/default-props.png" width="60%" alt="defaultPropsを使ったサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/default-props.png" alt="defaultPropsを使ったサンプル画像" />
 
 #### props の名前を変更する：renameProp
 第1引数の名称の props を第2引数の名称にリネーム。
@@ -367,7 +368,7 @@ const Component = enhance(({ text, renameText }) => {
 
 export default Component;
 ```
-<img src="/screenshots/2020/react-recompose/rename-prop.png" width="60%" alt="renamePropを使ったサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/rename-prop.png" alt="renamePropを使ったサンプル画像" />
 
 #### 一度に複数の props の名前を変更する：renameProps
 renameProps の複数版。
@@ -396,7 +397,7 @@ const Component = enhance(({ text, renameText, num, renameNum }) => {
 
 export default Component;
 ```
-<img src="/screenshots/2020/react-recompose/rename-props.png" width="60%" alt="renamePropsを使ったサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/rename-props.png" alt="renamePropsを使ったサンプル画像" />
 
 #### 平坦化した props を追加する：flattenProp
 あくまで平坦化した props を追加なので、平坦化の元になった props もそのまま残ります。
@@ -422,7 +423,7 @@ const Component = enhance(({ obj, a, b, c }) => {
 
 export default Component;
 ```
-<img src="/screenshots/2020/react-recompose/flatten-prop.png" width="60%" alt="flattenPropを使ったサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/flatten-prop.png" alt="flattenPropを使ったサンプル画像" />
 
 #### state を追加する：withState
 第1引数に state 名、第2引数に state を更新する関数、第3引数にデフォルト値を指定します。
@@ -449,7 +450,7 @@ const Component = enhance(({ counter, setCounter }) => {
 
 export default Component;
 ```
-<img src="/gifs/2020/react-recompose/state-counter.gif" width="60%" alt="withStateを使用したカウンターのGIF" />
+<ImageWrapper className="w-[60%]" src="gifs/2020/react-recompose/state-counter.gif" alt="withStateを使用したカウンターのGIF" />
 
 #### 関数ハンドラーを追加する：withHandlers
 定義した関数ハンドラーには props が渡されるので、その値を使った処理を記述できます。
@@ -531,7 +532,7 @@ const ComposeComponent = enhance(
 
 export default ComposeComponent;
 ```
-<img src="/gifs/2020/react-recompose/state-handlers-counter.gif" width="60%" alt="withStateHandlersを使用したカウンターのGIF" />
+<ImageWrapper className="w-[60%]" src="gifs/2020/react-recompose/state-handlers-counter.gif" alt="withStateHandlersを使用したカウンターのGIF" />
 
 #### ローカル Reducer を追加する：withReducer
 Action を発行して、そのタイプに応じた状態更新をする Redux ライクな処理を書くことができます。
@@ -604,7 +605,7 @@ const ComposeComponent = enhance(({ text }) => {
 export default ComposeComponent;
 ```
 
-<img src="/screenshots/2020/react-recompose/lifecycle.png" width="60%" alt="lifecycleを使用したサンプル画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/react-recompose/lifecycle.png" alt="lifecycleを使用したサンプル画像" />
 
 ---
 Recompose は業務で使用した経験があったので、記事に起こすのそんなに難しくないと思いきや、思いのほか機能が多かったです（苦笑）

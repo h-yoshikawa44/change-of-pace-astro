@@ -10,6 +10,7 @@ tags: ["JavaScript", "Docusaurus"]
 今年1月に 勉強記録 & ポートフォリオサイト として Docusaurus 製のサイトを作成しました。
 その後、Google Analytics と Google Search Console を導入したので、記事化しておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## はじめに
@@ -61,7 +62,7 @@ gtag.js に対して、analytics.js では Google Analytics にしか対応し�
 
 - すでに他サイト等で導入したことがある場合
 管理画面の左サイドバーの「管理」→ プロパティの「プロパティの作成」から。
-<img src="/screenshots/2020/docusaurus-ver-2-gtag/add-google-analytics.png" width="100%" alt="Google Analyticsの管理設定画面" />
+<ImageWrapper src="screenshots/2020/docusaurus-ver-2-gtag/add-google-analytics.png" alt="Google Analyticsの管理設定画面" />
 
 - 新規登録の場合
 [Google Analytics](https://www.google.com/analytics/web/?hl=ja)の「無料で利用する」から。
@@ -145,7 +146,7 @@ Google Analytics を利用する際は、プライバシーポリシーを記載
 #### サイトを Google Search Console に登録
 - すでに他サイト等で導入したことがある場合
 管理画面の左上のプロパティ（URL など）を選択して「プロパティの追加」から。
-<img src="/screenshots/2020/docusaurus-ver-2-gtag/add-google-search-console.png" width="60%" alt="Google Search Consoleのプロパティ選択画面" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/docusaurus-ver-2-gtag/add-google-search-console.png" alt="Google Search Consoleのプロパティ選択画面" />
 
 - 新規登録の場合
 [Google Search Console](https://search.google.com/search-console/about?hl=ja)にアクセスして、「今すぐ開始」から。

@@ -11,6 +11,7 @@ tags: ["ブログ", "Ruby", "Jekyll"]
 記事が長くなってくると目次ありの方が見やすいですよね。
 Jekyll の記事に目次を追加する方法を調べて、導入してみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## 目次をどうやって導入する？
@@ -133,7 +134,7 @@ kramdown:
 
 これらで生成された目次が以下のようになります（前回の記事の例）
 ↓
-<img src="/screenshots/2019/jekyll-toc/toc.png" width="80%" alt="kramdownの機能で生成した目次の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/jekyll-toc/toc.png" alt="kramdownの機能で生成した目次の例" />
 
 これでいくらか記事が見やすくなりましたね。
 これからもこういったブログ改善をやっていきますー。

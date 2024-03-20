@@ -9,6 +9,8 @@ tags: ["サーバレス", "Slack", "Google Apps Script"]
 
 職場で掃除当番の話が出ていたので、自動で掃除当番を決めて通知してくれる bot がいたらいいのかなぁと思い、ちょっと bot 作成に挑戦してみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
+
 ## 事前準備
 まずは構成を構築していきます。
 （以下、`Google Apps Script`を`GAS`と記述しています）
@@ -16,7 +18,7 @@ tags: ["サーバレス", "Slack", "Google Apps Script"]
 ### 構成図
 大まかな流れはこんな感じ。
 （相変わらずスプレッドシートで図形描画はしづらいですねぇ...）
-<img src="/screenshots/2018/cleaning-duty/architecture.png" width="100%" alt="構成図" />
+<ImageWrapper src="screenshots/2018/cleaning-duty/architecture.png" alt="構成図" />
 
 ### Slack 側
 GAS から Slack に投稿するにあたって、
@@ -28,12 +30,12 @@ Slack 側で bot の投稿をしたいワークスペースとチャンネルを
 #### ワークスペースに Incoming-webhook を設定する
 1. ワークスペースメニュー → その他管理項目 → App管理へ
  （あとからキャプチャを撮ったので、キャプチャ上で投稿されている内容については後から出てきます...）
-<img src="/screenshots/2018/cleaning-duty/incoming-webhook-setting.png" width="60%" alt="Slackの設定からApp管理へ行くまで" />
+<ImageWrapper className="w-[60%]" src="screenshots/2018/cleaning-duty/incoming-webhook-setting.png" alt="Slackの設定からApp管理へ行くまで" />
 
 2. (右上の Menu → )検索へ
 
 3. Incoming webhook で検索し、Incoming webhook を選択し、設定画面へ
-<img src="/screenshots/2018/cleaning-duty/incoming-webhook-search.png" width="60%" alt="アプリ検索画面" />
+<ImageWrapper className="w-[60%]" src="screenshots/2018/cleaning-duty/incoming-webhook-search.png" alt="アプリ検索画面" />
 
 ---
 **※すでに Incoming webhook を追加済みの場合**
@@ -107,7 +109,7 @@ GAS メニューから関数を選択し実行ボタンを押すことで、選�
 
 ### 実行結果
 実行すると指定した Slack のチャンネルに以下のように投稿されます。
-<img src="/screenshots/2018/cleaning-duty/incoming-webHook-test.png" width="80%" alt="Slack投稿結果" />
+<ImageWrapper className="w-[80%]" src="screenshots/2018/cleaning-duty/incoming-webHook-test.png" alt="Slack投稿結果" />
 
 これで投稿ができるようになりました。
 今度は、投稿内容を変えていきましょうー。

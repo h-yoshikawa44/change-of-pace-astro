@@ -10,6 +10,7 @@ tags: ["TypeScript", "React", "React Query", "PHP", "Laravel", "Socialite"]
 以前、React × Laravel で簡易なログイン機能を作った記事を書いたのですが、あれからソーシャルログインを実装する機会がありました。
 正直微妙な部分もありつつ、せっかく実装したので記事化して供養します🙏
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## はじめに
@@ -34,7 +35,7 @@ import OG from "@/components/OG.astro"
 <OG url="https://socialiteproviders.com" />
 
 ## 今回作ってみたもの
-<img src="/gifs/2021/react-query-socialite/github-social-login.gif" width="100%" alt="GitHubでのソーシャルログイン処理の流れのGIF" />
+<ImageWrapper src="gifs/2021/react-query-socialite/github-social-login.gif" alt="GitHubでのソーシャルログイン処理の流れのGIF" />
 
 ソーシャルログイン機能。
 
@@ -178,13 +179,13 @@ Authorization callback URL は今回の場合、ソーシャルログイン処�
 Application logo については、一度 OAuth アプリ作成後に設定できます。
 
 OAuth 前のログイン画面
-<img src="/screenshots/2021/react-query-socialite/login-before-oauth.png" width="80%" alt="OAuth前のログイン画面画像 - Application logo、Application name" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/react-query-socialite/login-before-oauth.png" alt="OAuth前のログイン画面画像 - Application logo、Application name" />
 
 OAuth 認可画面
-<img src="/screenshots/2021/react-query-socialite/oauth.png" width="80%" alt="OAuth認可画面 - Application logo、Application name、Authorization callback URL（ドメイン部分まで）" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/react-query-socialite/oauth.png" alt="OAuth認可画面 - Application logo、Application name、Authorization callback URL（ドメイン部分まで）" />
 
 Authorized OAuth Apps 画面
-<img src="/screenshots/2021/react-query-socialite/oauth-app.png" width="80%" alt="Authorized OAuth Apps画面 - Application logo、Application name、Homepage URL" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/react-query-socialite/oauth-app.png" alt="Authorized OAuth Apps画面 - Application logo、Application name、Homepage URL" />
 
 ### 環境変数に追加
 先ほど控えた値を設定。
@@ -709,7 +710,7 @@ export default GeneralAlert;
 ```
 
 ちなみにこういうやつです。
-<img src="/screenshots/2021/react-query-socialite/social-login-error.png" width="40%" alt="ログイン画面 - ソーシャルログイン失敗時アラート表示" />
+<ImageWrapper className="w-[40%]" src="screenshots/2021/react-query-socialite/social-login-error.png" alt="ログイン画面 - ソーシャルログイン失敗時アラート表示" />
 
 ### ログイン画面
 #### Container Component

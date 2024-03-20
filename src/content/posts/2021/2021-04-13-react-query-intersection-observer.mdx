@@ -12,6 +12,7 @@ React Query と Intersection Observer API を使った無限スクロールを�
 
 ※2023/07/09 各種リンクの URL を tanstack.com をベースに更新しました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## はじめに
@@ -247,7 +248,7 @@ Intersect Observer API をラップしたカスタムフックが作られてい
 上記の例では useEffect でクリーンアップ関数として使われますね。
 
 ## 今回作ってみたもの
-<img src="/gifs/2021/react-query-intersection-observer/infinite-scroll.gif" width="100%" alt="無限スクロールするGIF" />
+<ImageWrapper src="gifs/2021/react-query-intersection-observer/infinite-scroll.gif" alt="無限スクロールするGIF" />
 
 左側の無限スクロールの部分です。
 （わかりやすくするために1ページ当たりの件数を10件にしています）

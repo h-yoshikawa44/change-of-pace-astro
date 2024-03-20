@@ -12,6 +12,7 @@ GAS こと Google Apps Script は、手軽に bot や他の Google サービス�
 
 ※この記事は [Qiita](https://qiita.com/h-yoshikawa44/items/b5a0f2fe81fe0e9a45c2) からの転載です。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## 作ろうと思った背景
@@ -25,7 +26,7 @@ import OG from "@/components/OG.astro"
 当月の当番抽選がすでに行われており、当月の当番履歴がすでにある場合は、新たに抽選せずにその履歴情報から当番を通知するように改修しました。
 
 ## 構成図
-<img src="/screenshots/2020/duty-gacha/architecture.png" width="100%" alt="当番ガチャの構成図" />
+<ImageWrapper src="screenshots/2020/duty-gacha/architecture.png" alt="当番ガチャの構成図" />
 
 全体の処理のおおまかな流れとしてはこんな感じです。
 
@@ -55,19 +56,19 @@ import OG from "@/components/OG.astro"
 
 ### スプレッドシートの用意
 スプレッドシートを作成、以下のようなシートを用意します。ここではシートの名称を`当番履歴表`としてください。
-<img src="/screenshots/2020/duty-gacha/sheet.png" width="100%" alt="用意するスプレッドシートの内容" />
+<ImageWrapper src="screenshots/2020/duty-gacha/sheet.png" alt="用意するスプレッドシートの内容" />
 
 #### メンバー表
 ガチャ対象は〇か×で選択できるようにしておき、メンバーがガチャに参加するかどうかをここで制御できるようにします。
 ガチャ対象列のデータ範囲を選択 → データ → データの入力規則
 以下のように設定しておきます。
-<img src="/screenshots/2020/duty-gacha/gacha-select.png" width="80%" alt="メンバー表のデータの入力規則設定" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/duty-gacha/gacha-select.png" alt="メンバー表のデータの入力規則設定" />
 
 Slack member_id は Slack にガチャ結果を投稿する際に、メンションをつけるために使用します。
 こちらは Slack 上で確認できます。
 チャンネルのメンバーリストなどから、メンバーを選択し簡易プロフィールを表示。
 アイコン画像を選択してプロフィールを表示し、三点リーダから確認。
-<img src="/screenshots/2020/duty-gacha/slack-profile.png" width="50%" alt="Slackアカウントのプロフィール画面" />
+<ImageWrapper className="w-[50%]" src="screenshots/2020/duty-gacha/slack-profile.png" alt="Slackアカウントのプロフィール画面" />
 
 #### 当番履歴表
 履歴がある場合は記述しておきます。
@@ -391,9 +392,9 @@ function createNoticeMsg(gachaMenber, dutyMemberList) {
 GAS エディタ上から実行してみましょう。
 GAS エディタ上で 実行 → 関数を実行 → dutyGacha を選択。
 初回実行時はアクセス権の許可がいるので、確認して許可してください。
-<img src="/screenshots/2020/duty-gacha/gas-run-account1.png" width="70%" alt="アクセス権の許可確認モーダル１" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/duty-gacha/gas-run-account1.png" alt="アクセス権の許可確認モーダル１" />
 
-<img src="/screenshots/2020/duty-gacha/gas-run-account2.png" width="70%" alt="アクセス権の許可確認モーダル２" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/duty-gacha/gas-run-account2.png" alt="アクセス権の許可確認モーダル２" />
 
 なお、案内にある通り、後でこのアクセス権を確認・削除は以下から行えます。
 <OG url="https://myaccount.google.com/permissions" />
@@ -402,12 +403,12 @@ GAS エディタ上で 実行 → 関数を実行 → dutyGacha を選択。
 以下のようにメッセージが投稿されていて、スプレッドシートの当番履歴表に履歴が追加されていたらOKです。
 上が member_id に該当するアカウントがある場合。
 下がない場合で、member_id がそのまま出力されます。
-<img src="/screenshots/2020/duty-gacha/result-gacha.png" width="70%" alt="Slack投稿結果(新たにガチャを行った場合)" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/duty-gacha/result-gacha.png" alt="Slack投稿結果(新たにガチャを行った場合)" />
 
 当番履歴表に当月の当番情報がすでにある場合は、その当月の当番がSlackに投稿されていれば OK です。
 こちらは新たにスプレッドシートに書き込みは行いません。
 
-<img src="/screenshots/2020/duty-gacha/result-no-gacha.png" width="70%" alt="Slack投稿結果(新たにガチャを行わなかった場合)" />
+<ImageWrapper className="w-[70%]" src="screenshots/2020/duty-gacha/result-no-gacha.png" alt="Slack投稿結果(新たにガチャを行わなかった場合)" />
 
 うまく投稿できない場合は、ここまでの設定を見直してみてください。
 また、以下の場合はエラーとなるようにしています。

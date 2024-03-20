@@ -10,6 +10,7 @@ tags: ["ブログ", "Jekyll"]
 先日から、Google AdSense を導入して広告を表示しています。
 ややうろ覚えの部分もありますが、導入から広告を表示するまでの手順をメモしておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from '@/components/OG.astro'
 
 ## Google AdSense とは？
@@ -45,7 +46,7 @@ Twitter へのリンクを作成していたので、それが連絡先として
 1. [Google AdSense](https://www.google.co.jp/adsense/start/#/?modal_active=none) にアクセスし、「お申し込みはこちら」を選択
 
 2. 申し込みフォームに必要な情報を入力
-<img src="/screenshots/2019/google-adsense/adsense-form.png" width="70%" alt="Google Adsense 申し込みフォーム" />
+<ImageWrapper className="w-[70%]" src="screenshots/2019/google-adsense/adsense-form.png" alt="Google Adsense 申し込みフォーム" />
 
 3. Google アカウントでログイン
 
@@ -56,7 +57,7 @@ Twitter へのリンクを作成していたので、それが連絡先として
 
 ## 審査申し込み
 Google AdSense アカウントを作成すると案内メールが送信されるので、その案内の通りに進めます。（申し込みフォームでメールを受け取る設定にしてないと届かないかも？）
-<img src="/screenshots/2019/google-adsense/adsense-start.png" width="80%" alt="Google Adsense 有効化案内" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/google-adsense/adsense-start.png" alt="Google Adsense 有効化案内" />
 
 1. サイトをリンク
    案内されているコードをブログの head タグの中に追記します。
@@ -72,7 +73,7 @@ Google AdSense アカウントを作成すると案内メールが送信され�
 
 ## 広告の設置
 審査を無事通過すると、再度案内メールが届きます。
-<img src="/screenshots/2019/google-adsense/adsense-complete.png" width="80%" alt="Google Adsense 審査通過メール" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/google-adsense/adsense-complete.png" alt="Google Adsense 審査通過メール" />
 
 これで広告を配置できるようになります。
  AdSense のマイページの「広告」→「サマリー」から設定でき、各広告のコードをブログに埋め込むことで利用できます。
@@ -105,7 +106,7 @@ Google AdSense アカウントを作成すると案内メールが送信され�
 <OG url="https://webtan.impress.co.jp/e/2018/02/08/28001" />
 
 1. ads.txt に問題があると AdSense のマイページで以下のような警告が表示されるので「今すぐ修正」を選択
-<img src="/screenshots/2019/google-adsense/adsense-warn.png" width="100%" alt="ads.txtに問題がある場合の警告" />
+<ImageWrapper src="screenshots/2019/google-adsense/adsense-warn.png" alt="ads.txtに問題がある場合の警告" />
 
 2. 「ダウンロード」を選択してファイルをダウンロード
 

@@ -11,10 +11,11 @@ tags: ["ブログ", "Netlify", "Jekyll"]
 静的サイトを運用するにあたって「Netlify でデプロイすると楽よー」と教えてもらい、
 細々と書いていた当ブログを、Netlify を使用して思い切って公開してみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Netlify とは？
-<img src="/screenshots/2019/netlify-deploy/netlify.png" width="100%" alt="Netlify公式ページ" />
+<ImageWrapper src="screenshots/2019/netlify-deploy/netlify.png" alt="Netlify公式ページ" />
 
 静的サイトのホスティングサービスです。
 GitHub、GitLab、Bitbucket のリポジトリと連携させて、自動的にデプロイが行えるようになっています。
@@ -32,7 +33,7 @@ GitHub、GitLab、Bitbucket のリポジトリと連携させて、自動的に�
 
 2. Netlify アカウントの作成
   各種 Git のアカウントでも作成できます。
-<img src="/screenshots/2019/netlify-deploy/netlify-signup.png" width="100%" alt="Netlifyアカウント作成画面" />
+<ImageWrapper src="screenshots/2019/netlify-deploy/netlify-signup.png" alt="Netlifyアカウント作成画面" />
 
 3. Netlify の自分のアカウントトップ画面から`New site from Git`を選択
 
@@ -46,7 +47,7 @@ GitHub、GitLab、Bitbucket のリポジトリと連携させて、自動的に�
 6. 一覧から連携させるリポジトリを選択
 
 7. デプロイの設定
-<img src="/screenshots/2019/netlify-deploy/deploy-setting.png" width="70%" alt="Netlidyデプロイ設定画面" />
+<ImageWrapper className="w-[70%]" src="screenshots/2019/netlify-deploy/deploy-setting.png" alt="Netlidyデプロイ設定画面" />
 ※↑ Jekyll で作成されたサイトの場合
 - Branch to deploy
   どのブランチをデプロイ対象とするかを指定。

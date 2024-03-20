@@ -10,6 +10,7 @@ tags: ["ブログ"]
 昨年、お名前.com でドメインを取得してブログに設定していたのですが、この度 Google Domains に移管しました。
 移管ってどうやるの？状態からでしたが、調べながら実際に行った手順をまとめましたので、よかったらご活用ください。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Google Domains とは？
@@ -37,27 +38,27 @@ Google が提供しているドメインサービスです。
 ドメインがロックされていると移管が行えないので、解除する必要があります。
 
 1. トップ画面、ご利用状況の「ドメイン一覧」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-top.png" width="80%" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-top.png" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
 
 2. ドメイン一覧の右上「ドメイン機能一覧」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-domain-list.png" width="80%" alt="お名前.com Navi ドメイン一覧画面のドメイン機能一覧選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-domain-list.png" alt="お名前.com Navi ドメイン一覧画面のドメイン機能一覧選択" />
 
 3. ドメイン移管の「ドメイン移管ロック」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-domain-change.png" width="80%" alt="お名前.com Navi ドメイン機能一覧画面のドメイン移管ロック選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-domain-change.png" alt="お名前.com Navi ドメイン機能一覧画面のドメイン移管ロック選択" />
 
 4. 移管ロックが OFF なことを確認（ON の場合は OFF にする）
-<img src="/screenshots/2020/domain-transfer/onamae-domain-lock.png" width="80%" alt="お名前.com Navi ドメイン移管ロック確認画面" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-domain-lock.png" alt="お名前.com Navi ドメイン移管ロック確認画面" />
 
 #### AuthCode 確認
 ドメイン移管をする際に使用するので、確認して控えておきます。
 
 1. トップ画面、ご利用状況の「ドメイン一覧」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-top.png" width="80%" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-top.png" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
 
 2. ドメイン一覧から、移管するドメインを選択
 
 3. AuthCode を表示して控えておく
-<img src="/screenshots/2020/domain-transfer/onamae-domain-authcode.png" width="80%" alt="お名前.com Navi ドメイン詳細画面のAuthCode表示" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-domain-authcode.png" alt="お名前.com Navi ドメイン詳細画面のAuthCode表示" />
 
 #### Whois 情報公開代行サービス無効化
 通常 Whois でドメインに対しての問い合わせが行われたときに、管理者の情報として個人情報が公開されてしまいます。
@@ -67,23 +68,23 @@ Whois 情報公開代行サービスを有効にしていると、移管先か�
 **※ドメインプロテクション機能で変更を制限している場合は、そちらを先に解除しておかないと無効化ができないので注意です。**
 
 1. トップ画面、ご利用状況の「ドメイン一覧」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-top.png" width="80%" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-top.png" alt="お名前.com Navi トップ画面のドメイン一覧選択" />
 
 2. ドメイン一覧の右上「ドメイン機能一覧」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-domain-list.png" width="80%" alt="お名前.com Navi ドメイン一覧画面のドメイン機能一覧選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-domain-list.png" alt="お名前.com Navi ドメイン一覧画面のドメイン機能一覧選択" />
 
 3. 登録情報の設定「Whois 情報公開代行」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-whois.png" width="80%" alt="お名前.com Navi ドメイン機能一覧画面のWhois情報公開代行選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-whois.png" alt="お名前.com Navi ドメイン機能一覧画面のWhois情報公開代行選択" />
 
 {/* <!-- textlint-disable ja-technical-writing/max-kanji-continuous-len --> */}
 
 4. 右下の「Whois 情報公開代行設定の解除はこちら」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-whois-setting.png" width="80%" alt="お名前.com Navi Whois情報公開代行設定画面のWhois情報公開代行設定の解除はこちら選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-whois-setting.png" alt="お名前.com Navi Whois情報公開代行設定画面のWhois情報公開代行設定の解除はこちら選択" />
 
 {/* <!-- textlint-enable --> */}
 
 5. ドメインを選択後、解除対象に「Whois 公開代行（メール転送付き）」を選択し「確認」を選択
-<img src="/screenshots/2020/domain-transfer/onamae-whois-setting2.png" width="80%" alt="お名前.com Navi Whois情報公開代行設定解除画面の解除対象と確認選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/onamae-whois-setting2.png" alt="お名前.com Navi Whois情報公開代行設定解除画面の解除対象と確認選択" />
 
 6. 「注意事項に同意」にチェックし、「確定」を選択
 
@@ -95,16 +96,16 @@ Whois 情報公開代行サービスを有効にしていると、移管先か�
 
 3. ドメインの準備 ステップ2：先ほど控えた AuthCode を認証コードとして入力して「続行」を選択
    ※ステップ1はドメインロックを解除している時点で済になります。
-<img src="/screenshots/2020/domain-transfer/google-domain-authcode.png" width="80%" alt="Google Domains ドメインの準備 ステップ2 認証コード入力" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/google-domain-authcode.png" alt="Google Domains ドメインの準備 ステップ2 認証コード入力" />
 
 4. ウェブ設定のインポート：お好みで DNS 設定を移行するか選択して「続行」を選択
   （自分は「DNS 設定をコピーして Google に任せる」の方にしました）
   ちなみに「リソースレコードを表示」を選択すると、移行する DNS 設定の内容が確認できます。
-<img src="/screenshots/2020/domain-transfer/google-domain-setting-import.png" width="80%" alt="Google Domains ウェブ設定のインポート 続行選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/google-domain-setting-import.png" alt="Google Domains ウェブ設定のインポート 続行選択" />
 
 5. 登録の設定：設定を確認して「購入手続きに進む」を選択
    デフォルトでプライバシー保護が有効になっているのは頼もしいですね。
-<img src="/screenshots/2020/domain-transfer/google-domain-purchase.png" width="80%" alt="Google Domains 登録の設定 購入手続きに進む選択" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/google-domain-purchase.png" alt="Google Domains 登録の設定 購入手続きに進む選択" />
 
 6. 住所など個人情報の入力をして「保存して続行」
 
@@ -116,7 +117,7 @@ Whois 情報公開代行サービスを有効にしていると、移管先か�
 
 ### 最終確認
 この時点の、Google Domains の「マイドメイン」では以下のような状態になります。
-<img src="/screenshots/2020/domain-transfer/google-domain-mydomain.png" width="80%" alt="Google Domains マイドメイン 移管ステータス確認" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/domain-transfer/google-domain-mydomain.png" alt="Google Domains マイドメイン 移管ステータス確認" />
 
 Google Domains での移管申請後、お名前.comから「【重要】トランスファー申請に関する確認ご連絡」という件名のメールが届きます。自分の場合は15分くらいして届きましたが、場合によっては時間がかかるようです。
 

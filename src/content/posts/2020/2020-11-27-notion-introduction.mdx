@@ -11,10 +11,11 @@ tags: ["ブログ", "Notion"]
 療養する最中、身辺整理といいますか、いろんな情報を整理・集約したいなという思いが出てきました。
 そこで、以前から存在を知っていたものの、全然活用できていなかった Notion を活用してみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## Notion とは？
-<img src="/screenshots/2020/notion-introduction/notion.png" width="100%" alt="Notionのトップページ" />
+<ImageWrapper src="screenshots/2020/notion-introduction/notion.png" alt="Notionのトップページ" />
 
 <OG url="https://www.notion.so" />
 
@@ -43,7 +44,7 @@ Notion の基本構造としては、まずワークスペースを作成し、�
 よく使うページはサイドバーに追加もできます。
 
 自分のワークスペースのサイドバー
-<img src="/screenshots/2020/notion-introduction/notion-sidebar.png" width="30%" alt="Notion 自分のワークスペースのサイドバー表示" />
+<ImageWrapper className="w-[30%]" src="screenshots/2020/notion-introduction/notion-sidebar.png" alt="Notion 自分のワークスペースのサイドバー表示" />
 
 #### ブロック
 h1～h3 をはじめとしたマークダウン要素、画像など、ページ内を構成する要素はブロックとなります。
@@ -51,7 +52,7 @@ h1～h3 をはじめとしたマークダウン要素、画像など、ページ
 このブロック単位で、ドラッグ & ドロップで移動させられたり、文字色や背景色を変えたり、削除したりということが可能です。
 
 簡単な例
-<img src="/screenshots/2020/notion-introduction/notion-page-block.png" width="80%" alt="Notion ページとブロックの図" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-page-block.png" alt="Notion ページとブロックの図" />
 
 基本的には上から下への流れですが、ブロックをブロックの右隣に移動させて横並びになんかもできたりします。
 
@@ -62,22 +63,22 @@ h1～h3 をはじめとしたマークダウン要素、画像など、ページ
 <OG url="https://www.notion.so/ja-jp/templates" />
 
 **Table**
-<img src="/screenshots/2020/notion-introduction/notion-table.png" width="80%" alt="Notion Table表示の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-table.png" alt="Notion Table表示の例" />
 
 **Board**
-<img src="/screenshots/2020/notion-introduction/notion-board.png" width="80%" alt="Notion Board表示の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-board.png" alt="Notion Board表示の例" />
 
 **List**
-<img src="/screenshots/2020/notion-introduction/notion-list.png" width="80%" alt="Notion List表示の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-list.png" alt="Notion List表示の例" />
 
 **Calendar**
-<img src="/screenshots/2020/notion-introduction/notion-calendar.png" width="80%" alt="Notion Calendar表示の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-calendar.png" alt="Notion Calendar表示の例" />
 
 **Gallery**
-<img src="/screenshots/2020/notion-introduction/notion-gallery.png" width="80%" alt="Notion Gallery表示の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-gallery.png" alt="Notion Gallery表示の例" />
 
 **Timeline**
-<img src="/screenshots/2020/notion-introduction/notion-timeline.png" width="80%" alt="Notion Timeline表示の例" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/notion-timeline.png" alt="Notion Timeline表示の例" />
 
 ちなみにこの表示方法は、どれか1つのみだけ使用ということでなく、同じデータをもとに複数の表示方法を併用して切り替えるということができます。
 
@@ -96,7 +97,7 @@ Notion の基本概念はこんな感じで、使ってみるとわかるので�
 
 ### 日々の記録
 ※フルページキャプチャの都合で、日記のテーブル上部に集計行がかぶってますが、本来はテーブル下部に追従する形であります。
-<img src="/screenshots/2020/notion-introduction/dashboard.png" width="80%" alt="Notion 日々の記録ページ" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/dashboard.png" alt="Notion 日々の記録ページ" />
 
 毎日開く自分用のダッシュボード的なページで、月ごとに作成する想定です。
 
@@ -147,7 +148,7 @@ Twitter でこちらの方の記事を見かけて、すごくいいなーと思
 （今月色々試すつもりが、気力の落ちた期間が続き、あまりできてないのはここだけの話...）
 
 ### ドキュメント下書き・メモ
-<img src="/screenshots/2020/notion-introduction/draft.png" width="80%" alt="Notion ドキュメント下書き・メモページ" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/draft.png" alt="Notion ドキュメント下書き・メモページ" />
 
 技術記事・ドキュメントの下書きやメモを集約したページです。
 特に変わったことはしていません。
@@ -156,7 +157,7 @@ Twitter でこちらの方の記事を見かけて、すごくいいなーと思
 
 ### 参考書一覧
 持っている本のページ
-<img src="/screenshots/2020/notion-introduction/books.png" width="80%" alt="Notion 持っている本ページ" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/books.png" alt="Notion 持っている本ページ" />
 
 主に技術本のギャラリーページです。
 現在持っている本と、気になっている本の情報を整理しておきたかったので作りました。
@@ -169,7 +170,7 @@ Twitter でこちらの方の記事を見かけて、すごくいいなーと思
 
 ### リンク集
 リンク集の一部抜粋
-<img src="/screenshots/2020/notion-introduction/links-example.png" width="80%" alt="Notion リンク集ページ一部抜粋" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/notion-introduction/links-example.png" alt="Notion リンク集ページ一部抜粋" />
 
 元々、各種ブラウザや Twitter のブックマークを集約するべく作ったページです。
 Notion に集めておけば、PC・スマホどちらからもアクセスできますからね。

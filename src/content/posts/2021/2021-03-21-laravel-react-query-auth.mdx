@@ -10,6 +10,7 @@ tags: ["TypeScript", "React", "React Query", "PHP", "Laravel"]
 React の状態管理ライブラリと言うと Redux や Recoil がメジャーなイメージでしょうか。
 少し前から React Query なるものが便利らしいぞと見聞きしたので使ってみたのを、せっかくなので記事にしてみました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ※2023/07/09 各種リンクの URL を tanstack.com をベースに更新しました。
@@ -233,7 +234,7 @@ const addTodoMutation = useMutation(
 勉強用の個人開発でログイン画面を作りました。
 React（Laravel Mix）× Laravel による SPA × API 構成です。
 
-<img src="/gifs/2021/laravel-react-query-auth/email-login.gif" width="100%" alt="ログイン画面でログインする流れのGIF" />
+<ImageWrapper src="gifs/2021/laravel-react-query-auth/email-login.gif" alt="ログイン画面でログインする流れのGIF" />
 
 メールアドレスとパスワードでログインのスタンダードなタイプ。
 後々、ソーシャルログインとゲストログインにしたいということもあり、今回メール認証は特にやっていません。
@@ -915,7 +916,7 @@ const LoginAlert: FC<Props> = ({ statusCode }) => (
 export default LoginAlert;
 ```
 ちなみにこういうやつです。
-<img src="/screenshots/2021/laravel-react-query-auth/login-alert.png" width="40%" alt="ログイン画面でのアラート表示画像" />
+<ImageWrapper className="w-[40%]" src="screenshots/2021/laravel-react-query-auth/login-alert.png" alt="ログイン画面でのアラート表示画像" />
 
 ### ログイン画面
 #### Container Component

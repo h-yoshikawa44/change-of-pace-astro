@@ -9,6 +9,7 @@ tags: ["JavaScript", "React"]
 
 今回はコンポーネントに渡す props の使用を補助するものである PropTypes について書きました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ※この記事は元々 [Qiita](https://qiita.com/h-yoshikawa44/items/bab6845472e4d428732c) からの転載です。
@@ -99,7 +100,7 @@ PropTypesComponent.propTypes = {
 上記の例では問題ありませんが、例えば PropsTypesComponent に渡している name の値を「1」など、string 以外の値にしてみます。
 すると、以下のような Warning がコンソールに出力されているはずです。
 
-<img src="/screenshots/2020/react-proptypes/warning.png" width="100%" alt="コンソールに出力されたPropTypesによるバリデーションエラーメッセージ" />
+<ImageWrapper src="screenshots/2020/react-proptypes/warning.png" alt="コンソールに出力されたPropTypesによるバリデーションエラーメッセージ" />
 
 あくまでコンソール上に Warning を出力するだけではありますが、これが出ないようにコーディングすれば、予期せぬ動作を減らすことができるわけです。
 加えて props にどんな型の値が入るのか可視化される。というメリットもあります。

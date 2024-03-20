@@ -16,6 +16,7 @@ tags: ["GitHub Actions", "S3", "CloudFront", "Slack", 'React']
 
 ※2021/09/05追記 全体的に内容を更新しました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## GitHub Actions とは？
@@ -538,16 +539,16 @@ React アプリが問題なく表示されているでしょうか？
 通知の内容は以下のような感じになります。
 
 成功
-<img src="/screenshots/2020/github-actions-react/github-actions-slack-success.png" width="80%" alt="ワークフロー成功時のSlack通知" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/github-actions-react/github-actions-slack-success.png" alt="ワークフロー成功時のSlack通知" />
 
 キャンセル
-<img src="/screenshots/2020/github-actions-react/github-actions-slack-canceled.png" width="80%" alt="ワークフローキャンセル時のSlack通知" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/github-actions-react/github-actions-slack-canceled.png" alt="ワークフローキャンセル時のSlack通知" />
 
 失敗
-<img src="/screenshots/2020/github-actions-react/github-actions-slack-failed.png" width="80%" alt="ワークフロー失敗時のSlack通知" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/github-actions-react/github-actions-slack-failed.png" alt="ワークフロー失敗時のSlack通知" />
 
 また、プルリクを出した時、そのリクエスト元ブランチのワークフロー実行状況が表示されるようになります。
-<img src="/screenshots/2020/github-actions-react/pull-request.png" width="80%" alt="ワークフロー実行ブランチでのプルリクエスト" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/github-actions-react/pull-request.png" alt="ワークフロー実行ブランチでのプルリクエスト" />
 
 ## ワークフロー定義ファイルの簡単な解説
 <OG url="https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions" />
@@ -701,10 +702,10 @@ latest にしていると、その対象バージョンが更新されたとき�
 キャッシュのあるなしで実行時間を比較してみたところ、こんな感じになりました。
 
 キャッシュなし・50s
-<img src="/screenshots/2020/github-actions-react/github-actions-no-cache.png" width="100%" alt="キャッシュなしの場合のワークフロー実行結果" />
+<ImageWrapper src="screenshots/2020/github-actions-react/github-actions-no-cache.png" alt="キャッシュなしの場合のワークフロー実行結果" />
 
 キャッシュあり・26s
-<img src="/screenshots/2020/github-actions-react/github-actions-cache.png" width="100%" alt="キャッシュありの場合のワークフロー実行結果" />
+<ImageWrapper src="screenshots/2020/github-actions-react/github-actions-cache.png" alt="キャッシュありの場合のワークフロー実行結果" />
 
 #### ステップ・yarn でライブラリのインストール
 

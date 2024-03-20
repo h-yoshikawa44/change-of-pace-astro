@@ -11,6 +11,7 @@ tags: ["JavaScript", "React", "web1week"]
 そんな自分が、先日 web1week というイベントで個人開発にチャレンジしました。
 何とかリリースまでできたので、使用した技術やどんなことをやったのかといった内容を残しておきます。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## はじめに
@@ -51,7 +52,7 @@ import OG from "@/components/OG.astro"
 ちょっとしたパズルを作りました。
 PC向け。スマホ対応は現状してません。
 
-<img src="/gifs/2020/web1week-like/puzzle-overview.gif" width="80%" alt="パズルのプレイ画面GIF" />
+<ImageWrapper className="w-[80%]" src="gifs/2020/web1week-like/puzzle-overview.gif" alt="パズルのプレイ画面GIF" />
 
 ### なんでパズル？
 <OG url="https://crieit.net/boards/web1week-202005/41152da9fccdaae73e45967feced2e2a" />
@@ -183,7 +184,7 @@ Issue やプルリクのテンプレ、Docker で開発環境構築ともろも�
 有識者の方からすると、この実装イケてないとかあるでしょうがご容赦ください。
 
 ### ストップウォッチ
-<img src="/screenshots/2020/web1week-like/stopwatch.png" width="50%" alt="パズル画面のストップウォッチ部分画像" />
+<ImageWrapper className="w-[50%]" src="screenshots/2020/web1week-like/stopwatch.png" alt="パズル画面のストップウォッチ部分画像" />
 
 #### 概要
 `setInterval()`と`clearInterval()`を使って実装。
@@ -208,7 +209,7 @@ Issue やプルリクのテンプレ、Docker で開発環境構築ともろも�
 秒数カウントを最初から state で管理すればいいのでは？と思われそうですが、state でやるとうまく動いてくれなかったので、こういった形をとりました。
 
 ### パズル
-<img src="/screenshots/2020/web1week-like/puzzle.png" width="80%" alt="パズル画面のパズル部分画像" />
+<ImageWrapper className="w-[80%]" src="screenshots/2020/web1week-like/puzzle.png" alt="パズル画面のパズル部分画像" />
 
 #### 概要
 React Konv aで実装していますが、その実体は Canvas です。
@@ -221,7 +222,7 @@ Canvas を扱うには`Konva.js`が便利らしいみたいな記事は複数見
 Konva.js の構造としては、以下のようになっています
 <OG url="https://konvajs.org/docs/overview.html" />
 
-<img src="/screenshots/2020/web1week-like/konva-tree.png" width="60%" alt="Konva.jsの構造画像" />
+<ImageWrapper className="w-[60%]" src="screenshots/2020/web1week-like/konva-tree.png" alt="Konva.jsの構造画像" />
 
 Shapeは複数種類があり.
 - Rect（長方形）

@@ -11,6 +11,7 @@ tags: ["Autoprefixer", "Vite"]
 先日、Vite デビューをしたところ思わぬ現象に遭遇してしまいました...。
 せっかくなので、その対応方法とともに記録を残します。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 import OG from "@/components/OG.astro"
 
 ## 要約
@@ -70,11 +71,11 @@ Vite の本来の挙動としては以下のようになっています。
 <OG url="https://ja.vitejs.dev/guide/features.html#css" />
 > .css ファイルをインポートすると、HMR をサポートする style タグを介してそのコンテンツがページに挿入されます。
 
-<img src="/screenshots/2021/vscode-autoprefixer-vite/css-import-normal.png" width="80%" alt="起点JavaScriptファイルからCSSファイルをインポートした場合に挿入されるstyleタグ - 正常" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/vscode-autoprefixer-vite/css-import-normal.png" alt="起点JavaScriptファイルからCSSファイルをインポートした場合に挿入されるstyleタグ - 正常" />
 本来はこのように head タグ配下に style タグが挿入され、そこに CSS の内容が展開されます。
 
 しかし、現象発生時は head タグ配下に style タグ自体は挿入されているものの、内容が空になっている状態。
-<img src="/screenshots/2021/vscode-autoprefixer-vite/css-import-abnormal.png" width="80%" alt="起点JavaScriptファイルからCSSファイルをインポートした場合に挿入されるstyleタグ - 異常" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/vscode-autoprefixer-vite/css-import-abnormal.png" alt="起点JavaScriptファイルからCSSファイルをインポートした場合に挿入されるstyleタグ - 異常" />
 
 #### link タグから CSS ファイルを読み込んだ場合
 ```html: index.html
@@ -83,12 +84,12 @@ Vite の本来の挙動としては以下のようになっています。
 
 正常時は、CSS ファイルにクエリパラメータがついたものを読み込むような感じに変化。
 
-<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-normal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のlinkタグ - 正常" />
-<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-file-normal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のCSSファイル - 正常" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/vscode-autoprefixer-vite/css-link-normal.png" alt="linkタグからCSSファイルを読み込んだ場合のlinkタグ - 正常" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/vscode-autoprefixer-vite/css-link-file-normal.png" alt="linkタグからCSSファイルを読み込んだ場合のCSSファイル - 正常" />
 
 現象発生時は、CSS ファイルの中身が空になってしまっている状態。
-<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-abnormal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のlinkタグ - 異常" />
-<img src="/screenshots/2021/vscode-autoprefixer-vite/css-link-file-abnormal.png" width="80%" alt="linkタグからCSSファイルを読み込んだ場合のCSSファイル - 異常" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/vscode-autoprefixer-vite/css-link-abnormal.png" alt="linkタグからCSSファイルを読み込んだ場合のlinkタグ - 異常" />
+<ImageWrapper className="w-[80%]" src="screenshots/2021/vscode-autoprefixer-vite/css-link-file-abnormal.png" alt="linkタグからCSSファイルを読み込んだ場合のCSSファイル - 異常" />
 
 ---
 これで、とりあえず CSS がおかしくなっているということは特定。

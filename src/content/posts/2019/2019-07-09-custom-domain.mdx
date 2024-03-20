@@ -12,6 +12,7 @@ tags: ["ブログ", "Netlify"]
 
 ※2020/4/11 Google Domains のパターンも追記しました。
 
+import ImageWrapper from "@/components/ImageWrapper.astro"
 
 ## 前提
 - すでにドメインを取得済み（今回はお名前.com or Google Domains）
@@ -57,16 +58,16 @@ www CNAME changeofpace.netlify.com.
 2. ドメインの DNS 関連機能設定を選択して次へ
 
 3. ドメイン一覧から、設定するドメインを選択して次へ
-<img src="/screenshots/2019/custom-domain/domain-list.png" width="80%" alt="お名前.comでのドメイン一覧" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/custom-domain/domain-list.png" alt="お名前.comでのドメイン一覧" />
 
 4. DNS レコード設定を利用するの設定するを選択
-<img src="/screenshots/2019/custom-domain/domain-setting.png" width="80%" alt="お名前.comのドメイン設定画面" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/custom-domain/domain-setting.png" alt="お名前.comのドメイン設定画面" />
 
 DNS レコードを設定できる画面になります。
 ここで先ほど Netlify 側で確認したレコードを追加していきます。
 
 自分の場合、A レコードと CNAME レコードを追加しました。
-<img src="/screenshots/2019/custom-domain/setting-domain-list.png" width="80%" alt="お名前.comで設定したレコード一覧" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/custom-domain/setting-domain-list.png" alt="お名前.comで設定したレコード一覧" />
 
 **※2020/4/11追記**
 2020/4/14以降に設定する場合は、必要に応じて`.app`の Netlify ドメインの方に置き換えて設定してください。
@@ -86,19 +87,19 @@ changeofpace.site A 3600 104.198.14.52
 www.changeofpace.site CNAME 3600 changeofpace.netlify.com
 ```
 
-<img src="/screenshots/2019/custom-domain/custom-resource.png" width="80%" alt="Google Domainsで設定したレコード一覧" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/custom-domain/custom-resource.png" alt="Google Domainsで設定したレコード一覧" />
 
 ※2020/4/14以降に設定する場合は、必要に応じて`.app`の Netlify ドメインの方に置き換えて設定してください。
 
 ## 設定後
 設定した DNS 設定が反映されるまで少し時間がかかります。
 反映されると Netlify 側で灰色表示だったドメインが、青緑色になって`Check DNS Configration`表示が消えます。
-<img src="/screenshots/2019/custom-domain/netlify-setting-domain.png" width="80%" alt="Netlifyで設定したドメイン" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/custom-domain/netlify-setting-domain.png" alt="Netlifyで設定したドメイン" />
 
 DNS 設定が反映されると HTTPS 対応も自動で行ってくれます。
 こちらもしばらく時間がかかりますが、設定が終わると以下のような画面になります。
 (Domain Management → Domains → HTTPS)
-<img src="/screenshots/2019/custom-domain/netlify-https.png" width="80%" alt="NetlifyのHTTPS対応画面" />
+<ImageWrapper className="w-[80%]" src="screenshots/2019/custom-domain/netlify-https.png" alt="NetlifyのHTTPS対応画面" />
 
 これで設定は終了です。
 ブラウザで設定したドメインにてちゃんとページが表示されるか確認してみましょう。
