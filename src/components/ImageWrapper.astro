@@ -29,6 +29,13 @@ const optimalSrc = (() => {
 ---
 
 {
-  /* ComponentProps を使っているのに、どうしても型が合わないと言われるので苦肉の any */
+  /* ComponentProps を使っているのに、どうしても型が合わないと言われるので苦肉の any
+   * OGP 画像が見つけられないときは非表示になるようにする
+   */
 }
-<Image {...props as any} class={className} src={optimalSrc} />
+<Image
+  {...props as any}
+  class={className}
+  src={optimalSrc}
+  onerror={`this.onerror=null; this.style.display='none'`}
+/>
