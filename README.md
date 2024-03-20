@@ -5,9 +5,9 @@
 2023/07に Jekyll より移行したもの。
 
 ## 技術構成
-- TypeScript：5.2.2
+- TypeScript：5.4.2
 - Node.js：20.11.1
-- Astro：4.3.5
+- Astro：4.5.6
 - UnoCSS：0.58.5
 
 ## 環境変数

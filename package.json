@@ -23,15 +23,15 @@
     "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
   },
   "dependencies": {
-    "@astrojs/mdx": "^2.1.1",
+    "@astrojs/mdx": "^2.2.0",
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/rss": "^4.0.5",
-    "@astrojs/sitemap": "^3.0.5",
+    "@astrojs/sitemap": "^3.1.1",
     "@iconify-json/logos": "^1.1.42",
     "@iconify-json/system-uicons": "^1.1.12",
     "@iconify-json/teenyicons": "^1.1.9",
     "@unocss/reset": "^0.58.5",
-    "astro": "^4.3.5",
+    "astro": "^4.5.6",
     "cheerio": "^1.0.0-rc.12",
     "markdown-it": "^14.0.0",
     "rehype-autolink-headings": "^7.1.0",
