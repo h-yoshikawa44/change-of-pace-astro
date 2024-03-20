@@ -6,7 +6,7 @@
 
 ## 技術構成
 - TypeScript：5.2.2
-- Node.js：20.9.0
+- Node.js：20.11.1
 - Astro：4.3.5
 - UnoCSS：0.58.5
 
