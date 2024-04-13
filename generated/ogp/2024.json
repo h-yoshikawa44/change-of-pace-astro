@@ -122,6 +122,12 @@
       "image": "https://files.speakerdeck.com/presentations/f9b63e23333e4adc954119cb648c45e8/slide_0.jpg?28959219",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/cygames/guranburuhuantazi-100mo-xing-wochao-eruda-gui-mo-nasisutemuzai-gou-zhu-10zhou-nian-nosonoxian-he": {
+      "title": "『グランブルーファンタジー』100万行を超える大規模なシステム再構築～10周年のその先へ～",
+      "description": "2024/02/15 Developers Summit 2024",
+      "image": "https://files.speakerdeck.com/presentations/216a1e3600e64e8eb003659c9c1f3337/slide_0.jpg?29680359",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
     "https://speakerdeck.com/dahatake/chatgpt-for-developer-chao-ru-men": {
       "title": "ChatGPT for Developer - Promptのチカラ",
       "description": "ChatGPT がアプリケーションに最初に組み込まれたのは GitHub Copilot かもしれません。ここでは、ChatGPT そのものと、GitHub Copilot の双方を使って、アプリケーション開発を爆速させ、品質を少しでも向上させ。そして、Developer の皆さんのスキルを上げていくための入り口として、機能の概要を取り上げます。\n\n内容:\n- Promptだけで出来るコト: 業務で使うために抑えておくべきポイント。データ・変換・抽出\n- PromptのEngineeringへの適用: 企画から要件定義、設計、実装、デプロイも。\n- 開発の生産性と品質をあげるための戦略: Prompt自身の現在の能力、チーム開発に向けて\n\nサンプルのPrompt:\nhttps://github.com/dahatake/ChatGPT-Prompt-Sample-Japanese/tree/main/Software%20Enginner/Web%E3%82%A2%E3%83%97%E3%83%AA%E3%81%AE%E3%83%97%E3%83%AD%E3%83%88%E3%82%BF%E3%82%A4%E3%83%97%E9%96%8B%E7%99%BA",
@@ -295,6 +301,12 @@
       "description": "Developers Summit 2024（2024.02.15-16） - 翔泳社イベント 2日目 16-B-9\n生成AIで開発生産性向上！リレーセッション で話したときの資料です",
       "image": "https://files.speakerdeck.com/presentations/560f54ed089e4d968f4d7b3de22d3072/slide_0.jpg?28977256",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://tech.cygames.co.jp/archives/3614/": {
+      "title": "【Developers Summit 2024フォローアップ】『グランブルーファンタジー』100万行を超える大規模なシステム再構築～10周年のその先へ～",
+      "description": "",
+      "image": "https://tech.cygames.co.jp/wp-content/uploads/2024/04/01.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.cygames.co.jp"
     },
     "https://tech.legalforce.co.jp/entry/2024/02/19/173550": {
       "title": "「生成 AI を搭載したプロダクト開発」というタイトルでデブサミ2024に登壇しました！ - LegalOn Technologies Engineering Blog",
