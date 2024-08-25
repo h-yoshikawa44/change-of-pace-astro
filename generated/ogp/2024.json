@@ -1,4 +1,210 @@
 {
+  "2024-08-25-frontend-conf-hokkaido-2024": {
+    "https://2024-fac-hokkaido-yuto343.pages.dev/1": {
+      "title": "CodeGrid記事かいつまみ紹介 - Slidev",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://2024-fac-hokkaido-yuto343.pages.dev"
+    },
+    "https://docs.google.com/presentation/d/16hOx3E6hERQtV-zG_odrwPlseV-PIWd9FITFseGe_u8/view?pli=1": {
+      "title": "ゆめみでアクセシビリティを広めるためにやっていること",
+      "description": "で アクセシビリティを広めるためにやっていること 2024-08-24 フロントエンドカンファレンス北海道 ygkn (Yugo Yagita)",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLz-jPi3vZSzqOdF7gOoZ4uO7lLAasBjBEHKtIFhqoCUheVXUUFsxNssnlf_jW1pBk3QmoMalxvMK2xvkuXHstz0Mf4VMruLHbcbyGz61KeVkkXs1Cs=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://ltool.gachal.net/material/yumu19/49f548eb-5733-4cb9-851a-5644a706835f/": {
+      "title": "LTooL",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ltool.gachal.net"
+    },
+    "https://satoshi7190.github.io/css-slide/#001": {
+      "title": "モダンCSSの進化が切り拓く、プレゼンテーションの新しい世界",
+      "description": "CSSで作成したスライド",
+      "image": "https://raw.githubusercontent.com/satoshi7190/css-slide/main/image.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://satoshi7190.github.io"
+    },
+    "https://speakerdeck.com/aiji42/etuzihahurontondonanoka-batukuendonanoka-nituitekao-etemiru": {
+      "title": "エッジはフロントエンドなのか？ バックエンドなのか？ について考えてみる",
+      "description": "<a href=\"https://www.frontend-conf.jp/\">フロントエンドカンファレンス北海道2024</a>の登壇資料です。",
+      "image": "https://files.speakerdeck.com/presentations/85f1ab82b18c4401951d3ebb8640629e/slide_0.jpg?31466062",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/askua/uebuenziniademowasmwoshi-itai": {
+      "title": "ウェブエンジニアでもWasmを使いたい!",
+      "description": "フロントエンドカンファレンス北海道 2024",
+      "image": "https://files.speakerdeck.com/presentations/4b27f0708aa44ad4a234b97f78338e11/slide_0.jpg?31472925",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/bcrikko/frontend-conference-2024": {
+      "title": "存在感が薄い?!意外とがんばってるさくらインターネットFEチーム / Frontend Conference 2024",
+      "description": "【イベント】\n2024-08-24(Sat.) 10:00-18:00\nFrontend Conference HOKKAIDO\nhttps://fortee.jp/frontend-conf-hokkaido-2024/proposal/4d7a646e-c481-4d41-8123-366a1&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/088313125d2e4fe997bc0574440a71ed/slide_0.jpg?31436920",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/berlysia/revisiting-css-layout-mastering-css-for-writing-with-complete-understanding": {
+      "title": "CSSレイアウト再入門:完全に理解してCSSを記述するために",
+      "description": "<a href=\"https://www.frontend-conf.jp/\" target=\"_blank\">フロントエンドカンファレンス北海道2024</a> で発表させていただきました。\n\nスライド中のリンク一覧\n<ul>\n<li><a href=\"https://www.w3.org/T&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/1f6ed800523d4c1d845b26afd908c7c7/slide_0.jpg?31466209",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/degudegu2510/dakutematoakusesibiriteinorong-he-sitakaratokunnoshe-ji": {
+      "title": "ダークテーマとアクセシビリティの融合したカラートークンの設計",
+      "description": "2024/8/24 に開催された、フロントエンドカンファレンス北海道2024 で発表したスライドです。\n\n本テーマでは、ダークテーマの実装時に、UI上で魅力的なカラートークンとアクセシビリティの基準を満たすカラートークンの設計方法について深く掘り下げます。\n具体的には、Qiitaの実例をもとに、適&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/1c49daa32b15453d8331f684a45c52a2/slide_0.jpg?31458267",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/dora1998/typescriptte-fu-he-tesutowoshu-kou-k6nosinkuruhainarinomi-mi": {
+      "title": "TypeScriptで 負荷テストを書こう 〜k6のシングルバイナリの秘密〜",
+      "description": "2024/8/24 フロントエンドカンファレンス北海道2024",
+      "image": "https://files.speakerdeck.com/presentations/c330a93d8e754159b6da36ef50306041/slide_0.jpg?31470304",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/h2ham/hurontoendokanhuarensubei-hai-dao-2024-xiao-gui-mo-saitodemoshi-eruvite-htmlkodeinguwoyorisumatoni-chang-gu-chuan-guang-wu-hamu": {
+      "title": "フロントエンドカンファレンス北海道2024 『小規模サイトでも使えるVite 〜HTMLコーディングをよりスマートに〜』長谷川広武（ハム）",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/73a4c88bd07341a3b295ca00a173c6a1/slide_0.jpg?31468360",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/himi/recommendation-screen-reader-test": {
+      "title": "スクリーンリーダーを使ったアクセシビリティ検証のすすめ",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/f4132c8ef07a4167b55b16d925d1e9c1/slide_0.jpg?31462790",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/imaimai17468/next-dot-js-plus-yjs-plus-blocknotedenotionraikunazui-gao-nogong-tong-bian-ji-edeitawozuo-rou": {
+      "title": "Next.js+yjs+BlockNoteでNotionライクな最高の共同編集エディタを作ろう",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/831e6f99d1504abdbd3d99e703a54615/slide_0.jpg?31465958",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/jsakamoto/javascript-yi-wai-noyan-yu-niyoruhurontoendo-web-kai-fa-gaji-nishi-yong-duan-jie-dearuhua": {
+      "title": "JavaScript 以外の言語によるフロントエンド Web 開発が既に実用段階である話",
+      "description": "フロントエンドWeb開発には JavaScript を使うのが一般的ではあります。しかし、それ以外のプログラミング言語によるフロントエンドWeb開発も、実は既に実用レベルで使用が普及しています。今回は、スピーカーが特に詳しい C# によるフロントエンドWeb開発の現状を中心に、JavaScript 以外&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/d4c47fcbe38c4421ab76e96b13fc9aaf/slide_0.jpg?31479158",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kakehashi/challenges-in-the-frontend-domain-at-kakehashi": {
+      "title": "日本の医療システムの再構築を目指すスタートアップ「カケハシ」のフロントエンド領域でのチャレンジ / Challenges in the frontend domain at “Kakehashi”",
+      "description": "フロントエンドカンファレンス北海道2024\nhttps://fortee.jp/frontend-conf-hokkaido-2024/proposal/4e30939e-b3ff-4984-abcd-182c178c3030\nでの登壇資料です",
+      "image": "https://files.speakerdeck.com/presentations/9685ec6a80d64ee4b443476c8ff53fba/slide_0.jpg?31470966",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/minako__ph/xian-dai-novuetotypescript-xing-an-quan-nohuo-yong-shu": {
+      "title": "現代のVueとTypeScript - 型安全の活用術",
+      "description": "フロントエンドカンファレンス2024 発表資料\n\n▼ プロポーザル\n現代のVueとTypeScript - 型安全の活用術\n\n近年、VueとTypeScriptの組み合わせがフロントエンド開発において注目されていますが、かつてはこの組み合わせに対して懐疑的な見方も存在しました。このセッションで&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/8730ffac9fd6472f9c973320e11e17be/slide_0.jpg?31470207",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/mugi_uno/new-order-in-cascade-sorting-order": {
+      "title": "New Order in Cascade Sorting Order",
+      "description": "2024/8/24(土) フロントエンドカンファレンス北海道",
+      "image": "https://files.speakerdeck.com/presentations/688e6ac7f546468fa36e4bcdd8b72cb4/slide_0.jpg?31466616",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nacal/linterkarahazimerua11y": {
+      "title": "Linterからはじめるa11y",
+      "description": "Webアクセシビリティについて注目が集まる中で、幅広い知識が必要になることや本質的な目的が捉えにくい側面もあり、何からはじめるといいのか分からない人も多くいると感じています。\n\nここでは、Webアクセシビリティの概要についてお話しした後、Webアクセシビリティ向上のための第一歩としてeslint-p&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/9617fae98962450384e8fceb0616b23c/slide_0.jpg?31477155",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nrslib/innovation-in-frontend-development-processes-through-design-systems-and-component-oriented-architecture": {
+      "title": "デザインシステムとコンポーネント指向によるフロントエンド開発プロセスの革新 / Innovation in Frontend Development Processes through Design Systems and Component-Oriented Architecture",
+      "description": "フロントエンドカンファレンス北海道でお話ししたスライドです\n\nProposal: https://fortee.jp/frontend-conf-hokkaido-2024/proposal/ebd98e0a-241c-4443-aa98-300af113b40d\n\n# URL\nYouTube&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/d1e97451c5104aedb5bf1e5e83e96de1/slide_0.jpg?31468161",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ryo_manba/5fen-defen-karu-react-aria-no-liang-itokorokorekaranatokoro": {
+      "title": "5分で分かる React Aria の 良いところ・これからなところ",
+      "description": "フロントエンドカンファレンス北海道2024 (2024/08/24) でのスポンサー LT 資料\nhttps://fortee.jp/frontend-conf-hokkaido-2024",
+      "image": "https://files.speakerdeck.com/presentations/d42d61cd3e8d4501b0b27309172205be/slide_0.jpg?31459099",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sadnessojisan/basicbasicren-zheng": {
+      "title": "BasicBasic認証",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/7920fd7309304d449a1bd204d72631d6/slide_0.jpg?31470460",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sajikix/the-future-of-frontend-i18n-intl-dot-messageformat": {
+      "title": "The Future of Frontend i18n : Intl.MessageFormat",
+      "description": "フロントエンドカンファレンス北海道 2024 : 2023/08/24\n- https://fortee.jp/frontend-conf-hokkaido-2024/proposal/31eab828-f20d-4f9d-87ae-e2d92c790dfb\nX\n- https://twitter&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/d81f0861d5bf4ac4beef3d4f18f6cba9/slide_0.jpg?31466666",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sakito/component-driven-design-and-development": {
+      "title": "Component-Driven Design & Development",
+      "description": "フロントエンドカンファレンス北海道2024\nhttps://www.frontend-conf.jp/\n\nX\nhttps://twitter.com/__sakito__",
+      "image": "https://files.speakerdeck.com/presentations/8b2ccaf6aae94ae2986f7ef7d4a30e70/slide_0.jpg?31476959",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shinyaigeek/eslint-rule-niyorishi-ye-ji-shu-domeinniyan-tutazhi-yue-toshi-yue-wofu-yan-saseruapurotinosu-me-796c5458-d929-455c-90cf-f4914b91621f": {
+      "title": "ESLint Rule により事業, 技術ドメインに沿った制約と誓約を敷衍させるアプローチのすゝめ",
+      "description": "フロントエンドカンファレンス北海道 2024 の登壇資料です \n\nコードベースに秩序をもたらすため各種 Linter を利用している方も多いのではないでしょうか？一般的なルールについては Linter 内蔵のものや既存の Plugin ですでにカバーできるでしょうが, 一方で事業ドメイン特化であった&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/be6e42d126ae48b38369d97f69461717/slide_0.jpg?31466833",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/syumai/ecmascriptshi-yang-wodu-munonibi-yao-nazhi-shi-daiziesutoban": {
+      "title": "ECMAScript仕様を読むのに必要な知識 - ダイジェスト版",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/ae60a524935b4623bcee808f6b87d1f0/slide_0.jpg?31468756",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/totto2727/playwrightkarashi-meruvisual-regression-testingnosusume-by-totuto": {
+      "title": "Playwrightから始めるVisual Regression Testingのススメ by とっと",
+      "description": "フロントエンドカンファレンス北海道2024の5分枠で発表した内容です！",
+      "image": "https://files.speakerdeck.com/presentations/16aa0944798e4d9a92e36537bdbd0cea/slide_0.jpg?31470879",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/uhyo/fei-tong-qi-chu-li-wohuo-yong-sinagara-rustzhi-wasmtojswolian-xi-surufang-fa-wasm-bindgenwoshi-itakunairen-xiang-ke": {
+      "title": "非同期処理を活用しながら\u000bRust製wasmとJSを連携する方法（wasm-bindgenを使いたくない人向け）",
+      "description": "2024-08-24 フロントエンドカンファレンス北海道\n",
+      "image": "https://files.speakerdeck.com/presentations/abc96b02b0a240619d293ffd84859285/slide_0.jpg?31457248",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yata/layerxniokeruduo-yan-yu-dui-ying-kai-fa-su-du-woluo-tosanaifan-yi-qing-bao-guan-li": {
+      "title": "LayerXにおける多言語対応 開発速度を落とさない翻訳情報管理",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/0169d58c0d674217861fd53e74821942/slide_0.jpg?31464854",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yukukotani/recording-web-app-user-screen-powered-by-web-tech": {
+      "title": "Web技術を駆使してユーザーの画面を「録画」する",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/c20316cc8a6847fb81578abe90d7b5d9/slide_0.jpg?31466155",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.docswell.com/s/_n13u_/57RV6J-2024-08-24-025033": {
+      "title": "Webの潮流から考える、フロントエンドの溢れんばかりの 魅力とフロントエンドエンジニアの役目 | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://bcdn.docswell.com/page/4JM4WG557W.jpg?width=480",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+    },
+    "https://www.docswell.com/s/plageoj/KR2XJ3-10-yo-jquery#p3": {
+      "title": "10年もののjQueryフロントエンドを良くしていくための道筋 | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://bcdn.docswell.com/page/YE9WVZ4ZE3.jpg?width=480",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+    },
+    "https://www.figma.com/proto/vcXBfew0hyKCFvmzaYGkIa/Slides?page-id=137%3A2&node-id=137-252&viewport=1437%2C517%2C0.48&t=HP4BLFHK4ty0fBFl-1&scaling=contain&content-scaling=fixed": {
+      "title": "Figma",
+      "description": "Created with Figma",
+      "image": "https://www.figma.com/file/vcXBfew0hyKCFvmzaYGkIa/thumbnail?ver=thumbnails/c68e2891-0dd2-4ae2-bd58-23107b2fde68",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
+    },
+    "https://www.frontend-conf.jp": {
+      "title": "フロントエンドカンファレンス北海道2024",
+      "description": "フロントエンド領域のエンジニア・デザイナー向けの技術カンファレンス「フロントエンドカンファレンス北海道2024」を2024年8月24日(土)に札幌で開催",
+      "image": "https://www.frontend-conf.jp/opengraph-image.png?56bc8da311024eaa",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.frontend-conf.jp"
+    },
+    "https://yamanoku.net/frontendo-2024/ja/": {
+      "title": "ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://yamanoku.net"
+    }
+  },
   "2024-03-30-freelance-hub-introduced-html-level1": {
     "https://freelance-hub.jp/column/detail/315/": {
       "title": "フロントエンドエンジニアに役に立つ資格とは？資格とその勉強方法をチェックしよう！",
