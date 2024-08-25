@@ -115,5 +115,5 @@ export const TAG_ICON_CLASS_LIST = [
 export const ACCOUNT_LINKS = {
   portfolio: 'https://h-yoshikawa44.com',
   github: 'https://github.com/h-yoshikawa44',
-  twitter: 'https://twitter.com/yoshi44_lion',
+  x: 'https://x.com/yoshi44_lion',
 } as const;
