@@ -30,6 +30,12 @@
       "image": "https://raw.githubusercontent.com/satoshi7190/css-slide/main/image.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://satoshi7190.github.io"
     },
+    "https://speakerdeck.com/618knot/hurontoendokanhuarensubei-hai-dao-2024nolpwotukututemita": {
+      "title": "フロントエンドカンファレンス北海道2024のLPをつくってみた",
+      "description": "#frontendo",
+      "image": "https://files.speakerdeck.com/presentations/aed527a318a44743b0c22d45de73cb2d/slide_0.jpg?31490723",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
     "https://speakerdeck.com/aiji42/etuzihahurontondonanoka-batukuendonanoka-nituitekao-etemiru": {
       "title": "エッジはフロントエンドなのか？ バックエンドなのか？ について考えてみる",
       "description": "<a href=\"https://www.frontend-conf.jp/\">フロントエンドカンファレンス北海道2024</a>の登壇資料です。",
