@@ -6,6 +6,12 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://2024-fac-hokkaido-yuto343.pages.dev"
     },
+    "https://docs.google.com/presentation/d/1-OyytTBfOI9vs22Xbqx3PkvUcnFQEJEOWKiJzh1h_RY/edit#slide=id.p1": {
+      "title": "ブラウザはどのようにしてテキストを描画しているのか？――Chromiumにみるテキスト描画の深淵",
+      "description": "ブラウザはどのようにして テキストを描画しているのか？ ―― Chromiumにみるテキスト描画の深淵",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLgvx5w_PasGyZAQIuGmnwXe8x5IA9R_ZeLSalxGbDo1hC7vmNKujGezZ77zia2IegKdlA9SLC8B4bwXPGvOwe6D50FZ-zU1qv-A9Lw6-u6pnyxJOY0=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
     "https://docs.google.com/presentation/d/16hOx3E6hERQtV-zG_odrwPlseV-PIWd9FITFseGe_u8/view?pli=1": {
       "title": "ゆめみでアクセシビリティを広めるためにやっていること",
       "description": "で アクセシビリティを広めるためにやっていること 2024-08-24 フロントエンドカンファレンス北海道 ygkn (Yugo Yagita)",
