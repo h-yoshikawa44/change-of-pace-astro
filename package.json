@@ -41,7 +41,7 @@
     "remark-breaks": "^4.0.0",
     "remark-flexible-code-titles": "^1.1.4",
     "sanitize-html": "^2.12.1",
-    "sass": "^1.72.0",
+    "sass": "^1.78.0",
     "wicg-inert": "^3.1.2"
   },
   "devDependencies": {
