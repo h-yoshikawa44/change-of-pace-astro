@@ -15,13 +15,13 @@
     "lint:eslint": "eslint \"./src/**/*.{js,jsx,ts,tsx,astro}\"",
     "lint:stylelint": "stylelint \"./src/**/*.scss\"",
     "lint:textlint:full": "textlint --cache \"src/content/**/*.{md,mdx}\" -f pretty-error",
-    "check:prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,html,json,astro}\"",
+    "check:prettier": "prettier --check \"./src/**/*.{js,jsx,ts,tsx,astro,html,json,yml}\"",
     "fix": "npm run fix:eslint && npm run fix:stylelint && npm run fix:prettier",
     "fix:eslint": "npm run lint:eslint -- --fix",
     "fix:stylelint": "npm run lint:stylelint --fix",
     "fix:textlint:full": "textlint --cache \"src/content/**/*.{md,mdx}\" --fix",
     "fix:prettier": "npm run check:prettier -- --write",
-    "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
+    "prepare": "lefthook install || echo 'Can not set git hooks'"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.3",
@@ -54,10 +54,9 @@
     "eslint": "^9.10.0",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-jsx-a11y": "^6.10.0",
-    "nano-staged": "^0.8.0",
+    "lefthook": "^1.7.15",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
-    "simple-git-hooks": "^2.11.0",
     "stylelint": "^16.9.0",
     "stylelint-config-prettier-scss": "^1.0.0",
     "stylelint-config-recess-order": "^5.1.0",
@@ -72,22 +71,5 @@
   },
   "volta": {
     "node": "20.16.0"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx nano-staged",
-    "prepare-commit-msg": "./.githooks/prepare-commit-msg \"$@\""
-  },
-  "nano-staged": {
-    "src/**/*.{js,jsx,ts,tsx,astro}": [
-      "prettier --write --loglevel=error",
-      "eslint --fix --quiet"
-    ],
-    "src/**/*.scss": [
-      "prettier --write --loglevel=error",
-      "stylelint --fix --quiet"
-    ],
-    "./**/*.{html,json}": [
-      "prettier --write --loglevel=error"
-    ]
   }
 }
