@@ -1,4 +1,5 @@
 ---
+import { GOOGLE_SITE_VERIFICATION } from 'astro:env/server';
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
 
 export interface Props {
@@ -17,8 +18,6 @@ const titleWithSiteTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const simpleTitle = title ? title : SITE_TITLE;
 
 const ogpImage = new URL('/ogp.png', Astro.site?.origin!);
-
-const GOOGLE_SITE_VERIFICATION = import.meta.env.GOOGLE_SITE_VERIFICATION;
 ---
 
 <!-- Global Metadata -->
