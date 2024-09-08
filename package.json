@@ -42,7 +42,7 @@
     "remark-flexible-code-titles": "^1.1.4",
     "sanitize-html": "^2.13.0",
     "sass": "^1.78.0",
-    "wicg-inert": "^3.1.2"
+    "wicg-inert": "^3.1.3"
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
