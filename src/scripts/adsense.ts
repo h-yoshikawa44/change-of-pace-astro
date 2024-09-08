@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const googleAdsenseInit = () => {
-    let ad = document.createElement('script');
+    const ad = document.createElement('script');
     ad.type = 'text/javascript';
     ad.async = true;
     ad.crossOrigin = 'anonymous';

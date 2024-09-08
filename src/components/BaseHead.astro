@@ -17,7 +17,7 @@ const { title, description = SITE_DESCRIPTION } = Astro.props;
 const titleWithSiteTitle = title ? `${title} | ${SITE_TITLE}` : SITE_TITLE;
 const simpleTitle = title ? title : SITE_TITLE;
 
-const ogpImage = new URL('/ogp.png', Astro.site?.origin!);
+const ogpImage = new URL('/ogp.png', Astro.site?.origin);
 ---
 
 <!-- Global Metadata -->

@@ -20,7 +20,7 @@ const onCopy = async (ev: MouseEvent, codePre: HTMLPreElement) => {
   try {
     await copyCode(codePre);
     ev.target.innerText = 'Copied!';
-  } catch (err) {
+  } catch (_err) {
     ev.target.innerText = 'Failed...';
   }
   resetCopyButtonText(ev.target);
