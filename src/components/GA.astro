@@ -5,9 +5,10 @@ const GOOGLE_ANALYTICS_TAG = import.meta.env.GOOGLE_ANALYTICS_TAG;
 <!-- Google tag (gtag.js) -->
 <script
   type="text/partytown"
+  is:inline
   src=`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ANALYTICS_TAG}`
 ></script>
-<script type="text/partytown" define:vars={{ GOOGLE_ANALYTICS_TAG }}>
+<script type="text/partytown" is:inline define:vars={{ GOOGLE_ANALYTICS_TAG }}>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     // eslint-disable-next-line no-undef
