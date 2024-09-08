@@ -40,13 +40,13 @@
     "rehype-autolink-headings": "^7.1.0",
     "remark-breaks": "^4.0.0",
     "remark-flexible-code-titles": "^1.1.4",
-    "sanitize-html": "^2.12.1",
+    "sanitize-html": "^2.13.0",
     "sass": "^1.78.0",
     "wicg-inert": "^3.1.2"
   },
   "devDependencies": {
-    "@types/markdown-it": "^13.0.7",
-    "@types/sanitize-html": "^2.11.0",
+    "@types/markdown-it": "^14.1.2",
+    "@types/sanitize-html": "^2.13.0",
     "@typescript-eslint/eslint-plugin": "^7.3.1",
     "@typescript-eslint/parser": "^7.3.1",
     "@unocss/astro": "^0.62.3",
