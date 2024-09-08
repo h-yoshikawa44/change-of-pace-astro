@@ -39,7 +39,7 @@
     "markdown-it": "^14.1.0",
     "rehype-autolink-headings": "^7.1.0",
     "remark-breaks": "^4.0.0",
-    "remark-flexible-code-titles": "^1.1.4",
+    "remark-flexible-code-titles": "^1.2.0",
     "sanitize-html": "^2.13.0",
     "sass": "^1.78.0",
     "wicg-inert": "^3.1.3"
