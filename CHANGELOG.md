@@ -2,6 +2,19 @@
 Change Of Pace の機能の大まかな変化の記録。
 記事投稿・更新は含まない。
 
+## v6.2.0（2024-09-08）
+### Updated
+- 各種アプデ(#183)
+  - Node.js: 20.11.1 -> 20.16.0
+  - TypeScript: 5.4.2 -> 5.5.4
+  - Astro: 4.5.6 -> 4.15.4
+  - UnoCSS: 0.58.6 -> 0.62.3
+  - 他全般
+
+### Development Changed
+- ESLint 設定を flat config ベースに移行(#183)
+- GitHook を Lefthook に移行(#183)
+
 ## v6.1.1（2024-08-25）
 ### Changed
 - Twitter アイコンを X アイコンに移行(#175)
