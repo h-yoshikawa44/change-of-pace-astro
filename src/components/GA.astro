@@ -1,5 +1,5 @@
 ---
-const GOOGLE_ANALYTICS_TAG = import.meta.env.GOOGLE_ANALYTICS_TAG;
+import { GOOGLE_ANALYTICS_TAG } from 'astro:env/server';
 ---
 
 <!-- Google tag (gtag.js) -->
@@ -11,7 +11,7 @@ const GOOGLE_ANALYTICS_TAG = import.meta.env.GOOGLE_ANALYTICS_TAG;
 <script type="text/partytown" is:inline define:vars={{ GOOGLE_ANALYTICS_TAG }}>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
-    // eslint-disable-next-line no-undef
+    // eslint-disable-next-line prefer-rest-params
     dataLayer.push(arguments);
   }
   gtag('js', new Date());

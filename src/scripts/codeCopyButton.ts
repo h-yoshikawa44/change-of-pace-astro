@@ -20,7 +20,7 @@ const onCopy = async (ev: MouseEvent, codePre: HTMLPreElement) => {
   try {
     await copyCode(codePre);
     ev.target.innerText = 'Copied!';
-  } catch (err) {
+  } catch (_err) {
     ev.target.innerText = 'Failed...';
   }
   resetCopyButtonText(ev.target);
@@ -47,7 +47,7 @@ const createCopyButton = (
 const codeContainerCollection = document.querySelectorAll(
   'div.remark-code-container',
 );
-codeContainerCollection.forEach((codeContainer: HTMLDivElement) => {
+codeContainerCollection.forEach((codeContainer: Element) => {
   const childrenList = Array.from(codeContainer.children);
 
   // コピーボタンの top がコードブロックタイトル要素の高さに依存するので、高さを取得

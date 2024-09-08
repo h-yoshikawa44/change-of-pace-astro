@@ -3,11 +3,15 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 import { getLogoIconClass } from '@/utils/getLogoIconClass';
 
+type TagsInfo = {
+  [key: string]: number;
+};
+
 const allTags = (await getCollection('posts'))
   .map((post) => post.data.tags)
   .flat();
 
-const tagsInfo = allTags.reduce((prev, current) => {
+const tagsInfo = allTags.reduce<TagsInfo>((prev, current) => {
   prev[current] = (prev[current] || 0) + 1;
   return prev;
 }, {});
@@ -33,7 +37,7 @@ const tagInfoList = Object.entries(tagsInfo)
           href={`/tags/${tagInfo.tagName}/1`}
           class="m-0.5 inline-flex items-center border rounded-4 px-2 py-1 hover:bg-slate-100"
         >
-          <span class={`${tagInfo.iconClass} text-xl mr-1`} />
+          <span class={`${tagInfo.iconClass} w-5 h-5 mr-1`} />
           {`${tagInfo.tagName}(${tagInfo.count})`}
         </a>
       ))

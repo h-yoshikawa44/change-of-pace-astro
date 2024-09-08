@@ -5,7 +5,7 @@
  * @returns キャメルケースに変換された文字列
  */
 export const toCamelCase = (str: string) => {
-  if (!str.includes(' ')) str;
+  if (!str.includes(' ')) return str.toLocaleLowerCase();
 
   const lowerCase = str.toLocaleLowerCase();
   return lowerCase
