@@ -7,7 +7,10 @@ import { toCamelCase } from './toCamelCase';
  * @returns
  */
 export const getLogoIconClass = (tag: string) => {
-  const iconClass = TAG_ICON_CLASS_MAP[toCamelCase(tag)];
+  // 定数キーだと型が合わないので string 型に変換する
+  const iconClass = (TAG_ICON_CLASS_MAP as { [key: string]: string })[
+    toCamelCase(tag)
+  ];
 
   if (iconClass) {
     return iconClass;

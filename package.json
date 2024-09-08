@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro build && npm run ogp-sort",
     "preview": "astro preview",
+    "check": "astro check",
     "astro": "astro",
     "ogp-sort": "node generated/ogp/ogp-sort.mjs",
     "lint-check": "npm run lint:eslint && npm run lint:stylelint && npm run check:prettier",
@@ -23,6 +24,7 @@
     "prepare": "simple-git-hooks || echo 'Can not set git hooks'"
   },
   "dependencies": {
+    "@astrojs/check": "^0.9.3",
     "@astrojs/mdx": "^2.2.0",
     "@astrojs/partytown": "^2.0.4",
     "@astrojs/rss": "^4.0.5",
@@ -65,6 +67,7 @@
     "textlint": "^14.0.4",
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "typescript": "^5.5.4",
     "unocss": "^0.58.6"
   },
   "volta": {
