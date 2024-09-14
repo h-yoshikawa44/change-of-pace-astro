@@ -504,12 +504,6 @@
     }
   },
   "2019-08-14-docker-rails": {
-    "https://crieit.net/posts/Windows-Docker-Rails-sprockets": {
-      "title": "Windows+Docker+Railsでsprocketsのエラーが出る時 - Crieit",
-      "description": "Docker for Windowsのコンテナ内でRailsを動かしていると、 Errno::EEXIST in Sessions#new というエラーが出るようになった。バージョンはRails5.1、sprockets3。具体的には...",
-      "image": "https://crieit.now.sh/upload_images/6e2af66c610d88bc766649f72032893a5e45efba2b4d7.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
-    },
     "https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/": {
       "title": "https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/rails/",
       "description": "",
