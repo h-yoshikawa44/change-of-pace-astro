@@ -120,12 +120,6 @@
     }
   },
   "2020-09-20-web1week-2": {
-    "https://crieit.net/boards/web1week-202009/Close-to-2": {
-      "title": "Close to 2 （9/7～9/13）１週間でWebサービスを作るイベント - お題「2」 - Boards - Crieit",
-      "description": "遅刻で失礼します。今回のお題は「２」ということで、「２」に一番近い式をあてるゲームを作りました。作品：Close to 2概要４択の中から、計算結果が「２」に一番近い式をあてるゲームです。初級、中級、上級で遊べて、難易度が高いほど長い...",
-      "image": "https://crieit.now.sh/upload_images/3cd4cdadeab8d8ecd1e58166ea5af9825f5f7f9cdd330.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
-    },
     "https://github.com/JaredReisinger/react-crossword": {
       "title": "GitHub - JaredReisinger/react-crossword: A flexible, responsive, and easy-to-use crossword component for React apps.",
       "description": "A flexible, responsive, and easy-to-use crossword component for React apps. - GitHub - JaredReisinger/react-crossword: A flexible, responsive, and easy-to-use crossword component for React apps.",
@@ -461,18 +455,6 @@
       "description": "こんにちは。なべっちです。 前回はcreate-react-appを使ったReactの環境構築を行いました。 今回はReactでストップウォッチを作っていきます。 環境構築の記事はこちら 【1から始めるReact】概要と環境構築 プロジェクトの準備 新規プロジェクトの作成 まずは、create-react-appでreact",
       "image": "https://blitzgate.co.jp/wp/wp-content/uploads/2019/01/thumbnail-1.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blitzgate.co.jp"
-    },
-    "https://crieit.net/boards/web1week-202005/41152da9fccdaae73e45967feced2e2a": {
-      "title": "（5/18～5/24）１週間でWebサービスを作るイベント - お題「Like」 - Boards の投稿 ちょっとしたパズルゲームを作りました。https://jigsaw-like-puzzl... - Crieit",
-      "description": "ちょっとしたパズルゲームを作りました。https://jigsaw-like-puzzle.web.app/PC向けです(スマホは多分動かせないです)初級、中級、上級で遊べます。なんでパズル？「Like」ということで好きなもの → 趣...",
-      "image": "https://crieit.now.sh/upload_images/90ffbf51a37e97c90b4a2458ea18d0855ec8fa55b21a9.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
-    },
-    "https://crieit.net/dashboard": {
-      "title": "Crieit - プログラマー、クリエイターが何でも気軽に書けるコミュニティ",
-      "description": "Crieitはプログラマー、クリエイターが気軽に記事や質問、議論などを投稿できるコミュニティです。",
-      "image": "https://crieit.net/img/card.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://crieit.net"
     },
     "https://github.com/h-yoshikawa44/jigsaw-like-puzzle": {
       "title": "GitHub - h-yoshikawa44/jigsaw-like-puzzle: ジグソーパズルっぽいパズル部屋（web1week「Like」投稿作品）",
