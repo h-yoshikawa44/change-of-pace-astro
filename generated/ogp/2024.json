@@ -1,4 +1,228 @@
 {
+  "2024-11-24-jsconf-jp-2024": {
+    "https://akifumisato.github.io/slide-of-tng-2024-rsc/1": {
+      "title": "React Server Componentsとは何であって何でないのか - Slidev",
+      "description": "## React Server Componentsとは何であって何でないのか\\n",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://akifumisato.github.io"
+    },
+    "https://decks.yasaichi.com/20241123/type-safe-lightweight-ddd-with-effect-schema#1": {
+      "title": "Type-Safe Lightweight DDD with Effect Schema",
+      "description": "Presented at JSConf JP on November 23, 2024",
+      "image": "https://decks.yasaichi.com/20241123/type-safe-lightweight-ddd-with-effect-schema.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://decks.yasaichi.com"
+    },
+    "https://docs.google.com/presentation/d/1cwNcGQ6-GNi8xf_E3XBRWgGIxksoeGiEtAZ6wDkeoXs/edit#slide=id.p": {
+      "title": "ECMAボーイ - JSConf JP 2024",
+      "description": "JavaScriptを支える エコシステム （漫才） ECMAボーイ (@uhyo_, @shqld) （「次の発表どうぞ」アナウンス） : shqld ♂️: uhyo ♂️: どうもー、ECMAボーイです ♂️: よろしくお願いしますー、ありがとうございますー : いきなりですけどね、うちのオカンがね : 「気になるパッケージマネージャがある」らしいんだけど ♂️: あ、そうなんだ",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJjryZuki5U-_yNLBIKnPiBNyDn1tgk8SxU4cAaOmP9RntwuL610bj9etNW3tN3j0YNlPIWV2U0mIhpM1bHj6ND1HvToLa1KMDQtpglA1XaFUARMGkT=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://docs.google.com/presentation/d/1pIYjLrbDA7xvuKZ0FNf5HbSZyu5V7fL5gmvFt0gIVEY/edit#slide=id.g291374bc390_1_103": {
+      "title": "さくらのJS利用事例2024",
+      "description": "さくらインターネットでは こんなところで JavaScriptを使っています",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyI8mPVzHQUFLBHwsr3RoQCzneVXG_xSf8Vm7v59OMlH8gZa2GGhmnafcT53xqD_hAx6FP1EYLwVx_VRrZDYqXE2h-w69FALgJPwprWw5PgU7NSxEVE=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://github.com/Sangun-Kang/romajip": {
+      "title": "GitHub - Sangun-Kang/romajip: This is a library that converts Japanese address input into English address",
+      "description": "This is a library that converts Japanese address input into English address - Sangun-Kang/romajip",
+      "image": "https://opengraph.githubassets.com/b7bc84aa4852cb3262bfbd1cd5f533a3a0cf8caa396049b9ea4410a825830e7d/Sangun-Kang/romajip",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/rayriffy/web-can-be-fun": {
+      "title": "GitHub - rayriffy/web-can-be-fun: Web demo of my lighting talk at JSConf.JP \"Web can be fun!\"",
+      "description": "Web demo of my lighting talk at JSConf.JP \"Web can be fun!\" - rayriffy/web-can-be-fun",
+      "image": "https://opengraph.githubassets.com/666581e7b09bae1c1ecaa285ddbb93504f885948568e1579b68aeae9ae754873/rayriffy/web-can-be-fun",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://jsconf.jp/2024": {
+      "title": "JSConf JPOpen Navigation Menu",
+      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    },
+    "https://knowledge.sakura.ad.jp/16997/": {
+      "title": "「さくらのINFRA WARS」を支える技術をご紹介！　さくらの勉強会 フロントエンドナイト レポート  |  さくらのナレッジ",
+      "description": "目次さくらのINFRA WARSとは作者はゲーム開発初心者だった！ブラウザゲームの基本的な仕組みループおよび内部処理の要点本当はサウンドデザインの話がしたかったさくらのINFRA WARSには技術が詰まっている！Pixi […]",
+      "image": "https://knowledge.sakura.ad.jp/wp-content/uploads/2018/07/infra-wars-e1530852449631.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://knowledge.sakura.ad.jp"
+    },
+    "https://leaysgur.github.io/slides/jsconf_jp-2024/": {
+      "title": "30 Minutes to Understand All of `RegExp` Syntax",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://leaysgur.github.io"
+    },
+    "https://mizchi-20241123-jsconfjp.pages.dev/": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mizchi-20241123-jsconfjp.pages.dev"
+    },
+    "https://note.com/miidas_tech/n/n362dbdc1ad83": {
+      "title": "ESLintのカスタムルールで治安維持活動をする - JSConf JP 2024 ｜miidas_tech",
+      "description": "2024年11月23日（土）に開催されたJSConf JP 2024にて、ミイダスはプレミアムスポンサーとして参加しました。当日はスポンサーワークショップスペースで、ミイダスのフロントエンドにおける取り組みについて発表を行いました。本記事では、その発表内容を詳しくご紹介いたします。   ESLintのカスタムルールで治安維持活動をする  ミイダスでは、開発者がコーディング規約を意識せずに効率よく作業できる環境を目指して、ESLintのカスタムルールを開発しました。今回は、組織独自のコーディング規約を浸透させるために行った「治安維持活動」についてお話しします。 私はミイダスのフロントエン",
+      "image": "https://assets.st-note.com/production/uploads/images/162906537/rectangle_large_type_2_021c543333f2c54ada5a8292ec4fdd5c.png?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://sakupi01.github.io/slides/ja/2024_jsconf_jp/": {
+      "title": "Promise.try: シンプルで強力な同期/非同期統合の未来 - 実装の深層とPromiseの進化",
+      "description": "JSConf JP 2024 - saku:cherry_blossom:",
+      "image": "https://sakupi01.github.io/slides/ja/2024_jsconf_jp/index.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://sakupi01.github.io"
+    },
+    "https://scrapbox.io/HelpfeelTech/Cosense%E3%81%AETranslation_mode%E3%81%AE%E8%A8%AD%E8%A8%88%E3%81%A8%E5%AE%9F%E8%A3%85_(JSConf_2024)": {
+      "title": "CosenseのTranslation modeの設計と実装 (JSConf 2024) - HelpfeelTech",
+      "description": "JSConf JP 2024のスポンサーセッションにて発表したスライドですohnishiakira https://jsconf.jp/2024/talk/helpfeel/ CosenseのTranslation modeに実装において、 いかにユーザー体験を良くしつつリソースの消費を抑えるか ということを紹介したいと思います よろしくお願いします 株式会社Helpfeel 開発部のohnish",
+      "image": "https://nota.gyazo.com/0ebca5f67abb77253f2ed29f64f7b821/max_size/1000",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://scrapbox.io"
+    },
+    "https://speakerdeck.com/azukiazusa1/ui-kai-fa-niokeru-hetudoresu-ui-raiburarinozhong-yao-xing-todezainsisutemuhenoqu-riru-refang": {
+      "title": "UI 開発における ヘッドレス UI ライブラリの重要性とデザインシステムへの取り入れ方",
+      "description": "昨今の Web 開発における UI はますます複雑化し、アクセシビリティの重要性が高まっています。ブラウザの標準機能だけでは実現できない複雑な UI を実装する際、アクセシビリティに関する誤った実装が原因で、ユーザー体験を損なう可能性があります。ヘッドレス UI ライブラリは、あらかじめアクセシビリティ&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/75199587a78249aaba7f77af6cb3fcb9/slide_0.jpg?32735675",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/barometrica/dian-hua-woqie-rasanaiji-shu-dian-hua-zi-dong-ying-da-sabisuwozhi-eru-hurontoendo": {
+      "title": "電話を切らさない技術 電話自動応答サービスを支える フロントエンド",
+      "description": "2024/11/23\nJSConf.jp 2024\nhttps://jsconf.jp/2024/talk/ivry/\n\nこちらで登壇した際の資料です。",
+      "image": "https://files.speakerdeck.com/presentations/a456c2ddae5143a9875f418de25ab42b/slide_0.jpg?32742678",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/berlysia/interoperability-of-module-resolutions-in-javascript": {
+      "title": "JavaScriptのモジュール解決の相互運用性 / JSConf JP 2024 - Interoperability of Module Resolutions in JavaScript",
+      "description": "https://jsconf.jp/2024/talk/berlysia/",
+      "image": "https://files.speakerdeck.com/presentations/f79bfa9dd61044dab177065ad9b876a8/slide_0.jpg?32744403",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/chrisft25/webassembly-unleashed-powering-server-side-applications": {
+      "title": "WebAssembly Unleashed: Powering Server-Side Applications",
+      "description": "JSConf 2024: This talk starts talking about the beginnings of WebAssembly and its contribution to the modern web development as a critical tool to build&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/214c8e1878c14db7b417b7e4b07a6ecb/slide_0.jpg?32751082",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/guvalif/a-tour-of-anti-patterns-for-functional-programming": {
+      "title": "A Tour of Anti-patterns for Functional Programming",
+      "description": "このスライドは、2024/11/23 に開催された「JSConf JP 2024」で発表したものです。\n\ncf. https://jsconf.jp/2024/talk/guvalif/",
+      "image": "https://files.speakerdeck.com/presentations/25fd1d60cd114180a291a5065cbdd2c1/slide_0.jpg?32738704",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kazupon/vapor-revolution": {
+      "title": "Vapor Revolution",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/689e73c19d764a84b739597b2059ecd6/slide_0.jpg?32735779",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/l1lhu1hu1/sutetupubaisutetupudejin-meruyahoo-zhi-hui-dai-nohurontoendoriakitekuto": {
+      "title": "ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/0f2ff7d0922544d68ef322886fed4179/slide_0.jpg?32747958",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/medley/deep-dive-into-react-component-design-for-medical-systems": {
+      "title": "徹底解剖！ 医療業務システムのReactコンポーネント設計 / Deep Dive into React Component Design for Medical Systems",
+      "description": "2024/11/23   JSConf JP 2024\nスポンサーワークショップでの登壇スライドです。\nhttps://jsconf.jp/2024/talk/medley/\n「徹底解剖！医療業務システムのReactコンポーネント設計」\n登壇者：髙橋 佑太（株式会社メドレー 医療プラットフォー&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/6f0e6f477b1e4bb29580363c0b0af13c/slide_0.jpg?32724785",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/minako__ph/jing-de-jie-xi-deshi-xian-sitaxiao-lu-de-nai18ndui-ying-noshi-zu-midukuri": {
+      "title": "静的解析で実現した効率的なi18n対応の仕組みづくり",
+      "description": "JSConf JP 2024 セッション資料\n\n▼ 内容\n・ESLintを静的解析に置き換えたら実行時間が5分の1に短縮された話\n・静的解析を活用して、非エンジニアでもUIチェックを可能にした話\n・i18nを導入しても開発効率を損なわない仕組みを構築した話\n・業界用語を学習させたGPTベース&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/255ff17c0d394009bfda7d443cf14bc8/slide_0.jpg?32745117",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/mizdra/the-world-of-function-prototype-tostring-you-dont-know": {
+      "title": "あなたの知らない Function.prototype.toString() の世界",
+      "description": "JSConf JP 2024 の発表資料です。\n\n---\n\nJavaScript には Function.prototype.toString() という API があります。この API を使うと、関数本体のソースコードを文字列として取得できます。 一見すると何の使い道があるか分からないかもし&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/1cdd8ad24d254790950d7d3fedd7d972/slide_0.jpg?32745008",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/narirou/lineyahuniokeruprerenderji-shu-nodao-ru-tosonoxiao-guo": {
+      "title": "LINEヤフーにおけるPrerender技術の導入とその効果",
+      "description": "LINEヤフーは快適なユーザー体験を追求するために、表示パフォーマンスの改善に取り組んでいます。その取組の1つとして、私達はSpeculationRulesAPIを用いてページを事前にレンダリングし、Yahoo! JAPAN トップページとYahoo!ニュース間の遷移において、その結果を検証してきました&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/96a86e3bf68946ffb5ee2efe3e01547b/slide_0.jpg?32742555",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/re_taro/storybook-tonoshang-shou-naxiang-kihe-ifang-wokao-eru": {
+      "title": "Storybook との上手な向き合い方を考える",
+      "description": "JSConf JP 2024 にて登壇した資料です。\n\nスピーカーノートはこちら -> ﾏﾀﾞﾅｲﾖ",
+      "image": "https://files.speakerdeck.com/presentations/1ea0b2e1bc9c464982649e7879b18e29/slide_0.jpg?32737953",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sangunkang/romajip-ri-ben-nozhu-suo-csvdetawohuo-yong-sitaying-yu-zhu-suo-bian-huan-raiburariwozuo-tutahua": {
+      "title": "romajip: 日本の住所CSVデータを活用した英語住所変換ライブラリを作った話",
+      "description": "https://jsconf.jp/2024/talk/kang-sangun/",
+      "image": "https://files.speakerdeck.com/presentations/e32f7bf19d314bb9be3ef4d767c2df76/slide_0.jpg?32738597",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shunya078/wo-nodezainsisutemuha-chakra-v3-niatupudetosimasu": {
+      "title": "我々のデザインシステムは Chakra v3 にアップデートします",
+      "description": "JSConf 2024: 2024/11/23 (Sat.)",
+      "image": "https://files.speakerdeck.com/presentations/b082b753f4954d76a8f2eb0d85de9246/slide_0.jpg?32741265",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sosukesuzuki/iteretatoiteraburunogai-yao-toke-ti-wei-lai": {
+      "title": "イテレータとイテラブルの概要と課題、未来",
+      "description": "JSConf JP 2024",
+      "image": "https://files.speakerdeck.com/presentations/a3bfbed2d76942f0a53e9952134536e9/slide_0.jpg?32743460",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ssssota/the-next-chapter-of-declarative-ui": {
+      "title": "React CompilerとFine Grained Reactivityと宣言的UIのこれから / The next chapter of declarative UI",
+      "description": "https://jsconf.jp/2024/talk/ssssota/\nhttps://github.com/ssssota/react-compiler-fine-grained-reactivity-and-declarative-ui-future",
+      "image": "https://files.speakerdeck.com/presentations/c2d800c9e26c4761a5411c74c7412dd8/slide_0.jpg?32738719",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/takonda/minimize-framework-dependency-in-frontend": {
+      "title": "React への依存を最小にするフロントエンド設計",
+      "description": "JSConf JP 2024 での発表資料です",
+      "image": "https://files.speakerdeck.com/presentations/001a570b52274791b464dd5191a5e4d8/slide_0.jpg?32739316",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yosuke_furukawa/welcome-jsconf-dot-jp-2024": {
+      "title": "Welcome JSConf.jp 2024",
+      "description": "JSConf.jp 2024 23rd November",
+      "image": "https://files.speakerdeck.com/presentations/4be15f86a6f34ef496d2271f8c705724/slide_0.jpg?32736704",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ypresto/nuxt-inside-nextjs-with-iframe": {
+      "title": "Next.jsとNuxtが混在？ iframeでなんとかする！",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/edb194c02fab46978ffdf4808eaa4f7c/slide_0.jpg?32744905",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yuisakamoto/modular-monolith-monorepo-sinpurusawobao-tinagaramonoreponomeritutowozui-da-hua-suru": {
+      "title": "Modular Monolith Monorepo ～シンプルさを保ちながらmonorepoのメリットを最大化する～",
+      "description": "スタートアップにおけるMonorepo開発で、単にコードを一箇所に集めるだけでなく、チームの意思決定プロセスとコミュニケーションの設計を通じて、その真価を最大化する実践について解説。",
+      "image": "https://files.speakerdeck.com/presentations/26087f47d3104cd1b87eb70a55386580/slide_0.jpg?32743189",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://storage.rayriffy.com/files/jsconf-web-can-be-fun.pdf": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://storage.rayriffy.com"
+    },
+    "https://tamascsaba.github.io/jsconfjp-2024-presentation/": {
+      "title": "",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tamascsaba.github.io"
+    },
+    "https://www.figma.com/community/file/1441988131613308209/you-dont-know-figma-yet": {
+      "title": "You Don’t Know Figma Yet",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.figma.com"
+    },
+    "https://www.youtube.com/@jsconfjp": {
+      "title": "jsconfjp",
+      "description": "作成した動画を友だち、家族、世界中の人たちと共有",
+      "image": "https://yt3.googleusercontent.com/ytc/AIdro_m4ohdTwVIwcCyC7ytC30bfu8rSA1b_2VhEmzXIPEr-yQ=s900-c-k-c0x00ffffff-no-rj",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    }
+  },
   "2024-08-25-frontend-conf-hokkaido-2024": {
     "https://2024-fac-hokkaido-yuto343.pages.dev/1": {
       "title": "CodeGrid記事かいつまみ紹介 - Slidev",
