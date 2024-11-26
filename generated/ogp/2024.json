@@ -210,6 +210,12 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tamascsaba.github.io"
     },
+    "https://tech.newmo.me/entry/jsconf2024-modular-monolith-monorepo": {
+      "title": "JSConf JPでModular Monolith Monorepoについて発表しました - newmo 技術ブログ",
+      "description": "こんにちは、newmoでソフトウェアエンジニアをしている @yui_tangです。 2024年11月23日に開催されたJSConf JP 2024にて、「Modular Monolith Monorepo -シンプルさを保ちながらmonorepoのメリットを最大化する-」というテーマで発表させていただきました。 スライド: speakerdeck.com 動画: https://www.youtube.com/live/2BXwigWGjWQ?feature=shared&t=21596 JSConf JP 2024について JSConf JPは日本最大級のJavaScriptカンファレンスで…",
+      "image": "https://ogimage.blog.st-hatena.com/6801883189095787236/6802418398306614771/1732583024",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.newmo.me"
+    },
     "https://www.figma.com/community/file/1441988131613308209/you-dont-know-figma-yet": {
       "title": "You Don’t Know Figma Yet",
       "description": "",
