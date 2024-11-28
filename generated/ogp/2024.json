@@ -114,6 +114,12 @@
       "image": "https://files.speakerdeck.com/presentations/689e73c19d764a84b739597b2059ecd6/slide_0.jpg?32735779",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
+    "https://speakerdeck.com/kintotechdev/kurumanosabusukuwo-next-dot-jsdenei-zhi-hua-sitajing-yan-tosono1nian-hou": {
+      "title": "クルマのサブスクを Next.jsで内製化した経験とその1年後",
+      "description": "KINTOテクノロジーズ株式会社では2023年に「車のサブスクKINTO」の大規模な内製化（刷新）を完了しました。 この際、ユーザー体験はもちろん開発体験の向上も視野に入れつつNext.jsを中心として技術選定を行いました。 このセッションでは、車のサブスクを担うシステムの大規模リプレースの中でどのよう&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/c6e3276cc2e6402e9a52d7197848d480/slide_0.jpg?32781560",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
     "https://speakerdeck.com/l1lhu1hu1/sutetupubaisutetupudejin-meruyahoo-zhi-hui-dai-nohurontoendoriakitekuto": {
       "title": "ステップバイステップで進めるYahoo!知恵袋のフロントエンドリアーキテクト",
       "description": "",
