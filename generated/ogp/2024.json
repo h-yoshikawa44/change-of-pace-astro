@@ -337,6 +337,30 @@
       "description": "作成した動画を友だち、家族、世界中の人たちと共有",
       "image": "https://yt3.googleusercontent.com/ytc/AIdro_m4ohdTwVIwcCyC7ytC30bfu8rSA1b_2VhEmzXIPEr-yQ=s900-c-k-c0x00ffffff-no-rj",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=2BXwigWGjWQ": {
+      "title": "JSConf JP 2024 トラックB",
+      "description": "https://jsconf.jp/2024/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/2BXwigWGjWQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGQgZChkMA8=&rs=AOn4CLCu3_r2KVFHUE9Ygi2kn6F2l-VlvA",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=5Wt0r5vHOwQ": {
+      "title": "JSConf JP 2024 トラックD",
+      "description": "https://jsconf.jp/2024/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/5Wt0r5vHOwQ/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGBMgTyh_MA8=&rs=AOn4CLAkOWfg8f65EU3891KDJlcbwbKirg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=E3yTtaGr7V8": {
+      "title": "JSConf JP 2024 トラックC",
+      "description": "https://jsconf.jp/2024/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/E3yTtaGr7V8/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGE0gSihlMA8=&rs=AOn4CLAJZCVAxTMdLivK9elHp0ZSSm1s7A",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=ew1zmA7y9q8": {
+      "title": "JSConf JP 2024 トラックA",
+      "description": "https://jsconf.jp/2024/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/ew1zmA7y9q8/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLDu7u3EVquRHqOuQ5JVUG3-s1MO1A",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
   },
   "2024-08-25-frontend-conf-hokkaido-2024": {
