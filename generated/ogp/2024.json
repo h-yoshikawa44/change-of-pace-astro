@@ -1,4 +1,108 @@
 {
+  "2024-12-31-looking-back-2024-tech": {
+    "https://event.shoeisha.jp/devsumi/20240215": {
+      "title": "Developers Summit 2024（2024.02.15-16）",
+      "description": "Developers Summit 2024は、2月15-16日にベルサール羽田空港で開催！",
+      "image": "https://event.shoeisha.jp/static/images/event/1514/1200.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+    },
+    "https://findy.connpass.com/event/306774/": {
+      "title": "Zenn,しずかなインターネット「どうやって開発したの？」開発者catnoseさんにきいてみた (2024/01/23 12:00〜)",
+      "description": "# 🎥 アーカイブ動画  アーカイブ動画はこちらから  # ✍️概要  本イベントでは、『しずかなインターネット』を開発されたcatnoseさんに、開発のきっかけとなった体験や技術選定、実装での障害などを伺いながら   ・どうやってプロダクトや機能のアイデアが生まれるのか？   ・そのアイデアをどうやって落とし込むのか？   など、企画からリリースまでの全体像を掴み、EngineeringとProduct、個人開発と組織での開発の架け橋となるようなイベントを目指します。    ## 🕛タイムテーブル  時間 | セッションタイトル   ---|---   12:00 ~ 12:05 | ...",
+      "image": "https://media.connpass.com/thumbs/c2/ff/c2ff78fdcb6ca9b9251cb6d8f1ed7d06.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://findy.connpass.com"
+    },
+    "https://findy.connpass.com/event/318090/": {
+      "title": "うひょさんに聞く！React 19アップデートの勘所 (2024/05/29 12:00〜)",
+      "description": "## 🎥 アーカイブ動画  アーカイブ動画はこちらから    # ✍️概要  2023年4月にReact 19 Betaがリリースされ、アクションの導入やuseOptimisticなどの新しいフック、use APIによるリソースの読み込みなど、多くの新機能や改良が加えられました。   本イベントでは、第一人者である、うひょさんをお招きし、React 19の新機能やアップグレード時の注意点などについて解説していただきます。   最新のReactの動向を知り、正式リリースに備えて明日からの開発に活かせる知見を得られるイベントを目指します。  ### うひょさんに聞いてみたいことを、お申込み時...",
+      "image": "https://media.connpass.com/thumbs/40/4a/404a29df3ac2f0c3e67d811bc1f5e4e1.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://findy.connpass.com"
+    },
+    "https://github.com/h-yoshikawa44": {
+      "title": "h-yoshikawa44 - Overview",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 61 repositories available. Follow their code on GitHub.",
+      "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://jsconf.jp/2024/": {
+      "title": "JSConf JPOpen Navigation Menu",
+      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    },
+    "https://jtca.org/learn-tc/certificate-exam/writing_b/": {
+      "title": "3級 テクニカルライティング試験[TW] - TC協会（JTCA） 公式サイト",
+      "description": "使用情報の作成に携わる人々だけでなく、実用文の作成に役立つ日本語の文章表現技術を高めたいすべての方々を対象とす",
+      "image": "https://jtca.org/tcwp/wp-content/uploads/2024/05/jtca_img.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jtca.org"
+    },
+    "https://note.com/h_yoshikawa44": {
+      "title": "よし｜note",
+      "description": "Web Developer.",
+      "image": "https://assets.st-note.com/production/uploads/images/71216582/profile_f004d545f63ff97e59edfd7a0428862b.png?fit=bounds&format=jpeg&quality=85&width=330",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://note.com/taiwanwalking/n/naa162cfd47f2": {
+      "title": "ポーランドから世界中のwebサイトへの不正アクセス？対処法を考察する｜NOBU@台湾ウォーキング",
+      "description": "突然増大したポーランドからのアクセス  企業サイトや個人ブログを問わず世界中のwebサイトに2024年2月中旬以降ポーランドからのアクセスが急増していることが判明。  Googleのコミュニティでも報告されており、世界中のwebサイト管理者が困惑しているようです。  \n\n\nReferral Spam news grets store (Poland) - Google Analytics Community\n\n\n\n\n\nsupport.google.com\n\n\n\n \n X（ツイッター）でも、騒ぎになっています。 調べたところ私のブログにも2月15日からポーランドから毎日数十のアクセスがあ",
+      "image": "https://assets.st-note.com/production/uploads/images/131669997/rectangle_large_type_2_930ced9e182c3fb09825cde149e1319f.jpeg?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://offers.connpass.com/event/310086/": {
+      "title": "そのまま口伝で続ける？メルカリ、カオナビ、estieの試行錯誤から学ぶ設計ドキュメントの活用方法 (2024/03/05 19:00〜)",
+      "description": "# 👩‍💻アーカイブ動画配信中  ## こちらより、アーカイブ動画を配信中です  # 📢イベント概要  開発組織においては、PRD（Product Requirements Document）、Design Docs、ミニスペック、ADR（Architecture Decision Record）など、多種多様なドキュメントが用いられています。  これらのドキュメントを自社に取り入れる際には、それぞれのドキュメントがそもそも何なのか、各ドキュメントで達成したいことはなにか、どのような項目が必要かを理解して活用していくことが重要になる一方で、実際には運用してみないと分からない部分も多く、ど...",
+      "image": "https://media.connpass.com/thumbs/0a/88/0a88469e36149e61b1f3ad2a5859e85f.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://offers.connpass.com"
+    },
+    "https://qiita.com/h-yoshikawa44": {
+      "title": "@h-yoshikawa44のマイページ - Qiita",
+      "description": "Web Developer。\n(リンクは個人ブログです)\n※2020/09よりZennをメインにしていく関係上、Qiita記事の更新・投稿は基本的に停止していきます。",
+      "image": "https://cdn.qiita.com/assets/qiita-ogp-3b6fcfdd74755a85107071ffc3155898.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
+    },
+    "https://tw-meetup.connpass.com/event/306213/": {
+      "title": "Technical Writing Meetup vol.29 (2024/01/18 19:00〜)",
+      "description": "# Technical Writing Meetup  Technical Writing Meetupは、テクニカルライティングをテーマにした技術者向けのミートアップです。   エンジニアをしていると、日々仕事でドキュメントを書いたり読んだり、あるいは個人的に調べたことをブログにまとめたり、公私を問わず技術的な文章に触れる機会が多いと思います。   もっと分かりやすいドキュメントが書けるようになりたいな、複雑な技術のこともうまく伝えられるようになりたいな、そんな風に「書くこと」や「つたえること」について課題感を持っている方も少なくないのではないでしょうか。   このミートアップでは、テ...",
+      "image": "https://media.connpass.com/thumbs/f9/6f/f96fb1338a19d7bf4ba411639c95e634.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tw-meetup.connpass.com"
+    },
+    "https://tw-meetup.connpass.com/event/309169/": {
+      "title": "Technical Writing Meetup vol.30 (2024/02/15 19:00〜)",
+      "description": "# Technical Writing Meetup  Technical Writing Meetupは、テクニカルライティングをテーマにした技術者向けのミートアップです。   エンジニアをしていると、日々仕事でドキュメントを書いたり読んだり、あるいは個人的に調べたことをブログにまとめたり、公私を問わず技術的な文章に触れる機会が多いと思います。   もっと分かりやすいドキュメントが書けるようになりたいな、複雑な技術のこともうまく伝えられるようになりたいな、そんな風に「書くこと」や「つたえること」について課題感を持っている方も少なくないのではないでしょうか。   このミートアップでは、テ...",
+      "image": "https://media.connpass.com/thumbs/f9/6f/f96fb1338a19d7bf4ba411639c95e634.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tw-meetup.connpass.com"
+    },
+    "https://tw-meetup.connpass.com/event/320894/": {
+      "title": "Technical Writing Meetup vol.33 (2024/06/13 19:00〜)",
+      "description": "# Technical Writing Meetup  Technical Writing Meetupは、テクニカルライティングをテーマにした技術者向けのミートアップです。   エンジニアをしていると、日々仕事でドキュメントを書いたり読んだり、あるいは個人的に調べたことをブログにまとめたり、公私を問わず技術的な文章に触れる機会が多いと思います。   もっと分かりやすいドキュメントが書けるようになりたいな、複雑な技術のこともうまく伝えられるようになりたいな、そんな風に「書くこと」や「つたえること」について課題感を持っている方も少なくないのではないでしょうか。   このミートアップでは、テ...",
+      "image": "https://media.connpass.com/thumbs/f9/6f/f96fb1338a19d7bf4ba411639c95e634.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tw-meetup.connpass.com"
+    },
+    "https://www.frontend-conf.jp/": {
+      "title": "フロントエンドカンファレンス北海道2024",
+      "description": "フロントエンド領域のエンジニア・デザイナー向けの技術カンファレンス「フロントエンドカンファレンス北海道2024」を2024年8月24日(土)に札幌で開催",
+      "image": "https://www.frontend-conf.jp/opengraph-image.png?56bc8da311024eaa",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.frontend-conf.jp"
+    },
+    "https://zenn.dev/chot/articles/e109287414eb8c": {
+      "title": "今ホットなHonoを使ってNext.jsのRoute Handlersをハイジャックする",
+      "description": "",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--nUaGwJcf--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:%25E4%25BB%258A%25E3%2583%259B%25E3%2583%2583%25E3%2583%2588%25E3%2581%25AAHono%25E3%2582%2592%25E4%25BD%25BF%25E3%2581%25A3%25E3%2581%25A6Next.js%25E3%2581%25AERoute%2520Handlers%25E3%2582%2592%25E3%2583%258F%25E3%2582%25A4%25E3%2582%25B8%25E3%2583%25A3%25E3%2583%2583%25E3%2582%25AF%25E3%2581%2599%25E3%2582%258B%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_34:Tsuboi%2Cx_220%2Cy_108/bo_3px_solid_rgb:d6e3ed%2Cg_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzAzODVjOWFlYzkuanBlZw==%2Cr_20%2Cw_90%2Cx_92%2Cy_102/co_rgb:6e7b85%2Cg_south_west%2Cl_text:notosansjp-medium.otf_30:chot%2520Inc.%2520tech%2520blog%2Cx_220%2Cy_160/bo_4px_solid_white%2Cg_south_west%2Ch_50%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYXZhdGFyLzUzMmU3Zjg2MTIuanBlZw==%2Cr_max%2Cw_50%2Cx_139%2Cy_84/v1627283836/default/og-base-w1200-v2.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    },
+    "https://zenn.dev/h_yoshikawa0724": {
+      "title": "よしさんの記事一覧",
+      "description": "Web Developer。頭の情報整理がてら記事書いてます（基本的に個人ブログとZennでクロス投稿しています）TypeScript / React / Next.js",
+      "image": "https://lh3.googleusercontent.com/a-/AOh14GiwD5VEHFiHt6l5HHmCq_VAFJtJKmM2kUwebpZx=s250-c",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    },
+    "https://zenn.dev/uhyo/books/react-19-new": {
+      "title": "React 19の新機能まるわかり",
+      "description": "2024年4月にリリースされたReact 19 Betaの新機能について、細かい点やポイントを解説します。",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--GJ4y66ZQ--/g_center%2Ch_280%2Cl_fetch:aHR0cHM6Ly9zdG9yYWdlLmdvb2dsZWFwaXMuY29tL3plbm4tdXNlci11cGxvYWQvYm9va19jb3Zlci9iYzU0MTk0MDFlLmpwZw==%2Cw_200/v1627283836/default/og-base-book_yz4z02.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    }
+  },
   "2024-11-24-jsconf-jp-2024": {
     "https://akifumisato.github.io/slide-of-tng-2024-rsc/1": {
       "title": "React Server Componentsとは何であって何でないのか - Slidev",
