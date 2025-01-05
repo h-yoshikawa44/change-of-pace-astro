@@ -50,26 +50,24 @@ export default defineConfig({
       ],
     ],
   },
-  experimental: {
-    env: {
-      schema: {
-        GOOGLE_ANALYTICS_TAG: envField.string({
-          context: 'server',
-          access: 'public',
-        }),
-        GOOGLE_SITE_VERIFICATION: envField.string({
-          context: 'server',
-          access: 'public',
-        }),
-        PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID: envField.string({
-          context: 'client',
-          access: 'public',
-        }),
-        PUBLIC_GOOGLE_ADSENSE_SLOT: envField.string({
-          context: 'client',
-          access: 'public',
-        }),
-      },
+  env: {
+    schema: {
+      GOOGLE_ANALYTICS_TAG: envField.string({
+        context: 'server',
+        access: 'public',
+      }),
+      GOOGLE_SITE_VERIFICATION: envField.string({
+        context: 'server',
+        access: 'public',
+      }),
+      PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID: envField.string({
+        context: 'client',
+        access: 'public',
+      }),
+      PUBLIC_GOOGLE_ADSENSE_SLOT: envField.string({
+        context: 'client',
+        access: 'public',
+      }),
     },
   },
 });
