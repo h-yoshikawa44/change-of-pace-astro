@@ -45,16 +45,16 @@
     "wicg-inert": "^3.1.3"
   },
   "devDependencies": {
-    "@eslint/js": "^9.10.0",
+    "@eslint/js": "^9.17.0",
     "@types/markdown-it": "^14.1.2",
     "@types/sanitize-html": "^2.13.0",
-    "@typescript-eslint/parser": "^8.4.0",
+    "@typescript-eslint/parser": "^8.19.0",
     "@unocss/astro": "^0.65.3",
     "@unocss/autocomplete": "^0.65.3",
     "@unocss/eslint-config": "^0.65.3",
-    "eslint": "^9.10.0",
-    "eslint-plugin-astro": "^1.2.3",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint": "^9.17.0",
+    "eslint-plugin-astro": "^1.3.1",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
     "lefthook": "^1.7.15",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
@@ -67,7 +67,7 @@
     "textlint-filter-rule-comments": "^1.2.2",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1",
     "typescript": "^5.7.2",
-    "typescript-eslint": "^8.4.0",
+    "typescript-eslint": "^8.19.0",
     "unocss": "^0.65.3"
   },
   "volta": {
