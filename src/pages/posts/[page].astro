@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import PostPagingList from '@/features/post/PostPagingList.astro';
 import { PAGE_SIZE, RSS_LINKS } from '@/consts';
-import { extractPostSlug } from '@/utils/extractPostSlug';
+import { extractPostId } from '@/utils/extractPostId';
 
 type Props = {
   page: Page<CollectionEntry<'posts'>>;
@@ -14,7 +14,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = (await getCollection('posts'))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .map((post) => {
-      return { ...post, slug: extractPostSlug(post.slug) };
+      return { ...post, id: extractPostId(post.id) };
     });
 
   return paginate(allPosts, {

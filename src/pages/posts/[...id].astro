@@ -1,16 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
 import '@/styles/markdown.scss';
 import { CATEGORY_MAP } from '@/consts';
-import { extractPostSlug } from '@/utils/extractPostSlug';
+import { extractPostId } from '@/utils/extractPostId';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.map((post) => ({
-    params: { slug: extractPostSlug(post.slug) },
+    params: { id: extractPostId(post.id) },
     props: post,
   }));
 }
@@ -18,7 +18,7 @@ type Props = CollectionEntry<'posts'>;
 
 const post = Astro.props;
 const { title, description, pubDate, updatedDate, category, tags } = post.data;
-const { Content, headings } = await post.render();
+const { Content, headings } = await render(post);
 ---
 
 <BaseLayout

@@ -5,13 +5,13 @@ import { CATEGORY_MAP } from '@/consts';
 type Props = {
   pubDate: Date;
   updatedDate?: Date;
-  slug: string;
+  id: string;
   title: string;
   category: keyof typeof CATEGORY_MAP;
   tags: string[];
 };
 
-const { pubDate, updatedDate, slug, title, category, tags } = Astro.props;
+const { pubDate, updatedDate, id, title, category, tags } = Astro.props;
 ---
 
 <article class="border-b py-4">
@@ -28,7 +28,7 @@ const { pubDate, updatedDate, slug, title, category, tags } = Astro.props;
   </p>
   <h2 class="text-2xl font-600">
     <a
-      href={`/posts/${slug}`}
+      href={`/posts/${id}`}
       class="block underline-offset-2 decoration-solid hover:underline"
     >
       {title}

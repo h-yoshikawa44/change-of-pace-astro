@@ -4,8 +4,8 @@ pre-commit:
     astro-fixer:
       glob: "src/**/*.astro"
       run: |
-        npx eslint --fix --quiet {staged_files}
-        npx prettier --write --log-level=error {staged_files}
+        npx eslint --fix --quiet "{staged_files}"
+        npx prettier --write --log-level=error "{staged_files}"
       # デフォルトではコマンド実行後の差分を stage に上げてくれないので上げるようにする
       stage_fixed: true
       skip:
@@ -13,22 +13,22 @@ pre-commit:
     js-ts-fixer:
       glob: "src/**/*.{js,jsx,ts,tsx}"
       run: |
-        npx eslint --fix --quiet {staged_files}
-        npx prettier --write --log-level=error {staged_files}
+        npx eslint --fix --quiet "{staged_files}"
+        npx prettier --write --log-level=error "{staged_files}"
       stage_fixed: true
       skip:
         - merge
     scss-fixer:
       glob: "src/**/*.scss"
       run: |
-        npx stylelint --fix --quiet {staged_files}
-        npx prettier --write --log-level=error {staged_files}
+        npx stylelint --fix --quiet "{staged_files}"
+        npx prettier --write --log-level=error "{staged_files}"
       stage_fixed: true
       skip:
         - merge
     formatter:
       glob: "./**/*.{html,json,yml}"
-      run: npx prettier --write --log-level=error {staged_files}
+      run: npx prettier --write --log-level=error "{staged_files}"
       stage_fixed: true
       skip:
         - merge
