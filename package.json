@@ -63,9 +63,9 @@
     "stylelint-config-recess-order": "^5.1.1",
     "stylelint-config-standard-scss": "^14.0.0",
     "stylelint-order": "^6.0.4",
-    "textlint": "^14.2.0",
+    "textlint": "^14.4.2",
     "textlint-filter-rule-comments": "^1.2.2",
-    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.19.0",
     "unocss": "^0.65.3"
