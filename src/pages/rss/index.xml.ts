@@ -12,7 +12,7 @@ export const GET: APIRoute = async (context) => {
   const posts = (await getCollection('posts'))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .map((post) => {
-      return { ...post, slug: extractPostSlug(post.slug) };
+      return { ...post, id: extractPostSlug(post.id) };
     });
 
   return rss({
@@ -21,8 +21,8 @@ export const GET: APIRoute = async (context) => {
     site: context.site ?? SITE_DOMAIN,
     items: posts.map((post) => ({
       ...post.data,
-      link: `/posts/${post.slug}`,
-      content: sanitizeHtml(parser.render(post.body)),
+      link: `/posts/${post.id}`,
+      content: post.body ? sanitizeHtml(parser.render(post.body)) : '',
     })),
     stylesheet: '/pretty-feed-v3.xsl',
     trailingSlash: false,

@@ -17,7 +17,7 @@ export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
   const allPosts = (await getCollection('posts'))
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .map((post) => {
-      return { ...post, slug: extractPostSlug(post.slug) };
+      return { ...post, id: extractPostSlug(post.id) };
     });
 
   return CATEGORY_LIST.flatMap((category) => {

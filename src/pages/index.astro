@@ -9,7 +9,7 @@ const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, PAGE_SIZE)
   .map((post) => {
-    return { ...post, slug: extractPostSlug(post.slug) };
+    return { ...post, id: extractPostSlug(post.id) };
   }) as CollectionEntry<'posts'>[];
 ---
 

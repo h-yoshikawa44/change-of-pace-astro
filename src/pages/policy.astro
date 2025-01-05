@@ -1,9 +1,17 @@
 ---
-import { getEntry } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import PageLayout from '@/layouts/PageLayout.astro';
 
 const page = await getEntry('pages', 'policy');
-const { Content, headings } = await page.render();
+const { Content, headings } =
+  page !== undefined
+    ? await render(page)
+    : { Content: undefined, headings: undefined };
+
+const isContentVisible = Content !== undefined && headings !== undefined;
+if (!isContentVisible) {
+  return Astro.redirect('/404');
+}
 ---
 
 <PageLayout title="プライバシーポリシー" markdownHeadings={headings}>
