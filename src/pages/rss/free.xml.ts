@@ -9,7 +9,7 @@ import {
   SITE_DOMAIN,
   CATEGORY_MAP,
 } from '@/consts';
-import { extractPostSlug } from '@/utils/extractPostSlug';
+import { extractPostId } from '@/utils/extractPostId';
 
 const category = 'free';
 const parser = new MarkdownIt();
@@ -19,7 +19,7 @@ export const GET: APIRoute = async (context) => {
     .filter((post) => post.data.category === category)
     .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
     .map((post) => {
-      return { ...post, id: extractPostSlug(post.id) };
+      return { ...post, id: extractPostId(post.id) };
     });
 
   return rss({

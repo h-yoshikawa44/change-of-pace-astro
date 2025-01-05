@@ -2,14 +2,14 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import PostPagingList from '@/features/post/PostPagingList.astro';
-import { extractPostSlug } from '@/utils/extractPostSlug';
+import { extractPostId } from '@/utils/extractPostId';
 import { PAGE_SIZE, RSS_LINKS } from '@/consts';
 
 const posts = (await getCollection('posts'))
   .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
   .slice(0, PAGE_SIZE)
   .map((post) => {
-    return { ...post, id: extractPostSlug(post.id) };
+    return { ...post, id: extractPostId(post.id) };
   }) as CollectionEntry<'posts'>[];
 ---
 

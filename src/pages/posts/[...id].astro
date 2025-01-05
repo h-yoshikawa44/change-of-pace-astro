@@ -5,12 +5,12 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import FormattedDate from '@/components/FormattedDate.astro';
 import '@/styles/markdown.scss';
 import { CATEGORY_MAP } from '@/consts';
-import { extractPostSlug } from '@/utils/extractPostSlug';
+import { extractPostId } from '@/utils/extractPostId';
 
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   return posts.map((post) => ({
-    params: { id: extractPostSlug(post.id) },
+    params: { id: extractPostId(post.id) },
     props: post,
   }));
 }
