@@ -64,12 +64,6 @@
       "image": "https://css-tricks.com/wp-json/social-image-generator/v1/image/16604",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://css-tricks.com"
     },
-    "https://discord.com/invite/3R6vFeM": {
-      "title": "Join the devchallenges.io Discord Server!",
-      "description": "Discuss devChallenges, help with challenges, showcase your solutions, or hang out and have fun. | 6930 members",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://discord.com"
-    },
     "https://emotion.sh/docs/introduction": {
       "title": "Emotion – Introduction",
       "description": "",
@@ -85,49 +79,97 @@
     "https://github.com/WICG/focus-visible": {
       "title": "GitHub - WICG/focus-visible: Polyfill for `:focus-visible`",
       "description": "Polyfill for `:focus-visible`. Contribute to WICG/focus-visible development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/5988f3d2c4f2f820a391b66c912138e8b721cb7fc9c668378e2e748e13ee3ed6/WICG/focus-visible",
+      "image": "https://opengraph.githubassets.com/12035f3e34dcd9efc192020f4f6817ff51a80313e29d4555d837fa992ec1af2a/WICG/focus-visible",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/WICG/inert": {
       "title": "GitHub - WICG/inert: Polyfill for the inert attribute and property.",
       "description": "Polyfill for the inert attribute and property. Contribute to WICG/inert development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/d8f0646b8b72b77e626c32950ec562c28798fbb6f2444bb4eb2d2fa85a3db04b/WICG/inert",
+      "image": "https://opengraph.githubassets.com/aecfd360155d45f65b824812f172cc9e7cff20777f5ec9beda0e3bb386ea9211/WICG/inert",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/emotion-icons/emotion-icons": {
       "title": "GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components",
-      "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Mate...",
-      "image": "https://opengraph.githubassets.com/59382d127c7906ae3131b957156c874ce531ce4f95889c1fb4ea2b221fdf4889/emotion-icons/emotion-icons",
+      "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - emotion-icons/emotion-icons",
+      "image": "https://opengraph.githubassets.com/237f4541d285f714df58218fb0c9849201c61956168f576b883ef28e8a2eb092/emotion-icons/emotion-icons",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-404-not-found": {
+      "title": "GitHub - h-yoshikawa44/ch-404-not-found: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - 404 Not Found）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - 404 Not Found） - h-yoshikawa44/ch-404-not-found",
+      "image": "https://opengraph.githubassets.com/c5c4f6668733d75a3407f5b65e21414353920e4fd0a85234b06d24e378f7780f/h-yoshikawa44/ch-404-not-found",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-checkout-page": {
+      "title": "GitHub - h-yoshikawa44/ch-checkout-page: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Checkout Page）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Checkout Page） - h-yoshikawa44/ch-checkout-page",
+      "image": "https://opengraph.githubassets.com/87e879566af6e5dea75877769ed7bfa845afe4d3e40351ad7ef56689ef4fc190/h-yoshikawa44/ch-checkout-page",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-edie-homepage": {
+      "title": "GitHub - h-yoshikawa44/ch-edie-homepage: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Edie homepage）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Edie homepage） - h-yoshikawa44/ch-edie-homepage",
+      "image": "https://opengraph.githubassets.com/11f16b45a97b88f393cb6e92668bc962caa59b7e910a0f2eb4a12e5a597808da/h-yoshikawa44/ch-edie-homepage",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-interior-consultant": {
+      "title": "GitHub - h-yoshikawa44/ch-interior-consultant: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Interior Consultant）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Interior Consultant） - h-yoshikawa44/ch-interior-consultant",
+      "image": "https://opengraph.githubassets.com/a9efcdcf64b721631ceb99afbdcb21fdf19086102ae7c0bf39500a337ae7cc96/h-yoshikawa44/ch-interior-consultant",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-my-gallery": {
+      "title": "GitHub - h-yoshikawa44/ch-my-gallery: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My Gallery）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My Gallery） - h-yoshikawa44/ch-my-gallery",
+      "image": "https://opengraph.githubassets.com/a8da6dde9b337eaf81df16894fd6ca53d4cdc2743d72dd721f7c7fdc85341ce7/h-yoshikawa44/ch-my-gallery",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-my-team-page": {
+      "title": "GitHub - h-yoshikawa44/ch-my-team-page: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My team page）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My team page） - h-yoshikawa44/ch-my-team-page",
+      "image": "https://opengraph.githubassets.com/1ec6e906e63bd7889897605ff8bba78286bd4360f8a7a0fe2e35cf5898673e77/h-yoshikawa44/ch-my-team-page",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-portfolio": {
+      "title": "GitHub - h-yoshikawa44/ch-portfolio: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Portfolio）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Portfolio） - h-yoshikawa44/ch-portfolio",
+      "image": "https://opengraph.githubassets.com/2ed48b20af895640eecda10fcada6b43132056ae16b69fad3e327f0f7007797f/h-yoshikawa44/ch-portfolio",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-recipe-page": {
+      "title": "GitHub - h-yoshikawa44/ch-recipe-page: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Recipe page）",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Recipe page） - h-yoshikawa44/ch-recipe-page",
+      "image": "https://opengraph.githubassets.com/f97aeb31d9238eb5ff84ff0ed538e5257a83f959c88e142c4ed03270601eb8dd/h-yoshikawa44/ch-recipe-page",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/hankchizljaw/modern-css-reset": {
       "title": "GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
-      "description": "A bare-bones CSS reset for modern web development. - GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
-      "image": "https://opengraph.githubassets.com/ba76075f079f01f4d69a7fc5558b8826940daf55897d18e657ee77c6dac06f7f/Andy-set-studio/modern-css-reset",
+      "description": "A bare-bones CSS reset for modern web development. - Andy-set-studio/modern-css-reset",
+      "image": "https://opengraph.githubassets.com/3d02bf42e95fb1d74c3f9e7e8767c4f123cf95939d772548fff47738ca8cc75a/Andy-set-studio/modern-css-reset",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/okonet/lint-staged": {
-      "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run linters on git staged files",
-      "description": "🚫💩 — Run linters on git staged files. Contribute to lint-staged/lint-staged development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/40621af22e84e183c65a9b826d92f0e0682d38ef598dc0b89ebc0b630bd803e7/lint-staged/lint-staged",
+      "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run tasks like formatters and linters against staged git files",
+      "description": "🚫💩 — Run tasks like formatters and linters against staged git files - lint-staged/lint-staged",
+      "image": "https://opengraph.githubassets.com/c73176cb4ced4386328b36bd8104344ddaa738b0b4891f363158d70912405913/lint-staged/lint-staged",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/rbren/rss-parser": {
       "title": "GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
-      "description": "A lightweight RSS parser, for Node and the browser - GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
-      "image": "https://opengraph.githubassets.com/51ebba6092a3e4e388e83c467b591354feb3f484430ce59aa0417230dac19a6b/rbren/rss-parser",
+      "description": "A lightweight RSS parser, for Node and the browser - rbren/rss-parser",
+      "image": "https://opengraph.githubassets.com/98c25ae4454376b5f1f22209a62934ad06c7dfb9317d41d67d3a529e194edf93/rbren/rss-parser",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/toplenboren/simple-git-hooks": {
       "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
       "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/1fb802a04a098792bfd7f3ed87f51cbc979d5ef697d39f1a9b3793f1caac1fe7/toplenboren/simple-git-hooks",
+      "image": "https://opengraph.githubassets.com/8f380f3cc9d1fc3a7a6c02f05fe207f70f61a71eaffdfd78847a4dd70d52f222/toplenboren/simple-git-hooks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/typestyle/csx": {
       "title": "GitHub - typestyle/csx: Utility functions for TypeStyle",
       "description": "Utility functions for TypeStyle. Contribute to typestyle/csx development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/8ba1e093af54ba4a37fcdd28e7329edc472ad7bbaae0caf79233dbacf6780bea/typestyle/csx",
+      "image": "https://opengraph.githubassets.com/188ec3dd51aabbb874dbf48d01bb45b974495559c2738bcb7cd753b47134f76f/typestyle/csx",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://google.github.io/material-design-icons": {
@@ -139,110 +181,8 @@
     "https://ja.vitejs.dev": {
       "title": "Vite",
       "description": "次世代フロントエンドツール",
-      "image": "https://vitejs.dev/og-image.png",
+      "image": "https://vite.dev/og-image.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
-    },
-    "https://legacy.devchallenges.io": {
-      "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
-      "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/0J1NxxGhOUYVqihwegfO": {
-      "title": "Checkout Page Challenge | devChallenges.io",
-      "description": "In this challenge, you will work with the form in a modern and minimal design. The challenge will bring your HTML and CSS to a new level. ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt": {
-      "title": "Portfolio Challenge | devChallenges.io",
-      "description": "A portfolio is the most important certificate when applying to a job. In this challenge, you will create a beautiful portfolio page.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb": {
-      "title": "Interior Consultant Challenge | devChallenges.io",
-      "description": "Your challenge is to create a simple interior consultant homepage. This challenge will test your skill in styling navigation and positioning.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/OEKdUZ6xs0h99C38XVht": {
-      "title": "Recipe page Challenge | devChallenges.io",
-      "description": "Everyone loves food, especially cheesecake. In this challenge, you will work with a recipe of your choice or given one.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/gcbWLxG6wdennelX7b8I": {
-      "title": "My Gallery Challenge | devChallenges.io",
-      "description": "Inspired by instagram, in this challenge you will work with a similar design to instagram profile page.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/hhmesazsqgKXrTkYkt0U": {
-      "title": "My team page Challenge | devChallenges.io",
-      "description": "This challenge will test your basic CSS skills and get it to next level. You will work with basic HTML element to make a simple but yet elegant team page.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/wBunSb7FPrIepJZAg0sY": {
-      "title": "404 Not Found Challenge | devChallenges.io",
-      "description": "This challenge is suitable for you if you just started with coding. The challenge will test your basic CSS and HTML skills.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/xobQBuf8zWWmiYMIAZe0": {
-      "title": "Edie  homepage Challenge | devChallenges.io",
-      "description": "Homepage is a popular task that a developer has to do. In this challenge, you will work with Edie - a small team providing web services. ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/EQJ91PQg8nr6B3yfAPf1": {
-      "title": "Edie homepage by Hitomi Yoshikawa",
-      "description": "HTML × CSS × JavaScript × Vite.\n\nlearned/improved\n- Better, how to control the button outline during focus except for keyboard operation.\n- Shifting techniques ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FEdieHomageThumbnail.png?alt=media&token=72c573b5-6389-425c-b947-de63f0f5b2ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/FXqFVnJSWiGwUVT1RHb6": {
-      "title": "Portfolio by Hitomi Yoshikawa",
-      "description": "TypeScript × Next.js × emotion.\n\nlearned/improved\n-  I figured out how to build a card layout with flexbox and negative margins.\n- It turns out that RSS informa",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FPortfolioThumbnail.png?alt=media&token=417f625d-715a-4611-8215-2c19aaf490f9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/N7Gs8WCVYAbtkqWxomhL": {
-      "title": "Interior Consultant by Hitomi Yoshikawa",
-      "description": "HTML × CSS × JavaScript  \n\nlearned/improved：\n- basic usage of Vite.\n- Using Vite and the VSCode extension Autoprefixer together causes conflicts and hot reloadi",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FinteriorConsultantThumbnail.png?alt=media&token=fb5f8229-8eb9-4d70-b0d4-fbd2829a0cf0",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/SFmxGtHXWkESKZbSrg67": {
-      "title": "Checkout Page by Hitomi Yoshikawa",
-      "description": "HTML × CSS × JavaScript × Vite.  \n※As for the form validation, it is done using HTML only.  \n※The pattern validation for Phone and Postal code is based on Japan",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FCheckoutThumbnail.png?alt=media&token=c7ffdbe3-7206-44f2-b1e6-a6b99bf81901",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/SUwASJDgXBoBuZqxRxk7": {
-      "title": "Recipe page by Hitomi Yoshikawa",
-      "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to layout with grid-row and grid-column\n- How to create a custom list number element using a pseudo-element.\n",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FrecipeBlogThumbnail.png?alt=media&token=2d696d3c-a8cb-4c7c-907b-561ae1144cc9",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/YPhZQTkeMmNiwBx00RsM": {
-      "title": "404 Not Found by Hitomi Yoshikawa",
-      "description": "HTML × CSS.  ",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2F404PageThumbnail.png?alt=media&token=81f7c567-c0bc-446f-a549-07eeda31c5ef",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/Yf7HiQpP7rAXzM1euefq": {
-      "title": "My Gallery by Hitomi Yoshikawa",
-      "description": "HTML × CSS × Vite.\n\nlearned/improved：\n- How to combine nth-child with grid-row and grid-column.\n",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FGalleryThumbnail.png?alt=media&token=92894792-41d1-4d99-8cbb-e828322c87fd",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/o1EB8NhO6xuVPuJWPY2m": {
-      "title": "My team page by Hitomi Yoshikawa",
-      "description": "HTML × CSS  \nThe npm library was only used for syntax checking and formatting.\n\nlearned/improved：\n- Now I know how to use :nth-child.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FmyTeamThumbnail.png?alt=media&token=3dc1bba0-52b9-440d-8a54-fa31ec7c84d8",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
     },
     "https://medium.com/eureka-engineering/html-css-%E3%81%9F%E3%81%8B%E3%81%8C%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3-%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6%E3%83%88%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%85%A8%E5%8A%9B%E3%81%A7%E5%8F%96%E3%82%8A%E7%B5%84%E3%82%93%E3%81%A0%E7%B5%90%E6%9E%9C-%E6%9C%80%E5%BC%B7%E3%81%AEcss%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1-%E6%9C%80%E5%BC%B7-881152c4ff13": {
       "title": "【HTML/CSS】たかがフェードイン/フェードアウトするだけの挙動に全力で取り組んだ結果、最強のCSSができてしまった話【最強】",
