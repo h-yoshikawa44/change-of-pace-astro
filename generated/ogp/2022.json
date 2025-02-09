@@ -675,69 +675,111 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://eslint.org"
     },
     "https://github.blog/changelog/2021-04-19-deprecation-notice-github-jobs-site": {
-      "title": "Deprecation notice: GitHub Jobs site",
+      "title": "Deprecation notice: GitHub Jobs site · GitHub Changelog",
       "description": "Deprecation notice: GitHub Jobs site",
-      "image": "",
+      "image": "https://github.blog/wp-content/uploads/2024/08/d34e9c19123898a8a886147f37a1d167130d1c15be6d399a9c4b30ee6f2a7395-1200x630-1.png?fit=1200%2C630",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.blog"
     },
     "https://github.com/WICG/focus-visible": {
       "title": "GitHub - WICG/focus-visible: Polyfill for `:focus-visible`",
       "description": "Polyfill for `:focus-visible`. Contribute to WICG/focus-visible development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/5988f3d2c4f2f820a391b66c912138e8b721cb7fc9c668378e2e748e13ee3ed6/WICG/focus-visible",
+      "image": "https://opengraph.githubassets.com/12035f3e34dcd9efc192020f4f6817ff51a80313e29d4555d837fa992ec1af2a/WICG/focus-visible",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/WICG/inert": {
       "title": "GitHub - WICG/inert: Polyfill for the inert attribute and property.",
       "description": "Polyfill for the inert attribute and property. Contribute to WICG/inert development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/d8f0646b8b72b77e626c32950ec562c28798fbb6f2444bb4eb2d2fa85a3db04b/WICG/inert",
+      "image": "https://opengraph.githubassets.com/aecfd360155d45f65b824812f172cc9e7cff20777f5ec9beda0e3bb386ea9211/WICG/inert",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/emotion-icons/emotion-icons": {
       "title": "GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components",
-      "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Mate...",
-      "image": "https://opengraph.githubassets.com/59382d127c7906ae3131b957156c874ce531ce4f95889c1fb4ea2b221fdf4889/emotion-icons/emotion-icons",
+      "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - emotion-icons/emotion-icons",
+      "image": "https://opengraph.githubassets.com/237f4541d285f714df58218fb0c9849201c61956168f576b883ef28e8a2eb092/emotion-icons/emotion-icons",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-button-component": {
+      "title": "GitHub - h-yoshikawa44/ch-button-component: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Button component)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Button component) - h-yoshikawa44/ch-button-component",
+      "image": "https://opengraph.githubassets.com/17599f509975faad05e82597919075f1d14675432e12612db56321b0feaf9ab5/h-yoshikawa44/ch-button-component",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-country-quiz": {
+      "title": "GitHub - h-yoshikawa44/ch-country-quiz: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Country quiz)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Country quiz) - h-yoshikawa44/ch-country-quiz",
+      "image": "https://opengraph.githubassets.com/a8056e8f702fcd347958e79cc4e35cf9b1bd828161a5bc2ef5f7cf2c92dee4e8/h-yoshikawa44/ch-country-quiz",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-input-component": {
+      "title": "GitHub - h-yoshikawa44/ch-input-component: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Input component)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Input component) - h-yoshikawa44/ch-input-component",
+      "image": "https://opengraph.githubassets.com/610607a59fcaa8e2e11289c5c822d53b74e1b05fa8f05bb187650929f0b6833a/h-yoshikawa44/ch-input-component",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-random-quote-generator": {
+      "title": "GitHub - h-yoshikawa44/ch-random-quote-generator: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Random quote generator)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Random quote generator) - h-yoshikawa44/ch-random-quote-generator",
+      "image": "https://opengraph.githubassets.com/1f9a8137da60ade019b807f9398c7ee48f3a1fa9409e0ccfb0840d434035ea27/h-yoshikawa44/ch-random-quote-generator",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-todo-app": {
+      "title": "GitHub - h-yoshikawa44/ch-todo-app: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Todo app)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Todo app) - h-yoshikawa44/ch-todo-app",
+      "image": "https://opengraph.githubassets.com/c7614baafc83d3c503b0ba0a33dae88670f13bf99745f44ee303fcda505f1aa4/h-yoshikawa44/ch-todo-app",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-weather-app": {
+      "title": "GitHub - h-yoshikawa44/ch-weather-app: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Weather app)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Weather app) - h-yoshikawa44/ch-weather-app",
+      "image": "https://opengraph.githubassets.com/601ecc8247de9499bf1019aab55f5e608a6e3a9a26b33f5c130d2e6229a3790b/h-yoshikawa44/ch-weather-app",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/h-yoshikawa44/ch-windbnb": {
+      "title": "GitHub - h-yoshikawa44/ch-windbnb: devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Windbnb)",
+      "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Front-end Developer - Windbnb) - h-yoshikawa44/ch-windbnb",
+      "image": "https://opengraph.githubassets.com/eb7a7394efc78666939abde196b4deb47dddf21004d057340a4a8f9004b98352/h-yoshikawa44/ch-windbnb",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/hankchizljaw/modern-css-reset": {
       "title": "GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
-      "description": "A bare-bones CSS reset for modern web development. - GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
-      "image": "https://opengraph.githubassets.com/ba76075f079f01f4d69a7fc5558b8826940daf55897d18e657ee77c6dac06f7f/Andy-set-studio/modern-css-reset",
+      "description": "A bare-bones CSS reset for modern web development. - Andy-set-studio/modern-css-reset",
+      "image": "https://opengraph.githubassets.com/3d02bf42e95fb1d74c3f9e7e8767c4f123cf95939d772548fff47738ca8cc75a/Andy-set-studio/modern-css-reset",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/okonet/lint-staged": {
-      "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run linters on git staged files",
-      "description": "🚫💩 — Run linters on git staged files. Contribute to lint-staged/lint-staged development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/40621af22e84e183c65a9b826d92f0e0682d38ef598dc0b89ebc0b630bd803e7/lint-staged/lint-staged",
+      "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run tasks like formatters and linters against staged git files",
+      "description": "🚫💩 — Run tasks like formatters and linters against staged git files - lint-staged/lint-staged",
+      "image": "https://opengraph.githubassets.com/c73176cb4ced4386328b36bd8104344ddaa738b0b4891f363158d70912405913/lint-staged/lint-staged",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/sindresorhus/ky": {
-      "title": "GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API",
-      "description": "🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API - GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the browser Fetch API",
-      "image": "https://opengraph.githubassets.com/2f83503cacfdbd5d50092b0629a8e81b5f6777367ac2de400a98d494abf97c43/sindresorhus/ky",
+      "title": "GitHub - sindresorhus/ky: 🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API",
+      "description": "🌳 Tiny & elegant JavaScript HTTP client based on the Fetch API - sindresorhus/ky",
+      "image": "https://opengraph.githubassets.com/8f086e86ceafdee9825e94e7894bf40b3441b19e9cf7fff76462356e0c309d14/sindresorhus/ky",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/sindresorhus/ky-universal": {
       "title": "GitHub - sindresorhus/ky-universal: Use Ky in both Node.js and browsers",
       "description": "Use Ky in both Node.js and browsers. Contribute to sindresorhus/ky-universal development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/7b08a8a5efedc1dfd59f8129742db16529564ea7009a82e10515336fd5282941/sindresorhus/ky-universal",
+      "image": "https://opengraph.githubassets.com/a56a9ecbb9d37576a278292df8d02acf060062ce17713fc104d5c3a289b5b595/sindresorhus/ky-universal",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/toplenboren/simple-git-hooks": {
       "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
       "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/1fb802a04a098792bfd7f3ed87f51cbc979d5ef697d39f1a9b3793f1caac1fe7/toplenboren/simple-git-hooks",
+      "image": "https://opengraph.githubassets.com/8f380f3cc9d1fc3a7a6c02f05fe207f70f61a71eaffdfd78847a4dd70d52f222/toplenboren/simple-git-hooks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/typestyle/csx": {
       "title": "GitHub - typestyle/csx: Utility functions for TypeStyle",
       "description": "Utility functions for TypeStyle. Contribute to typestyle/csx development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/8ba1e093af54ba4a37fcdd28e7329edc472ad7bbaae0caf79233dbacf6780bea/typestyle/csx",
+      "image": "https://opengraph.githubassets.com/188ec3dd51aabbb874dbf48d01bb45b974495559c2738bcb7cd753b47134f76f/typestyle/csx",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/uuidjs/uuid": {
       "title": "GitHub - uuidjs/uuid: Generate RFC-compliant UUIDs in JavaScript",
       "description": "Generate RFC-compliant UUIDs in JavaScript. Contribute to uuidjs/uuid development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/b95f0268adc9ebc901bbbd9fedb4eff71db1f3b0d1880341b0689b9e83d27068/uuidjs/uuid",
+      "image": "https://opengraph.githubassets.com/4b367ba34956c6fb401c1e9275fd493b4261b855ab2618a14912dce301fc64a9/uuidjs/uuid",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://google.github.io/material-design-icons": {
@@ -745,96 +787,6 @@
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://google.github.io"
-    },
-    "https://legacy.devchallenges.io": {
-      "title": "devChallenges.io | Real-life Coding Challenges to become a Software Engineer",
-      "description": "Web Development Resources and Community that help you to become a Web Developer by working with Real-life projects and practices. Founded, designed and developed by @thunghiemdinh",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/thumbnails%2Fep11-vscode.jpg?alt=media&token=96ca1477-2e38-4867-bcb5-36c6b06bd261",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/3JFYedSOZqAxYuOCNmYD": {
-      "title": "Windbnb Challenge | devChallenges.io",
-      "description": "I love airbnb UI, it is so modern and clean. In this challenge, you will work with a similar UI to airbnb - windbnb.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/8Y3J4ucAMQpSnYTwwWW8": {
-      "title": "Random quote generator Challenge | devChallenges.io",
-      "description": "Famous quotes can be a great source of motivation. This challenge is all about quotes.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/Bu3G2irnaXmfwQ8sZkw8": {
-      "title": "Country quiz Challenge | devChallenges.io",
-      "description": "If you want to learn more about countries, this challenge is perfect for you.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/TSqutYM4c5WtluM7QzGp": {
-      "title": "Input component Challenge | devChallenges.io",
-      "description": "One of the best ways to learn front-end libraries is to create reusable component. In this challenge, your task is to create a reusable input.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5": {
-      "title": "Todo app Challenge | devChallenges.io",
-      "description": "Todo app is one of the common projects when it comes to practicing coding.  This challenge is another todo list :).",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/mM1UIenRhK808W8qmLWv": {
-      "title": "Weather app Challenge | devChallenges.io",
-      "description": "Weather app is another popular project for practicing coding. In this challenge, you will work an interesting UI for a weather app.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/challenges/ohgVTyJCbm5OZyTB2gNY": {
-      "title": "Button component Challenge | devChallenges.io",
-      "description": "One of the best ways to learn front-end libraries is to create a reusable component. In this challenge, your task is to create a reusable button.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FButtonThumbnail.png?alt=media&token=3ddbedcf-a08b-4144-928f-e551b4bcee80",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/1juVePEnnmpjMCzrbvRr": {
-      "title": "Weather app by Hitomi Yoshikawa",
-      "description": "TypeScript × Next.js × emotion.\n\nWhen you access the app, it gets your location and retrieves and displays the weather forecast for that nearest location.\n(If y",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FweatherThumbnail.png?alt=media&token=7645edd7-df0f-4ea1-9a8c-2bab7fe01431",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/BTvVlLhztEQ8Fz8UJ1Rf": {
-      "title": "Todo app by Hitomi Yoshikawa",
-      "description": "TypeScript × Next.js × emotion.  \nI created a simple todo app using LocalStorage.",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FtodoThumbnail.png?alt=media&token=67a62272-6021-49de-ab19-cda0344d643c",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/ClokxKDirrSdDyCt8D0D": {
-      "title": "Input component by Hitomi Yoshikawa",
-      "description": "I have created an Input component that contains a label.\n\nSince it was created as a component for text input, the type of input element is limited to text forma",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FInputThumbnail.png?alt=media&token=73685593-9026-42a6-8c68-00243071250e",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/CoYDLZwFt5LqHxsD6xe7": {
-      "title": "Random quote generator by Hitomi Yoshikawa",
-      "description": "TypeScript × Next.js × emotion.  \n\nrandom quote will display the quote data randomly.\n\nauthor quote list displays a list of citation data for the specified auth",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FquoteThumbnail.png?alt=media&token=156a0ff0-506a-4246-8422-eb1cedab5116",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/DgZ6ich7Qg4s9mZo7rnZ": {
-      "title": "Country quiz by Hitomi Yoshikawa",
-      "description": "TypeScript × Next.js × emotion.\n\n※Regarding the REST COUNTRIES API, the assignment guide said it was https://restcountries.eu/, but I heard that it has become a",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FcountryQuizThumbnail.png?alt=media&token=761f3109-120d-4111-96b3-98ef934281b6",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/XYfovlFDBkg4qktnUh8b": {
-      "title": "Button component by Hitomi Yoshikawa",
-      "description": "Mainly Built with Next.js, emotion.\n\nI've been using UI component libraries for the most part.\nThis time, I challenged myself to create a component from scratch",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FButtonThumbnail.png?alt=media&token=3ddbedcf-a08b-4144-928f-e551b4bcee80",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
-    },
-    "https://legacy.devchallenges.io/solutions/ftLx16ngH2CDg6hFPU76": {
-      "title": "Windbnb by Hitomi Yoshikawa",
-      "description": "TypeScript × Next.js × emotion.  \nA page with a simple search function has been created.\n\nEven though it was only one screen and a drawer menu, there were surpr",
-      "image": "https://firebasestorage.googleapis.com/v0/b/devchallenges-1234.appspot.com/o/challengesDesigns%2FwindbnbThumbnail.png?alt=media&token=183d7d36-d216-4d30-9732-aa6e4ab0e8a5",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://legacy.devchallenges.io"
     },
     "https://nextjs.org": {
       "title": "Next.js by Vercel - The React Framework",
@@ -849,9 +801,9 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
     },
     "https://react-query.tanstack.com": {
-      "title": "TanStack | High Quality Open-Source Software for Web Developers",
-      "description": "Headless, type-safe, powerful utilities for complex workflows like Data Management, Data Visualization, Charts, Tables, and UI Components.",
-      "image": "",
+      "title": "TanStack Query",
+      "description": "Powerful asynchronous state management, server-state utilities and data fetching. Fetch, cache, update, and wrangle all forms of async data in your TS/JS, React, Vue, Solid, Svelte & Angular applications all without touching any \"global state\"",
+      "image": "https://tanstack.com/_build/assets/og-W4Gt8cWd.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://react-query.tanstack.com"
     },
     "https://restcountries.com": {
