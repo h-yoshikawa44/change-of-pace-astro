@@ -294,12 +294,6 @@
       "image": "https://files.speakerdeck.com/presentations/5f6236926ba0455088ec06c0da1c2c02/slide_0.jpg?33827495",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://speakerdeck.com/asumikam/my-contribution-to-the-community": {
-      "title": "わたしの\"コミュニティへの還元\"リレーション #devsumi",
-      "description": "Developers Summit 2025\n\nエンジニアコミュニティでひろがるキャリア、深まる人生 - “コミュニティへの還元”リレーション -\nhttps://event.shoeisha.jp/devsumi/20250213/session/5596",
-      "image": "https://files.speakerdeck.com/presentations/8c527ab0794a490da2b2464de73c9b10/slide_0.jpg?33847183",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
-    },
     "https://speakerdeck.com/soudai/every-little-bit-counts": {
       "title": "目の前の仕事と向き合うことで成長できる - 仕事とスキルを広げる / Every little bit counts",
       "description": "Developers Summit 2025 14-A-7 #devsumi \nhttps://event.shoeisha.jp/devsumi/20250213/session/5558\n\n# 参考資料\n- EGG '24 | ゲーム業界ホワイト化の光と影\nhttps://www.docs&hellip;",
@@ -323,6 +317,12 @@
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mickindex.sakura.ne.jp"
+    },
+    "https://asumikam.com/entry/2025/02/16/155333": {
+      "title": "#devsumi 初現地！登壇してきました🚀 / Developers Summit 2025 - #あすみかんの上にあすみかん",
+      "description": "event.shoeisha.jp 2025/02/13〜14で開催された Developers Summit 2025 で登壇してきたのでふりかえるぞ〜🐸✨",
+      "image": "https://cdn.image.st-hatena.com/image/scale/40611331de11d55931b1e3156e12b39ba9cc0fc1/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fa%2Fasumiso%2F20250216%2F20250216143532.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://asumikam.com"
     }
   }
 }
