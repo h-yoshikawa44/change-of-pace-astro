@@ -323,6 +323,42 @@
       "description": "event.shoeisha.jp 2025/02/13〜14で開催された Developers Summit 2025 で登壇してきたのでふりかえるぞ〜🐸✨",
       "image": "https://cdn.image.st-hatena.com/image/scale/40611331de11d55931b1e3156e12b39ba9cc0fc1/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fa%2Fasumiso%2F20250216%2F20250216143532.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://asumikam.com"
+    },
+    "https://nihonbuson.hatenadiary.jp/entry/Developers-Summit-2025": {
+      "title": "Developers Summit 2025で企画作成＆登壇してきました #DevSumi - ブロッコリーのブログ",
+      "description": "はじめに 先日のDevelopers Summit（デブサミ） 2025にコンテンツ委員として参加し、登壇も2つ行いました。 event.shoeisha.jp 本記事では、当日を迎えるまでのいきさつなどを書いていきます。 目次 はじめに 目次 節目節目に立ち会うことができたデブサミとの関係 初のコンテンツ委員 M-1審査のような公募枠セッションの選定 自分がやりたい形のセッション企画 リーダブルテストコード～メンテナンスしやすいテストコードを作成する方法を考える～ 開発スピードは上がっている…品質はどうする？ ～スピードと品質を両立させるためのプロダクト開発の進め方とは～ スピーカー控室とい…",
+      "image": "https://cdn.image.st-hatena.com/image/scale/2acf06aafb96dd887d3aec1bdcc03e83e1fc7cb2/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fn%2Fnihonbuson%2F20250217%2F20250217120055.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://nihonbuson.hatenadiary.jp"
+    },
+    "https://blog.takehata-engineer.com/entry/look-back-at-developers-summit-2025-speaker": {
+      "title": "Developers Summit 2025に登壇しました！ - タケハタのブログ",
+      "description": "去る2025年2月13日、Developers Summit 2025に登壇してきました！ event.shoeisha.jp エンジニアになってから何度も行ったことのあるデブサミ。 いつか登壇してみたいと思って過去にも何度かプロポーザルを出したことはありましたがなかなか通らず・・・という感じだったので、念願の初登壇でした！ 今回はその登壇の振り返りを書きたいと思います。 ※聴講者として参加した振り返りはこちらの記事で書いています",
+      "image": "https://ogimage.blog.st-hatena.com/10328749687236103302/6802418398329639015/1739847602",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.takehata-engineer.com"
+    },
+    "https://speakerdeck.com/legalontechnologies/communication-models-for-product-development": {
+      "title": "Developers Summit 2025 浅野卓也(13-B-7 LegalOn Technologies)",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/590b7fed7906487c944025a8608b0b80/slide_0.jpg?33863985",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ymotongpoo/aws-from-observability-perspective": {
+      "title": "オブザーバビリティの観点でみるAWS / AWS from observability perspective",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/fac75b8415c541d19ac6c7aa50fbfec0/slide_0.jpg?33869036",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://note.com/nomizone/n/n0b5620339205": {
+      "title": "Developers Summit2025で登壇&サイン会を行いました（デブサミ2日目）｜野溝のみぞう",
+      "description": "どうも、野溝のみぞうです。Developers Summit（通称デブサミ）2025でセッション登壇と人生初のサイン会を開催させていただきました。   あこがれのデブサミ  たしか発端は、去年のWoman Developers Summitで「技術書執筆の魅力を語る」っていうパネルディスカッションであおいさんとキャッキャウフフで楽しくおしゃべりしてたときです。  \n\n\nアウトプットで未来を切り開け！女性エンジニアたちが語る技術書執筆の魅力\n\n\n　IT業界は男性が圧倒的に多く、ジェンダーギャップが課題として指摘される分野だ。女性エンジニアの数は増えつつあるものの、「\n\n\ncodezine",
+      "image": "https://assets.st-note.com/production/uploads/images/174830795/rectangle_large_type_2_d571d162125382fd605ca6587674aa5b.png?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://note.com/nomizone/n/n9aab96ba15ff": {
+      "title": "7日間でハッキングをはじめる本がITエンジニア本大賞2025 技術書部門大賞&審査員特別賞を受賞しました（デブサミ1日目）｜野溝のみぞう",
+      "description": "どうも、野溝のみぞうです。ITエンジニアがみんなで選ぶ今年のおすすめ本、でおなじみの「ITエンジニア本大賞2025」を決めるプレゼンテーション大会にお呼ばれしてきました。   ITエンジニア本大賞とは  公式サイトから引用します  \n\n\nITエンジニア本大賞2025\n\n\n「ITエンジニア本大賞 2025」今年も開催。2/13に技術書・ビジネス書各大賞が決定！\n\n\nwww.shoeisha.co.jp\n\n\n\n \n  『ITエンジニア本大賞』はITエンジニアがITエンジニアに読んでほしい技術書・ビジネス書を選ぶイベントです。 2014年からスタートし、今回が12回目の開催となります。  こ",
+      "image": "https://assets.st-note.com/production/uploads/images/174487161/rectangle_large_type_2_587687e3d079ee5130bc169538ed8d77.jpeg?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     }
   }
 }
