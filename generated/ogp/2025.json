@@ -359,6 +359,24 @@
       "description": "どうも、野溝のみぞうです。ITエンジニアがみんなで選ぶ今年のおすすめ本、でおなじみの「ITエンジニア本大賞2025」を決めるプレゼンテーション大会にお呼ばれしてきました。   ITエンジニア本大賞とは  公式サイトから引用します  \n\n\nITエンジニア本大賞2025\n\n\n「ITエンジニア本大賞 2025」今年も開催。2/13に技術書・ビジネス書各大賞が決定！\n\n\nwww.shoeisha.co.jp\n\n\n\n \n  『ITエンジニア本大賞』はITエンジニアがITエンジニアに読んでほしい技術書・ビジネス書を選ぶイベントです。 2014年からスタートし、今回が12回目の開催となります。  こ",
       "image": "https://assets.st-note.com/production/uploads/images/174487161/rectangle_large_type_2_587687e3d079ee5130bc169538ed8d77.jpeg?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://kotomi1338.hatenablog.com/entry/2025/02/19/224543": {
+      "title": "Developers Summit 2025 で登壇&コンテンツ委員を務めました！ #devsumi - 1338文字のお喋り",
+      "description": "はじめに 2024年2月13~14日に開催された、Developers Summit 2025 で登壇しました&コンテンツ委員を務めました！ 初めての登壇、初めてのコンテンツ委員ということで、記念になる回だったので、振り返って書いておこうと思います！ あ、そうそう！参加者アンケートは明日20日17時までとなっているそうなので、私の登壇を見た方もそうでない方も忘れずに送ってください！🙏 コンテンツ委員 翔泳社のゆうこさんからお声がけいただき、初めてコンテンツ委員を務めることになりました！ コンテンツ委員では、登壇者の推薦や、公募セッションの選考などを行いました。 今まで他のカンファレンスでCfP…",
+      "image": "https://cdn.image.st-hatena.com/image/scale/43f354333d0e07b2b54feea4c81e760df989d629/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fk%2Fkotomin1216%2F20250219%2F20250219213449.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kotomi1338.hatenablog.com"
+    },
+    "https://arclamp.hatenablog.com/entry/2025/02/19/113416": {
+      "title": "アジャイルで品質とスピードを両立するには構造とプロセスが必要 - arclamp",
+      "description": "デブサミ2025で品質に関するパネルディスカッションに参加してきました。アジャイル開発において「価値提供のスピードを落とさずに品質を維持するためにどうするか」というテーマにおいて、僕はアーキテクトという立場から「構造」の側面、ブロッコリーさんはQAエンジニアという立場から「プロセス」の側面から話をしました。アジャイル開発で品質とスピードを両立するには、構造とプロセスの両面からのアプローチが必須です。 はじめに 参加したのはデブサミ2025での「開発スピードは上がっている…品質はどうする？ ～スピードと品質を両立させるためのプロダクト開発の進め方とは～」です。もう1人の登壇者である風間さん（ブロ…",
+      "image": "https://cdn.image.st-hatena.com/image/scale/4956f7d538ecdf6ff0f969284039463bbced145c/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fa%2Farclamp%2F20250218%2F20250218082111.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://arclamp.hatenablog.com"
+    },
+    "https://speakerdeck.com/sweet_chiho/engineering-organizations-challenge-in-promoting-gender-diversity": {
+      "title": "エンジニア組織のジェンダーダイバーシティ推進への挑戦/Engineering organization's challenge in promoting gender diversity",
+      "description": "2025/2/13&14に開催された「Developers Summit 2025」にセッション登壇した際の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20250213\n\n▼セッションについて\nhttps://event.shoeisha.jp/devsu&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/ddcd523757f94317bbdbf54e2d86c404/slide_0.jpg?33893360",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     }
   }
 }
