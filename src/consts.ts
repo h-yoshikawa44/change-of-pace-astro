@@ -26,7 +26,7 @@ export const CATEGORY_MAP = {
 export const PAGE_SIZE = 15;
 
 export const RSS_LINKS = {
-  all: '/rss.xml',
+  all: '/rss/index.xml',
   [CATEGORY_LIST[0]]: `/rss/${CATEGORY_LIST[0]}.xml`,
   [CATEGORY_LIST[1]]: `/rss/${CATEGORY_LIST[1]}.xml`,
   [CATEGORY_LIST[2]]: `/rss/${CATEGORY_LIST[2]}.xml`,
