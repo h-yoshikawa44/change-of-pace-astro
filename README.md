@@ -5,10 +5,10 @@
 2023/07に Jekyll より移行したもの。
 
 ## 技術構成
-- TypeScript：5.7.2
-- Node.js：22.12.0
-- Astro：5.1.2
-- UnoCSS：0.65.3
+- TypeScript：5.8.3
+- Node.js：22.15.0
+- Astro：5.7.5
+- UnoCSS：0.66.0
 
 ## 環境変数
 テンプレファイルをコピーして、値を入れる
