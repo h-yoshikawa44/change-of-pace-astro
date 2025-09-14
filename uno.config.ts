@@ -1,6 +1,6 @@
 import {
   defineConfig,
-  presetUno,
+  presetWind3,
   presetWebFonts,
   presetIcons,
   transformerDirectives,
@@ -9,7 +9,7 @@ import { TAG_ICON_CLASS_LIST } from './src/consts';
 
 export default defineConfig({
   presets: [
-    presetUno(),
+    presetWind3(),
     presetWebFonts({
       fonts: {
         sawarabi: [
