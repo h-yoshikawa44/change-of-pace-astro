@@ -2,14 +2,14 @@
   "2021-12-30-looking-back-2021-tech": {
     "https://github.com/h-yoshikawa44": {
       "title": "h-yoshikawa44 - Overview",
-      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 55 repositories available. Follow their code on GitHub.",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 66 repositories available. Follow their code on GitHub.",
       "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/oukayuka/Riakuto-StartingReact-ja3.1": {
       "title": "GitHub - oukayuka/Riakuto-StartingReact-ja3.1",
       "description": "Contribute to oukayuka/Riakuto-StartingReact-ja3.1 development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/70b08dcbf84b1ff1ea473d86701cff3c8dc9006eaef0393a967ab8f4dc5af434/oukayuka/Riakuto-StartingReact-ja3.1",
+      "image": "https://opengraph.githubassets.com/3438f5068cbdf536c3aa7d32faefbbea5d85a3e281eab82cb5384049bbd1596c/oukayuka/Riakuto-StartingReact-ja3.1",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://qiita.com/h-yoshikawa44": {
@@ -55,7 +55,7 @@
     "https://css-tricks.com/transitions-only-after-page-load": {
       "title": "Transitions Only After Page Load | CSS-Tricks",
       "description": "If you've ever used CSS transitions on structural elements on your page, you may have noticed a case where you see that transition happen when the page loads",
-      "image": "https://css-tricks.com/wp-json/social-image-generator/v1/image/16604",
+      "image": "https://i0.wp.com/css-tricks.com/wp-content/uploads/2021/12/default-social-css-tricks.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://css-tricks.com"
     },
     "https://emotion.sh/docs/introduction": {
@@ -73,97 +73,97 @@
     "https://github.com/WICG/focus-visible": {
       "title": "GitHub - WICG/focus-visible: Polyfill for `:focus-visible`",
       "description": "Polyfill for `:focus-visible`. Contribute to WICG/focus-visible development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/12035f3e34dcd9efc192020f4f6817ff51a80313e29d4555d837fa992ec1af2a/WICG/focus-visible",
+      "image": "https://opengraph.githubassets.com/db3a70673d1240852ee8b0a421b00597bfae36601a18b37bd8390046976398b5/WICG/focus-visible",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/WICG/inert": {
       "title": "GitHub - WICG/inert: Polyfill for the inert attribute and property.",
       "description": "Polyfill for the inert attribute and property. Contribute to WICG/inert development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/aecfd360155d45f65b824812f172cc9e7cff20777f5ec9beda0e3bb386ea9211/WICG/inert",
+      "image": "https://opengraph.githubassets.com/1bc754129c7a1cdab0d43bbcc1372582999e50340c498575e61d1fcecdf209ea/WICG/inert",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/emotion-icons/emotion-icons": {
       "title": "GitHub - emotion-icons/emotion-icons: 👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components",
       "description": "👩‍🎤 Popular icon packs like Font Awesome, Material Design, and Octicons, available as Emotion React Components - emotion-icons/emotion-icons",
-      "image": "https://opengraph.githubassets.com/237f4541d285f714df58218fb0c9849201c61956168f576b883ef28e8a2eb092/emotion-icons/emotion-icons",
+      "image": "https://opengraph.githubassets.com/5577a32e30cc570eaad4fa264eb85aa72d5b67b5c40e4328037247f2903f5463/emotion-icons/emotion-icons",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-404-not-found": {
       "title": "GitHub - h-yoshikawa44/ch-404-not-found: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - 404 Not Found）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - 404 Not Found） - h-yoshikawa44/ch-404-not-found",
-      "image": "https://opengraph.githubassets.com/c5c4f6668733d75a3407f5b65e21414353920e4fd0a85234b06d24e378f7780f/h-yoshikawa44/ch-404-not-found",
+      "image": "https://opengraph.githubassets.com/f1c98e7d15e7b6fa7c954238c7c9f6b593f8323eba920da40c3f6d32e98de180/h-yoshikawa44/ch-404-not-found",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-checkout-page": {
       "title": "GitHub - h-yoshikawa44/ch-checkout-page: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Checkout Page）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Checkout Page） - h-yoshikawa44/ch-checkout-page",
-      "image": "https://opengraph.githubassets.com/87e879566af6e5dea75877769ed7bfa845afe4d3e40351ad7ef56689ef4fc190/h-yoshikawa44/ch-checkout-page",
+      "image": "https://opengraph.githubassets.com/0346f49dcb0fbfc53355e5c83de88b7b60fe84699e3cd732ac3f16da161e002a/h-yoshikawa44/ch-checkout-page",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-edie-homepage": {
       "title": "GitHub - h-yoshikawa44/ch-edie-homepage: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Edie homepage）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Edie homepage） - h-yoshikawa44/ch-edie-homepage",
-      "image": "https://opengraph.githubassets.com/11f16b45a97b88f393cb6e92668bc962caa59b7e910a0f2eb4a12e5a597808da/h-yoshikawa44/ch-edie-homepage",
+      "image": "https://opengraph.githubassets.com/cf4552e24821beeba64a87e688253bfd1e77d9fd73293868c74ca8058f58ccf5/h-yoshikawa44/ch-edie-homepage",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-interior-consultant": {
       "title": "GitHub - h-yoshikawa44/ch-interior-consultant: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Interior Consultant）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Interior Consultant） - h-yoshikawa44/ch-interior-consultant",
-      "image": "https://opengraph.githubassets.com/a9efcdcf64b721631ceb99afbdcb21fdf19086102ae7c0bf39500a337ae7cc96/h-yoshikawa44/ch-interior-consultant",
+      "image": "https://opengraph.githubassets.com/2544d8d0e13dbd0ea321de041502b8ce08d41e964586bec1342d39abf8c13abd/h-yoshikawa44/ch-interior-consultant",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-my-gallery": {
       "title": "GitHub - h-yoshikawa44/ch-my-gallery: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My Gallery）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My Gallery） - h-yoshikawa44/ch-my-gallery",
-      "image": "https://opengraph.githubassets.com/a8da6dde9b337eaf81df16894fd6ca53d4cdc2743d72dd721f7c7fdc85341ce7/h-yoshikawa44/ch-my-gallery",
+      "image": "https://opengraph.githubassets.com/0407654d5d8109f6c5d03fd019ae970fa130b9d488a27e9c789881bec82865de/h-yoshikawa44/ch-my-gallery",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-my-team-page": {
       "title": "GitHub - h-yoshikawa44/ch-my-team-page: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My team page）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - My team page） - h-yoshikawa44/ch-my-team-page",
-      "image": "https://opengraph.githubassets.com/1ec6e906e63bd7889897605ff8bba78286bd4360f8a7a0fe2e35cf5898673e77/h-yoshikawa44/ch-my-team-page",
+      "image": "https://opengraph.githubassets.com/06cb60ca251077cbe8ae46eb356912fca5882388def16dadadcaaf13270f97d7/h-yoshikawa44/ch-my-team-page",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-portfolio": {
       "title": "GitHub - h-yoshikawa44/ch-portfolio: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Portfolio）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Portfolio） - h-yoshikawa44/ch-portfolio",
-      "image": "https://opengraph.githubassets.com/2ed48b20af895640eecda10fcada6b43132056ae16b69fad3e327f0f7007797f/h-yoshikawa44/ch-portfolio",
+      "image": "https://opengraph.githubassets.com/efcfec5c772cd7a4a41cd95100fb425f714dfc5fc0ffc516846d5eb8cc0e82a7/h-yoshikawa44/ch-portfolio",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/ch-recipe-page": {
       "title": "GitHub - h-yoshikawa44/ch-recipe-page: devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Recipe page）",
       "description": "devChallenges リポジトリ（出典：devChallenge(legacy) - Responsive Web Developer - Recipe page） - h-yoshikawa44/ch-recipe-page",
-      "image": "https://opengraph.githubassets.com/f97aeb31d9238eb5ff84ff0ed538e5257a83f959c88e142c4ed03270601eb8dd/h-yoshikawa44/ch-recipe-page",
+      "image": "https://opengraph.githubassets.com/3873460c70120c12549e2dcb5d25b8e065d552f9078396a837b50389bad2b9d2/h-yoshikawa44/ch-recipe-page",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/hankchizljaw/modern-css-reset": {
       "title": "GitHub - Andy-set-studio/modern-css-reset: A bare-bones CSS reset for modern web development.",
       "description": "A bare-bones CSS reset for modern web development. - Andy-set-studio/modern-css-reset",
-      "image": "https://opengraph.githubassets.com/3d02bf42e95fb1d74c3f9e7e8767c4f123cf95939d772548fff47738ca8cc75a/Andy-set-studio/modern-css-reset",
+      "image": "https://opengraph.githubassets.com/507eb1e28b09ffd8a6ee343d5f197a5029fc265836ac286dec34b0f0aaece741/Andy-set-studio/modern-css-reset",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/okonet/lint-staged": {
       "title": "GitHub - lint-staged/lint-staged: 🚫💩 — Run tasks like formatters and linters against staged git files",
       "description": "🚫💩 — Run tasks like formatters and linters against staged git files - lint-staged/lint-staged",
-      "image": "https://opengraph.githubassets.com/c73176cb4ced4386328b36bd8104344ddaa738b0b4891f363158d70912405913/lint-staged/lint-staged",
+      "image": "https://opengraph.githubassets.com/7a80661b05148630e77925038782a36875a9c557f899adc96f8c241ff1d2f4f9/lint-staged/lint-staged",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/rbren/rss-parser": {
       "title": "GitHub - rbren/rss-parser: A lightweight RSS parser, for Node and the browser",
       "description": "A lightweight RSS parser, for Node and the browser - rbren/rss-parser",
-      "image": "https://opengraph.githubassets.com/98c25ae4454376b5f1f22209a62934ad06c7dfb9317d41d67d3a529e194edf93/rbren/rss-parser",
+      "image": "https://opengraph.githubassets.com/d032adcb6d76a7e0ca794e9e91b19840424e2a1124e41f0dea329559d6cd71d7/rbren/rss-parser",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/toplenboren/simple-git-hooks": {
       "title": "GitHub - toplenboren/simple-git-hooks: A simple git hooks manager for small projects",
       "description": "A simple git hooks manager for small projects. Contribute to toplenboren/simple-git-hooks development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/8f380f3cc9d1fc3a7a6c02f05fe207f70f61a71eaffdfd78847a4dd70d52f222/toplenboren/simple-git-hooks",
+      "image": "https://opengraph.githubassets.com/7d636f26aeb01bae3cdde01ee889c7b2ab7b9fa1987ce4f029de5e0a4cd3b995/toplenboren/simple-git-hooks",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/typestyle/csx": {
       "title": "GitHub - typestyle/csx: Utility functions for TypeStyle",
       "description": "Utility functions for TypeStyle. Contribute to typestyle/csx development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/188ec3dd51aabbb874dbf48d01bb45b974495559c2738bcb7cd753b47134f76f/typestyle/csx",
+      "image": "https://opengraph.githubassets.com/2e9e7c950f2bd4e6b432112ea746fded7403e98d9031481886cb62eb037c7dce/typestyle/csx",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://google.github.io/material-design-icons": {
@@ -181,7 +181,7 @@
     "https://medium.com/eureka-engineering/html-css-%E3%81%9F%E3%81%8B%E3%81%8C%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A4%E3%83%B3-%E3%83%95%E3%82%A7%E3%83%BC%E3%83%89%E3%82%A2%E3%82%A6%E3%83%88%E3%81%99%E3%82%8B%E3%81%A0%E3%81%91%E3%81%AE%E6%8C%99%E5%8B%95%E3%81%AB%E5%85%A8%E5%8A%9B%E3%81%A7%E5%8F%96%E3%82%8A%E7%B5%84%E3%82%93%E3%81%A0%E7%B5%90%E6%9E%9C-%E6%9C%80%E5%BC%B7%E3%81%AEcss%E3%81%8C%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%97%E3%81%BE%E3%81%A3%E3%81%9F%E8%A9%B1-%E6%9C%80%E5%BC%B7-881152c4ff13": {
       "title": "【HTML/CSS】たかがフェードイン/フェードアウトするだけの挙動に全力で取り組んだ結果、最強のCSSができてしまった話【最強】",
       "description": "エウレカのPairsグローバル事業部エンジニアの山内です。\nこの記事は、eureka Advent Calendar 2017 13日目の記事です。\n\n\n昨日は新卒エンジニア鈴木康文さんの「Goのフレームワーク“Revel”を触ってみた」でした。\nこれからGoをはじめてみようという方にはとても入っていきやすい内容です。是非。 最近、HTML要素をフェードイン/フェードアウトする実装をしました。…",
-      "image": "",
+      "image": "https://miro.medium.com/v2/da:true/bc1f8416df0cad099e43cda2872716e5864f18a73bda2a7547ea082aca9b5632",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://medium.com"
     },
     "https://nextjs.org": {
@@ -191,7 +191,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://nextjs.org"
     },
     "https://prettier.io": {
-      "title": "Prettier · Opinionated Code Formatter",
+      "title": "Prettier · Opinionated Code Formatter · Prettier",
       "description": "Opinionated Code Formatter",
       "image": "https://prettier.io/icon.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://prettier.io"
@@ -219,7 +219,7 @@
     "https://docs.google.com/presentation/d/1fwqrHrEEcNBeLYkiy49r5qGx83UXpX705E31GbyAy3k/mobilepresent?slide=id.g1047b22436d_2_101": {
       "title": "モバイルブラウザにおけるClient-side MLアプリケーションのプロダクション開発事例 / JSConf JP 2021",
       "description": "モバイルブラウザにおける Client-side MLアプリケーションの プロダクション開発事例 2021/11/27 JSConf JP Tomohiro Kato https://jsconf.jp/2021/talk/case-study-of-production-development-of-a-client-side-ml-application-in-a-mobile-browser",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyIMWNyooDt_46419JXPcbDaa6AkzC29_-fgp78zA1Vrh7M5vMnTdg5u-ubZVoDt4H8ggV6fAtmxDhYDCCUAmyVXgdv9FWP8IQoP2-8_FiX0hUU=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKOMRLhba9VmlejWPcjL-f5rmIs7dzbAE6uHIxXVVc0TZXQM3QCPQiUIL767XFM4Rwm8daGMO7qN7JfMS66yEyp_sMK2UrzHUYl52RNRWd8kF7_LiRl=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://jsconf.jp/2021": {
@@ -242,7 +242,7 @@
     },
     "https://speakerdeck.com/berlysia/jsconf-jp-2021": {
       "title": "Webフロントエンドのリプレースを支えるテストの考え方 / JSConf JP 2021",
-      "description": "<a href=\"https://jsconf.jp/2021/\">JSConf JP 2021</a> でトークしたスライドです。\n\nこのスライドの内容を文字にしているブログ記事はこちら\nhttps://blog.nnn.dev/entry/2021/12/03/123000\n\nトークのアーカイブはこちら\nhttps://www.youtube.com/watch?v=5H3Sswp5qYg&t=1155s\n\nhttps://jsconf.jp/2021/talk/testing-approach-to-support-web-front-end-replacement",
+      "description": "<a href=\"https://jsconf.jp/2021/\">JSConf JP 2021</a> でトークしたスライドです。\n\nこのスライドの内容を文字にしているブログ記事はこちら\nhttps://blog.nnn.dev/entry/2021/12/03/123000\n\nトークのアー&hellip;",
       "image": "https://files.speakerdeck.com/presentations/1265fdd7e3a94f13b431508ddecd69b0/slide_0.jpg?27870830",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -254,7 +254,7 @@
     },
     "https://speakerdeck.com/cola119/universal-devtools-for-all-environments": {
       "title": "Universal DevTools  for all environments",
-      "description": "Universal DevTools enables use to debug WebViews with Chrome DevTools.\n\nDEMO: https://youtu.be/5H3Sswp5qYg?t=5100\n\nhttps://github.com/cola119/universal-devtools-poc",
+      "description": "Universal DevTools enables use to debug WebViews with Chrome DevTools.\n\nDEMO: https://youtu.be/5H3Sswp5qYg?t=5100\n\nhttps://github.com/cola119/univer&hellip;",
       "image": "https://files.speakerdeck.com/presentations/f47a7881441f46ed9fa0f76d65c899bf/slide_0.jpg?19659761",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -272,7 +272,7 @@
     },
     "https://speakerdeck.com/indigolain/jsconf-jp-2021": {
       "title": "スタディサプリにおける TypeScript 活用事例と今後の展望 / jsconf-jp-2021",
-      "description": "JSConf JP 2021 でSponsor LT をさせていただいた時の資料です。\n\n以下は資料内で紹介した発表スライドです。\nGenerate React Component with TypeScript AST\nhttps://speakerdeck.com/quramy/generate-react-component-with-typescript-ast \n\n最高のマスターデータ管理手法考察 & VSCode Extension を活用した話 / developing masterdata management tool by using vscode extension\nhttps://speakerdeck.com/qsona/developing-masterdata-management-tool-by-using-vscode-extension\n\n純粋培養GraphQL / Pure GraphQL Architecture\nhttps://speakerdeck.com/qsona/pure-graphql-architecture \n\nGraphQL と Prisma から考える次のN年を見据えた技術選定 / Architecture decision for the next N years at StudySapuri\nhttps://speakerdeck.com/qsona/architecture-decision-for-the-next-n-years-at-studysapuri\n",
+      "description": "JSConf JP 2021 でSponsor LT をさせていただいた時の資料です。\n\n以下は資料内で紹介した発表スライドです。\nGenerate React Component with TypeScript AST\nhttps://speakerdeck.com/quramy/genera&hellip;",
       "image": "https://files.speakerdeck.com/presentations/fb3ab9a484b44222be3756d21282e807/slide_0.jpg?19662121",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -290,7 +290,7 @@
     },
     "https://speakerdeck.com/qsona/architecture-decision-for-the-next-n-years-at-studysapuri": {
       "title": "GraphQL と Prisma から考える次のN年を見据えた技術選定 / Architecture decision for the next N years at StudySapuri",
-      "description": "JSConf JP 2021 で登壇した資料です #jsconfjp #jsconfjp_b\n\nLinks:\n[Active Recordから考える次の10年を見据えた技術選定](https://speakerdeck.com/yasaichi/architecture-decision-for-the-next-10-years-at-pixta)\n[GraphQL を活用したスキーマ駆動開発の実践](https://speakerdeck.com/qsona/schema-driven-development-with-graphql)\n[GraphQL を利用したアーキテクチャの勘所 / Architecture practices with GraphQL - Speaker Deck](https://speakerdeck.com/qsona/architecture-practices-with-graphql)\n[最高のマスターデータ管理手法考察 & VSCode Extension を活用した話](https://speakerdeck.com/qsona/developing-masterdata-management-tool-by-using-vscode-extension)\n[サービスクラスについては僕も悪かったと思っているけど、それでもCQSは実現したいんだ](https://qiita.com/a-suenami/items/8897e2e36fe2836c6949)\n[Smart UI パターンが再評価される世界 - id:onk のはてなブログ](https://onk.hatenablog.jp/entry/2020/11/11/024531)\n[Ruby on Railsの正体と向き合い方](https://speakerdeck.com/yasaichi/what-is-ruby-on-rails-and-how-to-deal-with-it)\n[Explore how to extend the Prisma Client · Issue #7161 · prisma/prisma](https://github.com/prisma/prisma/issues/7161)\n[プログラミング言語の未来はどうなるか | κeenのHappy Hacκing Blog](https://keens.github.io/blog/2021/01/04/future_of_proguramming_languages/)\n[Prisma で Factory を作るための便利関数を作りました！](https://zenn.dev/seya/articles/a0d2d2da20ddad)",
+      "description": "JSConf JP 2021 で登壇した資料です #jsconfjp #jsconfjp_b\n\nLinks:\n[Active Recordから考える次の10年を見据えた技術選定](https://speakerdeck.com/yasaichi/architecture-decision-for-&hellip;",
       "image": "https://files.speakerdeck.com/presentations/80effab591774e19aef91fedfcb7f2b9/slide_0.jpg?19673293",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -338,7 +338,7 @@
     },
     "https://speakerdeck.com/yamanoku/the-past-and-future-of-accessible-front-end-development": {
       "title": "アクセシブルなフロントエンド開発のこれまでとこれから / the past and future of accessible front-end development",
-      "description": "<a href=\"https://jsconf.jp/2021/\" target=\"_blank\">JSConfJP 2021</a> 発表資料\n\n昨今アクセシビリティに関する興味関心が増えてきた中で、SPAといったWebアプリケーションにおけるアクセシビリティを考慮した実装についてはまだ認識が広まっていないように感じます。 フロントエンドフレームワークを使ってより良いアクセシビリティ実装をするにはどうすればいいかの方法、その結果どういう形で伝わっているかを紹介しようと思います。 またWebアプリケーションでHTMLを使ってUI実装することに限界を感じており、それを解消するためのReactGUIやHeadless UIといった新たなアプローチにおける期待についても紹介したいと思っております。",
+      "description": "<a href=\"https://jsconf.jp/2021/\" target=\"_blank\">JSConfJP 2021</a> 発表資料\n\n昨今アクセシビリティに関する興味関心が増えてきた中で、SPAといったWebアプリケーションにおけるアクセシビリティを考慮した実装についてはまだ認識が広ま&hellip;",
       "image": "https://files.speakerdeck.com/presentations/f14d34b703b24088917451478c73fc2f/slide_0.jpg?19658219",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -351,18 +351,18 @@
     "https://www.docswell.com/s/Neri78/5QM1RK-twilio-openapi-mock?utm_source=twitter&utm_medium=social&utm_campaign=singlepage": {
       "title": "OpenAPI Specificationを使ったTwilio APIテスト用モッキングサーバーの構築 | ドクセル",
       "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/KYE6LPNQ7V.jpg",
+      "image": "https://bcdn.docswell.com/page/KYE6LPNQ7V.jpg?width=480",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
     },
     "https://www.slideshare.net/100005930379759/ss-250735852": {
       "title": "関数型プログラミングのデザインパターンひとめぐり",
-      "description": "関数型プログラミングのデザインパターンひとめぐり - Download as a PDF or view online for free",
+      "description": "このスライドは、2021/11/27 に開催された「JSConf JP 2021」で発表したものです。 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/atouroffunctionalprogrammingdesignpatterns-211127041116-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/t-kihira/web-block-pong": {
       "title": "Web ベースのカジュアルゲーム「block pong」の実装とビジネス",
-      "description": "Web ベースのカジュアルゲーム「block pong」の実装とビジネス - Download as a PDF or view online for free",
+      "description": "JSConf 2021 で発表した資料です - Download as a PPTX, PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/webblockpong-211127040720-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
@@ -374,7 +374,7 @@
     },
     "https://www.youtube.com/watch?v=Rmvt9Gt0VMk": {
       "title": "JSConf.jp Track C",
-      "description": "",
+      "description": "YouTube でお気に入りの動画や音楽を楽しみ、オリジナルのコンテンツをアップロードして友だちや家族、世界中の人たちと共有しましょう。",
       "image": "https://i.ytimg.com/vi/Rmvt9Gt0VMk/hqdefault.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     },
@@ -387,25 +387,25 @@
     "https://youtube.com/playlist?list=PL42hYWKFRfN4l-KXE-2xzy95dRKPtCg0V": {
       "title": "JSConf JP 2021 Track C",
       "description": "",
-      "image": "https://i.ytimg.com/vi/cxF-n75gIPo/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLANOjF3MfeGsB5GV0AZSPWQk8_LVw&days_since_epoch=19764",
+      "image": "https://i.ytimg.com/vi/cxF-n75gIPo/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCv0wYmllgXOmSX2AiAcUFXsDPLJw&days_since_epoch=20345",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
     },
     "https://youtube.com/playlist?list=PL42hYWKFRfN7XWswj9wcC0j4191KNJuO3": {
       "title": "JSConf JP 2021 Track B",
       "description": "",
-      "image": "https://i.ytimg.com/vi/16ux8nTqJ7k/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCUttyONUhlptNvaGydPUmrk1m_Uw&days_since_epoch=19764",
+      "image": "https://i.ytimg.com/vi/16ux8nTqJ7k/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLA3VpAXFHIDrPrhX3iZD0evK1_87Q&days_since_epoch=20345",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
     },
     "https://youtube.com/playlist?list=PL42hYWKFRfN7cg6c3uM4_tAxbybVzG3ao": {
       "title": "JSConf JP 2021 Track A",
       "description": "",
-      "image": "https://i.ytimg.com/vi/yhieejm0we4/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCwIoRff8V5zYmKPBneofNaPBOGBg&days_since_epoch=19764",
+      "image": "https://i.ytimg.com/vi/yhieejm0we4/hqdefault.jpg?sqp=-oaymwEXCOADEI4CSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLCsi8E060JE_mmbmtYR-WiizZ6yeg&days_since_epoch=20345",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://youtube.com"
     }
   },
   "2021-11-09-volta": {
     "https://asdf-vm.com": {
-      "title": "asdf | GitHub",
+      "title": "asdf",
       "description": "Manage multiple runtime versions with a single CLI tool",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://asdf-vm.com"
@@ -445,109 +445,103 @@
     "https://ja.vitejs.dev": {
       "title": "Vite",
       "description": "次世代フロントエンドツール",
-      "image": "https://vitejs.dev/og-image.png",
+      "image": "https://vite.dev/og-image.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
     },
     "https://ja.vitejs.dev/guide/features.html#css": {
-      "title": "Vite",
+      "title": "特徴",
       "description": "次世代フロントエンドツール",
-      "image": "https://vitejs.dev/og-image.png",
+      "image": "https://vite.dev/og-image.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
     },
     "https://ja.vitejs.dev/guide/features.html#postcss": {
-      "title": "Vite",
+      "title": "特徴",
       "description": "次世代フロントエンドツール",
-      "image": "https://vitejs.dev/og-image.png",
+      "image": "https://vite.dev/og-image.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.vitejs.dev"
     }
   },
   "2021-09-26-material-ui-v5": {
     "https://codesandbox.io/s/7lc1r?file=/demo.tsx": {
-      "title": "UseButton Material Demo - CodeSandbox",
+      "title": "UseButton Material Demo - Codesandbox",
       "description": "https://github.com/mui-org/material-ui/blob/v5.0.0-rc.1/docs/src/pages/components/buttons/UseButton.tsx",
       "image": "https://codesandbox.io/api/v1/sandboxes/7lc1r/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/sharp-sky-xwz3d?file=/src/App.tsx:0-746": {
-      "title": "sharp-sky-xwz3d - CodeSandbox",
-      "description": "sharp-sky-xwz3d by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
+      "title": "sharp-sky-xwz3d - Codesandbox",
+      "description": "sharp-sky-xwz3d  using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
       "image": "https://codesandbox.io/api/v1/sandboxes/xwz3d/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/stupefied-mclaren-ho4zs?file=/src/App.tsx": {
-      "title": "stupefied-mclaren-ho4zs - CodeSandbox",
-      "description": "stupefied-mclaren-ho4zs by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
+      "title": "stupefied-mclaren-ho4zs - Codesandbox",
+      "description": "stupefied-mclaren-ho4zs  using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
       "image": "https://codesandbox.io/api/v1/sandboxes/ho4zs/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/zealous-dawn-0yr4g?file=/src/App.tsx": {
-      "title": "zealous-dawn-0yr4g - CodeSandbox",
-      "description": "zealous-dawn-0yr4g by oliviertassinari using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
+      "title": "zealous-dawn-0yr4g - Codesandbox",
+      "description": "zealous-dawn-0yr4g  using @emotion/react, @emotion/styled, @mui/material, react, react-dom, react-scripts",
       "image": "https://codesandbox.io/api/v1/sandboxes/0yr4g/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/zlh5w?file=/src/App.js": {
-      "title": "Box v5 is faster than v4 - CodeSandbox",
-      "description": "Box v5 is faster than v4 by oliviertassinari using @emotion/react, @emotion/styled, @material-ui/core, @mui/material, react, react-dom, react-scripts",
+      "title": "Box v5 is faster than v4 - Codesandbox",
+      "description": "Box v5 is faster than v4  using @emotion/react, @emotion/styled, @material-ui/core, @mui/material, react, react-dom, react-scripts",
       "image": "https://codesandbox.io/api/v1/sandboxes/zlh5w/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://github.com/cssinjs/jss": {
       "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "image": "https://opengraph.githubassets.com/a9bc86d168d600e2832609eb7f389a8be3213be92768cd4ce84a130eda73b109/cssinjs/jss",
+      "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - cssinjs/jss",
+      "image": "https://opengraph.githubassets.com/d88d81582ec60376e7101e9a56b6b1f2c09309575dff7a206ed031ca5b46795b/cssinjs/jss",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/emotion-js/emotion": {
       "title": "GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
-      "description": "👩‍🎤 CSS-in-JS library designed for high performance style composition - GitHub - emotion-js/emotion: 👩‍🎤 CSS-in-JS library designed for high performance style composition",
-      "image": "https://opengraph.githubassets.com/ce24195401672218947778cb3da44f474c843c38013bb468ad2bacaaa8092282/emotion-js/emotion",
+      "description": "👩‍🎤 CSS-in-JS library designed for high performance style composition - emotion-js/emotion",
+      "image": "https://opengraph.githubassets.com/695be8c6c4bbacd69d56b19210c9bc4ad4fc67bc2d8c823aa1a7c0c6313362c4/emotion-js/emotion",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui-org/material-ui": {
-      "title": "GitHub - mui/material-ui: MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google's Material Design.",
-      "description": "MUI Core: Ready-to-use foundational React components, free forever. It includes Material UI, which implements Google&#39;s Material Design. - GitHub - mui/material-ui: MUI Core: Ready-to-use founda...",
-      "image": "https://repository-images.githubusercontent.com/23083156/79a1d61e-2309-4313-82bc-e5aa96ad0969",
+      "title": "GitHub - mui/material-ui: Material UI: Comprehensive React component library that implements Google's Material Design. Free forever.",
+      "description": "Material UI: Comprehensive React component library that implements Google's Material Design. Free forever. - mui/material-ui",
+      "image": "https://repository-images.githubusercontent.com/23083156/b55af535-7ebd-488d-a63a-cc902e0619d3",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui-org/material-ui-x": {
       "title": "GitHub - mui/mui-x: MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more!",
-      "description": "MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more! - GitHub - mui/mui-x: MUI X: Build co...",
-      "image": "https://repository-images.githubusercontent.com/260240241/c87a696f-ee21-4b3f-80ec-9024a077cb63",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://github.com/mui-org/material-ui-x/projects/1": {
-      "title": "MUI X public roadmap · mui/mui-x",
-      "description": "MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more! - MUI X public roadmap · mui/mui-x",
-      "image": "https://repository-images.githubusercontent.com/260240241/c87a696f-ee21-4b3f-80ec-9024a077cb63",
+      "description": "MUI X: Build complex and data-rich applications using a growing list of advanced React components, like the Data Grid, Date and Time Pickers, Charts, and more! - mui/mui-x",
+      "image": "https://repository-images.githubusercontent.com/260240241/b985093c-1f45-45e0-8b7a-7fd35a26d0cf",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui-org/material-ui/issues/27170": {
-      "title": "Unstyled components progress · Issue #27170 · mui/material-ui",
-      "description": "As discussed in #6218, we are committed to providing unstyled versions of the components in @mui/base. This is an umbrella issue to have visibility on the progress. We assume that most of the compo...",
-      "image": "https://opengraph.githubassets.com/42099dc8d8f4f95d34503ec49d380eae5552b2ea60329cd4b5145c15a386df91/mui/material-ui/issues/27170",
+      "title": "Base UI components progress",
+      "description": "",
+      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui-org/material-ui/issues/6218": {
       "title": "Provide a version of the components without any styles · Issue #6218 · mui/material-ui",
-      "description": "Material-UI as \"material to build UI\", not \"material design\"! I am wondering if it would make any sense to extract the core components of material-ui in a separate, completely non-opinionated and n...",
-      "image": "https://opengraph.githubassets.com/be9e39782968414398d65b80770966744eaeda2fe708e2a8d0defccdcebdb5ca/mui/material-ui/issues/6218",
+      "description": "",
+      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui/material-ui-pickers": {
       "title": "GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
-      "description": "Date & Time pickers for Material UI (support from v1 to v4) - GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
+      "description": "Date & Time pickers for Material UI (support from v1 to v4) - mui/material-ui-pickers",
       "image": "https://repository-images.githubusercontent.com/106125229/81d0cb00-7036-11e9-90b1-1128202ec858",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/styled-components/styled-components": {
       "title": "GitHub - styled-components/styled-components: Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅",
-      "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 - GitHub - styled-components/styled-components: Visual primitives for the component age...",
+      "description": "Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅 - styled-components/styled-components",
       "image": "https://repository-images.githubusercontent.com/65794292/bdacfa80-6132-11e9-90b9-33e6eee04d1f",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://mui.com/blog/material-ui-is-now-mui": {
-      "title": "Material-UI is now Material UI! - MUI",
+      "title": "Material-UI is now Material UI! - MUI",
       "description": "Starting today, we are evolving our brand identity. We are clarifying the difference between our company and our products.",
       "image": "https://mui.com/static/blog/material-ui-is-now-mui/card.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
@@ -561,7 +555,7 @@
     "https://mui.com/guides/migration-v4": {
       "title": "Migrating to v5: getting started - Material UI",
       "description": "This guide explains how and why to migrate from Material UI v4 to v5.",
-      "image": "https://mui.com/static/logo.png",
+      "image": "https://mui.com/edge-functions/og-image?product=Material UI&title=Migrating to v5: getting started&description=This guide explains how and why to migrate from Material UI v4 to v5.",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://mui.com"
     },
     "https://mui.com/x": {
@@ -673,43 +667,11 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v5-0-6.mui.com"
     }
   },
-  "2021-05-31-buildable-introduction": {
-    "https://github.com/h-yoshikawa44/buildable-tutorial": {
-      "title": "GitHub - h-yoshikawa44/buildable-tutorial: 個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials)",
-      "description": "個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials) - GitHub - h-yoshikawa44/buildable-tutorial: 個人勉強用リポジトリ　出典：[Buildable チュートリアル](https://www.buildable.dev/tutorials)",
-      "image": "https://opengraph.githubassets.com/ae6186a0a2562393075c7a44fb9add58cbfd87e622e37579d003c886d8bc1e91/h-yoshikawa44/buildable-tutorial",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
-    },
-    "https://www.buildable.dev": {
-      "title": "404 - Page not found",
-      "description": "The page you are looking for doesn't exist or has been moved.",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.buildable.dev"
-    },
-    "https://www.integrationos.com": {
-      "title": "IntegrationOS | Your app, Integrated.",
-      "description": "IntegrationOS is a set of building blocks for quickly adding integrations to your app. Ship quickly and unlock growth with a market-proven solution.",
-      "image": "https://buildable-assets.s3.ca-central-1.amazonaws.com/catalog/social/Main+Open+Graph.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.event.dev"
-    },
-    "https://www.linkedin.com/company/buildable-dev": {
-      "title": "IntegrationOS | LinkedIn",
-      "description": "IntegrationOS | 914 followers on LinkedIn. Your app, Integrated. | Use IntegrationOS to rapidly launch new integrations, remove costly data silos and build connected apps that perform at the scale your customers demand. All at a price your CFO will love.",
-      "image": "https://media.licdn.com/dms/image/D4E0BAQEsp5rhADTkww/company-logo_200_200/0/1702580862275/integrationos_logo?e=2147483647&v=beta&t=p4HCYSJLGBpvdcbL9Bk9EiYVM5dhJIzRkmBQoWU58N0",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.linkedin.com"
-    },
-    "https://www.youtube.com/playlist?list=PL5xN9Zn1k9D2qsMsfERWjIsSIVrFq5tYT": {
-      "title": "Your first steps into using buildable.dev",
-      "description": "Hi there! In this short video series, we'll be exploring your first steps into using Buildable.dev to create your very first recipes and a basic Todo App wit...",
-      "image": "https://i.ytimg.com/vi/CHrTVjbnwCA/hqdefault.jpg?sqp=-oaymwEWCKgBEF5IWvKriqkDCQgBFQAAiEIYAQ==&rs=AOn4CLCU_Yka9TyhnjMj6JVSWrHsC6CLHA&days_since_epoch=19764",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
-    }
-  },
   "2021-05-19-react-query-socialite": {
     "https://docs.github.com/ja/developers/apps/scopes-for-oauth-apps": {
       "title": "OAuth アプリのスコープ - GitHub Docs",
       "description": "スコープによって、必要なアクセスの種類を正確に指定できます。 スコープによって OAuth トークンへのアクセスが 制限 されます。 ユーザがすでに持っている範囲を超えた権限を許可することはありません。",
-      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
+      "image": "https://docs.github.com/assets/cb-345/images/social-cards/default.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
     },
     "https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Freact-query-socialite": {
@@ -720,32 +682,32 @@
     },
     "https://github.com/laravel/socialite": {
       "title": "GitHub - laravel/socialite: Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
-      "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries. - GitHub - laravel/socialite: Laravel wrapper around OAuth 1 & OAuth 2 libraries.",
-      "image": "https://opengraph.githubassets.com/4a294a197a32dd339190866779bd0df4eaaebc1e69e801052e24c9de0665cf51/laravel/socialite",
+      "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries. - laravel/socialite",
+      "image": "https://opengraph.githubassets.com/81dd75616ee038ca387ea0eb38e15b1c5f0a7257beb9f750c4f0f9b9fdcfec66/laravel/socialite",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226": {
-      "title": "https://github.com/laravel/socialite/blob/v5.2.3/src/Two/AbstractProvider.php#L226",
-      "description": "",
-      "image": "",
+      "title": "socialite/src/Two/AbstractProvider.php at v5.2.3 · laravel/socialite",
+      "description": "Laravel wrapper around OAuth 1 & OAuth 2 libraries. - laravel/socialite",
+      "image": "https://opengraph.githubassets.com/81dd75616ee038ca387ea0eb38e15b1c5f0a7257beb9f750c4f0f9b9fdcfec66/laravel/socialite",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://qiita.com/KeisukeKudo/items/18dd8a342a4bdd43913c": {
       "title": "Laravel+Socialiteで簡単ソーシャルログイン実装! (テスト付き) - Qiita",
-      "description": "Socialiteを使ってLaravelで簡単にソーシャルログインを実装する方法をテスト付きで紹介したいと思います｡ソースはこちら※ 上記ソースを clone する場合は php artisan…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCUyQlNvY2lhbGl0ZSVFMyU4MSVBNyVFNyVCMCVBMSVFNSU4RCU5OCVFMyU4MiVCRCVFMyU4MyVCQyVFMyU4MiVCNyVFMyU4MyVBMyVFMyU4MyVBQiVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNSVBRSU5RiVFOCVBMyU4NSUyMSUyMCUyOCVFMyU4MyU4NiVFMyU4MiVCOSVFMyU4MyU4OCVFNCVCQiU5OCVFMyU4MSU4RCUyOSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NzFjMGQyYzE4YjhhY2Q2OTMwNGYyZjNjZWM5NTZhYjE&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwS2Vpc3VrZUt1ZG8mdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWEwMWE0NjUyMDRiMzY1MWE0YWYyZTIzNDYzNDRiN2Y2&blend-x=142&blend-y=491&blend-mode=normal&s=fd561fce7738b9100b2396d973101f53",
+      "description": "Socialiteを使ってLaravelで簡単にソーシャルログインを実装する方法をテスト付きで紹介したいと思います｡ ソースはこちら ※ 上記ソースを clone する場合は php artisan key:generate を実行してください｡ 環境 Dockerで環境...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkY3NDcxMSUyRmQ2Yzk5ZDVhODRlZGE2Njg1M2FhYWQxZDg4YTIxYTdiZmJmMjQzNjUlMkZsYXJnZS5wbmclM0YxNTgwMTQxNjM4P2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz1lZDAyN2I0ZDQ1MTYwODU2YmIwOTNjZWU4MjZmYjU0MQ%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D33c028d70e21b1bb18e55c4a4a534b82?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9TGFyYXZlbCUyQlNvY2lhbGl0ZSVFMyU4MSVBNyVFNyVCMCVBMSVFNSU4RCU5OCVFMyU4MiVCRCVFMyU4MyVCQyVFMyU4MiVCNyVFMyU4MyVBMyVFMyU4MyVBQiVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNSVBRSU5RiVFOCVBMyU4NSUyMSUyMCUyOCVFMyU4MyU4NiVFMyU4MiVCOSVFMyU4MyU4OCVFNCVCQiU5OCVFMyU4MSU4RCUyOSZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWNjZGQ4ZjgzNjA5M2JhMWI3NzAzYWFlZTU3NWY3NDNj&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBLZWlzdWtlS3VkbyZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1wYWQ9MCZzPWEzY2Q0MjEyYzljYWEwZWNiNTIxODI0ZjU1OWYwODk4&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=752b3709e8631cca5f9a362f533478c4",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/hareku/items/ea09602bf40bf0a42040": {
       "title": "Nuxt.jsとLaravelを使ってTwitterログイン機能を実装する - Qiita",
-      "description": "Nuxt.jsとLaravelを使用して、Twitterでログインする機能の実装方法を紹介します。今回はLaravel公式パッケージのLaravel PassportとLaravel Social…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TnV4dC5qcyVFMyU4MSVBOExhcmF2ZWwlRTMlODIlOTIlRTQlQkQlQkYlRTMlODElQTMlRTMlODElQTZUd2l0dGVyJUUzJTgzJUFEJUUzJTgyJUIwJUUzJTgyJUE0JUUzJTgzJUIzJUU2JUE5JTlGJUU4JTgzJUJEJUUzJTgyJTkyJUU1JUFFJTlGJUU4JUEzJTg1JUUzJTgxJTk5JUUzJTgyJThCJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz04ZTNhNmI4OTkwNTcyZTNlM2E3ZGM1YzcxYTU4NjM5Yw&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwaGFyZWt1JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0yODdkYjAyN2I1OTk4Mjg4MzAwY2ZhYzc5ZTg1NjU0Mg&blend-x=142&blend-y=491&blend-mode=normal&s=87ab99e8fe86db196a4226a05d758004",
+      "description": "Nuxt.jsとLaravelを使用して、Twitterでログインする機能の実装方法を紹介します。 今回はLaravel公式パッケージのLaravel PassportとLaravel Socialiteを利用し、実装したコードはGitHubに上げています。 https:/...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkYwJTJGMTA5NjA2JTJGcHJvZmlsZS1pbWFnZXMlMkYxNTkyNDg5NDg0P2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz05OGM4OTM5NWZhOWYxNDk5NzUwNzg1MmIxMzY0ZDViNg%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D4e799648cb3574a5c57b8f160722dbb8?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9TnV4dC5qcyVFMyU4MSVBOExhcmF2ZWwlRTMlODIlOTIlRTQlQkQlQkYlRTMlODElQTMlRTMlODElQTZUd2l0dGVyJUUzJTgzJUFEJUUzJTgyJUIwJUUzJTgyJUE0JUUzJTgzJUIzJUU2JUE5JTlGJUU4JTgzJUJEJUUzJTgyJTkyJUU1JUFFJTlGJUU4JUEzJTg1JUUzJTgxJTk5JUUzJTgyJThCJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9OTU4YTRiMmFiM2U0NTAxOTgwMjFlNGZkNDgyZWI1ZjI&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBoYXJla3UmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz04YTBkMWU4NWM2YTUyMGMyYTk5YTY3YmVkMmQ5ODc3Zg&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=dc13258029227a7bf265264b414c74d7",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/tetsu-upstr/items/d1cccfac362872ed140c": {
       "title": "Laravelログイン機能に複数のSNS認証を追加する（socialite） - Qiita",
-      "description": "socialiteでSNSログインを実装Laravelで、SNSのアカウントを使ったログインの実装をした時のメモです。socialiteとはsoscialiteとは、Laravelで簡単にOA…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9TGFyYXZlbCVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNiVBOSU5RiVFOCU4MyVCRCVFMyU4MSVBQiVFOCVBNCU4NyVFNiU5NSVCMCVFMyU4MSVBRVNOUyVFOCVBQSU4RCVFOCVBOCVCQyVFMyU4MiU5MiVFOCVCRiVCRCVFNSU4QSVBMCVFMyU4MSU5OSVFMyU4MiU4QiVFRiVCQyU4OHNvY2lhbGl0ZSVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MDkzM2UyMzY4MjBjYWMwNmZkYjUwZDRhMjUxYWY2ZTE&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdGUtayZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YmY5NjM3N2U3MmU2YTMyMDY3NjhmMjM0ZDIzZWNhZjk&blend-x=142&blend-y=491&blend-mode=normal&s=8fa884f42cb7f06b4ee5bb9f32284994",
+      "description": "socialiteでSNSログインを実装 Laravelで、SNSのアカウントを使ったログインの実装をした時のメモです。 socialiteとは soscialiteとは、Laravelで簡単にOAuth（SNS認証）を可能にするパッケージツールです。 はじめに、com...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkYwJTJGNDgyODgwJTJGcHJvZmlsZS1pbWFnZXMlMkYxNzMxMjE2NjMwP2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz1jMDhjZDhhZDVkNDU2OGQ3ZjFlMTZkZWEzODIzMmM0Yg%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D0d15a262d32385a14bc436c7bfda81a1?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9TGFyYXZlbCVFMyU4MyVBRCVFMyU4MiVCMCVFMyU4MiVBNCVFMyU4MyVCMyVFNiVBOSU5RiVFOCU4MyVCRCVFMyU4MSVBQiVFOCVBNCU4NyVFNiU5NSVCMCVFMyU4MSVBRVNOUyVFOCVBQSU4RCVFOCVBOCVCQyVFMyU4MiU5MiVFOCVCRiVCRCVFNSU4QSVBMCVFMyU4MSU5OSVFMyU4MiU4QiVFRiVCQyU4OHNvY2lhbGl0ZSVFRiVCQyU4OSZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTljNDkzNTk2NDllOWFhZjlkMzE4ZTg1ZGQ4OThmOGE0&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDB0ZS1rJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9MzgwN2JkN2RiYTBlM2NiYjliZTVhNzMzZTc0OWZlNzA&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=04f5e5f45a00f8672d09739279b80800",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://socialiteproviders.com": {
@@ -763,15 +725,15 @@
   },
   "2021-04-13-react-query-intersection-observer": {
     "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/load-more-infinite-scroll": {
-      "title": "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/load-more-infinite-scroll",
-      "description": "",
-      "image": "",
+      "title": "TanStack/query: load-more-infinite-scroll - Codesandbox",
+      "description": "TanStack/query: load-more-infinite-scroll  ",
+      "image": "https://codesandbox.io/api/v1/sandboxes/qh133g/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://developer.mozilla.org/ja/docs/Web/API/Intersection_Observer_API": {
-      "title": "交差オブザーバー API - Web API | MDN",
+      "title": "交差オブザーバー API - Web API | MDNMDN",
       "description": "交差オブザーバー API (Intersection Observer API) は、ターゲットとなる要素が、祖先要素または文書の最上位のビューポートと交差する変化を非同期的に監視する方法を提供します。",
-      "image": "https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png",
+      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.mozilla.org"
     },
     "https://github.com/h-yoshikawa44/ooui-memo/releases/tag/post%2Freact-query-intersection-observer": {
@@ -787,22 +749,22 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.reactjs.org"
     },
     "https://tanstack.com/query/v3/docs/react/reference/useInfiniteQuery": {
-      "title": "useInfiniteQuery | TanStack Query Docs",
-      "description": "\nconst {\n  fetchNextPage,",
-      "image": "",
+      "title": "useInfiniteQuery | TanStack Query React Docs",
+      "description": "js const { fetchNextPage, fetchPreviousPage, hasNextPage, hasPreviousPage, isFetchingNextPage, isFetchingPreviousPage, ...result } = useInfiniteQuery(queryKey, ({ pageParam = 1 }) = fetchPage(pagePara...",
+      "image": "https://github.com/tanstack/query/raw/main/media/repo-header.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     }
   },
   "2021-03-21-laravel-react-query-auth": {
     "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript": {
-      "title": "https://codesandbox.io/p/sandbox/github/tanstack/query/tree/v3/examples/optimistic-updates-typescript",
-      "description": "",
-      "image": "",
+      "title": "TanStack/query: optimistic-updates-typescript - Codesandbox",
+      "description": "TanStack/query: optimistic-updates-typescript  ",
+      "image": "https://codesandbox.io/api/v1/sandboxes/2ntdnh/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
     "https://codesandbox.io/s/github/tanstack/query/tree/v3/examples/simple": {
       "title": "TanStack/query: simple - CodeSandbox",
-      "description": "TanStack/query: simple using axios, react, react-dom, react-query, react-scripts, stop-runaway-react-effects, styled-components",
+      "description": "The online code editor tailored for web applications",
       "image": "https://codesandbox.io/api/v1/sandboxes/ezbzi2/screenshot.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://codesandbox.io"
     },
@@ -815,31 +777,31 @@
     "https://github.com/oukayuka/Riakuto-StartingReact-ja3.1": {
       "title": "GitHub - oukayuka/Riakuto-StartingReact-ja3.1",
       "description": "Contribute to oukayuka/Riakuto-StartingReact-ja3.1 development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/70b08dcbf84b1ff1ea473d86701cff3c8dc9006eaef0393a967ab8f4dc5af434/oukayuka/Riakuto-StartingReact-ja3.1",
+      "image": "https://opengraph.githubassets.com/3438f5068cbdf536c3aa7d32faefbbea5d85a3e281eab82cb5384049bbd1596c/oukayuka/Riakuto-StartingReact-ja3.1",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://readouble.com/laravel/6.x/ja/csrf.html": {
-      "title": "CSRF保護 6.x Laravel",
+      "title": "6.x CSRF保護 Laravel\n",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://readouble.com"
     },
     "https://tanstack.com/query/v3": {
-      "title": "TanStack | High Quality Open-Source Software for Web Developers",
-      "description": "Headless, type-safe, powerful utilities for complex workflows like Data Management, Data Visualization, Charts, Tables, and UI Components.",
-      "image": "",
+      "title": "TanStack Query",
+      "description": "Powerful asynchronous state management, server-state utilities and data fetching. Fetch, cache, update, and wrangle all forms of async data in your TS/JS, React, Vue, Solid, Svelte & Angular applications all without touching any \"global state\"",
+      "image": "https://tanstack.com/assets/og-C0HGjoLl.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     },
     "https://tanstack.com/query/v3/docs/react/reference/useMutation": {
-      "title": "useMutation | TanStack Query Docs",
-      "description": "\nconst {\n  data,",
-      "image": "",
+      "title": "useMutation | TanStack Query React Docs",
+      "description": "js const { data, error, isError, isIdle, isLoading, isPaused, isSuccess, mutate, mutateAsync, reset, status, } = useMutation(mutationFn, { mutationKey, onError, onMutate, onSettled, onSuccess, retry,...",
+      "image": "https://github.com/tanstack/query/raw/main/media/repo-header.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     },
     "https://tanstack.com/query/v3/docs/react/reference/useQuery": {
-      "title": "useQuery | TanStack Query Docs",
-      "description": "\nconst {\n  data,",
-      "image": "",
+      "title": "useQuery | TanStack Query React Docs",
+      "description": "js const { data, dataUpdatedAt, error, errorUpdatedAt, failureCount, isError, isFetched, isFetchedAfterMount, isFetching, isIdle, isLoading, isLoadingError, isPlaceholderData, isPreviousData, isRefetc...",
+      "image": "https://github.com/tanstack/query/raw/main/media/repo-header.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     },
     "https://v5.reactrouter.com/web/example/auth-workflow": {
@@ -859,7 +821,7 @@
     "https://docs.google.com/presentation/d/16GNi1z2PtXHch39MwiKtAF4-p-caedqw6G4PXsNO35A/edit": {
       "title": "アジャイルネイティブな大学生と\u000bコネクトしてみませんか?",
       "description": "アジャイルネイティブな大学生と コネクトしてみませんか? -3時間スプリント白熱教室- 渡辺知恵美, 村上藍加, 日高拓真, 飯塚陸斗, 須田幹大",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyKk9IioALJYfUr8rtrh03tF14tOw1mySpb-zV7MO7vkMz61KT0qt2uuEw0qtUkFTGRldVxIat8LPx3Wn_ErIFCt5hNMXz1Pa0PLD4OPsUyXOA=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLzShy390JznvMgKyA7GDYQ7kka8JxCG7T3YHk0FE-7IhYPyIMkkmZjDRObH5HjQaLS6SK4hX6ljnsZ6kXNaKPXlk056DWoBG9QsmQenS9_UJ_SZRE=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://event.shoeisha.jp/devsumi/20210218": {
@@ -900,13 +862,13 @@
     },
     "https://qiita.com/viva_tweet_x/items/5b17bd5ad8316a34347b": {
       "title": "デブサミ2021 参加レポート「19-E-6 三越伊勢丹が目指すNew Normalの購買スタイル」 - Qiita",
-      "description": "Developers Summit 2021この記事は、2021/02/18-19に開催されたDevelopers Summit 2021のレポートです。チーム参加してきましたaslead A…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMSUyMCVFNSU4RiU4MiVFNSU4QSVBMCVFMyU4MyVBQyVFMyU4MyU5RCVFMyU4MyVCQyVFMyU4MyU4OCVFMyU4MCU4QzE5LUUtNiUyMCVFNCVCOCU4OSVFOCVCNiU4QSVFNCVCQyU4QSVFNSU4QiVBMiVFNCVCOCVCOSVFMyU4MSU4QyVFNyU5QiVBRSVFNiU4QyU4NyVFMyU4MSU5OU5ldyUyME5vcm1hbCVFMyU4MSVBRSVFOCVCMyVCQyVFOCVCMiVCNyVFMyU4MiVCOSVFMyU4MiVCRiVFMyU4MiVBNCVFMyU4MyVBQiVFMyU4MCU4RCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9YjJkOTY0MzgwYTlmN2JlYmIwNzJiMWM4NjU4ZjIzNzY&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwdml2YV90d2VldF94JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz1hODI3YjcyYjllNjk4ZTJiOWU4ZDdlMTFmNGJkNTQ5MQ&blend-x=142&blend-y=491&blend-mode=normal&s=59d4d3074f2f2f1949aed6145059e719",
+      "description": "Developers Summit 2021 この記事は、2021/02/18-19に開催されたDevelopers Summit 2021のレポートです。 チーム参加してきました aslead Agile のチーム「オキザリス」にて参加してきました。 チーム5人中、4...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkYwJTJGMjIxNzg4JTJGcHJvZmlsZS1pbWFnZXMlMkYxNjkwNDIwMDUwP2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz1iYzFiNWFkNTZiY2EwNTJkNTliOGExZDcyNWMxNzdmYg%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY0M2Q5ZDBkOWYwNWM3ZDg4ZTk0OGQ2YjU0ZjdiMDcyNjg2MzM2MDg3JTJGb3JpZ2luYWwuanBnJTNGMTcyMDQwNzIxND9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz1hZTgwMmQ5NTNlNDU4Y2Q5MGQyNDA2YTAyMTZkMGM2OA%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D548837635113309d691d90a8a22e74b9?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMSUyMCVFNSU4RiU4MiVFNSU4QSVBMCVFMyU4MyVBQyVFMyU4MyU5RCVFMyU4MyVCQyVFMyU4MyU4OCVFMyU4MCU4QzE5LUUtNiUyMCVFNCVCOCU4OSVFOCVCNiU4QSVFNCVCQyU4QSVFNSU4QiVBMiVFNCVCOCVCOSVFMyU4MSU4QyVFNyU5QiVBRSVFNiU4QyU4NyVFMyU4MSU5OU5ldyUyME5vcm1hbCVFMyU4MSVBRSVFOCVCMyVCQyVFOCVCMiVCNyVFMyU4MiVCOSVFMyU4MiVCRiVFMyU4MiVBNCVFMyU4MyVBQiVFMyU4MCU4RCZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTQ0MDMwYTllY2VmNzkxYzI2NWRkMjE2MjFhZTc5YTY0&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDB2aXZhX3R3ZWV0X3gmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz0xMDNmMTc1YWJmYTJjMzgyYjQ3ZDVmMzEyNGZmOWFhYg&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=5qCq5byP5Lya56S-6YeO5p2R57eP5ZCI56CU56m25omA&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=c24fd367abe88820973ba4d6071a751c",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://speakerdeck.com/1ftseabass/developers-summit-2021": {
       "title": "Developers Summit 2021",
-      "description": "20210218_Developers Summit 2021「1歳息子の寝姿をこっそり見る仕組みを作って得られた知見を話す」の登壇資料です。\n\n◆スライド内の素材は以下を使用させて頂いております。ありがとうございます！\n\n・シルエットデザイン http://kage-design.com/\n・human pictogram 2.0 http://pictogram2.com\n・ICOOON MONO http://icooon-mono.com/",
+      "description": "20210218_Developers Summit 2021「1歳息子の寝姿をこっそり見る仕組みを作って得られた知見を話す」の登壇資料です。\n\n◆スライド内の素材は以下を使用させて頂いております。ありがとうございます！\n\n・シルエットデザイン http://kage-design.com/\n&hellip;",
       "image": "https://files.speakerdeck.com/presentations/f7cf5b8eb6be46cb9ea7c670ae32e8cb/slide_0.jpg?17404447",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -918,7 +880,7 @@
     },
     "https://speakerdeck.com/carta_engineering/ripureisu": {
       "title": "エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス",
-      "description": "2012/02/19（金）\nDevelopers Summit 2021 「エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス\n」\n\"書籍「Engineers in VOYAGEー事業をエンジニアリングする技術者たち」に出てきた事業の特性や背景を踏まえたリファクタリング/リアーキテクティング/リプレイスについて、なぜその手法を選択したのか、どのように実践したかを、実体験や具体例を交えて深掘っていきます。\n\n書籍でインタビュアーを務めた和田(@t_wada) さんをモデレータに迎え、VOYAGE GROUPからはそれぞれの事業会社で事業をエンジニアリングしてきたインタビュイーたちが出演します。広告プラットフォームを10年支えてきたあじよし(@ajiyoshi) 、20年もののシステムを改善してきた福田 、外注したシステムをリプレイスしたねこや(@nekoya) が赤裸々に語ります。\"\nhttps://event.shoeisha.jp/devsumi/20210218/session/3052/",
+      "description": "2012/02/19（金）\nDevelopers Summit 2021 「エンジニアリングで負債を返済するための勘所 ― 事業特性にあわせたリファクタリング/リアーキテクティング/リプレイス\n」\n\"書籍「Engineers in VOYAGEー事業をエンジニアリングする技術者たち」に出てきた事業&hellip;",
       "image": "https://files.speakerdeck.com/presentations/bc2ead9e7c6c4b44b6e41a98e7625ff2/slide_0.jpg?17454772",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -930,13 +892,13 @@
     },
     "https://speakerdeck.com/futo23/debusami2021-bu-que-ding-yao-su-gaqiang-ishi-dai-falsesheng-cun-zhan-lue-u30ga-hao-kinakoto-detu-kiba-kerutameniha": {
       "title": "デブサミ2021 - 不確定要素が強い時代の生存戦略 ― U30が「好きなコト」で突き抜けるためには!?",
-      "description": "2021/02/18(木) 17:15～18:20\nデブサミ2021での登壇資料です。\n\n若手エンジニアの登竜門「Developers Boost 2020」優秀セッション再演！\n～U30エンジニアのための生存戦略とは？～\n\nイベントページ :\nhttps://event.shoeisha.jp/devsumi/20210218/session/3024/",
+      "description": "2021/02/18(木) 17:15～18:20\nデブサミ2021での登壇資料です。\n\n若手エンジニアの登竜門「Developers Boost 2020」優秀セッション再演！\n～U30エンジニアのための生存戦略とは？～\n\nイベントページ :\nhttps://event.shoeisha&hellip;",
       "image": "https://files.speakerdeck.com/presentations/3c45b0d34ef249edb4ace22d97cbeb09/slide_0.jpg?17404732",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/ichimichi/new-normal-shi-dai-falsekomiyuniteihashui-mogatiyansuniman-tiyi-reteiru": {
       "title": "New Normal 時代のコミュニティは誰もがチャンスに満ち溢れている。",
-      "description": "Developers Summit 2021 19-B-6\nセッションにてお話したスライドです。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3066/\n\nカンファレンスで登壇するのは輝かしい実績をもつ人々だと思っていませんか？カンファレンスを主催するのは特別なコネクションを持つ首都圏の人々だと思っていませんか？\nニューノーマルな時代の中では場所という優位性は消え、一歩踏み出す勇気さえあれば、どこの誰でも新たなヒーローになる機会に溢れています。\nBacklog World 2021運営委員長として、地方都市広島からフルリモートで大規模カンファレンスを開催するために何をしてきたかをお話しします。本セッションに参加して下さった方々に知恵と勇気をお渡しします。\n\n\n",
+      "description": "Developers Summit 2021 19-B-6\nセッションにてお話したスライドです。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3066/\n\nカンファレンスで登壇するのは輝かしい実績をもつ人々だと思っていませんか？カンファレ&hellip;",
       "image": "https://files.speakerdeck.com/presentations/feed61bb368340acb51dd2f58b5d46ff/slide_0.jpg?17413667",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -960,7 +922,7 @@
     },
     "https://speakerdeck.com/lancers_pr/developers-summit-2021": {
       "title": "NewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～ #devsumi /Developers Summit 2021",
-      "description": "Developers Summit 2021 「We are New Normal」\n#devsumi\nNewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～\n\n2021/02/18 17:15 ～ 17:55 の資料です。\nhttps://event.shoeisha.jp/devsumi/20210218/session/3033/\n---\n多様な人材が活躍する「NewNormalな開発組織」について紹介します。\n\nランサーズの開発組織はテレワークをきっかけに「新しい働き方」を模索し、3ヶ月で100人体制（以前の倍）へ成長しました。卒業生・副業・フリーランス人材が活躍できるように、Hiring・Onboarding・Engagementプロセスを整えました。\n\n従来は低優先だった「軽微なUI改善」も、NewNormalな組織では「イシューハント案件」として外部人材が速やかに解消しています。\n\nぜひ本セッションを開発組織の強化にお役立てください。",
+      "description": "Developers Summit 2021 「We are New Normal」\n#devsumi\nNewNormalな開発組織 ～ 3ヶ月でエンジニア100人体制を実現した方法 ～\n\n2021/02/18 17:15 ～ 17:55 の資料です。\nhttps://event.shoeis&hellip;",
       "image": "https://files.speakerdeck.com/presentations/83d9b061f7c046a7b0a810841a3c1d73/slide_0.jpg?17389676",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -978,7 +940,7 @@
     },
     "https://speakerdeck.com/takaichi00/developers-boost-2020-fan-ren-enziniafalsesheng-cun-zhan-lue": {
       "title": "【Developers Boost 2020】凡人エンジニアの生存戦略",
-      "description": "Developers Boost 2020 / Developers Summit 2021 で登壇した凡人エンジニアの生存戦略の資料です\nhttps://event.shoeisha.jp/devboost/20201212/session/2989/\nhttps://event.shoeisha.jp/devsumi/20210218/\n",
+      "description": "Developers Boost 2020 / Developers Summit 2021 で登壇した凡人エンジニアの生存戦略の資料です\nhttps://event.shoeisha.jp/devboost/20201212/session/2989/\nhttps://event.shoeisha&hellip;",
       "image": "https://files.speakerdeck.com/presentations/adf07e1d39a64afbb958b55eeecbd7b5/slide_0.jpg?17426238",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -1002,13 +964,13 @@
     },
     "https://speakerdeck.com/viva_tweet_x/a-retrospective-guide": {
       "title": "アジャイルなチームをつくる ふりかえりのガイド / A Retrospective Guide",
-      "description": "2021/02/19 Developers Summit 2021 （https://event.shoeisha.jp/devsumi/20210218/session/3078/）\n19-C-9 『アジャイルなチームをつくる ふりかえりのガイド』の登壇資料です。\n\nふりかえりが少しずつ認知されてから、様々なところでふりかえりの重要性が叫ばれてきました。ただし、どう始めたらいいのか、どう定着までに至るのか、道のりはあまり述べられてきていません。\n\nふりかえりは、チーム全員で定期的に立ち止まり、チームがより良いやり方を見つけるために話し合いをして、チームの行動を少しずつ変えていく活動です。COVID-19とリモートワークの加速によって、これまで顔を合わせて働いていたチームも、直接会って仕事をする機会は今後も減っていくでしょう。これから新しくチームを作ることも今まで以上に難しくなっていきます。\nそんな世界の中でも、変化に柔軟対応でき、価値を生み出し続けられる「アジャイルなチーム」。そして、それを作るための一歩目である「ふりかえり」と、その導入をガイドします。",
+      "description": "2021/02/19 Developers Summit 2021 （https://event.shoeisha.jp/devsumi/20210218/session/3078/）\n19-C-9 『アジャイルなチームをつくる ふりかえりのガイド』の登壇資料です。\n\nふりかえりが少しずつ認知され&hellip;",
       "image": "https://files.speakerdeck.com/presentations/d98a6ffa5197409aad5cb52aad3cc4f0/slide_0.jpg?17416351",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/whisaiyo/developers-summit-2021": {
       "title": "楽しく学び続ける/Developers Summit 2021",
-      "description": "※ご覧いただきありがとうございます！\n閉じる前に、ぜひ2分で終わる簡単なアンケートにお答えください。※\nhttps://forms.gle/AkGsuvwAKqSU3dNq9\n\n◆DevelopersSummit2021◆2021/2/18\nWHI_18-C-8\n楽しく学び続けるコミュニティをリモートワークの世界で0から作って育ててきた話\nPresenter：Works Human Intelligence 山本 隼也/上村 太郎\n",
+      "description": "※ご覧いただきありがとうございます！\n閉じる前に、ぜひ2分で終わる簡単なアンケートにお答えください。※\nhttps://forms.gle/AkGsuvwAKqSU3dNq9\n\n◆DevelopersSummit2021◆2021/2/18\nWHI_18-C-8\n楽しく学び続けるコミュニティ&hellip;",
       "image": "https://files.speakerdeck.com/presentations/07bcb34186d845b0a474779eb5c7a052/slide_0.jpg?17403163",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -1020,20 +982,14 @@
     },
     "https://speakerdeck.com/yuzutas0/20210218c1": {
       "title": "「スピード」と「品質」のスイッチング ～事業成長を支える生存戦略～ #devsumi / 20210218C1",
-      "description": "Developers Summit 2021【C-1】の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218\n\n----------------------------------------------------------------------------------------------------\n\nメルペイでは「ベンチャーとしてのスピード」と「FinTech領域としての品\n質」の両立が求められています。\n\n目の前のビジネスチャンスに対して、システム開発が追いつかない。この悩みと向き合い、私たちが辿り着いたのは「スピード」と「品質」のスイッチングです。\n\n「1.ツール活用によるスピード優先」と「2.システム開発による品質重視」をフェーズごとに使い分けることで、事業成長を支えてきました。\n\n本セッションでは、ビジネスとエンジニアリングの両立に挑戦し続ける人たちに向けて、その事例と学びを紹介します。\n\n----------------------------------------------------------------------------------------------------\n\n【補足1】\n共同発表者が同じスライドをアップロードしたときは、URLを掲載します。\nxxxxx\n\n【補足2】\n登壇時のスライドとテイストを一部変更しています。\n・Google slides と SpeakerDeck の相性が悪いためフォントを調整しました。\n・個人的な好みでカラーリングに手を加えました。",
+      "description": "Developers Summit 2021【C-1】の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20210218\n\n---------------------------------------------------------------------&hellip;",
       "image": "https://files.speakerdeck.com/presentations/db1d15d8c3df4ce09729300bab9e1e45/slide_0.jpg?17387267",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://takaking22.com/2021/continuous-teaming": {
-      "title": "Continuous Teaming -2つのチーム移籍の物語- #devsumi",
-      "description": "Developers Summit 2021で講演をしてきました。 今回も kyon_mm と「きょんおよ」でチーム移籍 ...",
-      "image": "https://agile-monster.com/wp-content/uploads/2021/02/Screen-Shot-2021-02-20-at-7.08.42-scaled-1.jpg",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://takaking22.com"
-    },
     "https://www.pythonic-exam.com/archives/news/%E3%83%87%E3%83%96%E3%82%B5%E3%83%9F%E7%99%BB%E5%A3%87%E8%B3%87%E6%96%99%E3%80%8Cpytrhon%E3%82%A8%E3%83%B3%E3%82%B8%E3%83%8B%E3%82%A2%E8%AA%8D%E5%AE%9A%E5%9F%BA%E7%A4%8E%E8%A9%A6%E9%A8%93%E3%81%A8pyth": {
-      "title": "デブサミ登壇資料「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」 | Python試験・資格、データ分析試験・資格を運営する一般社団法人Pythonエンジニア育成推進協会のページです。",
+      "title": "デブサミ登壇資料「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」 – Python試験・資格、データ分析試験・資格を運営する一般社団法人Pythonエンジニア育成推進協会のページです。",
       "description": "本日ご聴講いただいた皆様、ありがとうございました。本日のDevelopers Summitで講演した「Pytrhonエンジニア認定基礎試験とPythonエンジニア認定データ分析試験の紹介と例題解説」の資料を公開します。",
-      "image": "",
+      "image": "https://www.pythonic-exam.com/wp-content/uploads/2020/12/devsumi2021.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.pythonic-exam.com"
     },
     "https://www.shoeisha.co.jp/campaign/award/2021/result": {
@@ -1044,25 +1000,25 @@
     },
     "https://www.slideshare.net/hironoriwashizaki/qa-to-aq-quality-assuranceagile-quality": {
       "title": "パターン QA to AQ: 伝統的品質保証（Quality Assurance）からアジャイル品質（Agile Quality）へ",
-      "description": "パターン QA to AQ: 伝統的品質保証（Quality Assurance）からアジャイル品質（Agile Quality）へ - Download as a PDF or view online for free",
+      "description": "CodeZine連載中のアジャイル品質パターン QA to AQ の概要を紹介します。アジャイル開発における品質活動は、特定段階で取り組むというよりも、ロードマップから日々のモニタリングに至るあらゆる段階でチーム全体で取り組むものとなります。QA to AQ はそのエッセンスをまとめたものです。 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/qa2aq-developerssummit-20210219-210219144715-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/norisukehirai/dxdx-242997785": {
       "title": "エンジニアから都庁へ～中の人が語る街のDX、都庁のDX～",
-      "description": "エンジニアから都庁へ～中の人が語る街のDX、都庁のDX～ - Download as a PDF or view online for free",
+      "description": "2019年12月ソフトバンクを退職し、東京都に転職しました。\nエンジニアから公務員への転身。宮坂副知事のもとオリパラ、5G、Society5.0などのデジタル施策に携われる期待に胸を踊らせてました。\nしかし、入都直後に、新型コロナウイルスの猛威が東京都にも押し寄せ、オリパラは延期。すべての施策がコロナ中心、そしてスマートシティなど街のDXもWithコロナを意識した計画に変更されました。\nその中、爆速で立ち上がった東京都の新型コロナ感染症対策サイトは、シビックテックを活用し、オープンソースとして構築され、そのソースコードを活用したクローンサイトが多数生まれる一大ムーブメントとなりました。\nそのムーブメントは、“シビックテックx行政”の大きな可能性を感じさせた出来事でした。\nその“ともにつくる”経験は、サイト構築だけでなく、スマートシティなどの街のDXにも大きな影響を与えています。\n本発表では、新型コロナウイルス感染症対策に対する東京都の取組やWithコロナ時代の街のDX、都庁のDXを紹介し、行政にも“エンジニアが興奮するフィールド”があるということをお伝えしたいと思います。\n\nそう、行政は世の中の課題がすべて凝縮されている。行政は解決を待つ魅力的な問題でいっぱいだ。 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumi2021-18a1-engtmg-210218214458-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/papanda/ss-243047076": {
       "title": "アジャイルブリゲード 〜対立する二項を組織の構造と仕組みによって繋ぐ〜",
-      "description": "アジャイルブリゲード 〜対立する二項を組織の構造と仕組みによって繋ぐ〜 - Download as a PDF or view online for free",
+      "description": "デブサミ2021でお話したこと - View online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/agilebrigade-210219124434-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/tetsuoajima/developers-summit-2021-19d5": {
       "title": "Developer's summit 2021 ［19-D-5］なぜ今、ローコードなのか",
-      "description": "Developer's summit 2021 ［19-D-5］なぜ今、ローコードなのか - Download as a PDF or view online for free",
+      "description": "【デブサミ2021】2/19（金）13:55 ～ 14:35［19-D-5］\nなぜ今、ローコードなのか\n阿島哲夫[OutSystemsジャパン]\nセッション資料\n#outsystems #devsumi #devsumiD #lowcode - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit20211-210220035628-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
