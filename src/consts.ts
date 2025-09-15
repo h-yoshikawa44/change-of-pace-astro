@@ -41,7 +41,6 @@ export const TAG_ICON_CLASS_MAP = {
   astro: 'i-logos:astro-icon',
   autoprefixer: 'i-logos:autoprefixer',
   aws: 'i-logos:aws',
-  // buildable: '',
   // closeTo2: '',
   cloudFront: 'i-logos:aws-cloudfront',
   css: 'i-logos:css-3',

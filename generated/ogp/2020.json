@@ -2,7 +2,7 @@
   "2020-12-31-looking-back-2020-tech": {
     "https://github.com/h-yoshikawa44": {
       "title": "h-yoshikawa44 - Overview",
-      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 55 repositories available. Follow their code on GitHub.",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 66 repositories available. Follow their code on GitHub.",
       "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
@@ -22,8 +22,8 @@
   "2020-11-27-notion-introduction": {
     "https://apps.apple.com/jp/app/fast-notion/id1505194382": {
       "title": "Fast Notion",
-      "description": "Fast Notion は Notion に素早く簡単にメモを保存するためのアプリです。\n\nアプリを起動するとすぐに入力画面になるので、アイデアメモや備忘録などに最適です。\n\n===\n利用規約\nhttps://www.notion.so/fastnotion/bd477a79a7644229a09994ced4dcb4ac\n",
-      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple116/v4/7f/df/fe/7fdffe79-e1ef-ee18-d0ff-1b2f30e37381/AppIcon-1x_U007emarketing-0-7-0-85-220.png/1200x630wa.png",
+      "description": "Fast Notion は、思いついたアイデアやタスクを素早く Notion に保存できるノートアプリです。アプリを起動するとすぐに入力画面が立ち上がるので、雑多な作業をスキップして一瞬でメモを残せます。リアルタイムで Notion に同期されるため、PCやタブレットからも最新のノートをチェック可能。仕事のタスク管理から学習メモ、アイデアのブレインストーミングまで、使い方は自由自在です。初期設定も3分で完了します。基本的なページへのメモは無料で行うことが可能です。\n\n▼ 主な特徴\n・ワンタップで入力開始：アプリを開くだけで、すぐにメモやタスクを登録\n・Notion 連携：登録した内容は自動で…",
+      "image": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/af/ee/5b/afee5b0a-722c-dad2-439b-21196e49bc64/AppIcon-0-0-1x_U007epad-0-1-85-220.png/1200x630wa.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://apps.apple.com"
     },
     "https://blog.35d.jp/2020-05-23-notion-blog-1": {
@@ -58,7 +58,7 @@
     },
     "https://play.google.com/store/apps/details?id=jp.fastNotion&hl=ja": {
       "title": "Fast Notion - Google Play のアプリ",
-      "description": "素早く簡単にメモをNotionへ",
+      "description": "外出先や仕事中でも素早くNotionにメモを保存。シンプルなUIでアイデアを逃さない。Fast Notionで集中力と生産性を向上させましょう。",
       "image": "https://play-lh.googleusercontent.com/ADnTe49LAhoG3ORsDtkXsC2c9eplzPPyt97yEwWNgoPXtpnF82_sCnEYe5r0TNAcS1M",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://play.google.com"
     },
@@ -69,15 +69,15 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://wraptas.com"
     },
     "https://www.notion.so": {
-      "title": "Dein vernetzter Workspace für Wikis, Dokumente und Projekte | Notion",
-      "description": "Ein neues Tool, das alle Apps, die du täglich für deine Arbeit benötigst, an einem Ort zusammenfasst: Der einheitliche Workspace für dich und dein Team.",
-      "image": "https://www.notion.so/front-static/meta/default.png",
+      "title": "The AI workspace that works for you. | Notion",
+      "description": "A tool that connects everyday work into one space. It gives you and your teams AI tools—search, writing, note-taking—inside an all-in-one, flexible workspace.",
+      "image": "https://www.notion.com/front-static/meta/think-it-make-it.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.notion.so"
     },
     "https://www.notion.so/ja-jp/templates": {
-      "title": "Wähle aus über 10.000 Notion-Vorlagen | Notion-Tipps für Arbeit und Alltag",
-      "description": "Stöbere in über 10.000 kostenlosen und individuell anpassbaren Vorlagen für deine Arbeit und deinen Alltag.",
-      "image": "https://www.notion.so/de-de/front-api/og-image/templates",
+      "title": "3万以上ものNotion (ノーション)テンプレートから選択 | Notion (ノーション)マーケットプレイス",
+      "description": "マーケットプレイスで、仕事と生活のあらゆる場面に使える、3万件以上のカスタマイズ可能な無料テンプレートをご覧ください。",
+      "image": "https://www.notion.com/ja-jp/front-api/og-image/templates",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.notion.so"
     }
   },
@@ -116,14 +116,14 @@
   "2020-09-20-web1week-2": {
     "https://github.com/JaredReisinger/react-crossword": {
       "title": "GitHub - JaredReisinger/react-crossword: A flexible, responsive, and easy-to-use crossword component for React apps.",
-      "description": "A flexible, responsive, and easy-to-use crossword component for React apps. - GitHub - JaredReisinger/react-crossword: A flexible, responsive, and easy-to-use crossword component for React apps.",
+      "description": "A flexible, responsive, and easy-to-use crossword component for React apps. - JaredReisinger/react-crossword",
       "image": "https://repository-images.githubusercontent.com/230354677/63110700-61fa-11ea-94da-df531103dca6",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/h-yoshikawa44/close-to-2": {
       "title": "GitHub - h-yoshikawa44/close-to-2: 2に近い式をあてるゲーム部屋（web1week「2」投稿作品）",
       "description": "2に近い式をあてるゲーム部屋（web1week「2」投稿作品）. Contribute to h-yoshikawa44/close-to-2 development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/3685bf17a2c12c5df21b5407990c6ef5b5e20bacf633b0cadeb01a6933d1949d/h-yoshikawa44/close-to-2",
+      "image": "https://opengraph.githubassets.com/02807a2bf0fb32368ece55209f64cc205a549a4dd304c8093919c9b1c0e65fb1/h-yoshikawa44/close-to-2",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://keizokuma.com/js-array-object-sort": {
@@ -134,14 +134,14 @@
     },
     "https://qiita.com/netebakari/items/7c1db0b0cea14a3d4419": {
       "title": "JavaScriptで重複排除を自分で実装してはいけない（Setを使う） - Qiita",
-      "description": "若者とプログラミングをしていて非常にショックを受けたのだが「JavaScript 配列 重複 削除」で検索するとfilterとindexOfを使ったアルゴリズムが検索結果上位に出てくる。これはO(N…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9SmF2YVNjcmlwdCVFMyU4MSVBNyVFOSU4NyU4RCVFOCVBNCU4NyVFNiU4RSU5MiVFOSU5OSVBNCVFMyU4MiU5MiVFOCU4NyVBQSVFNSU4OCU4NiVFMyU4MSVBNyVFNSVBRSU5RiVFOCVBMyU4NSVFMyU4MSU5NyVFMyU4MSVBNiVFMyU4MSVBRiVFMyU4MSU4NCVFMyU4MSU5MSVFMyU4MSVBQSVFMyU4MSU4NCVFRiVCQyU4OFNldCVFMyU4MiU5MiVFNCVCRCVCRiVFMyU4MSU4NiVFRiVCQyU4OSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MTU0Y2RhMDljZDE3NzBiYTE5OWFmNmRkZGI5MzA1ZTY&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbmV0ZWJha2FyaSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MjQzNDg4ZmYwODE3YWI2MzliOWEyODE1ODNiZDM2NDU&blend-x=142&blend-y=491&blend-mode=normal&s=ef776a250c7f19de1149191fe39e3f7a",
+      "description": "若者とプログラミングをしていて非常にショックを受けたのだが「JavaScript 配列 重複 削除」で検索するとfilterとindexOfを使ったアルゴリズムが検索結果上位に出てくる。これはO(N^2)。計算量の概念がないというのはとても恐ろしい。Big Techがアル...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkY2MTgyNTglMkYxMmY1N2RiOTIwYWQxZDZhOGQyYTdkOWNkY2NiMDg4ZmIzMTQ0NjA0JTJGeF9sYXJnZS5wbmclM0YxNTg2ODI4ODQwP2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz1kMGQyOWEyYTY4MjMzNmJmMDJjYjQ3ZjczYjgxYjc5NA%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D784824a6d7dbad28fe4745efff7ba8fb?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9SmF2YVNjcmlwdCVFMyU4MSVBNyVFOSU4NyU4RCVFOCVBNCU4NyVFNiU4RSU5MiVFOSU5OSVBNCVFMyU4MiU5MiVFOCU4NyVBQSVFNSU4OCU4NiVFMyU4MSVBNyVFNSVBRSU5RiVFOCVBMyU4NSVFMyU4MSU5NyVFMyU4MSVBNiVFMyU4MSVBRiVFMyU4MSU4NCVFMyU4MSU5MSVFMyU4MSVBQSVFMyU4MSU4NCVFRiVCQyU4OFNldCVFMyU4MiU5MiVFNCVCRCVCRiVFMyU4MSU4NiVFRiVCQyU4OSZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTQ2OGVkNjBmMjEwMDhlZjFiMDUyZGMzY2FhZWQ3M2Qx&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBuZXRlYmFrYXJpJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9MmY4MmQ5YjU2NmE4ODkwMjFlN2NmOTQ2NzVlMDhjZjM&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=500bddea025528877155a802e1517e5a",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/rhirayamaaan/items/cdbda70670157a8fb705": {
       "title": "create-react-appとTypeScriptでサラッと作ったSPAをgh-pagesにスルッとデプロイすっぞ！ - Qiita",
-      "description": "SPAを手軽にリリースしたい！昨今、ReactとかでサラッとSPA作ってる人多いじゃないですか！？フロントエンドエンジニアでガンガンJS書いてて〜〜とかじゃない人でも日本語のドキュメントを少し漁…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9Y3JlYXRlLXJlYWN0LWFwcCVFMyU4MSVBOFR5cGVTY3JpcHQlRTMlODElQTclRTMlODIlQjUlRTMlODMlQTklRTMlODMlODMlRTMlODElQTglRTQlQkQlOUMlRTMlODElQTMlRTMlODElOUZTUEElRTMlODIlOTJnaC1wYWdlcyVFMyU4MSVBQiVFMyU4MiVCOSVFMyU4MyVBQiVFMyU4MyU4MyVFMyU4MSVBOCVFMyU4MyU4NyVFMyU4MyU5NyVFMyU4MyVBRCVFMyU4MiVBNCVFMyU4MSU5OSVFMyU4MSVBMyVFMyU4MSU5RSVFRiVCQyU4MSZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9NmE4MTE5N2U1ZWNhYWVhMDFhYWExYWM3M2FkZWExNTc&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwcmhpcmF5YW1hYWFuJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz03YzU0OGYyZDU5MGM3MGY4MTNiNjI4MTgwMDE4YjU2OQ&blend-x=142&blend-y=491&blend-mode=normal&s=8f194ad81f66f22a6401c8b744a787a3",
+      "description": "SPAを手軽にリリースしたい！ 昨今、ReactとかでサラッとSPA作ってる人多いじゃないですか！？ フロントエンドエンジニアでガンガンJS書いてて〜〜とかじゃない人でも日本語のドキュメントを少し漁ればなんとか作れちゃう時代になりつつありますよね。 だから私もReactで...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkYwJTJGMjEzMjA1JTJGcHJvZmlsZS1pbWFnZXMlMkYxNTU5MzU5MDM0P2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz0xMzMzMDNjYjE4OTk5ZWRhZDk2NmYxNjhmNWQ0ZmEzMw%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3Df0559801c659bd4639db2456af646d12?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9Y3JlYXRlLXJlYWN0LWFwcCVFMyU4MSVBOFR5cGVTY3JpcHQlRTMlODElQTclRTMlODIlQjUlRTMlODMlQTklRTMlODMlODMlRTMlODElQTglRTQlQkQlOUMlRTMlODElQTMlRTMlODElOUZTUEElRTMlODIlOTJnaC1wYWdlcyVFMyU4MSVBQiVFMyU4MiVCOSVFMyU4MyVBQiVFMyU4MyU4MyVFMyU4MSVBOCVFMyU4MyU4NyVFMyU4MyU5NyVFMyU4MyVBRCVFMyU4MiVBNCVFMyU4MSU5OSVFMyU4MSVBMyVFMyU4MSU5RSVFRiVCQyU4MSZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTI0MGVhOGNiZjc5OTcwNDVkNTJkYTU0Y2Y0YWViNzk5&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDByaGlyYXlhbWFhYW4mdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1mNDQ5NDc3MTI5OTdmZDdlY2NjOWNhMDk1MjI4MjEwOQ&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=b4e101de3418d98057c002e486799aae",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
@@ -154,7 +154,7 @@
     },
     "https://note.com/kojimadev/n/n3599220e0462": {
       "title": "【デブサミ】組織と個人が内発的動機により継続的に成長するための施策｜小島優介",
-      "description": "本記事はデブサミ2020関西(Developpers Summit)でベストスピーカー賞1位を受賞した「組織と個人が内発的動機により継続的に成長するための施策」の発表資料と動画を公開しています。  概要は、1年以上の期間をかけて、生産性倍増＋成長し続けるチームに変わることができた施策の紹介です。 発表資料は読んで理解してもらえるように、発表時の状態から改訂しています。     \n \n \n\n \n \n \n\nwww.docswell.com\n\n \n \n    スライドを全画面で表示する際はこちらから該当ページを表示ください。 発表動画(45分)も以下で公開しています。          上記",
+      "description": "本記事はデブサミ2020関西(Developpers Summit)でベストスピーカー賞1位を受賞した「組織と個人が内発的動機により継続的に成長するための施策」の発表資料と動画を公開しています。  概要は、1年以上の期間をかけて、生産性倍増＋成長し続けるチームに変わることができた施策の紹介です。 発表資料は読んで理解してもらえるように、発表時の状態から改訂しています。  \n \n \n\n \n \n \n\nwww.docswell.com\n\n \n \n スライドを全画面で表示する際はこちらから該当ページを表示ください。 発表動画(45分)も以下で公開しています。    上記施策の活用方法  発表資",
       "image": "https://assets.st-note.com/production/uploads/images/33404145/rectangle_large_type_2_b979bb03b8378e7cda41ebd74f68a411.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
@@ -172,14 +172,14 @@
     },
     "https://qiita.com/zembutsu/items/24558f9d0d254e33088f": {
       "title": "Dockerイメージの理解を目指すチュートリアル - Qiita",
-      "description": "概要 - 自分でオレオレ hello-world イメージをビルドこのチュートリアルは、hello-world イメージを自分でビルドする例を取り上げます。手を動かしながら、Docker イメージ…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9RG9ja2VyJUUzJTgyJUE0JUUzJTgzJUExJUUzJTgzJUJDJUUzJTgyJUI4JUUzJTgxJUFFJUU3JTkwJTg2JUU4JUE3JUEzJUUzJTgyJTkyJUU3JTlCJUFFJUU2JThDJTg3JUUzJTgxJTk5JUUzJTgzJTgxJUUzJTgzJUE1JUUzJTgzJUJDJUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgyJUEyJUUzJTgzJUFCJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz00ZTBlMjMzZGM2YWFmMjdhMjVlZDc1OTg2YjhjNTQ4Zg&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwemVtYnV0c3UmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTQzNDgzYzk2NTNkMDM5ODJiNjAzN2VhNGE2YzQxZDI0&blend-x=142&blend-y=491&blend-mode=normal&s=21e0b783dd0bfb2dabe776584e9630ba",
+      "description": "概要 - 自分でオレオレ hello-world イメージをビルド このチュートリアルは、hello-world イメージを自分でビルドする例を取り上げます。手を動かしながら、Docker イメージの仕組みや性質の理解を深めます。また、効率的な Docker イメージの作...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGMTMwMDIlMkZwcm9maWxlLWltYWdlcyUyRjE0NzM2ODI2MzE_aXhsaWI9cmItNC4wLjAmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPWM0MTMxZjM0YTRmMzQwMTk4NWFkMGQzOGU2MWIzNjAx%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkYxNmJlMjM1NTQ4MjZkOGE4NDRiNzQwMTg3MGM2OTNhOGE2YmUwOWI1JTJGb3JpZ2luYWwuanBnJTNGMTQ4MjgwNzAwNz9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz03MjI1NTIwY2ViZTkzMTMwNTdiOTA0MTQxMjE3YTg0YQ%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D8c3df3005fd8677d8464936346af3488?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9RG9ja2VyJUUzJTgyJUE0JUUzJTgzJUExJUUzJTgzJUJDJUUzJTgyJUI4JUUzJTgxJUFFJUU3JTkwJTg2JUU4JUE3JUEzJUUzJTgyJTkyJUU3JTlCJUFFJUU2JThDJTg3JUUzJTgxJTk5JUUzJTgzJTgxJUUzJTgzJUE1JUUzJTgzJUJDJUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgyJUEyJUUzJTgzJUFCJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9OGRlY2NhNjlmMDg2MTcyZjY2YzI3YWZkNzE2ZGI4MDQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDB6ZW1idXRzdSZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1wYWQ9MCZzPTdkY2MyMTBlNWQzZjgxM2E5NjMzMTIzNjIyN2Y3YWY2&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=44GV44GP44KJ44Kk44Oz44K_44O844ON44OD44OI5qCq5byP5Lya56S-&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=7e80f7be6d49b34a2f7ca5f5f4faa1d4",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://radiocat.hatenablog.com/entry/2020/08/28/005652": {
       "title": "Developers Summit 2020 関西で「関西的なノリで変化の波をノリこなすチームの取り組み」という発表をしました #devsumi - radioc@?",
       "description": "毎年恒例のデブサミ関西が今年は10周年でした。 event.shoeisha.jp 光栄にもその記念すべきイベントで発表する機会をいただけたので、Scrum Fest Osakaが終わってすぐ準備に取りかかりました。応募した時点でタイトルやテーマが決まっていたものの、45分というガチ濃度なセッションの登壇は初めての経験で、尺に耐えうるだけの内容を練り上げられるか、不安と格闘しながら作り上げました。 The Future Has Come 今年のデブサミ関西のテーマは「The Future Has Come」ということですが、もう少し噛み砕くと「変化」の到来に関するチャレンジをシェアしようという…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/r/radiocat/20200827/20200827005831.png",
+      "image": "https://cdn.image.st-hatena.com/image/scale/24268dda8d4692e9156d6261593f98243a0e2fef/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fr%2Fradiocat%2F20200827%2F20200827005831.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://radiocat.hatenablog.com"
     },
     "https://speakerdeck.com/futo23/azuretechlab-debusamiguan-xi-komiyuniteilt": {
@@ -202,25 +202,25 @@
     },
     "https://www.slideshare.net/KojiMaruyama5/ss-238299455": {
       "title": "コロナウィルス以前から全国各地の少人数フルリモート体制。失敗から学んだ一番大切な事。",
-      "description": "コロナウィルス以前から全国各地の少人数フルリモート体制。失敗から学んだ一番大切な事。 - Download as a PDF or view online for free",
+      "description": "自らの失敗から学んだリモートワークのコツについて、Developers Summit 2020 KANSAI（デブサミ関西）で話した内容です。 - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/quarkadeveloperssummit20200827-200827102915-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/NoriyukiMizuno/dxrdraside": {
       "title": "伝統的食品工場エンジニアリング会社が挑むDXへのビジネスアイデアをRDRAによる要件定義でプロダクト開発へつなぐ～Side：要件定義",
-      "description": "伝統的食品工場エンジニアリング会社が挑むDXへのビジネスアイデアをRDRAによる要件定義でプロダクト開発へつなぐ～Side：要件定義 - Download as a PDF or view online for free",
+      "description": "Developers Summit Kansai 2020での発表内容となります。\nDXの企画を受けて要件定義を実施する状況でRDRA（らどら：Relationship Driven Requirement Analysis）を実施した事例を具体的な流れで紹介します。 - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumikansai2020rdra-200819034400-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/mavenant/developers-summit-2020-kansai-post-corona": {
       "title": "Developers Summit 2020 Kansai : Post Corona",
-      "description": "Developers Summit 2020 Kansai : Post Corona - Download as a PDF or view online for free",
+      "description": "Developers Summit 2020 Kansai : Post Corona - Download as a PPTX, PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsummitkansai2020c-7postcorona-200827061724-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/techblogyahoo/yahoo-map-devsumi": {
       "title": "Yahoo! MAPが全力で コロナ対策に乗り出した話 #devsumi",
-      "description": "Yahoo! MAPが全力で コロナ対策に乗り出した話 #devsumi - Download as a PDF or view online for free",
+      "description": "デブサミ関西2020の発表\n\nhttps://event.shoeisha.jp/devsumi/20200827/session/2569/ で使用した資料です。\n\nYahoo! MAPで取り組んだコロナ対応についてご紹介します。\nまた、自らもリモートワークをしながら開発・リリースをした1エンジニアとして、\n感じたこと・考えたこと・工夫したこと・苦労したこと等もお話させていただきます。 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/upload-200828020346-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     }
@@ -228,14 +228,14 @@
   "2020-08-13-migrate-gitlab-to-github": {
     "https://github.com/piceaTech/node-gitlab-2-github": {
       "title": "GitHub - piceaTech/node-gitlab-2-github: Migrate Issues, milestones etc from gitlab to github",
-      "description": "Migrate Issues, milestones etc from gitlab to github - GitHub - piceaTech/node-gitlab-2-github: Migrate Issues, milestones etc from gitlab to github",
-      "image": "https://opengraph.githubassets.com/973ce9361071daeb82987599b7794cfe975d2eea3947c813feffccdc183aae01/piceaTech/node-gitlab-2-github",
+      "description": "Migrate Issues, milestones etc from gitlab to github - piceaTech/node-gitlab-2-github",
+      "image": "https://opengraph.githubassets.com/b579fe75a2f6d9e38bcf7a6b5cbda09b0615684b9439cf0eeeb53cdd5264c222/piceaTech/node-gitlab-2-github",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://qiita.com/devzooiiooz/items/56a02342d9d65d79f6c3": {
       "title": "gitのベアリポジトリとノンベアリポジトリ - Qiita",
-      "description": "はじめにリーナス・トーヴァルズはgitを10日間で作ったとか、神はいるんだねえ。https://cpplover.blogspot.com/2015/04/git10linus-torvals.…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9Z2l0JUUzJTgxJUFFJUUzJTgzJTk5JUUzJTgyJUEyJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgxJUE4JUUzJTgzJThFJUUzJTgzJUIzJUUzJTgzJTk5JUUzJTgyJUEyJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0xZmQ4NTNhYTgyN2ViNzE0NmM2YWFiZGE2MmJiOWU4Mg&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwZGV2em9vaWlvb3omdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTQ4YWViOTFhYTkyYzBhY2JmN2NhMWY4NGY3NzA0NDc1&blend-x=142&blend-y=491&blend-mode=normal&s=2fb678b24f03b7534ce9fc45f655e306",
+      "description": "はじめに リーナス・トーヴァルズはgitを10日間で作ったとか、神はいるんだねえ。 開発用Macでコーディング、その後サーバにpushして…という僕のような開発スタイルの場合、githubにpushするという仕組みに必要性を感じなくて、開発用クライアント(Mac)対...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGODI5NzUlMkZwcm9maWxlLWltYWdlcyUyRjE0NzM3MDI2MjY_aXhsaWI9cmItNC4wLjAmYXI9MSUzQTEmZml0PWNyb3AmbWFzaz1lbGxpcHNlJmJnPUZGRkZGRiZmbT1wbmczMiZzPTFjZmYxZjRmNzc5YTFhNzQ1NzdkOTEyODEyZTY4OTA4%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D16d363f113b8b18b2bf488155a868b81?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9Z2l0JUUzJTgxJUFFJUUzJTgzJTk5JUUzJTgyJUEyJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJUUzJTgxJUE4JUUzJTgzJThFJUUzJTgzJUIzJUUzJTgzJTk5JUUzJTgyJUEyJUUzJTgzJUFBJUUzJTgzJTlEJUUzJTgyJUI4JUUzJTgzJTg4JUUzJTgzJUFBJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9ZDExZjBlYTVhOTY1OTU2ZWI1M2M3NzEwZWFmZmVhMWQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBkZXZ6b29paW9veiZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1wYWQ9MCZzPTQwNzRkMjY4NjNjNTUwNGYyNzZhY2I3NjljMTRkN2U2&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=170c83f2693e8a95869c78260022c9de",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
@@ -243,7 +243,7 @@
     "https://docs.google.com/presentation/d/1jy9F0DCMCIxIWO6ayoW5YvjvIiPByetEhvAaXVK2YWg/edit#slide=id.g8c05c15c04_17_379": {
       "title": "【デブサミ】リモートワーク × Employee Experience でつくる～with コロナ時代の「Work fun! Management」とは～",
       "description": "リモートワーク×Employee Experience でつくる with コロナ時代の 「Work fun! Management」 とは Jul 21, 2020 @ Developers Summit 2020 Summer 新村 北斗 リモートワーク×Employee Experience でつくる with コロナ時代の 「Work fun! Management」 とは #devsumiB",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJb5dvALk-3NbgBSXpmxkhXt8p8ZsN9Vk10mHRK2Hu_OKcWkKcCAJfuSl_pEXlDdPzmmaiUgPjqgrtTLxSYyrugmn39lEBjRG7rrGCUk76HtUw=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJB8p1N_bdBCoxDMa0_XJEyfkJQ9p-CR-dVywfDKOC8wlbayP_lC_txqX4dmppPFOeHF8UPsjJBiRb3qA275X64wNo6xmofJtQT3CkK6GPbEEA9ygh6=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://event.shoeisha.jp/devsumi/20200721": {
@@ -277,19 +277,19 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://note.com/suwash/n/nd8c69fc42016#TxJIG": {
-      "title": "2020-07-21 Developers Summit 2020 Summer #devsumi｜諏訪真一",
+      "title": "2020-07-21 Developers Summit 2020 Summer #devsumi｜suwa-sh / 諏訪真一",
       "description": "2020/07/21 に開催された&nbsp;Developers Summit 2020 Summer のイベントレポートです。     \nDevelopers Summit 2020  SummerITエンジニアの祭典「Developers Summit 2020 Summer」（デブサミ2020夏）は、2020年7月event.shoeisha.jp\n     \n●イベント概要 昨今のDevelopers Summitは、世の中やテクノロジーの変化にフォーカスし、不確実性の高い世の中において、開発者が一歩踏み出す勇気を授けたい、そのような思いでお届けしてきました。「デジタルトラン",
       "image": "https://assets.st-note.com/production/uploads/images/30888859/rectangle_large_type_2_1ca4c02efd904dff33e19c38f0087661.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://note.com/suwash/n/nd8c69fc42016#UFYgt": {
-      "title": "2020-07-21 Developers Summit 2020 Summer #devsumi｜諏訪真一",
+      "title": "2020-07-21 Developers Summit 2020 Summer #devsumi｜suwa-sh / 諏訪真一",
       "description": "2020/07/21 に開催された&nbsp;Developers Summit 2020 Summer のイベントレポートです。     \nDevelopers Summit 2020  SummerITエンジニアの祭典「Developers Summit 2020 Summer」（デブサミ2020夏）は、2020年7月event.shoeisha.jp\n     \n●イベント概要 昨今のDevelopers Summitは、世の中やテクノロジーの変化にフォーカスし、不確実性の高い世の中において、開発者が一歩踏み出す勇気を授けたい、そのような思いでお届けしてきました。「デジタルトラン",
       "image": "https://assets.st-note.com/production/uploads/images/30888859/rectangle_large_type_2_1ca4c02efd904dff33e19c38f0087661.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://note.com/suwash/n/nd8c69fc42016#koQGB": {
-      "title": "2020-07-21 Developers Summit 2020 Summer #devsumi｜諏訪真一",
+      "title": "2020-07-21 Developers Summit 2020 Summer #devsumi｜suwa-sh / 諏訪真一",
       "description": "2020/07/21 に開催された&nbsp;Developers Summit 2020 Summer のイベントレポートです。     \nDevelopers Summit 2020  SummerITエンジニアの祭典「Developers Summit 2020 Summer」（デブサミ2020夏）は、2020年7月event.shoeisha.jp\n     \n●イベント概要 昨今のDevelopers Summitは、世の中やテクノロジーの変化にフォーカスし、不確実性の高い世の中において、開発者が一歩踏み出す勇気を授けたい、そのような思いでお届けしてきました。「デジタルトラン",
       "image": "https://assets.st-note.com/production/uploads/images/30888859/rectangle_large_type_2_1ca4c02efd904dff33e19c38f0087661.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
@@ -302,31 +302,31 @@
     },
     "https://qiita.com/kojimadev/items/2d0026b0b34ca1821273#a-2-gcp-%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B-google-%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AB%E8%A6%8B%E3%82%8B%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E8%A8%AD%E8%A8%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88": {
       "title": "デブサミ2020夏を視聴して学んだこと - Qiita",
-      "description": "はじめに本稿は、デブサミ2020夏(Developers Summit 2020 Summer)のセッションを視聴して学んだことのメモです。デブサミ2020夏の公式サイトはこちら各セッションで…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMCVFNSVBNCU4RiVFMyU4MiU5MiVFOCVBNiU5NiVFOCU4MSVCNCVFMyU4MSU5NyVFMyU4MSVBNiVFNSVBRCVBNiVFMyU4MiU5MyVFMyU4MSVBMCVFMyU4MSU5MyVFMyU4MSVBOCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MWQ0MjdkYjE4OTM5Y2RmNjQ4ZTk0MzA0ODNlZmViYTM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwa29qaW1hZGV2JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz00YWQyNTA2MDY2ZjVhMmMyNDA3NjA4ZjlhZThkZjY0ZA&blend-x=142&blend-y=491&blend-mode=normal&s=e1c6ebb88acd63cd01ba5d0c47d78a82",
+      "description": "はじめに 本稿は、デブサミ2020夏(Developers Summit 2020 Summer)のセッションを視聴して学んだことのメモです。 デブサミ2020夏の公式サイトはこちら 各セッションで学んだこと C-1 Outcomes over Output: Pro...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkY0MDM2MDYlMkZiOTUzNGNhMzVmZWMzMWEzMjNjYWJjOGYyOThkOWIzMTNhOGJkM2UxJTJGeF9sYXJnZS5wbmclM0YxNjEyMTc3NDAxP2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz00YjUwMzhkMDJkZGZjNmIwZTRlODAwMTMwYjJhMTgxNg%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY5ZWRmNzY0NTk4NGJmZDNjNzQzNmExZmQwNDljY2JmYTc0ODA1NGJjJTJGb3JpZ2luYWwuanBnJTNGMTU5MjExNjg4MT9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz1iYzNlYjY5MmU1MzExZmMyYThkZGJhNWUyNzM3NWE0Yg%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3Dcc8618c770df998b49a56e55ed9ea3e4?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMCVFNSVBNCU4RiVFMyU4MiU5MiVFOCVBNiU5NiVFOCU4MSVCNCVFMyU4MSU5NyVFMyU4MSVBNiVFNSVBRCVBNiVFMyU4MiU5MyVFMyU4MSVBMCVFMyU4MSU5MyVFMyU4MSVBOCZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWI2YmUzMzY3MDIyNjQwNWEyYjA1NmE2NWZlODgzNDkw&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBrb2ppbWFkZXYmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1kOGY2ZjE4MjU2ZjUyNDdkMjE3YTQwMGJhNDAxYjZmYg&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=44Ko44Oz44K444OL44Ki44Go5Lq655Sf44Kz44Of44Ol44OL44OG44Kj&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=532a2914dc9766a3c1d2d2d360eb124e",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/kojimadev/items/2d0026b0b34ca1821273#c-1-outcomes-over-output-productivity%E3%81%AE%E9%AB%98%E3%81%84%E7%B5%84%E7%B9%94%E3%81%B8%E3%81%AE%E5%A4%89%E9%9D%A9": {
       "title": "デブサミ2020夏を視聴して学んだこと - Qiita",
-      "description": "はじめに本稿は、デブサミ2020夏(Developers Summit 2020 Summer)のセッションを視聴して学んだことのメモです。デブサミ2020夏の公式サイトはこちら各セッションで…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMCVFNSVBNCU4RiVFMyU4MiU5MiVFOCVBNiU5NiVFOCU4MSVCNCVFMyU4MSU5NyVFMyU4MSVBNiVFNSVBRCVBNiVFMyU4MiU5MyVFMyU4MSVBMCVFMyU4MSU5MyVFMyU4MSVBOCZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MWQ0MjdkYjE4OTM5Y2RmNjQ4ZTk0MzA0ODNlZmViYTM&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwa29qaW1hZGV2JnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz00YWQyNTA2MDY2ZjVhMmMyNDA3NjA4ZjlhZThkZjY0ZA&blend-x=142&blend-y=491&blend-mode=normal&s=e1c6ebb88acd63cd01ba5d0c47d78a82",
+      "description": "はじめに 本稿は、デブサミ2020夏(Developers Summit 2020 Summer)のセッションを視聴して学んだことのメモです。 デブサミ2020夏の公式サイトはこちら 各セッションで学んだこと C-1 Outcomes over Output: Pro...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkY0MDM2MDYlMkZiOTUzNGNhMzVmZWMzMWEzMjNjYWJjOGYyOThkOWIzMTNhOGJkM2UxJTJGeF9sYXJnZS5wbmclM0YxNjEyMTc3NDAxP2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz00YjUwMzhkMDJkZGZjNmIwZTRlODAwMTMwYjJhMTgxNg%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkY5ZWRmNzY0NTk4NGJmZDNjNzQzNmExZmQwNDljY2JmYTc0ODA1NGJjJTJGb3JpZ2luYWwuanBnJTNGMTU5MjExNjg4MT9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz1iYzNlYjY5MmU1MzExZmMyYThkZGJhNWUyNzM3NWE0Yg%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3Dcc8618c770df998b49a56e55ed9ea3e4?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMCVFNSVBNCU4RiVFMyU4MiU5MiVFOCVBNiU5NiVFOCU4MSVCNCVFMyU4MSU5NyVFMyU4MSVBNiVFNSVBRCVBNiVFMyU4MiU5MyVFMyU4MSVBMCVFMyU4MSU5MyVFMyU4MSVBOCZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPWI2YmUzMzY3MDIyNjQwNWEyYjA1NmE2NWZlODgzNDkw&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBrb2ppbWFkZXYmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1kOGY2ZjE4MjU2ZjUyNDdkMjE3YTQwMGJhNDAxYjZmYg&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=44Ko44Oz44K444OL44Ki44Go5Lq655Sf44Kz44Of44Ol44OL44OG44Kj&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=532a2914dc9766a3c1d2d2d360eb124e",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/minoura_a/items/3726819c85e776b03db9#c-1-outcomes-over-output-productivity%E3%81%AE%E9%AB%98%E3%81%84%E7%B5%84%E7%B9%94%E3%81%B8%E3%81%AE%E5%A4%89%E9%9D%A9": {
       "title": "デブサミ2020聴講メモ - Qiita",
-      "description": "C-1 Outcomes over Output: Productivityの高い組織への変革Outcomes Over OutputとはOutput(つくったもの)よりOutcome(成果)に…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMCVFOCU4MSVCNCVFOCVBQyU5QiVFMyU4MyVBMSVFMyU4MyVBMiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1jbGlwPWVsbGlwc2lzJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MmRkNTk0NTM1ZWVjMWY2YmJhYjliYjZjMDZhMzQ5NTk&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbWlub3VyYV9hJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0xYTA2ZGUyNjU3YzFiMGQ3MzA3YWRhNjdjZDRkODUzMw&blend-x=142&blend-y=491&blend-mode=normal&s=3cdc0417005d24b6d0fb1ba187327e25",
+      "description": "C-1 Outcomes over Output: Productivityの高い組織への変革 Outcomes Over Outputとは Output(つくったもの)よりOutcome(成果)に目を向けること。 Productivityとは 会社のミッションを達...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1pbWFnZS1zdG9yZSUyRjAlMkY1NjI5NDYlMkY1NWEzYTFhMDliZWNmOTg0NjUyYTk4MjE2MThjY2JlN2Q4ODI2YWZjJTJGbGFyZ2UucG5nJTNGMTYzODMyMzIwND9peGxpYj1yYi00LjAuMCZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9ZGZjMDg0ZjNiM2I5YzIxY2IzNzdlZjY1NzU5NGJhZmI%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3De32bebe84b3cd5422e0d9ca4ae3f220d?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgzJTg3JUUzJTgzJTk2JUUzJTgyJUI1JUUzJTgzJTlGMjAyMCVFOCU4MSVCNCVFOCVBQyU5QiVFMyU4MyVBMSVFMyU4MyVBMiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTU2JnR4dC1wYWQ9MCZzPTYzOWZiY2M4NWMwZDk2NzA0MjM5NzM5MTFhM2E5OTI2&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBtaW5vdXJhX2EmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz0wNzBjYTkzN2I2ODI5OTJjNTI2ZGY4MGZhZmQ2NGNmNA&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=0d096ac9c0b228f81b7750e792d43799",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://qiita.com/mngreen/items/fa4dfa8f0386a1354b14#gcp-%E3%82%92%E6%94%AF%E3%81%88%E3%82%8B-google-%E3%81%AE%E3%82%BD%E3%83%95%E3%83%88%E3%82%A6%E3%82%A7%E3%82%A2%E9%96%8B%E7%99%BA%E7%92%B0%E5%A2%83%E3%81%AB%E8%A6%8B%E3%82%8B%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B5%E3%83%BC%E3%83%93%E3%82%B9%E8%A8%AD%E8%A8%88%E3%81%AE%E3%83%92%E3%83%B3%E3%83%88": {
       "title": "Developers Summit 2020 Summer : メモ - Qiita",
-      "description": "その後のソフトウェア・ファーストソフトウェア・ファーストで伝えたかったことどのような事業であっても、ソフトウェアをどう使うか、が重要ソフトウェアが一番偉いというわけではないソフトウェアの比重…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9RGV2ZWxvcGVycyUyMFN1bW1pdCUyMDIwMjAlMjBTdW1tZXIlMjAlM0ElMjAlRTMlODMlQTElRTMlODMlQTImdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTBjZTk1OWMyYTdlZWQ1NTIwMDgxOGJhMDVhY2Y1OTc5&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbW5ncmVlbiZ0eHQtY29sb3I9JTIzMjEyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnM9MWViYTgzYWEwOTBiM2IzNzA4M2JmOTAyZTBmY2VjNmU&blend-x=142&blend-y=491&blend-mode=normal&s=918ec6d23c522450144796c53ef28135",
+      "description": "その後のソフトウェア・ファースト ソフトウェア・ファーストで伝えたかったこと どのような事業であっても、ソフトウェアをどう使うか、が重要 ソフトウェアが一番偉いというわけではない ソフトウェアの比重が1%であったとしても、その1%をどう生かすか 欲しいものに...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnNlY3VyZS5ncmF2YXRhci5jb20lMkZhdmF0YXIlMkZjYzRlZTIzMzE2MDRlYjQ0M2E4M2I0MGJjOTRkOGU5ZT9peGxpYj1yYi00LjAuMCZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9NDI0MDY4NTMwOTc4ZjQ5NjNlZGYyZWVlZDI2NmNmNDk%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3D41d3f7b7626389b9584d3ef96e5d858f?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9RGV2ZWxvcGVycyUyMFN1bW1pdCUyMDIwMjAlMjBTdW1tZXIlMjAlM0ElMjAlRTMlODMlQTElRTMlODMlQTImdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz00Nzc3NTM2YzBjYmRkNGFiZjM0MzU0ZGZlM2I4OGExMA&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBtbmdyZWVuJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LXBhZD0wJnM9ZDA0MzlhMTEwMmZhZDYzYjdmZDNiZGQxOGZkMTQ0NGY&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=af0f8fc4316a2714014aed7fedc74a1e",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     },
     "https://speakerdeck.com/atsushi51/modannaakitekutiyadezerokarazuo-ruzheng-quan-ji-pan": {
       "title": "モダンなアーキテクチャでゼロから作る証券基盤",
-      "description": "Finatextグループは、レガシーシステムが多く残る金融業界において、金融サービスに共通して必要となる機能をクラウド化し、サービス設計から開発、グロース施策までを一気通貫で提供することで多くの企業の金融DXへの取り組みを支援しています。このセッションでは、当社が証券プラットフォーム「BaaS（Brokerage as a Service）」を使ってどのように証券サービスを開発しているのか、その裏側を具体的な事例と共にご紹介します。",
+      "description": "Finatextグループは、レガシーシステムが多く残る金融業界において、金融サービスに共通して必要となる機能をクラウド化し、サービス設計から開発、グロース施策までを一気通貫で提供することで多くの企業の金融DXへの取り組みを支援しています。このセッションでは、当社が証券プラットフォーム「BaaS（Brok&hellip;",
       "image": "https://files.speakerdeck.com/presentations/6ac8cdce7aea408aa4354b3faca2ffc8/slide_0.jpg?15884732",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -344,7 +344,7 @@
     },
     "https://speakerdeck.com/itohiro73/enziniaringugazu-zhi-niguang-garu-ru-hua-womu-zhi-sutamefalsequ-rizu-mi-number-devsumi-number-devsumic": {
       "title": "エンジニアリングが組織に広がる「乳化」を目指すための取り組み #devsumi #devsumiC ",
-      "description": "READYFORでは、会社全体がビジョン・ミッションに向かって最大限のパフォーマンスを発揮するためにも、エンジニアリングが組織全体に広がっている状態を目指しており、その状態を「乳化」と表現しています。\n\n本セッションでは、下記のようなエンジニアリングの乳化への取り組みを事例とともにご紹介します。\n\n・OKRとスクワッド体制を活用したビジネスとエンジニアリングの融合\n・ビジネスプロセスを可視化するためのBPMNの認知拡大と定着\n・「技術的負債」という概念の理解と認知拡大\n・その他、暇手間かけて日常をハックするための取り組み",
+      "description": "READYFORでは、会社全体がビジョン・ミッションに向かって最大限のパフォーマンスを発揮するためにも、エンジニアリングが組織全体に広がっている状態を目指しており、その状態を「乳化」と表現しています。\n\n本セッションでは、下記のようなエンジニアリングの乳化への取り組みを事例とともにご紹介します。\n&hellip;",
       "image": "https://files.speakerdeck.com/presentations/5a8e3fe06d35461499909cc4513127af/slide_0.jpg?15881834",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -368,7 +368,7 @@
     },
     "https://speakerdeck.com/nakochi/freeegaxing-usalesforcekai-fa": {
       "title": "freeeが行うSalesforce開発",
-      "description": "現役開発者が語るSalesforceテクノロジーとデジタル・トランスフォーメーション\n\n未だSaaSとしてのイメージが根強いSalesforceですが、ここ数年の間にSalesforceの開発事情が大きく変化しているのをご存知でしょうか。このセッションでは、現役の開発者と一緒にSalesforceの新しい技術と刷新された開発者体験をご紹介していきます。同時に、彼らがどのようにSalesforceのテクノロジーを活用し、開発の現場からビジネスにおけるDXを推進しているのかを語ります。\n\nhttps://event.shoeisha.jp/devsumi/20200721/session/2522/",
+      "description": "現役開発者が語るSalesforceテクノロジーとデジタル・トランスフォーメーション\n\n未だSaaSとしてのイメージが根強いSalesforceですが、ここ数年の間にSalesforceの開発事情が大きく変化しているのをご存知でしょうか。このセッションでは、現役の開発者と一緒にSalesforceの&hellip;",
       "image": "https://files.speakerdeck.com/presentations/39c7d57d3b854c5087e31cd2dfa4c831/slide_0.jpg?15880887",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -384,16 +384,10 @@
       "image": "https://files.speakerdeck.com/presentations/db32749e00b34ff09f02fe61502a779f/slide_0.jpg?15944557",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
-    "https://www.brighttalk.com/webcast/18289/430677/android": {
-      "title": "https://www.brighttalk.com/webcast/18289/430677/android",
-      "description": "",
-      "image": "",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.brighttalk.com"
-    },
     "https://www.docswell.com/s/Etsuo/KPEJ65-2020-07-22-DevSumiSummer": {
       "title": "(Dev sumi2020)アジャイルチームの成長に伴い起きる変化について | ドクセル",
       "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
-      "image": "https://img.docswell.com/cover/9E2NZZKR7R.jpg",
+      "image": "https://bcdn.docswell.com/page/9E2NZZKR7R.jpg?width=480",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
     },
     "https://www.youtube.com/watch?v=DBjUcAvOsmU&feature=youtu.be": {
@@ -431,15 +425,15 @@
   },
   "2020-06-06-react-firebase-deploy": {
     "https://firebase.google.com": {
-      "title": "Firebase | Google’s Mobile and Web App Development Platform",
-      "description": "Discover Firebase, Google’s mobile and web app development platform that helps developers build apps and games that users will love.",
+      "title": "Firebase | Google's Mobile and Web App Development Platform",
+      "description": "Firebase は、デベロッパーがユーザーに人気のアプリやゲームを開発できるよう支援する Google のモバイルおよびウェブアプリ開発プラットフォームです。",
       "image": "https://firebase.google.com/images/social.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://firebase.google.com"
     },
     "https://github.com/w9jds/firebase-action": {
       "title": "GitHub - w9jds/firebase-action: GitHub Action for interacting with Firebase",
       "description": "GitHub Action for interacting with Firebase. Contribute to w9jds/firebase-action development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/d46cbb4ecaeaf90c5d1abd42f5272e5f70bbbce9502cff259f968212abcd4de2/w9jds/firebase-action",
+      "image": "https://opengraph.githubassets.com/40e61901b935ae2cb176a864418452846781895ad6603aadf04988d3d6429f00/w9jds/firebase-action",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
@@ -453,13 +447,13 @@
     "https://github.com/h-yoshikawa44/jigsaw-like-puzzle": {
       "title": "GitHub - h-yoshikawa44/jigsaw-like-puzzle: ジグソーパズルっぽいパズル部屋（web1week「Like」投稿作品）",
       "description": "ジグソーパズルっぽいパズル部屋（web1week「Like」投稿作品）. Contribute to h-yoshikawa44/jigsaw-like-puzzle development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/0fbd4fbf0ca07881b0032bf021ba81725c61814fadc4a61037c6dc4c8f87346a/h-yoshikawa44/jigsaw-like-puzzle",
+      "image": "https://opengraph.githubassets.com/cf44c74440a99edd62639457d0b5d2f1ccf0e3de1bd750f4b0b2825a309af437/h-yoshikawa44/jigsaw-like-puzzle",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/konvajs/use-image": {
       "title": "GitHub - konvajs/use-image: Custom React Hook for loading images",
       "description": "Custom React Hook for loading images. Contribute to konvajs/use-image development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/d86e5582081ede5da91afa4483698ea4a7ebc1a0c81bb42c4ac484cc4416279c/konvajs/use-image",
+      "image": "https://opengraph.githubassets.com/2e2d71e396e0a644df8003c45980ead266a823c685f085f3a3157412057ff6ba/konvajs/use-image",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://jigsaw-like-puzzle.web.app": {
@@ -469,49 +463,49 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jigsaw-like-puzzle.web.app"
     },
     "https://konvajs.org/docs/overview.html": {
-      "title": "Konva Framework Overview",
-      "description": "What’s Konva?Konva is an HTML5 Canvas JavaScript framework that extends the 2d contextby enabling canvas interactivity for desktop and mobile applications. Konva enables high performance animations, t",
-      "image": "https://konvajs.org/logo.png",
+      "title": "Konva Framework Overview | Konva - JavaScript Canvas 2d Library",
+      "description": "What's Konva?",
+      "image": "https://konvajs.org/img/social.jpeg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://konvajs.org"
     },
     "https://konvajs.org/docs/sandbox/Animals_on_the_Beach_Game.html": {
-      "title": "Animals on the Beach Game",
-      "description": "Konva Animals on the Beach Game Demoview raw<!DOCTYPE html><html>  <head>    <script src=\"https://unpkg.com/konva@9.3.3/konva.min.js\"></script>    <meta charset=\"utf",
-      "image": "https://konvajs.org/logo.png",
+      "title": "Animals on the Beach Game | Konva - JavaScript Canvas 2d Library",
+      "description": "Instructions: Drag and drop the animals onto their silhouettes on the beach. When all animals are correctly placed, you win!",
+      "image": "https://konvajs.org/img/social.jpeg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://konvajs.org"
     }
   },
   "2020-05-06-react-recompose": {
     "https://github.com/acdlite/recompose": {
       "title": "GitHub - acdlite/recompose: A React utility belt for function components and higher-order components.",
-      "description": "A React utility belt for function components and higher-order components. - GitHub - acdlite/recompose: A React utility belt for function components and higher-order components.",
-      "image": "https://opengraph.githubassets.com/c3d9e39e5e7af3af8a70d46f805905e52de8efc07cd18b9b1e9e58441c0111ea/acdlite/recompose",
+      "description": "A React utility belt for function components and higher-order components. - acdlite/recompose",
+      "image": "https://opengraph.githubassets.com/0122b3d46816fd4b962abd9f7d5eba2f4ee663677f75087677176bf7e3e1a31f/acdlite/recompose",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   },
   "2020-05-03-docusaurus-ver-2-gtag": {
     "https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh?hl=ja": {
-      "title": "Google Analytics オプトアウト アドオン (by Google)",
+      "title": "Google Analytics オプトアウト アドオン (by Google) - Chrome ウェブストア",
       "description": "Google Analytics の JavaScript （ga.js） と連携して Google Analytics に情報が送信されないようにします。",
-      "image": "https://lh3.googleusercontent.com/gQ5NVd7AWUr_GBGW9rmqJ-9LQbyYKi_zSwBnGTdlJkhV7oaAEblBkfJqnVRF_ZwqLpb0BrFETnYopEZtnT4aHfhdSA=w128-h128-e365-rj-sc0x00ffffff",
+      "image": "https://lh3.googleusercontent.com/gQ5NVd7AWUr_GBGW9rmqJ-9LQbyYKi_zSwBnGTdlJkhV7oaAEblBkfJqnVRF_ZwqLpb0BrFETnYopEZtnT4aHfhdSA=s128-rj-sc0x00ffffff",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://chrome.google.com"
     },
     "https://developers.google.com/analytics/devguides/collection/analyticsjs": {
-      "title": "Add analytics.js to Your Site  |  Analytics for Web (analytics.js)  |  Google for Developers",
-      "description": "A JavaScript library that lets you measure how users interact with your website.\n",
-      "image": "https://www.gstatic.com/devrel-devsite/prod/v4697989523565db7bb6b13b31211edb8055f1ea80a18aa91f0fb410e4e163769/developers/images/opengraph/orange.png",
+      "title": "Google Analytics  |  Google for Developers",
+      "description": "",
+      "image": "https://www.gstatic.com/devrel-devsite/prod/v55e81371229cf93fbb4781915f01d3bef8e4cb4b674c7c839a1879ebb706855a/developers/images/opengraph/white.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
     "https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=ja": {
-      "title": "analytics.js から gtag.js に移行する  |  ウェブ向けユニバーサル アナリティクス（gtag.js）  |  Google for Developers",
+      "title": "Google Analytics  |  Google for Developers",
       "description": "",
-      "image": "https://www.gstatic.com/devrel-devsite/prod/v4697989523565db7bb6b13b31211edb8055f1ea80a18aa91f0fb410e4e163769/developers/images/opengraph/orange.png",
+      "image": "https://www.gstatic.com/devrel-devsite/prod/v55e81371229cf93fbb4781915f01d3bef8e4cb4b674c7c839a1879ebb706855a/developers/images/opengraph/white.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
     "https://developers.google.com/analytics/devguides/collection/gtagjs?hl=ja": {
-      "title": "サイトに gtag.js を追加する  |  ウェブ向けユニバーサル アナリティクス（gtag.js）  |  Google for Developers",
-      "description": "Google アナリティクス、Google 広告、Google マーケティング プラットフォームにイベントデータを送信するようサイトを設定するための、JavaScript のタグ設定フレームワークおよび API です。",
-      "image": "https://www.gstatic.com/devrel-devsite/prod/v4697989523565db7bb6b13b31211edb8055f1ea80a18aa91f0fb410e4e163769/developers/images/opengraph/orange.png",
+      "title": "Google Analytics  |  Google for Developers",
+      "description": "",
+      "image": "https://www.gstatic.com/devrel-devsite/prod/v55e81371229cf93fbb4781915f01d3bef8e4cb4b674c7c839a1879ebb706855a/developers/images/opengraph/white.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developers.google.com"
     },
     "https://support.google.com/analytics/answer/2763052?hl=ja": {
@@ -525,24 +519,18 @@
       "description": "The Docusaurus core doesn't provide any feature of its own. All features are delegated to individual plugins: the docs feature provided by the docs plugin; the blog feature provided by the blog plugin; or individual pages provided by the pages plugin. If there are no plugins installed, the site won't contain any routes.",
       "image": "https://docusaurus.io/img/docusaurus-social-card.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://v2.docusaurus.io"
-    },
-    "https://www.irep.co.jp/knowledge/blog/detail/id=45604": {
-      "title": "Google アナリティクスのタグが古いままになっていませんか？ | 株式会社アイレップ",
-      "description": "アイレップのコラム一覧です。検索エンジン順位変動や、ホワイトペーパーなどをご確認いただけます。統合デジタルマーケティングエージェンシーのアイレップ。",
-      "image": "https://www.irep.co.jp/cms/wp-content/uploads/2019/02/eyecatch_ga.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.irep.co.jp"
     }
   },
   "2020-04-23-react-material-ui": {
     "https://github.com/cssinjs/jss": {
       "title": "GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - GitHub - cssinjs/jss: JSS is an authoring tool for CSS which uses JavaScript as a host language.",
-      "image": "https://opengraph.githubassets.com/a9bc86d168d600e2832609eb7f389a8be3213be92768cd4ce84a130eda73b109/cssinjs/jss",
+      "description": "JSS is an authoring tool for CSS which uses JavaScript as a host language. - cssinjs/jss",
+      "image": "https://opengraph.githubassets.com/d88d81582ec60376e7101e9a56b6b1f2c09309575dff7a206ed031ca5b46795b/cssinjs/jss",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/mui/material-ui-pickers": {
       "title": "GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
-      "description": "Date & Time pickers for Material UI (support from v1 to v4) - GitHub - mui/material-ui-pickers: Date & Time pickers for Material UI (support from v1 to v4)",
+      "description": "Date & Time pickers for Material UI (support from v1 to v4) - mui/material-ui-pickers",
       "image": "https://repository-images.githubusercontent.com/106125229/81d0cb00-7036-11e9-90b1-1128202ec858",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
@@ -585,7 +573,7 @@
   },
   "2020-04-11-domain-transfer": {
     "https://domains.google/intl/ja_jp": {
-      "title": "ホーム – Google Domains",
+      "title": "Google Domains",
       "description": "",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://domains.google"
@@ -593,21 +581,21 @@
   },
   "2020-04-04-react-proptypes": {
     "https://developer.mozilla.org/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol": {
-      "title": "Symbol (シンボル) - JavaScript | MDN",
-      "description": "JavaScript では、シンボルはプリミティブ値です。",
-      "image": "https://developer.mozilla.org/mdn-social-share.cd6c4a5a.png",
+      "title": "Symbol - JavaScript | MDN",
+      "description": "Symbol は組み込みオブジェクトであり、コンストラクターは一意であることが保証されているシンボルプリミティブ（シンボル値または単にシンボル）を返します。シンボルは、他のコードがオブジェクトに追加する可能性のあるキーと衝突しないように、また、他のコードがオブジェクトにアクセスするために通常使用するメカニズムから隠されるるように、一意のプロパティキーをオブジェクトに追加するためによく使用されます。これによって弱いカプセル化、または弱い形の情報隠蔽が実現できます。",
+      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.mozilla.org"
     },
     "https://github.com/facebook/prop-types": {
       "title": "GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
-      "description": "Runtime type checking for React props and similar objects - GitHub - facebook/prop-types: Runtime type checking for React props and similar objects",
-      "image": "https://opengraph.githubassets.com/056958c4ad100a4526d5d8b47fcd784d1c1184ff3ba869dd4da5171a161bb22e/facebook/prop-types",
+      "description": "Runtime type checking for React props and similar objects - facebook/prop-types",
+      "image": "https://opengraph.githubassets.com/e1a4b082ee7aaca7e482340e57eec8f03aaf24cce55913958d9c316302b85c86/facebook/prop-types",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
-    "https://github.com/facebook/react/blob/main/packages/shared/isValidElementType.js": {
-      "title": "https://github.com/facebook/react/blob/main/packages/shared/isValidElementType.js",
-      "description": "",
-      "image": "",
+    "https://github.com/facebook/react/blob/v17.0.2/packages/shared/isValidElementType.js": {
+      "title": "react/packages/shared/isValidElementType.js at v17.0.2 · facebook/react",
+      "description": "The library for web and native user interfaces. Contribute to facebook/react development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/b16bd5e887f3d1d42e288283e783367d95c3f66a5e5e011f678e7ca48eb5ee3e/facebook/react",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://ja.reactjs.org/docs/typechecking-with-proptypes.html": {
@@ -618,8 +606,8 @@
     },
     "https://qiita.com/_lemon2003_/items/55c947f29b44f79dc859": {
       "title": "シンボル(Symbol)って何？ - Qiita",
-      "description": "symbolicなsymbol。tl;drsymbol はES6で導入された新しいプリミティブ。symbol( [description] ) で作成。作成するたびにまったく新しいSymbo…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9JUUzJTgyJUI3JUUzJTgzJUIzJUUzJTgzJTlDJUUzJTgzJUFCJTI4U3ltYm9sJTI5JUUzJTgxJUEzJUUzJTgxJUE2JUU0JUJEJTk1JUVGJUJDJTlGJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LWNsaXA9ZWxsaXBzaXMmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz0zZTJiNjA2MWYzYjM3NmFhYTQ4M2Q1YTAxMjUxZTRjNA&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwbGVtb24yMDAzJnR4dC1jb2xvcj0lMjMyMTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9MzYmdHh0LWFsaWduPWxlZnQlMkN0b3Amcz04ZDhmYjllYTRmZWIzOGYzOGRlMjk2NGJmNGU1NWViMQ&blend-x=142&blend-y=491&blend-mode=normal&s=e08b78d797c19ef1a9d1fe0623c67064",
+      "description": "symbolicなsymbol。 tl;dr symbol はES6で導入された新しいプリミティブ。 symbol( [description] ) で作成。 作成するたびにまったく新しいSymbolを返す。 シンボルとは？ **symbol**は、ユニーク[...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkYwJTJGMTkzNTU4JTJGcHJvZmlsZS1pbWFnZXMlMkYxNjA3MTY5NTk2P2l4bGliPXJiLTQuMC4wJmFyPTElM0ExJmZpdD1jcm9wJm1hc2s9ZWxsaXBzZSZiZz1GRkZGRkYmZm09cG5nMzImcz0wMGIyYmNhY2ZjMjk3YjFkYmMyZjBkOWQ3MzUyMjhjYQ%26blend-x%3D120%26blend-y%3D467%26blend-w%3D82%26blend-h%3D82%26blend-mode%3Dnormal%26s%3Deec857921c62a2333be7af91f6659d1f?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9JUUzJTgyJUI3JUUzJTgzJUIzJUUzJTgzJTlDJUUzJTgzJUFCJTI4U3ltYm9sJTI5JUUzJTgxJUEzJUUzJTgxJUE2JUU0JUJEJTk1JUVGJUJDJTlGJnR4dC1hbGlnbj1sZWZ0JTJDdG9wJnR4dC1jb2xvcj0lMjMxRTIxMjEmdHh0LWZvbnQ9SGlyYWdpbm8lMjBTYW5zJTIwVzYmdHh0LXNpemU9NTYmdHh0LXBhZD0wJnM9Yzg0OWMxZmU5MThkMTVkYWNkOGQyZDk3NWJkOGU2YmQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBsZW1vbjIwMDMmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtcGFkPTAmcz1kZDE4ZWJhNjJkZTI2M2NkNzQ4MzBkMWFmMTJmMWMyZA&blend-x=242&blend-y=480&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&s=5b6d1951701d39f9fedca5791f4e85df",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
@@ -630,16 +618,10 @@
       "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Slack_icon_2019.svg/1200px-Slack_icon_2019.svg.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://ja.wikipedia.org"
     },
-    "https://slack-remind-creator.netlify.com": {
-      "title": "Slack remind creator | Slackのリマインダーを簡単作成",
-      "description": "Slackのremindコマンドを簡単に作成できるツール",
-      "image": "https://slack-remind-creator.netlify.com/images/ogimage.png",
-      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slack-remind-creator.netlify.com"
-    },
     "https://slack.com/intl/ja-jp": {
-      "title": "Slack はニーズに応えるプロダクティビティプラットフォーム",
-      "description": "Slack（スラック）は、チームとコミュニケーションを図るための新しい手段です。メールよりも速く、整理され、安全な方法で実現できます。",
-      "image": "https://a.slack-edge.com/ec3a92a/marketing/img/homepage/true-prospects/unfurl/slack-e2e-homepage-unfurl.ja-JP.jpg",
+      "title": "AI による業務管理とプロダクティビティツール",
+      "description": "その仕事、Slack で。人、プロジェクト、ツール、AI を一元化した、世界で最も愛される、ビジネスの基本ソフトです。",
+      "image": "https://slack.com/dev-cdn/v/marketing/img/homepage/revamped-24/unfurl/hp-revamp-unfurl.ja-JP.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slack.com"
     }
   },
@@ -655,7 +637,7 @@
     "https://839.hateblo.jp/entry/2019/08/16/104624": {
       "title": "GitHub Actions(beta)向けにslack通知プラグインを作った - 839の日記",
       "description": "github.com 839.hateblo.jp でcircleciからgithub actionsに移行したもののslack通知周りが整ってないので作った。 自分が観測している範囲だと現状 https://github.com/pullreminders/slack-action しかなかったけど、あまりにもpayloadを書くのがきつそうなので敬遠していた。 あとdockerベースだと毎回このプラグインのimageが先頭でbuildされるのも速度的に気になっていた。 元々もっと困っていたのはキャッシュ周りで、それっぽいAPIがあったので調査してみたが結局現状できない、という結論になったの…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/h/husq/20190816/20190816031503.png",
+      "image": "https://cdn.image.st-hatena.com/image/scale/7557a1be67b6088e362fc67e1998c3e282317636/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fh%2Fhusq%2F20190816%2F20190816031503.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://839.hateblo.jp"
     },
     "https://blog.kengo-toda.jp/entry/2021/07/06/222400": {
@@ -665,33 +647,33 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.kengo-toda.jp"
     },
     "https://docs.aws.amazon.com/ja_jp/AmazonCloudFront/latest/DeveloperGuide/private-content-restricting-access-to-s3.html": {
-      "title": "Amazon S3 オリジンへのアクセスの制限 - Amazon CloudFrontAmazon S3 オリジンへのアクセスの制限 - Amazon CloudFront",
+      "title": "Amazon S3 オリジンへのアクセスを制限する - Amazon CloudFront",
       "description": "Amazon CloudFront オリジンアクセスコントロール (OAC) で、Amazon S3 オリジンへのアクセスを制限します。",
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.aws.amazon.com"
     },
     "https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions": {
-      "title": "Contexts - GitHub Docs",
-      "description": "You can access context information in workflows and actions.",
-      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
+      "title": "Contexts reference - GitHub Docs",
+      "description": "Find information about contexts available in GitHub Actions workflows, including available properties, access methods, and usage examples.",
+      "image": "https://docs.github.com/assets/cb-345/images/social-cards/actions.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
     },
     "https://docs.github.com/en/actions/reference/events-that-trigger-workflows": {
       "title": "Events that trigger workflows - GitHub Docs",
       "description": "You can configure your workflows to run when specific activity on GitHub happens, at a scheduled time, or when an event outside of GitHub occurs.",
-      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
+      "image": "https://docs.github.com/assets/cb-345/images/social-cards/actions.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
     },
     "https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions": {
       "title": "Workflow syntax for GitHub Actions - GitHub Docs",
       "description": "A workflow is a configurable automated process made up of one or more jobs. You must create a YAML file to define your workflow configuration.",
-      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
+      "image": "https://docs.github.com/assets/cb-345/images/social-cards/actions.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
     },
     "https://docs.github.com/en/actions/using-github-hosted-runners/about-github-hosted-runners": {
-      "title": "Using GitHub-hosted runners - GitHub Docs",
+      "title": "GitHub-hosted runners - GitHub Docs",
       "description": "GitHub offers hosted virtual machines to run workflows. The virtual machine contains an environment of tools, packages, and settings available for GitHub Actions to use.",
-      "image": "https://github.githubassets.com/images/modules/open_graph/github-logo.png",
+      "image": "https://docs.github.com/assets/cb-345/images/social-cards/actions.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.github.com"
     },
     "https://github.co.jp/features/actions": {
@@ -702,14 +684,14 @@
     },
     "https://github.com/8398a7/action-slack": {
       "title": "GitHub - 8398a7/action-slack: Provides the function of slack notification to GitHub Actions.",
-      "description": "Provides the function of slack notification to GitHub Actions. - GitHub - 8398a7/action-slack: Provides the function of slack notification to GitHub Actions.",
-      "image": "https://opengraph.githubassets.com/60ab9ccb92b8c0e0ad803a3699af759ecef3fbd04fa8a94967adb86f2137a4f9/8398a7/action-slack",
+      "description": "Provides the function of slack notification to GitHub Actions. - 8398a7/action-slack",
+      "image": "https://opengraph.githubassets.com/71562e38a3c28240a38710e8e7ab39643e6feaba5a82f022190a37f78de49f33/8398a7/action-slack",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/opspresso/action-s3-sync": {
       "title": "GitHub - opspresso/action-s3-sync",
       "description": "Contribute to opspresso/action-s3-sync development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/8fd13355c1712806c8981ba56cf625b57623190fc468c376869e3264b65aeda1/opspresso/action-s3-sync",
+      "image": "https://opengraph.githubassets.com/a46a4adf2f1e5b4ada80a2e361655af1c480798ac1a8a89d7b92c52bc379186a/opspresso/action-s3-sync",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://knowledge.sakura.ad.jp/23478": {
@@ -723,13 +705,13 @@
     "http://iwakiri.hatenablog.com/entry/2020/02/16/195321": {
       "title": "デブサミ2020 14A8「キャリアトランスフォーメーションをみんなで考えよう」を終えて #devsumi  - 江青日誌",
       "description": "「 ITエンジニアが、自分のため＝チームのため＝世のために、わくわくしながら、サービスやシステムをリリースしてくれたら、きっと日本の将来は、ステキなものになっていくに違いない。そのためにはエンジニア同士で、日頃の鍛錬で得たものをシェアし、語り合う場を作るといいのでは？という仮説を立て、2003年に始まったデブサミ。 オーガナイザーを卒業したのに、デブサミ2020でどうしても「開発者からマネジメントってどうよ」と、問いかけたくなりました。一番始めに市谷さんに思いを相談したところ、快諾いただいて、石井さん、黒田さんに声をかけてパネルでいこうと話がまとまり、現オーガナイザーである近藤祐子どのにネタを…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/I/IWAKIRI/20200216/20200216122716.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/63275aac8934e866facfcb908d38bfad4c03ccae/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2FI%2FIWAKIRI%2F20200216%2F20200216122716.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=http://iwakiri.hatenablog.com"
     },
     "https://docs.google.com/presentation/d/1xgB2sIqKBm2AvhAA2jw2hgCWL8xZr0DFI2FdD5trA9M/edit#slide=id.g3d0013c82c_0_1": {
       "title": "#devsumi 【湊川あい】技術書におけるジェンダーと 「わからない」を掘り下げる価値 のコピー",
       "description": "技術書におけるジェンダーと 「わからない」を掘り下げる価値 〜『わかばちゃんと学ぶ』シリーズを作る中で気付いたこと〜 湊川あい @llminatoll 1 #devsumi #devsumiD",
-      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyLvYVAtbciK23hBU8seNnBLc1t3ACVeMIiPhsDYB0MLgS7e5izDh_rMAYQdKosRdU8nNzTeniKoNKRb5JGNLN5DE2FPVt9gN18qQA3uCHReDQ=w1200-h630-p",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyK0UCBChhgQWMGj7bIbntmJPk8f0u8rCXCZHgaMx6xV_sTt1Us43nbVUxPv7hhot1NQgFE_Wbaju_UZkUZ_Jb5J_CNvLMvforjZh3HDPc6ere46YPM=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     },
     "https://event.shoeisha.jp/devsumi/20200213": {
@@ -739,9 +721,9 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
     },
     "https://jfrog.com/shownote/developers-summit-2020": {
-      "title": "Best Practices In Implementing Container Image Promotion Pipelines at Developers Summit 2020 | JFrog",
-      "description": "View Best Practices In Implementing Container Image Promotion Pipelines on Notist.",
-      "image": "https://speedmedia.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/https://media.jfrog.com/wp-content/uploads/2020/01/20125935/promotion.png",
+      "title": "Resource Center",
+      "description": "JFrog - Resources: Artifactory and Bintray User Guides, Wiki, Forums, Screencasts, download source, Issue Tracker.",
+      "image": "https://speedmedia2.jfrog.com/08612fe1-9391-4cf3-ac1a-6dd49c36b276/media.jfrog.com/wp-content/uploads/2018/06/20132021/JFROG.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jfrog.com"
     },
     "https://note.com/dora_e_m/n/n25ff9511efab": {
@@ -757,7 +739,7 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
     },
     "https://note.com/konpyu/n/n9a62cc04c67d": {
-      "title": "noteの決して止まらないカイゼンを支える、エンジニアリングへの挑戦｜こんぴゅ",
+      "title": "noteの決して止まらないカイゼンを支える、エンジニアリングへの挑戦｜konpyu",
       "description": "Developer Summit 2020にて、「noteの決して止まらないカイゼンを支える、エンジニアリングへの挑戦」という発表をしました。そのスライドや補足など。  この発表では、下記のようなことについて話させていただきました。  ・noteチームが重視するサービスのグロースサイクルとは？ ・そのグロースサイクルを円滑に回すために、開発チームをどう組織したか？データをどう活用したか？           noteのグロースサイクル \n    noteをどう伸ばしていくかが表現されたのがこのグロースサイクル図です。\"ブロック\"が達成したい指標で\"矢印\"が具体的な施策にあたります。作者",
       "image": "https://assets.st-note.com/production/uploads/images/19229697/rectangle_large_type_2_c14bbd4145e54691145aa3af8870a482.png?fit=bounds&quality=85&width=1280",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
@@ -765,13 +747,13 @@
     "https://shinyorke.hatenablog.com/entry/i-want-to-live-breath-devsumi2020": {
       "title": "シニア・エンジニアの簡単なお仕事 - デブサミ2020で登壇しました - Lean Baseball",
       "description": "【TL;DR】デブサミで喋ってきました. 高く飛び続けましょうって話でした. 事前登録から多くの方々にご登録いただき, （写真は自粛しましたが）壇上から見る限り, 立ち見も出ていたみたいで感謝感激でした. 数あるセッションの中からお越しいただき（+来られなかった方もリハーサルとか諸々でサポート・応援）ありがとうございました.*1 このエントリーではスライド・発表でいい足りなかったことを補足という形で残したいと思います（発表準備の話を含めて）. スタメン スタメン 当日の様子など スライド 反響とか 数々のサポート 登壇に至るまでのあれこれ 事前準備 スライドの構成・ストーリー デモと野球データ…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/s/shinyorke/20200215/20200215115709.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/9f35d3f894727a98a4d86dcd728881d6d0ffa28a/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fshinyorke%2F20200215%2F20200215115709.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://shinyorke.hatenablog.com"
     },
     "https://slide.meguro.ryuzee.com/slides/98": {
       "title": "レガシーコードからの脱却",
-      "description": "2019年10月4日のAWS DevDay / 2019年10月31日のEOF2019 / 2020年2月14日のDevelopers Summitで登壇した際のスライドです。",
-      "image": "https://slidehub.azureedge.net/images/9ea9deae4ac4f5e9bee0a1d821b205fb/thumbnail-middle.jpg",
+      "description": "",
+      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slide.meguro.ryuzee.com"
     },
     "https://speakerdeck.com/ayatokura/devsumi-14d8": {
@@ -812,7 +794,7 @@
     },
     "https://speakerdeck.com/imdigitallab/shi-jie-zui-gao-falsexue-mai-chang-wosiyukaunseratotomonidezitarubian-ge-sitemita-debusami2020": {
       "title": "世界最高の靴売場をシューカウンセラーとともにデジタル変革してみた - デブサミ2020",
-      "description": "三越伊勢丹でのデジタル変革（DX）の取り組みについて紹介します。\n世界最高と言われる伊勢丹新宿店の婦人靴売場ではパーソナルフィッティングサービスYourFIT 365を提供しています。靴売場ともに、お客様ともに、サービスを作り、提供するにあたって何があったのかを紹介します。\nhttps://event.shoeisha.jp/devsumi/20200213/session/2388/\nhttps://togetter.com/li/1468450",
+      "description": "三越伊勢丹でのデジタル変革（DX）の取り組みについて紹介します。\n世界最高と言われる伊勢丹新宿店の婦人靴売場ではパーソナルフィッティングサービスYourFIT 365を提供しています。靴売場ともに、お客様ともに、サービスを作り、提供するにあたって何があったのかを紹介します。\nhttps://even&hellip;",
       "image": "https://files.speakerdeck.com/presentations/e7395893c46c443699c7eb5044d53a7b/slide_0.jpg?14890151",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -860,7 +842,7 @@
     },
     "https://speakerdeck.com/makoga/the-voyage-group-technical-assessment-system-is-made-by-all-engineers-and-the-effect-of-pair-assessment": {
       "title": "なぜ「技術力評価会」の評価者はペアなのか? - 8年半で378組の評価者ペアが835回評価した事例からみるペアの効果 - / The VOYAGE GROUP technical assessment system is made by all engineers. and the effect of pair assessment.",
-      "description": "2020年2月13日にデブサミ2020( https://event.shoeisha.jp/devsumi/20200213 )で登壇したときのスライドの公開版です。\n\n最初はペアの効果にもっとフォーカスしようと思っていたのですが、作ってみるとペアの話だけではなく、エンジニア全体で「ともにつくる」評価制度の話になりました。\n\n",
+      "description": "2020年2月13日にデブサミ2020( https://event.shoeisha.jp/devsumi/20200213 )で登壇したときのスライドの公開版です。\n\n最初はペアの効果にもっとフォーカスしようと思っていたのですが、作ってみるとペアの話だけではなく、エンジニア全体で「ともにつくる」&hellip;",
       "image": "https://files.speakerdeck.com/presentations/1649106571ec469c80b7fe978f86b832/slide_0.jpg?14975482",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -884,19 +866,19 @@
     },
     "https://speakerdeck.com/nihonbuson/developers-summit-2020": {
       "title": "テストコードを書き始める前に考えるべきテストの話 #DevSumi / Developers_Summit_2020",
-      "description": "以下のイベントの投影資料です。\nhttps://event.shoeisha.jp/devsumi/20200213/session/2364/\n\n発表時の諸注意など\nhttp://nihonbuson.hatenadiary.jp/entry/2020/01/31/090000\n\nお問い合わせは  https://twitter.com/nihonbuson まで。\n\n\n【発表資料中のURL】\n\nP2 Agile Testing Fellow\nhttps://agiletestingfellow.com/\n\nP15 ISTQBテスト技術者資格制度 Foundation Level シラバス 日本語版 Version 2011.J02\nhttp://jstqb.jp/dl/JSTQB-SyllabusFoundation_Version2011.J02.pdf\n\nP20 概説テスト分析\nhttp://www.slideshare.net/takashiyamasaki378/ss-55384920\n\nP48 テスト設計チュートリアル U-30クラス向け 2020年度版\nhttp://aster.or.jp/business/contest/doc/2020_U-30_V1.0.0.pdf#page=65\n\nP57 あなたがやっているのはテスティングかチェッキングか？\nhttps://www.infoq.com/jp/news/2009/12/testing-or-checking\n\nP96 [改訂新版]マインドマップから始めるソフトウェアテスト\nhttps://www.amazon.co.jp/dp/4297105063/\n\nP97 ソフトウェアテスト技法ドリル―テスト設計の考え方と実際\nhttps://www.amazon.co.jp/dp/4817193603\n\nP97 ソフトウェアテスト技法練習帳 ~知識を経験に変える40問~\nhttps://www.amazon.co.jp/dp/429711061X/\n\nP98 Agile Testing Condensed: A Brief Introduction (English Edition)\nhttps://www.amazon.co.jp/dp/B07YR4CC4B\n\nP102 JaSST\nhttp://www.jasst.jp/\n\nP103 WACATE\nhttps://wacate.jp/\n\nP106 ISTQBテスト技術者資格制度 Foundation Level シラバス 日本語版 Version 2018.J03\nhttp://jstqb.jp/dl/JSTQB-SyllabusFoundation_Version2018.J03.pdf",
+      "description": "以下のイベントの投影資料です。\nhttps://event.shoeisha.jp/devsumi/20200213/session/2364/\n\n発表時の諸注意など\nhttp://nihonbuson.hatenadiary.jp/entry/2020/01/31/090000\n\nお問い合&hellip;",
       "image": "https://files.speakerdeck.com/presentations/0aa2f2df585d456e82b1102a2298ae82/slide_0.jpg?14882647",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/nishiuma/devsumi-backlogworld2020": {
       "title": "Backlog World 2020 でともに学びましょう/devsumi_BacklogWorld2020",
-      "description": "Developers Summit 2020 「あのイベントの裏側が知れる！？カンファレンス運営者LT」 でお話した 「Backlog World 2020 でともに学びましょう」 です。\nBacklog World 2020 by #JBUG \nhttps://event.shoeisha.jp/devsumi/20200213/session/2382/\n",
+      "description": "Developers Summit 2020 「あのイベントの裏側が知れる！？カンファレンス運営者LT」 でお話した 「Backlog World 2020 でともに学びましょう」 です。\nBacklog World 2020 by #JBUG \nhttps://event.shoeisha.jp/&hellip;",
       "image": "https://files.speakerdeck.com/presentations/b9309b21277544deb0d6f3cf73c4be57/slide_0.jpg?14879421",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
     "https://speakerdeck.com/nkajihara/how-describe-the-job-description": {
       "title": "エンジニアが人事と一緒に採用 活動する時に考えたい ジョブ・ディスクリプション / How describe the Job Description!",
-      "description": "「転職透明化らぼ」というコミュニティで、翔泳社様主催のデブサミ2020で登壇させて頂きました。その資料を公開したいと思います。\n\nエンジニアが、採用活動を始めるにあたって、まずはジョブ・ディスクリプションを整理することから始めることが多いと思います。\nその経験を通して気づいたことをまとめました。\n\nDevelopers Summit 2020\nhttps://event.shoeisha.jp/devsumi/20200213/session/2366/ ",
+      "description": "「転職透明化らぼ」というコミュニティで、翔泳社様主催のデブサミ2020で登壇させて頂きました。その資料を公開したいと思います。\n\nエンジニアが、採用活動を始めるにあたって、まずはジョブ・ディスクリプションを整理することから始めることが多いと思います。\nその経験を通して気づいたことをまとめました。\n&hellip;",
       "image": "https://files.speakerdeck.com/presentations/6432939e76a54a3cb9a215461c1c187b/slide_0.jpg?14882237",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -914,7 +896,7 @@
     },
     "https://speakerdeck.com/shin1985/developers-summit-2020": {
       "title": "少量データで軽量な機械学習の手法について #devsumi / Developers Summit 2020",
-      "description": "DevelopersSummit 2020(Day1)にて発表させて頂いた資料です。\n登壇者 秋吉信吾( https://twitter.com/a_shin1985 )\n\n# 動画部分はこちらを御覧ください。\n## 音声話者特定デモ\n https://www.youtube.com/watch?v=VLez2I0jUQ4&t=1s\n\n## リアルタイムモーション推定デモ\n https://www.youtube.com/watch?v=TYpAHk5n0DA\n\n# 少量データで軽量な機械学習の手法について\n https://event.shoeisha.jp/devsumi/20200213/session/2381/\n\n株式会社QuantumCore\nhttps://www.qcore.co.jp/\n\nAPIについてぜひお問い合わせ下さい。\n",
+      "description": "DevelopersSummit 2020(Day1)にて発表させて頂いた資料です。\n登壇者 秋吉信吾( https://twitter.com/a_shin1985 )\n\n# 動画部分はこちらを御覧ください。\n## 音声話者特定デモ\n https://www.youtube.com/watc&hellip;",
       "image": "https://files.speakerdeck.com/presentations/7d5e905136964b4eb57249b22044e48c/slide_0.jpg?14919869",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -932,7 +914,7 @@
     },
     "https://speakerdeck.com/tbpgr/recruit-engineers-who-think-both-engineers-and-human-resources": {
       "title": "エンジニアと人事がともに考えるエンジニア採用 / recruit-engineers-who-think-both-engineers-and-human-resources",
-      "description": "デブサミ2020登壇資料。「エンジニアと人事がともに考えるエンジニア採用」 #転職透明化らぼ。( https://event.shoeisha.jp/devsumi/20200213/session/2366/ )\nこのスライドにつづくコンテンツ\n\n・「エンジニアと企業、それぞれの立場から見た採用市場の実情」 - スライド非公開。LAPRASさんでスライドの内容に近い内容をイベントで取り扱っているそうなので、気になる方は問い合わせてみてください\n・「エンジニアが人事と一緒に採用活動する時に考えたいジョブ・ディスクリプション」 - https://speakerdeck.com/nkajihara/how-describe-the-job-description\n・ 「認識ギャップが不幸の始まり…不思議な造語「カジュアル面談」を考える」- https://speakerdeck.com/nulabinc/think-about-casual-interview-devsumi-2020",
+      "description": "デブサミ2020登壇資料。「エンジニアと人事がともに考えるエンジニア採用」 #転職透明化らぼ。( https://event.shoeisha.jp/devsumi/20200213/session/2366/ )\nこのスライドにつづくコンテンツ\n\n・「エンジニアと企業、それぞれの立場から見た採用&hellip;",
       "image": "https://files.speakerdeck.com/presentations/c27214791f914a2d9c9cdf0f30c7b928/slide_0.jpg?14873483",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -944,7 +926,7 @@
     },
     "https://speakerdeck.com/toricls/service-meshes-do-we-really-need-them-what-problems-do-they-solve": {
       "title": "サービスメッシュは本当に必要なのか、何を解決するのか / Service meshes - Do we really need them? What problems do they solve?",
-      "description": "Talked at AWS Summit Tokyo 2019 & Developers Summit 2020.\n\n説明つきの動画にてご覧になりたい方はこちらもどうぞ\n→ https://www.youtube.com/watch?v=ZwfdLAClzsc\n※ 2019年の動画のためスライドなど多少中身に違いがありますが、だいたい一緒です",
+      "description": "Talked at AWS Summit Tokyo 2019 & Developers Summit 2020.\n\n※本スライドは Developers Summit 2020 で利用したものです\n\n説明つきの動画にてご覧になりたい方はこちらもどうぞ\n→ https://www.youtub&hellip;",
       "image": "https://files.speakerdeck.com/presentations/6eeb6e9b1220447d909ef578d60f8478/slide_0.jpg?14888693",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -974,7 +956,7 @@
     },
     "https://speakerdeck.com/ytaka23/developers-summit-2020": {
       "title": "「厳密な共通言語」としての形式手法 #devsumi / Developers Summit 2020",
-      "description": "Developers Summit 2020 で使用したスライドです。\n\n言葉というものは曖昧です。複数人が「ともにつくる」システムにおいて、メンバ間で仕様を正しく共有することは非常に重要ですが、一方で言葉の裏側に隠された「暗黙の仮定」を見抜くことは簡単ではありません。このような仕様の曖昧性への対抗手段として、本セッションでは「形式手法」を紹介します。形式手法ではシステムの挙動を数学的に記述することにより、自然言語の持つ曖昧性を排除し、仕様が満たされるかどうかを厳密に検証することが可能になります。あなたの頭の中にある仕様がどのように「数学的な記述」に変換されるのか、具体例を通して体験してみませんか？\n\nイベント概要：https://event.shoeisha.jp/devsumi/20200213/session/2380/",
+      "description": "Developers Summit 2020 で使用したスライドです。\n\n言葉というものは曖昧です。複数人が「ともにつくる」システムにおいて、メンバ間で仕様を正しく共有することは非常に重要ですが、一方で言葉の裏側に隠された「暗黙の仮定」を見抜くことは簡単ではありません。このような仕様の曖昧性への対抗&hellip;",
       "image": "https://files.speakerdeck.com/presentations/fc2ca53e11644fa1aa1168176bd54bee/slide_0.jpg?14889532",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     },
@@ -999,7 +981,7 @@
     "https://web.giji.io": {
       "title": "GIJI -ギジ- リアルタイム議事録共有サービス",
       "description": "「リアルタイム議事録で会議のムダを省く」新しい議事録共有サービスGIJIを体感してみよう！",
-      "image": "https://web.giji.io/wp-content/themes/giji_theme/common/img/gijilogo_fb.png",
+      "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://web.giji.io"
     },
     "https://www.prime-strategy.co.jp/resource/pdf/DevelopersSummit2020.pdf": {
@@ -1009,147 +991,147 @@
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.prime-strategy.co.jp"
     },
     "https://www.pythonic-exam.com/archives/news/devsumi2020wintokyo": {
-      "title": "デブサミの講演資料を公開しました。 | Python試験・資格、データ分析試験・資格を運営する一般社団法人Pythonエンジニア育成推進協会のページです。",
+      "title": "デブサミの講演資料を公開しました。 – Python試験・資格、データ分析試験・資格を運営する一般社団法人Pythonエンジニア育成推進協会のページです。",
       "description": "2020年14日のDeveloper's Summit 2020で講演した以下の資料を公開しました。会場は満席となり立ち見もあり、ありがたい限りです。",
-      "image": "",
+      "image": "https://www.pythonic-exam.com/wp-content/uploads/2020/02/86280822_3832928830065643_8573275895622533120_n.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.pythonic-exam.com"
     },
     "https://www.slideshare.net/DaizenIkehara/13e7-twilioquest-3": {
       "title": "13-E-7 クラウドサービスとゲーミフィケーション: 「TwilioQuest 3」を用いた開発者オンボーディング",
-      "description": "13-E-7 クラウドサービスとゲーミフィケーション: 「TwilioQuest 3」を用いた開発者オンボーディング - Download as a PDF or view online for free",
+      "description": "2020年2月13-14日に開催されたDevelopers Summit 2020のセッション13-E-7で登壇させていただいた資料です。\nTwilioQuest 3: https://twilio.com/quest - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit2020-200214061215-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/HirokiHachisuka/ss-199682982": {
       "title": "組織にモヤっとしたら聞く話 ~明日の自分と向き合う時間~",
-      "description": "組織にモヤっとしたら聞く話 ~明日の自分と向き合う時間~ - Download as a PDF or view online for free",
+      "description": "2019/11/30 Developers Boost #A-6 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/20191130-191130055533-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/SORACOM/developer-summit-2020": {
       "title": "起業家的？！エンジニアのススメ | Developer Summit 2020",
-      "description": "起業家的？！エンジニアのススメ | Developer Summit 2020 - Download as a PDF or view online for free",
+      "description": "起業家的？！エンジニアのススメ\nDeveloper Summit 2020（13-B-1）\n\n株式会社ソラコム\n代表取締役社長　玉川 憲 - View online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/20200213-devsumi-final-public-200213024056-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/TadahiroYasuda/joyinc7": {
       "title": "日本にJoy,Incを創る！どん底からスタートしたぼくらのジョイインクジャーニー7年間の軌跡",
-      "description": "日本にJoy,Incを創る！どん底からスタートしたぼくらのジョイインクジャーニー7年間の軌跡 - Download as a PDF or view online for free",
+      "description": "2013年ごろ、色々な問題が噴出し、会社としても個人（経営者）としてもどん底の状態でした。\nそこから、色々な取り組みを行い、少しづつ会社の状態がよくなり素晴らしいメンバーにも恵まれ、会社の良い文化（カルチャー）が形成されるようになりました。\n\nその過程のなかで2017年8月「Joy,Inc.」に出会いました。\n「Joy,Inc」とは、Menlo InnovationsのCEOであるリチャード・シェリダンさんが執筆した本です。職場に喜びをもたらす知恵や経営手法だけでなく、顧客も巻き込んでより良い製品を作り、事業を継続させる手法などについて書かれた素晴らしい本です。\nこの本に共感しぼくらもこんな会社に成りたい！と決意。それまでの会社の文化を良くするための取り組みを更に推進していきました。\n\n会社のカルチャーを変えることはとても困難です。それをどのような取り組みを行い実行してきたのか、そんなぼくらのジョイインクジャーニーの軌跡を共有したいと思います。そのジャーニーの中でやってきたこと、失敗したこと、いまも続けていることを含めて赤裸々にお話したいと思っています。このぼくたちの経験が、みなさんのジョイインクジャーニーに役立てていただけるのであれば大変嬉しく思います。 - Download as a PPTX, PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumi11-200214071531-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/aratafuji/ss-227904762": {
       "title": "アジャイル開発の原則を守りつつ、マルチサイト開発を行なう！",
-      "description": "アジャイル開発の原則を守りつつ、マルチサイト開発を行なう！ - Download as a PDF or view online for free",
+      "description": "Developers Summit 2020 [14-E-4] で発表したスライドです。 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developers-summit-2020-14e4-agile-offshore-200214053753-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/codeforjapan/code-for-japan-227910934": {
       "title": "エンジニアよ、今こそ社会課題に立ち向かおう！- Code for Japan",
-      "description": "エンジニアよ、今こそ社会課題に立ち向かおう！- Code for Japan - Download as a PDF or view online for free",
+      "description": "2020年2月14日、Devlopers Summit 2020 での講演資料です。\nなぜエンジニアの参加が社会課題解決に必要なのか？をお伝えしています。\n講演中にいただいた質問への解答も、最後の方につけております。\nCC BY-SA 4.0 attribution Hal Seki - Download as a PPTX, PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/presentation1-200214070524-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/devsumi/13b6honda": {
       "title": "【13-B-6】Hondaの生産技術屋さんがソフトウェア開発でアジャイルを初導入し組織変革に挑戦",
-      "description": "【13-B-6】Hondaの生産技術屋さんがソフトウェア開発でアジャイルを初導入し組織変革に挑戦 - Download as a PDF or view online for free",
+      "description": "Developers Summit 2020【13-B-6】ホンダエンジニアリング株式会社様の講演資料です。 - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumi202013b6hondaengineering-200220034756-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/dmasubuchi/ss-227811050": {
       "title": "出勤から企業開発者を解放し、エンジニアの働き方改革を実現するリモート開発環境構築",
-      "description": "出勤から企業開発者を解放し、エンジニアの働き方改革を実現するリモート開発環境構築 - Download as a PDF or view online for free",
+      "description": "Developers Summit 2020 での講演資料です。働き方改革と言われて久しく、リモートでミーティングなんて事も当たり前になりつつあります。企業でどこからでも開発できる環境を実現するには、どうすれば良いかをテーマにお話しました。ひとえにリモートで得られる開発環境といっても、自宅、コワーキングスペース、オフショアでのチーム開発など目的も異なるので、セキュリティ、コンプライアンスやガバナンスなどの話も浮上してきます。様々な目的の要件や観点を整理し、今まで実際に構築された利用者のリモート開発環境構築について整理し、どのように実現したのか？をご紹介してます。豪華おまけ：企業でリモートワークを推進するための稟議書の書き方のコツ！ - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumi2020msslideshare-200213031554-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/i2key/devsumi-devsumia-227907062?ref=http://iwakiri.hatenablog.com/entry/2020/02/16/195321": {
       "title": "偶然の出来事の流れに身を任せエンジニアからマネジメントの道に進んだ話。 #devsumi #devsumia",
-      "description": "偶然の出来事の流れに身を任せエンジニアからマネジメントの道に進んだ話。 #devsumi #devsumia - Download as a PDF or view online for free",
+      "description": "https://event.shoeisha.jp/devsumi/20200213/session/2390/\n\nパネルディスカッションで利用したキャリアについての自分語りです。 - View online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/devsumiengineercareer-200214061835-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/masaya0730/ux-227867598": {
       "title": "UXデザインが大事なのはわかるけど\u000bエンジニアの私ができることってなんでしょう？\u000b",
-      "description": "UXデザインが大事なのはわかるけど\u000bエンジニアの私ができることってなんでしょう？\u000b - Download as a PDF or view online for free",
+      "description": "2020年2月13日Developers Summit 2020にて講演。\nhttps://event.shoeisha.jp/devsumi/20200213/session/2367/\n当日のtwitter https://togetter.com/li/1467911 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/andopresen200213-200213165531-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/niyalist/itmaas-227807839": {
       "title": "ITがモビリティを創る：MaaSに向けた技術とエンジニア像",
-      "description": "ITがモビリティを創る：MaaSに向けた技術とエンジニア像 - Download as a PDF or view online for free",
+      "description": "2020年2月13日開催「デベロッパーズサミット2020 ともにつくる」における講演資料です。\nhttps://event.shoeisha.jp/devsumi/20200213 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/developerssummit2020ito-200213023854-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/oracle4engineer/java-helidon": {
       "title": "【改訂版あり】クラウド・ネイティブ時代に最適なJavaベースのマイクロサービス・フレームワーク ～ Helidonの実力を見極めろ！",
-      "description": "【改訂版あり】クラウド・ネイティブ時代に最適なJavaベースのマイクロサービス・フレームワーク ～ Helidonの実力を見極めろ！ - Download as a PDF or view online for free",
+      "description": "※Helidonのサポートに関するアップデートを盛り込んだ新バージョンを参照ください\nhttps://www.slideshare.net/oracle4engineer/java-helidon-232475979\n\n翔泳社主催のソフトウェア開発者向けカンファレンス「Developers Summit 2020」(2020/2/14) 講演資料【14-C-5】\n\nMicroProfileの仕様についてはこちらの資料を参考にしてください\n(OCHaCafe Season 2 #4 - Cloud Native時代のモダンJavaの世界)\nhttp://tiny.cc/ochacafe-mp-slide\n - Download as a PPTX, PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/20200214devsumi2020public-200214102803-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/papanda/ss-227892467": {
       "title": "チーム・ジャーニー 逆境を越える、変化に強いチームをつくりあげるまで",
-      "description": "チーム・ジャーニー 逆境を越える、変化に強いチームをつくりあげるまで - Download as a PDF or view online for free",
+      "description": "devsumi2020でお話したこと - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/teamjourney-200214031106-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/papanda/ss-227932503?ref=http://iwakiri.hatenablog.com/entry/2020/02/16/195321": {
       "title": "自分のハンドルは自分で握れ",
-      "description": "自分のハンドルは自分で握れ - Download as a PDF or view online for free",
+      "description": "デブサミ2020 14-A-8 - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/keiei-200214133940-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/ssuser91c7c7/105-227849243": {
       "title": "創業105年の旅館運営企業が実現した 毎週リリースするチームの作り方",
-      "description": "創業105年の旅館運営企業が実現した 毎週リリースするチームの作り方 - Download as a PDF or view online for free",
+      "description": "創業105年の星野リゾートでは、他社と差別化を図るために、多くのシステムを独自に作っていたが、旅館運営企業を生業であったため、ほぼ全てのシステムを外部に発注していました。\nそのため、近年の技術の進化やビジネスの展開にシステムが追いつかず、システムが企業のボトルネックになっていました。\n本セッションでは、非IT企業である星野リゾートが、システム開発の内製化を目指し、どのように毎週リリースするチームを一から構築したのかお話いたします。 - Download as a PDF, PPTX or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/13-d-4developerssummit2020-200213114946-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/techblogyahoo/2-devboost-202137441": {
       "title": "入社2年目からスクラムマスターとしてチーム改善に取り組んだ話 #devboost",
-      "description": "入社2年目からスクラムマスターとしてチーム改善に取り組んだ話 #devboost - Download as a PDF or view online for free",
+      "description": "Developers Boost 2019にて発表した「C-5 入社2年目からスクラムマスターとしてチーム改善に取り組んだ話」の発表資料となります。\nhttps://event.shoeisha.jp/devboost/20191130/session/2248/ - Download as a PDF or view online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/upload-2-191206042347-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.slideshare.net/techblogyahoo/htmlportal-paypayyahoo-devsumi": {
       "title": "新しいHTML<portal>を利用した画面遷移設計 〜PayPayモールとYahoo!ニュースの事例を添えて〜 #devsumi",
-      "description": "新しいHTML<portal>を利用した画面遷移設計 〜PayPayモールとYahoo!ニュースの事例を添えて〜 #devsumi - Download as a PDF or view online for free",
+      "description": "Developers Summit 2020の登壇資料です。\n新しいHTML要素の<portal>を利用するにあたってのデザイン方法や、詳細な技術仕様と実装方法について説明しました。 - View online for free",
       "image": "https://cdn.slidesharecdn.com/ss_thumbnails/upload-200214002908-thumbnail.jpg?width=640&height=640&fit=bounds",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
     },
     "https://www.yokoyan.net/entry/2020/02/14/115415": {
       "title": "【デブサミ2020レポート】開発に集中するためのJava on Serverless #devsumiC - 紙一重の積み重ね",
       "description": "はじめに 2020年2月14日に開催されたDevelopers Summit2020に参加してきました。 event.shoeisha.jp テーマ 【14-C-2】開発に集中するためのJava on Serverless カテゴリ アプリケーション開発 登壇者 下川 賢介さん[アマゾン ウェブ サービス ジャパン] @_kensh 発表資料 講演メモ Serverlessってなんですか？ みんな使ってます？？ 参加者の半分くらい挙手 2002年にAmazon.comを改修した 役割の違い モノリス 全部担当 マイクロサービス 単一機能を担当 それを組み合わせていく 独立している 分散している…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yokoyantech/20200214/20200214115603.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/628bd16f22c6fe7f6202c96bfa647e53d316aade/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyokoyantech%2F20200214%2F20200214115603.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     },
     "https://www.yokoyan.net/entry/2020/02/14/125131": {
       "title": "【デブサミ2020レポート】A retro on agile ー アジャイルをふりかえる #devsumiA - 紙一重の積み重ね",
       "description": "はじめに 2020年2月14日に開催されたDevelopers Summit2020に参加してきました。 event.shoeisha.jp テーマ 【14-A-3】A retro on agile ー アジャイルをふりかえる カテゴリ エンジニア組織？（記載なし） 登壇者 Jason Wonさん[Atlassian] 初めまして、J村ですwwww 奥さんが日本の方とのこと JIRA作ってます。JIRA使ってますか？ 来場者もたくさん使ってる あとらし庵www 発表資料 講演メモ アジャイルは日本で誕生した 竹内先生と野中先生の論文より 2001年2月13日 アジャイルソフトウェア開発宣言発表…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yokoyantech/20200214/20200214125307.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/c6065edeabd93eaef1bdacdec7f1264aec9162c9/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyokoyantech%2F20200214%2F20200214125307.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     },
     "https://www.yokoyan.net/entry/2020/02/14/150207": {
       "title": "【デブサミ2020レポート】マルチクラウドに向けてNGINX活用促進する為に知っておいてほしいこと #devsumiD - 紙一重の積み重ね",
       "description": "はじめに 2020年2月14日に開催されたDevelopers Summit2020に参加してきました。 event.shoeisha.jp テーマ 【14-D-5】マルチクラウドに向けてNGINX活用促進する為に知っておいてほしいこと カテゴリ アプリケーション開発 登壇者 鈴木 孝彰さん[NGINX (Part of F5)] 発表資料 講演メモ みなさんの使い方 Nginxを使ったことがある人？ 参加者の9割くらい リバースプロキシで使っている人？ 8割くらい？ K8sで使っている人？ 少ない？ locationのすべての挙動がわかる人？ かなり少ない？ NGINX利用するぞ on Li…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yokoyantech/20200214/20200214150143.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/35b8e578a4a50f585daf79586870bc549e4e7fce/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyokoyantech%2F20200214%2F20200214150143.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     },
     "https://www.yokoyan.net/entry/2020/02/14/161301": {
       "title": "【デブサミ2020レポート】メルペイリリースとその後一年間の裏側と学び #devsumiD - 紙一重の積み重ね",
       "description": "はじめに 2020年2月14日に開催されたDevelopers Summit2020に参加してきました。 event.shoeisha.jp テーマ 【14-D-6】メルペイリリースとその後一年間の裏側と学び カテゴリ エンジニア組織 登壇者 木村 秀夫さん[メルペイ] @hidek ISPでキャリアをスタート 2009年、DeNA入社 2018年より、株式会社メルペイVP of Engineering 発表資料 講演メモ メルペイとは 19年2月13日リリース リリース1周年！！ メルカリとは会社が別 メルカリの売上金がすぐに使える 決済方法 iD コード支払い なんちゃらpayがたくさんあ…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yokoyantech/20200214/20200214161129.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/0cd7214f7c9bdd63081fa8472d419d30b1d13813/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyokoyantech%2F20200214%2F20200214161129.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     },
     "https://www.yokoyan.net/entry/2020/02/14/172352": {
       "title": "【デブサミ2020レポート】TOYOTA x Serverless x Microservices 〜 グローバル展開のコネクティッドカーを支えるアーキテクチャとエンジニアリングチーム #devsumiA - 紙一重の積み重ね",
       "description": "はじめに 2020年2月14日に開催されたDevelopers Summit2020に参加してきました。 event.shoeisha.jp テーマ 【14-A-7】TOYOTA x Serverless x Microservices 〜 グローバル展開のコネクティッドカーを支えるアーキテクチャとエンジニアリングチーム カテゴリ アーキテクチャ 登壇者 浦山 雄也さん[トヨタ自動車] Uchiumiさん[AWS] 発表資料 講演メモ1：浦山さんより 若手主導のチャレンジングなチーム 20代中心のチーム 裏山さんは入社３年目 めっちゃ若い なぜトヨタがサーバレスを選んだか？ コネクテッド・カー…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yokoyantech/20200214/20200214172258.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/02406211fe700ba7be53f0344a51725bb2e6586e/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyokoyantech%2F20200214%2F20200214172258.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     },
     "https://www.yokoyan.net/entry/2020/02/14/191647": {
       "title": "【デブサミ2020レポート】IT業界で誰もが輝くために：ダイバーシティを考える #devsumiD - 紙一重の積み重ね",
       "description": "はじめに 2020年2月14日に開催されたDevelopers Summit2020に参加してきました。 event.shoeisha.jp テーマ 【14-D-8】IT業界で誰もが輝くために：ダイバーシティを考える カテゴリ エンジニアの生き方 登壇者 川口 耕介さん[CloudBees] 職業「戸倉彩」さん 湊川 あいさん[湊川プロジェクト] セッション1【誰にでも開かれたソフトウェア開発を目指して：多様性を巡る僕の旅】 登壇者 川口 耕介さん[CloudBees] ずっとカリフォルニアに住んでいた 発表資料 講演メモ 多様性の事業貢献 阻んでいるのは悪意を持っている人ではない ビジネスの…",
-      "image": "https://cdn-ak.f.st-hatena.com/images/fotolife/y/yokoyantech/20200214/20200214191532.jpg",
+      "image": "https://cdn.image.st-hatena.com/image/scale/abbcf9e840c56eba3471e22220e17b8b261636b8/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyokoyantech%2F20200214%2F20200214191532.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.yokoyan.net"
     }
   },
@@ -1157,7 +1139,7 @@
     "https://github.com/sindresorhus/query-string": {
       "title": "GitHub - sindresorhus/query-string: Parse and stringify URL query strings",
       "description": "Parse and stringify URL query strings. Contribute to sindresorhus/query-string development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/4c6edb70d1626cea75d1f4925b77e0fc4614ccba4b1bcf30d13b0915ac23bb0d/sindresorhus/query-string",
+      "image": "https://opengraph.githubassets.com/337d5acaedcda2f381171ddb2608d09c1ce3a558a2bbd6d82466bcf5dc4eece4/sindresorhus/query-string",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://reacttraining.com/react-router": {
@@ -1218,8 +1200,8 @@
     },
     "https://qiita.com/kshibata101/items/0e13c420080a993c5d16": {
       "title": "slackのIncoming webhookが新しくなっていたのでまとめてみた - Qiita",
-      "description": "会社では通知したい情報をIncoming Webhook経由でSlackに通知しているのですが、項目を変更しようと思ってドキュメントを調べたところ、Webhook周りの方針がいつの間にか変更になって…",
-      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fcdn.qiita.com%2Fassets%2Fpublic%2Farticle-ogp-background-9f5428127621718a910c8b63951390ad.png?ixlib=rb-4.0.0&w=1200&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTkxNiZoPTMzNiZ0eHQ9c2xhY2slRTMlODElQUVJbmNvbWluZyUyMHdlYmhvb2slRTMlODElOEMlRTYlOTYlQjAlRTMlODElOTclRTMlODElOEYlRTMlODElQUElRTMlODElQTMlRTMlODElQTYlRTMlODElODQlRTMlODElOUYlRTMlODElQUUlRTMlODElQTclRTMlODElQkUlRTMlODElQTglRTMlODIlODElRTMlODElQTYlRTMlODElQkYlRTMlODElOUYmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtY2xpcD1lbGxpcHNpcyZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPWQ1YzgyMjMyOWQzZmZjNWM4ZGE5Y2UyYzVlY2MzZDFm&mark-x=142&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTYxNiZ0eHQ9JTQwa3NoaWJhdGExMDEmdHh0LWNvbG9yPSUyMzIxMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT0zNiZ0eHQtYWxpZ249bGVmdCUyQ3RvcCZzPTIzYzYxYzAzNzA1YjdhN2MxOWZjZjRmZDhjYjA5MzRk&blend-x=142&blend-y=491&blend-mode=normal&s=770b4f54b4f94a3b325102d725f4d224",
+      "description": "会社では通知したい情報をIncoming Webhook経由でSlackに通知しているのですが、項目を変更しようと思ってドキュメントを調べたところ、Webhook周りの方針がいつの間にか変更になっていたようです。 思ったより苦戦したので（とりわけドキュメントが英語しかなく）...",
+      "image": "https://qiita-user-contents.imgix.net/https%3A%2F%2Fqiita-user-contents.imgix.net%2Fhttps%253A%252F%252Fcdn.qiita.com%252Fassets%252Fpublic%252Farticle-ogp-background-afbab5eb44e0b055cce1258705637a91.png%3Fixlib%3Drb-4.0.0%26w%3D1200%26blend64%3DaHR0cHM6Ly9xaWl0YS11c2VyLXByb2ZpbGUtaW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnFpaXRhLWltYWdlLXN0b3JlLnMzLmFtYXpvbmF3cy5jb20lMkYwJTJGNTk2NCUyRnByb2ZpbGUtaW1hZ2VzJTJGMTQ3MzY4MjQyMj9peGxpYj1yYi00LjAuMCZhcj0xJTNBMSZmaXQ9Y3JvcCZtYXNrPWVsbGlwc2UmYmc9RkZGRkZGJmZtPXBuZzMyJnM9ZmUwYTIxOGZkZjNhMmI0YmZjYmU5MjUyZDllYmIyN2I%26blend-x%3D120%26blend-y%3D462%26blend-w%3D90%26blend-h%3D90%26blend-mode%3Dnormal%26mark64%3DaHR0cHM6Ly9xaWl0YS1vcmdhbml6YXRpb24taW1hZ2VzLmltZ2l4Lm5ldC9odHRwcyUzQSUyRiUyRnMzLWFwLW5vcnRoZWFzdC0xLmFtYXpvbmF3cy5jb20lMkZxaWl0YS1vcmdhbml6YXRpb24taW1hZ2UlMkYwNmUzODdiMWNiZjRlOGY4Mjk0NzAwY2E2MTQ2ODY5YzA5MmNmNzNlJTJGb3JpZ2luYWwuanBnJTNGMTU0NDc2OTM5NT9peGxpYj1yYi00LjAuMCZ3PTQ0Jmg9NDQmZml0PWNyb3AmbWFzaz1jb3JuZXJzJmNvcm5lci1yYWRpdXM9OCZiZz1GRkZGRkYmYm9yZGVyPTIlMkNGRkZGRkYmZm09cG5nMzImcz1mNmE0NTQ2MGJjMWZmMWUwNWE1Y2Q5NzNhODgwODk3Yg%26mark-x%3D186%26mark-y%3D515%26mark-w%3D40%26mark-h%3D40%26s%3D11e11b124f9a88203856cabf73b355d9?ixlib=rb-4.0.0&w=1200&fm=jpg&mark64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTk2MCZoPTMyNCZ0eHQ9c2xhY2slRTMlODElQUVJbmNvbWluZyUyMHdlYmhvb2slRTMlODElOEMlRTYlOTYlQjAlRTMlODElOTclRTMlODElOEYlRTMlODElQUElRTMlODElQTMlRTMlODElQTYlRTMlODElODQlRTMlODElOUYlRTMlODElQUUlRTMlODElQTclRTMlODElQkUlRTMlODElQTglRTMlODIlODElRTMlODElQTYlRTMlODElQkYlRTMlODElOUYmdHh0LWFsaWduPWxlZnQlMkN0b3AmdHh0LWNvbG9yPSUyMzFFMjEyMSZ0eHQtZm9udD1IaXJhZ2lubyUyMFNhbnMlMjBXNiZ0eHQtc2l6ZT01NiZ0eHQtcGFkPTAmcz0xOTZhNmIxNGE2ZjJmZTAyZjhiMTQ4NTY4ZDY1NDM1ZQ&mark-x=120&mark-y=112&blend64=aHR0cHM6Ly9xaWl0YS11c2VyLWNvbnRlbnRzLmltZ2l4Lm5ldC9-dGV4dD9peGxpYj1yYi00LjAuMCZ3PTgzOCZoPTU4JnR4dD0lNDBrc2hpYmF0YTEwMSZ0eHQtY29sb3I9JTIzMUUyMTIxJnR4dC1mb250PUhpcmFnaW5vJTIwU2FucyUyMFc2JnR4dC1zaXplPTM2JnR4dC1wYWQ9MCZzPWFjNGU5OTk3OWI0YWFlNTlhN2QwMmY1Y2QzZGJiOWE5&blend-x=242&blend-y=454&blend-w=838&blend-h=46&blend-fit=crop&blend-crop=left%2Cbottom&blend-mode=normal&txt64=VklTSVRTIFRlY2hub2xvZ2llc-agquW8j-S8muekvg&txt-x=242&txt-y=539&txt-width=838&txt-clip=end%2Cellipsis&txt-color=%231E2121&txt-font=Hiragino%20Sans%20W6&txt-size=28&s=a759a35fa74dc11a6c591a32f05e2287",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://qiita.com"
     }
   },
@@ -1233,12 +1215,12 @@
     "https://github.com/textlint-ja/textlint-rule-preset-ja-technical-writing": {
       "title": "GitHub - textlint-ja/textlint-rule-preset-ja-technical-writing: 技術文書向けのtextlintルールプリセット",
       "description": "技術文書向けのtextlintルールプリセット. Contribute to textlint-ja/textlint-rule-preset-ja-technical-writing development by creating an account on GitHub.",
-      "image": "https://opengraph.githubassets.com/232491a94d8a2608a85917d4b2dd91a74f2d5e632751b6113d25146828b89744/textlint-ja/textlint-rule-preset-ja-technical-writing",
+      "image": "https://opengraph.githubassets.com/e7adf1e0d94332de24243de2baf2763308d6cef1e775032e38cf456ff2f03bb8/textlint-ja/textlint-rule-preset-ja-technical-writing",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/textlint/textlint": {
-      "title": "GitHub - textlint/textlint: The pluggable natural language linter for text and markdown.",
-      "description": "The pluggable natural language linter for text and markdown. - GitHub - textlint/textlint: The pluggable natural language linter for text and markdown.",
+      "title": "GitHub - textlint/textlint: textlint is the pluggable linter for natural language text.",
+      "description": "textlint is the pluggable linter for natural language text. - textlint/textlint",
       "image": "https://repository-images.githubusercontent.com/28478929/a029f79f-6cc3-4521-b01c-32240bc0b2c9",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
@@ -1258,20 +1240,20 @@
   "2020-01-04-jekyll-anthor-heading": {
     "https://github.com/allejo/jekyll-anchor-headings": {
       "title": "GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat:",
-      "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors ...",
-      "image": "https://opengraph.githubassets.com/ad941f8000e7429b7ebd35db01f94a0281bd0d30f44cbe2bff08ae4bd56dae69/allejo/jekyll-anchor-headings",
+      "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - allejo/jekyll-anchor-headings",
+      "image": "https://opengraph.githubassets.com/ec2fb5bf476a4cec9379aec3da0c0125dbd27881839a5e7a51a6be6574a239dc/allejo/jekyll-anchor-headings",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/allejo/jekyll-anchor-headings#parameters": {
       "title": "GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat:",
-      "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - GitHub - allejo/jekyll-anchor-headings: A GitHub Pages compatible way of adding anchors ...",
-      "image": "https://opengraph.githubassets.com/ad941f8000e7429b7ebd35db01f94a0281bd0d30f44cbe2bff08ae4bd56dae69/allejo/jekyll-anchor-headings",
+      "description": "A GitHub Pages compatible way of adding anchors to your headings without a plug-in or JavaScript :octocat: - allejo/jekyll-anchor-headings",
+      "image": "https://opengraph.githubassets.com/ec2fb5bf476a4cec9379aec3da0c0125dbd27881839a5e7a51a6be6574a239dc/allejo/jekyll-anchor-headings",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     },
     "https://github.com/allejo/jekyll-toc": {
       "title": "GitHub - allejo/jekyll-toc: A GitHub Pages compatible Table of Contents generator without a plugin or JavaScript :octocat:",
-      "description": "A GitHub Pages compatible Table of Contents generator without a plugin or JavaScript :octocat: - GitHub - allejo/jekyll-toc: A GitHub Pages compatible Table of Contents generator without a plugin o...",
-      "image": "https://opengraph.githubassets.com/a6794ad8a93a29da9fba691a29baca974d966ff438b6ad95a7e4e376eebb2fc7/allejo/jekyll-toc",
+      "description": "A GitHub Pages compatible Table of Contents generator without a plugin or JavaScript :octocat: - allejo/jekyll-toc",
+      "image": "https://opengraph.githubassets.com/51286d44f4045560d8d38e2c38ddb313a9057d43b2f755a828c1d2f10da65e0c/allejo/jekyll-toc",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
   }
