@@ -1,6 +1,8 @@
 name: Develop Check
 on:
   push:
+  pull_request:
+    types: [opened, reopened]
 
 jobs:
   check:
@@ -10,28 +12,69 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version-file: '.node-version'
           cache: npm
           cache-dependency-path: './package-lock.json'
 
-      - name: Package Clean Install
+      - name: Check if package-lock.json changed
+        id: check-lockfile
+        run: |
+          # pull_request 以外のイベントでは毎回チェックを実行する
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # PR の変更ファイル一覧を取得して package-lock.json が含まれるかチェックする
+          CHANGED_FILES=$(gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files --jq '.[].filename')
+          if [[ "$CHANGED_FILES" == *"package-lock.json"* ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "⏭️ package-lock.json not changed - skipping safe-chain check"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup safe-chain
+        if: steps.check-lockfile.outputs.changed == 'true'
+        run: npm i -g @aikidosec/safe-chain && safe-chain setup-ci
+
+      - name: Package Clean Install If Needs by safe-chain
         run: npm ci
 
       - name: Lint & Format Check
         run: npm run lint-check
 
       - name: Slack Notification by NonSuccess
-        uses: 8398a7/action-slack@v3
+        uses: slackapi/slack-github-action@v2
         if: success() != true
         with:
-          status: ${{ job.status }}
-          fields: repo,message,commit,author,action,eventName,ref,workflow
-          author_name: "check"
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+            text: ":x: *${{ env.STATUS_TEXT }}*"
+            blocks:
+              - type: "section"
+                text:
+                  type: "mrkdwn"
+                  text: ":x: *${{ env.STATUS_TEXT }}*"
+              - type: "section"
+                fields:
+                  - type: "mrkdwn"
+                    text: "*リポジトリ:*\n<${{ env.REPO_URL }}|${{ github.repository }}>"
+                  - type: "mrkdwn"
+                    text: "*JOB のステータス:*\n${{ job.status }}"
+              - type: "context"
+                elements:
+                  - type: "mrkdwn"
+                    text: "<${{ env.ACTIONS_URL }}|JOB>のログを確認してください"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          STATUS_TEXT: ${{ job.status == 'success' && '成功' || '失敗' }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
+          ACTIONS_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
