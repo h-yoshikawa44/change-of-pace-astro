@@ -33,7 +33,7 @@
     "@iconify-json/ri": "^1.2.5",
     "@iconify-json/system-uicons": "^1.2.4",
     "@iconify-json/teenyicons": "^1.2.2",
-    "@unocss/reset": "^66.5.1",
+    "@unocss/reset": "^66.5.9",
     "astro": "^5.16.0",
     "cheerio": "^1.1.2",
     "markdown-it": "^14.1.0",
@@ -48,9 +48,9 @@
     "@eslint/js": "^9.35.0",
     "@types/markdown-it": "^14.1.2",
     "@types/sanitize-html": "^2.16.0",
-    "@unocss/astro": "^66.5.1",
-    "@unocss/autocomplete": "^66.5.1",
-    "@unocss/eslint-config": "^66.5.1",
+    "@unocss/astro": "^66.5.9",
+    "@unocss/autocomplete": "^66.5.9",
+    "@unocss/eslint-config": "^66.5.9",
     "eslint": "^9.35.0",
     "eslint-plugin-astro": "^1.3.1",
     "eslint-plugin-jsx-a11y": "^6.10.2",
@@ -67,7 +67,7 @@
     "textlint-rule-preset-ja-technical-writing": "^12.0.2",
     "typescript": "^5.9.2",
     "typescript-eslint": "^8.43.0",
-    "unocss": "^66.5.1"
+    "unocss": "^66.5.9"
   },
   "volta": {
     "node": "24.11.1"
