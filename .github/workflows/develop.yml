@@ -58,23 +58,23 @@ jobs:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
           webhook-type: incoming-webhook
           payload: |
-            text: ":x: *{{ STATUS_TEXT }}*",
+            text: ":x: *${{ env.STATUS_TEXT }}*"
             blocks:
-              - type: section
+              - type: "section"
                 text:
-                  type: mrkdwn
+                  type: "mrkdwn"
                   text: ":x: *${{ env.STATUS_TEXT }}*"
-              - type: section
+              - type: "section"
                 fields:
-                  - type: mrkdwn
-                    text: "*リポジトリ:*\n${{ github.repository }}"
-                  - type: mrkdwn
+                  - type: "mrkdwn"
+                    text: "*リポジトリ:*\n<${{ env.REPO_URL }}|${{ github.repository }}>"
+                  - type: "mrkdwn"
                     text: "*JOB のステータス:*\n${{ job.status }}"
-              - type: context
+              - type: "context"
                 elements:
-                  - type: mrkdwn
+                  - type: "mrkdwn"
                     text: "<${{ env.ACTIONS_URL }}|JOB>のログを確認してください"
-
         env:
           STATUS_TEXT: ${{ job.status == 'success' && '成功' || '失敗' }}
+          REPO_URL: ${{ github.server_url }}/${{ github.repository }}
           ACTIONS_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
