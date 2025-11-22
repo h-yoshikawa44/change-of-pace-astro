@@ -4,7 +4,7 @@ Change Of Pace の機能の大まかな変化の記録。
 
 ## v7.3.0（2025-11-23）
 ### Updated
-- 各種アプデ(#225)
+- 各種アプデ(#224)
   - Node.js: 22.19.0 -> 24.1.1
   - TypeScript: 5.9.2 -> 5.9.3
   - Astro: 5.13.7 -> 5.16.0
@@ -12,7 +12,7 @@ Change Of Pace の機能の大まかな変化の記録。
   - 他全般
 
 ### Development Added
-- CI に safe-chain を導入(#225)
+- CI に safe-chain を導入(#224)
 
 ## v7.2.0（2025-09-15）
 ### Added
