@@ -19,7 +19,31 @@ jobs:
           cache: npm
           cache-dependency-path: './package-lock.json'
 
-      - name: Package Clean Install
+      - name: Check if package-lock.json changed
+        id: check-lockfile
+        run: |
+          # pull_request 以外のイベントでは毎回チェックを実行する
+          if [ "${{ github.event_name }}" != "pull_request" ]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+
+          # PR の変更ファイル一覧を取得して package-lock.json が含まれるかチェックする
+          CHANGED_FILES=$(gh api repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/files --jq '.[].filename')
+          if [[ "$CHANGED_FILES" == *"package-lock.json"* ]]; then
+            echo "changed=true" >> $GITHUB_OUTPUT
+          else
+            echo "changed=false" >> $GITHUB_OUTPUT
+            echo "⏭️ package-lock.json not changed - skipping safe-chain check"
+          fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup safe-chain
+        if: steps.check-lockfile.outputs.changed == 'true'
+        run: npm i -g @aikidosec/safe-chain && safe-chain setup-ci
+
+      - name: Package Clean Install If Needs by safe-chain
         run: npm ci
 
       - name: Lint & Format Check
