@@ -10,10 +10,10 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v6
         with:
           node-version-file: '.node-version'
           cache: npm
@@ -50,12 +50,40 @@ jobs:
         run: npm run lint-check
 
       - name: Slack Notification by NonSuccess
-        uses: 8398a7/action-slack@v3
+        uses: slackapi/slack-github-action@v2
         if: success() != true
         with:
-          status: ${{ job.status }}
-          fields: repo,message,commit,author,action,eventName,ref,workflow
-          author_name: "check"
+          webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
+          webhook-type: incoming-webhook
+          payload: |
+          {
+            "text": ":x: *{{ STATUS_TEXT }}*",
+            "blocks": [
+              {
+                "type": "section",
+                "text": {
+                  "type": "mrkdwn",
+                  "text": ":x: *{{ STATUS_TEXT }}*"
+                }
+              },
+              {
+                "type": "section",
+                "fields": [
+                  { "type": "mrkdwn", "text": "*リポジトリ:*\n${{ github.repository }}" },
+                  { "type": "mrkdwn", "text": "*JOB のステータス:*\n${{ job.status }}" }
+                ]
+              },
+              {
+                "type": "context",
+                "elements": [
+                  {
+                    "type": "mrkdwn",
+                    "text": "<${{ env.ACTIONS_URL }}|JOB>のログを確認してください"
+                  }
+                ]
+              }
+            ]
+          }
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          STATUS_TEXT: ${{ job.status == 'success' && '成功' || '失敗' }}
+          ACTIONS_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
