@@ -378,5 +378,265 @@
       "image": "",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://content.gitlab.com"
     }
+  },
+  "2025-11-25-jsconf-jp-2025": {
+    "https://trynova.dev/": {
+      "title": "Nova",
+      "description": "Nova is a JavaScript and WebAssembly engine written in Rust and following data-oriented design principles",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://trynova.dev"
+    },
+    "https://www.m3tech.blog/entry/2025/07/22/170104": {
+      "title": "Server Functions っぽい仕組みを自作して Lambda 関数呼び出しに適用してみた - エムスリーテックブログ",
+      "description": "デジスマチームの池奥です。 新卒2年目のソフトウェアエンジニアです！ 先週、人生で初めて外部モニターを買いました。快適な作業環境を手に入れたと思ったのですが、モニターのある環境に慣れておらずすっかり持て余しています。今のところ YouTube ビュワーとして活躍しています。 このブログは、デジスマチームブログリレーの 1 日目の記事です 🎉 イントロ 普段、私はNode.jsでバックエンドを実装することが多いのですが、一部の処理を AWS Lambda のような別の実行環境に切り出したい、というシーンに時々遭遇します。このような場合、Lambda の実装は別のパッケージに置き、元のサーバーから…",
+      "image": "https://cdn.image.st-hatena.com/image/scale/f7675cad2e068781cd1363e68335f34bffe7e73f/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn.blog.st-hatena.com%2Fimages%2Ftheme%2Fog-image-1500.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.m3tech.blog"
+    },
+    "https://wintertc.org": {
+      "title": "WinterTC",
+      "description": "WinterTC is an Ecma International Technical Committee aiming to provide a space for JS runtimes to collaborate on API interoperability.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://wintertc.org"
+    },
+    "https://tech.kickflow.co.jp/entry/2025/11/19/154642": {
+      "title": "JSConf にスポンサーしました & 参加してきました！ - kickflow Tech Blog",
+      "description": "JS Conf 幕間のスポンサー一覧 こんにちは、kickflow開発チームの芳賀です。 食欲の秋、芸術の秋、そしてカンファレンスの秋！ ということで、kickflowは2025年11月16日(日)に開催された JSConf JP 2025 にスポンサーとして参加いたしました。 JavaScriptコミュニティへの貢献と、素晴らしいエンジニアの皆様との交流を深めることを目的に協賛させていただきました。当日は私と同僚の秋山が一参加者として多くのセッションを聴講しましたので、本記事ではそのレポートをお届けします。",
+      "image": "https://cdn.image.st-hatena.com/image/scale/bf27e015d738971f798d06420f554acef7c6098b/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fk%2Fkickflow%2F20251119%2F20251119143630.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.kickflow.co.jp"
+    },
+    "https://jsconf.jp/2025/ja": {
+      "title": "JSConf JP 2025",
+      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the sixth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "image": "https://jsconf.jp/2025/opengraph-image?cedd85b13d04b972",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    },
+    "https://tech.layerx.co.jp/entry/2025/11/18/160506": {
+      "title": "JSConf JP 2025に参加しました！ - LayerX エンジニアブログ",
+      "description": "JSConf JP 2025の参加レポートになります！ 今回弊社はプレミアムスポンサーとしてブースを出展し、合計7名で参加しました。 tech.layerx.co.jp 今回のブースは毎度お馴染みのADRをお見せするもので、ありがたいことに非常に多くの方に来ていただきました。 不思議なポーズを取る弊社社員 唐突に始まったライブADRタイム また、弊社からはスポンサーセッション、スポンサーLTとして弊社エンジニアの@izumin,しぶいの2名が登壇しました。 参加記として印象的だったセッションやスポンサーブースを紹介します。 弊社登壇者と登壇内容 Web エンジニアが JavaScript で …",
+      "image": "https://cdn.image.st-hatena.com/image/scale/857e9dbe8c6f900aa0c925524b9d4ce480a2d0e6/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fy%2Fyata0e2b3c%2F20251118%2F20251118124051.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tech.layerx.co.jp"
+    },
+    "https://blog.cybozu.io/entry/2025/11/20/170000": {
+      "title": "JSConfにプレミアムスポンサーとして協賛し、ブース出展＋スポンサーセッションをしました！ - Cybozu Inside Out | サイボウズエンジニアのブログ",
+      "description": "11/16（日）に開催されたJSConf JP 2025にて、サイボウズがプレミアムスポンサーとして協賛し、ブース出展＋スポンサーセッションを行いました。 新卒フロントエンドエンジニアのmehm8128（めふも）が当日の様子をレポートします。 JSConf JPとは Japan Node.js Associationによって毎年開催されている、JavaScriptの祭典です。今年で6回目の開催となり、主にJavaScriptに関するセッションが行われます。 jsconf.jp ブース 今回のサイボウズのブースのテーマは「ブースのコンテンツは俺達だ！！」でした。タイムテーブルを決め、フロントエン…",
+      "image": "https://cdn.image.st-hatena.com/image/scale/ecc4c07a13766da2d9209fdd97e66a9d9bc2add5/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fc%2Fcybozuinsideout%2F20251120%2F20251120170004.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://blog.cybozu.io"
+    },
+    "https://min-common-api.proposal.wintertc.org/": {
+      "title": "Minimum common web API",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://min-common-api.proposal.wintertc.org"
+    },
+    "https://speakerdeck.com/berlysia/jsconfjp2025-javascript-for-vertical-writing-on-the-web": {
+      "title": "縦書きWebの実用を支えるJavaScript - JSConf JP 2025",
+      "description": "https://jsconf.jp/2025/en/talks/vertical-text-web-javascript\nHTML版（PC推奨） https://slides.berlysia.net/jsconfjp2025-javascript-for-vertical-writing-on-the-web/",
+      "image": "https://files.speakerdeck.com/presentations/c0dfcb8e7e6e4495889858de1be48563/slide_0.jpg?37403305",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/resilire/jsconf-jp-2025-deng-tan-zi-liao": {
+      "title": "JSConf_JP 2025 登壇資料",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/d0593b7c9ee24cac9a2548c6fe37d431/slide_0.jpg?37417177",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.jemimaabu.com/talks/not-javascript": {
+      "title": "I Can't Believe It's Not JavaScript! | Jemima Abu",
+      "description": "When it comes to design and creativity, it is important to consider how everyone will use the product you are building and put provisions for them into place.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.jemimaabu.com"
+    },
+    "https://speakerdeck.com/izumin5210/jsconf-jp-2025-sponsor-session": {
+      "title": "Web エンジニアが JavaScript で AI Agent を作る / JSConf JP 2025 sponsor session",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/03ea0d97981e4cb4a667b789bad34512/slide_0.jpg?37406535",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sosukesuzuki/awaithu-bichu-sinosutatukutoresunokun-nan-toshi-zhuang": {
+      "title": "JavaScriptにおけるasync/await呼び出しのスタックトレースの困難と実装",
+      "description": "JSConf JP 2025",
+      "image": "https://files.speakerdeck.com/presentations/9d253f25fe4643adb90c219393224f18/slide_0.jpg?37401191",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kojikojikoji37/astxreporterdetesutokara-guan-dian-katarogu-wozi-dong-sheng-cheng-si-llmtoren-jian-nogong-tong-specnisuru": {
+      "title": "AST×Reporterでテストから\"観点カタログ\"を自動生成し、LLMと人間の共通Specにする",
+      "description": "JSConfJP 2025の登壇資料です。\nhttps://jsconf.jp/2025/en/talks/ast-reporter-test-catalog\n\nタイトル:\n「AST×Reporterでテストから\"観点カタログ\"を自動生成し、LLMと人間の共通Specにする」\n\n概要:\nA&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/bf8bd6689a6b44bda1a1024b300fb5cf/slide_0.jpg?37400203",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://docs.google.com/presentation/d/1c6QDTjmaIKUJkjxU8LK7OBL8o8c5yXw-446ndjqW5tQ/edit?slide=id.g3a1982e81fd_0_26#slide=id.g3a1982e81fd_0_26": {
+      "title": "横断組織が向き合うVisual Regression Testing, JSConf JP 2025, 2025-11-16",
+      "description": "横断組織が向き合うVisual Regression Testing 清川 太雅 2025.11.16 JSConf JP 2025 Track C LT おはようございます！JSConf JP 2025 トラックC、盛り上がっていきましょう！ 「横断組織が向き合うVisual Regression Testing」というタイトルでLTやります！よろしくお願いします！ — Chromaticは使い続けるべきなのか —",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJnjM1kJ4Ikf8AD3Os49mnbXYLXHxt9Fld0eMGTmrsQrIaypAi9PzQgjDRjBXxOI9X2wecakKE9mvP04zNNiQ3IiF7jS2mTDTFriHKx3Hy4y80lmehe=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://speakerdeck.com/yagisanreports/nazeburauzadezhang-piao-wosheng-cheng-sitainoka-donoyouniburauzadezhang-piao-wosheng-cheng-surunoka": {
+      "title": "なぜブラウザで帳票を生成したいのか　どのようにブラウザで帳票を生成するのか",
+      "description": "JSConf JP 2025 デンキヤギセッションでのスライドです。",
+      "image": "https://files.speakerdeck.com/presentations/1b3ce51612904eb283a5492339cde2d8/slide_0.jpg?37438941",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/petamoriken/module-harmony": {
+      "title": "Module Harmony",
+      "description": "JSConf JP 2025",
+      "image": "https://files.speakerdeck.com/presentations/9ebe5c55ca1a4647b467f2f18b809b46/slide_0.jpg?37400747",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ssssota/understanding-atomics-api": {
+      "title": "Atomics APIを知る / Understanding Atomics API",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/46617802065b41bca33c0c9e9a8ee4fa/slide_0.jpg?37399440",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/progfay/error-dot-prototype-dot-stack-nojin-towei-lai": {
+      "title": "Error.prototype.stack の今と未来",
+      "description": "私たちが普段の開発で何気なく見ている `Error` の stack trace は実は標準化されていません。\nこのトークでは `Error.prototype.stack` について、各 JavaScript Runtime の実装と、これを標準化しようとする動きを紹介します。\n\nリンク集: h&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/2fc28ce1c1bc408a8d1ded0359605fb0/slide_0.jpg?37399518",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/k1tikurisu/implementing-ai-in-large-scale-products": {
+      "title": "大規模プロダクトで実践するAI活用の仕組みづくり",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/df5ca8e412884c26b7b35ec4c791f616/slide_0.jpg?37402377",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/l1lhu1hu1/lao-pu-nozhi-hui-toainoer-dao-liu-detiao-muyahoo-zhi-hui-dai-noshi-gu-ranaijin-hua": {
+      "title": "老舗の知恵とAIの二刀流で挑むYahoo!知恵袋の事故らない進化",
+      "description": "https://jsconf.jp/2025/ja/talks/line-yahoo-sponsor-session",
+      "image": "https://files.speakerdeck.com/presentations/5a0f04e5f59849a1ad499bef90a1f178/slide_0.jpg?37401688",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/sajikix/jsconfjp2025-cybozu-lt": {
+      "title": "推しProposalと広がる夢~Intl.MessageFormatとDomLocalization~",
+      "description": "JSConf JP2025\n- https://jsconf.jp/2025/en\nX\n- https://twitter.com/sajikix",
+      "image": "https://files.speakerdeck.com/presentations/792b9522b3ca49c99fdf028f8695396f/slide_0.jpg?37446844",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shibuiwilliam/aiezientoniyoruentapuraizuxiang-kesuraidojian-suo": {
+      "title": "AIエージェントによるエンタープライズ向けスライド検索！",
+      "description": "JS Conf 2025登壇資料です。\nhttps://jsconf.jp/2025/en",
+      "image": "https://files.speakerdeck.com/presentations/496308815d414578b98d58ce49485d0a/slide_0.jpg?37403082",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shirahama_x/the-story-of-continuing-seo-efforts-in-the-ai-era": {
+      "title": "AI時代もSEOを頑張っている話",
+      "description": "生成AIが普及する中で「SEOは不要になるのではないか」という議論がありますが、実際にはAI時代だからこそ、検索ロボットに正しく理解させるための厳密な設計と技術的な実装がより重要になっています。\n\n令和トラベルの具体的な取り組みとして「精緻なURL設計」と「徹底したサーバーサイドレンダリング」をご紹&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/7b898b41abc14bf7b36d9571fbe484d7/slide_0.jpg?37430384",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/xpromx/evolving-newts-typescript-backend-for-the-ai-driven-era": {
+      "title": "Evolving NEWT’s TypeScript Backend for the AI-Driven Era",
+      "description": "As NEWT grows, its TypeScript backend is evolving from a traditional monolith into a modular, clean, and AI-assisted architecture. This transformation a&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/ef73983d5e2c49c38b1eef465a2ac15f/slide_0.jpg?37417868",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nowaki28/media-capture-and-streams-w3cshi-yang-toxian-chang-denozhi-jian": {
+      "title": "Media Capture and Streams: W3C仕様と現場での知見",
+      "description": "このスライドはJSConfJP 2025での株式会社ドワンゴのスポンサーセッションで使用したものです。\n---\nMedia Capture and Streams API は、Web アプリケーションがカメラやマイクなどのメディアデバイスへアクセスし、MediaStreamTrack／MediaSt&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/45bd61d74b594ffcaea10513fa6874dc/slide_0.jpg?37402277",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kyntk/building-a-shared-platform-with-micro-frontends-operational-learnings": {
+      "title": "Micro Frontendsで築いた 共通基盤と運用の試行錯誤 / Building a Shared Platform with Micro Frontends: Operational Learnings",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/7eb1f9d874a74ac1851d5c1fa2346b3a/slide_0.jpg?37404151",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/techtver/tvernowebnei-zhi-hua-kai-fa-supidotopin-zhi-woliang-li-saserumadenodao-nori": {
+      "title": "TVerのWeb内製化 - 開発スピードと品質を両立させるまでの道のり",
+      "description": "JSConf JP 2025登壇資料",
+      "image": "https://files.speakerdeck.com/presentations/a4b5d36e54fa43b7a1c2f3ef23065406/slide_0.jpg?37408878",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shoota/da-gui-mo-monoreponozhi-xu-guan-li-shi-su-sinaiduo-yan-yu-hua-hurontoendonoyun-yong": {
+      "title": "大規模モノレポの秩序管理 失速しない多言語化フロントエンドの運用 / JSConf JP 2025",
+      "description": "JSConf 2025 / Findy Sponsor Key note",
+      "image": "https://files.speakerdeck.com/presentations/604def4c3d8f4b49b1975bec91f10bd9/slide_0.jpg?37423679",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/baseballyama/javascript-pasani-using-dui-ying-wosuruguo-cheng-deyu-etaekosisutemuhenoying-xiang": {
+      "title": "JavaScript パーサーに using 対応をする過程で与えたエコシステムへの影響",
+      "description": "このプレゼンテーションは、baseballyama氏とota-meshi氏が、JavaScriptパーサー `acorn` に `using` 構文（Explicit Resource Management） を対応させる過程と、その実装がJavaScriptエコシステム全体に与えた影響について解説する&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/e50586684f2c4707a666fa0c1b1acf64/slide_0.jpg?37401982",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://github.com/WinterTC55": {
+      "title": "WinterTC",
+      "description": "Technical Committee on Web-interoperable Server Runtimes - WinterTC",
+      "image": "https://avatars.githubusercontent.com/u/102753901?s=280&v=4",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/trynova/nova": {
+      "title": "GitHub - trynova/nova: JS engine lolz",
+      "description": "JS engine lolz. Contribute to trynova/nova development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/44c6848182e4a09eb6541ed6b0aac75ab9289a7ef03659eceb3aebf8ed957ec1/trynova/nova",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/joyeecheung/talks/blob/master/jsconfjp_2025/evolving-the-nodejs-module-loader.pdf": {
+      "title": "talks/jsconfjp_2025/evolving-the-nodejs-module-loader.pdf at master · joyeecheung/talks",
+      "description": "Slides for my talks. Contribute to joyeecheung/talks development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/521d78f26e260ce50f6c97d9f750597bc3fd181d24d2f221271780ccab00f5be/joyeecheung/talks",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/lucamug/knight": {
+      "title": "GitHub - lucamug/knight",
+      "description": "Contribute to lucamug/knight development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/9684c00de3b31ed36d1276397562ba79f3af22203c30ceafc7d8141c9c87386d/lucamug/knight",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://docs.google.com/presentation/d/1e1waxYgzcrH0YhgFXDDiyk2iVQVUw7-l7S4tDiP7s0o/edit": {
+      "title": "Tragedy_or_Hope_of_the_Commons_en_for_public",
+      "description": "Tragedy or Hope in the Commons: The Race for JavaScript Prototype Override",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJqahq_ogcxruoTHS77jpRXnwfR8m-NKDwYJpewGNP2cueff9Y48xlpnrfGTtCMFR7VY3uQb4H4nME0WKEn0XDvr_BZNlvzgw6IF7DK8LjjOabrjfc=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://github.com/AmazonAppDev/react-native-multi-tv-app-sample": {
+      "title": "GitHub - AmazonAppDev/react-native-multi-tv-app-sample: 📺🚀 React Native TV app sample for  Android TV, Fire TV (Fire OS and Vega OS), tvOS, and web. Features customizable drawer navigation 🗂️, content grid 🖼️, hero header 🦸‍♂️, and video player 🎥. Built with Expo. Perfect starter for cross-platform TV app development! 🌟",
+      "description": "📺🚀 React Native TV app sample for  Android TV, Fire TV (Fire OS and Vega OS), tvOS, and web. Features customizable drawer navigation 🗂️, content grid 🖼️, hero header 🦸‍♂️, and video player 🎥. Built...",
+      "image": "https://opengraph.githubassets.com/fe227ef26fa06cd91a575826a868be5630d2eb7767229c31f373b62129ad8851/AmazonAppDev/react-native-multi-tv-app-sample",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://engineering.reiwatravel.co.jp/blog/jsconf-2025": {
+      "title": "【イベントレポート】JSConf JP 2025に参加しました！ | 令和トラベル Engineering Blog",
+      "description": "",
+      "image": "https://www.notion.so/image/attachment%3A8f51e5d3-9311-4789-b061-55842fdbc64b%3A20251116.png?table=block&id=28f35afe-ab51-801e-b20d-f579ba658958&cache=v2",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://engineering.reiwatravel.co.jp"
+    },
+    "https://www.youtube.com/watch?v=xPApM00qfgY": {
+      "title": "JSConf JP 2025｜Track D",
+      "description": "https://jsconf.jp/2025/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/xPApM00qfgY/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLCUgMdXDahIRZOJmkqkTk_2PhBBAw",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=m9K2WW0K8uc": {
+      "title": "JSConf JP 2025｜Track B",
+      "description": "https://jsconf.jp/2025/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/m9K2WW0K8uc/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLADI9Er8p4oxnjuoPlnvbgG-THkxw",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=jaZp3mc6FU4": {
+      "title": "JSConf JP 2025｜Track C",
+      "description": "https://jsconf.jp/2025/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the fifth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/jaZp3mc6FU4/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgZShlMA8=&rs=AOn4CLCzEaVF3ltVQVEH9OFVlmCjyN47vg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=wPfp57BJdbg": {
+      "title": "JSConf JP 2025｜Track A",
+      "description": "https://jsconf.jp/2025/jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the sixth time event of jsconf in Japan. We ...",
+      "image": "https://i.ytimg.com/vi/wPfp57BJdbg/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGFQgXyhlMA8=&rs=AOn4CLAIi3HZBg4WcbMb1whKllLMg1nG8w",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://docs.google.com/presentation/d/19UK8oTPYkfHvYDO01cxWhquYYVICWFbf1tptN6kJCgk/mobilepresent?slide=id.g390d3f4f138_4_45": {
+      "title": "Talk Isn't What is most important_Slide",
+      "description": "type Speaker = { Name: \"rickyKim\"; Language: \"ko\" | \"en\" | \"ja\" | ; Programming: \"js\" | \"go\"; };",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJYnqRwgrQelDL_TR5Ppfrz49PHFBveikFoGR4pQCoaFdWmaG0UK-xtmBQT8biychz4_XHnoXYE_kJ_l9063z1bmixA0MN3xE_JAwhX8W9_J2xxo5M=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://developer.amazon.com/apps-and-games/vega": {
+      "title": "Vega | Amazon Appstore Developer Portal",
+      "description": "Introducing Vega OS. Create premium TV experiences for Vega OS with the latest tools and framework.",
+      "image": "https://dhhmpfovkf2ub.cloudfront.net/apps-and-games/vega.thumb.800.480.png?ck=1759254037",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.amazon.com"
+    }
   }
 }
