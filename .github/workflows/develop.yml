@@ -5,15 +5,15 @@ on:
 jobs:
   check:
     name: Lint
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     timeout-minutes: 5
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v6
+        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 #v6
 
       - name: Setup Node
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@2028fbc5c25fe9cf00d9f06a71cc4710d4507903 # V6
         with:
           node-version-file: '.node-version'
           cache: npm
@@ -44,13 +44,13 @@ jobs:
         run: npm i -g @aikidosec/safe-chain && safe-chain setup-ci
 
       - name: Package Clean Install If Needs by safe-chain
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Lint & Format Check
         run: npm run lint-check
 
       - name: Slack Notification by NonSuccess
-        uses: slackapi/slack-github-action@v2
+        uses: slackapi/slack-github-action@91efab103c0de0a537f72a35f6b8cda0ee76bf0a # 2.1.1
         if: success() != true
         with:
           webhook: ${{ secrets.SLACK_WEBHOOK_URL }}
