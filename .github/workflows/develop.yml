@@ -44,7 +44,7 @@ jobs:
         run: npm i -g @aikidosec/safe-chain && safe-chain setup-ci
 
       - name: Package Clean Install If Needs by safe-chain
-        run: npm ci
+        run: npm ci --ignore-scripts
 
       - name: Lint & Format Check
         run: npm run lint-check
