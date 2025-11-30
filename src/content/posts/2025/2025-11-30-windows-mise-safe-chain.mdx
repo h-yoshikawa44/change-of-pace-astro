@@ -1,0 +1,124 @@
+---
+title: "Windows + Git Bash環境でmiseとSafe Chainを共存させる"
+description: "Windows + Git Bash環境でもエイリアスを利用して、miseとSafe Chainを共存させて、安全かつ扱いやすくする方法"
+pubDate: "2025-11-30"
+updatedDate: "2025-11-30"
+category: "develop"
+tags: ["Windows", "mise", "Safe Chain"]
+---
+
+めちゃ久しぶりの小ネタ記事です。
+
+import OG from "@/components/OG.astro"
+
+## 背景
+筆者の個人の開発では Windows + Git Bash 環境を使っています。
+Node.js のバージョン管理ではしばらく Volta を使っていました。
+
+この Volta をより汎用性の高い mise に移行したかったのですが、Safe Chain と共存させるのに少しだけ工夫が必要だったので、備忘録として残しておきます。
+
+---
+
+mise は言語や CLI ツールのバージョン管理、環境変数やタスク管理の機能を提供するツールです。
+<OG url="https://github.com/jdx/mise" />
+
+Safe Chain は、マルウェアに汚染されているパッケージをブロックしてくれるツールで、最近流行っている Shai Hulud による攻撃に対する防御策の1つです。
+<OG url="https://github.com/AikidoSec/safe-chain" />
+
+詳細は各公式情報を参照してください。
+
+## 環境のつくり方
+### mise のインストール
+mise の公式ドキュメントにもある通り、winget での導入に対応しています。
+
+```sh
+winget install jdx.mise
+```
+
+winget で導入した場合は、パスを通す部分も自動で行ってくれるので楽ちんですね。
+
+### Node.js のインストール
+mise 経由で任意のバージョンの Node.js をインストールして、とりあえずグローバル使用設定にしておきます。
+
+```sh
+mise install node@24.11.1
+mise use --global node@24.11.1
+```
+
+### Safe Chain のインストール
+mise 経由で Safe Chain を導入します。
+```sh
+mise exec node -- npm install -g @aikidosec/safe-chain
+mise exec node -- safe-chain setup
+```
+
+この後にターミナルを再起動することで、Safe Chain が使えるようになるのですが...
+以下の動作確認用パッケージをインストールしようとしても、ブロックしてくれず🙄
+```sh
+mise exec node -- npm install safe-chain-test
+```
+
+また、`node`や`npm`コマンドを使うにあたり、毎回`mise exec node`を書くのがめんどくさいという課題もありました。
+Volta では直接`node`や`npm`コマンドを使っても、カレントディレクトリにおける設定バージョンを自動的に適用してくれていたため、これを mise でもやりたかったのです。
+
+### エイリアスの活用
+1. mise 経由でインストールした Safe Chain のマルウェア検知がうまく動作しない
+2. mise でバージョン管理している`node`や`npm`コマンドを実行するには、`mise exec node`をつける必要がある
+
+この2つの課題に対して、筆者の場合はエイリアスで解決しました。
+
+Bash の環境で読み込まれるファイルにエイリアスを設定しておきます。
+筆者の場合は、エイリアス用の別ファイルを用意して、それを`.bashrc`から読み込むようにしました。
+
+```sh:.bash_aliases
+# mise
+# 本来は mise activate を実行すれば、直接 node や npm コマンドが実行できるようになるが
+# Windows + Git Bash で mise activate すると git や vi などの PATH が通らなくなってしまう。
+# 環境変数の PATH に <homedir>\AppData\Local\mise\shims 通すことでも直接 node, npm コマンドが使えるようになるが、
+# Safe Chain がうまく動作してくれないため、エイリアスで対応する。
+if command -v mise >/dev/null 2>&1; then
+  alias node='mise exec node -- node'
+  alias npm='mise exec node -- aikido-npm'
+fi
+```
+
+```sh:.bashrc
+if [ -f ~/.bash_aliases ]; then
+  . ~/.bash_aliases
+fi
+```
+
+これで直接`node`や`npm`コマンドを書いても、実質的には mise を通したコマンド実行をしてくれるのでいい感じになりました。
+`npm`の方は`aikido-npm`にしているのがポイントです。これは通常の`npm`コマンドではなく、Safe Chain が提供している`npm`コマンドのラッパーにあたるものとなるため、Safe Chain が動作してくれるようになりました。
+今回は`npm`コマンドのみの対応ですが、他のパッケージマネージャーのコマンドでも同様にエイリアスで対応できそうです（筆者は未確認です）
+
+ちなみに直接`node`や`npm`コマンドを書けるようにする方法として、mise の公式ドキュメントに記載があった方法も試しました。
+しかし、筆者の環境では2つの課題の解決ができなかったため、今回の方法をとりました。
+
+その1：`.bashrc`に`mise activate bash`を実行する処理を記載しておく方法
+-> vi や git などほかのコマンドのパスが通らなくなってしまった。
+
+{/* <!-- textlint-disable ja-technical-writing/sentence-length --> */}
+
+その2：Windows の環境変数の PATH に`<homedir>\AppData\Local\mise\shims`を追加する
+-> 直接`node`や`npm`コマンドを実行できるようにはなったが、Safe Chain のマルウェア検知がうまく動作しなかった。
+  ただし、もし Git Hook で任意の npm パッケージを動作させたい時は、この PATH 追加が必要なようだった（セキュリティ的には Lifecycle Scripts の取り扱いは要注意...！）
+
+{/* <!-- textlint-enable ja-technical-writing/sentence-length --> */}
+
+### Safe Chain のマルウェア検知の動作確認
+マルウェア検知の動作確認用のパッケージをインストールしようとして、ブロックされていれば Safe Chain が動作しています。
+
+```sh
+> npm install safe-chain-test
+✖ Safe-chain: Malicious changes detected:
+ - safe-chain-test@0.0.1-security
+
+Safe-chain: Exiting without installing malicious packages.
+```
+
+---
+
+他にもよりよい方法はあるかもですが、とりあえず mise と Safe Chain の共存ができたので満足してます。
+Shai Hulud による攻撃怖いですしね...。
+皆様もご安全に開発を～。

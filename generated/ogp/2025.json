@@ -638,5 +638,19 @@
       "image": "https://dhhmpfovkf2ub.cloudfront.net/apps-and-games/vega.thumb.800.480.png?ck=1759254037",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://developer.amazon.com"
     }
+  },
+  "2025-11-30-windows-mise-safe-chain": {
+    "https://github.com/AikidoSec/safe-chain": {
+      "title": "GitHub - AikidoSec/safe-chain: Protect against malicious code installed via npm, yarn, pnpm, npx, and pnpx with Aikido Safe Chain. Free to use, no tokens required.",
+      "description": "Protect against malicious code installed via npm, yarn, pnpm, npx, and pnpx with Aikido Safe Chain. Free to use, no tokens required. - AikidoSec/safe-chain",
+      "image": "https://opengraph.githubassets.com/e1c0d8b6ac1192d3c6956e10dad2c3fb52f19af9ea865ea8ffa646984801b1de/AikidoSec/safe-chain",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://github.com/jdx/mise": {
+      "title": "GitHub - jdx/mise: dev tools, env vars, task runner",
+      "description": "dev tools, env vars, task runner. Contribute to jdx/mise development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/5b58796c4d4bd33d70cf5b53cb81b258aa378221fc732f602ff10a69293c3552/jdx/mise",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    }
   }
 }
