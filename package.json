@@ -68,8 +68,5 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.47.0",
     "unocss": "^66.5.9"
-  },
-  "volta": {
-    "node": "24.11.1"
   }
 }
