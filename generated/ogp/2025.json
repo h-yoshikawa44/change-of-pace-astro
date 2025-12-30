@@ -652,5 +652,37 @@
       "image": "https://opengraph.githubassets.com/5b58796c4d4bd33d70cf5b53cb81b258aa378221fc732f602ff10a69293c3552/jdx/mise",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
     }
+  },
+  "2025-12-30-looking-back-2025-tech": {
+    "https://zenn.dev/h_yoshikawa0724": {
+      "title": "よしさんの記事一覧",
+      "description": "Web Developer。頭の情報整理がてら記事書いてます。\n（基本的に個人ブログとZennでクロス投稿しています）\nTypeScript / React / Next.js \n※publicationに投稿するのはやめました",
+      "image": "https://lh3.googleusercontent.com/a-/AOh14GiwD5VEHFiHt6l5HHmCq_VAFJtJKmM2kUwebpZx=s250-c",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    },
+    "https://jsconf.jp/2025/ja": {
+      "title": "JSConf JP 2025",
+      "description": "jsconf.jp is a JavaScript festival in Japan powered by Japan Node.js Association. This is the sixth time event of jsconf in Japan. We would love to become a bridge between Japanese Web Developers and International Web Developers.",
+      "image": "https://jsconf.jp/2025/opengraph-image?cedd85b13d04b972",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://jsconf.jp"
+    },
+    "https://event.shoeisha.jp/devsumi/20250717": {
+      "title": "Developers Summit 2025 Summer（2025.07.17-18）",
+      "description": "7月17‐18日に東京駅直結、ＪＰタワー ホール＆カンファレンスで2日間開催！",
+      "image": "https://event.shoeisha.jp/static/images/event/1667/4_1200.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+    },
+    "https://findy-tools.connpass.com/event/347251/": {
+      "title": "実例！フロントエンドの技術選定とその後をADRから振り返る (2025/03/26 19:00〜)",
+      "description": "# 🎥 アーカイブ動画  アーカイブ動画はこちらから  # ✍️概要  昨今、フロントエンド開発における技術選定は多様化・高度化し、企業にとって最適な技術スタックの採用が難しくなっています。 またそのような状況下でコンテキストや成果を引き継ぐためのADR（Architecture Decision Record）という記録方法が注目されてきています。  本イベントでは記録書であるADRを切り口に、各社が技術選定した背景、思考法、その後の運用における工夫についてを解説していただきます。  最新のフロントエンド技術について学びたい方、実際の企業での採用事例を知りたい方に、今後の技術選定のヒン...",
+      "image": "https://media.connpass.com/thumbs/8c/9a/8c9ac13f2067ee3da1d7dddfa0b674f7.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://findy-tools.connpass.com"
+    },
+    "https://github.com/h-yoshikawa44": {
+      "title": "h-yoshikawa44 - Overview",
+      "description": "Web Developer. TypeScript / React / Next.js. h-yoshikawa44 has 67 repositories available. Follow their code on GitHub.",
+      "image": "https://avatars.githubusercontent.com/u/43331308?v=4?s=400",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    }
   }
 }
