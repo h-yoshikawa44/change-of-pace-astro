@@ -30,7 +30,7 @@
     "@astrojs/rss": "^4.0.15",
     "@astrojs/sitemap": "^3.7.0",
     "@iconify-json/logos": "^1.2.10",
-    "@iconify-json/ri": "^1.2.6",
+    "@iconify-json/ri": "^1.2.9",
     "@iconify-json/system-uicons": "^1.2.4",
     "@iconify-json/teenyicons": "^1.2.2",
     "@unocss/reset": "^66.5.9",
