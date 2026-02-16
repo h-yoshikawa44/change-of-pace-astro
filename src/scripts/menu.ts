@@ -1,4 +1,4 @@
-/* eslint-env browser */
+/* global */
 import { MENU_TYPE_LIST } from '@/consts';
 
 const body = document.body;

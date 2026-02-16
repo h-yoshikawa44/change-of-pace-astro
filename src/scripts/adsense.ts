@@ -1,4 +1,4 @@
-/* eslint-env browser */
+/* global */
 import {
   PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID,
   PUBLIC_GOOGLE_ADSENSE_SLOT,
