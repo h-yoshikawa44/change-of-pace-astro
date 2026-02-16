@@ -1,4 +1,4 @@
-/* eslint-env browser */
+/* global */
 
 const copyCode = async (codePre: HTMLPreElement): Promise<void> => {
   const code = codePre.querySelector('code');

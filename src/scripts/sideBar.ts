@@ -1,4 +1,4 @@
-/* eslint-env browser */
+/* global */
 
 const selectNavButton = document.getElementById('select-nav-button');
 const selectAnchorButton = document.getElementById('select-anchor-button');
