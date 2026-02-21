@@ -1,0 +1,240 @@
+{
+  "2026-02-22-developers-summit-2026-day1": {
+    "https://www.canva.com/design/DAHAFiqnqS0/k_Bhf-7bp5PiZmsReizPJg/edit": {
+      "title": "Dev x PM x PL エンジニアはビジネス構造を作れる - プレゼンテーション",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.canva.com"
+    },
+    "https://event.shoeisha.jp/devsumi/20260218": {
+      "title": "Developers Summit 2026・Dev x PM Day（2026.02.18-20）",
+      "description": "Developers Summit 2026・Dev x PM Dayは2月18・19・20日の3日間開催！",
+      "image": "https://event.shoeisha.jp/static/images/event/1691/1200.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+    },
+    "https://zenn.dev/yuta_k0911/articles/e944707d01dddd": {
+      "title": "Developers Summitへ初登壇！🎉",
+      "description": "",
+      "image": "https://res.cloudinary.com/zenn/image/upload/s--ZsoBSAhu--/c_fit%2Cg_north_west%2Cl_text:notosansjp-medium.otf_55:Developers%2520Summit%25E3%2581%25B8%25E5%2588%259D%25E7%2599%25BB%25E5%25A3%2587%25EF%25BC%2581%2520%2Cw_1010%2Cx_90%2Cy_100/g_south_west%2Cl_text:notosansjp-medium.otf_37:yuta_k0911%2Cx_203%2Cy_121/g_south_west%2Ch_90%2Cl_fetch:aHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUdObXl4WVhtUjlJaW9Yc0ZSam1DVGxxX2VLcG9MWHVOeVRheEZmUmtmbmhrQT1zOTYtYw==%2Cr_max%2Cw_90%2Cx_87%2Cy_95/v1627283836/default/og-base-w1200-v2.png?_a=BACAGSGT",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://zenn.dev"
+    },
+    "https://note.com/nkzw_a/n/n3ef878cf0e7d": {
+      "title": "リゾーム構造をツリー構造へ落とし込む設計技術: Information Architectureの脱構築｜なかざわ",
+      "description": "このnoteは、Developer Summit 2026にDress Code社スポンサーにより、登壇した際の内容の記事起こしです。  自己紹介  Experience  Full Stack Product Builderになろうとしています。Microsoft社で、このような職種のタイトルが使われているらしいので、暫定的に借りてきました。経験値としてはデザイン領域が強く、プロダクトマネジメントは名ばかりですが、ナリでやるようになっている感じ、そしてエンジニアリングへと徐々に弱くなります。しっかりとしたエンジニア経験がない割りには、エンジリアリングをある程度わかっているタイプだと自",
+      "image": "https://assets.st-note.com/production/uploads/images/252547514/rectangle_large_type_2_10ee4411f3767fbd0d4e3ea213b5fe20.png?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://note.com/gimupop/n/nb18a0f10f93e?sub_rt=share_pw": {
+      "title": "Dev × PM × PL：エンジニアこそが「ビジネス構造」を作れる｜柳川慶太",
+      "description": "はじめに  BASE株式会社執行役員の柳川です。金融事業の事業責任者をしています。 私はエンジニア→PdM→事業責任者というキャリアを歩んできました。 現在は事業戦略、プロダクト戦略、組織戦略全ての責任を持ちながら、事業責任者を務めさせていただいています。  Developers Summit 2026で「Dev x PM x PL エンジニアはビジネス構造を作れる」と言うタイトルで登壇させていただきました！公募だぞ！(ドヤっ！)  \n\n\nDev x PM x PL：エンジニアはビジネス構造を作れる | Developers Summit 2026・Dev x PM Day（2026.",
+      "image": "https://assets.st-note.com/production/uploads/images/252968511/rectangle_large_type_2_3ca297bab1d2dcf2038e53023a893d29.png?fit=bounds&quality=85&width=1280",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://note.com"
+    },
+    "https://speakerdeck.com/hiro93n/r-and-d-team-with-pdm-leader": {
+      "title": "「技術的にできません」を越えて価値を生み出せ──研究開発チームをPMが率いて生み出した価値創出",
+      "description": "Developers Summit 2026 PM x AI day 登壇スライドです。\n\n18-C-4 02/18 15:10 ～ 15:40\n「技術的にできません」を越えて価値を生み出せ──研究開発チームをPMが率いて生み出した価値創出\nhttps://event.shoeisha.jp/d&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/5be91109adb241b2a30feb02a016b855/slide_0.jpg?38456700",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/coconala_engineer/shui-noze-ren-derou-merunowoyamete-erabazietutodepan-duan-suruyounisita-gan-qing-lun-wodetadezhong-waraseru-pmtoenzinianoyi-si-jue-ding-purosesu": {
+      "title": "『誰の責任？』で揉めるのをやめて、エラーバジェットで判断するようにした ～感情論をデータで終わらせる、PMとエンジニアの意思決定プロセス～",
+      "description": "Developers Summit 2026 Day1の登壇資料です。\nhttps://event.shoeisha.jp/devsumi/20260218/session/6431",
+      "image": "https://files.speakerdeck.com/presentations/3269018997a94fb69606e487179e3804/slide_0.jpg?38453436",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    }
+  },
+  "2026-02-22-developers-summit-2026": {
+    "https://www.sbcr.jp/product/4815636609/": {
+      "title": "AIエージェント開発 / 運用入門 [生成AI深掘りガイド] | SBクリエイティブ",
+      "description": "SBクリエイティブから出版している、ビジネス書籍や実用書、新書、PC書、ライトノベルなどの各書籍の紹介・情報を提供しております。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.sbcr.jp"
+    },
+    "https://yoshidashingo.com/entry/sdd-with-claude_code": {
+      "title": "Claude Codeで実践する仕様(スペック)駆動開発入門 - yoshidashingo",
+      "description": "吉田真吾 (@yoshidashingo) です。 これだけは覚えて帰ってね💡 バイブコーディングの対極にある仕様駆動開発は、ソフトウェアエンジニアリングの基本原則をAI時代に再現するアプローチ 仕様駆動開発は仕様で「開発ライフサイクルを」駆動するのではない。仕様を唯一の情報源 (Single Source of Truth) としつつ、プロセスはルールブックによって駆動される Claude Codeでのステアリングには複数の方法があり、CLAUDE.md・スキル・AI-DLCのルールブックなど、目的に応じた使い分けと創意工夫の余地がある 実践Claude Code入門―現場で活用するためのA…",
+      "image": "https://cdn.image.st-hatena.com/image/scale/3dac1386256b39c862369ae25678f381885e360c/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fm.media-amazon.com%2Fimages%2FI%2F51RmQ-uwdZL._SL500_.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://yoshidashingo.com"
+    },
+    "https://www.sbcr.jp/product/4815633417/": {
+      "title": "ハーバード、スタンフォード、オックスフォード… 科学的に証明された すごい習慣大百科 | SBクリエイティブ",
+      "description": "SBクリエイティブから出版している、ビジネス書籍や実用書、新書、PC書、ライトノベルなどの各書籍の紹介・情報を提供しております。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.sbcr.jp"
+    },
+    "https://www.kspub.co.jp/book/detail/5401408.html": {
+      "title": "現場で活用するためのAIエージェント実践入門",
+      "description": "ヘルプデスク、データ分析、情報収集、マーケティングの具体的なＡＩエージェントの構築方法に加え、評価、改善まで、実践的な知識を学べる本格派の一冊。電通総研をはじめとした３社の取り組みの紹介も！",
+      "image": "https://www.kspub.co.jp/book/detail/images/2b2fa195d8d03110361b0bbd0b6fbdf3d466eb8e.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.kspub.co.jp"
+    },
+    "https://event.shoeisha.jp/devsumi/20260218": {
+      "title": "Developers Summit 2026・Dev x PM Day（2026.02.18-20）",
+      "description": "Developers Summit 2026・Dev x PM Dayは2月18・19・20日の3日間開催！",
+      "image": "https://event.shoeisha.jp/static/images/event/1691/1200.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://event.shoeisha.jp"
+    },
+    "https://www.kspub.co.jp/book/detail/5369845.html": {
+      "title": "ことばの意味を計算するしくみ 　計算言語学と自然言語処理の基礎",
+      "description": "ことばの意味を計算する2つのアプローチをていねいに解説。とくに、計算言語学にかかわる形式統語論と形式意味論の理論をていねいに解説し、深層学習を中心とした統計的言語処理技術に残る本質的な問題点も提示した",
+      "image": "https://www.kspub.co.jp/book/detail/images/c035c5e87f04447addc3d66b3db5b161472447aa.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.kspub.co.jp"
+    },
+    "https://speakerdeck.com/bengo4com/20260219-developers-summit-2026": {
+      "title": "AI駆動開発とRAGプロダクトへの挑戦の軌跡 - 弁護士ドットコムでの学びから -",
+      "description": "Developers Summit 2026における、CTO 田中・リーガルブレイン開発部 西野による登壇資料です。\n\n【Developers Summit 2026】\nhttps://event.shoeisha.jp/devsumi/20260218/session/6455\n\n■ 弁護士&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/7c40ed73b8aa4351aafbb0736931f2a9/slide_0.jpg?38466563",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nwiizo/yi-zhi-woshi-zhuang-suruakitekutiyamodanaizesiyon": {
+      "title": "意志を実装するアーキテクチャモダナイゼーション",
+      "description": "Developers Summit 2026（デブサミ2026）にて、「意志を実装するアーキテクチャモダナイゼーション」というタイトルで登壇します。\n\nhttps://event.shoeisha.jp/devsumi/20260218/session/6454\n\n書籍『アーキテクチャモダナイゼ&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/8c3464840c3748b99371e80a5d807126/slide_0.jpg?38465899",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.bks.co.jp/item/978-4-8283-1114-2": {
+      "title": "エンジニアの持続的成長37のヒント｜ビジネス教育出版社",
+      "description": "エンジニアは80歳まで続けられる一生モノの仕事であるあなたが今後50年必要とされるために必要な持続的成長とはなにか？エンジニアのキャリアに悩む全エンジニア必読...",
+      "image": "https://www.bks.co.jp/bks/wp-content/themes/bks_new/library/images/og.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.bks.co.jp"
+    },
+    "https://wa3.i-3-i.info/column122.html": {
+      "title": "コラム「ITエンジニア本大賞のプレゼン大会でやったプレゼンの内容です。」｜「分かりそう」で「分からない」でも「分かった」気になれるIT用語辞典",
+      "description": "「ITエンジニア本大賞のプレゼン大会でやったプレゼンの内容です。」をテーマに、思ったことを徒然なるままに書いてみました。",
+      "image": "https://wa3.i-3-i.info/img/no_img.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://wa3.i-3-i.info"
+    },
+    "https://aid.connpass.com/": {
+      "title": "AI駆動開発(AI-Driven Development)",
+      "description": "AI駆動開発 - AI活用でアプリ開発を爆速化しよう！  生成AI・LLMの登場により、コードの自動生成・自動補完などアプリケーション・プログラミングの開発スタイルは大きく変わりつつあります。 またコーディングのみならず、仕様整理、デザイン、設計、テスト、ドキュメント作成においても、AIを利用した開発ツールが多数出てきており、開発スタイルそのものが大きく変わっていくと予想されます。  AI駆動開発(AI-Driven Development) 勉強会では、AI技術を使った開発に興味を持つ方々向けに、ChatGPTやGitHub CopilotなどのAIツールを使った開発のノウハウや、AI...",
+      "image": "https://media.connpass.com/thumbs/83/5d/835d2c212a0068f5eec14f71690e0fed.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aid.connpass.com"
+    },
+    "https://speakerdeck.com/iwahiro/asuken-developers-summit-2026-vibe-codingqi-dian-tenoxin-ji-neng-kai-fa-te-asuken-kacheng-riyue-etabi-2": {
+      "title": "あすけん_Developers_Summit_2026_-_Vibe_Coding起点での新機能開発で__あすけん_が乗り越えた壁.pdf",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/e63765460e4d450f996d40458403d38c/slide_0.jpg?38470726",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.shoeisha.co.jp/book/detail/9784798192260": {
+      "title": "「分かった！」と思わせる説明の技術  知識ゼロの相手にも伝わるようになる本 | 翔泳社",
+      "description": "月間200万PV超のIT用語解説サイト\n「わわわIT用語辞典」管理人が伝授！\n知識ゼロの相手にも伝わる説明術。\n\n「丁寧に説明しているのに伝わらない！」\nそんな経験、ありませんか？\n\n簡単な内容ですら伝えることは難しいのに\n相手に事前情報や専門知識がないなら\nなおさらです。\n\nたとえば、\n・営業からお客様へ\n・エンジニアからクライアントへ\n・上司から部下へ\n・社員から経営層へ\n・マーケターから他部署へ\n・医者から患者へ\n・弁護士から依頼人へ…\n\n自分にとって当たり前のことが\n相手にはなかなか伝わらない──\nそんな場面は、\nビジネスにも日常にもあふれています。\n\n本書では\n対面・オンライン・電話・メール・\nプレゼン・会議・交渉など、\nあらゆる場面に応用できる\n「分かりやすく伝えるための考え方と技術」が学べます。\n\n相手が理解するだけでなく、\n「納得」し、あなたを「信頼」する。\nそんな説明力を身につける1冊です。\n\n説明力は\nAI時代の今こそ鍛えたいソフトスキルです。\n納得感のある説明ができれば\nあなたは信頼される人になれるでしょう。\n\n\n【目次】\n第1章　「説明」を分析する\n第2章　聞いてもらえないと始まらない\n第3章　説明を始める前に考えるべきこと\n第4章　相手の「分かった！」を引き出す極意\n第5章　”おもてなしの視点”を説明に活かす\n第6章　無理をすれば続かない、肩の力を抜いてみよう\n第7章　分かりやすい説明で生じる（かもしれない）問題",
+      "image": "https://www.shoeisha.co.jp/static/splus/4269/meta/説明の技術_抜粋版PDF告知970_600.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.shoeisha.co.jp"
+    },
+    "https://speakerdeck.com/fatsushi/introduction-to-aidlc-and-skills": {
+      "title": "AWSが推進する\u000bAI駆動開発ライフサイクル入門 \u000b〜 AI駆動開発時代に必要な人材とは 〜\u000b/ introduction_to_aidlc_and_skills",
+      "description": "AWSが推進する\u000bAI駆動開発ライフサイクル入門 \u000b\n〜 AI駆動開発時代に必要な人材とは 〜\u000b\nDeveloper Summit 2026 19-B-6 \nAI駆動開発ライフサイクル（AI-DLC）とは何か？AI-DLCで求められる人材とは？\nAmazon Web Services Japan&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/0fd82e6ae380479f980f905e33bb6d56/slide_0.jpg?38469797",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://aiau.connpass.com/": {
+      "title": "AIエージェントユーザー会（AIAU）",
+      "description": "# AIAUとは  AIエージェントに関する情報交換、学習、交流を目的としたコミュニティです。  ## Discordサーバー運営中  https://discord.gg/GatQE7wGvK",
+      "image": "https://media.connpass.com/thumbs/dc/e8/dce8653c48c0a8a00a18c47a4142a6a4.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://aiau.connpass.com"
+    },
+    "https://meganetaaan.github.io/devsumi-2026/#/": {
+      "title": "デブサミ2026 ｽﾀｯｸﾁｬﾝコミュニティのつくりかた",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://meganetaaan.github.io"
+    },
+    "https://www.docswell.com/s/shosuz/5X6MGN-2026-02-20-153309": {
+      "title": "仕様駆動 × ハイブリッド AI 基盤 × 3分デプロイで実装するモバイルアプリ + AI Agent_modified | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://bcdn.docswell.com/page/V7PK9ZXLJ8.jpg?width=480",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+    },
+    "https://www.docswell.com/s/papanda/Z6E31E-developers-as-change-makers": {
+      "title": "デベロッパーに“変化の作り手”としての期待を寄せられない組織は早晩滅びる | ドクセル",
+      "description": "ドクセルはスライドやPDFをかんたんに共有できるサイトです",
+      "image": "https://bcdn.docswell.com/page/4JQY19VW7P.jpg?width=480",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.docswell.com"
+    },
+    "https://speakerdeck.com/endohizumi/how-to-run-an-indie-project-that-brings-your-ideas-to-life": {
+      "title": "欲しいを叶える個人開発の進め方 / How to Run an Indie Project That Brings Your Ideas to Life",
+      "description": "個人単位のニッチな需要でも、実現できるのが、個人開発のいいところです。\nただし、仕事以上にうまく行くか不明なため、モチベーションの維持が重要な課題です。\nビジュアルノベルゲームエンジンを無事にリリースできた自分の進め方をお話ししたいと思います。",
+      "image": "https://files.speakerdeck.com/presentations/cf0ce94dc5794ca4aca7d3c8d18e2e54/slide_0.jpg?38473392",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://hirokidaichi.github.io/presentation/devsummit.html#1": {
+      "title": "なぜ、AIで生産性があがっていると錯覚してしまうのか",
+      "description": "",
+      "image": "https://hirokidaichi.github.io/presentation/images/_ogp/devsummit.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://hirokidaichi.github.io"
+    },
+    "https://speakerdeck.com/moongift/hurotakutokai-fa-nopin-zhi-woshou-ruaikotorehiyu-shi-li-nijian-rudao-ru-hointo": {
+      "title": "プロダクト開発の品質を守るAIコードレビュー：事例に見る導入ポイント",
+      "description": "Developers Summit 2026・Dev x PM Day（2026.02.18-20）\nhttps://event.shoeisha.jp/devsumi/20260218\n\nの登壇資料です。 #devsumi #CodeRabbit",
+      "image": "https://files.speakerdeck.com/presentations/c3022c238a534ad98c95e9ab7c538b19/slide_0.jpg?38481376",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/kakehashi/making-versatility-your-strength": {
+      "title": "器用貧乏が強みになるまで ～「なんでもやる」が導いたエンジニアとしての現在地～",
+      "description": "Developers Summit 2026・Dev x PM Day\nhttps://event.shoeisha.jp/devsumi/20260218/session/6511\nでの登壇資料です",
+      "image": "https://files.speakerdeck.com/presentations/63230779d32e4abc927ea06805fe46ee/slide_0.jpg?38481220",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.slideshare.net/slideshow/it-3-devsumi/286149443": {
+      "title": "同じお題をどう描く？　 IT漫画家3人に学ぶ “技術を伝える”技術 #devsumi",
+      "description": "難しい技術も、堅苦しいプレゼンも、ちょっとしたイラストで楽しく伝わる！\n出石聡史、高橋あおい、湊川あいのIT漫画家3人と一緒に、お題に沿って解説漫画をつくってみましょう！\n - Download as a PPTX, PDF or view online for free",
+      "image": "https://cdn.slidesharecdn.com/ss_thumbnails/t5jzr2wqwgzx4c1h6mjo-itman-hua-jia-haneruteisukatsushiyon-260220145137-f47d8812-thumbnail.jpg?width=640&height=640&fit=bounds",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.slideshare.net"
+    },
+    "https://speakerdeck.com/nagix/aishi-dai-noapihuasutokai-fa": {
+      "title": "AI時代のAPIファースト開発",
+      "description": "LLMの普及によりアプリケーションへのAI導入が活発になっている一方で、APIの重要性がこれまで以上に高まっています。本講演では、AIの手足として機能するための「AI-Ready」なAPIが求められている中、有用な指針となる「APIファースト」開発のコンセプトを振り返るとともに、AI特有の考慮ポイントも&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/3fdd4bd1949d4379ba00cff236483aae/slide_0.jpg?38481981",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/minorun365/2026nian-noaiezientogou-zhu-hadounaru": {
+      "title": "2026年のAIエージェント構築はどうなる？",
+      "description": "Developers Summit 2026\nhttps://event.shoeisha.jp/devsumi/20260218/session/6481",
+      "image": "https://files.speakerdeck.com/presentations/72446b8fa172451eb5f861425c9dba9f/slide_0.jpg?38478289",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/konifar/aide-fu-itashi-jian-de-he-wosuru-2026chun-number-devsumi": {
+      "title": "AIで 浮いた時間で 何をする？ 2026春 #devsumi",
+      "description": "Developers Summit 2026\nhttps://event.shoeisha.jp/devsumi/20260218",
+      "image": "https://files.speakerdeck.com/presentations/60f6cfd76f22405bbb5398228e8ba9ff/slide_0.jpg?38479424",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/shisyu_gaku/developers-summit-2026-memory-is-all-you-need-kontekisutono-zui-shi-hua-kara-ji-sok-xing-he-ragwojin-hua-saserumemorienziniaringunozui-qian-xian": {
+      "title": "【Developers Summit 2026】Memory Is All You Need:コンテキストの「最適化」から「継続性」へ ～RAGを進化させるメモリエンジニアリングの最前線～",
+      "description": "▼ イベントセッションリンク\nhttps://event.shoeisha.jp/devsumi/20260218/session/6494\n\n▼ 概要\nAI Agent開発はこれまで、「Prompt Engineering」から「Context Engineering」へと進化してきました。そ&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/6903a7027432406ea919e107ba834ae7/slide_0.jpg?38480867",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/xibuka/jing-de-jie-xi-dakedezhong-warasenai-sonarqube-nozui-xin-ji-neng-x-aide-enzinianokai-fa-sheng-chan-xing-woben-qi-deshang-gerufang-fa": {
+      "title": "「静的解析」だけで終わらせない。 SonarQube の最新機能 × AIで エンジニアの開発生産性を本気で上げる方法",
+      "description": "「SonarQube＝コードの悪いところを指摘してくるだけのツール」というイメージ、まだ持っていませんか？\n実は今、SonarQubeは単なる品質管理ツールではなく、IDEやAIと連携して「開発生産性」そのものを引き上げる存在に進化しています。\nこのセッションでは、明日から無償ですぐに試せる機能に絞&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/ef09405c9a3a4996b6fe53324d97255c/slide_0.jpg?38481348",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/n_takehata/the-power-of-the-tech-community": {
+      "title": "AI時代でも変わらない技術コミュニティの力～10年続く“ゆるい”つながりが生み出す価値",
+      "description": "2026年2月20日(金) 「Developers Summit 2026」の発表資料です。\nhttps://event.shoeisha.jp/devsumi/20260218/session/6504",
+      "image": "https://files.speakerdeck.com/presentations/1c89efe7d28c4cddb00ab5dd680077cf/slide_0.jpg?38486621",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://github.com/Snowflake-Labs/sfguide-getting-started-with-snowflake-intelligence-ja/blob/main/create_all_materials.sql": {
+      "title": "sfguide-getting-started-with-snowflake-intelligence-ja/create_all_materials.sql at main · Snowflake-Labs/sfguide-getting-started-with-snowflake-intelligence-ja",
+      "description": "For JP, Snowflake Intelligence demo. Contribute to Snowflake-Labs/sfguide-getting-started-with-snowflake-intelligence-ja development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/c4f91a3560a88671624c0f709bf77ab98f9698dc6cc1e4067cf8642d660b7b02/Snowflake-Labs/sfguide-getting-started-with-snowflake-intelligence-ja",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://www.snowflake.com/ja/developers/guides/getting-started-with-snowflake-intelligence-ja/": {
+      "title": "はじめての Snowflake Intelligence",
+      "description": "",
+      "image": "https://www.snowflake.com/content/dam/snowflake-site/general/technical/default-og-image/snowflake-social-share.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.snowflake.com"
+    },
+    "https://www.youtube.com/watch?si=BtjUBWZJOEtA46Ax&v=lgy0FKho2yI&feature=youtu.be": {
+      "title": "ここ3年で急激に伸びているJSフレームワーク『Hono』はどのように生まれたのか【ザ・ドキュメンタリー : Hono】",
+      "description": "Hono : https://hono.dev/sponsored by Cloudflare Japan株式会社【チャンネルスポンサー募集中】会社やサービスをPRしたい方、採用ブランディングにご活用いただきたい企業様は、ぜひお気軽にお問い合わせください。https://forms.gle/uQiyP1tRGaj...",
+      "image": "https://i.ytimg.com/vi/lgy0FKho2yI/maxresdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    }
+  }
+}
