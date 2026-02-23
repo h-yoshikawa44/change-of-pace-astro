@@ -236,5 +236,31 @@
       "image": "https://i.ytimg.com/vi/lgy0FKho2yI/maxresdefault.jpg",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
     }
+  },
+  "2026-02-23-portfolio-replace-tanstack": {
+    "https://reactbits.dev/": {
+      "title": "React Bits",
+      "description": "An open source collection of high quality, animated, interactive & fully customizable React components for building stunning, memorable user interfaces.",
+      "image": "https://reactbits.dev/og-pic.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://reactbits.dev"
+    },
+    "https://tailwindcss.com/": {
+      "title": "Tailwind CSS - Rapidly build modern websites without ever leaving your HTML.",
+      "description": "Tailwind CSS is a utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.",
+      "image": "https://tailwindcss.com/opengraph-image.jpg?opengraph-image.c1dec83c.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tailwindcss.com"
+    },
+    "https://github.com/h-yoshikawa44/portfolio-tanstack": {
+      "title": "GitHub - h-yoshikawa44/portfolio-tanstack: ポートフォリオサイト（2026/02～）",
+      "description": "ポートフォリオサイト（2026/02～）. Contribute to h-yoshikawa44/portfolio-tanstack development by creating an account on GitHub.",
+      "image": "https://opengraph.githubassets.com/2fb837738198e15934669898047ca0cb2ab93f181655df8e68a20dc85da7bd19/h-yoshikawa44/portfolio-tanstack",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://github.com"
+    },
+    "https://tanstack.com/start/latest": {
+      "title": "TanStack Start",
+      "description": "Full-document SSR, Streaming, Server Functions, bundling and more, powered by TanStack Router and Vite - Ready to deploy to your favorite hosting provider.",
+      "image": "https://tanstack.com/assets/og-C0HGjoLl.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
+    }
   }
 }
