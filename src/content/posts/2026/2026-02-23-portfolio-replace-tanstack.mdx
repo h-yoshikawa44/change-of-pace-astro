@@ -1,0 +1,157 @@
+---
+title: "ポートフォリオサイトをTanStack Startでリプレースしたので振り返ってみよう"
+description: "Docusaurus -> TanStack Startにリプレースしたので、これまでを振り返って感想などをつぶやいてみる"
+pubDate: "2026-02-23"
+updatedDate: "2026-02-23"
+category: "develop"
+tags: ["Docusaurus", "TanStack Start"]
+---
+
+前からリプレースしたいと言っていたポートフォリオサイトをようやくリプレースできたので、振り返りや感想などを軽くつぶやいてみます。
+
+import ImageWrapper from "@/components/ImageWrapper.astro"
+import OG from "@/components/OG.astro"
+
+{/* <!-- textlint-disable ja-technical-writing/ja-no-weak-phrase --> */}
+
+## ポートフォリオサイトの履歴
+ざっとポートフォリオサイトの履歴を振り返ってみます。
+
+### 起源
+はじめてポートフォリオサイトを作ったのが2020年頃。
+
+当時、日々の勉強メモを記録する TIL リポジトリを更新していっており、その派生でポートフォリオサイトを作ったのでした。
+採用していた Docusaurus だとドキュメントを書くのに適していたため、TIL の記録をドキュメントのように公開してみようと思っていたのです。
+そうすれば勉強の状況も他者に示せたりするかなぁと考えたこともあり。
+
+### TIL の移行
+TIL 活動を続けているうちに、だんだんと Notion で書いていった方が気軽に書きやすいのでは？という考えが浮かび。
+リポジトリで管理となるとどうしても都度コミットする必要があるので、その手間がだんだんと気になってきたのでした。
+
+それもあって、ポートフォリオサイトからは TIL の記録を公開するのはやめていました。
+ちなみに現在は Obsidian で記録を書いていくようにしています。
+
+### リプレースへ
+TIL の記録を公開するのをやめたことで Docusaurus を採用した意味がなくなってしまったな...と感じるようになりました。
+また、サイトのテーマは既存のものを使っていたこともあり、なんだかオリジナリティというか面白味も特にないなぁと。
+
+ブログも独自デザインでリプレースしたこともあり、ポートフォリオサイトもいずれリプレースしたいと思うようになっていました。
+どうも [2024年振り返り ～技術活動、ブログ、キャリア編～](/posts/2024-12-31-looking-back-2024-tech) の頃にはすでにそう思っていたようです。
+
+## リプレースしたもの
+<OG url="https://github.com/h-yoshikawa44/portfolio-tanstack" />
+
+### レイアウト比較
+大まかなレイアウト比較として、トップページとスキルページを載せてみます。
+
+ページ構成自体はそれほど変えていないので真新しさはないですが、リプレース前より少しすっきりしたような気がしています。
+
+#### デスクトップ
+トップページ.
+<div class="layout-fixed">
+
+| Docusaurus（リプレース前）| TanStack Start（リプレース後）|
+|-----|-----|
+|<ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-docusaurus-desktop.png" alt="ポートフォリオリプレース前のトップページ - デスクトップ" /> | <ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-tanstack-desktop.png" alt="ポートフォリオリプレース後のトップページ - デスクトップ" />|
+
+</div>
+
+スキルページ.
+（リプレース前は経歴も載せていましたが、全公開するのはやめたのでスクショも経歴の前までにしてます。本来はフッターまであります）
+<div class="layout-fixed">
+
+| Docusaurus（リプレース前）| TanStack Start（リプレース後）|
+|-----|-----|
+|<ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-skill-docusaurus-desktop.png" alt="ポートフォリオリプレース前のスキルページ - デスクトップ" /> | <ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-skill-tanstack-desktop.png" alt="ポートフォリオリプレース後のスキルページ - デスクトップ" />|
+
+</div>
+
+#### モバイル
+トップページ.
+<div class="layout-fixed">
+
+| Docusaurus（リプレース前）| TanStack Start（リプレース後）|
+|-----|-----|
+|<ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-docusaurus-mobile.png" alt="ポートフォリオリプレース前のトップページ - モバイル" /> | <ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-tanstack-mobile.png" alt="ポートフォリオリプレース後のトップページ - モバイル" />|
+
+</div>
+
+スキルページ.
+（リプレース前は経歴も載せていましたが、全公開するのはやめたのでスクショも経歴の前までにしてます。本来はフッターまであります）
+<div class="layout-fixed">
+
+| Docusaurus（リプレース前）| TanStack Start（リプレース後）|
+|-----|-----|
+|<ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-skill-docusaurus-mobile.png" alt="ポートフォリオリプレース前のトップページ - モバイル" /> | <ImageWrapper src="screenshots/2026/portfolio-replace-tanstack/portfolio-skill-tanstack-mobile.png" alt="ポートフォリオリプレース後のトップページ - モバイル" />|
+
+</div>
+
+## リプレースで採用してみた主な技術
+### TanStack Start
+主となるフレームワークに選定したのは TanStack Start。
+<OG url="https://tanstack.com/start/latest" />
+
+{/* <!-- textlint-disable ja-technical-writing/max-comma --> */}
+
+> Full-stack Framework powered by TanStack Router for React and Solid
+
+> Full-document SSR, Streaming, Server Functions, bundling and more, powered by TanStack Router and Vite - Ready to deploy to your favorite hosting provider.
+
+{/* <!-- textlint-enable ja-technical-writing/max-comma --> */}
+
+TanStack シリーズでいろんなパッケージが提供されているうち、React, TanStack Router ベースで作られているフルスタックフレームワークです。
+
+ブログリプレースの時と同様に、ポートフォリオサイトも最初は Next.js でリプレースしようかと思い、実際に Next.js で着手していたのですが...。
+Next.js だとややオーバースペック気味に感じていたのと、メジャーすぎてなんだか面白みがないなになり。
+
+TanStack Start は比較的新しい技術なことと、React ベースなのでとっきやすいこと。SSG もできるらしいということで、今回初めて触って採用してみたのでした。
+まぁ、仕事だったらこんな技術選定すると怒られそうではありますが、個人開発なので自由が利くということで。
+
+### Tailwind CSS
+<OG url="https://tailwindcss.com/" />
+
+スタイリングは Tailwind CSS を採用しました。
+TanStack Start のテンプレで採用されていた流れで採用しましたね。
+
+CSS in JS を久しぶりに書くことも考えたのですが、サッと作りやすいというと Tailwind CSS の方があるかなぁと。
+（そもそも TanStack Start で CSS in JS って動くのかな？）
+普段、仕事でよく書いていることもあり、なじみ深いです。
+
+デザインは本ブログのリプレース時と同様に、結局作りながら雰囲気で構築していきました。モノクロ基調にしたいというのはあったので、そこから膨らませた感じでしたね。
+Tailwind だとこういう雰囲気でスタイルガチャガチャするのも少し楽な気がしています。
+
+### React Bits
+<OG url="https://reactbits.dev/" />
+
+これは技術というかコンポーネント集ですね。
+React をベースとして、アニメーションが設定されているコンポーネントが Shadcn や jsrepo 経由で提供されているものです。
+Tailwind CSS 版のコードが提供されていることもちょうどよかったですね。
+
+アニメーションは入れすぎるとくどい印象を与えるため、扱いが少し難しいものではありますが、せっかくリプレースするので遊び心的な観点で少し入れてみたいなと思ったのでした。
+現時点では以下の3つを採用しています。
+- Text Type
+- Circular Text
+- Fade Content
+
+## リプレースした感想など
+今年入ってからリプレース着手しまして、主に週末細々と進めていました。
+かかった時間としてはざっくり30時間ほど。ブログの時は150時間くらいかかっていたので、それと比べればぱっと作れた方でしょうか（記事データの移行がないからそれはそう）
+
+シンプルな構成ではあるので TanStack Start の機能をそれほど使えてはいませんが...。公式で Next.js からの移行ガイドが用意されていて、それを見た感じ必要十分な機能はある程度そろっているような印象を受けましたね。
+今後は TanStack Start の採用事例の話も流れてきたりするんだろうか。
+
+ちなみに今回 AI は使いませんでした。小規模で使うまでもなかったというか、自分でガチャガチャしながら作りたかったので使わなかったです。
+
+前からリプレースしたいな～と思っていたので、ようやくリプレース出来てよかったです。
+
+---
+
+元々は年を越すタイミングでリリースできたらと考えていました。
+着手がずれこんでしまいましたが、とりあえず無事にリリースまでいけたので一安心しています。
+
+今度はポートフォリオの内容が充実できるよう、何か作ったり、技術の知識を深めたりしていきたいですね。
+
+## 参考リンクまとめ
+- [TanStack Start](https://tanstack.com/start/latest)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [React Bits](https://reactbits.dev/)
