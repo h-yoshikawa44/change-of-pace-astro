@@ -241,6 +241,12 @@
       "description": "ソフトウェア開発はチームで取り組むものです。そしてチームは、リーダーの影響を大きく受けます。\nリーダー次第で、メンバーの働きやすさも生産性も大きく変わってくるのです。\nそこで、登壇者自身の失敗経験を踏まえながら、チームマネジメントや技術人材育成に必要なエッセンスをご紹介します。\nあわせて、ソフトウ&hellip;",
       "image": "https://files.speakerdeck.com/presentations/b9a5598acdb3495696ce810c3f0e9b25/slide_0.jpg?38496789",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/free_world21/rubytogodezerokarazuo-ruzheng-quan-sisutemu-gao-xin-lai-xing-gaqiu-merarerusisutemunokodonowai-ce-niarushe-ji-toyun-yong-noriaru": {
+      "title": "RubyとGoでゼロから作る証券システム： 高信頼性が求められるシステムのコードの外側にある設計と運用のリアル",
+      "description": "https://event.shoeisha.jp/devsumi/20260218/session/6493\n\nDevelopers Summit 2026「Beyond the Code」の発表で使用したスライドです。\n（多少の加筆修正）",
+      "image": "https://files.speakerdeck.com/presentations/ada5102e6eb74c93af7c566378e07f17/slide_0.jpg?38531955",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     }
   },
   "2026-02-23-portfolio-replace-tanstack": {
