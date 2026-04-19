@@ -5,7 +5,7 @@ import {
 } from 'astro:env/client';
 
 document.addEventListener('DOMContentLoaded', () => {
-  if (!import.meta.env.PROD) return;
+  if (!process.env.PROD) return;
 
   const createGoogleAdsenseUnitElement = () => {
     const adUnit = document.createElement('ins');
