@@ -30,9 +30,10 @@ if (postYearFound === null)
 const fileName = fileNameFoumd[1].replace('.html', '');
 const postYear = postYearFound[1];
 const { url } = Astro.props;
+console.log(import.meta.url);
 const generatedFilePath = new URL(
-  `../../generated/ogp/${postYear}.json`,
-  // astro は build 時に自身ではなく dist/entry.mjs に向けてしまいエラーになるので指定する
+  // ビルド後のこのファイルパス（dist 配下）からの generated へのパス
+  `../../../generated/ogp/${postYear}.json`,
   import.meta.url,
 );
 
