@@ -1,9 +1,10 @@
 import js from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import pluginAstro from 'eslint-plugin-astro';
 import pluginUnocss from '@unocss/eslint-config/flat';
 import tsEslint from 'typescript-eslint';
 
-export default tsEslint.config(
+export default defineConfig(
   {
     ignores: ['node_modules/**', 'eslint.config.js'],
   },
