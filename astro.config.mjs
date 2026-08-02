@@ -1,5 +1,5 @@
 import { defineConfig, envField } from 'astro/config';
-import { rehypeHeadingIds } from '@astrojs/markdown-remark';
+import { unified, rehypeHeadingIds } from '@astrojs/markdown-remark';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
 import partytown from '@astrojs/partytown';
@@ -27,28 +27,31 @@ export default defineConfig({
     format: 'file',
   },
   markdown: {
+    // Sätteri の MGAST/ HAST プラグイン移行が微妙なので、まだ unified パイプラインのままにしておく
+    processor: unified({
+      remarkPlugins: [remarkBreaks, remarkFlexibleCodeTitles],
+      rehypePlugins: [
+        // デフォルトでは、Astro は rehype プラグインが実行された後に id 属性を注入する
+        // rehypeAutolinkHeadings 実行時に組み合わせて使用したいため、指定しておく
+        rehypeHeadingIds,
+        [
+          rehypeAutolinkHeadings,
+          {
+            behavior: 'append',
+            properties: {
+              className: ['ml-2', 'heading-link'],
+            },
+            content: {
+              type: 'text',
+              value: '#',
+            },
+          },
+        ],
+      ],
+    }),
     shikiConfig: {
       theme: 'dark-plus',
     },
-    remarkPlugins: [remarkBreaks, remarkFlexibleCodeTitles],
-    rehypePlugins: [
-      // デフォルトでは、Astro は rehype プラグインが実行された後に id 属性を注入する
-      // rehypeAutolinkHeadings 実行時に組み合わせて使用したいため、指定しておく
-      rehypeHeadingIds,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: 'append',
-          properties: {
-            className: ['ml-2', 'heading-link'],
-          },
-          content: {
-            type: 'text',
-            value: '#',
-          },
-        },
-      ],
-    ],
   },
   env: {
     schema: {

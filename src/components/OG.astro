@@ -2,6 +2,7 @@
 import ImageWrapper from '@/components/ImageWrapper.astro';
 import { load } from 'cheerio';
 import { writeFileSync, readFileSync } from 'node:fs';
+import path from 'node:path';
 
 type Props = {
   url: string;
@@ -30,11 +31,11 @@ if (postYearFound === null)
 const fileName = fileNameFoumd[1].replace('.html', '');
 const postYear = postYearFound[1];
 const { url } = Astro.props;
-console.log(import.meta.url);
-const generatedFilePath = new URL(
-  // ビルド後のこのファイルパス（dist 配下）からの generated へのパス
-  `../../../generated/ogp/${postYear}.json`,
-  import.meta.url,
+// dev / build どちらもプロジェクトルート基準で generated を指す
+const generatedFilePath = path.join(
+  process.cwd(),
+  'generated/ogp',
+  `${postYear}.json`,
 );
 
 const ogp: OGPJson = JSON.parse(readFileSync(generatedFilePath, 'utf8'));
