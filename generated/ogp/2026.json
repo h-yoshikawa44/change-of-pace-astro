@@ -274,5 +274,91 @@
       "image": "https://tanstack.com/assets/og-C0HGjoLl.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tanstack.com"
     }
+  },
+  "2026-09-13-frontend-conf-fukuoka-2026": {
+    "https://slides.yusu.ke/web-frameworks-in-the-ai-era": {
+      "title": "AI時代のWebフレームワークはどこへ行く？",
+      "description": "フロントエンドカンファレンス福岡 2026",
+      "image": "https://slides.yusu.ke/images/fec2026/title-ogp.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://slides.yusu.ke"
+    },
+    "https://tate-pixiv-novel.karintou.dev/demo-scroll-editor": {
+      "title": "縦書きエディタ for pixiv小説",
+      "description": "pixiv小説向けの縦書きエディタ。ルビ・傍点などのpixiv記法を見たまま編集できる、インストール不要の無料Webツールです。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://tate-pixiv-novel.karintou.dev"
+    },
+    "https://agent-dx.hono.dev/": {
+      "title": "Hono Agent DXcloudflare-workers × minimal: 0%bun × minimal: 0%node-js × minimal: 0%deno × minimal: 0%cloudflare-workers × routes: 0%bun × routes: 0%node-js × routes: 0%deno × routes: 0%cloudflare-workers × api: 0%bun × api: 0%node-js × api: 0%deno × api: 0%cloudflare-workers × framework: 100%bun × framework: 10%node-js × framework: 0%deno × framework: 0%cloudflare-workers × minimal: 0%bun × minimal: 0%node-js × minimal: 0%deno × minimal: 0%cloudflare-workers × routes: 0%bun × routes: 0%node-js × routes: 0%deno × routes: 0%cloudflare-workers × api: 0%bun × api: 0%node-js × api: 0%deno × api: 0%cloudflare-workers × framework: 100%bun × framework: 100%node-js × framework: 0%deno × framework: 80%build-endpoints · baseline: 100%build-endpoints · cli + skill: 100%build-endpoints-workers · baseline: 80%build-endpoints-workers · cli + skill: 100%build-shop · baseline: 100%build-shop · cli + skill: 100%session-users · baseline: 20%session-users · cli + skill: 80%refactor-routes · baseline: 100%refactor-routes · cli + skill: 100%fix-404 · baseline: 100%fix-404 · cli + skill: 100%fix-404-shadow · baseline: 100%fix-404-shadow · cli + skill: 100%add-user-route · baseline: 100%add-user-route · cli + skill: 100%build-endpoints-workers · baseline: 20%build-endpoints-workers · cli + skill: 100%build-shop · baseline: 100%build-shop · cli + skill: 100%session-users · baseline: 100%session-users · cli + skill: 100%refactor-routes · baseline: 100%refactor-routes · cli + skill: 100%build-endpoints-workers · baseline: 100%build-endpoints-workers · cli + skill: 100%build-shop · baseline: 100%build-shop · cli + skill: 100%session-users · baseline: 80%session-users · cli + skill: 80%refactor-routes · baseline: 100%refactor-routes · cli + skill: 100%",
+      "description": "Measure and improve the developer experience of coding agents using Hono.",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://agent-dx.hono.dev"
+    },
+    "https://speakerdeck.com/uhyo/react-no-sekkeiron": {
+      "title": "Reactの設計論",
+      "description": "フロントエンドカンファレンス福岡2026",
+      "image": "https://files.speakerdeck.com/presentations/359d889045494586ad1a31aed6958dd7/slide_0.jpg?40549624",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/petamoriken/security-issues-being-discussed-on-web-platforms": {
+      "title": "Webプラットフォームで議論されているセキュリティ課題 / Security issues being discussed on Web Platforms",
+      "description": "Frontend Conference Fukuoka 2026\nhttps://frontend-conf.fukuoka.jp/2026/",
+      "image": "https://files.speakerdeck.com/presentations/637ddac288ee4c85ab817e7caeecb0cf/slide_0.jpg?40544289",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://kakigoe.yusukebe.workers.dev/": {
+      "title": "かきごえ",
+      "description": "声の代わりに、大きな文字で伝える筆談アプリ。入力して「大きく表示」するだけ。",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://kakigoe.yusukebe.workers.dev"
+    },
+    "https://speakerdeck.com/nikkei_engineer_recruiting/fec-fukuoka": {
+      "title": "日経電子版を支えていく Kasane Design System/fec_fukuoka",
+      "description": "2026/09/12開催の Frontend Conference Fukuoka  (#fec_fukuoka) において\nデジタル編成ユニット Webチーム 田中 泰斗 / Taito Tanaka さんが発表。発表タイトルは\n日経電子版を支えていく Kasane Design System で&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/8e2ba45258b84913b809b97a6c2fedea/slide_0.jpg?40545300",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/karintou8710/web-de-jitsuyoutekina-tategaki-edita-ha-kanou-ka-genzaichi-to-fukyuu-ni-muke-te": {
+      "title": "Web で実用的な縦書きエディタは可能か？\u000b──現在地と普及に向けて",
+      "description": "#fec_fukuoka",
+      "image": "https://files.speakerdeck.com/presentations/18d1998f3475494d867c08449a183d8a/slide_0.jpg?40545076",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/yosuke_furukawa/web-no-chizu": {
+      "title": "Webの地図",
+      "description": "FEC Fukuoka で発表したWebの地図についての話です",
+      "image": "https://files.speakerdeck.com/presentations/5df3c45f04ff49bdbc6e04a8229843ea/slide_0.jpg?40547872",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ssssota/frontend-ui-framework-futures": {
+      "title": "フロントエンドUIフレームワークのこれまでとこれから",
+      "description": "https://frontend-conf.fukuoka.jp/2026/speakers/tomikawa-sotaro?hl=ja",
+      "image": "https://files.speakerdeck.com/presentations/8014af8302264c9f82fb5bcef6d2c2e3/slide_0.jpg?40545938",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/hokaccha/ai-agent-jidai-no-senryaku-to-jissen": {
+      "title": "AI Agent時代のリアーキテクチャ戦略と実践",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/2fc464787284424b896e8b9868992802/slide_0.jpg?40547933",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/ts020/hrc-frontend-conference-fukuoka-2026": {
+      "title": "HRC_Frontend_Conference_Fukuoka_2026.pdf",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/207e9b87e2a04ab191235805c10ab402/slide_0.jpg?40548705",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://bit.ly/fecf2026-lacolaco": {
+      "title": "2026-09-12 なぜテストを書くか？ (Frontend Conference Fukuoka 2026)",
+      "description": "なぜテストを書くか？ Frontend Conference Fukuoka 2026 lacolaco (@laco2net)",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyL4tZXANUwY4-bNIhOlgcGs2OxLvea8GNB-Jf9tVnuMdAY1RsSHdbIDqS1y8dtuLQ8S3LP8XqHva4XRd49uvFjrIw8ebEcvzqQKm9V2lyJ0XpCeEMU=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://bit.ly"
+    },
+    "https://frontend-conf.fukuoka.jp/2026": {
+      "title": "FEC Fukuoka 2026 | FEC Fukuoka",
+      "description": "フロントエンドカンファレンス福岡 2026 公式ウェブサイト",
+      "image": "https://frontend-conf.fukuoka.jp/og-image.png",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://frontend-conf.fukuoka.jp"
+    }
   }
 }
