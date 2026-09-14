@@ -359,6 +359,12 @@
       "description": "フロントエンドカンファレンス福岡 2026 公式ウェブサイト",
       "image": "https://frontend-conf.fukuoka.jp/og-image.png",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://frontend-conf.fukuoka.jp"
+    },
+    "https://docs.google.com/presentation/d/1UY16kuhAfUz9rX2kD0s2QsAcFMZ1hebbBX1QuX5gVts/edit?slide=id.p#slide=id.p": {
+      "title": "歴史から紐解くデザインとマークアップの話",
+      "description": "歴史から紐解く デザインとマークアップの話 FRONTEND CONFERENCE FUKUOKA 2026 平尾ゆうてん",
+      "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJtToKJU60nPWPMpvm5oj2-g7Ux1tKAs7HDL4FwioPKRDhieOGt38j11HCWRcu-ftzxGNrw9bgWiERITexe5ZzEVxL0NfnL_QAIbdJqaxmPXXf4e100=w1200-h630-p",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
     }
   }
 }
