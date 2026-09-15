@@ -365,6 +365,36 @@
       "description": "歴史から紐解く デザインとマークアップの話 FRONTEND CONFERENCE FUKUOKA 2026 平尾ゆうてん",
       "image": "https://lh7-us.googleusercontent.com/docs/AHkbwyJtToKJU60nPWPMpvm5oj2-g7Ux1tKAs7HDL4FwioPKRDhieOGt38j11HCWRcu-ftzxGNrw9bgWiERITexe5ZzEVxL0NfnL_QAIbdJqaxmPXXf4e100=w1200-h630-p",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://docs.google.com"
+    },
+    "https://speakerdeck.com/pirosikick/anshin-shi-te-henkou-dekiru-web-furonto-endo-no-tsukurikata": {
+      "title": "安心して変更できるWebフロントエンドの作り方",
+      "description": "フロントエンドカンファレンス福岡2026の登壇資料です。\nhttps://frontend-conf.fukuoka.jp/2026/?hl=ja",
+      "image": "https://files.speakerdeck.com/presentations/624d0000a4ae41d695a93c08f72684ac/slide_0.jpg?40567242",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://www.youtube.com/watch?v=HqmZmqVROzM": {
+      "title": "Frontend Conference Fukuoka 2026 RoomA",
+      "description": "タイムテーブル：https://frontend-conf.fukuoka.jp/2026/timetable?tab=track-a- 0:00:00 \"Opening Remarks\" by sakupi01- 0:05:55 \"杜甫々が語るフロントエンド開発技術の歴史と今後\" by 杜甫々- 0:59:53...",
+      "image": "https://i.ytimg.com/vi/HqmZmqVROzM/hqdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=r4JCSTBeze4": {
+      "title": "Frontend Conference Fukuoka 2026 RoomB",
+      "description": "タイムテーブル：https://frontend-conf.fukuoka.jp/2026/timetable?tab=track-b- 0:00:00 \"Reactの設計論 / Architecturing a React Application\" by うひょ- 1:02:55 \"なぜテストを書くか？\"by ...",
+      "image": "https://i.ytimg.com/vi/r4JCSTBeze4/hqdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://www.youtube.com/watch?v=Itn_tBeE41E": {
+      "title": "Frontend Conference Fukuoka 2026 RoomC",
+      "description": "タイムテーブル：https://frontend-conf.fukuoka.jp/2026/timetable?tab=track-c- 0:00:00 \"日経電子版を支えていく Kasane Design System\" by 田中 泰斗 (※機材の関係で後半 10分程度のみの録画になります)- 0:18:00...",
+      "image": "https://i.ytimg.com/vi/Itn_tBeE41E/hqdefault.jpg",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://www.youtube.com"
+    },
+    "https://fecfukuoka2026-the-hard-parts-of-new-js-specs.sapphi.red/1": {
+      "title": "ツールチェーンから見た新JS仕様の難所 - Slidev",
+      "description": "",
+      "image": "",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://fecfukuoka2026-the-hard-parts-of-new-js-specs.sapphi.red"
     }
   }
 }
