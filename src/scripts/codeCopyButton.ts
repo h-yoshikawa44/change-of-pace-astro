@@ -26,17 +26,9 @@ const onCopy = async (ev: MouseEvent, codePre: HTMLPreElement) => {
   resetCopyButtonText(ev.target);
 };
 
-const createCopyButton = (
-  code: HTMLPreElement,
-  codeTitleHeight?: number,
-): HTMLButtonElement => {
+const createCopyButton = (code: HTMLPreElement): HTMLButtonElement => {
   const button = document.createElement('button');
   button.className = `copy-code-button`;
-  // Tailwind の動的クラスだと、うまくスタイルが当たらないため、style で付与する
-  button.setAttribute(
-    'style',
-    `top: ${codeTitleHeight ? codeTitleHeight + 1 : 1}px`,
-  );
   button.type = 'button';
   button.innerText = 'Copy';
   button.addEventListener('click', (ev) => onCopy(ev, code));
@@ -44,23 +36,43 @@ const createCopyButton = (
   return button;
 };
 
-const codeContainerCollection = document.querySelectorAll(
-  'div.remark-code-container',
-);
-codeContainerCollection.forEach((codeContainer: Element) => {
-  const childrenList = Array.from(codeContainer.children);
-
+const getCopyButtonTop = (codeContainer: Element): number => {
   // コピーボタンの top がコードブロックタイトル要素の高さに依存するので、高さを取得
-  const codeTitle = childrenList.find(
+  const codeTitle = Array.from(codeContainer.children).find(
     (children) => children.classList.value === 'remark-code-title',
   );
   const codeTitleHeight = codeTitle?.clientHeight;
 
+  return codeTitleHeight ? codeTitleHeight + 1 : 1;
+};
+
+const updateCopyButtonTop = (
+  codeContainer: Element,
+  copyButton: HTMLButtonElement,
+) => {
+  // Tailwind の動的クラスだと、うまくスタイルが当たらないため、style で付与する
+  copyButton.setAttribute(
+    'style',
+    `top: ${getCopyButtonTop(codeContainer)}px`,
+  );
+};
+
+const codeContainerCollection = document.querySelectorAll(
+  'div.remark-code-container',
+);
+codeContainerCollection.forEach((codeContainer: Element) => {
   // 子の先頭にコードブロックタイトル要素がつく場合があるので、find で pre 要素を探す
-  const codePre = childrenList.find(
+  const codePre = Array.from(codeContainer.children).find(
     (children) => children instanceof HTMLPreElement,
   );
   if (codePre instanceof HTMLPreElement) {
-    codeContainer.appendChild(createCopyButton(codePre, codeTitleHeight));
+    const copyButton = createCopyButton(codePre);
+    codeContainer.appendChild(copyButton);
+    updateCopyButtonTop(codeContainer, copyButton);
+
+    // PC は画面のサイズを変えることがあるので、resize を検知して top を設定しなおす
+    window.addEventListener('resize', () => {
+      updateCopyButtonTop(codeContainer, copyButton);
+    });
   }
 });
