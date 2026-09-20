@@ -26,31 +26,25 @@ const {
 ---
 
 <BaseLayout title={headTitle} description={headDescription} isAdsense={true}>
-  <p class="text-xl font-600">
-    {pageTitle}
-  </p>
-  {
-    rss && (
-      <div class="mt-1">
-        <a href={rss}>
-          <span class="i-teenyicons:rss-outline text-xs">RSS</span>
-        </a>
-      </div>
-    )
-  }
+  <p class="text-xl font-600">{pageTitle}</p>
+  {rss && (
+    <div class="mt-1">
+      <a href={rss}>
+        <span class="i-teenyicons:rss-outline text-xs">RSS</span>
+      </a>
+    </div>
+  )}
   <div class="mt-4">
-    {
-      postList.map((post) => (
-        <PostCard
-          pubDate={post.data.pubDate}
-          updatedDate={post.data.updatedDate}
-          id={post.id}
-          title={post.data.title}
-          category={post.data.category}
-          tags={post.data.tags}
-        />
-      ))
-    }
+    {postList.map((post) => (
+      <PostCard
+        pubDate={post.data.pubDate}
+        updatedDate={post.data.updatedDate}
+        id={post.id}
+        title={post.data.title}
+        category={post.data.category}
+        tags={post.data.tags}
+      />
+    ))}
   </div>
   <div class="mt-4">
     <Paging previousUrl={previousUrl} nextUrl={nextUrl} />

@@ -37,9 +37,7 @@ const isShowGAdUnit = import.meta.env.PROD && isAdsense;
     <BaseHead title={title} description={description} />
   </head>
 
-  <body
-    class="break-words bg-slate-100 text-left text-slate-800 leading-6 font-sawarabi"
-  >
+  <body class="break-words bg-slate-100 text-left text-slate-800 leading-6 font-sawarabi">
     <div id="base-contents">
       <Header noTopHeading={noTopHeading} isMarkdownPage={isMarkdownPage} />
       <main class="min-h-[93.5vh]">
@@ -48,9 +46,7 @@ const isShowGAdUnit = import.meta.env.PROD && isAdsense;
             <div class="hidden place-self-auto lg:block">
               <SideBar markdownHeadings={markdownHeadings} />
             </div>
-            <div
-              class="max-w-full flex-grow-1 overflow-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6"
-            >
+            <div class="max-w-full flex-grow-1 overflow-hidden rounded-2 bg-white px-4 py-6 lg:ml-6 sm:px-6">
               {isShowGAdUnit && <GAdUnitBase marginY="mb-4" />}
               <slot />
               {isShowGAdUnit && <GAdUnitBase marginY="mt-4" />}
