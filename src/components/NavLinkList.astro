@@ -11,13 +11,11 @@ import { CATEGORY_LIST, CATEGORY_MAP } from '@/consts';
   <div>
     <p class="px-4 font-600">Blog Category List</p>
     <ul>
-      {
-        CATEGORY_LIST.map((category) => (
-          <NavLinkListItem href={`/${category}/1`}>
-            {CATEGORY_MAP[category]}
-          </NavLinkListItem>
-        ))
-      }
+      {CATEGORY_LIST.map((category) => (
+        <NavLinkListItem href={`/${category}/1`}>
+          {CATEGORY_MAP[category]}
+        </NavLinkListItem>
+      ))}
     </ul>
   </div>
   <ul>

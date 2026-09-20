@@ -10,6 +10,7 @@ const { href } = Astro.props;
   <a
     href={href}
     class="anchor-link-list-item block w-full px-4 py-0.5 text-sm focus:bg-slate-2 hover:bg-slate-2"
-    ><slot /></a
   >
+    <slot />
+  </a>
 </li>

@@ -102,16 +102,10 @@ if (ogp[fileName] && ogp[fileName][url]) {
   >
     <div class="w-full flex items-center justify-between space-x-4">
       <div class="flex flex-1 flex-col">
-        <b class="line-clamp-2 overflow-hidden text-sm">
-          {title}
-        </b>
-        {
-          description && (
-            <p class="line-clamp-1 mt-1 text-xs sm:line-clamp-2">
-              {description}
-            </p>
-          )
-        }
+        <b class="line-clamp-2 overflow-hidden text-sm">{title}</b>
+        {description && (
+          <p class="line-clamp-1 mt-1 text-xs sm:line-clamp-2">{description}</p>
+        )}
         <div class="mt-2 flex items-center">
           <ImageWrapper
             className="h-[16px] w-[16px]"
@@ -120,24 +114,22 @@ if (ogp[fileName] && ogp[fileName][url]) {
             width={faviconSize}
             height={faviconSize}
           />
-          <small class="line-clamp-1 ml-1 whitespace-nowrap text-xs"
-            >{origin}</small
-          >
+          <small class="line-clamp-1 ml-1 whitespace-nowrap text-xs">
+            {origin}
+          </small>
         </div>
       </div>
-      {
-        image && (
-          <div class="h-full max-w-[220px] w-[120px] sm:w-inherit">
-            <ImageWrapper
-              className="ml-auto mr-auto h-full object-contain"
-              src={image}
-              alt={`${origin} OGP image`}
-              width={1320}
-              height={648}
-            />
-          </div>
-        )
-      }
+      {image && (
+        <div class="h-full max-w-[220px] w-[120px] sm:w-inherit">
+          <ImageWrapper
+            className="ml-auto mr-auto h-full object-contain"
+            src={image}
+            alt={`${origin} OGP image`}
+            width={1320}
+            height={648}
+          />
+        </div>
+      )}
     </div>
   </a>
 </div>

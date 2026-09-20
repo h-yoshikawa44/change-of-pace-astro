@@ -17,14 +17,12 @@ const { pubDate, updatedDate, id, title, category, tags } = Astro.props;
 <article class="border-b py-4">
   <p class="text-sm">
     <FormattedDate date={pubDate} />
-    {
-      updatedDate && pubDate.toString() !== updatedDate.toString() && (
-        <span class="inline-flex items-center">
-          (<span title="更新日" class="i-system-uicons:refresh mr-1" />
-          <FormattedDate date={updatedDate} />)
-        </span>
-      )
-    }
+    {updatedDate && pubDate.toString() !== updatedDate.toString() && (
+      <span class="inline-flex items-center">
+        (<span title="更新日" class="i-system-uicons:refresh mr-1" />
+        <FormattedDate date={updatedDate} />)
+      </span>
+    )}
   </p>
   <h2 class="text-2xl font-600">
     <a
@@ -35,7 +33,9 @@ const { pubDate, updatedDate, id, title, category, tags } = Astro.props;
     </a>
   </h2>
   <p class="mt-2 flex items-center">
-    <span title="カテゴリー" class="i-system-uicons:document mr-0.5 text-lg"
+    <span
+      title="カテゴリー"
+      class="i-system-uicons:document mr-0.5 text-lg"
     ></span>
     {`${CATEGORY_MAP[category]}`}
   </p>
