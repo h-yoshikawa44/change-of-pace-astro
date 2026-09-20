@@ -30,7 +30,7 @@
     "@astrojs/partytown": "^2.1.7",
     "@astrojs/rss": "^4.0.19",
     "@astrojs/sitemap": "^3.7.4",
-    "@iconify-json/logos": "^1.2.11",
+    "@iconify-json/logos": "^1.2.14",
     "@iconify-json/ri": "^1.2.10",
     "@iconify-json/system-uicons": "^1.2.4",
     "@iconify-json/teenyicons": "^1.2.2",
