@@ -7,7 +7,7 @@
 ## 技術構成
 - TypeScript：6.0.3
 - Node.js：26.13.1
-- Astro：7.3.2
+- Astro：7.4.7
 - UnoCSS：66.10.2
 
 ## 環境変数
