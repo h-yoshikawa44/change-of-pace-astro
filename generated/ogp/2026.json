@@ -661,6 +661,18 @@
       "description": "JSConfJP 2026の登壇資料です",
       "image": "https://files.speakerdeck.com/presentations/34fdb086664c4af3b97c5694903700fa/slide_0.jpg?41470359",
       "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/chocoumai/jsconf": {
+      "title": "JSConf JP 2026 内製認証基盤のフロントエンド開発について",
+      "description": "",
+      "image": "https://files.speakerdeck.com/presentations/9cbdd9ce309c4f7a8d703da512bd14eb/slide_0.jpg?41491363",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
+    },
+    "https://speakerdeck.com/nakker1218/generative-ui-ni-manabu-riarutaimu-ni-koushin-sareru-teburu-kiban-no-susume": {
+      "title": "Generative UIに学ぶ リアルタイムに更新される テーブル基盤のすすめ",
+      "description": "JSConf JP 2026のスポンサーLTで発表した内容です\nhttps://jsconf.jp/2026/ja/talks/enechain-sponsor-lt\n\nenechainでは、国内最大級のエネルギーのマーケットプレイスを運営しており、価格や注文がリアルタイムに更新されるテーブルを数&hellip;",
+      "image": "https://files.speakerdeck.com/presentations/edb8ef2338ac429186408b306331bccf/slide_0.jpg?41477574",
+      "favicon": "https://www.google.com/s2/favicons?sz=256&domain=https://speakerdeck.com"
     }
   }
 }
